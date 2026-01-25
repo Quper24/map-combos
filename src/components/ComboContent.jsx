@@ -5,31 +5,33 @@ export default function ComboContent({ table, profile }) {
     <div className="combo-content">
       <p>Обо всех изменениях я сообщаю в Телеграм канале и на boosty</p>
 
-      <div className="links-group">
-        <p>
-          <a
-            href="https://t.me/qupersimulator"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="external-link">
-            https://t.me/qupersimulator
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://boosty.to/qupersimulator"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="external-link">
-            https://boosty.to/qupersimulator
-          </a>
-        </p>
+      <div className="social-links">
+        <a
+          href="https://t.me/qupersimulator"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-btn telegram-btn">
+          <span className="btn-icon">📢</span>
+          <span className="btn-text">Telegram канал</span>
+        </a>
+
+        <a
+          href="https://boosty.to/qupersimulator"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-btn boosty-btn">
+          <span className="btn-icon">💎</span>
+          <span className="btn-text">Boosty (поддержать)</span>
+        </a>
       </div>
 
       <h2>Рекомендую посмотреть видео</h2>
 
       <details className="spoiler">
-        <summary className="spoiler-summary">спрятать под спойлер</summary>
+        <summary className="spoiler-summary">
+          <span className="spoiler-icon">▶️</span>
+          Инструкция по установке (видео)
+        </summary>
         <div className="spoiler-content">
           <Video
             videoId="6UWd6wJa7s8"
@@ -45,23 +47,33 @@ export default function ComboContent({ table, profile }) {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-link steam-dlc">
-          <span className="btn-icon">🎮</span>
+          <span className="btn-icon">🚚</span>
           <span className="btn-text">Все DLC карт в Steam</span>
         </a>
       </div>
 
       <div className="notice">
-        <strong>💡 Для корректной работы модов</strong> необходимо в файле
-        config.cfg сменить значение (файл находится в папке "Документы/Euro
-        Truck Simulator 2") uset r_buffer_page_size на "30".
+        <span className="notice-icon">⚙️</span>
+        <div className="notice-content">
+          <strong>Для корректной работы модов</strong> необходимо в файле
+          config.cfg сменить значение (файл находится в папке "Документы/Euro
+          Truck Simulator 2") uset r_buffer_page_size на "30".
+        </div>
       </div>
 
       <div className="notice">
-        <strong>Также добавьте параметры запуска</strong> в steam или ярлыке в
-        зависимости от объема оперативной памяти:
+        <span className="notice-icon">💻</span>
+        <div className="notice-content">
+          <strong>Также добавьте параметры запуска</strong> в steam или ярлыке в
+          зависимости от объема оперативной памяти:
+        </div>
       </div>
 
       <pre className="code-block">
+        <div className="code-header">
+          <span className="code-icon">📝</span>
+          <span>Параметры запуска для разного объема RAM</span>
+        </div>
         <code>{`8GB RAM: -nointro -unlimitedlog -mm_pool_size 4096 -mm_max_tmp_buffers_size 1000
 12GB RAM: -nointro -unlimitedlog -mm_pol_size 6144 -mm_max_tmp_buffers_size 1000
 16GB RAM (Recommended minimum RAM size): -nointro -unlimitedlog -mm_pool_size 8192 -mm_max_tmp_buffers_size 1000
@@ -73,39 +85,51 @@ export default function ComboContent({ table, profile }) {
         <img src="img/combos/steam-params.jpg" alt="Пример конфигурации" />
       </div>
 
-      <h2>
+      <div className="resource-grid">
         <a
           href={table}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-link">
-          <span className="btn-text">ТАБЛИЦА СО ВСЕМИ ФАЙЛАМИ КАРТ</span>
+          className="resource-card table-card">
+          <span className="resource-icon">📊</span>
+          <div className="resource-content">
+            <h3>ТАБЛИЦА СО ВСЕМИ ФАЙЛАМИ КАРТ</h3>
+            <p>Google Sheets таблица с актуальными ссылками</p>
+          </div>
+          <span className="resource-arrow">→</span>
         </a>
-      </h2>
 
-      <h2>
         <a
           href={profile}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-link">
-          <span className="btn-text">Профиль с расставленными модами</span>
+          className="resource-card profile-card">
+          <span className="resource-icon">📥</span>
+          <div className="resource-content">
+            <h3>Профиль с расставленными модами</h3>
+            <p>Готовый профиль для загрузки</p>
+          </div>
+          <span className="resource-arrow">→</span>
         </a>
-      </h2>
 
-      <h2>
         <a
           href="https://boosty.to/qupersimulator/posts/00504721-c22e-4638-a203-5a5d86745a80"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-link">
-          <span className="btn-text">
-            Новые версии сборок раньше и файлы на Boosty
-          </span>
+          className="resource-card early-access-card">
+          <span className="resource-icon">🌟</span>
+          <div className="resource-content">
+            <h3>Ранний доступ и эксклюзив</h3>
+            <p>Новые версии раньше + дополнительные файлы</p>
+          </div>
+          <span className="resource-arrow">→</span>
         </a>
-      </h2>
+      </div>
 
-      <p>Скриншоты порядка модификаций из игры:</p>
+      <p className="image-note">
+        <span className="note-icon">🖼️</span>
+        Скриншоты порядка модификаций из игры:
+      </p>
     </div>
   );
 }
