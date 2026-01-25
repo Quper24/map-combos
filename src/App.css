@@ -1,0 +1,809 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #0d0d0d;
+  color: #eaeaea;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 28px;
+  font-size: 18px;
+}
+
+a {
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Video */
+.video {
+  margin: 24px 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Notice blocks */
+.notice {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #4da3ff;
+  padding: 16px;
+  margin: 24px 0;
+  border-radius: 8px;
+}
+
+.notice strong {
+  color: #ffffff;
+}
+
+/* Code blocks */
+pre {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+/* Spoiler */
+details {
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  font-size: 13px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* Top navigation */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #eaeaea;
+  background: rgba(255, 255, 255, 0.04);
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+}
+/* Яркий стиль для активной ссылки */
+.nav a.active {
+  background: linear-gradient(
+    135deg,
+    rgba(77, 163, 255, 0.2),
+    rgba(77, 163, 255, 0.1)
+  );
+  color: #4da3ff;
+  border: 1px solid rgba(77, 163, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(77, 163, 255, 0.15);
+}
+
+/* Иконка для активной ссылки */
+.nav a.active::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+/* Подсветка текущей страницы в логотипе */
+.logo a.active {
+  color: #4da3ff !important;
+}
+
+/* Главная страница */
+.home-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+
+.home-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #4da3ff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* Сетка комбо */
+.combos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Карточка комбо */
+.combo-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.combo-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(77, 163, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.combo-card-image {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.combo-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.combo-card:hover .combo-card-image img {
+  transform: scale(1.05);
+}
+
+.combo-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.version-badge {
+  background: rgba(77, 163, 255, 0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.combo-card-content {
+  padding: 20px;
+}
+
+.combo-card-title {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.combo-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.combo-card .version {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.home-info {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .combos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .home-header h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .combos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Эффект блеска при наведении */
+.combo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.combo-card:hover::before {
+  left: 100%;
+}
+
+/* Индикатор загрузки для изображений */
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.combo-card-image img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.combo-card-image img.loaded {
+  opacity: 1;
+}
+
+/* Контейнер для видео */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  width: 100%;
+}
+
+/* Основной контейнер */
+.video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  border: 1px solid rgba(77, 163, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.video-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 80px rgba(77, 163, 255, 0.2);
+  border-color: rgba(77, 163, 255, 0.3);
+}
+
+/* YouTube iframe */
+.youtube-iframe {
+  width: 100%;
+  height: 562px; /* 16:9 для 1000px ширины */
+  border: none;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Угловые декорации */
+.video-corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  border-color: #4da3ff;
+  border-style: solid;
+}
+
+.video-corner-tl {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+  border-radius: 16px 0 0 0;
+}
+
+.video-corner-tr {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 16px 0 0;
+}
+
+.video-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 0 16px;
+}
+
+.video-corner-br {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 16px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1100px) {
+  .video-frame {
+    max-width: 900px;
+  }
+
+  .youtube-iframe {
+    height: 506px; /* 16:9 для 900px */
+  }
+}
+
+@media (max-width: 992px) {
+  .video-frame {
+    max-width: 800px;
+  }
+
+  .youtube-iframe {
+    height: 450px; /* 16:9 для 800px */
+  }
+}
+
+@media (max-width: 768px) {
+  .video-frame {
+    max-width: 95%;
+    border-radius: 12px;
+  }
+
+  .youtube-iframe {
+    height: 400px;
+  }
+
+  .video-corner {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-iframe {
+    height: 250px;
+  }
+
+  .video-wrapper {
+    margin: 20px 0;
+  }
+}
+
+/* Эффект свечения */
+.video-frame::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #4da3ff, #8a2be2, #4da3ff, #8a2be2);
+  z-index: 0;
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-frame:hover::before {
+  opacity: 0.7;
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.video-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+/* Стили для кнопок-ссылок */
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #eaeaea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.btn-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(77, 163, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.btn-text {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Специфичные стили для разных типов ссылок */
+.steam-dlc {
+  background: linear-gradient(
+    135deg,
+    rgba(27, 40, 56, 0.9),
+    rgba(17, 29, 46, 0.9)
+  );
+  border-color: rgba(31, 95, 158, 0.3);
+}
+
+.steam-dlc:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(36, 53, 74, 0.9),
+    rgba(22, 38, 60, 0.9)
+  );
+  border-color: rgba(31, 95, 158, 0.6);
+}
+
+.table-link {
+  background: linear-gradient(
+    135deg,
+    rgba(46, 125, 50, 0.9),
+    rgba(27, 94, 32, 0.9)
+  );
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.table-link:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 142, 60, 0.9),
+    rgba(33, 115, 38, 0.9)
+  );
+  border-color: rgba(76, 175, 80, 0.6);
+}
+
+.profile-link {
+  background: linear-gradient(
+    135deg,
+    rgba(156, 39, 176, 0.9),
+    rgba(123, 31, 162, 0.9)
+  );
+  border-color: rgba(186, 104, 200, 0.3);
+}
+
+.profile-link:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(171, 71, 188, 0.9),
+    rgba(142, 36, 170, 0.9)
+  );
+  border-color: rgba(186, 104, 200, 0.6);
+}
+
+.boosty-link {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 87, 34, 0.9),
+    rgba(244, 67, 54, 0.9)
+  );
+  border-color: rgba(255, 138, 101, 0.3);
+}
+
+.boosty-link:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 112, 67, 0.9),
+    rgba(255, 82, 82, 0.9)
+  );
+  border-color: rgba(255, 138, 101, 0.6);
+}
+
+.telegram-link {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 136, 204, 0.9),
+    rgba(0, 119, 181, 0.9)
+  );
+  border-color: rgba(102, 204, 255, 0.3);
+}
+
+.telegram-link:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 153, 230, 0.9),
+    rgba(0, 136, 204, 0.9)
+  );
+  border-color: rgba(102, 204, 255, 0.6);
+}
+
+/* Галерея изображений */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+  padding: 0 20px;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Декоративные элементы */
+.gallery-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(77, 163, 255, 0.5),
+    transparent
+  );
+}
+
+.gallery-item {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-item:hover .gallery-image {
+  box-shadow: 0 8px 30px rgba(77, 163, 255, 0.2), 0 5px 20px rgba(0, 0, 0, 0.6);
+  border-color: rgba(77, 163, 255, 0.3);
+}
+
+/* Разделители между изображениями */
+.gallery-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(77, 163, 255, 0.2),
+    transparent
+  );
+  margin: 25px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .gallery-container {
+    max-width: 900px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-container {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .image-gallery {
+    margin: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    max-width: 95%;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .image-gallery {
+    margin: 40px 0;
+    padding: 0 15px;
+  }
+
+  .gallery-image {
+    border-radius: 6px;
+  }
+
+  .gallery-item:not(:last-child)::after {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .image-gallery {
+    margin: 30px 0;
+    padding: 0 10px;
+  }
+
+  .gallery-item:not(:last-child)::after {
+    margin: 15px 0;
+  }
+}
