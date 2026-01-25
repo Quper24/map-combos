@@ -86,31 +86,35 @@ export default function ComboContent({ table, profile }) {
       </div>
 
       <div className="resource-grid">
-        <a
-          href={table}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="resource-card table-card">
-          <span className="resource-icon">📊</span>
-          <div className="resource-content">
-            <h3>ТАБЛИЦА СО ВСЕМИ ФАЙЛАМИ КАРТ</h3>
-            <p>Google Sheets таблица с актуальными ссылками</p>
-          </div>
-          <span className="resource-arrow">→</span>
-        </a>
+        {table && (
+          <a
+            href={table}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resource-card table-card">
+            <span className="resource-icon">📊</span>
+            <div className="resource-content">
+              <h3>ТАБЛИЦА СО ВСЕМИ ФАЙЛАМИ КАРТ</h3>
+              <p>Google Sheets таблица с актуальными ссылками</p>
+            </div>
+            <span className="resource-arrow">→</span>
+          </a>
+        )}
 
-        <a
-          href={profile}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="resource-card profile-card">
-          <span className="resource-icon">📥</span>
-          <div className="resource-content">
-            <h3>Профиль с расставленными модами</h3>
-            <p>Готовый профиль для загрузки</p>
-          </div>
-          <span className="resource-arrow">→</span>
-        </a>
+        {profile && (
+          <a
+            href={profile}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resource-card profile-card">
+            <span className="resource-icon">📥</span>
+            <div className="resource-content">
+              <h3>Профиль с расставленными модами</h3>
+              <p>Готовый профиль для загрузки</p>
+            </div>
+            <span className="resource-arrow">→</span>
+          </a>
+        )}
 
         <a
           href="https://boosty.to/qupersimulator/posts/00504721-c22e-4638-a203-5a5d86745a80"

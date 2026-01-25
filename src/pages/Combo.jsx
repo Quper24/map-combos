@@ -41,7 +41,11 @@ export default function Combo() {
 
       <ComboContent table={combo.table} profile={combo.profile} />
 
-      <ImageBlock top={combo.image_top} bottom={combo.image_bottom} />
+      <ImageBlock
+        top={combo.image_top}
+        center={combo.image_center}
+        bottom={combo.image_bottom}
+      />
     </div>
   );
 }

@@ -94,4 +94,30 @@ export const combos = [
     profile:
       "https://sharemods.com/3rttbcvbnuuc/1.57_CONVOY_MAP_COMBO_1.1.zip.html",
   },
+  {
+    id: "ats-mega-map",
+    tags: ["ats", "convoy"],
+    title: "ATS MEGA MAP COMBO",
+    preview: "img/combos/ats-mega/ats-mega-preview.jpg",
+    version_game: "1.57",
+    version: "2.0",
+    date: "25.01.26",
+    video: "G4ADUHZ1ruI",
+    image_top: "img/combos/ats-mega/ats-mega-top.jpg",
+    image_bottom: "img/combos/ats-mega/ats-mega-bottom.jpg",
+    profile:
+      "https://sharemods.com/umwh0sfww1ch/1.57_ATS_MEGA_MAPS_2.0.zip.html",
+  },
+  {
+    id: "ats-server-map",
+    tags: ["ats", "server", "convoy"],
+    title: "ATS SERVER COMBO",
+    preview: "img/combos/ats-server/ats-server-preview.jpg",
+    version_game: "1.57",
+    version: "server",
+    date: "24.01.26",
+    video: "G4ADUHZ1ruI",
+    image_center: "img/combos/ats-server/ats-server-center.jpg",
+    profile: "https://sharemods.com/1xl728iwoq21/ATS_SERVER_24.01.zip.html",
+  },
 ];
