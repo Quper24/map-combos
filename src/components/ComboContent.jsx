@@ -3,7 +3,7 @@ import Video from "./Video";
 export default function ComboContent({ table, profile }) {
   return (
     <div className="combo-content">
-      <p>Обо всех изменениях я сообщаю в Телеграм канале и на boosty</p>
+      <p>Обо всех изменениях я сообщаю в Телеграм канале и на boosty!</p>
 
       <div className="social-links">
         <a
