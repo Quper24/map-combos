@@ -49,7 +49,7 @@ export const combos = [
   },
   {
     id: "big-russia-map",
-    tags: ["ets"],
+    tags: ["ets2"],
     title: "BIG RUSSIA MAP COMBO",
     preview: "img/combos/big-russia/big-russia-preview.jpg",
     version_game: "1.57",
@@ -64,7 +64,7 @@ export const combos = [
   },
   {
     id: "gold-russia-map",
-    tags: ["ets", "convoy"],
+    tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/gold-russia/gold-russia-preview.jpg",
     version_game: "1.57",
@@ -80,7 +80,7 @@ export const combos = [
   },
   {
     id: "convoy-map",
-    tags: ["ets", "convoy"],
+    tags: ["ets2", "convoy"],
     title: "CONVOY MAP COMBO",
     preview: "img/combos/convoy/convoy-preview.jpg",
     version_game: "1.57",
