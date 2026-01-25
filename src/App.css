@@ -221,6 +221,7 @@ footer {
 
 /* Карточка комбо */
 .combo-card {
+  position: relative;
   display: block;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -229,6 +230,7 @@ footer {
   transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 }
 
 .combo-card:hover {
@@ -347,6 +349,8 @@ footer {
     transparent
   );
   transition: left 0.7s ease;
+  z-index: 1;
+  pointer-events: none; /* Важно! */
 }
 
 .combo-card:hover::before {

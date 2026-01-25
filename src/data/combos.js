@@ -65,7 +65,7 @@ export const combos = [
   {
     id: "gold-russia-map",
     tags: ["ets", "convoy"],
-    title: "BIG RUSSIA MAP COMBO",
+    title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/gold-russia/gold-russia-preview.jpg",
     version_game: "1.57",
     version: "1.11",
@@ -77,5 +77,21 @@ export const combos = [
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=483615012#gid=483615012",
     profile:
       "https://sharemods.com/ktvfpsj9z5wu/1.57_GOLD_RUSSIA_1.11.zip.html",
+  },
+  {
+    id: "convoy-map",
+    tags: ["ets", "convoy"],
+    title: "CONVOY MAP COMBO",
+    preview: "img/combos/convoy/convoy-preview.jpg",
+    version_game: "1.57",
+    version: "1.11",
+    date: "25.01.26",
+    video: "KYtOJNcVBmk",
+    image_top: "img/combos/convoy/convoy-top.jpg",
+    image_bottom: "img/combos/convoy/convoy-bottom.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1153655824#gid=1153655824",
+    profile:
+      "https://sharemods.com/3rttbcvbnuuc/1.57_CONVOY_MAP_COMBO_1.1.zip.html",
   },
 ];
