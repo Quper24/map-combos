@@ -96,7 +96,7 @@ export const combos = [
   },
   {
     id: "ats-mega-map",
-    tags: ["ats", "convoy"],
+    tags: ["ats", "convoy", "boosty"],
     title: "ATS MEGA MAP COMBO",
     preview: "img/combos/ats-mega/ats-mega-preview.jpg",
     version_game: "1.57",
@@ -110,7 +110,7 @@ export const combos = [
   },
   {
     id: "ats-server-map",
-    tags: ["ats", "server", "convoy"],
+    tags: ["ats", "server", "convoy", "boosty"],
     title: "ATS SERVER COMBO",
     preview: "img/combos/ats-server/ats-server-preview.jpg",
     version_game: "1.57",
