@@ -1,0 +1,315 @@
+/* ===== COMBO CARD COMPONENT STYLES ===== */
+
+/* === Base Card Styles === */
+.combo-card {
+  position: relative;
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hover effects */
+.combo-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(77, 163, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Shine effect on hover */
+.combo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.7s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.combo-card:hover::before {
+  left: 100%;
+}
+
+/* === Image Container === */
+.combo-card-image {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.combo-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.5s ease,
+    opacity 0.3s ease;
+  opacity: 0;
+}
+
+.combo-card-image img.loaded {
+  opacity: 1;
+}
+
+.combo-card:hover .combo-card-image img {
+  transform: scale(1.05);
+}
+
+/* Image overlay */
+.combo-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+/* === Badges (Positional) === */
+/* Top-left new indicator */
+.new-indicator {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+/* Top-right Boosty badge */
+.boosty-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #ff5722, #f44336);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* Version badge inside overlay */
+.version-badge {
+  background: rgba(77, 163, 255, 0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* === Content Section === */
+.combo-card-content {
+  padding: 20px;
+}
+
+/* Title */
+.combo-card-title {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Meta info */
+.combo-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.combo-card .version {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* === Tags Section === */
+.combo-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.combo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 11px;
+  color: #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.combo-tag .tag-icon {
+  font-size: 12px;
+}
+
+.combo-tag .tag-text {
+  font-weight: 500;
+}
+
+/* === Tag Color Variations === */
+.tag-server {
+  background: rgba(103, 58, 183, 0.1) !important;
+  border-color: rgba(103, 58, 183, 0.3) !important;
+  color: #673ab7 !important;
+}
+
+.tag-boosty {
+  background: rgba(244, 67, 54, 0.1) !important;
+  border-color: rgba(244, 67, 54, 0.3) !important;
+  color: #f44336 !important;
+}
+
+.tag-ets2 {
+  background: rgba(0, 102, 204, 0.1) !important;
+  border-color: rgba(0, 102, 204, 0.3) !important;
+  color: #4da3ff !important;
+}
+
+.tag-ats {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border-color: rgba(220, 53, 69, 0.3) !important;
+  color: #ff6b6b !important;
+}
+
+.tag-convoy {
+  background: rgba(40, 167, 69, 0.1) !important;
+  border-color: rgba(40, 167, 69, 0.3) !important;
+  color: #34a853 !important;
+}
+
+/* === Animations === */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .combo-card-content {
+    padding: 16px;
+  }
+
+  .combo-card-title {
+    font-size: 18px;
+  }
+
+  .combo-card-meta {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .combo-card {
+    border-radius: 12px;
+  }
+
+  .combo-card-content {
+    padding: 14px;
+  }
+
+  .combo-card-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .combo-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .combo-card-tags {
+    gap: 4px;
+  }
+
+  .combo-tag {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .new-indicator,
+  .boosty-badge {
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+
+  .version-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .combo-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .combo-card-overlay {
+    padding: 10px;
+  }
+
+  .combo-card-tags {
+    margin: 8px 0;
+  }
+}

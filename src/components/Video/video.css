@@ -1,0 +1,201 @@
+/* ===== VIDEO COMPONENT STYLES ===== */
+
+/* === Video Wrapper (Legacy) === */
+/* Старая версия - рекомендуется использовать video-wrapper и video-frame */
+.video {
+  margin: 24px 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* === New Video Container === */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  width: 100%;
+}
+
+/* Main video frame with effects */
+.video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  border: 1px solid rgba(77, 163, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Glow effect layers */
+.video-frame::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #4da3ff, #8a2be2, #4da3ff, #8a2be2);
+  z-index: 0;
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+/* Hover effects */
+.video-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 80px rgba(77, 163, 255, 0.2);
+  border-color: rgba(77, 163, 255, 0.3);
+}
+
+.video-frame:hover::before {
+  opacity: 0.7;
+  animation: glow 3s infinite;
+}
+
+/* === YouTube Video === */
+.youtube-iframe {
+  width: 100%;
+  height: 562px; /* 16:9 aspect ratio for 1000px width */
+  border: none;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Corner Decorations === */
+.video-corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  border-color: #4da3ff;
+  border-style: solid;
+}
+
+.video-corner-tl {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+  border-radius: 16px 0 0 0;
+}
+
+.video-corner-tr {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 16px 0 0;
+}
+
+.video-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 0 16px;
+}
+
+.video-corner-br {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 16px 0;
+}
+
+/* === Animations === */
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Large Desktop */
+@media (max-width: 1100px) {
+  .video-frame {
+    max-width: 900px;
+  }
+
+  .youtube-iframe {
+    height: 506px; /* 16:9 for 900px */
+  }
+}
+
+/* Desktop */
+@media (max-width: 992px) {
+  .video-frame {
+    max-width: 800px;
+  }
+
+  .youtube-iframe {
+    height: 450px; /* 16:9 for 800px */
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .video-frame {
+    max-width: 95%;
+    border-radius: 12px;
+  }
+
+  .youtube-iframe {
+    height: 400px;
+  }
+
+  .video-corner {
+    width: 20px;
+    height: 20px;
+  }
+
+  .video-wrapper {
+    margin: 30px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .youtube-iframe {
+    height: 250px;
+  }
+
+  .video-wrapper {
+    margin: 20px 0;
+  }
+
+  .video {
+    margin: 16px 0;
+    border-radius: 8px;
+  }
+}

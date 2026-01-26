@@ -1,3 +1,5 @@
+import "./imageBlock.css";
+
 export const ImageBlock = ({
   top,
   bottom,

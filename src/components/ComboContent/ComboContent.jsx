@@ -1,4 +1,5 @@
-import Video from "./Video";
+import Video from "../Video/Video";
+import "./comboContent.css";
 
 export default function ComboContent({ table, profile }) {
   return (

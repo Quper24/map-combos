@@ -1,8 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
-import { combos } from "../data/combos";
-import ComboContent from "../components/ComboContent";
-import Video from "../components/Video";
-import { ImageBlock } from "../components/ImageBlock";
+import { combos } from "../../data/combos";
+import ComboContent from "../../components/ComboContent/ComboContent";
+import Video from "../../components/Video/Video";
+import { ImageBlock } from "../../components/ImageBlock/ImageBlock";
 
 export default function Combo() {
   const { slug } = useParams();

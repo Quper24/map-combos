@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
-import { combos } from "../data/combos";
-import ComboCard from "../components/ComboCard";
+import { combos } from "../../data/combos";
+import ComboCard from "../../components/ComboCard/ComboCard";
+
+import "./home.css";
 
 export default function Home() {
   // Состояние для активных тегов

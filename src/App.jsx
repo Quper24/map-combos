@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import Home from "./pages/Home";
-import Combo from "./pages/Combo";
-import Header from "./components/Header";
+import Home from "./pages/Home/Home";
+import Combo from "./pages/Combo/Combo";
+import Header from "./components/Header/Header";
 import "./App.css";
 
 export default function App() {

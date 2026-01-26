@@ -1,3 +1,5 @@
+import "./video.css";
+
 export default function Video({ videoId, title = "Video", className = "" }) {
   return (
     <div className={`video-wrapper ${className}`}>

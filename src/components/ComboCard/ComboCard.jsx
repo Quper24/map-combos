@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
+import "./comboCard.css";
+
 export default function ComboCard({ combo }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
