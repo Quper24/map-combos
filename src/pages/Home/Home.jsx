@@ -7,6 +7,8 @@ import "./home.css";
 export default function Home() {
   // Состояние для активных тегов
   const [activeTags, setActiveTags] = useState([]);
+  // Состояние для сортировки по дате
+  const [sortByDate, setSortByDate] = useState(false);
 
   // Извлекаем все уникальные теги из комбо
   const allTags = useMemo(() => {
@@ -47,8 +49,14 @@ export default function Home() {
     return new Date(0);
   };
 
-  // Сортируем комбо: сначала по дате (новые сверху), затем по названию
+  // Сортируем комбо: по дате только если включена сортировка
   const sortedAndFilteredCombos = useMemo(() => {
+    if (!sortByDate) {
+      // Если сортировка отключена, сохраняем исходный порядок из данных
+      return filteredCombos;
+    }
+
+    // Если сортировка включена, сортируем по дате (новые сверху)
     return [...filteredCombos].sort((a, b) => {
       const dateA = parseDate(a.date);
       const dateB = parseDate(b.date);
@@ -59,7 +67,7 @@ export default function Home() {
 
       return a.title.localeCompare(b.title);
     });
-  }, [filteredCombos]);
+  }, [filteredCombos, sortByDate]);
 
   // Функция для переключения тега
   const toggleTag = (tag) => {
@@ -113,12 +121,12 @@ export default function Home() {
     return descriptions[tag] || "";
   };
 
-  // Получаем самую свежую дату для отображения
+  // Получаем самую свежую дату для отображения (только когда сортировка включена)
   const latestUpdate = useMemo(() => {
-    if (sortedAndFilteredCombos.length === 0) return null;
+    if (!sortByDate || sortedAndFilteredCombos.length === 0) return null;
     const latest = sortedAndFilteredCombos[0];
     return latest.date ? `Последнее обновление: ${latest.date}` : null;
-  }, [sortedAndFilteredCombos]);
+  }, [sortedAndFilteredCombos, sortByDate]);
 
   return (
     <div className="container">
@@ -140,14 +148,33 @@ export default function Home() {
           <h2 className="filters-title">
             <span className="filter-icon">🔍</span>
             Фильтры
-            <span className="sort-info">(сортировка: сначала новые)</span>
+            <span className="sort-info">
+              {sortByDate
+                ? "(сортировка: сначала новые)"
+                : "(исходный порядок)"}
+            </span>
           </h2>
 
-          {activeTags.length > 0 && (
-            <button onClick={resetFilters} className="reset-filters-btn">
-              ✕ Сбросить фильтры
+          <div className="filters-controls">
+            {/* Кнопка сортировки по дате */}
+            <button
+              onClick={() => setSortByDate(!sortByDate)}
+              className={`sort-date-btn ${sortByDate ? "active" : ""}`}
+              title={
+                sortByDate
+                  ? "Отключить сортировку по дате"
+                  : "Включить сортировку по дате"
+              }>
+              <span className="sort-icon">{sortByDate ? "📅✓" : "📅"}</span>
+              {sortByDate ? "Сортировка по дате" : "Сортировать по дате"}
             </button>
-          )}
+
+            {activeTags.length > 0 && (
+              <button onClick={resetFilters} className="reset-filters-btn">
+                ✕ Сбросить фильтры
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Теги */}
