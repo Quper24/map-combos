@@ -132,4 +132,19 @@ export const combos = [
     image_center: "img/combos/ets2-server/ets2-server-center.jpg",
     profile: "https://sharemods.com/cbe31fa2h89b/SERVER_ETS_PROFILE.zip.html",
   },
+  {
+    id: "ets2-mod-combo",
+    tags: ["ets2"],
+    title: "ETS2 MODS COMBO",
+    preview: "img/combos/ets2-mods/ets2-mods-preview.jpg",
+    version_game: "1.57",
+    version: "1.3",
+    date: "03.01.26",
+    video: "zwUQZu-msW4",
+    image_center: "img/combos/ets2-mods/ets2-mods-center.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1948498773#gid=1948498773",
+    profile:
+      "https://sharemods.com/xur2fgehyubl/1.57_MODS_PACK_1.3-100.zip.html",
+  },
 ];
