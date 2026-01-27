@@ -120,4 +120,16 @@ export const combos = [
     image_center: "img/combos/ats-server/ats-server-center.jpg",
     profile: "https://sharemods.com/1xl728iwoq21/ATS_SERVER_24.01.zip.html",
   },
+  {
+    id: "ets2-server-map",
+    tags: ["ets2", "server", "convoy", "boosty"],
+    title: "ETS2 SERVER COMBO",
+    preview: "img/combos/ets2-server/ets2-server-preview.jpg",
+    version_game: "1.57",
+    version: "server",
+    date: "14.01.26",
+    video: "--ZpeKnXXjw",
+    image_center: "img/combos/ets2-server/ets2-server-center.jpg",
+    profile: "https://sharemods.com/cbe31fa2h89b/SERVER_ETS_PROFILE.zip.html",
+  },
 ];
