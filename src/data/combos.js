@@ -5,15 +5,15 @@ export const combos = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/mega/mega-preview.jpg",
     version_game: "1.57",
-    version: "3.3",
-    date: "25.01.26",
+    version: "3.4",
+    date: "28.01.26",
     video: "r6jq5qA-gaA",
     image_top: "img/combos/mega/mega-top.jpg",
     image_bottom: "img/combos/mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/hfjzsxfux2wh/1.57_MEGA_MAP_COMBO_3.3.zip.html",
+      "https://sharemods.com/gndmrvhowyi2/1.57_MEGA_MAP_COMBO_3.4.zip.html",
   },
   {
     id: "quper-map",
@@ -21,15 +21,15 @@ export const combos = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/quper/quper-preview.jpg",
     version_game: "1.57",
-    version: "4.1",
-    date: "25.01.26",
+    version: "4.2",
+    date: "28.01.26",
     video: "AXhZkCPflwA",
     image_top: "img/combos/quper/quper-top.jpg",
     image_bottom: "img/combos/quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=958999320#gid=958999320",
     profile:
-      "https://sharemods.com/ujp17o1hedxy/1.57_QUPER_MAP_COMBO_4.1.zip.html",
+      "https://sharemods.com/v3w11gcyqk9y/1.57_QUPER_MAP_COMBO_4.2.zip.html",
   },
   {
     id: "eurasia-map",
@@ -37,15 +37,15 @@ export const combos = [
     title: "EURASIA MAP COMBO",
     preview: "img/combos/eurasia/eurasia-preview.jpg",
     version_game: "1.57",
-    version: "2.1",
-    date: "25.01.26",
+    version: "2.2",
+    date: "28.01.26",
     video: "KYtOJNcVBmk",
     image_top: "img/combos/eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=78135028#gid=78135028",
     profile:
-      "https://sharemods.com/gjifdj7itlzp/1.57_EURASIA_MAP_COMBO_2.1.zip.html",
+      "https://sharemods.com/0jei95nom5lk/1.57_EURASIA_MAP_COMBO_2.2.zip.html",
   },
   {
     id: "big-russia-map",
@@ -53,14 +53,14 @@ export const combos = [
     title: "BIG RUSSIA MAP COMBO",
     preview: "img/combos/big-russia/big-russia-preview.jpg",
     version_game: "1.57",
-    version: "3.6",
-    date: "25.01.26",
+    version: "3.7",
+    date: "28.01.26",
     video: "q6uNIn1y_KI",
     image_top: "img/combos/big-russia/big-russia-top.jpg",
     image_bottom: "img/combos/big-russia/big-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=500887864#gid=500887864",
-    profile: "https://sharemods.com/fhlhx514npjj/1.57_BIG_RUSSIA_3.6.zip.html",
+    profile: "https://sharemods.com/x7sqn8smgf7b/1.57_BIG_RUSSIA_3.7.zip.html",
   },
   {
     id: "gold-russia-map",

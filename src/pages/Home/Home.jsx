@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { combos } from "../../data/combos";
 import ComboCard from "../../components/ComboCard/ComboCard";
+import { tagUtils } from "../../utils/tags"; // Импортируем утилиты тегов
 
 import "./home.css";
 
@@ -12,11 +13,7 @@ export default function Home() {
 
   // Извлекаем все уникальные теги из комбо
   const allTags = useMemo(() => {
-    const tagsSet = new Set();
-    combos.forEach((combo) => {
-      combo.tags?.forEach((tag) => tagsSet.add(tag));
-    });
-    return Array.from(tagsSet);
+    return tagUtils.extractUniqueTags(combos);
   }, []);
 
   // Фильтруем комбо по активным тегам
@@ -85,42 +82,6 @@ export default function Home() {
     setActiveTags([]);
   };
 
-  // Получаем иконки для тегов
-  const getTagIcon = (tag) => {
-    const icons = {
-      ets2: "🚛", // Euro Truck Simulator 2
-      ats: "🚚", // American Truck Simulator
-      convoy: "👥", // Конвой режим
-      server: "🖥️", // Наши сервера
-      boosty: "💎", // Доступно на Boosty
-    };
-    return icons[tag] || "🏷️";
-  };
-
-  // Получаем название для тега
-  const getTagLabel = (tag) => {
-    const labels = {
-      ets2: "ETS 2",
-      ats: "ATS",
-      convoy: "Конвой",
-      server: "Наши сервера",
-      boosty: "Только на Boosty",
-    };
-    return labels[tag] || tag;
-  };
-
-  // Получаем описание для тега (для tooltip)
-  const getTagDescription = (tag) => {
-    const descriptions = {
-      ets2: "Для Euro Truck Simulator 2",
-      ats: "Для American Truck Simulator",
-      convoy: "Поддержка конвой режима",
-      server: "Игра доступна на наших серверах",
-      boosty: "Эксклюзивно для подписчиков Boosty",
-    };
-    return descriptions[tag] || "";
-  };
-
   // Получаем самую свежую дату для отображения (только когда сортировка включена)
   const latestUpdate = useMemo(() => {
     if (!sortByDate || sortedAndFilteredCombos.length === 0) return null;
@@ -184,9 +145,9 @@ export default function Home() {
               key={tag}
               onClick={() => toggleTag(tag)}
               className={`tag-btn ${activeTags.includes(tag) ? "active" : ""}`}
-              title={getTagDescription(tag)}>
-              <span className="tag-icon">{getTagIcon(tag)}</span>
-              <span className="tag-label">{getTagLabel(tag)}</span>
+              title={tagUtils.getDescription(tag)}>
+              <span className="tag-icon">{tagUtils.getIcon(tag)}</span>
+              <span className="tag-label">{tagUtils.getLabel(tag)}</span>
               {activeTags.includes(tag) && <span className="tag-count">✓</span>}
             </button>
           ))}

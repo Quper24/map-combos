@@ -1,7 +1,11 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { tagUtils } from "../../utils/tags";
 
 import "./comboCard.css";
+
+// Константы для настройки "новизны" сборки
+const NEW_PERIOD_DAYS = 3; // Сборка считается новой 3 дня с даты обновления
 
 export default function ComboCard({ combo }) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -9,57 +13,32 @@ export default function ComboCard({ combo }) {
   // Проверяем, является ли сборка новой
   const isNew = useMemo(() => {
     if (!combo.date) return false;
+
     try {
       const parts = combo.date.split(".");
       if (parts.length === 3) {
         let year = parts[2];
         if (year.length === 2) year = "20" + year;
+
+        // Преобразуем дату из формата DD.MM.YYYY
         const updateDate = new Date(`${year}-${parts[1]}-${parts[0]}`);
-        const weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7);
-        return updateDate > weekAgo;
+
+        // Получаем дату NEW_PERIOD_DAYS давности
+        const daysAgo = new Date();
+        daysAgo.setDate(daysAgo.getDate() - NEW_PERIOD_DAYS);
+
+        // Сбрасываем часы для точного сравнения дней
+        daysAgo.setHours(0, 0, 0, 0);
+        updateDate.setHours(0, 0, 0, 0);
+
+        // Сравниваем: если дата обновления больше даты NEW_PERIOD_DAYS давности
+        return updateDate > daysAgo;
       }
     } catch (error) {
       console.error("Error checking if new:", error);
     }
     return false;
   }, [combo.date]);
-
-  // Иконки для тегов
-  const getTagIcon = (tag) => {
-    const icons = {
-      ets2: "🚛",
-      ats: "🚚",
-      convoy: "👥",
-      server: "🖥️",
-      boosty: "💎",
-    };
-    return icons[tag] || "🏷️";
-  };
-
-  // Названия тегов
-  const getTagLabel = (tag) => {
-    const labels = {
-      ets2: "ETS 2",
-      ats: "ATS",
-      convoy: "Конвой",
-      server: "Сервер",
-      boosty: "Boosty",
-    };
-    return labels[tag] || tag;
-  };
-
-  // Описания для тегов (tooltip)
-  const getTagDescription = (tag) => {
-    const descriptions = {
-      ets2: "Для Euro Truck Simulator 2",
-      ats: "Для American Truck Simulator",
-      convoy: "Поддержка конвой режима",
-      server: "Игра на наших серверах",
-      boosty: "Эксклюзивно на Boosty",
-    };
-    return descriptions[tag] || "";
-  };
 
   return (
     <Link to={`/${combo.id}`} className="combo-card">
@@ -72,12 +51,14 @@ export default function ComboCard({ combo }) {
           className={imageLoaded ? "loaded" : ""}
         />
 
-        {/* Индикатор "Новинка!" */}
+        {/* Индикатор "Новинка!" - показываем только 3 дня */}
         {isNew && <div className="new-indicator">НОВОЕ!</div>}
 
         {/* Бейдж Boosty если есть */}
         {combo.tags?.includes("boosty") && (
-          <div className="boosty-badge" title="Эксклюзив на Boosty">
+          <div
+            className="boosty-badge"
+            title={tagUtils.getDescription("boosty")}>
             💎 Boosty
           </div>
         )}
@@ -95,15 +76,18 @@ export default function ComboCard({ combo }) {
         {/* Теги карточки */}
         {combo.tags && combo.tags.length > 0 && (
           <div className="combo-card-tags">
-            {combo.tags.map((tag) => (
-              <span
-                key={tag}
-                className={`combo-tag tag-${tag}`}
-                title={getTagDescription(tag)}>
-                <span className="tag-icon">{getTagIcon(tag)}</span>
-                <span className="tag-text">{getTagLabel(tag)}</span>
-              </span>
-            ))}
+            {combo.tags.map((tag) => {
+              const metadata = tagUtils.getMetadata(tag);
+              return (
+                <span
+                  key={tag}
+                  className={`combo-tag tag-${tag}`}
+                  title={metadata.description}>
+                  <span className="tag-icon">{metadata.icon}</span>
+                  <span className="tag-text">{metadata.label}</span>
+                </span>
+              );
+            })}
           </div>
         )}
 
