@@ -115,10 +115,10 @@ export const combos = [
     preview: "img/combos/ats-server/ats-server-preview.jpg",
     version_game: "1.57",
     version: "server",
-    date: "24.01.26",
+    date: "29.01.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/1xl728iwoq21/ATS_SERVER_24.01.zip.html",
+    profile: "https://sharemods.com/8gcd0gj7sro8/ATS_SERVER.zip.html",
   },
   {
     id: "ets2-server-map",
