@@ -118,7 +118,7 @@ export const combos = [
     date: "29.01.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/8gcd0gj7sro8/ATS_SERVER.zip.html",
+    profile: "https://sharemods.com/7d07i83ffgk2/ATS-SERVER_30.zip.html",
   },
   {
     id: "ets2-server-map",
