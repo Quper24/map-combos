@@ -37,7 +37,7 @@ export default function Combo() {
         )}
       </div>
 
-      <Video videoId={combo.video} title={combo.title} />
+      {combo.video && <Video videoId={combo.video} title={combo.title} />}
 
       <ComboContent table={combo.table} profile={combo.profile} />
 

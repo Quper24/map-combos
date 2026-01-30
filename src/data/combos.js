@@ -132,6 +132,7 @@ export const combos = [
     image_center: "img/combos/ets2-server/ets2-server-center.jpg",
     profile: "https://sharemods.com/cbe31fa2h89b/SERVER_ETS_PROFILE.zip.html",
   },
+
   {
     id: "ets2-mod-combo",
     tags: ["ets2"],
@@ -146,5 +147,16 @@ export const combos = [
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1948498773#gid=1948498773",
     profile:
       "https://sharemods.com/xur2fgehyubl/1.57_MODS_PACK_1.3-100.zip.html",
+  },
+  {
+    id: "ets2-contracts-map",
+    tags: ["ets2", "server", "convoy"],
+    title: "ETS2 VTC CONTRACTS 90280778542786590/103",
+    preview: "img/combos/ets2-contracts/ets2-contracts-preview.jpg",
+    version_game: "1.57",
+    version: "server",
+    date: "30.01.26",
+    image_center: "img/combos/ets2-contracts/ets2-contracts-center.jpg",
+    profile: "https://sharemods.com/ofmtjpefmu1d/server_contracts.zip.html",
   },
 ];
