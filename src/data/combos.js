@@ -157,6 +157,6 @@ export const combos = [
     version: "server",
     date: "30.01.26",
     image_center: "img/combos/ets2-contracts/ets2-contracts-center.jpg",
-    profile: "https://sharemods.com/ofmtjpefmu1d/server_contracts.zip.html",
+    profile: "https://sharemods.com/5m4p7jy6srz2/server_contracts.zip.html",
   },
 ];
