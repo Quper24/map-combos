@@ -127,7 +127,7 @@ export const combos = [
     preview: "img/combos/ets2-server/ets2-server-preview.jpg",
     version_game: "1.57",
     version: "server",
-    date: "03.02.26",
+    date: "04.02.26",
     video: "--ZpeKnXXjw",
     image_center: "img/combos/ets2-server/ets2-server-center.jpg",
     profile: "https://sharemods.com/w14uhue76xvv/SERVER_Promods.zip.html",
