@@ -127,10 +127,10 @@ export const combos = [
     preview: "img/combos/ets2-server/ets2-server-preview.jpg",
     version_game: "1.57",
     version: "server",
-    date: "04.02.26",
+    date: "05.02.26",
     video: "--ZpeKnXXjw",
     image_center: "img/combos/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/w14uhue76xvv/SERVER_Promods.zip.html",
+    profile: "https://sharemods.com/2don3hy5naw4/QS_SERVER.zip.html",
   },
 
   {
@@ -155,9 +155,9 @@ export const combos = [
     preview: "img/combos/ets2-contracts/ets2-contracts-preview.jpg",
     version_game: "1.57",
     version: "server",
-    date: "03.02.26",
+    date: "05.02.26",
     image_center: "img/combos/ets2-contracts/ets2-contracts-center.jpg",
-    profile: "https://sharemods.com/5m4p7jy6srz2/server_contracts.zip.html",
+    profile: "https://sharemods.com/t4j1sz5vbvxp/QS_SERVER_CONTRACTS.zip.html",
   },
 
   {
