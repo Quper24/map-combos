@@ -150,7 +150,7 @@ export const combos = [
   },
   {
     id: "ets2-contracts-map",
-    tags: ["ets2", "server", "convoy"],
+    tags: ["ets2", "server", "convoy", "boosty"],
     title: "ETS2 VTC CONTRACTS 90280778542786590/103",
     preview: "img/combos/ets2-contracts/ets2-contracts-preview.jpg",
     version_game: "1.57",
@@ -158,5 +158,18 @@ export const combos = [
     date: "03.02.26",
     image_center: "img/combos/ets2-contracts/ets2-contracts-center.jpg",
     profile: "https://sharemods.com/5m4p7jy6srz2/server_contracts.zip.html",
+  },
+
+  {
+    id: "ats-quper-map",
+    tags: ["ats", "convoy", "boosty"],
+    title: "QUPER ATS COMBO",
+    preview: "img/combos/ats-quper/ats-quper-preview.jpg",
+    version_game: "1.57",
+    version: "1.0",
+    date: "05.02.26",
+    image_top: "img/combos/ats-quper/ats-quper-top.jpg",
+    image_bottom: "img/combos/ats-quper/ats-quper-bottom.jpg",
+    profile: "https://sharemods.com/cxso6cs2dp1s/Quper_ATS_MAP_COMBO.zip.html",
   },
 ];
