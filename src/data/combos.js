@@ -22,7 +22,7 @@ export const combos = [
     preview: "img/combos/quper/quper-preview.jpg",
     version_game: "1.57",
     version: "4.5",
-    date: "05.02.26",
+    date: "06.02.26",
     video: "AXhZkCPflwA",
     image_top: "img/combos/quper/quper-top.jpg",
     image_bottom: "img/combos/quper/quper-bottom.jpg",
@@ -68,15 +68,15 @@ export const combos = [
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/gold-russia/gold-russia-preview.jpg",
     version_game: "1.57",
-    version: "1.11",
-    date: "03.01.26",
+    version: "1.12",
+    date: "06.02.26",
     video: "q6uNIn1y_KI",
     image_top: "img/combos/gold-russia/gold-russia-top.jpg",
     image_bottom: "img/combos/gold-russia/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=483615012#gid=483615012",
     profile:
-      "https://sharemods.com/ktvfpsj9z5wu/1.57_GOLD_RUSSIA_1.11.zip.html",
+      "https://sharemods.com/dnz5n61vxb5o/1.57_GOLD_RUSSIA_1.12.zip.html",
   },
   {
     id: "convoy-map",
@@ -151,7 +151,7 @@ export const combos = [
   {
     id: "ets2-contracts-map",
     tags: ["ets2", "server", "convoy", "boosty"],
-    title: "ETS2 VTC CONTRACTS 90280778542786590/103",
+    title: "ETS2 VTC CONTRACTS",
     preview: "img/combos/ets2-contracts/ets2-contracts-preview.jpg",
     version_game: "1.57",
     version: "server",
