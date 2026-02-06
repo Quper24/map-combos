@@ -140,7 +140,7 @@ export const combos = [
     preview: "img/combos/157/ets2-mods/ets2-mods-preview.jpg",
     version_game: "1.57",
     version: "1.3",
-    date: "03.01.26",
+    date: "06.02.26",
     video: "zwUQZu-msW4",
     image_center: "img/combos/157/ets2-mods/ets2-mods-center.jpg",
     table:
