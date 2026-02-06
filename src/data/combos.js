@@ -21,15 +21,15 @@ export const combos = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/quper/quper-preview.jpg",
     version_game: "1.57",
-    version: "4.4",
-    date: "02.02.26",
+    version: "4.5",
+    date: "05.02.26",
     video: "AXhZkCPflwA",
     image_top: "img/combos/quper/quper-top.jpg",
     image_bottom: "img/combos/quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=958999320#gid=958999320",
     profile:
-      "https://sharemods.com/dvh1olnb58vq/1.57_QUPER_MAP_COMBO_4.4.zip.html",
+      "https://sharemods.com/tgu6blhaweyk/1.57_QUPER_MAP_COMBO_4.5.zip.html",
   },
   {
     id: "eurasia-map",
