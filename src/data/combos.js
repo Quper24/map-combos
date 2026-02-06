@@ -84,15 +84,15 @@ export const combos = [
     title: "CONVOY MAP COMBO",
     preview: "img/combos/convoy/convoy-preview.jpg",
     version_game: "1.57",
-    version: "1.11",
-    date: "25.01.26",
+    version: "1.12",
+    date: "06.02.26",
     video: "KYtOJNcVBmk",
     image_top: "img/combos/convoy/convoy-top.jpg",
     image_bottom: "img/combos/convoy/convoy-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1153655824#gid=1153655824",
     profile:
-      "https://sharemods.com/3rttbcvbnuuc/1.57_CONVOY_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/70qwmsrlhv1v/1.57_CONVOY_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "ats-mega-map",
