@@ -5,15 +5,15 @@ export const combos = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/157/mega/mega-preview.jpg",
     version_game: "1.57",
-    version: "3.4",
-    date: "28.01.26",
+    version: "3.5",
+    date: "06.02.26",
     video: "r6jq5qA-gaA",
     image_top: "img/combos/157/mega/mega-top.jpg",
     image_bottom: "img/combos/157/mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/gndmrvhowyi2/1.57_MEGA_MAP_COMBO_3.4.zip.html",
+      "https://sharemods.com/15gtl8i84mty/1.57_MEGA_MAP_COMBO_3.5.zip.html",
   },
   {
     id: "quper-map",
@@ -37,15 +37,15 @@ export const combos = [
     title: "EURASIA MAP COMBO",
     preview: "img/combos/157/eurasia/eurasia-preview.jpg",
     version_game: "1.57",
-    version: "2.3",
-    date: "30.01.26",
+    version: "2.4",
+    date: "06.02.26",
     video: "KYtOJNcVBmk",
     image_top: "img/combos/157/eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/157/eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=78135028#gid=78135028",
     profile:
-      "https://sharemods.com/12zdcgmr0aha/1.57_EURASIA_MAP_COMBO_2.3.zip.html",
+      "https://sharemods.com/9s0p85yu37yj/1.57_EURASIA_MAP_COMBO_2.4.zip.html",
   },
   {
     id: "big-russia-map",
