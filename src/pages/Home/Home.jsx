@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <div className="container">
       <header className="home-header">
-        <h1>MAP COMBOS</h1>
+        <h1>MAP COMBOS 1.57</h1>
         <p className="home-subtitle">Сборки карт для Truck Simulator</p>
 
         {latestUpdate && (
