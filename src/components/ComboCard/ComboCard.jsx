@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { tagUtils } from "../../utils/tags";
+import useFavorites from "../hooks/useFavorites";
 
 import "./comboCard.css";
 
@@ -9,6 +10,15 @@ const NEW_PERIOD_DAYS = 3; // Сборка считается новой 3 дн�
 
 export default function ComboCard({ combo }) {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const [isFav, setIsFav] = useState(isFavorite(combo.id));
+
+  const handleFavoriteClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFavorite(combo.id);
+    setIsFav(!isFav);
+  };
 
   // Проверяем, является ли сборка новой
   const isNew = useMemo(() => {
@@ -50,6 +60,13 @@ export default function ComboCard({ combo }) {
           onLoad={() => setImageLoaded(true)}
           className={imageLoaded ? "loaded" : ""}
         />
+
+        <button
+          className={`favorite-btn ${isFav ? "active" : ""}`}
+          onClick={handleFavoriteClick}
+          title={isFav ? "Удалить из избранного" : "Добавить в избранное"}>
+          {isFav ? "❤️" : "🤍"}
+        </button>
 
         {/* Индикатор "Новинка!" - показываем только 3 дня */}
         {isNew && <div className="new-indicator">НОВОЕ!</div>}

@@ -10,21 +10,36 @@ export default function Home() {
   const [activeTags, setActiveTags] = useState([]);
   // Состояние для сортировки по дате
   const [sortByDate, setSortByDate] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Извлекаем все уникальные теги из комбо
   const allTags = useMemo(() => {
     return tagUtils.extractUniqueTags(combos);
   }, []);
 
-  // Фильтруем комбо по активным тегам
+  // Фильтруем комбо по активным тегам и поиску
   const filteredCombos = useMemo(() => {
-    if (activeTags.length === 0) {
-      return combos;
+    let filtered = combos;
+
+    // Поиск по названию
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(
+        (combo) =>
+          combo.title.toLowerCase().includes(query) ||
+          combo.id.toLowerCase().includes(query),
+      );
     }
-    return combos.filter((combo) =>
-      activeTags.every((tag) => combo.tags?.includes(tag)),
-    );
-  }, [activeTags]);
+
+    // Фильтр по тегам (AND логика - все выбранные теги должны быть)
+    if (activeTags.length > 0) {
+      filtered = filtered.filter((combo) =>
+        activeTags.every((tag) => combo.tags?.includes(tag)),
+      );
+    }
+
+    return filtered;
+  }, [activeTags, searchQuery]);
 
   // Функция для преобразования даты из формата "DD.MM.YY" в Date
   const parseDate = (dateStr) => {
@@ -80,6 +95,8 @@ export default function Home() {
   // Сброс всех фильтров
   const resetFilters = () => {
     setActiveTags([]);
+    setSearchQuery("");
+    // setSortByDate(false); // опционально, если хотите сбрасывать и сортировку
   };
 
   // Получаем самую свежую дату для отображения (только когда сортировка включена)
@@ -88,6 +105,9 @@ export default function Home() {
     const latest = sortedAndFilteredCombos[0];
     return latest.date ? `Последнее обновление: ${latest.date}` : null;
   }, [sortedAndFilteredCombos, sortByDate]);
+
+  // Проверяем, есть ли активные фильтры
+  const hasActiveFilters = activeTags.length > 0 || searchQuery;
 
   return (
     <div className="container">
@@ -130,9 +150,31 @@ export default function Home() {
               {sortByDate ? "Сортировка по дате" : "Сортировать по дате"}
             </button>
 
-            {activeTags.length > 0 && (
+            {hasActiveFilters && (
               <button onClick={resetFilters} className="reset-filters-btn">
-                ✕ Сбросить фильтры
+                ✕ Сбросить все фильтры
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Поле поиска */}
+        <div className="search-box-wrapper">
+          <div className="search-box">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Поиск по названию сборки..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="clear-search"
+                title="Очистить поиск">
+                ✕
               </button>
             )}
           </div>
@@ -161,10 +203,18 @@ export default function Home() {
             </span>
             <span className="stats-label">сборок</span>
           </span>
+
           {activeTags.length > 0 && (
             <span className="stats-item">
               <span className="stats-number">{activeTags.length}</span>
-              <span className="stats-label">фильтра</span>
+              <span className="stats-label">тега(ов)</span>
+            </span>
+          )}
+
+          {searchQuery && (
+            <span className="stats-item">
+              <span className="stats-icon">🔍</span>
+              <span className="stats-label">поиск: "{searchQuery}"</span>
             </span>
           )}
 
@@ -174,6 +224,13 @@ export default function Home() {
               {combos.filter((c) => c.tags?.includes("server")).length}
             </span>
             <span className="stats-label">с серверами</span>
+          </span>
+
+          <span className="stats-item">
+            <span className="stats-number">
+              {combos.filter((c) => c.tags?.includes("boosty")).length}
+            </span>
+            <span className="stats-label">только Boosty</span>
           </span>
         </div>
       </div>
@@ -203,6 +260,11 @@ export default function Home() {
             <div className="info-content">
               <h4>Наши сервера</h4>
               <p>Сборки с этим тегом работают на наших серверах</p>
+              <button
+                onClick={() => toggleTag("server")}
+                className="info-action-btn">
+                {activeTags.includes("server") ? "✓ Показаны" : "Показать все"}
+              </button>
             </div>
           </div>
 
@@ -211,6 +273,11 @@ export default function Home() {
             <div className="info-content">
               <h4>Boosty эксклюзив</h4>
               <p>Сборки c этим тегом доступны только подписчикам Boosty</p>
+              <button
+                onClick={() => toggleTag("boosty")}
+                className="info-action-btn">
+                {activeTags.includes("boosty") ? "✓ Показаны" : "Показать все"}
+              </button>
               <a
                 href="https://boosty.to/qupersimulator"
                 target="_blank"

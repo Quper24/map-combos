@@ -11,6 +11,7 @@
   transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
+  height: 100%;
 }
 
 /* Hover effects */
@@ -47,17 +48,19 @@
 /* === Image Container === */
 .combo-card-image {
   position: relative;
+  height: 225px;
   overflow: hidden;
-  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a2a 75%);
   background-size: 200% 100%;
-  animation: loading 1.5s infinite;
 }
 
 .combo-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease, opacity 0.3s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.3s ease;
   opacity: 0;
 }
 
@@ -99,15 +102,16 @@
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  z-index: 2;
+  z-index: 3;
   animation: pulse 2s infinite;
+  text-transform: uppercase;
 }
 
-/* Top-right Boosty badge */
+/* Top-right Boosty badge - ФИКС: убираем top: 50px */
 .boosty-badge {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background: linear-gradient(135deg, #ff5722, #f44336);
   color: white;
   padding: 4px 10px;
@@ -115,8 +119,14 @@
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+  text-transform: uppercase;
+}
+
+/* Если есть new-indicator, сдвигаем boosty-badge вниз */
+.new-indicator + .boosty-badge {
+  top: 45px; /* Сдвигаем ниже, если есть "НОВОЕ!" */
 }
 
 /* Version badge inside overlay */
@@ -133,6 +143,9 @@
 /* === Content Section === */
 .combo-card-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* Title */
@@ -141,6 +154,7 @@
   margin: 0 0 10px 0;
   font-weight: 600;
   color: #ffffff;
+  line-height: 1.3;
 }
 
 /* Meta info */
@@ -150,6 +164,7 @@
   align-items: center;
   font-size: 14px;
   color: #aaa;
+  margin-top: auto;
 }
 
 .combo-card .version {
@@ -187,7 +202,6 @@
 }
 
 /* === Tag Color Variations (теперь все цвета задаются через утилиты) === */
-/* Эти стили будут автоматически применяться к тегам на основе их метаданных */
 .tag-server {
   background: rgba(103, 58, 183, 0.1) !important;
   border-color: rgba(103, 58, 183, 0.3) !important;
@@ -218,30 +232,81 @@
   color: #34a853 !important;
 }
 
+/* === FAVORITE BUTTON FIX === */
+/* Кнопка избранного - ФИКС: позиционирование в правом верхнем углу */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.favorite-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  background: rgba(220, 53, 69, 0.8);
+}
+
+.favorite-btn.active:hover {
+  background: rgba(220, 53, 69, 0.9);
+}
+
+/* Если есть boosty-badge, сдвигаем favorite-btn вниз */
+.boosty-badge ~ .favorite-btn {
+  top: 45px; /* Сдвигаем ниже, если есть boosty-badge */
+}
+
+/* Если есть и new-indicator и boosty-badge */
+.new-indicator + .boosty-badge ~ .favorite-btn {
+  top: 80px; /* Сдвигаем еще ниже */
+}
+
 /* === Animations === */
-@keyframes loading {
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Уберите старый loading animation, если не нужен */
+/* @keyframes loading {
   0% {
     background-position: 200% 0;
   }
   100% {
     background-position: -200% 0;
   }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
+} */
 
 /* ===== MEDIA QUERIES ===== */
 
 /* Tablet */
 @media (max-width: 1024px) {
+  .combo-card-image {
+    height: 180px;
+  }
+
   .combo-card-content {
     padding: 16px;
   }
@@ -253,12 +318,22 @@
   .combo-card-meta {
     font-size: 13px;
   }
+
+  .favorite-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .combo-card {
     border-radius: 12px;
+  }
+
+  .combo-card-image {
+    height: 160px;
   }
 
   .combo-card-content {
@@ -292,9 +367,24 @@
     padding: 3px 8px;
   }
 
+  /* Адаптивные позиции для мобильных */
+  .boosty-badge ~ .favorite-btn {
+    top: 40px;
+  }
+
+  .new-indicator + .boosty-badge ~ .favorite-btn {
+    top: 70px;
+  }
+
   .version-badge {
     font-size: 11px;
     padding: 3px 8px;
+  }
+
+  .favorite-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }
 
@@ -302,6 +392,10 @@
 @media (max-width: 480px) {
   .combo-card:hover {
     transform: translateY(-4px);
+  }
+
+  .combo-card-image {
+    height: 140px;
   }
 
   .combo-card-overlay {
