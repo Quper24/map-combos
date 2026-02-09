@@ -15,8 +15,9 @@ body {
 
 /* Layout */
 .container {
-  max-width: 1280px;
+  max-width: 1380px;
   margin: 0 auto;
+  padding: 40px;
 }
 
 /* Typography */
@@ -65,9 +66,25 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     max-width: 100vw;
     position: relative;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
   }
 }

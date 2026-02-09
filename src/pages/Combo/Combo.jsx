@@ -1,21 +1,26 @@
+// C:\Quper-projects\map-combos\src\pages\Combo\Combo.jsx
 import { useParams, Navigate } from "react-router-dom";
-import { combos } from "../../data/combos";
+import { getAllCombos } from "../../data";
 import ComboContent from "../../components/ComboContent/ComboContent";
 import Video from "../../components/Video/Video";
 import { ImageBlock } from "../../components/ImageBlock/ImageBlock";
 
+import "./combo.css";
+
 export default function Combo() {
   const { slug } = useParams();
-  const combo = combos.find((c) => c.id === slug);
+
+  // Получаем все комбо из всех версий
+  const allCombos = getAllCombos();
+  const combo = allCombos.find((c) => c.id === slug);
 
   if (!combo) return <Navigate to="/" />;
 
   // Форматируем дату для отображения
   const formatDate = (dateStr) => {
-    // Если дата в формате "25.01.26"
     const parts = dateStr.split(".");
     if (parts.length === 3) {
-      return `${parts[0]}.${parts[1]}.20${parts[2]}`; // 25.01.2026
+      return `${parts[0]}.${parts[1]}.20${parts[2]}`;
     }
     return dateStr;
   };
@@ -33,6 +38,9 @@ export default function Combo() {
           <div className="update-info">
             <span className="update-badge">🔄 ОБНОВЛЕНО </span>
             <span className="update-date">{formatDate(combo.date)}</span>
+            <span className="version-badge">
+              Для версии {combo.version_game}
+            </span>
           </div>
         )}
       </div>

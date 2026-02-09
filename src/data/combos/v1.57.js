@@ -1,4 +1,4 @@
-export const combos = [
+export const combos_v1_57 = [
   {
     id: "mega-map",
     tags: ["ets2"],

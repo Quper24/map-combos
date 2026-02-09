@@ -1,27 +1,29 @@
-import { useState, useMemo } from "react";
-import { combos } from "../../data/combos";
+import { useState, useMemo, useEffect } from "react";
+import { COMBOS_BY_VERSION, VERSIONS, getCurrentVersion } from "../../data";
 import ComboCard from "../../components/ComboCard/ComboCard";
-import { tagUtils } from "../../utils/tags"; // Импортируем утилиты тегов
+import { tagUtils } from "../../utils/tags";
 
 import "./home.css";
 
-export default function Home() {
-  // Состояние для активных тегов
+export default function Home({ selectedVersion, onVersionChange }) {
   const [activeTags, setActiveTags] = useState([]);
-  // Состояние для сортировки по дате
   const [sortByDate, setSortByDate] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Извлекаем все уникальные теги из комбо
+  // Получаем комбо для выбранной версии
+  const currentCombos = useMemo(() => {
+    return COMBOS_BY_VERSION[selectedVersion] || [];
+  }, [selectedVersion]);
+
+  // Извлекаем все уникальные теги из комбо текущей версии
   const allTags = useMemo(() => {
-    return tagUtils.extractUniqueTags(combos);
-  }, []);
+    return tagUtils.extractUniqueTags(currentCombos);
+  }, [currentCombos]);
 
-  // Фильтруем комбо по активным тегам и поиску
+  // Фильтруем комбо
   const filteredCombos = useMemo(() => {
-    let filtered = combos;
+    let filtered = currentCombos;
 
-    // Поиск по названию
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(
@@ -31,7 +33,6 @@ export default function Home() {
       );
     }
 
-    // Фильтр по тегам (AND логика - все выбранные теги должны быть)
     if (activeTags.length > 0) {
       filtered = filtered.filter((combo) =>
         activeTags.every((tag) => combo.tags?.includes(tag)),
@@ -39,44 +40,38 @@ export default function Home() {
     }
 
     return filtered;
-  }, [activeTags, searchQuery]);
+  }, [currentCombos, activeTags, searchQuery]);
 
-  // Функция для преобразования даты из формата "DD.MM.YY" в Date
+  // Сохраняем выбранную версию в localStorage
+  useEffect(() => {
+    localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
+  }, [selectedVersion]);
+
+  // Функция для преобразования даты
   const parseDate = (dateStr) => {
     if (!dateStr) return new Date(0);
-
     try {
       const parts = dateStr.split(".");
       if (parts.length === 3) {
         let year = parts[2];
-        if (year.length === 2) {
-          year = "20" + year;
-        }
+        if (year.length === 2) year = "20" + year;
         return new Date(`${year}-${parts[1]}-${parts[0]}`);
       }
     } catch (error) {
       console.error("Error parsing date:", dateStr, error);
     }
-
     return new Date(0);
   };
 
-  // Сортируем комбо: по дате только если включена сортировка
+  // Сортируем комбо
   const sortedAndFilteredCombos = useMemo(() => {
-    if (!sortByDate) {
-      // Если сортировка отключена, сохраняем исходный порядок из данных
-      return filteredCombos;
-    }
-
-    // Если сортировка включена, сортируем по дате (новые сверху)
+    if (!sortByDate) return filteredCombos;
     return [...filteredCombos].sort((a, b) => {
       const dateA = parseDate(a.date);
       const dateB = parseDate(b.date);
-
       if (dateB.getTime() !== dateA.getTime()) {
         return dateB.getTime() - dateA.getTime();
       }
-
       return a.title.localeCompare(b.title);
     });
   }, [filteredCombos, sortByDate]);
@@ -96,10 +91,9 @@ export default function Home() {
   const resetFilters = () => {
     setActiveTags([]);
     setSearchQuery("");
-    // setSortByDate(false); // опционально, если хотите сбрасывать и сортировку
   };
 
-  // Получаем самую свежую дату для отображения (только когда сортировка включена)
+  // Получаем самую свежую дату
   const latestUpdate = useMemo(() => {
     if (!sortByDate || sortedAndFilteredCombos.length === 0) return null;
     const latest = sortedAndFilteredCombos[0];
@@ -109,10 +103,55 @@ export default function Home() {
   // Проверяем, есть ли активные фильтры
   const hasActiveFilters = activeTags.length > 0 || searchQuery;
 
+  // Получаем информацию о текущей версии
+  const versionInfo = VERSIONS[selectedVersion];
+
   return (
     <div className="container">
       <header className="home-header">
-        <h1>MAP COMBOS 1.57</h1>
+        <div className="version-selector-wrapper">
+          <h1>MAP COMBOS</h1>
+
+          {/* Селектор версий */}
+          <div className="version-selector">
+            <div className="version-dropdown">
+              <button className="version-dropdown-btn">
+                <span className="version-icon">
+                  {VERSIONS[selectedVersion]?.icon || "✅"}
+                </span>
+                <span className="version-label">
+                  Версия {VERSIONS[selectedVersion]?.label || selectedVersion}
+                </span>
+                <span className="dropdown-arrow">▼</span>
+              </button>
+              <div className="version-dropdown-menu">
+                {Object.entries(VERSIONS)
+                  .sort(([aKey], [bKey]) => bKey.localeCompare(aKey))
+                  .map(([versionId, versionData]) => (
+                    <button
+                      key={versionId}
+                      onClick={() => onVersionChange(versionId)}
+                      className={`version-option ${selectedVersion === versionId ? "active" : ""} ${versionData.status}`}
+                      title={versionData.description}>
+                      <span className="version-option-icon">
+                        {versionData.icon}
+                      </span>
+                      <span className="version-option-label">
+                        {versionData.label}
+                        {versionData.status === "current" && (
+                          <span className="current-badge">Текущая</span>
+                        )}
+                      </span>
+                      {selectedVersion === versionId && (
+                        <span className="version-check">✓</span>
+                      )}
+                    </button>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <p className="home-subtitle">Сборки карт для Truck Simulator</p>
 
         {latestUpdate && (
@@ -137,7 +176,6 @@ export default function Home() {
           </h2>
 
           <div className="filters-controls">
-            {/* Кнопка сортировки по дате */}
             <button
               onClick={() => setSortByDate(!sortByDate)}
               className={`sort-date-btn ${sortByDate ? "active" : ""}`}
@@ -221,16 +259,9 @@ export default function Home() {
           {/* Статистика по популярным тегам */}
           <span className="stats-item">
             <span className="stats-number">
-              {combos.filter((c) => c.tags?.includes("server")).length}
+              {currentCombos.filter((c) => c.tags?.includes("server")).length}
             </span>
             <span className="stats-label">с серверами</span>
-          </span>
-
-          <span className="stats-item">
-            <span className="stats-number">
-              {combos.filter((c) => c.tags?.includes("boosty")).length}
-            </span>
-            <span className="stats-label">только Boosty</span>
           </span>
         </div>
       </div>
@@ -268,23 +299,17 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="info-card boosty-info">
-            <div className="info-icon">💎</div>
+          <div className="info-card version-info">
+            <div className="info-icon">🔄</div>
             <div className="info-content">
-              <h4>Boosty эксклюзив</h4>
-              <p>Сборки c этим тегом доступны только подписчикам Boosty</p>
-              <button
-                onClick={() => toggleTag("boosty")}
-                className="info-action-btn">
-                {activeTags.includes("boosty") ? "✓ Показаны" : "Показать все"}
-              </button>
-              <a
-                href="https://boosty.to/qupersimulator"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="boosty-link">
-                Подписаться →
-              </a>
+              <h4>Версия {versionInfo.label}</h4>
+              <p>{versionInfo.description}</p>
+              {versionInfo.status === "legacy" && (
+                <p className="legacy-warning">
+                  ⚠️ Это устаревшая версия, рекомендуется использовать{" "}
+                  {getCurrentVersion().label}
+                </p>
+              )}
             </div>
           </div>
         </div>
