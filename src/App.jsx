@@ -3,12 +3,15 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home/Home";
 import Combo from "./pages/Combo/Combo";
+import ServerGuide from "./pages/ServerGuide/ServerGuide"; // Импортируем новую страницу
 import Header from "./components/Header/Header";
 import "./App.css";
 
 export default function App() {
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  // Страницы, на которых не показываем Header
+  const hideHeaderPages = ["/"];
+  const shouldShowHeader = !hideHeaderPages.includes(location.pathname);
 
   // Состояние для выбранной версии
   const [selectedVersion, setSelectedVersion] = useState(() => {
@@ -23,7 +26,7 @@ export default function App() {
 
   return (
     <>
-      {!isHomePage && (
+      {shouldShowHeader && (
         <Header
           selectedVersion={selectedVersion}
           onVersionChange={setSelectedVersion}
@@ -40,6 +43,8 @@ export default function App() {
           }
         />
         <Route path="/:slug" element={<Combo />} />
+        {/* Добавляем новый маршрут для инструкции */}
+        <Route path="/server-guide" element={<ServerGuide />} />
       </Routes>
     </>
   );
