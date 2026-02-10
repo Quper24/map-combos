@@ -108,18 +108,7 @@ export const combos_v1_57 = [
     profile:
       "https://sharemods.com/umwh0sfww1ch/1.57_ATS_MEGA_MAPS_2.0.zip.html",
   },
-  {
-    id: "ats-server-map",
-    tags: ["ats", "server", "convoy", "boosty"],
-    title: "ATS SERVER COMBO",
-    preview: "img/combos/157/ats-server/ats-server-preview.jpg",
-    version_game: "1.57",
-    version: "server",
-    date: "03.02.26",
-    video: "G4ADUHZ1ruI",
-    image_center: "img/combos/157/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/7d07i83ffgk2/ATS-SERVER_30.zip.html",
-  },
+
   {
     id: "ets2-server-map",
     tags: ["ets2", "server", "convoy", "boosty"],
