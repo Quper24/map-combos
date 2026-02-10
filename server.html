@@ -226,6 +226,56 @@
       font-size: 0.9rem;
     }
 
+    /* Стили для обычных ссылок в тексте */
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+
+    /* Стили для ссылок внутри примечаний и списков */
+    .note a,
+    .setting-category a,
+    .faq-item a,
+    .prohibitions a {
+      color: #93c5fd;
+      font-weight: 500;
+      padding: 2px 4px;
+      border-radius: 3px;
+      transition: all 0.2s;
+    }
+
+    .note a:hover,
+    .setting-category a:hover,
+    .faq-item a:hover,
+    .prohibitions a:hover {
+      color: #3b82f6;
+      background-color: rgba(59, 130, 246, 0.1);
+      text-decoration: none;
+    }
+
+    /* Стили для ссылок в блоке "Порядок модов" */
+    .note ul a {
+      display: inline-block;
+      margin: 3px 0;
+      padding: 6px 10px;
+      background-color: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    .note ul a:hover {
+      background-color: rgba(59, 130, 246, 0.25);
+      border-color: rgba(59, 130, 246, 0.5);
+      transform: translateX(3px);
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 20px;
