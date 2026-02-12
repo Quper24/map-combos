@@ -3,29 +3,29 @@ export const VERSIONS = {
   1.57: {
     id: "1.57",
     label: "1.57",
-    status: "current", // current, upcoming, legacy
+    status: "legacy", // current, upcoming, legacy
     releaseDate: "2024-01-01",
+    default: false,
+    description: "Устаревшая версия",
+    icon: "📜",
+  },
+  1.58: {
+    id: "1.58",
+    label: "1.58",
+    status: "current",
+    releaseDate: "2024-02-20",
     default: true,
     description: "Текущая стабильная версия",
     icon: "✅",
   },
-  1.58: {
-    id: "1.58",
-    label: "1.58 (скоро)",
-    status: "upcoming",
-    releaseDate: "2024-02-20",
-    default: false,
-    description: "Скоро выйдет",
-    icon: "🚀",
-  },
-  // 1.56: {
-  //   id: "1.56",
-  //   label: "1.56 (устарело)",
-  //   status: "legacy",
+  // 1.59: {
+  //   id: "1.59",
+  //   label: "1.59 (устарело)",
+  //   status: "upcoming",
   //   releaseDate: "2023-12-01",
   //   default: false,
   //   description: "Устаревшая версия",
-  //   icon: "📜",
+  //   icon: "🚀",
   // },
 };
 

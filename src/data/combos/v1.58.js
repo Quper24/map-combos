@@ -11,4 +11,17 @@ export const combos_v1_58 = [
     image_center: "img/combos/158/ats-server/ats-server-center.jpg",
     profile: "https://sharemods.com/kkijijqwb47x/51535F536572766572.zip.html",
   },
+  {
+    id: "ats-start-combo-map",
+    tags: ["ats", "convoy", "boosty"],
+    title: "ATS START COMBO",
+    preview: "img/combos/158/ats-start/ats-mega-preview.jpg",
+    image_top: "img/combos/158/ats-start/ats-start-top.jpg",
+    image_bottom: "img/combos/158/ats-start/ats-start-bottom.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "12.02.26",
+    // video: "G4ADUHZ1ruI",
+    profile: "https://sharemods.com/fj0x0ohm8983/ATS_START_MAP_COMBO.zip.html",
+  },
 ];

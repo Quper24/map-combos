@@ -16,7 +16,7 @@ export default function App() {
   // Состояние для выбранной версии
   const [selectedVersion, setSelectedVersion] = useState(() => {
     const saved = localStorage.getItem("mapCombos_selectedVersion");
-    return saved || "1.57";
+    return saved || "1.58";
   });
 
   // Сохраняем версию в localStorage при изменении
