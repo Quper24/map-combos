@@ -24,4 +24,16 @@ export const combos_v1_58 = [
     // video: "G4ADUHZ1ruI",
     profile: "https://sharemods.com/fj0x0ohm8983/ATS_START_MAP_COMBO.zip.html",
   },
+
+  {
+    id: "ets2-contracts-map",
+    tags: ["ets2", "server", "convoy", "boosty"],
+    title: "ETS2 VTC CONTRACTS",
+    preview: "img/combos/158/ets2-contracts/ets2-contracts-preview.jpg",
+    version_game: "1.58",
+    version: "server",
+    date: "15.02.26",
+    image_center: "img/combos/158/ets2-contracts/ets2-contracts-center.jpg",
+    profile: "https://sharemods.com/z9cojvl3c2jp/1.58_SERVER_NO_MAPS.zip.html",
+  },
 ];

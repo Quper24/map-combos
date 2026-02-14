@@ -138,18 +138,6 @@ export const combos_v1_57 = [
       "https://sharemods.com/xur2fgehyubl/1.57_MODS_PACK_1.3-100.zip.html",
   },
   {
-    id: "ets2-contracts-map",
-    tags: ["ets2", "server", "convoy", "boosty"],
-    title: "ETS2 VTC CONTRACTS",
-    preview: "img/combos/157/ets2-contracts/ets2-contracts-preview.jpg",
-    version_game: "1.57",
-    version: "server",
-    date: "05.02.26",
-    image_center: "img/combos/157/ets2-contracts/ets2-contracts-center.jpg",
-    profile: "https://sharemods.com/t4j1sz5vbvxp/QS_SERVER_CONTRACTS.zip.html",
-  },
-
-  {
     id: "ats-quper-map",
     tags: ["ats", "convoy", "boosty"],
     title: "QUPER ATS COMBO",
