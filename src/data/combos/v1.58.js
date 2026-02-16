@@ -9,7 +9,7 @@ export const combos_v1_58 = [
     date: "16.02.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/158/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/kkijijqwb47x/51535F536572766572.zip.html",
+    profile: "https://sharemods.com/8zbh0of83xhg/QS_Server_ATS.zip.html",
   },
   {
     id: "ats-start-combo-map",
