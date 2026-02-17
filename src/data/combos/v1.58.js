@@ -6,7 +6,7 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ats-server/ats-server-preview.jpg",
     version_game: "1.58",
     version: "server",
-    date: "16.02.26",
+    date: "17.02.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/158/ats-server/ats-server-center.jpg",
     profile: "https://sharemods.com/8zbh0of83xhg/QS_Server_ATS.zip.html",
