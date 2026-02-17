@@ -21,7 +21,7 @@ export const combos_v1_58 = [
     version_game: "1.58",
     version: "1.2",
     date: "17.02.26",
-    // video: "G4ADUHZ1ruI",
+    video: "_jA5ygN1jaI",
     profile: "https://sharemods.com/5twkte5rn0qz/ATS_START_1.2.zip.html",
   },
 
