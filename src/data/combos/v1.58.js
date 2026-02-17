@@ -22,6 +22,8 @@ export const combos_v1_58 = [
     version: "1.2",
     date: "17.02.26",
     video: "_jA5ygN1jaI",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
     profile: "https://sharemods.com/5twkte5rn0qz/ATS_START_1.2.zip.html",
   },
 
@@ -35,6 +37,8 @@ export const combos_v1_58 = [
     version: "1.0",
     date: "17.02.26",
     video: "_jA5ygN1jaI",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1948498773#gid=1948498773",
     profile: "https://sharemods.com/shn0ol0q283w/ATS_MODS.zip.html",
   },
 
