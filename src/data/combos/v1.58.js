@@ -19,10 +19,23 @@ export const combos_v1_58 = [
     image_top: "img/combos/158/ats-start/ats-start-top.jpg",
     image_bottom: "img/combos/158/ats-start/ats-start-bottom.jpg",
     version_game: "1.58",
-    version: "1.0",
-    date: "12.02.26",
+    version: "1.2",
+    date: "17.02.26",
     // video: "G4ADUHZ1ruI",
-    profile: "https://sharemods.com/fj0x0ohm8983/ATS_START_MAP_COMBO.zip.html",
+    profile: "https://sharemods.com/5twkte5rn0qz/ATS_START_1.2.zip.html",
+  },
+
+  {
+    id: "ats-mods",
+    tags: ["ats"],
+    title: "ATS MODS COMBO",
+    preview: "img/combos/158/ats-mods/ats-mods-preview.jpg",
+    image_center: "img/combos/158/ats-mods/ats-mods-center.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "17.02.26",
+    video: "_jA5ygN1jaI",
+    profile: "https://sharemods.com/shn0ol0q283w/ATS_MODS.zip.html",
   },
 
   {
