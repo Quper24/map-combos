@@ -18,8 +18,7 @@
   background: rgba(255, 255, 255, 0.02);
   border-radius: 16px;
   padding: 30px;
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.3),
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
@@ -77,15 +76,13 @@
 }
 
 /* === Hover Effects === */
-.gallery-item:hover {
+/* .gallery-item:hover {
   transform: scale(1.01);
   z-index: 2;
-}
+} */
 
 .gallery-item:hover .gallery-image {
-  box-shadow:
-    0 8px 30px rgba(77, 163, 255, 0.2),
-    0 5px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 30px rgba(77, 163, 255, 0.2), 0 5px 20px rgba(0, 0, 0, 0.6);
   border-color: rgba(77, 163, 255, 0.3);
 }
 
