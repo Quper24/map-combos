@@ -118,7 +118,7 @@ export default function ComboContent({ table, profile }) {
         )}
 
         <a
-          href="https://boosty.to/qupersimulator/posts/00504721-c22e-4638-a203-5a5d86745a80"
+          href="https://boosty.to/qupersimulator/posts/fb1d2c0c-c2fb-4024-9556-91526ef50f85"
           target="_blank"
           rel="noopener noreferrer"
           className="resource-card early-access-card">
