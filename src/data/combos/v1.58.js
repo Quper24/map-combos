@@ -5,7 +5,7 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO BETA",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "0.1",
+    version: "0.2",
     date: "18.02.26",
     // video: "r6jq5qA-gaA",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
@@ -13,7 +13,7 @@ export const combos_v1_58 = [
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/c1zaivojhdwg/1.58_MEGA_MAP_COMBO_0.1.zip.html",
+      "https://sharemods.com/x0ub22z9z3ec/1.58_MEGA_MAP_COMBO_0.2.zip.html",
   },
   {
     id: "ats-server-map-158",
