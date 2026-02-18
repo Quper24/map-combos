@@ -1,6 +1,22 @@
 export const combos_v1_58 = [
   {
-    id: "ats-server-map",
+    id: "mega-map-158",
+    tags: ["ets2"],
+    title: "MEGA MAP COMBO BETA",
+    preview: "img/combos/158/ets2-mega/mega-preview.jpg",
+    version_game: "1.58",
+    version: "0.1",
+    date: "18.02.26",
+    // video: "r6jq5qA-gaA",
+    image_top: "img/combos/158/ets2-mega/mega-top.jpg",
+    image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
+    // table:
+    //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
+    profile:
+      "https://sharemods.com/c1zaivojhdwg/1.58_MEGA_MAP_COMBO_0.1.zip.html",
+  },
+  {
+    id: "ats-server-map-158",
     tags: ["ats", "server", "convoy", "boosty"],
     title: "ATS SERVER COMBO",
     preview: "img/combos/158/ats-server/ats-server-preview.jpg",
@@ -12,7 +28,7 @@ export const combos_v1_58 = [
     profile: "https://sharemods.com/8zbh0of83xhg/QS_Server_ATS.zip.html",
   },
   {
-    id: "ats-mega-combo-map",
+    id: "ats-mega-map-158",
     tags: ["ats", "convoy", "boosty"],
     title: "ATS START COMBO",
     preview: "img/combos/158/ats-mega/ats-mega-preview.jpg",
@@ -28,7 +44,7 @@ export const combos_v1_58 = [
   },
 
   {
-    id: "ats-mods",
+    id: "ats-mods-158",
     tags: ["ats"],
     title: "ATS MODS COMBO",
     preview: "img/combos/158/ats-mods/ats-mods-preview.jpg",
@@ -43,7 +59,7 @@ export const combos_v1_58 = [
   },
 
   {
-    id: "ets2-contracts-map",
+    id: "ets2-contracts-158",
     tags: ["ets2", "server", "convoy", "boosty"],
     title: "ETS2 VTC CONTRACTS",
     preview: "img/combos/158/ets2-contracts/ets2-contracts-preview.jpg",

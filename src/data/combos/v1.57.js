@@ -1,6 +1,6 @@
 export const combos_v1_57 = [
   {
-    id: "mega-map",
+    id: "mega-map-157",
     tags: ["ets2"],
     title: "MEGA MAP COMBO",
     preview: "img/combos/157/mega/mega-preview.jpg",
@@ -16,7 +16,7 @@ export const combos_v1_57 = [
       "https://sharemods.com/15gtl8i84mty/1.57_MEGA_MAP_COMBO_3.5.zip.html",
   },
   {
-    id: "quper-map",
+    id: "quper-map-157",
     tags: ["ets2"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/157/quper/quper-preview.jpg",
@@ -32,7 +32,7 @@ export const combos_v1_57 = [
       "https://sharemods.com/tgu6blhaweyk/1.57_QUPER_MAP_COMBO_4.5.zip.html",
   },
   {
-    id: "eurasia-map",
+    id: "eurasia-map-157",
     tags: ["ets2"],
     title: "EURASIA MAP COMBO",
     preview: "img/combos/157/eurasia/eurasia-preview.jpg",
@@ -48,7 +48,7 @@ export const combos_v1_57 = [
       "https://sharemods.com/9s0p85yu37yj/1.57_EURASIA_MAP_COMBO_2.4.zip.html",
   },
   {
-    id: "big-russia-map",
+    id: "big-russia-map-157",
     tags: ["ets2"],
     title: "BIG RUSSIA MAP COMBO",
     preview: "img/combos/157/big-russia/big-russia-preview.jpg",
@@ -63,7 +63,7 @@ export const combos_v1_57 = [
     profile: "https://sharemods.com/vyyoqazid5hi/1.57_BIG_RUSSIA_3.8.zip.html",
   },
   {
-    id: "gold-russia-map",
+    id: "gold-russia-map-157",
     tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/157/gold-russia/gold-russia-preview.jpg",
@@ -79,7 +79,7 @@ export const combos_v1_57 = [
       "https://sharemods.com/dnz5n61vxb5o/1.57_GOLD_RUSSIA_1.12.zip.html",
   },
   {
-    id: "convoy-map",
+    id: "convoy-map-157",
     tags: ["ets2", "convoy"],
     title: "CONVOY MAP COMBO",
     preview: "img/combos/157/convoy/convoy-preview.jpg",
@@ -95,7 +95,7 @@ export const combos_v1_57 = [
       "https://sharemods.com/70qwmsrlhv1v/1.57_CONVOY_MAP_COMBO_1.2.zip.html",
   },
   {
-    id: "ats-mega-map",
+    id: "ats-mega-map-157",
     tags: ["ats", "convoy", "boosty"],
     title: "ATS MEGA MAP COMBO",
     preview: "img/combos/157/ats-mega/ats-mega-preview.jpg",
@@ -110,7 +110,7 @@ export const combos_v1_57 = [
   },
 
   {
-    id: "ets2-server-map",
+    id: "ets2-server-map-157",
     tags: ["ets2", "server", "convoy", "boosty"],
     title: "ETS2 SERVER COMBO",
     preview: "img/combos/157/ets2-server/ets2-server-preview.jpg",
@@ -123,7 +123,7 @@ export const combos_v1_57 = [
   },
 
   {
-    id: "ets2-mod-combo",
+    id: "ets2-mod-combo-157",
     tags: ["ets2"],
     title: "ETS2 MODS COMBO",
     preview: "img/combos/157/ets2-mods/ets2-mods-preview.jpg",
@@ -138,7 +138,7 @@ export const combos_v1_57 = [
       "https://sharemods.com/xur2fgehyubl/1.57_MODS_PACK_1.3-100.zip.html",
   },
   {
-    id: "ats-quper-map",
+    id: "ats-quper-map-157",
     tags: ["ats", "convoy", "boosty"],
     title: "QUPER ATS COMBO",
     preview: "img/combos/157/ats-quper/ats-quper-preview.jpg",
