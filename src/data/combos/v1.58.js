@@ -5,15 +5,15 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO BETA",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "0.5",
-    date: "19.02.26",
+    version: "0.6",
+    date: "20.02.26",
     // video: "r6jq5qA-gaA",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/gdwbzrfrkubq/1.58_MEGA_MAP_COMBO_0.5.zip.html",
+      "https://sharemods.com/dpmnjop1oycr/1.58_MEGA_MAP_COMBO_0.6.zip.html",
   },
   {
     id: "eurasia-map-158",
@@ -21,15 +21,15 @@ export const combos_v1_58 = [
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "0.4",
-    date: "19.02.26",
+    version: "0.5",
+    date: "20.02.26",
     // video: "r6jq5qA-gaA",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/zwtftv1x934f/1.58_EURASIA_MAP_COMBO_0.4.zip.html",
+      "https://sharemods.com/9mvxquq8bgj6/1.58_EURASIA_MAP_COMBO_0.5.zip.html",
   },
   {
     id: "bigrussia-map-158",
