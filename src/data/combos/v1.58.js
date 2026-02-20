@@ -1,7 +1,7 @@
 export const combos_v1_58 = [
   {
     id: "mega-map-158",
-    tags: ["ets2"],
+    tags: ["ets2", "convoy"],
     title: "MEGA MAP COMBO BETA",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
@@ -17,7 +17,7 @@ export const combos_v1_58 = [
   },
   {
     id: "eurasia-map-158",
-    tags: ["ets2"],
+    tags: ["ets2", "convoy"],
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
@@ -33,7 +33,7 @@ export const combos_v1_58 = [
   },
   {
     id: "bigrussia-map-158",
-    tags: ["ets2"],
+    tags: ["ets2", "convoy"],
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
@@ -45,6 +45,21 @@ export const combos_v1_58 = [
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile: "https://sharemods.com/72jgpxx69c7d/1.58_BIG_RUSSIA_0.4.zip.html",
+  },
+  {
+    id: "ets2-mod-combo-158",
+    tags: ["ets2"],
+    title: "ETS2 MODS COMBO",
+    preview: "img/combos/158/ets2-mods/ets2-mods-preview.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "20.02.26",
+    video: "zwUQZu-msW4",
+    image_center: "img/combos/158/ets2-mods/ets2-mods-center.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1202853076#gid=1202853076",
+    profile:
+      "https://sharemods.com/tcxr1mutvqqd/1.58_MODS_PACK_1.0-100.zip.html",
   },
   {
     id: "ats-server-map-158",
