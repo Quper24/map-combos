@@ -81,12 +81,13 @@ export const combos_v1_58 = [
     image_top: "img/combos/158/ats-mega/ats-mega-top.jpg",
     image_bottom: "img/combos/158/ats-mega/ats-mega-bottom.jpg",
     version_game: "1.58",
-    version: "1.2",
-    date: "17.02.26",
+    version: "1.3",
+    date: "20.02.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
-    profile: "https://sharemods.com/5twkte5rn0qz/ATS_START_1.2.zip.html",
+    profile:
+      "https://sharemods.com/pbat0hx1m27o/1.58_MEGA_MAP_COMBO_1.3.zip.html",
   },
 
   {
