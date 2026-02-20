@@ -87,7 +87,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/pbat0hx1m27o/1.58_MEGA_MAP_COMBO_1.3.zip.html",
+      "https://sharemods.com/owifd1wkimht/1.58_MEGA_MAP_COMBO_1.4.zip.html",
   },
 
   {
