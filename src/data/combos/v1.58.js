@@ -52,14 +52,14 @@ export const combos_v1_58 = [
     title: "ETS2 MODS COMBO",
     preview: "img/combos/158/ets2-mods/ets2-mods-preview.jpg",
     version_game: "1.58",
-    version: "1.1",
+    version: "1.2",
     date: "21.02.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/158/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1202853076#gid=1202853076",
     profile:
-      "https://sharemods.com/466ifipte3k8/1.58_MODS_PACK_1.1-100.zip.html",
+      "https://sharemods.com/1hraj0wgom4g/1.58_MODS_PACK_1.2-100.zip.html",
   },
   {
     id: "ats-server-map-158",
