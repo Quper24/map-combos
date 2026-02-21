@@ -2,18 +2,18 @@ export const combos_v1_58 = [
   {
     id: "mega-map-158",
     tags: ["ets2", "convoy"],
-    title: "MEGA MAP COMBO BETA",
+    title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "0.6",
-    date: "20.02.26",
-    // video: "r6jq5qA-gaA",
+    version: "1.0",
+    date: "21.02.26",
+    video: "oxTMNZk9FWk",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
-    // table:
-    //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=71162410#gid=71162410",
     profile:
-      "https://sharemods.com/dpmnjop1oycr/1.58_MEGA_MAP_COMBO_0.6.zip.html",
+      "https://sharemods.com/nboqdaaih1ze/1.58.MEGA_MAP_COMBO_1.0.zip.html",
   },
   {
     id: "eurasia-map-158",
@@ -54,7 +54,7 @@ export const combos_v1_58 = [
     version_game: "1.58",
     version: "1.1",
     date: "21.02.26",
-    video: "zwUQZu-msW4",
+    video: "oxTMNZk9FWk",
     image_center: "img/combos/158/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1202853076#gid=1202853076",
