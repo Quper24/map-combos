@@ -5,15 +5,15 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "2.1",
-    date: "22.02.26",
+    version: "2.3",
+    date: "23.02.26",
     video: "oxTMNZk9FWk",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
     profile:
-      "https://sharemods.com/cdh97rcmgf0y/1.58.MEGA_MAP_COMBO_2.1.zip.html",
+      "https://sharemods.com/g571log8rs7i/1.58.MEGA_MAP_COMBO_2.3.zip.html",
   },
   {
     id: "eurasia-map-158",
@@ -21,15 +21,15 @@ export const combos_v1_58 = [
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "2.0",
-    date: "22.02.26",
+    version: "2.2",
+    date: "23.02.26",
     video: "oxTMNZk9FWk",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/5w1kk1qjkgkk/1.58_EURASIA_MAP_COMBO_2.0.zip.html",
+      "https://sharemods.com/f38nvxkp4by1/1.58_EURASIA_MAP_COMBO_2.2.zip.html",
   },
   {
     id: "bigrussia-map-158",
@@ -37,14 +37,14 @@ export const combos_v1_58 = [
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
-    version: "2.0",
-    date: "22.02.26",
+    version: "2.1",
+    date: "23.02.26",
     video: "oxTMNZk9FWk",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
-    profile: "https://sharemods.com/omo71qjd5d79/1.58_BIG_RUSSIA_2.0.zip.html",
+    profile: "https://sharemods.com/lmtv3d4hy2gu/1.58_BIG_RUSSIA_2.1.zip.html",
   },
   {
     id: "no-promods-map-158",
@@ -52,14 +52,14 @@ export const combos_v1_58 = [
     title: "NO PROMODS MAP COMBO BETA",
     preview: "img/combos/158/ets2-no-promods/no-promods-preview.jpg",
     version_game: "1.58",
-    version: "1.2",
-    date: "22.02.26",
+    version: "1.3",
+    date: "23.02.26",
     // video: "r6jq5qA-gaA",
     image_top: "img/combos/158/ets2-no-promods/no-promods-top.jpg",
     image_bottom: "img/combos/158/ets2-no-promods/no-promods-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1052330388#gid=1052330388",
-    profile: "https://sharemods.com/5gcbyqh5rq4t/1.58_NO_PROMODS_1.2.zip.html",
+    profile: "https://sharemods.com/rl4e0fzm96oy/1.58_NO_PROMODS_1.3.zip.html",
   },
   {
     id: "ets2-mod-combo-158",
