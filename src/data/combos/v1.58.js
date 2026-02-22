@@ -47,6 +47,21 @@ export const combos_v1_58 = [
     profile: "https://sharemods.com/72jgpxx69c7d/1.58_BIG_RUSSIA_0.4.zip.html",
   },
   {
+    id: "no-promods-map-158",
+    tags: ["ets2", "convoy"],
+    title: "NO PROMODS MAP COMBO BETA",
+    preview: "img/combos/158/ets2-no-promods/no-promods-preview.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "22.02.26",
+    // video: "r6jq5qA-gaA",
+    image_top: "img/combos/158/ets2-no-promods/no-promods-top.jpg",
+    image_bottom: "img/combos/158/ets2-no-promods/no-promods-bottom.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1052330388#gid=1052330388",
+    profile: "https://sharemods.com/c9nawljrpscv/1.58_NO_PROMODS_1.0.zip.html",
+  },
+  {
     id: "ets2-mod-combo-158",
     tags: ["ets2"],
     title: "ETS2 MODS COMBO",
