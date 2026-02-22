@@ -5,7 +5,7 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "1.1",
+    version: "1.2",
     date: "22.02.26",
     video: "oxTMNZk9FWk",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
@@ -13,7 +13,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=71162410#gid=71162410",
     profile:
-      "https://sharemods.com/2bu5980szy5e/1.58.MEGA_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/fnpftt814wrw/1.58.MEGA_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "eurasia-map-158",
