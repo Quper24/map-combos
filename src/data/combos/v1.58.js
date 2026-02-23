@@ -7,7 +7,7 @@ export const combos_v1_58 = [
     version_game: "1.58",
     version: "2.3",
     date: "23.02.26",
-    video: "oxTMNZk9FWk",
+    video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
@@ -23,7 +23,7 @@ export const combos_v1_58 = [
     version_game: "1.58",
     version: "2.2",
     date: "23.02.26",
-    video: "oxTMNZk9FWk",
+    video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     // table:
@@ -39,7 +39,7 @@ export const combos_v1_58 = [
     version_game: "1.58",
     version: "2.1",
     date: "23.02.26",
-    video: "oxTMNZk9FWk",
+    video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     // table:
@@ -54,7 +54,7 @@ export const combos_v1_58 = [
     version_game: "1.58",
     version: "1.3",
     date: "23.02.26",
-    // video: "r6jq5qA-gaA",
+    video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-no-promods/no-promods-top.jpg",
     image_bottom: "img/combos/158/ets2-no-promods/no-promods-bottom.jpg",
     table:
