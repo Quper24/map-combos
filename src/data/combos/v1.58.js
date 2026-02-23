@@ -13,7 +13,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
     profile:
-      "https://sharemods.com/g571log8rs7i/1.58.MEGA_MAP_COMBO_2.3.zip.html",
+      "https://sharemods.com/ri8ff7g1jwcv/1.58.MEGA_MAP_COMBO_2.3.zip.html",
   },
   {
     id: "eurasia-map-158",
@@ -29,7 +29,7 @@ export const combos_v1_58 = [
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/f38nvxkp4by1/1.58_EURASIA_MAP_COMBO_2.2.zip.html",
+      "https://sharemods.com/1rd1wmxrz8e2/1.58_EURASIA_MAP_COMBO_2.2.zip.html",
   },
   {
     id: "bigrussia-map-158",
@@ -44,7 +44,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
-    profile: "https://sharemods.com/lmtv3d4hy2gu/1.58_BIG_RUSSIA_2.1.zip.html",
+    profile: "https://sharemods.com/p3ihbnfbbg4l/1.58_BIG_RUSSIA_2.1.zip.html",
   },
   {
     id: "no-promods-map-158",
