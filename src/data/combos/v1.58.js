@@ -5,15 +5,15 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "2.4",
-    date: "23.02.26",
+    version: "2.5",
+    date: "24.02.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
     profile:
-      "https://sharemods.com/ri8ff7g1jwcv/1.58.MEGA_MAP_COMBO_2.3.zip.html",
+      "https://sharemods.com/wdognrtu9rl9/1.58.MEGA_MAP_COMBO_2.5.zip.html",
   },
   {
     id: "eurasia-map-158",
@@ -21,15 +21,15 @@ export const combos_v1_58 = [
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "2.3",
-    date: "23.02.26",
+    version: "2.4",
+    date: "24.02.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/1rd1wmxrz8e2/1.58_EURASIA_MAP_COMBO_2.2.zip.html",
+      "https://sharemods.com/w2x58h50br7w/1.58_EURASIA_MAP_COMBO_2.4.zip.html",
   },
   {
     id: "bigrussia-map-158",
@@ -37,14 +37,15 @@ export const combos_v1_58 = [
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
-    version: "2.2",
-    date: "23.02.26",
+    version: "2.3",
+    date: "24.02.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=622349097#gid=622349097",
-    profile: "https://sharemods.com/p3ihbnfbbg4l/1.58_BIG_RUSSIA_2.1.zip.html",
+    profile:
+      "https://sharemods.com/qaik0q1im18c/1.58_BIG_RUSSIA_MAP_COMBO_2.3.zip.html",
   },
   {
     id: "no-promods-map-158",
