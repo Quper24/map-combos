@@ -26,8 +26,8 @@ export const combos_v1_58 = [
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
-    // table:
-    //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
       "https://sharemods.com/1rd1wmxrz8e2/1.58_EURASIA_MAP_COMBO_2.2.zip.html",
   },
@@ -42,8 +42,8 @@ export const combos_v1_58 = [
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
-    // table:
-    //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=1161399557#gid=1161399557",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=622349097#gid=622349097",
     profile: "https://sharemods.com/p3ihbnfbbg4l/1.58_BIG_RUSSIA_2.1.zip.html",
   },
   {
@@ -96,13 +96,13 @@ export const combos_v1_58 = [
     image_top: "img/combos/158/ats-mega/ats-mega-top.jpg",
     image_bottom: "img/combos/158/ats-mega/ats-mega-bottom.jpg",
     version_game: "1.58",
-    version: "1.3",
-    date: "20.02.26",
+    version: "1.5",
+    date: "24.02.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/owifd1wkimht/1.58_MEGA_MAP_COMBO_1.4.zip.html",
+      "https://sharemods.com/uvd1erre1dyo/1.58_MEGA_MAP_COMBO_1.5.zip.html",
   },
 
   {
@@ -112,12 +112,12 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ats-mods/ats-mods-preview.jpg",
     image_center: "img/combos/158/ats-mods/ats-mods-center.jpg",
     version_game: "1.58",
-    version: "1.0",
-    date: "17.02.26",
+    version: "1.1",
+    date: "24.02.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1948498773#gid=1948498773",
-    profile: "https://sharemods.com/shn0ol0q283w/ATS_MODS.zip.html",
+    profile: "https://sharemods.com/c20iekbnso5r/ATS_MODS_PACK.zip.html",
   },
 
   {
