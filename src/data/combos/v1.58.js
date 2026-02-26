@@ -16,6 +16,36 @@ export const combos_v1_58 = [
       "https://sharemods.com/cwl2na7dhi6r/1.58.MEGA_MAP_COMBO_2.6.zip.html",
   },
   {
+    id: "quper-map-158",
+    tags: ["ets2", "convoy", "boosty"],
+    title: "QUPER MAP COMBO",
+    preview: "img/combos/158/ets2-quper/quper-preview.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "27.02.26",
+    // video: "AXhZkCPflwA",
+    image_top: "img/combos/158/ets2-quper/quper-top.jpg",
+    image_bottom: "img/combos/158/ets2-quper/quper-bottom.jpg",
+    // table: "",
+    profile:
+      "https://sharemods.com/tgu6blhaweyk/1.57_QUPER_MAP_COMBO_4.5.zip.html",
+  },
+  {
+    id: "gold-russia-map-158",
+    tags: ["ets2", "convoy", "boosty"],
+    title: "GOLD RUSSIA MAP COMBO",
+    preview: "img/combos/158/ets2-gold/gold-russia-preview.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "26.02.26",
+    //video: "q6uNIn1y_KI",
+    image_top: "img/combos/158/ets2-gold/gold-russia-top.jpg",
+    image_bottom: "img/combos/158/ets2-gold/gold-russia-bottom.jpg",
+    // table:
+    //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=483615012#gid=483615012",
+    profile: "https://sharemods.com/8crhmg0lvhmv/1.58_GOLD_RUSSIA_1.0.zip.html",
+  },
+  {
     id: "eurasia-map-158",
     tags: ["ets2", "convoy"],
     title: "EURASIA MAP COMBO BETA",
@@ -47,6 +77,7 @@ export const combos_v1_58 = [
     profile:
       "https://sharemods.com/w6dotu40d2iq/1.58_BIG_RUSSIA_MAP_COMBO_2.4.zip.html",
   },
+
   {
     id: "no-promods-map-158",
     tags: ["ets2", "convoy"],
