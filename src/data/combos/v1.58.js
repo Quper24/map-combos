@@ -63,6 +63,21 @@ export const combos_v1_58 = [
     profile: "https://sharemods.com/9ybw1by4kvij/1.58_NO_PROMODS_1.4.zip.html",
   },
   {
+    id: "roex-map-158",
+    tags: ["ets2", "convoy"],
+    title: "ROEX MAP COMBO BETA",
+    preview: "img/combos/158/ets2-roex/roex-preview.jpg",
+    version_game: "1.58",
+    version: "1.0",
+    date: "26.02.26",
+    video: "BcV7U0iz2Nw",
+    image_top: "img/combos/158/ets2-roex/roex-top.jpg",
+    image_bottom: "img/combos/158/ets2-roex/roex-bottom.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1803133922#gid=1803133922",
+    profile: "https://sharemods.com/6mke6r5cbsjj/ROEX_MAP_COMBO_1.0.zip.html",
+  },
+  {
     id: "ets2-mod-combo-158",
     tags: ["ets2"],
     title: "ETS2 MODS COMBO",
