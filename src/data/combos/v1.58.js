@@ -28,7 +28,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-quper/quper-bottom.jpg",
     // table: "",
     profile:
-      "https://sharemods.com/wd8mfma9i0gj/1.58_QUPER_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/yh13ymm3rf5r/1.58_QUPER_MAP_COMBO_1.0.zip.html",
   },
   {
     id: "gold-russia-map-158",
