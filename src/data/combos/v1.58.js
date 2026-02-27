@@ -123,18 +123,7 @@ export const combos_v1_58 = [
     profile:
       "https://sharemods.com/1hraj0wgom4g/1.58_MODS_PACK_1.2-100.zip.html",
   },
-  {
-    id: "ats-server-map-158",
-    tags: ["ats", "server", "convoy", "boosty"],
-    title: "ATS SERVER COMBO",
-    preview: "img/combos/158/ats-server/ats-server-preview.jpg",
-    version_game: "1.58",
-    version: "server",
-    date: "26.02.26",
-    video: "G4ADUHZ1ruI",
-    image_center: "img/combos/158/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/n4781gdjozge/SERVER_PROFILE.zip.html",
-  },
+
   {
     id: "ats-mega-map-158",
     tags: ["ats", "convoy", "boosty"],
@@ -165,6 +154,30 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1948498773#gid=1948498773",
     profile: "https://sharemods.com/3neeb8r4uz51/ATS_MODS_PACK.zip.html",
+  },
+  {
+    id: "ats-server-map-158",
+    tags: ["ats", "server", "convoy", "boosty"],
+    title: "ATS SERVER COMBO",
+    preview: "img/combos/158/ats-server/ats-server-preview.jpg",
+    version_game: "1.58",
+    version: "server",
+    date: "26.02.26",
+    video: "G4ADUHZ1ruI",
+    image_center: "img/combos/158/ats-server/ats-server-center.jpg",
+    profile: "https://sharemods.com/n4781gdjozge/SERVER_PROFILE.zip.html",
+  },
+  {
+    id: "ets2-server-map-158",
+    tags: ["ets2", "server", "convoy", "boosty"],
+    title: "ETS2 SERVER COMBO",
+    preview: "img/combos/158/ets2-server/ets2-server-preview.jpg",
+    version_game: "1.58",
+    version: "server",
+    date: "27.02.26",
+    // video: "--ZpeKnXXjw",
+    image_center: "img/combos/158/ets2-server/ets2-server-center.jpg",
+    profile: "https://sharemods.com/048hb51pto4s/ETS2_SERVER_PROMODS.zip.html",
   },
 
   {

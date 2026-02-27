@@ -110,19 +110,6 @@ export const combos_v1_57 = [
   },
 
   {
-    id: "ets2-server-map-157",
-    tags: ["ets2", "server", "convoy", "boosty"],
-    title: "ETS2 SERVER COMBO",
-    preview: "img/combos/157/ets2-server/ets2-server-preview.jpg",
-    version_game: "1.57",
-    version: "server",
-    date: "07.02.26",
-    video: "--ZpeKnXXjw",
-    image_center: "img/combos/157/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/2don3hy5naw4/QS_SERVER.zip.html",
-  },
-
-  {
     id: "ets2-mod-combo-157",
     tags: ["ets2"],
     title: "ETS2 MODS COMBO",
