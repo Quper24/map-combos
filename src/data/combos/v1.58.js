@@ -43,7 +43,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-gold/gold-russia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=483615012#gid=483615012",
-    profile: "https://sharemods.com/8crhmg0lvhmv/1.58_GOLD_RUSSIA_1.0.zip.html",
+    profile: "https://sharemods.com/hrhfwl2zfody/1.58_GOLD_RUSSIA_1.0.zip.html",
   },
   {
     id: "eurasia-map-158",
