@@ -17,7 +17,7 @@ export const combos_v1_58 = [
   },
   {
     id: "quper-map-158",
-    tags: ["ets2", "convoy", "boosty"],
+    tags: ["ets2", "convoy"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/158/ets2-quper/quper-preview.jpg",
     version_game: "1.58",
@@ -33,7 +33,7 @@ export const combos_v1_58 = [
   },
   {
     id: "gold-russia-map-158",
-    tags: ["ets2", "convoy", "boosty"],
+    tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/158/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.58",
