@@ -21,12 +21,13 @@ export const combos_v1_58 = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/158/ets2-quper/quper-preview.jpg",
     version_game: "1.58",
-    version: "1.0",
-    date: "27.02.26",
-    // video: "AXhZkCPflwA",
+    version: "1.1",
+    date: "28.02.26",
+    video: "rQRS8tUOxcw",
     image_top: "img/combos/158/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/158/ets2-quper/quper-bottom.jpg",
-    // table: "",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
       "https://sharemods.com/yh13ymm3rf5r/1.58_QUPER_MAP_COMBO_1.0.zip.html",
   },
@@ -36,13 +37,13 @@ export const combos_v1_58 = [
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/158/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.58",
-    version: "1.0",
-    date: "26.02.26",
+    version: "1.1",
+    date: "28.02.26",
     //video: "q6uNIn1y_KI",
     image_top: "img/combos/158/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/158/ets2-gold/gold-russia-bottom.jpg",
-    // table:
-    //   "https://docs.google.com/spreadsheets/d/1TtDWYDt9lXQwIgxoerH5EJfgEsv6EuusAe8pYQlVdJg/edit?gid=483615012#gid=483615012",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1242893690#gid=1242893690",
     profile: "https://sharemods.com/npbs3llflzmh/1.58_GOLD_RUSSIA_1.0.zip.html",
   },
   {
