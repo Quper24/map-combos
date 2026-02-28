@@ -178,7 +178,7 @@ export const combos_v1_58 = [
     date: "27.02.26",
     // video: "--ZpeKnXXjw",
     image_center: "img/combos/158/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/048hb51pto4s/ETS2_SERVER_PROMODS.zip.html",
+    profile: "https://sharemods.com/u5eqrsliqlas/ETS2_SERVER_PROMODS.zip.html",
   },
 
   {
