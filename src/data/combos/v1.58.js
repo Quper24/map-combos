@@ -29,7 +29,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
-      "https://sharemods.com/yh13ymm3rf5r/1.58_QUPER_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/n7u9vwx5ivj8/1.58_QUPER_MAP_COMBO_1.1.zip.html",
   },
   {
     id: "gold-russia-map-158",
@@ -44,7 +44,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1242893690#gid=1242893690",
-    profile: "https://sharemods.com/npbs3llflzmh/1.58_GOLD_RUSSIA_1.0.zip.html",
+    profile: "https://sharemods.com/y5wkgfhppug5/1.58_GOLD_RUSSIA_1.1.zip.html",
   },
   {
     id: "eurasia-map-158",
