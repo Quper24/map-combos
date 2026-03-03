@@ -21,15 +21,15 @@ export const combos_v1_58 = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/158/ets2-quper/quper-preview.jpg",
     version_game: "1.58",
-    version: "1.2",
-    date: "02.03.26",
+    version: "1.3",
+    date: "03.03.26",
     video: "rQRS8tUOxcw",
     image_top: "img/combos/158/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/158/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
-      "https://sharemods.com/eziv18whz34e/1.58_QUPER_MAP_COMBO_1.2.zip.html",
+      "https://sharemods.com/jdh3o9bpn4jv/1.58_QUPER_MAP_COMBO_1.3.zip.html",
   },
   {
     id: "gold-russia-map-158",
