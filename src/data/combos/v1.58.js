@@ -5,14 +5,14 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "3.0",
+    version: "3.1",
     date: "03.03.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     // table: "",
     profile:
-      "https://sharemods.com/fr30m5x5ch36/1.58.MEGA_MAP_COMBO_3.0.zip.html",
+      "https://sharemods.com/avikh792zdqc/1.58_MEGA_AND_MODS_3.1.zip.html",
   },
   {
     id: "quper-map-158",
