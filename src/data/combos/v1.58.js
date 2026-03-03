@@ -12,7 +12,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     // table: "",
     profile:
-      "https://sharemods.com/s62khaxdsa48/1.58.MEGA_MAP_COMBO_3.0.zip.html",
+      "https://sharemods.com/fr30m5x5ch36/1.58.MEGA_MAP_COMBO_3.0.zip.html",
   },
   {
     id: "quper-map-158",
