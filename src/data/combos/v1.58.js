@@ -1,23 +1,22 @@
 export const combos_v1_58 = [
   {
     id: "mega-map-158",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2"],
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "2.6",
-    date: "25.02.26",
+    version: "3.0",
+    date: "03.03.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
-    table:
-      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
+    // table: "",
     profile:
-      "https://sharemods.com/cwl2na7dhi6r/1.58.MEGA_MAP_COMBO_2.6.zip.html",
+      "https://sharemods.com/s62khaxdsa48/1.58.MEGA_MAP_COMBO_3.0.zip.html",
   },
   {
     id: "quper-map-158",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/158/ets2-quper/quper-preview.jpg",
     version_game: "1.58",
@@ -45,6 +44,22 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1242893690#gid=1242893690",
     profile: "https://sharemods.com/9kv8gg9lqygt/1.58_GOLD_RUSSIA_1.2.zip.html",
+  },
+  {
+    id: "mega-aldi-map-158",
+    tags: ["ets2"],
+    title: "MEGA ALDI MAP COMBO",
+    preview: "img/combos/158/ets2-mega-aldi/mega-aldi-preview.jpg",
+    version_game: "1.58",
+    version: "2.7",
+    date: "03.03.26",
+    video: "BcV7U0iz2Nw",
+    image_top: "img/combos/158/ets2-mega-aldi/mega-aldi-top.jpg",
+    image_bottom: "img/combos/158/ets2-mega-aldi/mega-aldi-bottom.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
+    profile:
+      "https://sharemods.com/o9jwyu72u25d/1.58_MEGA_ALDI_COMBO_2.7.zip.html",
   },
   {
     id: "eurasia-map-158",
@@ -96,18 +111,19 @@ export const combos_v1_58 = [
   },
   {
     id: "roex-map-158",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2"],
     title: "ROEX MAP COMBO BETA",
     preview: "img/combos/158/ets2-roex/roex-preview.jpg",
     version_game: "1.58",
-    version: "1.0",
-    date: "26.02.26",
+    version: "1.1",
+    date: "03.03.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-roex/roex-top.jpg",
     image_bottom: "img/combos/158/ets2-roex/roex-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1803133922#gid=1803133922",
-    profile: "https://sharemods.com/6mke6r5cbsjj/ROEX_MAP_COMBO_1.0.zip.html",
+    profile:
+      "https://sharemods.com/w3p4on8j9k5e/1.58_ROEX_MAP_COMBO_1.1.zip.html",
   },
   {
     id: "ets2-mod-combo-158",
