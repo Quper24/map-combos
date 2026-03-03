@@ -10,7 +10,8 @@ export const combos_v1_58 = [
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
-    // table: "",
+    table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
       "https://sharemods.com/avikh792zdqc/1.58_MEGA_AND_MODS_3.1.zip.html",
   },
