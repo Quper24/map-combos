@@ -127,19 +127,19 @@ export const combos_v1_58 = [
 
   {
     id: "eurasia-map-158",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2"],
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "2.5",
-    date: "25.02.26",
+    version: "3.0",
+    date: "04.03.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/mc6yrnygidnb/1.58_EURASIA_MAP_COMBO_2.5.zip.html",
+      "https://sharemods.com/juukhg49facc/1.58_EURASIA_MAP_COMBO_3.0.zip.html",
   },
   {
     id: "ats-mega-map-158",
