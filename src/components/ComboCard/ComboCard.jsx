@@ -65,7 +65,7 @@ export default function ComboCard({ combo }) {
           className={`favorite-btn ${isFav ? "active" : ""}`}
           onClick={handleFavoriteClick}
           title={isFav ? "Удалить из избранного" : "Добавить в избранное"}>
-          {isFav ? "❤️" : "🤍"}
+          {isFav ? "⭐" : "☆"}
         </button>
 
         {/* Индикатор "Новинка!" - показываем только 3 дня */}

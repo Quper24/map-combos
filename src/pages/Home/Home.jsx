@@ -7,7 +7,7 @@ import "./home.css";
 
 export default function Home({ selectedVersion, onVersionChange }) {
   const [activeTags, setActiveTags] = useState([]);
-  const [sortByDate, setSortByDate] = useState(false);
+  const [sortByDate, setSortByDate] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
   // Получаем комбо для выбранной версии
@@ -131,7 +131,9 @@ export default function Home({ selectedVersion, onVersionChange }) {
                     <button
                       key={versionId}
                       onClick={() => onVersionChange(versionId)}
-                      className={`version-option ${selectedVersion === versionId ? "active" : ""} ${versionData.status}`}
+                      className={`version-option ${
+                        selectedVersion === versionId ? "active" : ""
+                      } ${versionData.status}`}
                       title={versionData.description}>
                       <span className="version-option-icon">
                         {versionData.icon}

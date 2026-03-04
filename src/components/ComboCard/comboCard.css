@@ -58,9 +58,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition:
-    transform 0.5s ease,
-    opacity 0.3s ease;
+  transition: transform 0.5s ease, opacity 0.3s ease;
   opacity: 0;
 }
 
@@ -248,9 +246,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 22px; /* Немного увеличил для звездочки */
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
+  color: #ffd700; /* Золотой цвет для активной звезды */
+  line-height: 1;
 }
 
 .favorite-btn:hover {
@@ -259,21 +259,33 @@
 }
 
 .favorite-btn.active {
-  background: rgba(220, 53, 69, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffd700; /* Золотой цвет для активной звезды */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Свечение для активной звезды */
 }
 
 .favorite-btn.active:hover {
-  background: rgba(220, 53, 69, 0.9);
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffed4e; /* Более яркий золотой при наведении */
+}
+
+/* Стили для неактивной звезды (пустая) */
+.favorite-btn:not(.active) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.favorite-btn:not(.active):hover {
+  color: #ffd700; /* Золотой при наведении на пустую звезду */
 }
 
 /* Если есть boosty-badge, сдвигаем favorite-btn вниз */
 .boosty-badge ~ .favorite-btn {
-  top: 45px; /* Сдвигаем ниже, если есть boosty-badge */
+  top: 45px;
 }
 
 /* Если есть и new-indicator и boosty-badge */
 .new-indicator + .boosty-badge ~ .favorite-btn {
-  top: 80px; /* Сдвигаем еще ниже */
+  top: 80px;
 }
 
 /* === Animations === */
@@ -384,7 +396,7 @@
   .favorite-btn {
     width: 30px;
     height: 30px;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
