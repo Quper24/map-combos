@@ -13,7 +13,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/avikh792zdqc/1.58_MEGA_AND_MODS_3.1.zip.html",
+      "https://sharemods.com/u8n8fbnanliv/1.58.MEGA_MAP_COMBO_3.2.zip.html",
   },
   {
     id: "quper-map-158",
