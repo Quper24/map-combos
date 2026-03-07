@@ -98,15 +98,15 @@ export const combos_v1_58 = [
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
-    version: "2.4",
-    date: "25.02.26",
+    version: "3.0",
+    date: "07.03.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=622349097#gid=622349097",
     profile:
-      "https://sharemods.com/w6dotu40d2iq/1.58_BIG_RUSSIA_MAP_COMBO_2.4.zip.html",
+      "https://sharemods.com/cg3h5kc0y1ny/1.58_BIG_RUSSIA_MAP_COMBO_3.0.zip.html",
   },
 
   {
