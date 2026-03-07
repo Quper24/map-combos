@@ -191,7 +191,7 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ets2-server/ets2-server-preview.jpg",
     version_game: "1.58",
     version: "server",
-    date: "06.03.26",
+    date: "07.03.26",
     image_center: "img/combos/158/ets2-server/ets2-server-center.jpg",
     profile:
       "https://sharemods.com/mrpe4t2lrljg/PROFILE_SERVER_PROMODS_06.03.zip.html",
