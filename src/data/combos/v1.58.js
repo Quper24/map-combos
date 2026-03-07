@@ -94,7 +94,7 @@ export const combos_v1_58 = [
   },
   {
     id: "bigrussia-map-158",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2"],
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
