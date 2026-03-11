@@ -150,7 +150,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ats-mega/ats-mega-bottom.jpg",
     version_game: "1.58",
     version: "2.0",
-    date: "11.02.26",
+    date: "11.03.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
@@ -166,7 +166,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.58",
     version: "1.0",
-    date: "11.02.26",
+    date: "11.03.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
