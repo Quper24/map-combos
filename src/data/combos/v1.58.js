@@ -144,18 +144,18 @@ export const combos_v1_58 = [
   {
     id: "ats-mega-map-158",
     tags: ["ats", "convoy", "boosty"],
-    title: "ATS START COMBO",
+    title: "ATS MEGA COMBO",
     preview: "img/combos/158/ats-mega/ats-mega-preview.jpg",
     image_top: "img/combos/158/ats-mega/ats-mega-top.jpg",
     image_bottom: "img/combos/158/ats-mega/ats-mega-bottom.jpg",
     version_game: "1.58",
-    version: "1.5",
-    date: "24.02.26",
+    version: "2.0",
+    date: "11.02.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/uvd1erre1dyo/1.58_MEGA_MAP_COMBO_1.5.zip.html",
+      "https://sharemods.com/mb1rjvqp9tgd/1.58_ATS_MEGA_MAP_2.0.zip.html",
   },
 
   {
