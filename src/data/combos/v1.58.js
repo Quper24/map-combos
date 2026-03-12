@@ -194,10 +194,10 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ats-server/ats-server-preview.jpg",
     version_game: "1.58",
     version: "server",
-    date: "26.02.26",
+    date: "12.03.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/158/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/n4781gdjozge/SERVER_PROFILE.zip.html",
+    profile: "https://sharemods.com/lpv1v4tmx693/ATS_SERVER_PROFILE.zip.html",
   },
   {
     id: "ets2-server-map-158",
