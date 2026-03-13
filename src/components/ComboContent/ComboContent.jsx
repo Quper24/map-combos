@@ -86,6 +86,20 @@ export default function ComboContent({ table, profile }) {
         <img src="img/combos/steam-params.jpg" alt="Пример конфигурации" />
       </div>
 
+      <h2>Видео по работе Лаунчера для бустеров</h2>
+
+      <details className="spoiler">
+        <summary className="spoiler-summary">
+          <span className="spoiler-icon">▶️</span>
+          Инструкция по использованию лаунчера
+        </summary>
+        <div className="spoiler-content">
+          <Video videoId="_j4XNEikPow" title="Инструкция для лаунчера" />
+        </div>
+      </details>
+
+      <h2>ССЫЛКИ</h2>
+
       <div className="resource-grid">
         {table && (
           <a
