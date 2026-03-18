@@ -6,10 +6,10 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
     version: "4.1",
-    date: "17.03.26",
+    date: "18.03.26",
     video: "mjVLJFf8gzI",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
-    //    image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
+    image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
