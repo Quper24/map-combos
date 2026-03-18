@@ -63,22 +63,6 @@ export const combos_v1_58 = [
       "https://sharemods.com/xu5apwis8m59/1.58_MEGA_ALDI_COMBO_2.8.zip.html",
   },
   {
-    id: "roex-map-158",
-    tags: ["ets2"],
-    title: "ROEX MAP COMBO BETA",
-    preview: "img/combos/158/ets2-roex/roex-preview.jpg",
-    version_game: "1.58",
-    version: "1.2",
-    date: "09.03.26",
-    video: "bBGFOCA15TY",
-    image_top: "img/combos/158/ets2-roex/roex-top.jpg",
-    image_bottom: "img/combos/158/ets2-roex/roex-bottom.jpg",
-    table:
-      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1803133922#gid=1803133922",
-    profile:
-      "https://sharemods.com/ich8b06mzfwf/1.58_ROEX_MAP_COMBO_1.2.zip.html",
-  },
-  {
     id: "bigrussia-map-158",
     tags: ["ets2"],
     title: "BIGRUSSIA MAP COMBO BETA",
@@ -130,15 +114,15 @@ export const combos_v1_58 = [
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "3.1",
-    date: "09.03.26",
+    version: "4.1",
+    date: "18.03.26",
     video: "BcV7U0iz2Nw",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/001ts40an7bu/1.58_EURASIA_MAP_COMBO_3.1.zip.html",
+      "https://sharemods.com/qdpc6zkdjja5/1.58_EURASIA_MAP_COMBO_4.1.zip.html",
   },
   {
     id: "ats-mega-map-158",
