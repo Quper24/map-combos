@@ -105,7 +105,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-no-promods/no-promods-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1052330388#gid=1052330388",
-    profile: "https://sharemods.com/9ybw1by4kvij/1.58_NO_PROMODS_1.4.zip.html",
+    profile: "https://sharemods.com/fo5gwluurvpo/1.58_NO_PROMODS_1.5.zip.html",
   },
 
   {
