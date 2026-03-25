@@ -56,7 +56,7 @@ export const combos_v1_58 = [
     date: "24.03.26",
     video: "bBGFOCA15TY",
     image_top: "img/combos/158/ets2-mega-aldi/mega-aldi-top.jpg",
-    //image_bottom: "img/combos/158/ets2-mega-aldi/mega-aldi-bottom.jpg",
+    image_bottom: "img/combos/158/ets2-mega-aldi/mega-aldi-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
     profile:
