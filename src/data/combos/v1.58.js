@@ -52,15 +52,15 @@ export const combos_v1_58 = [
     title: "MEGA ALDI MAP COMBO",
     preview: "img/combos/158/ets2-mega-aldi/mega-aldi-preview.jpg",
     version_game: "1.58",
-    version: "3.0",
-    date: "24.03.26",
+    version: "3.1",
+    date: "26.03.26",
     video: "bBGFOCA15TY",
     image_top: "img/combos/158/ets2-mega-aldi/mega-aldi-top.jpg",
     image_bottom: "img/combos/158/ets2-mega-aldi/mega-aldi-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=925159654#gid=925159654",
     profile:
-      "https://sharemods.com/s5ijrmquqjgq/1.58_MEGA_ALDI_COMBO_3.0.zip.html",
+      "https://sharemods.com/8pln0l1sydny/1.58_MEGA_ALDI_COMBO_3.1.zip.html",
   },
   {
     id: "bigrussia-map-158",
