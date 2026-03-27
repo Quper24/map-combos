@@ -61,7 +61,7 @@ export default function Home({ selectedVersion, onVersionChange }) {
     localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
   }, [selectedVersion]);
 
-  const API_URL = "http://62.109.4.172:8080/api/players";
+  const API_URL = "https://62.109.4.172:8443/api/players";
 
   const fetchServerStats = async () => {
     try {
@@ -70,7 +70,6 @@ export default function Home({ selectedVersion, onVersionChange }) {
         headers: {
           Accept: "application/json",
         },
-        mode: "cors",
       });
 
       if (!response.ok) {
