@@ -61,7 +61,7 @@ export default function Home({ selectedVersion, onVersionChange }) {
     localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
   }, [selectedVersion]);
 
-  const API_URL = "https://62.109.4.172/api/players";
+  const API_URL = "https://api.qupersimulator.ru/api/players";
 
   const fetchServerStats = async () => {
     try {
