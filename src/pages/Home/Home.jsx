@@ -61,19 +61,23 @@ export default function Home({ selectedVersion, onVersionChange }) {
     localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
   }, [selectedVersion]);
 
-  const API_URL = "https://62.109.4.172/api/players";
+  const API_URL = "http://62.109.4.172:8080/api/players";
   // Функция для получения статистики с серверов
   const fetchServerStats = async () => {
     try {
       // Замените IP на реальный адрес вашего VDS
       const response = await fetch(API_URL, {
-        mode: "cors",
+        method: "GET",
         headers: {
-          Accept: "application/json",
+          "Accept": "application/json",
+          "Content-Type": "application/json",
         },
       });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const data = await response.json();
-
       if (data.success) {
         setServerStats({
           total_players: data.total_players,
