@@ -9,6 +9,20 @@ export default function Home({ selectedVersion, onVersionChange }) {
   const [activeTags, setActiveTags] = useState([]);
   const [sortByDate, setSortByDate] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
+  const [serversExpanded, setServersExpanded] = useState(false); // Состояние для раскрытия блока
+
+  // Состояния для статистики серверов
+  const [serverStats, setServerStats] = useState({
+    total_players: 0,
+    servers: {
+      ets2_main: { name: "ETS2 Main", players: 0, online: false, icon: "🚛" },
+      ets2_light: { name: "ETS2 Light", players: 0, online: false, icon: "🚚" },
+      ats: { name: "ATS", players: 0, online: false, icon: "🇺🇸" },
+    },
+    lastUpdate: null,
+    loading: true,
+    error: null,
+  });
 
   // Получаем комбо для выбранной версии
   const currentCombos = useMemo(() => {
@@ -46,6 +60,41 @@ export default function Home({ selectedVersion, onVersionChange }) {
   useEffect(() => {
     localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
   }, [selectedVersion]);
+
+  // Функция для получения статистики с серверов
+  const fetchServerStats = async () => {
+    try {
+      // Замените IP на реальный адрес вашего VDS
+      const response = await fetch("http://62.109.4.172:8080/api/players");
+      const data = await response.json();
+
+      if (data.success) {
+        setServerStats({
+          total_players: data.total_players,
+          servers: data.servers,
+          lastUpdate: data.timestamp,
+          loading: false,
+          error: null,
+        });
+      } else {
+        throw new Error("Failed to fetch stats");
+      }
+    } catch (error) {
+      console.error("Error fetching server stats:", error);
+      setServerStats((prev) => ({
+        ...prev,
+        loading: false,
+        error: "Не удалось загрузить статистику",
+      }));
+    }
+  };
+
+  // Загружаем статистику при монтировании и каждую минуту
+  useEffect(() => {
+    fetchServerStats();
+    const interval = setInterval(fetchServerStats, 60000); // Обновляем каждую минуту
+    return () => clearInterval(interval);
+  }, []);
 
   // Функция для преобразования даты
   const parseDate = (dateStr) => {
@@ -163,6 +212,92 @@ export default function Home({ selectedVersion, onVersionChange }) {
           </div>
         )}
       </header>
+
+      {/* КОМПАКТНЫЙ БЛОК СЕРВЕРОВ - РАСКРЫВАЕТСЯ ПО КЛИКУ */}
+      <div className="quper-servers-compact">
+        <div
+          className="servers-header-compact"
+          onClick={() => setServersExpanded(!serversExpanded)}>
+          <div className="servers-title-compact">
+            <span className="servers-icon">🚛</span>
+            <span className="servers-name">Сервера Quper Simulator</span>
+            {!serversExpanded && serverStats.total_players > 0 && (
+              <span className="players-badge">
+                В сети {serverStats.total_players} игр.
+              </span>
+            )}
+          </div>
+          <div className="servers-toggle">
+            <span
+              className={`toggle-icon ${serversExpanded ? "expanded" : ""}`}>
+              {serversExpanded ? "▼" : "▶"}
+            </span>
+          </div>
+        </div>
+
+        {serversExpanded && (
+          <div className="servers-content">
+            {serverStats.loading ? (
+              <div className="servers-loading">⏳ Загрузка...</div>
+            ) : serverStats.error ? (
+              <div className="servers-error">⚠️ {serverStats.error}</div>
+            ) : (
+              <>
+                <div className="total-players-compact">
+                  Всего: <strong>{serverStats.total_players}</strong> игроков
+                </div>
+                <div className="servers-list-compact">
+                  <div className="server-row">
+                    <span className="server-icon">🚛</span>
+                    <span className="server-name">ETS2 Main</span>
+                    <span
+                      className={`status-dot ${
+                        serverStats.servers.ets2_main?.online
+                          ? "online"
+                          : "offline"
+                      }`}></span>
+                    <span className="players-count-compact">
+                      {serverStats.servers.ets2_main?.players || 0}
+                    </span>
+                  </div>
+                  <div className="server-row">
+                    <span className="server-icon">🚚</span>
+                    <span className="server-name">ETS2 Light</span>
+                    <span
+                      className={`status-dot ${
+                        serverStats.servers.ets2_light?.online
+                          ? "online"
+                          : "offline"
+                      }`}></span>
+                    <span className="players-count-compact">
+                      {serverStats.servers.ets2_light?.players || 0}
+                    </span>
+                  </div>
+                  <div className="server-row">
+                    <span className="server-icon">🇺🇸</span>
+                    <span className="server-name">ATS</span>
+                    <span
+                      className={`status-dot ${
+                        serverStats.servers.ats?.online ? "online" : "offline"
+                      }`}></span>
+                    <span className="players-count-compact">
+                      {serverStats.servers.ats?.players || 0}
+                    </span>
+                  </div>
+                </div>
+                {serverStats.lastUpdate && (
+                  <div className="servers-update-compact">
+                    🔄{" "}
+                    {new Date(serverStats.lastUpdate).toLocaleTimeString(
+                      "ru-RU",
+                    )}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+      </div>
 
       {/* Панель фильтров */}
       <div className="filters-panel">
