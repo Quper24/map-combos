@@ -61,10 +61,8 @@ export default function Home({ selectedVersion, onVersionChange }) {
     localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
   }, [selectedVersion]);
 
-  const API_URL =
-    process.env.NODE_ENV === "production"
-      ? "https://62.109.4.172/api/players" // если настроили HTTPS
-      : "http://62.109.4.172:8080/api/players"; // для разработки  // Функция для получения статистики с серверов
+  const API_URL = "http://62.109.4.172:8080/api/players";
+
   const fetchServerStats = async () => {
     try {
       const response = await fetch(API_URL, {
@@ -72,7 +70,12 @@ export default function Home({ selectedVersion, onVersionChange }) {
         headers: {
           Accept: "application/json",
         },
+        mode: "cors",
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const data = await response.json();
 
