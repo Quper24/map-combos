@@ -61,27 +61,29 @@ export default function Home({ selectedVersion, onVersionChange }) {
     localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
   }, [selectedVersion]);
 
-  const API_URL = "http://62.109.4.172:8080/api/players";
-  // Функция для получения статистики с серверов
+  const API_URL =
+    process.env.NODE_ENV === "production"
+      ? "https://62.109.4.172/api/players" // если настроили HTTPS
+      : "http://62.109.4.172:8080/api/players"; // для разработки  // Функция для получения статистики с серверов
   const fetchServerStats = async () => {
     try {
-      // Замените IP на реальный адрес вашего VDS
       const response = await fetch(API_URL, {
         method: "GET",
         headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
+          Accept: "application/json",
         },
       });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
+
       const data = await response.json();
+
       if (data.success) {
         setServerStats({
           total_players: data.total_players,
-          servers: data.servers,
+          servers: {
+            ets2_main: { ...data.servers.ets2_main, icon: "🚛" },
+            ets2_light: { ...data.servers.ets2_light, icon: "🚚" },
+            ats: { ...data.servers.ats, icon: "⭐" },
+          },
           lastUpdate: data.timestamp,
           loading: false,
           error: null,
