@@ -65,7 +65,7 @@ export default function Home({ selectedVersion, onVersionChange }) {
   const fetchServerStats = async () => {
     try {
       // Замените IP на реальный адрес вашего VDS
-      const response = await fetch("http://62.109.4.172:8080/api/players");
+      const response = await fetch("https://62.109.4.172:8080/api/players");
       const data = await response.json();
 
       if (data.success) {
