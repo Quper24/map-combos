@@ -200,7 +200,7 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ets2-contracts/ets2-contracts-preview.jpg",
     version_game: "1.58",
     version: "server",
-    date: "27.03.26",
+    date: "29.03.26",
     image_center: "img/combos/158/ets2-contracts/ets2-contracts-center.jpg",
     profile:
       "https://sharemods.com/agh6u6einqpp/SERVER_NO_MAP_PROFILE.zip.html",
