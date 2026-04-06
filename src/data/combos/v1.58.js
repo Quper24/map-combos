@@ -13,7 +13,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/e98kjhawhd7k/1.58_ETS2_MEGA_MAP_COMBO_4.3.zip.html",
+      "https://sharemods.com/gyol3cxgdf4p/1.58_ETS2_MEGA_MAP_COMBO_4.3.1.zip.html",
   },
   {
     id: "quper-map-158",
@@ -29,7 +29,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
-      "https://sharemods.com/olnpeudmrlad/1.58.QUPER_MAP_COMBO_2.3.zip.html",
+      "https://sharemods.com/z4uxpmygts8f/1.58.QUPER_MAP_COMBO_2.3.1.zip.html",
   },
   {
     id: "gold-russia-map-158",

@@ -127,7 +127,7 @@ export default function ServerGuide() {
               <li>Перейдите в меню Конвои → Конвои.</li>
               <li>Дождитесь загрузки списка серверов.</li>
               <li>
-                В поиске слева введите <code>quer</code> и нажмите{" "}
+                В поиске слева введите <code>quper</code> и нажмите{" "}
                 <code>Enter</code>.
               </li>
               <li>

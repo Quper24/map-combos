@@ -601,8 +601,10 @@
   border-radius: 12px;
   margin: 20px 0;
   border: 1px solid rgba(233, 69, 96, 0.3);
-  overflow: hidden;
+  overflow: visible; /* Меняем с hidden на visible */
   transition: all 0.3s ease;
+  position: relative; /* Добавляем для контекста */
+  z-index: 10;
 }
 
 .servers-header-compact {
@@ -666,6 +668,8 @@
   padding: 0 16px 16px 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   animation: slideDown 0.2s ease;
+  overflow: visible;
+  position: relative;
 }
 
 @keyframes slideDown {
@@ -698,6 +702,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow: visible;
+  position: relative;
 }
 
 .server-row {
@@ -708,10 +714,13 @@
   background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
   transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .server-row:hover {
   background: rgba(255, 255, 255, 0.08);
+  z-index: 100;
 }
 
 .server-row .server-icon {
@@ -816,30 +825,38 @@
 /* Всплывающая подсказка со списком игроков */
 .players-tooltip {
   position: absolute;
-  right: 0;
-  top: 100%;
-  margin-top: 5px;
+  left: 0; /* Меняем с right: 0 */
+  right: auto;
+  bottom: 100%;
+  top: auto;
+  margin-bottom: 8px;
+  margin-top: 0;
   background: #1a1a2e;
   border: 1px solid #e94560;
   border-radius: 8px;
-  padding: 8px 12px;
-  min-width: 150px;
+  padding: 10px 14px;
+  min-width: 180px;
+  max-width: 250px;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   animation: fadeIn 0.2s ease;
+  backdrop-filter: blur(4px);
 }
 
-.server-row {
-  position: relative;
+.server-row:last-child .players-tooltip {
+  bottom: auto;
+  top: 100%;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .tooltip-title {
   font-size: 11px;
   font-weight: bold;
   color: #e94560;
-  margin-bottom: 5px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .tooltip-list {
@@ -852,6 +869,48 @@
   color: #fff;
   padding: 2px 0;
   white-space: nowrap;
+}
+
+.tooltip-player:hover {
+  color: #4ade80;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Кастомизация скроллбара */
+.tooltip-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tooltip-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.tooltip-list::-webkit-scrollbar-thumb {
+  background: #e94560;
+  border-radius: 2px;
+}
+
+.tooltip-player {
+  font-size: 12px;
+  color: #ddd;
+  padding: 4px 0;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tooltip-player:last-child {
+  border-bottom: none;
 }
 
 .tooltip-player:hover {
@@ -971,6 +1030,12 @@
     bottom: 10px;
     width: 90%;
     max-width: 280px;
+    z-index: 9999;
+  }
+
+  .server-row:last-child .players-tooltip {
+    bottom: 10px;
+    top: auto;
   }
 
   .server-status-info {
