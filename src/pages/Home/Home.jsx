@@ -9,15 +9,37 @@ export default function Home({ selectedVersion, onVersionChange }) {
   const [activeTags, setActiveTags] = useState([]);
   const [sortByDate, setSortByDate] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
-  const [serversExpanded, setServersExpanded] = useState(false); // Состояние для раскрытия блока
+  const [serversExpanded, setServersExpanded] = useState(false);
+  const [hoveredServer, setHoveredServer] = useState(null); // Для отображения списка игроков при наведении
 
   // Состояния для статистики серверов
   const [serverStats, setServerStats] = useState({
     total_players: 0,
     servers: {
-      ets2_main: { name: "ETS2 Main", players: 0, online: false, icon: "🚛" },
-      ets2_light: { name: "ETS2 Light", players: 0, online: false, icon: "🚚" },
-      ats: { name: "ATS", players: 0, online: false, icon: "🇺🇸" },
+      ets2_main: {
+        name: "ETS2 Main",
+        players: 0,
+        players_list: [],
+        online: false,
+        has_players: false,
+        icon: "🚛",
+      },
+      ets2_light: {
+        name: "ETS2 Light",
+        players: 0,
+        players_list: [],
+        online: false,
+        has_players: false,
+        icon: "🚚",
+      },
+      ats: {
+        name: "ATS",
+        players: 0,
+        players_list: [],
+        online: false,
+        has_players: false,
+        icon: "⭐",
+      },
     },
     lastUpdate: null,
     loading: true,
@@ -82,9 +104,29 @@ export default function Home({ selectedVersion, onVersionChange }) {
         setServerStats({
           total_players: data.total_players,
           servers: {
-            ets2_main: { ...data.servers.ets2_main, icon: "🚛" },
-            ets2_light: { ...data.servers.ets2_light, icon: "🚚" },
-            ats: { ...data.servers.ats, icon: "⭐" },
+            ets2_main: {
+              ...data.servers.ets2_main,
+              icon: "🚛",
+              players_list: data.servers.ets2_main?.players_list || [],
+              has_players:
+                data.servers.ets2_main?.has_players ||
+                data.servers.ets2_main?.players > 0,
+            },
+            ets2_light: {
+              ...data.servers.ets2_light,
+              icon: "🚚",
+              players_list: data.servers.ets2_light?.players_list || [],
+              has_players:
+                data.servers.ets2_light?.has_players ||
+                data.servers.ets2_light?.players > 0,
+            },
+            ats: {
+              ...data.servers.ats,
+              icon: "⭐",
+              players_list: data.servers.ats?.players_list || [],
+              has_players:
+                data.servers.ats?.has_players || data.servers.ats?.players > 0,
+            },
           },
           lastUpdate: data.timestamp,
           loading: false,
@@ -106,7 +148,7 @@ export default function Home({ selectedVersion, onVersionChange }) {
   // Загружаем статистику при монтировании и каждую минуту
   useEffect(() => {
     fetchServerStats();
-    const interval = setInterval(fetchServerStats, 60000); // Обновляем каждую минуту
+    const interval = setInterval(fetchServerStats, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -168,6 +210,14 @@ export default function Home({ selectedVersion, onVersionChange }) {
 
   // Получаем информацию о текущей версии
   const versionInfo = VERSIONS[selectedVersion];
+
+  // Функция для отображения статуса сервера
+  const getServerStatusText = (server) => {
+    if (!server.online) return { text: "Офлайн", class: "offline", icon: "🔴" };
+    if (server.has_players)
+      return { text: "Играют", class: "online", icon: "🟢" };
+    return { text: "Пуст", class: "empty", icon: "🟡" };
+  };
 
   return (
     <div className="container">
@@ -261,50 +311,121 @@ export default function Home({ selectedVersion, onVersionChange }) {
                   Всего: <strong>{serverStats.total_players}</strong> игроков
                 </div>
                 <div className="servers-list-compact">
-                  <div className="server-row">
+                  {/* ETS2 Main */}
+                  <div
+                    className="server-row"
+                    onMouseEnter={() => setHoveredServer("ets2_main")}
+                    onMouseLeave={() => setHoveredServer(null)}>
                     <span className="server-icon">🚛</span>
                     <span className="server-name">ETS2 Main</span>
-                    <span
-                      className={`status-dot ${
-                        serverStats.servers.ets2_main?.online
-                          ? "online"
-                          : "offline"
-                      }`}></span>
+                    <div className="server-status-info">
+                      <span
+                        className={`status-dot ${getServerStatusText(serverStats.servers.ets2_main).class}`}></span>
+                      <span className="status-text">
+                        {
+                          getServerStatusText(serverStats.servers.ets2_main)
+                            .text
+                        }
+                      </span>
+                    </div>
                     <span className="players-count-compact">
                       {serverStats.servers.ets2_main?.players || 0}
                     </span>
+                    {/* Всплывающая подсказка со списком игроков */}
+                    {hoveredServer === "ets2_main" &&
+                      serverStats.servers.ets2_main?.players_list?.length >
+                        0 && (
+                        <div className="players-tooltip">
+                          <div className="tooltip-title">👥 Игроки онлайн:</div>
+                          <div className="tooltip-list">
+                            {serverStats.servers.ets2_main.players_list.map(
+                              (player, idx) => (
+                                <div key={idx} className="tooltip-player">
+                                  {player}
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      )}
                   </div>
-                  <div className="server-row">
+
+                  {/* ETS2 Light */}
+                  <div
+                    className="server-row"
+                    onMouseEnter={() => setHoveredServer("ets2_light")}
+                    onMouseLeave={() => setHoveredServer(null)}>
                     <span className="server-icon">🚚</span>
                     <span className="server-name">ETS2 Light</span>
-                    <span
-                      className={`status-dot ${
-                        serverStats.servers.ets2_light?.online
-                          ? "online"
-                          : "offline"
-                      }`}></span>
+                    <div className="server-status-info">
+                      <span
+                        className={`status-dot ${getServerStatusText(serverStats.servers.ets2_light).class}`}></span>
+                      <span className="status-text">
+                        {
+                          getServerStatusText(serverStats.servers.ets2_light)
+                            .text
+                        }
+                      </span>
+                    </div>
                     <span className="players-count-compact">
                       {serverStats.servers.ets2_light?.players || 0}
                     </span>
+                    {hoveredServer === "ets2_light" &&
+                      serverStats.servers.ets2_light?.players_list?.length >
+                        0 && (
+                        <div className="players-tooltip">
+                          <div className="tooltip-title">👥 Игроки онлайн:</div>
+                          <div className="tooltip-list">
+                            {serverStats.servers.ets2_light.players_list.map(
+                              (player, idx) => (
+                                <div key={idx} className="tooltip-player">
+                                  {player}
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      )}
                   </div>
-                  <div className="server-row">
-                    <span className="server-icon">🇺🇸</span>
+
+                  {/* ATS */}
+                  <div
+                    className="server-row"
+                    onMouseEnter={() => setHoveredServer("ats")}
+                    onMouseLeave={() => setHoveredServer(null)}>
+                    <span className="server-icon">⭐</span>
                     <span className="server-name">ATS</span>
-                    <span
-                      className={`status-dot ${
-                        serverStats.servers.ats?.online ? "online" : "offline"
-                      }`}></span>
+                    <div className="server-status-info">
+                      <span
+                        className={`status-dot ${getServerStatusText(serverStats.servers.ats).class}`}></span>
+                      <span className="status-text">
+                        {getServerStatusText(serverStats.servers.ats).text}
+                      </span>
+                    </div>
                     <span className="players-count-compact">
                       {serverStats.servers.ats?.players || 0}
                     </span>
+                    {hoveredServer === "ats" &&
+                      serverStats.servers.ats?.players_list?.length > 0 && (
+                        <div className="players-tooltip">
+                          <div className="tooltip-title">👥 Игроки онлайн:</div>
+                          <div className="tooltip-list">
+                            {serverStats.servers.ats.players_list.map(
+                              (player, idx) => (
+                                <div key={idx} className="tooltip-player">
+                                  {player}
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      )}
                   </div>
                 </div>
                 {serverStats.lastUpdate && (
                   <div className="servers-update-compact">
-                    🔄{" "}
-                    {new Date(serverStats.lastUpdate).toLocaleTimeString(
-                      "ru-RU",
-                    )}
+                    🔄 Обновлено:{" "}
+                    {new Date(serverStats.lastUpdate).toLocaleString("ru-RU")}
                   </div>
                 )}
               </>

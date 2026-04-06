@@ -782,6 +782,93 @@
 .servers-error {
   color: #ef4444;
 }
+
+/* Статус сервера */
+.server-status-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.status-text {
+  font-size: 11px;
+  color: #888;
+  min-width: 45px;
+}
+
+.status-dot.online {
+  background: #4ade80;
+  box-shadow: 0 0 5px #4ade80;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.empty {
+  background: #fbbf24;
+  box-shadow: 0 0 5px #fbbf24;
+}
+
+.status-dot.offline {
+  background: #666;
+}
+
+/* Всплывающая подсказка со списком игроков */
+.players-tooltip {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 5px;
+  background: #1a1a2e;
+  border: 1px solid #e94560;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.2s ease;
+}
+
+.server-row {
+  position: relative;
+}
+
+.tooltip-title {
+  font-size: 11px;
+  font-weight: bold;
+  color: #e94560;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-list {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.tooltip-player {
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 0;
+  white-space: nowrap;
+}
+
+.tooltip-player:hover {
+  color: #4ade80;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== MEDIA QUERIES ===== */
 
 /* Tablet */
@@ -874,6 +961,24 @@
 
   .players-count-compact {
     font-size: 14px;
+  }
+
+  .players-tooltip {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 10px;
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .server-status-info {
+    margin-right: 8px;
+  }
+
+  .status-text {
+    display: none;
   }
 }
 
