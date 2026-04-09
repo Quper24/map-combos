@@ -44,7 +44,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1242893690#gid=1242893690",
-    profile: "https://sharemods.com/8x6ildps4p96/1.58_GOLD_RUSSIA_1.5.zip.html",
+    profile: "https://sharemods.com/y4ax26177nfp/1.58_ETS2_GOLD_1.6.zip.html",
   },
   {
     id: "mega-aldi-map-158",
