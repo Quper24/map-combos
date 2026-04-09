@@ -5,15 +5,15 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "4.3",
-    date: "02.04.26",
+    version: "4.4",
+    date: "09.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/gyol3cxgdf4p/1.58_ETS2_MEGA_MAP_COMBO_4.3.1.zip.html",
+      "https://sharemods.com/7gnzvw8pmwko/1.58_ETS2_MEGA_MAP_COMBO_4.4.zip.html",
   },
   {
     id: "quper-map-158",
@@ -21,15 +21,15 @@ export const combos_v1_58 = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/158/ets2-quper/quper-preview.jpg",
     version_game: "1.58",
-    version: "2.3",
-    date: "06.04.26",
+    version: "2.4",
+    date: "09.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/158/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
-      "https://sharemods.com/z4uxpmygts8f/1.58.QUPER_MAP_COMBO_2.3.1.zip.html",
+      "https://sharemods.com/rkq9wyxcawde/1.58.QUPER_MAP_COMBO_2.4.zip.html",
   },
   {
     id: "gold-russia-map-158",
