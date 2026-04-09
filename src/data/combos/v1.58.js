@@ -114,15 +114,15 @@ export const combos_v1_58 = [
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "4.1",
-    date: "18.03.26",
+    version: "4.2",
+    date: "09.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/qdpc6zkdjja5/1.58_EURASIA_MAP_COMBO_4.1.zip.html",
+      "https://sharemods.com/85b3mtqwkglv/1.58_ETS2_EURASIA_MAP_COMBO_4.2.zip.html",
   },
   {
     id: "ats-mega-map-158",
