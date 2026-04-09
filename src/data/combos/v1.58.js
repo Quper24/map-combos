@@ -13,7 +13,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/7gnzvw8pmwko/1.58_ETS2_MEGA_MAP_COMBO_4.4.zip.html",
+      "https://sharemods.com/s9evdk2wkg6u/1.58_ETS2_MEGA_MAP_COMBO_4.4.zip.html",
   },
   {
     id: "quper-map-158",
@@ -29,7 +29,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
-      "https://sharemods.com/rkq9wyxcawde/1.58.QUPER_MAP_COMBO_2.4.zip.html",
+      "https://sharemods.com/sloeuubgb2an/1.58.QUPER_MAP_COMBO_2.4.zip.html",
   },
   {
     id: "gold-russia-map-158",
@@ -75,7 +75,7 @@ export const combos_v1_58 = [
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=622349097#gid=622349097",
-    profile: "https://sharemods.com/irpqdvvrpbev/1.58_BIG_RUSSIA_4.3.zip.html",
+    profile: "https://sharemods.com/aveearw3bt8d/1.58_BIG_RUSSIA_4.3.zip.html",
   },
   {
     id: "ets2-mod-combo-158",
@@ -122,7 +122,7 @@ export const combos_v1_58 = [
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/85b3mtqwkglv/1.58_ETS2_EURASIA_MAP_COMBO_4.2.zip.html",
+      "https://sharemods.com/0194s77jgbsw/1.58_ETS2_EURASIA_MAP_COMBO_4.2.zip.html",
   },
   {
     id: "ats-mega-map-158",
