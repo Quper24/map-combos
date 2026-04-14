@@ -202,6 +202,6 @@ export const combos_v1_58 = [
     version: "85568392936116600/103",
     date: "14.04.26",
     image_center: "img/combos/158/ets2-contracts/ets2-contracts-center.jpg",
-    profile: "https://sharemods.com/072dcd3d3ufx/SERVER_CONTRACTS.rar.html",
+    profile: "https://sharemods.com/0zljscz7tuuh/SERVER_LITE.zip.html",
   },
 ];
