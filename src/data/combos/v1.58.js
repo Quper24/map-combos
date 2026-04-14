@@ -5,15 +5,15 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "4.4",
-    date: "09.04.26",
+    version: "4.5",
+    date: "14.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/s9evdk2wkg6u/1.58_ETS2_MEGA_MAP_COMBO_4.4.zip.html",
+      "https://sharemods.com/33xhn1d7c1bk/1.58_ETS2_MEGA_MAP_COMBO_4.5.zip.html",
   },
   {
     id: "quper-map-158",
@@ -21,15 +21,15 @@ export const combos_v1_58 = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/158/ets2-quper/quper-preview.jpg",
     version_game: "1.58",
-    version: "2.4",
-    date: "09.04.26",
+    version: "2.5",
+    date: "14.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/158/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1280172304#gid=1280172304",
     profile:
-      "https://sharemods.com/sloeuubgb2an/1.58.QUPER_MAP_COMBO_2.4.zip.html",
+      "https://sharemods.com/5dddpp0qzyeh/1.58.QUPER_MAP_COMBO_2.5.zip.html",
   },
   {
     id: "gold-russia-map-158",
@@ -37,14 +37,14 @@ export const combos_v1_58 = [
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/158/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.58",
-    version: "1.5",
-    date: "18.03.26",
+    version: "1.7",
+    date: "14.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/158/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1242893690#gid=1242893690",
-    profile: "https://sharemods.com/y4ax26177nfp/1.58_ETS2_GOLD_1.6.zip.html",
+    profile: "https://sharemods.com/62dv3e3b7oq2/1.58_ETS2_GOLD_1.7.zip.html",
   },
   {
     id: "mega-aldi-map-158",
@@ -68,14 +68,14 @@ export const combos_v1_58 = [
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
-    version: "4.3",
-    date: "09.04.26",
+    version: "4.4",
+    date: "14.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=622349097#gid=622349097",
-    profile: "https://sharemods.com/aveearw3bt8d/1.58_BIG_RUSSIA_4.3.zip.html",
+    profile: "https://sharemods.com/2xbswb7ibgtc/1.58_BIG_RUSSIA_4.4.zip.html",
   },
   {
     id: "ets2-mod-combo-158",
@@ -83,13 +83,13 @@ export const combos_v1_58 = [
     title: "ETS2 MODS COMBO",
     preview: "img/combos/158/ets2-mods/ets2-mods-preview.jpg",
     version_game: "1.58",
-    version: "1.3",
-    date: "02.03.26",
+    version: "1.6",
+    date: "14.04.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/158/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1202853076#gid=1202853076",
-    profile: "https://sharemods.com/9dg623m0ae1b/1.58_MODS_PACK_1.3.zip.html",
+    profile: "https://sharemods.com/k92w8j7h853x/1.58_ETS2_MODS_1.6.zip.html",
   },
 
   {
@@ -114,15 +114,15 @@ export const combos_v1_58 = [
     title: "EURASIA MAP COMBO BETA",
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
-    version: "4.2",
-    date: "09.04.26",
+    version: "4.3",
+    date: "14.04.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/0194s77jgbsw/1.58_ETS2_EURASIA_MAP_COMBO_4.2.zip.html",
+      "https://sharemods.com/zezvfkkbwvnq/1.58_ETS2_EURASIA_MAP_COMBO_4.3.zip.html",
   },
   {
     id: "ats-mega-map-158",
