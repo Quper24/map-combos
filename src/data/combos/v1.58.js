@@ -198,10 +198,14 @@ export const combos_v1_58 = [
     tags: ["ets2", "server", "convoy"],
     title: "ETS2 SERVER LIGHT COMBO",
     preview: "img/combos/158/ets2-contracts/ets2-contracts-preview.jpg",
+    video: "sPgKB8P63qM",
     version_game: "1.58",
     version: "85568392936116600/103",
     date: "14.04.26",
     image_center: "img/combos/158/ets2-contracts/ets2-contracts-center.jpg",
     profile: "https://sharemods.com/0zljscz7tuuh/SERVER_LITE.zip.html",
+        table:
+      "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=35640141#gid=35640141",
+
   },
 ];
