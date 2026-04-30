@@ -148,13 +148,13 @@ export const combos_v1_58 = [
     image_top: "img/combos/158/ats-quper/ats-quper-top.jpg",
     image_bottom: "img/combos/158/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.58",
-    version: "1.0",
-    date: "11.03.26",
+    version: "1.1",
+    date: "30.04.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1161399557#gid=1161399557",
     profile:
-      "https://sharemods.com/eekaxs9sa8bw/1.58_QUPER_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/t7g9pnzyh2az/1.58_ATS_QUPER_MAP_COMBO_1.1.zip.html",
   },
   {
     id: "ats-mods-158",
