@@ -5,15 +5,15 @@ export const combos_v1_58 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/158/ets2-mega/mega-preview.jpg",
     version_game: "1.58",
-    version: "4.5",
-    date: "14.04.26",
+    version: "4.6 FINAL",
+    date: "01.05.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/158/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/vd9ekoxqepol/1.58_ETS2_MEGA_MAP_COMBO_4.5.1.zip.html",
+      "https://sharemods.com/svtamu0dby1r/1.58_ETS2_MEGA_MAP_COMBO_4.6.zip.html",
   },
   {
     id: "quper-map-158",
@@ -83,13 +83,13 @@ export const combos_v1_58 = [
     title: "ETS2 MODS COMBO",
     preview: "img/combos/158/ets2-mods/ets2-mods-preview.jpg",
     version_game: "1.58",
-    version: "1.6",
-    date: "14.04.26",
+    version: "1.7 FINAL",
+    date: "01.05.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/158/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1202853076#gid=1202853076",
-    profile: "https://sharemods.com/k92w8j7h853x/1.58_ETS2_MODS_1.6.zip.html",
+    profile: "https://sharemods.com/3rup8hczk106/1.58_ETS2_MODS_1.7_-_100.zip.html",
   },
 
   {
