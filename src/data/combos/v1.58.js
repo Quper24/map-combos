@@ -69,13 +69,13 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.58",
     version: "4.4",
-    date: "14.04.26",
+    date: "04.05.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/158/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=622349097#gid=622349097",
-    profile: "https://sharemods.com/2xbswb7ibgtc/1.58_BIG_RUSSIA_4.4.zip.html",
+    profile: "https://sharemods.com/s59vcaxxm10s/1.58_ETS2_BIG_RUSSIA_4.5.zip.html",
   },
   {
     id: "ets2-mod-combo-158",
@@ -107,7 +107,6 @@ export const combos_v1_58 = [
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1052330388#gid=1052330388",
     profile: "https://sharemods.com/fo5gwluurvpo/1.58_NO_PROMODS_1.5.zip.html",
   },
-
   {
     id: "eurasia-map-158",
     tags: ["ets2"],
@@ -115,14 +114,14 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ets2-eurasia/eurasia-preview.jpg",
     version_game: "1.58",
     version: "4.3",
-    date: "14.04.26",
+    date: "04.05.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/158/ets2-eurasia/eurasia-top.jpg",
     image_bottom: "img/combos/158/ets2-eurasia/eurasia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=592985579#gid=592985579",
     profile:
-      "https://sharemods.com/zezvfkkbwvnq/1.58_ETS2_EURASIA_MAP_COMBO_4.3.zip.html",
+      "https://sharemods.com/pmqyb42q6vx8/1.58_ETS2_EURASIA_MAP_COMBO_4.4.zip.html",
   },
   {
     id: "ats-mega-map-158",
