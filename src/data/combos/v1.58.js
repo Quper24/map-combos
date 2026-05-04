@@ -200,9 +200,9 @@ export const combos_v1_58 = [
     video: "sPgKB8P63qM",
     version_game: "1.58",
     version: "85568392936116600/103",
-    date: "04.05.26",
+    date: "05.05.26",
     image_center: "img/combos/158/ets2-contracts/ets2-contracts-center.jpg",
-    profile: "https://sharemods.com/0zljscz7tuuh/SERVER_LITE.zip.html",
+    profile: "https://sharemods.com/m4mzhz08lbu5/SERVER_LITE_0505.zip.html",
         table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=35640141#gid=35640141",
 
