@@ -162,12 +162,12 @@ export const combos_v1_58 = [
     preview: "img/combos/158/ats-mods/ats-mods-preview.jpg",
     image_center: "img/combos/158/ats-mods/ats-mods-center.jpg",
     version_game: "1.58",
-    version: "1.1",
-    date: "24.02.26",
+    version: "1.2",
+    date: "06.06.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1948498773#gid=1948498773",
-    profile: "https://sharemods.com/3neeb8r4uz51/ATS_MODS_PACK.zip.html",
+    profile: "https://sharemods.com/nafchpeqr7wm/1.58_ATS_MODS_PACK.zip.html",
   },
   {
     id: "ats-server-map-158",
