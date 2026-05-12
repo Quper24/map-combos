@@ -12,20 +12,20 @@ export const VERSIONS = {
   1.58: {
     id: "1.58",
     label: "1.58",
-    status: "current",
+    status: "legacy", // current, upcoming, legacy
     releaseDate: "2026-02-20",
-    default: true,
-    description: "Текущая стабильная версия",
-    icon: "✅",
+    default: false,
+    description: "Устаревшая версия",
+    icon: "📜",
   },
   1.59: {
     id: "1.59",
     label: "1.59",
-    status: "upcoming",
-    releaseDate: "2026-05-18",
-    default: false,
-    description: "Скоро выйдет, следите за обновлениями!",
-    icon: "🚀",
+    status: "current", // current, upcoming, legacy
+    releaseDate: "2026-05-12",
+    default: true,
+    description: "Текущая стабильная версия",
+    icon: "✅",
   },
 };
 
