@@ -27,6 +27,6 @@ export const combos_v1_59 = [
     image_bottom: "img/combos/159/ets2-no-promods/no-promods-bottom.jpg",
     table:
       "",
-    profile: "https://sharemods.com/bg22c7xuzu06/NoPromodsCombo_0.2.zip.html",
+    profile: "https://sharemods.com/6yrjq6r5tdgr/1.59_NoPromodsCombo_0.3.zip.html",
   },
 ];
