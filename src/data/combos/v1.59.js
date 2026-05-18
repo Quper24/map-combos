@@ -12,7 +12,7 @@ export const combos_v1_59 = [
     image_bottom: "img/combos/159/ets2-gold/gold-russia-bottom.jpg",
     table:
       "",
-    profile: "https://sharemods.com/jmfwbz0ewydq/1.59_GoldMapCombo_0.3.zip.html",
+    profile: "https://sharemods.com/57rc5k30zeht/1.59_GoldMapCombo_0.4.zip.html",
   },
  {
     id: "no-promods-map-159",
@@ -27,6 +27,6 @@ export const combos_v1_59 = [
     image_bottom: "img/combos/159/ets2-no-promods/no-promods-bottom.jpg",
     table:
       "",
-    profile: "https://sharemods.com/6yrjq6r5tdgr/1.59_NoPromodsCombo_0.3.zip.html",
+    profile: "https://sharemods.com/hoz2bqe7pw7h/1.59_NoPromodsCombo_0.4.zip.html",
   },
 ];
