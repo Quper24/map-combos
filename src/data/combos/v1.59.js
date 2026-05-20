@@ -1,7 +1,7 @@
 export const combos_v1_59 = [
    {
     id: "mega-map-159",
-    tags: ["ets2", "boosty"],
+    tags: ["ets2"],
     title: "MEGA MAP COMBO",
     preview: "img/combos/159/ets2-mega/mega-preview.jpg",
     version_game: "1.59",
