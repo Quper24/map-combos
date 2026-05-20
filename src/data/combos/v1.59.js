@@ -1,4 +1,20 @@
 export const combos_v1_59 = [
+   {
+    id: "mega-map-159",
+    tags: ["ets2", "boosty"],
+    title: "MEGA MAP COMBO",
+    preview: "img/combos/159/ets2-mega/mega-preview.jpg",
+    version_game: "1.59",
+    version: "0.1 BETA",
+    date: "20.05.26",
+    video: "z_nIg8glATQ",
+    image_top: "img/combos/159/ets2-mega/mega-top.jpg",
+    image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
+    table:
+      "",
+    profile:
+      "https://sharemods.com/jq9gkru9kgx4/1.59_ETS2_MEGA_MAP_COMBO_0.1.zip.html",
+  },
   {
     id: "gold-russia-map-159",
     tags: ["ets2", "boosty", "convoy"],
