@@ -11,7 +11,7 @@ export const combos_v1_59 = [
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
-      "",
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?usp=sharing",
     profile:
       "https://sharemods.com/t7tcmqi3bk21/1.59_ETS2_MEGA_MAP_COMBO_0.2.zip.html",
   },
