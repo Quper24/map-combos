@@ -7,7 +7,7 @@ export const combos_v1_59 = [
     version_game: "1.59",
     version: "0.2 BETA",
     date: "20.05.26",
-    video: "z_nIg8glATQ",
+    video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
@@ -23,7 +23,7 @@ export const combos_v1_59 = [
     version_game: "1.59",
     version: "0.4",
     date: "18.05.26",
-    video: "z_nIg8glATQ",
+    video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/159/ets2-gold/gold-russia-bottom.jpg",
     table:
@@ -38,7 +38,7 @@ export const combos_v1_59 = [
     version_game: "1.59",
     version: "0.4",
     date: "18.05.26",
-    video: "z_nIg8glATQ",
+    video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-no-promods/no-promods-top.jpg",
     image_bottom: "img/combos/159/ets2-no-promods/no-promods-bottom.jpg",
     table:
