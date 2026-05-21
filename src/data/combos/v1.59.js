@@ -11,13 +11,13 @@ export const combos_v1_59 = [
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
-      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?usp=sharing",
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
       "https://sharemods.com/t7tcmqi3bk21/1.59_ETS2_MEGA_MAP_COMBO_0.2.zip.html",
   },
   {
     id: "gold-russia-map-159",
-    tags: ["ets2", "boosty", "convoy"],
+    tags: ["ets2",  "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/159/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.59",
@@ -27,12 +27,12 @@ export const combos_v1_59 = [
     image_top: "img/combos/159/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/159/ets2-gold/gold-russia-bottom.jpg",
     table:
-      "",
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=551546644#gid=551546644",
     profile: "https://sharemods.com/57rc5k30zeht/1.59_GoldMapCombo_0.4.zip.html",
   },
  {
     id: "no-promods-map-159",
-    tags: ["ets2", "boosty"],
+    tags: ["ets2", "convoy"],
     title: "NO PROMODS MAP COMBO",
     preview: "img/combos/159/ets2-no-promods/no-promods-preview.jpg",
     version_game: "1.59",
@@ -42,7 +42,7 @@ export const combos_v1_59 = [
     image_top: "img/combos/159/ets2-no-promods/no-promods-top.jpg",
     image_bottom: "img/combos/159/ets2-no-promods/no-promods-bottom.jpg",
     table:
-      "",
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=924741001#gid=924741001",
     profile: "https://sharemods.com/hoz2bqe7pw7h/1.59_NoPromodsCombo_0.4.zip.html",
   },
 ];
