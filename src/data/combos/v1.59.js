@@ -58,7 +58,7 @@ export const combos_v1_59 = [
     date: "22.05.26",
     image_center:
       "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
-    profile: "https://sharemods.com/263f5ewc4imd/Profile_server-light.zip.html",
+    profile: "https://disk.yandex.ru/d/y3bnuPCnXGFQCw",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=2132576498#gid=2132576498",
   },
