@@ -1,5 +1,5 @@
 export const combos_v1_59 = [
-   {
+  {
     id: "mega-map-159",
     tags: ["ets2"],
     title: "MEGA MAP COMBO",
@@ -17,7 +17,7 @@ export const combos_v1_59 = [
   },
   {
     id: "gold-russia-map-159",
-    tags: ["ets2",  "convoy"],
+    tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/159/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.59",
@@ -28,9 +28,10 @@ export const combos_v1_59 = [
     image_bottom: "img/combos/159/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=551546644#gid=551546644",
-    profile: "https://sharemods.com/57rc5k30zeht/1.59_GoldMapCombo_0.4.zip.html",
+    profile:
+      "https://sharemods.com/57rc5k30zeht/1.59_GoldMapCombo_0.4.zip.html",
   },
- {
+  {
     id: "no-promods-map-159",
     tags: ["ets2", "convoy"],
     title: "NO PROMODS MAP COMBO",
@@ -43,6 +44,22 @@ export const combos_v1_59 = [
     image_bottom: "img/combos/159/ets2-no-promods/no-promods-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=924741001#gid=924741001",
-    profile: "https://sharemods.com/hoz2bqe7pw7h/1.59_NoPromodsCombo_0.4.zip.html",
+    profile:
+      "https://sharemods.com/hoz2bqe7pw7h/1.59_NoPromodsCombo_0.4.zip.html",
+  },
+  {
+    id: "ets2-server-light-159",
+    tags: ["ets2", "server", "convoy"],
+    title: "ETS2 QUPER COMBO LIFGHT",
+    preview: "img/combos/159/ets2-server-light/ets2-server-light-preview.jpg",
+    video: "sPgKB8P63qM",
+    version_game: "1.59",
+    version: "85568392936116599/101",
+    date: "22.05.26",
+    image_center:
+      "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
+    profile: "https://sharemods.com/263f5ewc4imd/Profile_server-light.zip.html",
+    table:
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=2132576498#gid=2132576498",
   },
 ];
