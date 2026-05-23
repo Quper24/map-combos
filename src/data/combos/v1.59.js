@@ -5,15 +5,15 @@ export const combos_v1_59 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/159/ets2-mega/mega-preview.jpg",
     version_game: "1.59",
-    version: "0.2 BETA",
-    date: "20.05.26",
+    version: "0.3",
+    date: "23.05.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/t7tcmqi3bk21/1.59_ETS2_MEGA_MAP_COMBO_0.2.zip.html",
+      "https://sharemods.com/ruj1xwjuker6/1.59_ETS2_MEGA_MAP_COMBO_0.3.zip.html",
   },
   {
     id: "gold-russia-map-159",
@@ -37,15 +37,15 @@ export const combos_v1_59 = [
     title: "NO PROMODS MAP COMBO",
     preview: "img/combos/159/ets2-no-promods/no-promods-preview.jpg",
     version_game: "1.59",
-    version: "0.4",
-    date: "18.05.26",
+    version: "0.5",
+    date: "23.05.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-no-promods/no-promods-top.jpg",
     image_bottom: "img/combos/159/ets2-no-promods/no-promods-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=924741001#gid=924741001",
     profile:
-      "https://sharemods.com/hoz2bqe7pw7h/1.59_NoPromodsCombo_0.4.zip.html",
+      "https://sharemods.com/mmd9y16791od/1.59_NoPromodsCombo_0.5.zip.html",
   },
   {
     id: "ets2-server-light-159",
