@@ -62,4 +62,20 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=2132576498#gid=2132576498",
   },
+  {
+    id: "ats-quper-map-159",
+    tags: ["ats", "convoy", "boosty"],
+    title: "ATS QUPER COMBO",
+    preview: "img/combos/159/ats-quper/ats-quper-preview.jpg",
+    image_top: "img/combos/159/ats-quper/ats-quper-top.jpg",
+    image_bottom: "img/combos/159/ats-quper/ats-quper-bottom.jpg",
+    version_game: "1.59",
+    version: "1.0",
+    date: "23.05.26",
+    video: "_jA5ygN1jaI",
+    table:
+      "",
+    profile:
+      "https://sharemods.com/6tbdgxaswqw8/1.59_ATS_QUPER_MAP_COMBO_1.0.zip.html",
+  },
 ];
