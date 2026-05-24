@@ -13,38 +13,21 @@ export default function Home({ selectedVersion, onVersionChange }) {
   const [hoveredServer, setHoveredServer] = useState(null); // Для отображения списка игроков при наведении
 
   // Состояния для статистики серверов
-  const [serverStats, setServerStats] = useState({
-    total_players: 0,
-    servers: {
-      ets2_main: {
-        name: "ETS2 Main",
-        players: 0,
-        players_list: [],
-        online: false,
-        has_players: false,
-        icon: "🚛",
-      },
-      ets2_light: {
-        name: "ETS2 Light",
-        players: 0,
-        players_list: [],
-        online: false,
-        has_players: false,
-        icon: "🚚",
-      },
-      ats: {
-        name: "ATS",
-        players: 0,
-        players_list: [],
-        online: false,
-        has_players: false,
-        icon: "⭐",
-      },
-    },
-    lastUpdate: null,
-    loading: true,
-    error: null,
-  });
+// Добавьте в serverStats
+const [serverStats, setServerStats] = useState({
+  total_players: 0,
+  servers: {
+    ets2_main: { name: "ETS2 Main", players: 0, players_list: [], online: false, has_players: false, icon: "🚛" },
+    ets2_light: { name: "ETS2 Light", players: 0, players_list: [], online: false, has_players: false, icon: "🚚" },
+    ats: { name: "ATS", players: 0, players_list: [], online: false, has_players: false, icon: "⭐" },
+    // Новые тестовые серверы
+    ets2_test: { name: "ETS2 Test", players: 0, players_list: [], online: false, has_players: false, icon: "🧪" },
+    ats_test: { name: "ATS Test", players: 0, players_list: [], online: false, has_players: false, icon: "🧪" },
+  },
+  lastUpdate: null,
+  loading: true,
+  error: null,
+});
 
   // Получаем комбо для выбранной версии
   const currentCombos = useMemo(() => {
