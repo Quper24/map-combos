@@ -55,7 +55,7 @@ export const combos_v1_59 = [
     video: "sPgKB8P63qM",
     version_game: "1.59",
     version: "85568392936116599/101",
-    date: "22.05.26",
+    date: "24.05.26",
     image_center:
       "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
     profile: "https://disk.yandex.ru/d/y3bnuPCnXGFQCw",
