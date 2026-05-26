@@ -47,6 +47,17 @@ export const combos_v1_59 = [
     profile:
       "https://sharemods.com/mmd9y16791od/1.59_NoPromodsCombo_0.5.zip.html",
   },
+    {
+    id: "ets2-server-map-159",
+    tags: ["ets2", "server", "convoy", "boosty"],
+    title: "ETS2 SERVER COMBO",
+    preview: "img/combos/159/ets2-server/ets2-server-preview.jpg",
+    version_game: "1.59",
+    version: "server",
+    date: "27.05.26",
+    image_center: "img/combos/159/ets2-server/ets2-server-center.jpg",
+    profile: "https://disk.yandex.ru/d/XsSBO1HtJHc53w",
+  },
   {
     id: "ets2-server-light-159",
     tags: ["ets2", "server", "convoy"],
@@ -55,7 +66,7 @@ export const combos_v1_59 = [
     video: "sPgKB8P63qM",
     version_game: "1.59",
     version: "85568392936116599/101",
-    date: "24.05.26",
+    date: "27.05.26",
     image_center:
       "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
     profile: "https://disk.yandex.ru/d/y3bnuPCnXGFQCw",
