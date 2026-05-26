@@ -13,7 +13,7 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/etuyy9noxs93/1.59_ETS2_MEGA_MAP_COMBO_0.4.zip.html",
+      "https://sharemods.com/3purbplbz3dd/1.59_ETS2_MEGA_MAP_COMBO_0.4.zip.html",
   },
   {
     id: "gold-russia-map-159",
