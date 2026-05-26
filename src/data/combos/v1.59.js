@@ -5,15 +5,15 @@ export const combos_v1_59 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/159/ets2-mega/mega-preview.jpg",
     version_game: "1.59",
-    version: "0.3",
-    date: "23.05.26",
+    version: "0.4",
+    date: "26.05.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/ruj1xwjuker6/1.59_ETS2_MEGA_MAP_COMBO_0.3.zip.html",
+      "https://sharemods.com/etuyy9noxs93/1.59_ETS2_MEGA_MAP_COMBO_0.4.zip.html",
   },
   {
     id: "gold-russia-map-159",
