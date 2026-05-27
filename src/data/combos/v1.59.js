@@ -61,11 +61,11 @@ export const combos_v1_59 = [
   {
     id: "ets2-server-light-159",
     tags: ["ets2", "server", "convoy"],
-    title: "ETS2 QUPER COMBO LIFGHT",
+    title: "ETS2 QUPER COMBO LIGHT",
     preview: "img/combos/159/ets2-server-light/ets2-server-light-preview.jpg",
     video: "sPgKB8P63qM",
     version_game: "1.59",
-    version: "85568392936116599/101",
+    version: "85568392936116600/103",
     date: "27.05.26",
     image_center:
       "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
