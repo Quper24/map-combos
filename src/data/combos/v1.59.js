@@ -33,7 +33,7 @@ export const combos_v1_59 = [
   },
   {
     id: "no-promods-map-159",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2"],
     title: "NO PROMODS MAP COMBO",
     preview: "img/combos/159/ets2-no-promods/no-promods-preview.jpg",
     version_game: "1.59",
