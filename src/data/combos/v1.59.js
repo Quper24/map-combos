@@ -13,7 +13,7 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/3purbplbz3dd/1.59_ETS2_MEGA_MAP_COMBO_0.4.zip.html",
+      "https://sharemods.com/aqmj7ygmlyrg/1.59_ETS2_MEGA_MAP_COMBO_0.5.zip.html",
   },
   {
     id: "gold-russia-map-159",
@@ -45,7 +45,7 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=924741001#gid=924741001",
     profile:
-      "https://sharemods.com/mmd9y16791od/1.59_NoPromodsCombo_0.5.zip.html",
+      "https://sharemods.com/kl2kxawocuyb/1.59_NoPromodsCombo_0.6.zip.html",
   },
     {
     id: "ets2-server-map-159",
@@ -81,13 +81,13 @@ export const combos_v1_59 = [
     image_top: "img/combos/159/ats-quper/ats-quper-top.jpg",
     image_bottom: "img/combos/159/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.59",
-    version: "1.1",
-    date: "26.05.26",
+    version: "1.2",
+    date: "28.05.26",
     video: "_jA5ygN1jaI",
     table:
-      "",
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=562309039#gid=562309039",
     profile:
-      "https://sharemods.com/oipbqyzesv15/1.59_ATS_QUPER_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/tahc2u8kgpi0/1.59_ATS_QUPER_MAP_COMBO_1.2.zip.html",
   },{
     id: "ats-mods-159",
     tags: ["ats", "boosty"],
