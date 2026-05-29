@@ -15,6 +15,23 @@ export const combos_v1_59 = [
     profile:
       "https://sharemods.com/aqmj7ygmlyrg/1.59_ETS2_MEGA_MAP_COMBO_0.5.zip.html",
   },
+    {
+    id: "quper-map-159",
+    tags: ["ets2"],
+    title: "QUPER MAP COMBO",
+    preview: "img/combos/159/ets2-quper/quper-preview.jpg",
+    version_game: "1.59",
+    version: "1.0",
+    date: "29.05.26",
+    video: "z_nIg8glATQ",
+    image_top: "img/combos/159/ets2-quper/quper-top.jpg",
+    image_bottom: "img/combos/159/ets2-quper/quper-bottom.jpg",
+    table:
+      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=596949745#gid=596949745",
+    profile:
+      "https://sharemods.com/yt5ccylpz0x6/1.59_ETS2_QUPER_MAP_COMBO_1.0.zip.html",
+  },
+
   {
     id: "gold-russia-map-159",
     tags: ["ets2", "convoy"],
