@@ -23,7 +23,7 @@ export const combos_v1_59 = [
     version_game: "1.59",
     version: "1.0",
     date: "29.05.26",
-    video: "z_nIg8glATQ",
+    video: "92UCJI97qRg",
     image_top: "img/combos/159/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/159/ets2-quper/quper-bottom.jpg",
     table:
