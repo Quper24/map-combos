@@ -169,18 +169,7 @@ export const combos_v1_58 = [
       "https://docs.google.com/spreadsheets/d/1jRDPO0Mhepox1kFe2sslD9Ac_6NCelo-t770o25bFKU/edit?gid=1948498773#gid=1948498773",
     profile: "https://sharemods.com/nafchpeqr7wm/1.58_ATS_MODS_PACK.zip.html",
   },
-  {
-    id: "ats-server-map-158",
-    tags: ["ats", "server", "convoy", "boosty"],
-    title: "ATS SERVER COMBO",
-    preview: "img/combos/158/ats-server/ats-server-preview.jpg",
-    version_game: "1.58",
-    version: "server",
-    date: "04.05.26",
-    video: "G4ADUHZ1ruI",
-    image_center: "img/combos/158/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/y0xhlphh6xg1/ATS_SERVER.zip.html",
-  },
+
 
 
 ];
