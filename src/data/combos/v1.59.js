@@ -97,7 +97,7 @@ export const combos_v1_59 = [
     preview: "img/combos/159/ets2-mods/ets2-mods-preview.jpg",
     version_game: "1.59",
     version: "1.0",
-    date: "01.05.26",
+    date: "31.05.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/159/ets2-mods/ets2-mods-center.jpg",
     table:
