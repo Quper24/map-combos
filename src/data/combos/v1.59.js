@@ -91,6 +91,21 @@ export const combos_v1_59 = [
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=2132576498#gid=2132576498",
   },
   {
+    id: "ets2-mod-combo-159",
+    tags: ["ets2", "boosty"],
+    title: "ETS2 MODS COMBO",
+    preview: "img/combos/159/ets2-mods/ets2-mods-preview.jpg",
+    version_game: "1.59",
+    version: "1.0",
+    date: "01.05.26",
+    video: "oxTMNZk9FWk",
+    image_center: "img/combos/159/ets2-mods/ets2-mods-center.jpg",
+    table:
+      "",
+    profile: "https://sharemods.com/3ol7c7h1tn4l/1.59_ETS2_MODS_PACK.zip.html",
+  },
+
+  {
     id: "ats-quper-map-159",
     tags: ["ats", "convoy", "boosty"],
     title: "ATS QUPER COMBO",
