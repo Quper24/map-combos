@@ -67,13 +67,13 @@ export const combos_v1_59 = [
     {
     id: "ets2-server-map-159",
     tags: ["ets2", "server", "convoy", "boosty"],
-    title: "ETS2 SERVER COMBO",
+    title: "ETS2 SERVER MAIN COMBO",
     preview: "img/combos/159/ets2-server/ets2-server-preview.jpg",
     version_game: "1.59",
     version: "server",
-    date: "27.05.26",
+    date: "01.06.26",
     image_center: "img/combos/159/ets2-server/ets2-server-center.jpg",
-    profile: "https://disk.yandex.ru/d/XsSBO1HtJHc53w",
+    profile: "https://sharemods.com/rtzhdz1hih4x/QS_SERVER_MAIN_0106.zip.html",
   },
   {
     id: "ets2-server-light-159",
@@ -83,7 +83,7 @@ export const combos_v1_59 = [
     video: "sPgKB8P63qM",
     version_game: "1.59",
     version: "85568392936116600/103",
-    date: "27.05.26",
+    date: "01.06.26",
     image_center:
       "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
     profile: "https://disk.yandex.ru/d/6CjeZS9OhcM-pg",
