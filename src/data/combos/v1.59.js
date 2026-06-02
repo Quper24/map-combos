@@ -13,7 +13,7 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/aqmj7ygmlyrg/1.59_ETS2_MEGA_MAP_COMBO_0.5.zip.html",
+      "https://sharemods.com/9gs4o3syw6nv/1.59_ETS2_MEGA_MAP_COMBO_1.0.zip.html",
   },
        {
     id: "quper-map-159",
