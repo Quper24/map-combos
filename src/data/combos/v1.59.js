@@ -38,15 +38,15 @@ export const combos_v1_59 = [
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/159/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.59",
-    version: "0.4",
-    date: "18.05.26",
+    version: "1.0",
+    date: "03.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/159/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=551546644#gid=551546644",
     profile:
-      "https://sharemods.com/57rc5k30zeht/1.59_GoldMapCombo_0.4.zip.html",
+      "https://sharemods.com/bmg781pnz3v7/1.59_GOLD_MAP_COMBO_1.0.zip.html",
   },
   {
     id: "no-promods-map-159",
