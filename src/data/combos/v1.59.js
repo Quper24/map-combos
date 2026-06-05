@@ -5,17 +5,17 @@ export const combos_v1_59 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/159/ets2-mega/mega-preview.jpg",
     version_game: "1.59",
-    version: "1.0",
-    date: "02.06.26",
+    version: "1.1",
+    date: "05.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/9gs4o3syw6nv/1.59_ETS2_MEGA_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/kfvjr2r7dbho/1.59_ETS2_MEGA_MAP_COMBO_1.1.zip.html",
   },
-       {
+  {
     id: "quper-map-159",
     tags: ["ets2"],
     title: "QUPER MAP COMBO",
@@ -64,7 +64,7 @@ export const combos_v1_59 = [
     profile:
       "https://sharemods.com/kl2kxawocuyb/1.59_NoPromodsCombo_0.6.zip.html",
   },
-    {
+  {
     id: "ets2-server-map-159",
     tags: ["ets2", "server", "convoy", "boosty"],
     title: "ETS2 SERVER MAIN COMBO",
@@ -113,14 +113,14 @@ export const combos_v1_59 = [
     image_top: "img/combos/159/ats-quper/ats-quper-top.jpg",
     image_bottom: "img/combos/159/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.59",
-    version: "1.3",
-    date: "01.06.26",
+    version: "1.4",
+    date: "05.06.26",
     video: "_jA5ygN1jaI",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=562309039#gid=562309039",
     profile:
-      "https://sharemods.com/ldg1h1zyq33p/1.59_ATS_QUPER_MAP_COMBO_1.3.zip.html",
-  },{
+      "https://sharemods.com/coga3svevril/1.59_ATS_QUPER_MAP_COMBO_1.4.zip.html",
+  }, {
     id: "ats-mods-159",
     tags: ["ats", "boosty"],
     title: "ATS MODS COMBO",
@@ -134,14 +134,14 @@ export const combos_v1_59 = [
       "",
     profile: "https://sharemods.com/xkz9rts7zwhn/1.59_MOD_PACK_ATS_1.1.zip.html",
   },
-    {
+  {
     id: "ats-server-map-159",
     tags: ["ats", "server", "convoy", "boosty"],
     title: "ATS SERVER COMBO 1.59",
     preview: "img/combos/159/ats-server/ats-server-preview.jpg",
     version_game: "1.59",
     version: "server",
-    date: "01.06.26",
+    date: "04.06.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/159/ats-server/ats-server-center.jpg",
     profile: "https://sharemods.com/fn3101x4e6pt/1.59_ATS_SERVER.zip.html",
