@@ -46,7 +46,7 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=551546644#gid=551546644",
     profile:
-      "https://sharemods.com/ma3lkj8uvsof/1.59_GOLD_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/yndl3tlpixhx/1.59_GOLD_MAP_COMBO_1.1.zip.html",
   },
   {
     id: "no-promods-map-159",
