@@ -5,15 +5,15 @@ export const combos_v1_59 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/159/ets2-mega/mega-preview.jpg",
     version_game: "1.59",
-    version: "1.1",
-    date: "05.06.26",
+    version: "1.2",
+    date: "08.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/159/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/c26wrj4k2suj/1.59_ETS2_MEGA_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/9aw7j1a95p2n/1.59_ETS2_MEGA_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "quper-map-159",
@@ -21,15 +21,15 @@ export const combos_v1_59 = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/159/ets2-quper/quper-preview.jpg",
     version_game: "1.59",
-    version: "1.1 ",
-    date: "02.06.26",
+    version: "1.3",
+    date: "08.06.26",
     video: "92UCJI97qRg",
     image_top: "img/combos/159/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/159/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=596949745#gid=596949745",
     profile:
-      "https://sharemods.com/j98m8m6y2xqj/1.59_ETS2_QUPER_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/h0ldu0m5ziem/1.59_ETS2_QUPER_MAP_COMBO_1.3.zip.html",
   },
 
   {
@@ -38,15 +38,15 @@ export const combos_v1_59 = [
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/159/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.59",
-    version: "1.0",
-    date: "03.06.26",
+    version: "1.1",
+    date: "08.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/159/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=551546644#gid=551546644",
     profile:
-      "https://sharemods.com/bmg781pnz3v7/1.59_GOLD_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/ma3lkj8uvsof/1.59_GOLD_MAP_COMBO_1.1.zip.html",
   },
   {
     id: "no-promods-map-159",
