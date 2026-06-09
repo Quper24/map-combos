@@ -5,7 +5,7 @@ export const combos_v1_59 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/159/ets2-mega/mega-preview.jpg",
     version_game: "1.59",
-    version: "1.2.2",
+    version: "1.2.3",
     date: "09.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/159/ets2-mega/mega-top.jpg",
@@ -13,7 +13,7 @@ export const combos_v1_59 = [
     table:
       "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/5ffhyrwbzx2v/1.59_ETS2_MEGA_MAP_COMBO_1.2.2.zip.html",
+      "https://sharemods.com/kcvgse69y6vb/1.59_ETS2_MEGA_MAP_COMBO_1.2.3.zip.html",
   },
   {
     id: "quper-map-159",
