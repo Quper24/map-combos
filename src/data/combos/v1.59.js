@@ -71,9 +71,9 @@ export const combos_v1_59 = [
     preview: "img/combos/159/ets2-server/ets2-server-preview.jpg",
     version_game: "1.59",
     version: "server",
-    date: "01.06.26",
+    date: "09.06.26",
     image_center: "img/combos/159/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/rtzhdz1hih4x/QS_SERVER_MAIN_0106.zip.html",
+    profile: "https://sharemods.com/s95mr7qntjvo/1.59_Quper_Main0609.zip.html",
   },
   {
     id: "ets2-server-light-159",
@@ -83,12 +83,12 @@ export const combos_v1_59 = [
     video: "sPgKB8P63qM",
     version_game: "1.59",
     version: "85568392936116600/103",
-    date: "01.06.26",
+    date: "09.06.26",
     image_center:
       "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
-    profile: "https://disk.yandex.ru/d/6CjeZS9OhcM-pg",
+    profile: "https://sharemods.com/3c6natcnpk3h/1.59_Quper_Light0609.zip.html",
     table:
-      "https://docs.google.com/spreadsheets/d/1zOdNqLie6WgdvBxh0r2UkEyEUszB6e6NxWfHAue5X8c/edit?gid=2132576498#gid=2132576498",
+      "https://disk.yandex.ru/d/6CjeZS9OhcM-pg",
   },
   {
     id: "ets2-mod-combo-159",
