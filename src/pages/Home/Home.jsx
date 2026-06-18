@@ -193,7 +193,6 @@ const [serverStats, setServerStats] = useState({
 
   // Получаем информацию о текущей версии
   const versionInfo = VERSIONS[selectedVersion];
-
   // Функция для отображения статуса сервера
   const getServerStatusText = (server) => {
     if (!server.online) return { text: "Офлайн", class: "offline", icon: "🔴" };

@@ -138,8 +138,8 @@ export default function ComboContent({ table, profile }) {
           className="resource-card early-access-card">
           <span className="resource-icon">🌟</span>
           <div className="resource-content">
-            <h3>Ранний доступ и эксклюзив</h3>
-            <p>Новые версии раньше + дополнительные файлы</p>
+            <h3>Сборка одним архивом на Boosty</h3>
+            <p>Скачивание в один клик, ранний доступ и эксклюзивные материалы</p>
           </div>
           <span className="resource-arrow">→</span>
         </a>
