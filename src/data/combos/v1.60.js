@@ -1,5 +1,5 @@
 export const combos_v1_60 = [
-  
+
   {
     id: "ats-quper-map-160",
     tags: ["ats", "convoy", "boosty"],
@@ -16,7 +16,7 @@ export const combos_v1_60 = [
     profile:
       "https://sharemods.com/963gol2v9y8l/1.60_ATS_QUPER_MAP_COMBO.zip.html",
   },
-    {
+  {
     id: "ats-server-map-160",
     tags: ["ats", "server", "convoy", "boosty"],
     title: "ATS SERVER COMBO 1.60",
