@@ -133,18 +133,6 @@ export const combos_v1_59 = [
     table:
       "",
     profile: "https://sharemods.com/xkz9rts7zwhn/1.59_MOD_PACK_ATS_1.1.zip.html",
-  },
-  {
-    id: "ats-server-map-159",
-    tags: ["ats", "server", "convoy", "boosty"],
-    title: "ATS SERVER COMBO 1.59",
-    preview: "img/combos/159/ats-server/ats-server-preview.jpg",
-    version_game: "1.59",
-    version: "server",
-    date: "04.06.26",
-    video: "G4ADUHZ1ruI",
-    image_center: "img/combos/159/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/fn3101x4e6pt/1.59_ATS_SERVER.zip.html",
-  },
+  }
 
 ];
