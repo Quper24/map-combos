@@ -17,6 +17,21 @@ export const combos_v1_60 = [
       "https://sharemods.com/ddtwh95q21j7/1.60_ETS2_GOLD_MAP_COMBO_1.0.zip.html",
   },
   {
+    id: "bigrussia-map-160",
+    tags: ["ets2"],
+    title: "BIGRUSSIA MAP COMBO BETA",
+    preview: "img/combos/160/ets2-bigrussia/bigrussia-preview.jpg",
+    version_game: "1.60",
+    version: "1.0",
+    date: "21.06.26",
+    video: "z_nIg8glATQ",
+    image_top: "img/combos/160/ets2-bigrussia/bigrussia-top.jpg",
+    image_bottom: "img/combos/160/ets2-bigrussia/bigrussia-bottom.jpg",
+    table:
+      "",
+    profile: "https://sharemods.com/g5nbip25c9te/1.60_ETS2_BIG_RUSSIA_MAP_COMBO_1.0.zip.html",
+  },
+  {
     id: "ats-quper-map-160",
     tags: ["ats", "convoy", "boosty"],
     title: "ATS QUPER COMBO",
