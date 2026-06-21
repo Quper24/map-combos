@@ -18,7 +18,7 @@ export const combos_v1_60 = [
   },
   {
     id: "bigrussia-map-160",
-    tags: ["ets2"],
+    tags: ["ets2", "boosty"],
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/160/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.60",
