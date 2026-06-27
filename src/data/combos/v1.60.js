@@ -5,15 +5,15 @@ export const combos_v1_60 = [
     title: "QUPER MAP COMBO",
     preview: "img/combos/160/ets2-quper/quper-preview.jpg",
     version_game: "1.60",
-    version: "1.1",
-    date: "25.06.26",
+    version: "1.2",
+    date: "27.06.26",
     video: "92UCJI97qRg",
     image_top: "img/combos/160/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
     table:
       "",
     profile:
-      "https://sharemods.com/1sa3i04nbfbn/1.60_ETS2_QUPER_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/7obnne74a1t0/1.60_ETS2_QUPER_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "mega-map-160",
