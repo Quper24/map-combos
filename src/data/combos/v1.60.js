@@ -32,6 +32,17 @@ export const combos_v1_60 = [
       "https://sharemods.com/jgkv64zq0hbz/1.60_ETS2_MEGA_MAP_COMBO_1.0.zip.html",
   },
   {
+    id: "ets2-server-map-160",
+    tags: ["ets2", "server", "convoy", "boosty"],
+    title: "ETS2 SERVER MAIN COMBO",
+    preview: "img/combos/160/ets2-server/ets2-server-preview.jpg",
+    version_game: "1.60",
+    version: "server",
+    date: "27.06.26",
+    image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
+    profile: "https://sharemods.com/pyvwvdixnl6p/1.60_ETS2_SERVEER_MAIN.zip.html",
+  },
+  {
     id: "gold-russia-map-160",
     tags: ["ets2", "convoy", "boosty"],
     title: "GOLD RUSSIA MAP COMBO",

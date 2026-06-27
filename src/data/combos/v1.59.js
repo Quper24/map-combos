@@ -75,21 +75,7 @@ export const combos_v1_59 = [
     image_center: "img/combos/159/ets2-server/ets2-server-center.jpg",
     profile: "https://sharemods.com/s95mr7qntjvo/1.59_Quper_Main0609.zip.html",
   },
-  {
-    id: "ets2-server-light-159",
-    tags: ["ets2", "server", "convoy"],
-    title: "ETS2 QUPER COMBO LIGHT",
-    preview: "img/combos/159/ets2-server-light/ets2-server-light-preview.jpg",
-    video: "sPgKB8P63qM",
-    version_game: "1.59",
-    version: "85568392936116600/103",
-    date: "09.06.26",
-    image_center:
-      "img/combos/159/ets2-server-light/ets2-server-light-center.jpg",
-    profile: "https://sharemods.com/3c6natcnpk3h/1.59_Quper_Light0609.zip.html",
-    table:
-      "https://disk.yandex.ru/d/6CjeZS9OhcM-pg",
-  },
+  
   {
     id: "ets2-mod-combo-159",
     tags: ["ets2", "boosty"],
