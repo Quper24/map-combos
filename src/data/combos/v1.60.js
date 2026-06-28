@@ -13,7 +13,7 @@ export const combos_v1_60 = [
     table:
       "",
     profile:
-      "https://sharemods.com/7obnne74a1t0/1.60_ETS2_QUPER_MAP_COMBO_1.2.zip.html",
+      "https://sharemods.com/y4kuob5rfkkk/1.60_ETS2_QUPER_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "mega-map-160",
@@ -21,15 +21,15 @@ export const combos_v1_60 = [
     title: "MEGA MAP COMBO",
     preview: "img/combos/160/ets2-mega/mega-preview.jpg",
     version_game: "1.60",
-    version: "1.0",
-    date: "21.06.26",
+    version: "1.1",
+    date: "28.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/160/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/160/ets2-mega/mega-bottom.jpg",
     table:
       "",
     profile:
-      "https://sharemods.com/jgkv64zq0hbz/1.60_ETS2_MEGA_MAP_COMBO_1.0.zip.html",
+      "https://sharemods.com/41z1341qsjd8/1.60_ETS2_MEGA_MAP_COMBO_1.1.zip.html",
   },
   {
     id: "ets2-server-map-160",
@@ -64,14 +64,14 @@ export const combos_v1_60 = [
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/160/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.60",
-    version: "1.1",
-    date: "21.06.26",
+    version: "1.2",
+    date: "28.06.26",
     video: "z_nIg8glATQ",
     image_top: "img/combos/160/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/160/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "",
-    profile: "https://sharemods.com/3snbcplf5fm3/1.60_ETS2_BIG_RUSSIA_MAP_COMBO_1.1.zip.html",
+    profile: "https://sharemods.com/afiwe0elv1qg/1.60_ETS2_BIG_RUSSIA_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "ats-quper-map-160",
