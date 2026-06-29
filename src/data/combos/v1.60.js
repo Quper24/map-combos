@@ -1,5 +1,5 @@
 export const combos_v1_60 = [
-   {
+  {
     id: "quper-map-160",
     tags: ["ets2"],
     title: "QUPER MAP COMBO",
@@ -22,7 +22,7 @@ export const combos_v1_60 = [
     preview: "img/combos/160/ets2-mega/mega-preview.jpg",
     version_game: "1.60",
     version: "1.2",
-    date: "28.06.26",
+    date: "29.06.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/160/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/160/ets2-mega/mega-bottom.jpg",
@@ -44,7 +44,7 @@ export const combos_v1_60 = [
   },
   {
     id: "gold-russia-map-160",
-    tags: ["ets2", "convoy", "boosty"],
+    tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/160/ets2-gold/gold-russia-preview.jpg",
     version_game: "1.60",
@@ -60,7 +60,7 @@ export const combos_v1_60 = [
   },
   {
     id: "bigrussia-map-160",
-    tags: ["ets2", "boosty"],
+    tags: ["ets2"],
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/160/ets2-bigrussia/bigrussia-preview.jpg",
     version_game: "1.60",
