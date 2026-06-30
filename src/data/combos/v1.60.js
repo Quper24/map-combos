@@ -23,7 +23,7 @@ export const combos_v1_60 = [
     version_game: "1.60",
     version: "1.2",
     date: "29.06.26",
-    video: "RXls5u4_v7c",
+    video: "b7eAwWEoPxg",
     image_top: "img/combos/160/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/160/ets2-mega/mega-bottom.jpg",
     table:
