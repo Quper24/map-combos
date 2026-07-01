@@ -38,7 +38,7 @@ export const combos_v1_60 = [
     preview: "img/combos/160/ets2-server/ets2-server-preview.jpg",
     version_game: "1.60",
     version: "server",
-    date: "27.06.26",
+    date: "02.07.26",
     image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
     profile: "https://sharemods.com/miz4xas83514/1.60_ETS2_SERVER_MAIN.zip.html",
   },
