@@ -112,4 +112,18 @@ export const combos_v1_60 = [
     image_center: "img/combos/160/ats-server/ats-server-center.jpg",
     profile: "https://sharemods.com/fn3101x4e6pt/1.60_ATS_SERVER.zip.html",
   },
+   {
+    id: "ets2-mod-combo-160",
+    tags: ["ets2", "boosty", "convoy"],
+    title: "ETS2 MODS COMBO",
+    preview: "img/combos/160/ets2-mods/ets2-mods-preview.jpg",
+    version_game: "1.60",
+    version: "1.0",
+    date: "04.07.26",
+    video: "oxTMNZk9FWk",
+    image_center: "img/combos/160/ets2-mods/ets2-mods-center.jpg",
+    table:
+      "",
+    profile: "https://sharemods.com/g8rgqs0p5drb/1.60_ETS2_MODS_PACK_100_1.0.zip.html",
+  },
 ];
