@@ -114,8 +114,8 @@ export const combos_v1_60 = [
   },
    {
     id: "ets2-mod-combo-160",
-    tags: ["ets2", "boosty", "convoy"],
-    title: "ETS2 MODS COMBO",
+    tags: ["ets2", "boosty"],
+    title: "MEGA MODS PACK for ETS2",
     preview: "img/combos/160/ets2-mods/ets2-mods-preview.jpg",
     version_game: "1.60",
     version: "1.0",
@@ -125,5 +125,19 @@ export const combos_v1_60 = [
     table:
       "",
     profile: "https://sharemods.com/g8rgqs0p5drb/1.60_ETS2_MODS_PACK_100_1.0.zip.html",
+  },
+   {
+    id: "ats-mod-combo-160",
+    tags: ["ats", "boosty"],
+    title: "MEGA MODS PACK for ATS",
+    preview: "img/combos/160/ats-mods/ats-mods-preview.jpg",
+    version_game: "1.60",
+    version: "1.0",
+    date: "08.07.26",
+    video: "oxTMNZk9FWk",
+    image_center: "img/combos/160/ats-mods/ats-mods-center.jpg",
+    table:
+      "",
+    profile: "https://sharemods.com/rx19r7is0tzx/ATS_MODS_PACK.zip.html",
   },
 ];

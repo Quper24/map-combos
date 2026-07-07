@@ -1,7 +1,9 @@
+import AutoProfileInstall from '../AutoProfileInstall/AutoProfileInstall';
 import Video from "../Video/Video";
 import "./comboContent.css";
 
-export default function ComboContent({ table, profile }) {
+export default function ComboContent({ combo }) {
+  const { table, profile } = combo;
   return (
     <div className="combo-content">
       <p>Обо всех изменениях я сообщаю в Телеграм канале и на boosty!</p>
@@ -97,6 +99,9 @@ export default function ComboContent({ table, profile }) {
           <Video videoId="_j4XNEikPow" title="Инструкция для лаунчера" />
         </div>
       </details>
+
+<h2>Автоматическая расстановка модов (В РАЗРАБОТКЕ)</h2>
+      <AutoProfileInstall combo={combo} />
 
       <h2>ССЫЛКИ</h2>
 

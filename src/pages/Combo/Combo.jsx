@@ -47,7 +47,7 @@ export default function Combo() {
 
       {combo.video && <Video videoId={combo.video} title={combo.title} />}
 
-      <ComboContent table={combo.table} profile={combo.profile} />
+      <ComboContent combo={combo} />
 
       <ImageBlock
         top={combo.image_top}
