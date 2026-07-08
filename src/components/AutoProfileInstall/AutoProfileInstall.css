@@ -38,37 +38,33 @@
   transform: scale(0.97);
 }
 
-
-/* --- Блок с загрузкой и применением --- */
+/* --- Основной блок (колонка) --- */
 .auto-profile-content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 20px;
+  flex-direction: column;
+  gap: 20px;
   background: rgba(0, 0, 0, 0.2);
-  padding: 16px 20px;
+  padding: 20px 24px;
   border-radius: 10px;
   border: 1px dashed rgba(255, 255, 255, 0.08);
 }
 
-.auto-profile-content p {
+/* --- Каждый шаг --- */
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+
+.step p {
   margin: 0;
   font-size: 15px;
   color: #d0d0d0;
+  min-width: 200px;
 }
 
-.auto-profile-content .status {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
-}
-.auto-profile-content .status.error {
-  color: red;
-}
-.auto-profile-content .status.done {
-  color: green;
-}
-/* Общие стили для кнопок внутри блока */
+/* --- Кнопки --- */
 .auto-profile-button,
 .auto-profile-install-button {
   padding: 10px 24px;
@@ -84,7 +80,6 @@
   gap: 6px;
 }
 
-/* Кнопка "Выбрать файл" (вторичная) */
 .auto-profile-button {
   background: rgba(255, 255, 255, 0.06);
   color: #eaeaea;
@@ -102,7 +97,6 @@
   transform: translateY(0);
 }
 
-/* Кнопка "Применить" (основная) */
 .auto-profile-install-button {
   background: linear-gradient(135deg, #4da3ff, #3b7bc9);
   color: #fff;
@@ -110,27 +104,70 @@
   box-shadow: 0 4px 15px rgba(77, 163, 255, 0.2);
 }
 
-.auto-profile-install-button:hover {
+.auto-profile-install-button:hover:not(:disabled) {
   background: linear-gradient(135deg, #66b5ff, #4a8fd9);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(77, 163, 255, 0.3);
 }
 
-.auto-profile-install-button:active {
+.auto-profile-install-button:active:not(:disabled) {
   transform: translateY(0);
   box-shadow: 0 2px 10px rgba(77, 163, 255, 0.2);
 }
 
-/* ID профиля (выводится снизу) */
-.auto-profile-install > p:last-child {
-  margin: 16px 0 0 0;
-  font-size: 14px;
-  color: #888;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  padding-top: 14px;
-  letter-spacing: 0.5px;
+.auto-profile-install-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
+
+/* --- Статус (цветной) --- */
+.status {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.status-idle {
+  color: #aaaaaa;
+  border-left-color: #888888;
+}
+
+.status-error {
+  color: #ff6b6b;
+  border-left-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.08);
+}
+
+.status-done {
+  color: #51cf66;
+  border-left-color: #51cf66;
+  background: rgba(81, 207, 102, 0.08);
+}
+
+.status-loading {
+  color: #fcc419;
+  border-left-color: #fcc419;
+  background: rgba(252, 196, 25, 0.08);
+}
+
+/* --- combo.id (отладочный) --- */
+.combo-id {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 12px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
 
 /* ===== MODAL OVERLAY ===== */
 .modal-overlay {
