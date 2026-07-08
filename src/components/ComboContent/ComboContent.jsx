@@ -1,159 +1,172 @@
-import AutoProfileInstall from '../AutoProfileInstall/AutoProfileInstall';
+import AutoProfileInstall from "../AutoProfileInstall/AutoProfileInstall";
 import Video from "../Video/Video";
+import ComboNavigation from "../ComboNavigation/ComboNavigation";
+
 import "./comboContent.css";
 
 export default function ComboContent({ combo }) {
   const { table, profile } = combo;
+
   return (
     <div className="combo-content">
-      <p>Обо всех изменениях я сообщаю в Телеграм канале и на boosty!</p>
+      <ComboNavigation />
 
-      <div className="social-links">
-        <a
-          href="https://t.me/qupersimulator"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-btn telegram-btn">
-          <span className="btn-icon">📢</span>
-          <span className="btn-text">Telegram канал</span>
-        </a>
+      {/* Быстрые ссылки */}
+      <section id="links">
+        <h2>🔗 Ссылки</h2>
 
-        <a
-          href="https://boosty.to/qupersimulator"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-btn boosty-btn">
-          <span className="btn-icon">💎</span>
-          <span className="btn-text">Boosty (поддержать)</span>
-        </a>
-      </div>
+        <div className="resource-grid">
+          {table && (
+            <a
+              href={table}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resource-card table-card">
+              <span className="resource-icon">📊</span>
 
-      <h2>Рекомендую посмотреть видео</h2>
+              <div>
+                <h3>Таблица файлов карт</h3>
 
-      <details className="spoiler">
-        <summary className="spoiler-summary">
-          <span className="spoiler-icon">▶️</span>
-          Инструкция по установке (видео)
-        </summary>
-        <div className="spoiler-content">
-          <Video
-            videoId="6UWd6wJa7s8"
-            title="Подробная наглядная инструкция по установке любой сборки карт"
-          />
-        </div>
-      </details>
+                <p>Все ссылки и актуальная информация</p>
+              </div>
+            </a>
+          )}
 
-      <h3>Для работы сборки важно чтобы были установлены все DLC карт</h3>
-      <div className="link-buttons">
-        <a
-          href="https://store.steampowered.com/dlc/227300/Euro_Truck_Simulator_2/list/43330"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-link steam-dlc">
-          <span className="btn-icon">🚚</span>
-          <span className="btn-text">Все DLC карт в Steam</span>
-        </a>
-      </div>
+          {profile && (
+            <a
+              href={profile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resource-card profile-card">
+              <span className="resource-icon">📥</span>
 
-      <div className="notice">
-        <span className="notice-icon">⚙️</span>
-        <div className="notice-content">
-          <strong>Для корректной работы модов</strong> необходимо в файле
-          config.cfg сменить значение (файл находится в папке "Документы/Euro
-          Truck Simulator 2") uset r_buffer_page_size на "30".
-        </div>
-      </div>
+              <div>
+                <h3>Готовый профиль</h3>
 
-      <div className="notice">
-        <span className="notice-icon">💻</span>
-        <div className="notice-content">
-          <strong>Также добавьте параметры запуска</strong> в steam или ярлыке в
-          зависимости от объема оперативной памяти:
-        </div>
-      </div>
+                <p>Моды уже расставлены</p>
+              </div>
+            </a>
+          )}
 
-      <pre className="code-block">
-        <div className="code-header">
-          <span className="code-icon">📝</span>
-          <span>Параметры запуска для разного объема RAM</span>
-        </div>
-        <code>{`8GB RAM: -nointro -unlimitedlog -mm_pool_size 4096 -mm_max_tmp_buffers_size 1000
-12GB RAM: -nointro -unlimitedlog -mm_pol_size 6144 -mm_max_tmp_buffers_size 1000
-16GB RAM (Recommended minimum RAM size): -nointro -unlimitedlog -mm_pool_size 8192 -mm_max_tmp_buffers_size 1000
-32GB RAM: -nointro -unlimitedlog -mm_pool_size 16384 -mm_max_tmp_buffers_size 1000
-64GB RAM: -nointro -unlimitedlog -mm_pool_size 32768 -mm_max_tmp_buffers_size 1000`}</code>
-      </pre>
-
-      <div className="image-display">
-        <img src="img/combos/steam-params.jpg" alt="Пример конфигурации" />
-      </div>
-
-      <h2>Видео по работе Лаунчера для бустеров</h2>
-
-      <details className="spoiler">
-        <summary className="spoiler-summary">
-          <span className="spoiler-icon">▶️</span>
-          Инструкция по использованию лаунчера
-        </summary>
-        <div className="spoiler-content">
-          <Video videoId="_j4XNEikPow" title="Инструкция для лаунчера" />
-        </div>
-      </details>
-
-      <h2>Автоматическая расстановка модов в ваш профиль</h2>
-      <AutoProfileInstall combo={combo} />
-
-      <h2>ССЫЛКИ</h2>
-
-      <div className="resource-grid">
-        {table && (
           <a
-            href={table}
+            href="https://boosty.to/qupersimulator/posts/74db1223-4ff7-4ac6-8582-808720f23992"
             target="_blank"
             rel="noopener noreferrer"
-            className="resource-card table-card">
-            <span className="resource-icon">📊</span>
-            <div className="resource-content">
-              <h3>ТАБЛИЦА СО ВСЕМИ ФАЙЛАМИ КАРТ</h3>
-              <p>Google Sheets таблица с актуальными ссылками</p>
-            </div>
-            <span className="resource-arrow">→</span>
-          </a>
-        )}
+            className="resource-card early-access-card">
+            <span className="resource-icon">💎</span>
 
-        {profile && (
-          <a
-            href={profile}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="resource-card profile-card">
-            <span className="resource-icon">📥</span>
-            <div className="resource-content">
-              <h3>Профиль с расставленными модами</h3>
-              <p>Готовый профиль для загрузки</p>
-            </div>
-            <span className="resource-arrow">→</span>
-          </a>
-        )}
+            <div>
+              <h3>Сборка одним архивом</h3>
 
-        <a
-          href="https://boosty.to/qupersimulator/posts/74db1223-4ff7-4ac6-8582-808720f23992"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="resource-card early-access-card">
-          <span className="resource-icon">🌟</span>
-          <div className="resource-content">
-            <h3>Сборка одним архивом на Boosty</h3>
-            <p>Скачивание в один клик, ранний доступ и эксклюзивные материалы</p>
+              <p>Boosty ранний доступ</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* Видео установки */}
+      <section>
+        <h2>🎬 Инструкция по установке</h2>
+
+        <details className="spoiler">
+          <summary className="spoiler-summary">
+            <span className="spoiler-icon">▶️</span>
+            Открыть видеоинструкцию
+          </summary>
+
+          <div className="spoiler-content">
+            <Video
+              videoId="6UWd6wJa7s8"
+              title="Подробная инструкция по установке сборки карт"
+            />
           </div>
-          <span className="resource-arrow">→</span>
-        </a>
-      </div>
+        </details>
+      </section>
 
-      <p className="image-note">
-        <span className="note-icon">🖼️</span>
-        Скриншоты порядка модификаций из игры:
-      </p>
+      {/* Перед запуском */}
+      <section id="install">
+        <h2>⚙️ Перед запуском</h2>
+
+        <details className="spoiler">
+          <summary className="spoiler-summary">⚙️ Настройка config.cfg</summary>
+
+          <div className="spoiler-content">
+            Для корректной работы модов:
+            <br />
+            <br />
+            Откройте файл:
+            <br />
+            Документы/ Euro Truck Simulator 2/ config.cfg
+            <br />
+            <br />
+            Найдите:
+            <code>uset r_buffer_page_size</code>
+            <br />
+            <br />
+            Установите значение:
+            <code>30</code>
+          </div>
+        </details>
+
+        <details className="spoiler">
+          <summary className="spoiler-summary">
+            💻 Параметры запуска Steam
+          </summary>
+
+          <div className="spoiler-content">
+            <p>Добавьте параметры запуска:</p>
+
+            <pre className="code-block">-nointro -unlimitedlog</pre>
+
+            <div className="image-display">
+              <img
+                src="img/combos/steam-params.jpg"
+                alt="Пример параметров запуска Steam"
+              />
+            </div>
+          </div>
+        </details>
+
+        <details className="spoiler">
+          <summary className="spoiler-summary">🚛 Обязательноые DLC карт</summary>
+
+          <div className="spoiler-content">
+            Для работы сборки должны быть установлены все DLC карт.
+            <br />
+            <br />
+            <a
+              href="https://store.steampowered.com/dlc/227300/Euro_Truck_Simulator_2/list/43330"
+              target="_blank"
+              rel="noopener noreferrer">
+              Все DLC в Steam
+            </a>
+          </div>
+        </details>
+      </section>
+
+      {/* Лаунчер */}
+
+      <section id="launcher">
+        <h2>🚀 Лаунчер</h2>
+
+        <details className="spoiler">
+          <summary className="spoiler-summary">
+            Инструкция по использованию лаунчера (нужна рубиновая подписка на Boosty)
+          </summary>
+
+          <div className="spoiler-content">
+            <Video videoId="_j4XNEikPow" title="Инструкция для лаунчера" />
+          </div>
+        </details>
+      </section>
+
+      {/* Автопрофиль */}
+
+      <section id="profile">
+        <h2>📥 Автоматическая расстановка модификаций в вашем профиле</h2>
+
+        <AutoProfileInstall combo={combo} />
+      </section>
     </div>
   );
 }
