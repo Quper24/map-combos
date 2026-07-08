@@ -17,6 +17,13 @@ export default function AutoProfileInstall({ combo }) {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      if (file.size > 102400) {
+        alert('Файл слишком большой. Максимальный размер 100 КБ.');
+        e.target.value = '';
+        setSelectedFile(null);
+        setStatus('idle');
+        return;
+      }
       setSelectedFile(file);
       setStatus('uploaded');
       setDecodedText('');
@@ -129,7 +136,6 @@ export default function AutoProfileInstall({ combo }) {
     URL.revokeObjectURL(url);
   };
 
-  // Определяем класс для статуса
   const getStatusClass = () => {
     if (status === 'error') return 'status-error';
     if (status === 'done') return 'status-done';
@@ -150,72 +156,80 @@ export default function AutoProfileInstall({ combo }) {
     }
   };
 
+  // Форматируем размер файла
+  const getFileSize = () => {
+    if (!selectedFile) return '';
+    return `(${(selectedFile.size / 1024).toFixed(0)} КБ)`;
+  };
+
   return (
     <div className="auto-profile-install">
       <button className="auto-profile-instruction" onClick={() => setIsModalOpen(true)}>
-        Инструкция
+        📖 Инструкция
       </button>
 
       <div className="auto-profile-content">
-        {/* Шаг 1 */}
-        <div className="step">
-          <p>1. Загрузите файл profile.sii</p>
-          <input
-            type="file"
-            accept=".sii"
-            onChange={handleFileChange}
-            ref={fileInputRef}
-            style={{ display: 'none' }}
-            id="file-input"
-          />
-          <button className="auto-profile-button" onClick={() => fileInputRef.current?.click()}>
-            {selectedFile ? selectedFile.name : 'Выбрать файл'}
-          </button>
+        <div className="toolbar">
+          {/* Шаг 1 – Выбор файла */}
+          <div className="toolbar-item">
+            <span className="toolbar-label">1. Файл</span>
+            <input
+              type="file"
+              accept=".sii"
+              onChange={handleFileChange}
+              ref={fileInputRef}
+              style={{ display: 'none' }}
+              id="file-input"
+            />
+            <button className="toolbar-btn file-btn" onClick={() => fileInputRef.current?.click()}>
+              {selectedFile ? `${selectedFile.name} ${getFileSize()}` : 'Выбрать'}
+            </button>
+          </div>
+
+          {/* Шаг 2 – Декодировать */}
+          <div className="toolbar-item">
+            <span className="toolbar-label">2. Декодировать</span>
+            <button
+              className="toolbar-btn action-btn"
+              onClick={handleDecode}
+              disabled={status === 'decoding' || !selectedFile}
+            >
+              {status === 'decoding' ? '...' : 'Декодировать'}
+            </button>
+          </div>
+
+          {/* Шаг 3 – Применить */}
+          <div className="toolbar-item">
+            <span className="toolbar-label">3. Применить</span>
+            <button
+              className="toolbar-btn action-btn"
+              onClick={handleApply}
+              disabled={status !== 'decoded'}
+            >
+              Применить
+            </button>
+          </div>
+
+          {/* Шаг 4 – Скачать */}
+          <div className="toolbar-item">
+            <span className="toolbar-label">4. Скачать</span>
+            <button
+              className="toolbar-btn action-btn"
+              onClick={handleDownload}
+              disabled={status !== 'done'}
+            >
+              Скачать
+            </button>
+          </div>
         </div>
 
-        {/* Шаг 2 */}
-        <div className="step">
-          <p>2. Нажмите кнопку "Декодировать"</p>
-          <button
-            className="auto-profile-install-button"
-            onClick={handleDecode}
-            disabled={status === 'decoding' || !selectedFile}
-          >
-            {status === 'decoding' ? 'Декодирование...' : 'Декодировать'}
-          </button>
-        </div>
-
-        {/* Шаг 3 */}
-        <div className="step">
-          <p>3. Нажмите кнопку "Применить"</p>
-          <button
-            className="auto-profile-install-button"
-            onClick={handleApply}
-            disabled={status !== 'decoded'}
-          >
-            Применить
-          </button>
-        </div>
-
-        {/* Шаг 4 */}
-        <div className="step">
-          <p>4. Нажмите кнопку "Скачать"</p>
-          <button
-            className="auto-profile-install-button"
-            onClick={handleDownload}
-            disabled={status !== 'done'}
-          >
-            Скачать
-          </button>
-        </div>
-
-        {/* Статус */}
+        {/* Статус – под тулбаром, но компактно */}
         <div className={`status ${getStatusClass()}`}>
-          <span>Статус: {renderStatusText()}</span>
+          Статус: {renderStatusText()}
         </div>
 
-        {/* combo.id (отладочный) */}
-        <div className="combo-id">combo.id: {combo.id}</div>
+        {/* combo.id – мелко справа */}
+        <div className="combo-id">combo: {combo.id}</div>
       </div>
 
       <InstructionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

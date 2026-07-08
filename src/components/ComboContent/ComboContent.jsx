@@ -100,7 +100,7 @@ export default function ComboContent({ combo }) {
         </div>
       </details>
 
-<h2>Автоматическая расстановка модов (В РАЗРАБОТКЕ)</h2>
+      <h2>Автоматическая расстановка модов в ваш профиль</h2>
       <AutoProfileInstall combo={combo} />
 
       <h2>ССЫЛКИ</h2>
