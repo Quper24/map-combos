@@ -38,6 +38,7 @@
   transform: scale(0.97);
 }
 
+
 /* --- Блок с загрузкой и применением --- */
 .auto-profile-content {
   display: flex;
@@ -56,6 +57,17 @@
   color: #d0d0d0;
 }
 
+.auto-profile-content .status {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+.auto-profile-content .status.error {
+  color: red;
+}
+.auto-profile-content .status.done {
+  color: green;
+}
 /* Общие стили для кнопок внутри блока */
 .auto-profile-button,
 .auto-profile-install-button {
