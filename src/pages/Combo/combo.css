@@ -8,6 +8,73 @@
   gap: 20px;
 }
 
+/* ===================================
+   DESKTOP TWO COLUMN COMBO VIEW
+=================================== */
+
+.combo-layout {
+  display:grid;
+  grid-template-columns:
+    minmax(550px, 1fr)
+    minmax(550px, 700px);
+  gap:25px;
+  height: calc(100vh - 180px);
+  overflow:hidden;
+}
+
+
+/* Левая колонка */
+
+.combo-content-scroll {
+  overflow-y:auto;
+  padding-right:15px;
+}
+
+
+/* Правая колонка */
+
+.combo-images-scroll {
+  overflow-y:auto;
+  padding-right:10px;
+}
+
+
+
+/* Красивый scrollbar */
+
+.combo-content-scroll::-webkit-scrollbar,
+.combo-images-scroll::-webkit-scrollbar {
+  width:8px;
+}
+
+
+.combo-content-scroll::-webkit-scrollbar-thumb,
+.combo-images-scroll::-webkit-scrollbar-thumb {
+  background:rgba(255,255,255,.2);
+  border-radius:10px;
+}
+
+
+.combo-content-scroll::-webkit-scrollbar-track {
+  background:transparent;
+}
+
+@media(max-width: 1240px){
+
+  .combo-layout {
+    display:block;
+    height:auto;
+    overflow:visible;
+  }
+
+
+  .combo-content-scroll,
+  .combo-images-scroll {
+    overflow:visible;
+    padding-right:0;
+  }
+}
+
 @media (max-width: 768px) {
   .page-header h1 {
     font-size: 42px;

@@ -8,14 +8,14 @@
   background: rgba(13, 13, 13, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
 }
 
 .topbar-inner {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -34,10 +34,13 @@ export default function Combo() {
             {combo.version_game}-{combo.version}
           </strong>
         </h1>
+
         {combo.date && (
           <div className="update-info">
-            <span className="update-badge">🔄 ОБНОВЛЕНО </span>
+            <span className="update-badge">🔄 ОБНОВЛЕНО</span>
+
             <span className="update-date">{formatDate(combo.date)}</span>
+
             <span className="version-badge">
               Для версии {combo.version_game}
             </span>
@@ -45,15 +48,19 @@ export default function Combo() {
         )}
       </div>
 
-      {combo.video && <Video videoId={combo.video} title={combo.title} />}
+      <div className="combo-layout">
+        <div className="combo-content-scroll">
+          <ComboContent combo={combo} />
+        </div>
 
-      <ComboContent combo={combo} />
-
-      <ImageBlock
-        top={combo.image_top}
-        center={combo.image_center}
-        bottom={combo.image_bottom}
-      />
+        <div className="combo-images-scroll">
+          <ImageBlock
+            top={combo.image_top}
+            center={combo.image_center}
+            bottom={combo.image_bottom}
+          />
+        </div>
+      </div>
     </div>
   );
 }

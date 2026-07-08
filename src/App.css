@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  padding: 40px 20px;
   background-color: #0d0d0d;
   color: #eaeaea;
   font-family:
@@ -15,9 +14,9 @@ body {
 
 /* Layout */
 .container {
-  max-width: 1380px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 0 40px;
 }
 
 /* Typography */
