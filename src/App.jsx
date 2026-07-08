@@ -1,5 +1,5 @@
 // C:\Quper-projects\map-combos\src\App.jsx
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home/Home";
 import Combo from "./pages/Combo/Combo";
@@ -8,10 +8,6 @@ import Header from "./components/Header/Header";
 import "./App.css";
 
 export default function App() {
-  const location = useLocation();
-  // Страницы, на которых не показываем Header
-  const hideHeaderPages = ["/"];
-  const shouldShowHeader = !hideHeaderPages.includes(location.pathname);
 
   // Состояние для выбранной версии
   const [selectedVersion, setSelectedVersion] = useState(() => {
@@ -27,12 +23,10 @@ export default function App() {
 
   return (
     <>
-      {shouldShowHeader && (
         <Header
           selectedVersion={selectedVersion}
           onVersionChange={setSelectedVersion}
         />
-      )}
       <Routes>
         <Route
           path="/"

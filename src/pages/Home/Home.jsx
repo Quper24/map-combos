@@ -204,52 +204,9 @@ const [serverStats, setServerStats] = useState({
   return (
     <div className="container">
       <header className="home-header">
-        <div className="version-selector-wrapper">
-          <h1>MAP COMBOS</h1>
 
-          {/* Селектор версий */}
-          <div className="version-selector">
-            <div className="version-dropdown">
-              <button className="version-dropdown-btn">
-                <span className="version-icon">
-                  {VERSIONS[selectedVersion]?.icon || "✅"}
-                </span>
-                <span className="version-label">
-                  Версия {VERSIONS[selectedVersion]?.label || selectedVersion}
-                </span>
-                <span className="dropdown-arrow">▼</span>
-              </button>
-              <div className="version-dropdown-menu">
-                {Object.entries(VERSIONS)
-                  .sort(([aKey], [bKey]) => bKey.localeCompare(aKey))
-                  .map(([versionId, versionData]) => (
-                    <button
-                      key={versionId}
-                      onClick={() => onVersionChange(versionId)}
-                      className={`version-option ${
-                        selectedVersion === versionId ? "active" : ""
-                      } ${versionData.status}`}
-                      title={versionData.description}>
-                      <span className="version-option-icon">
-                        {versionData.icon}
-                      </span>
-                      <span className="version-option-label">
-                        {versionData.label}
-                        {versionData.status === "current" && (
-                          <span className="current-badge">Текущая</span>
-                        )}
-                      </span>
-                      {selectedVersion === versionId && (
-                        <span className="version-check">✓</span>
-                      )}
-                    </button>
-                  ))}
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <p className="home-subtitle">Сборки карт для Truck Simulator</p>
+        <h1 className="home-subtitle">Сборки карт для ETS2 и ATS</h1>
 
         {latestUpdate && (
           <div className="latest-update-badge">

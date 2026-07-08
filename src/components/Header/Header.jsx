@@ -1,4 +1,5 @@
-// C:\Quper-projects\map-combos\src\components\Header\Header.jsx
+// src/components/Header/Header.jsx
+
 import { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { COMBOS_BY_VERSION, VERSIONS } from "../../data";
@@ -8,178 +9,258 @@ import "./header.css";
 export default function Header({ selectedVersion, onVersionChange }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVersionMenuOpen, setIsVersionMenuOpen] = useState(false);
-  const menuRef = useRef();
-  const burgerRef = useRef();
-  const versionRef = useRef();
 
-  // Получаем комбо ТОЛЬКО для выбранной версии
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useRef();
+
   const currentCombos = COMBOS_BY_VERSION[selectedVersion] || [];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    setIsVersionMenuOpen(false);
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
-  const toggleVersionMenu = () => {
-    setIsVersionMenuOpen(!isVersionMenuOpen);
-    setIsMenuOpen(false);
-  };
-
-  const closeAllMenus = () => {
-    setIsMenuOpen(false);
-    setIsVersionMenuOpen(false);
-  };
 
   const handleVersionChange = (versionId) => {
     onVersionChange(versionId);
-    setIsVersionMenuOpen(false);
 
-    // Если мы на странице комбо, перенаправляем на главную
     if (location.pathname !== "/") {
       navigate("/");
     }
   };
 
-  // Закрытие меню при клике вне
+
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handler = (event) => {
       if (
-        isMenuOpen &&
+        isOpen &&
         menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        burgerRef.current &&
-        !burgerRef.current.contains(event.target)
+        !menuRef.current.contains(event.target)
       ) {
-        closeAllMenus();
-      }
-      if (
-        isVersionMenuOpen &&
-        versionRef.current &&
-        !versionRef.current.contains(event.target)
-      ) {
-        closeAllMenus();
+        closeMenu();
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handler);
+
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handler);
     };
-  }, [isMenuOpen, isVersionMenuOpen]);
+  }, [isOpen]);
 
-  // Закрытие меню при нажатии Escape
+
   useEffect(() => {
-    const handleEscape = (event) => {
+    const handler = (event) => {
       if (event.key === "Escape") {
-        closeAllMenus();
+        closeMenu();
       }
     };
 
-    document.addEventListener("keydown", handleEscape);
+    document.addEventListener("keydown", handler);
+
     return () => {
-      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("keydown", handler);
     };
   }, []);
 
+
+
   return (
     <header className="topbar">
+
       <div className="topbar-inner">
+
         {/* Логотип */}
         <div className="logo">
-          <NavLink to="/" onClick={closeAllMenus}>
-            <img src="/img/logo.jpg" alt="MAP COMBOS" className="logo-image" />
+          <NavLink to="/">
+            <img
+              src="/img/logo.jpg"
+              alt="MAP COMBOS"
+              className="logo-image"
+            />
           </NavLink>
         </div>
 
-        {/* Селектор версий в хедере */}
-        <div className="header-version-selector" ref={versionRef}>
-          <button
-            className="header-version-btn"
-            onClick={toggleVersionMenu}
-            aria-expanded={isVersionMenuOpen}
-            aria-label={`Выбрать версию игры. Текущая: ${selectedVersion}`}>
-            <span className="header-version-icon">
-              {VERSIONS[selectedVersion]?.icon || "✅"}
-            </span>
-            <span className="header-version-label">v{selectedVersion}</span>
-            <span
-              className={`header-version-arrow ${isVersionMenuOpen ? "open" : ""}`}>
-              ▼
-            </span>
-          </button>
 
-          {isVersionMenuOpen && (
-            <div className="header-version-dropdown">
-              {Object.entries(VERSIONS)
-                .sort(([aKey], [bKey]) => bKey.localeCompare(aKey))
-                .map(([versionId, versionData]) => (
-                  <button
-                    key={versionId}
-                    onClick={() => handleVersionChange(versionId)}
-                    className={`header-version-option ${selectedVersion === versionId ? "active" : ""}`}>
-                    <span className="header-version-option-icon">
-                      {versionData.icon}
-                    </span>
-                    <span className="header-version-option-text">
-                      {versionData.label}
-                      {versionData.status === "current" && (
-                        <span className="header-version-badge current">
-                          Текущая
-                        </span>
-                      )}
-                      {versionData.status === "upcoming" && (
-                        <span className="header-version-badge upcoming">
-                          Скоро
-                        </span>
-                      )}
-                    </span>
-                    {selectedVersion === versionId && (
-                      <span className="header-version-check">✓</span>
-                    )}
-                  </button>
-                ))}
-            </div>
-          )}
+
+        {/* Текущая сборка */}
+        <div className="current-combo">
+
+          <div className="current-combo-title">
+            {location.pathname !== "/"
+              ? currentCombos.find(
+                  (item) => `/${item.id}` === location.pathname
+                )?.title || "Выбор сборки"
+              : "Выбор сборки"}
+          </div>
+
+
+          <div className="current-combo-version">
+            {VERSIONS[selectedVersion]?.icon}
+            {" "}
+            ETS2 {selectedVersion}
+          </div>
+
         </div>
 
-        {/* Бургер меню */}
+
+
+        {/* Кнопка меню */}
         <button
-          ref={burgerRef}
-          className={`burger-btn ${isMenuOpen ? "active" : ""}`}
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
-          aria-expanded={isMenuOpen}
-          aria-controls="main-navigation">
-          <span className="burger-line"></span>
-          <span className="burger-line"></span>
-          <span className="burger-line"></span>
+          className="select-button"
+          onClick={() => setIsOpen(true)}
+        >
+          Выбрать ☰
         </button>
 
-        {/* Основное меню навигации */}
-        <nav
-          ref={menuRef}
-          id="main-navigation"
-          className={`nav ${isMenuOpen ? "open" : ""}`}
-          aria-hidden={!isMenuOpen}>
-          {/* Показываем ТОЛЬКО комбо для выбранной версии */}
-          {currentCombos.map((combo) => (
-            <NavLink
-              key={combo.id}
-              to={`/${combo.id}`}
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={closeAllMenus}>
-              {combo.title}
-            </NavLink>
-          ))}
-        </nav>
 
-        {/* Оверлей для закрытия меню */}
-        {(isMenuOpen || isVersionMenuOpen) && (
-          <div className="menu-overlay" onClick={closeAllMenus}></div>
+
+        {/* Overlay */}
+        {isOpen && (
+          <div
+            className="menu-overlay"
+            onClick={closeMenu}
+          />
         )}
+
+
+
+        {/* Панель */}
+        <aside
+          ref={menuRef}
+          className={`side-menu ${isOpen ? "open" : ""}`}
+        >
+
+          <div className="side-menu-header">
+            <h2>Выбор сборки</h2>
+
+            <button onClick={closeMenu}>
+              ✕
+            </button>
+          </div>
+
+
+
+          {/* Версии */}
+
+          <section className="menu-section">
+
+            <h3>
+              Версия игры
+            </h3>
+
+
+            <div className="version-list">
+
+              {Object.entries(VERSIONS)
+                .sort(([a],[b]) => b.localeCompare(a))
+                .map(([id, version]) => (
+
+                <button
+                  key={id}
+                  className={
+                    selectedVersion === id
+                    ? "active"
+                    : ""
+                  }
+                  onClick={() =>
+                    handleVersionChange(id)
+                  }
+                >
+
+                  {version.icon}
+
+                  <span>
+                    {version.label}
+                  </span>
+
+
+                  {selectedVersion === id && (
+                    <b>✓</b>
+                  )}
+
+                </button>
+
+              ))}
+
+            </div>
+
+          </section>
+
+
+
+
+          {/* Сборки */}
+
+          <section className="menu-section">
+
+            <h3>
+              Сборки
+            </h3>
+
+
+            <div className="combo-list">
+
+            {currentCombos.map(combo => (
+
+              <NavLink
+                key={combo.id}
+                to={`/${combo.id}`}
+                onClick={closeMenu}
+                className={({isActive}) =>
+                  isActive ? "active" : ""
+                }
+              >
+
+                🚛 {combo.title}
+
+              </NavLink>
+
+            ))}
+
+            </div>
+
+          </section>
+
+
+
+
+          {/* Ссылки */}
+
+          <section className="menu-section">
+
+            <h3>
+              Полезные ссылки
+            </h3>
+
+
+            <div className="external-links">
+
+              <a href="#">
+                ▶ YouTube
+              </a>
+
+
+              <a href="#">
+                ✈ Telegram
+              </a>
+
+
+              <a href="#">
+                💎 Boosty
+              </a>
+
+            </div>
+
+          </section>
+
+
+
+        </aside>
+
+
       </div>
+
     </header>
   );
 }

@@ -1,470 +1,293 @@
-/* ===== HEADER COMPONENT STYLES ===== */
+/* ===== HEADER ===== */
 
-/* === Base Topbar Styles === */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(13, 13, 13, 0.98);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px 0;
   width: 100%;
+  background: rgba(13, 13, 13, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 0;
 }
 
 .topbar-inner {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 50px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: relative;
-  gap: 30px;
 }
 
-/* === Logo Styles === */
-/* === Logo Styles === */
+/* ==========================
+   LOGO
+========================== */
+
 .logo a {
   display: flex;
-  align-items: center;
-  padding: 0;
 }
 
 .logo-image {
-  max-width: none;
-  height: 80px;
-  width: 80px;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 .logo-image:hover {
   transform: scale(1.05);
-  opacity: 0.9;
-}
-/* === Navigation (Desktop) === */
-.nav {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
 }
 
-.nav a {
-  font-size: 13px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  color: #eaeaea;
-  background: rgba(255, 255, 255, 0.04);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
-}
+/* ==========================
+   CURRENT COMBO
+========================== */
 
-/* Hover effect with gradient animation */
-.nav a::before {
-  content: "";
+.current-combo {
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  transition: left 0.5s ease;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
 }
 
-.nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(77, 163, 255, 0.2);
+.current-combo-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
 }
 
-.nav a:hover::before {
-  left: 100%;
+.current-combo-version {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #aaa;
 }
 
-/* Active link styles */
-.nav a.active {
-  background: rgba(77, 163, 255, 0.15);
-  color: #4da3ff;
-  border-color: rgba(77, 163, 255, 0.4);
-  font-weight: 600;
-}
+/* ==========================
+   SELECT BUTTON
+========================== */
 
-.nav a.active::before {
-  content: "▶";
-  display: inline-block;
-  margin-right: 6px;
-  font-size: 10px;
-  vertical-align: middle;
-  background: none;
-  position: static;
-  width: auto;
-  height: auto;
-  left: 0;
-  transition: none;
-}
-
-/* === Burger Button (Mobile Menu Toggle) === */
-.burger-btn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1001;
-}
-
-.burger-line {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #ffffff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.burger-btn:hover .burger-line {
-  background: #4da3ff;
-}
-
-/* Burger button active state (when menu is open) */
-.burger-btn.active .burger-line:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
-}
-
-.burger-btn.active .burger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-btn.active .burger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
-/* === Menu Overlay === */
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 999;
-}
-
-.header-version-selector {
-  position: relative;
-  margin-right: 20px;
-}
-
-.header-version-btn {
+.select-button {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
-  background: rgba(77, 163, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 12px;
   border: 1px solid rgba(77, 163, 255, 0.3);
-  border-radius: 8px;
-  color: #4da3ff;
+  background: rgba(77, 163, 255, 0.12);
+  color: #fff;
+  font-size: 15px;
   font-weight: 600;
-  font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  transition: 0.25s;
 }
 
-.header-version-btn:hover {
-  background: rgba(77, 163, 255, 0.2);
-  border-color: rgba(77, 163, 255, 0.5);
+.select-button:hover {
+  background: rgba(77, 163, 255, 0.25);
+  transform: translateY(-2px);
 }
 
-.header-version-icon {
-  font-size: 16px;
+/* ==========================
+   OVERLAY
+========================== */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1100;
 }
 
-.header-version-label {
-  font-weight: 600;
-}
+/* ==========================
+   SIDE MENU
+========================== */
 
-.header-version-arrow {
-  font-size: 10px;
-  transition: transform 0.3s ease;
-  margin-left: 2px;
-}
-
-.header-version-arrow.open {
-  transform: rotate(180deg);
-}
-
-.header-version-dropdown {
-  position: absolute;
-  top: calc(100% + 5px);
+.side-menu {
+  position: fixed;
+  top: 0;
   right: 0;
-  min-width: 200px;
-  background: rgba(20, 20, 30, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  z-index: 1001;
+  width: 380px;
+  max-width: 90vw;
+  height: 100vh;
+  background: rgba(20, 20, 25, 0.98);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1200;
+  padding: 25px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
 }
 
-.header-version-option {
+.side-menu.open {
+  transform: translateX(0);
+}
+
+/* ==========================
+   MENU HEADER
+========================== */
+
+.side-menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 10px 12px;
-  background: transparent;
-  border: none;
-  border-radius: 8px;
-  color: #ccc;
-  text-align: left;
+  margin-bottom: 30px;
+}
+
+.side-menu-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #fff;
+}
+
+.side-menu-header button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
   cursor: pointer;
-  transition: all 0.2s ease;
-  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.menu-section {
+  margin-bottom: 30px;
+}
+
+.menu-section h3 {
+  margin-bottom: 12px;
+  color: #aaa;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.header-version-option:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
+/* ==========================
+   VERSION LIST
+========================== */
 
-.header-version-option.active {
-  background: rgba(77, 163, 255, 0.1);
-  color: #4da3ff;
-}
-
-.header-version-option-icon {
-  font-size: 14px;
-  margin-right: 10px;
-  width: 20px;
-  text-align: center;
-}
-
-.header-version-option-text {
-  flex-grow: 1;
+.version-list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  font-size: 13px;
+  gap: 8px;
 }
 
-.header-version-badge {
-  font-size: 10px;
-  padding: 1px 4px;
-  border-radius: 3px;
-  margin-top: 2px;
-  display: inline-block;
-  width: fit-content;
+.version-list button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-.header-version-badge.current {
-  color: #34a853;
-  background: rgba(52, 168, 83, 0.1);
+.version-list button:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.header-version-badge.upcoming {
-  color: #ff9800;
-  background: rgba(255, 152, 0, 0.1);
-}
-
-.header-version-check {
+.version-list button.active {
+  background: rgba(77, 163, 255, 0.15);
+  border-color: rgba(77, 163, 255, 0.4);
   color: #4da3ff;
-  font-weight: bold;
-  font-size: 12px;
 }
 
-/* === Mobile Menu Animations === */
-/* Slide-in animation for menu items */
-.nav.open a {
-  animation: slideIn 0.3s ease forwards;
-  opacity: 0;
-  transform: translateX(20px);
+.version-list span {
+  flex: 1;
 }
 
-.nav.open a:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.nav.open a:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.nav.open a:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.nav.open a:nth-child(4) {
-  animation-delay: 0.25s;
-}
-.nav.open a:nth-child(5) {
-  animation-delay: 0.3s;
-}
-.nav.open a:nth-child(6) {
-  animation-delay: 0.35s;
+/* ==========================
+   COMBO LIST
+========================== */
+
+.combo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.combo-list a {
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.25s;
 }
 
-/* ===== MEDIA QUERIES (Grouped Together) ===== */
-
-/* Tablet (1024px and below) */
-@media (max-width: 1024px) {
-  .nav {
-    gap: 8px;
-  }
-
-  .nav a {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
+.combo-list a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* Mobile (768px and below) */
+.combo-list a.active {
+  background: rgba(77, 163, 255, 0.18);
+  color: #4da3ff;
+}
+
+/* ==========================
+   EXTERNAL LINKS
+========================== */
+
+.external-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.external-links a {
+  padding: 13px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.external-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(5px);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
 @media (max-width: 768px) {
+  .topbar-inner {
+    padding: 0 15px;
+  }
+
   .logo-image {
     width: 50px;
     height: 50px;
   }
 
-  .burger-btn {
-    display: flex;
+  .current-combo-title {
+    font-size: 16px;
   }
 
-  .nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background: rgba(20, 20, 20, 0.98);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    padding: 80px 20px 20px; /* Больше отступ сверху для логотипа */
-    gap: 15px;
-    z-index: 1000;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-    /* Используем transform вместо right */
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+  .current-combo-version {
+    font-size: 12px;
   }
 
-  .nav.open {
-    transform: translateX(0);
-  }
-
-  /* Скройте меню когда оно закрыто (опционально) */
-  .nav:not(.open) {
-    visibility: hidden;
-  }
-  .nav a {
-    padding: 12px 16px;
-    font-size: 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.05);
-    /* Убираем анимацию ::before на мобильных */
-    overflow: visible;
-  }
-
-  .nav a::before {
-    display: none;
-  }
-
-  .nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .nav a.active {
-    background: rgba(77, 163, 255, 0.2);
-    border-color: rgba(77, 163, 255, 0.4);
-  }
-
-  .nav a.active::before {
-    content: "▶";
-    display: inline-block;
-    margin-right: 6px;
-    font-size: 10px;
-    vertical-align: middle;
-  }
-
-  .menu-overlay {
-    display: block;
-  }
-
-  .topbar-inner {
-    padding: 0 15px;
-  }
-
-  .header-version-selector {
-    margin-right: 10px;
-  }
-
-  .header-version-btn {
-    padding: 6px 10px;
+  .select-button {
+    padding: 10px 12px;
     font-size: 13px;
   }
 
-  .header-version-label {
-    display: none; /* Скрываем текст на мобильных, оставляем только иконку */
-  }
-
-  .header-version-icon {
-    font-size: 18px;
-  }
-
-  .header-version-arrow {
-    display: none;
-  }
-
-  .header-version-dropdown {
-    min-width: 180px;
-    right: -10px;
-  }
-}
-
-/* Small Mobile (480px and below) */
-@media (max-width: 480px) {
-  .logo-image {
-    width: 40px;
-    height: 40px;
-  }
-
-  .topbar {
-    padding: 8px 0;
-  }
-
-  .nav {
-    width: 85%;
-    padding: 15px;
-  }
-
-  .nav a {
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-
-  .header-version-selector {
-    order: 1; /* Меняем порядок, если нужно */
+  .side-menu {
+    width: 90vw;
   }
 }

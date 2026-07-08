@@ -3,30 +3,20 @@ import "./comboNavigation.css";
 export default function ComboNavigation() {
   const items = [
     {
-      id: "links",
-      icon: "🔗",
-      title: "Ссылки",
-    },
-    {
       id: "install",
       icon: "⚙️",
-      title: "Установка",
+      title: "Инструкция",
     },
     {
       id: "launcher",
       icon: "🚀",
-      title: "Лаунчер",
+      title: "DQ Лаунчер",
     },
     {
       id: "profile",
       icon: "📥",
-      title: "Профиль модов",
-    },
-    {
-      id: "images",
-      icon: "🖼️",
-      title: "Порядок модов",
-    },
+      title: "Авторасстановка модификаций",
+    }
   ];
 
 
