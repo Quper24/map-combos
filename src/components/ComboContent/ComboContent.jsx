@@ -64,6 +64,14 @@ export default function ComboContent({ combo }) {
         </div>
       </section>
 
+       {/* Автопрофиль */}
+
+      <section id="profile">
+        <h2>📥 Автоматическая расстановка модификаций в вашем профиле</h2>
+
+        <AutoProfileInstall combo={combo} />
+      </section>
+
       {/* Видео установки */}
       <section>
         <h2>🎬 Инструкция по установке</h2>
@@ -128,7 +136,7 @@ export default function ComboContent({ combo }) {
         </details>
 
         <details className="spoiler">
-          <summary className="spoiler-summary">🚛 Обязательноые DLC карт</summary>
+          <summary className="spoiler-summary">🚛 Обязательные DLC карт</summary>
 
           <div className="spoiler-content">
             Для работы сборки должны быть установлены все DLC карт.
@@ -160,13 +168,7 @@ export default function ComboContent({ combo }) {
         </details>
       </section>
 
-      {/* Автопрофиль */}
-
-      <section id="profile">
-        <h2>📥 Автоматическая расстановка модификаций в вашем профиле</h2>
-
-        <AutoProfileInstall combo={combo} />
-      </section>
+     
     </div>
   );
 }
