@@ -163,7 +163,7 @@ export default function ComboContent({ combo }) {
           </summary>
 
           <div className="spoiler-content">
-            <Video videoId="_j4XNEikPow" title="Инструкция для лаунчера" />
+            <Video videoId="ey10boQxLRQ" title="Инструкция для лаунчера" />
           </div>
         </details>
       </section>
