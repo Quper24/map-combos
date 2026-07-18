@@ -4,6 +4,7 @@ export const combos_v1_60 = [
     tags: ["ets2"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/160/ets2-quper/quper-preview.jpg",
+    mods: true,
     version_game: "1.60",
     version: "2.5.1",
     date: "13.07.26",
@@ -20,6 +21,7 @@ export const combos_v1_60 = [
     tags: ["ets2"],
     title: "MEGA MAP COMBO",
     preview: "img/combos/160/ets2-mega/mega-preview.jpg",
+    mods: true,
     version_game: "1.60",
     version: "2.5.1",
     date: "13.07.26",
@@ -40,24 +42,28 @@ export const combos_v1_60 = [
     version: "server",
     date: "02.07.26",
     image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/miz4xas83514/1.60_ETS2_SERVER_MAIN.zip.html",
+    profile:
+      "https://sharemods.com/miz4xas83514/1.60_ETS2_SERVER_MAIN.zip.html",
   },
-    {
+  {
     id: "ets2-server-light-map-160",
     tags: ["ets2", "server", "convoy"],
     title: "ETS2 SERVER LIGHT COMBO",
     preview: "img/combos/160/ets2-server-light/ets2-server-light-preview.jpg",
     version_game: "1.60",
-    version: "server",
-    date: "30.06.26",
-    image_center: "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
-    profile: "https://sharemods.com/waywkk94jt8g/1.60_ETS2_SERVER_LIGHT.zip.html",
+    version: "85568392936116600/103",
+    date: "17.07.26",
+    image_center:
+      "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
+    profile:
+      "https://sharemods.com/waywkk94jt8g/1.60_ETS2_SERVER_LIGHT.zip.html",
   },
   {
     id: "gold-russia-map-160",
     tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/160/ets2-gold/gold-russia-preview.jpg",
+    mods: true,
     version_game: "1.60",
     version: "1.5",
     date: "12.07.26",
@@ -74,6 +80,7 @@ export const combos_v1_60 = [
     tags: ["ets2"],
     title: "BIGRUSSIA MAP COMBO BETA",
     preview: "img/combos/160/ets2-bigrussia/bigrussia-preview.jpg",
+    mods: true,
     version_game: "1.60",
     version: "1.7.1",
     date: "13.07.26",
@@ -82,21 +89,22 @@ export const combos_v1_60 = [
     image_bottom: "img/combos/160/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1412719290#gid=1412719290",
-    profile: "https://sharemods.com/c3eapa352gn6/1.60_ETS2_BIG_RUSSIA_MAP_COMBO_1.7.1.zip.html",
+    profile:
+      "https://sharemods.com/c3eapa352gn6/1.60_ETS2_BIG_RUSSIA_MAP_COMBO_1.7.1.zip.html",
   },
   {
     id: "ats-quper-map-160",
     tags: ["ats", "convoy", "boosty"],
     title: "ATS QUPER COMBO",
     preview: "img/combos/160/ats-quper/ats-quper-preview.jpg",
+    mods: true,
     image_top: "img/combos/160/ats-quper/ats-quper-top.jpg",
     image_bottom: "img/combos/160/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.60",
     version: "2.0",
     date: "05.07.26",
     video: "_jA5ygN1jaI",
-    table:
-      "",
+    table: "",
     profile:
       "https://sharemods.com/tzi6qtvlthsw/1.60_ATS_QUPER_MAP_COMBO_2.0.zip.html",
   },
@@ -110,9 +118,10 @@ export const combos_v1_60 = [
     date: "05.07.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/160/ats-server/ats-server-center.jpg",
-    profile: "https://sharemods.com/ejypyebwi5md/1.59_ATS_SERVER_05_07.zip.html",
+    profile:
+      "https://sharemods.com/ejypyebwi5md/1.59_ATS_SERVER_05_07.zip.html",
   },
-   {
+  {
     id: "ets2-mod-combo-160",
     tags: ["ets2", "boosty"],
     title: "MEGA MODS PACK for ETS2",
@@ -122,11 +131,11 @@ export const combos_v1_60 = [
     date: "04.07.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/160/ets2-mods/ets2-mods-center.jpg",
-    table:
-      "",
-    profile: "https://sharemods.com/g8rgqs0p5drb/1.60_ETS2_MODS_PACK_100_1.0.zip.html",
+    table: "",
+    profile:
+      "https://sharemods.com/g8rgqs0p5drb/1.60_ETS2_MODS_PACK_100_1.0.zip.html",
   },
-   {
+  {
     id: "ats-mod-combo-160",
     tags: ["ats", "boosty"],
     title: "MEGA MODS PACK for ATS",
@@ -136,8 +145,7 @@ export const combos_v1_60 = [
     date: "08.07.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/160/ats-mods/ats-mods-center.jpg",
-    table:
-      "",
+    table: "",
     profile: "https://sharemods.com/rx19r7is0tzx/ATS_MODS_PACK.zip.html",
   },
 ];
