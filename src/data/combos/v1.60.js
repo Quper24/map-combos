@@ -56,7 +56,7 @@ export const combos_v1_60 = [
     image_center:
       "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
     profile:
-      "https://sharemods.com/waywkk94jt8g/1.60_ETS2_SERVER_LIGHT.zip.html",
+      "https://boosty.to/qupersimulator/posts/56599916-0395-4229-a385-d90363475404",
   },
   {
     id: "gold-russia-map-160",
