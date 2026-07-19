@@ -3,8 +3,6 @@ import InstructionModal from "./InstructionModal";
 import "./AutoProfileInstall.css";
 
 export default function AutoProfileInstall({ combo }) {
-  console.log("combo: ", combo);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);

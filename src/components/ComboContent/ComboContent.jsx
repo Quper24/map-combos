@@ -9,7 +9,7 @@ export default function ComboContent({ combo }) {
 
   return (
     <div className="combo-content">
-      <ComboNavigation />
+      <ComboNavigation combo={combo} />
 
       {/* Быстрые ссылки */}
       <section id="links">
@@ -64,13 +64,14 @@ export default function ComboContent({ combo }) {
         </div>
       </section>
 
-       {/* Автопрофиль */}
+      {/* Автопрофиль */}
+      {combo.automods && (
+        <section id="profile">
+          <h2>📥 Автоматическая расстановка модификаций в вашем профиле</h2>
 
-      <section id="profile">
-        <h2>📥 Автоматическая расстановка модификаций в вашем профиле</h2>
-
-        <AutoProfileInstall combo={combo} />
-      </section>
+          <AutoProfileInstall combo={combo} />
+        </section>
+      )}
 
       {/* Видео установки */}
       <section>
@@ -136,7 +137,9 @@ export default function ComboContent({ combo }) {
         </details>
 
         <details className="spoiler">
-          <summary className="spoiler-summary">🚛 Обязательные DLC карт</summary>
+          <summary className="spoiler-summary">
+            🚛 Обязательные DLC карт
+          </summary>
 
           <div className="spoiler-content">
             Для работы сборки должны быть установлены все DLC карт.
@@ -159,7 +162,8 @@ export default function ComboContent({ combo }) {
 
         <details className="spoiler">
           <summary className="spoiler-summary">
-            Инструкция по использованию лаунчера (нужна рубиновая подписка на Boosty)
+            Инструкция по использованию лаунчера (нужна рубиновая подписка на
+            Boosty)
           </summary>
 
           <div className="spoiler-content">
@@ -167,8 +171,6 @@ export default function ComboContent({ combo }) {
           </div>
         </details>
       </section>
-
-     
     </div>
   );
 }
