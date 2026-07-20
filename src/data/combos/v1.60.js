@@ -56,7 +56,7 @@ export const combos_v1_60 = [
     automods: true,
     version_game: "1.60",
     version: "85568392936116600/103",
-    date: "17.07.26",
+    date: "20.07.26",
     image_center:
       "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
     table:
