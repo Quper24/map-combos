@@ -41,6 +41,7 @@ export const combos_v1_60 = [
     title: "ETS2 SERVER MAIN COMBO",
     preview: "img/combos/160/ets2-server/ets2-server-preview.jpg",
     automods: true,
+    mods: true,
     version_game: "1.60",
     version: "server",
     date: "20.07.26",
