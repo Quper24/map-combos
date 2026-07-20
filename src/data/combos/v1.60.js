@@ -25,7 +25,7 @@ export const combos_v1_60 = [
     automods: true,
     mods: true,
     version_game: "1.60",
-    version: "2.6",
+    version: "2.7",
     date: "20.07.26",
     video: "b7eAwWEoPxg",
     image_top: "img/combos/160/ets2-mega/mega-top.jpg",
@@ -33,7 +33,7 @@ export const combos_v1_60 = [
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/4b75juo3owl0/1.60_ETS2_MEGA_MAP_COMBO_2.6.zip.html",
+      "https://sharemods.com/gdd2ebunytg2/1.60_ETS2_MEGA_MAP_COMBO_2.7.zip.html",
   },
   {
     id: "ets2-server-map-160",
