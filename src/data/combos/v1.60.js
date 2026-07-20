@@ -7,15 +7,15 @@ export const combos_v1_60 = [
     automods: true,
     mods: true,
     version_game: "1.60",
-    version: "2.5.1",
-    date: "13.07.26",
+    version: "2.6",
+    date: "20.07.26",
     video: "YT2OjGcQW68",
     image_top: "img/combos/160/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
     profile:
-      "https://sharemods.com/8bz2nbpremk6/1.60_ETS2_QUPER_MAP_COMBO_2.5.1.zip.html",
+      "https://sharemods.com/ebzrte13yr7x/1.60_ETS2_QUPER_MAP_COMBO_2.6.zip.html",
   },
   {
     id: "mega-map-160",
@@ -25,15 +25,15 @@ export const combos_v1_60 = [
     automods: true,
     mods: true,
     version_game: "1.60",
-    version: "2.5.1",
-    date: "13.07.26",
+    version: "2.6",
+    date: "20.07.26",
     video: "b7eAwWEoPxg",
     image_top: "img/combos/160/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/160/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/jmcya68g5ywg/1.60_ETS2_MEGA_MAP_COMBO_2.5.1.zip.html",
+      "https://sharemods.com/4b75juo3owl0/1.60_ETS2_MEGA_MAP_COMBO_2.6.zip.html",
   },
   {
     id: "ets2-server-map-160",
@@ -73,14 +73,14 @@ export const combos_v1_60 = [
     mods: true,
     version_game: "1.60",
     version: "1.5",
-    date: "12.07.26",
+    date: "19.07.26",
     video: "RXls5u4_v7c",
     image_top: "img/combos/160/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/160/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1078812500#gid=1078812500",
     profile:
-      "https://sharemods.com/olfkcj8yal1c/1.60_ETS2_GOLD_MAP_COMBO_1.4.zip.html",
+      "https://sharemods.com/d4v5rzbs23d2/1.60_ETS2_GOLD_MAP_COMBO_1.5.zip.html",
   },
   {
     id: "bigrussia-map-160",
