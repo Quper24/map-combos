@@ -43,10 +43,10 @@ export const combos_v1_60 = [
     automods: true,
     version_game: "1.60",
     version: "server",
-    date: "02.07.26",
+    date: "20.07.26",
     image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
     profile:
-      "https://sharemods.com/miz4xas83514/1.60_ETS2_SERVER_MAIN.zip.html",
+      "https://sharemods.com/47m77mkxi1ay/1.60_PROFILE_SERVER_MAIN.zip.html",
   },
   {
     id: "ets2-server-light-map-160",
