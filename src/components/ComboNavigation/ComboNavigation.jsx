@@ -1,3 +1,5 @@
+import "./comboNavigation.css";
+
 export default function ComboNavigation({ combo }) {
   const items = [
     {
