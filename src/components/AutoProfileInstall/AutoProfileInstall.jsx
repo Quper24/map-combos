@@ -235,7 +235,7 @@ export default function AutoProfileInstall({ combo }) {
                     checked={includeMods}
                     onChange={(e) => setIncludeMods(e.target.checked)}
                   />
-                  <span>Карты + Моды</span>
+                  <span>{combo.tags.includes('server') ? "Основные + опциональные" : "Карты + Моды"}</span>
                 </label>
               )}
             </div>
