@@ -5,7 +5,7 @@ export default function ServerGuide() {
   return (
     <div className="container server-guide-container">
       <header className="guide-header">
-        <h1>SERVER ETS2 / ATS SETTING 1.57 - 1.58</h1>
+        <h1>SERVER ETS2 / ATS SETTING</h1>
         <p>Инструкция по подключению к серверу Quper Simulator</p>
       </header>
 

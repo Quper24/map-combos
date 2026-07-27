@@ -7,15 +7,15 @@ export const combos_v1_60 = [
     automods: true,
     mods: true,
     version_game: "1.60",
-    version: "2.6",
-    date: "20.07.26",
+    version: "2.7",
+    date: "27.07.26",
     video: "YT2OjGcQW68",
     image_top: "img/combos/160/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
     profile:
-      "https://sharemods.com/ebzrte13yr7x/1.60_ETS2_QUPER_MAP_COMBO_2.6.zip.html",
+      "https://sharemods.com/bfg5ko68yl08/1.60_ETS2_QUPER_MAP_COMBO_2.7.zip.html",
   },
   {
     id: "mega-map-160",
@@ -25,15 +25,15 @@ export const combos_v1_60 = [
     automods: true,
     mods: true,
     version_game: "1.60",
-    version: "2.7.1",
-    date: "20.07.26",
+    version: "2.8",
+    date: "27.07.26",
     video: "b7eAwWEoPxg",
     image_top: "img/combos/160/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/160/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1631626983#gid=1631626983",
     profile:
-      "https://sharemods.com/hwmlw4trq6am/1.60_ETS2_MEGA_MAP_COMBO_2.7.1.zip.html",
+      "https://sharemods.com/ev514h09r49u/1.60_ETS2_MEGA_MAP_COMBO_2.8.zip.html",
   },
   {
     id: "ets2-server-map-160",
