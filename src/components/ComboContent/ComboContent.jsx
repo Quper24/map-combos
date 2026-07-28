@@ -11,6 +11,14 @@ export default function ComboContent({ combo }) {
     <div className="combo-content">
       <ComboNavigation combo={combo} />
 
+      {combo.video && (
+        <section className="combo-video">
+          <h2>🎬 Видеообзор сборки</h2>
+
+          <Video videoId={combo.video} title={combo.title} />
+        </section>
+      )}
+
       {/* Быстрые ссылки */}
       <section id="links">
         <h2>🔗 Ссылки</h2>

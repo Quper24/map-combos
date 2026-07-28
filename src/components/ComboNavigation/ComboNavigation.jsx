@@ -3,6 +3,11 @@ import "./comboNavigation.css";
 export default function ComboNavigation({ combo }) {
   const items = [
     {
+      id: "links",
+      icon: "🔗",
+      title: "Ссылки",
+    },
+    {
       id: "install",
       icon: "⚙️",
       title: "Инструкция",
@@ -18,7 +23,7 @@ export default function ComboNavigation({ combo }) {
     items.push({
       id: "profile",
       icon: "📥",
-      title: "Авторасстановка модификаций",
+      title: "Авторасстановка",
     });
   }
 
