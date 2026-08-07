@@ -45,6 +45,8 @@ export const combos_v1_60 = [
     version_game: "1.60",
     version: "server",
     date: "20.07.26",
+    table:
+      "https://boosty.to/qupersimulator/posts/711b9e0f-0f8c-41ec-ac34-4cf4d70492d1",
     image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
     profile:
       "https://sharemods.com/47m77mkxi1ay/1.60_PROFILE_SERVER_MAIN.zip.html",
