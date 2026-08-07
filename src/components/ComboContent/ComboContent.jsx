@@ -33,7 +33,13 @@ export default function ComboContent({ combo }) {
               <span className="resource-icon">📊</span>
 
               <div>
-                <h3>Таблица файлов карт</h3>
+                <h3>
+                  <span>
+                    {combo.tags.includes("server")
+                      ? "Скачать сборку"
+                      : "Таблица файлов карт"}
+                  </span>
+                </h3>
 
                 <p>Все ссылки и актуальная информация</p>
               </div>
