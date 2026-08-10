@@ -41,15 +41,14 @@ export const combos_v1_60 = [
     title: "ETS2 SERVER MAIN COMBO",
     preview: "img/combos/160/ets2-server/ets2-server-preview.jpg",
     automods: true,
-    mods: true,
+    // mods: true,
     version_game: "1.60",
     version: "server",
-    date: "20.07.26",
+    date: "10.08.26",
     table:
       "https://boosty.to/qupersimulator/posts/711b9e0f-0f8c-41ec-ac34-4cf4d70492d1",
     image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
-    profile:
-      "https://sharemods.com/47m77mkxi1ay/1.60_PROFILE_SERVER_MAIN.zip.html",
+    profile: "https://sharemods.com/j40tq1lsmivq/Quper_MAIN_server.zip.html",
   },
   {
     id: "ets2-server-light-map-160",
@@ -57,16 +56,15 @@ export const combos_v1_60 = [
     title: "ETS2 SERVER LIGHT COMBO",
     preview: "img/combos/160/ets2-server-light/ets2-server-light-preview.jpg",
     automods: true,
-    mods: true,
+    // mods: true,
     version_game: "1.60",
     version: "85568392936116600/103",
-    date: "20.07.26",
+    date: "10.08.26",
     image_center:
       "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/56599916-0395-4229-a385-d90363475404",
-    profile:
-      "https://sharemods.com/yxluh5n6raad/1.60_ETS2_SERVER_LIGHT.zip.html",
+    profile: "https://sharemods.com/p3am7qij5yfw/Quper_LITE_server.zip.html",
   },
   {
     id: "gold-russia-map-160",
