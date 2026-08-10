@@ -1,11 +1,11 @@
  active_mods: 50
- active_mods[0]: "QS_KAZ_AIO|KAZAKHSTAN REPUBLIC AIO 25.06"
+ active_mods[0]: "QS_KAZ_AIO_Lite|KAZAKHSTAN REPUBLIC AIO 30.06"
  active_mods[1]: "SRMod_v13_1|SRmap v.13.1"
  active_mods[2]: "db_model159|db_model 1.59"
  active_mods[3]: "donbassmap_159|donbass_map 1 59"
  active_mods[4]: "promods-tgs-assets-v162|ProMods The Great Steppe (Assets Package)"
  active_mods[5]: "promods-tgs-defmap-v162|ProMods The Great Steppe (Def & Map Package)"
- active_mods[6]: "sibirmap2122fv_for160|SibirMap 2.12.2 Free Version for 1.60"
+ active_mods[6]: "sibirmap13_fv|SibirMap 2.13.0 Free Version for 1.60"
  active_mods[7]: "Altai_Map_1.7.2|Altai Map"
  active_mods[8]: "VolgaMap_1_5_3|VolgaMap 1.5.3"
  active_mods[9]: "QS_Kazakhstan-Russia_RC|QS Kazakhstan - Russia RC 25.06"
