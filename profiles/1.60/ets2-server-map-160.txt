@@ -33,7 +33,7 @@
  active_mods[31]: "_Eurafrica_4.0_F4|_Eurafrica_4.0_F4"
  active_mods[32]: "_Eurafrica_4.0_F3|_Eurafrica_4.0_F3"
  active_mods[33]: "_Eurafrica_4.0_F2|_Eurafrica_4.0_F2"
- active_mods[34]: "QS_Eurafrica_4.0_F1|_Eurafrica_4.0_F1 - 10.08"
+ active_mods[34]: "_Eurafrica_4.0_F1|_Eurafrica_4.0_F1"
  active_mods[35]: "RusMap-model_v2.58|RusMap-model_v2.58"
  active_mods[36]: "RusMap-map_v2.58|RusMap-Map_v2.58"
  active_mods[37]: "RusMap-def_v2.58|RusMap-def_v2.58"
