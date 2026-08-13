@@ -37,7 +37,7 @@ export const combos_v1_60 = [
   },
   {
     id: "mega-boosty-map-160",
-    tags: ["ets2"],
+    tags: ["ets2", "boosty"],
     title: "MEGA BOOSTY MAP COMBO",
     preview: "img/combos/160/ets2-mega-boosty/mega-boosty-preview.jpg",
     automods: true,
