@@ -51,7 +51,7 @@ export const combos_v1_60 = [
     table:
       "https://boosty.to/qupersimulator/posts/7ea1f380-b1f5-43fb-852e-85af07d03dec?isFromShowcasePreview=true",
     profile:
-      "https://sharemods.com/3o2m55ywwl6h/1.60_ETS2_MEGA_BOOSTY_4.0.zip.html",
+      "https://sharemods.com/sq32n3pvzm8d/1.60_ETS2_MEGA_BOOSTY_4.0.zip.html",
   },
   {
     id: "ets2-server-map-160",
