@@ -135,7 +135,7 @@ export const combos_v1_60 = [
     video: "_jA5ygN1jaI",
     table: "",
     profile:
-      "https://sharemods.com/c95jcd5nuljz/1.60_ATS_QUPER_MAP_COMBO_2.2.zip.html",
+      "https://sharemods.com/r2ikwwyxdjti/1.60_ATS_QUPER_MAP_COMBO_2.2.zip.html",
   },
   {
     id: "ats-server-map-160",
