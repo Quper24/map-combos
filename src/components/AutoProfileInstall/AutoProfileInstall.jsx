@@ -18,8 +18,8 @@ export default function AutoProfileInstall({ combo }) {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      if (file.size > 102400) {
-        alert("Файл слишком большой. Максимальный размер 100 КБ.");
+      if (file.size > 300 * 1024) {
+        alert("Файл слишком большой. Максимальный размер 300 КБ.");
         e.target.value = "";
         setSelectedFile(null);
         setStatus("idle");
@@ -235,7 +235,11 @@ export default function AutoProfileInstall({ combo }) {
                     checked={includeMods}
                     onChange={(e) => setIncludeMods(e.target.checked)}
                   />
-                  <span>{combo.tags.includes('server') ? "Основные + опциональные" : "Карты + Моды"}</span>
+                  <span>
+                    {combo.tags.includes("server")
+                      ? "Основные + опциональные"
+                      : "Карты + Моды"}
+                  </span>
                 </label>
               )}
             </div>
