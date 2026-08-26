@@ -7,15 +7,15 @@ export const combos_v1_60 = [
     automods: true,
     mods: true,
     version_game: "1.60",
-    version: "2.12",
-    date: "18.08.26",
+    version: "2.13",
+    date: "26.08.26",
     video: "YT2OjGcQW68",
     image_top: "img/combos/160/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
     profile:
-      "https://sharemods.com/hue5znpism1o/1.60_ETS2_QUPER_MAP_COMBO_2.12.zip.html",
+      "https://sharemods.com/m8ofpzpafqce/1.60_ETS2_QUPER_MAP_COMBO_2.13.zip.html",
   },
   {
     id: "mega-map-160",
@@ -77,12 +77,12 @@ export const combos_v1_60 = [
     mods: true,
     version_game: "1.60",
     version: "85568392936116600/103",
-    date: "10.08.26",
+    date: "26.08.26",
     image_center:
       "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/56599916-0395-4229-a385-d90363475404",
-    profile: "https://sharemods.com/p3am7qij5yfw/Quper_LITE_server.zip.html",
+    profile: "https://sharemods.com/5k8ad2jstxp5/SERVER_LITE.zip.html",
   },
   {
     id: "gold-russia-map-160",
