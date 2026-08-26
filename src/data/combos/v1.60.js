@@ -17,6 +17,7 @@ export const combos_v1_60 = [
     profile:
       "https://sharemods.com/m8ofpzpafqce/1.60_ETS2_QUPER_MAP_COMBO_2.13.zip.html",
   },
+  
   {
     id: "mega-map-160",
     tags: ["ets2"],
