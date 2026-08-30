@@ -17,7 +17,7 @@ export const combos_v1_60 = [
     profile:
       "https://sharemods.com/m8ofpzpafqce/1.60_ETS2_QUPER_MAP_COMBO_2.13.zip.html",
   },
-  
+
   {
     id: "mega-map-160",
     tags: ["ets2"],
@@ -131,12 +131,12 @@ export const combos_v1_60 = [
     image_top: "img/combos/160/ats-quper/ats-quper-top.jpg",
     image_bottom: "img/combos/160/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.60",
-    version: "2.2",
-    date: "04.08.26",
+    version: "2.3",
+    date: "31.08.26",
     video: "_jA5ygN1jaI",
     table: "",
     profile:
-      "https://sharemods.com/r2ikwwyxdjti/1.60_ATS_QUPER_MAP_COMBO_2.2.zip.html",
+      "https://sharemods.com/kikw7xu82okh/1.60_ATS_QUPER_MAP_COMBO_2.3.zip.html",
   },
   {
     id: "ats-server-map-160",
@@ -173,11 +173,11 @@ export const combos_v1_60 = [
     title: "MEGA MODS PACK for ATS",
     preview: "img/combos/160/ats-mods/ats-mods-preview.jpg",
     version_game: "1.60",
-    version: "1.0",
-    date: "08.07.26",
+    version: "1.2",
+    date: "30.08.26",
     video: "oxTMNZk9FWk",
     image_center: "img/combos/160/ats-mods/ats-mods-center.jpg",
     table: "",
-    profile: "https://sharemods.com/rx19r7is0tzx/ATS_MODS_PACK.zip.html",
+    profile: "https://sharemods.com/y6cgs02mt0q3/1.60_ATS_MODS_PACK.zip.html",
   },
 ];
