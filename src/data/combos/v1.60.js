@@ -147,7 +147,7 @@ export const combos_v1_60 = [
     mods: true,
     version_game: "1.60",
     version: "server",
-    date: "21.07.26",
+    date: "02.09.26",
     video: "G4ADUHZ1ruI",
     image_center: "img/combos/160/ats-server/ats-server-center.jpg",
     profile: "https://sharemods.com/do4qo23g5yp4/1.60_ATS_SERVER.zip.html",
