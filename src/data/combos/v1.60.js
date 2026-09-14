@@ -63,11 +63,11 @@ export const combos_v1_60 = [
     mods: true,
     version_game: "1.60",
     version: "server",
-    date: "24.08.26",
+    date: "14.09.26",
     table:
       "https://boosty.to/qupersimulator/posts/711b9e0f-0f8c-41ec-ac34-4cf4d70492d1",
     image_center: "img/combos/160/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/0anogghjz6hn/24.08_Profile_Main.zip.html",
+    profile: "https://sharemods.com/oc8vwau99a9f/SERVER_MAIN.zip.html",
   },
   {
     id: "ets2-server-light-map-160",
@@ -78,12 +78,12 @@ export const combos_v1_60 = [
     mods: true,
     version_game: "1.60",
     version: "85568392936116600/103",
-    date: "26.08.26",
+    date: "14.09.26",
     image_center:
       "img/combos/160/ets2-server-light/ets2-server-light-center.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/56599916-0395-4229-a385-d90363475404",
-    profile: "https://sharemods.com/5k8ad2jstxp5/SERVER_LITE.zip.html",
+    profile: "https://sharemods.com/500ns9vc7xyr/SERVER_LIGHT.zip.html",
   },
   {
     id: "gold-russia-map-160",
