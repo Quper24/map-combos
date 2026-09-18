@@ -5,7 +5,7 @@ export const combos_v1_61 = [
     title: "START BOOSTY MAP COMBO",
     preview: "img/combos/161/ets2-mega-boosty/mega-boosty-preview.jpg",
     automods: true,
-    mods: true,
+    //mods: true,
     version_game: "1.61",
     version: "1.0",
     date: "18.09.26",
