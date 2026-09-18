@@ -20,7 +20,6 @@ export default function Header({ selectedVersion, onVersionChange }) {
     setIsOpen(false);
   };
 
-
   const handleVersionChange = (versionId) => {
     onVersionChange(versionId);
 
@@ -28,7 +27,6 @@ export default function Header({ selectedVersion, onVersionChange }) {
       navigate("/");
     }
   };
-
 
   useEffect(() => {
     const handler = (event) => {
@@ -48,7 +46,6 @@ export default function Header({ selectedVersion, onVersionChange }) {
     };
   }, [isOpen]);
 
-
   useEffect(() => {
     const handler = (event) => {
       if (event.key === "Escape") {
@@ -63,204 +60,103 @@ export default function Header({ selectedVersion, onVersionChange }) {
     };
   }, []);
 
-
-
   return (
     <header className="topbar">
-
       <div className="topbar-inner">
-
         {/* Логотип */}
         <div className="logo">
           <NavLink to="/">
-            <img
-              src="/img/logo.jpg"
-              alt="MAP COMBOS"
-              className="logo-image"
-            />
+            <img src="/img/logo.jpg" alt="MAP COMBOS" className="logo-image" />
           </NavLink>
         </div>
 
-
-
         {/* Текущая сборка */}
         <div className="current-combo">
-
           <div className="current-combo-title">
             {location.pathname !== "/"
               ? currentCombos.find(
-                  (item) => `/${item.id}` === location.pathname
+                  (item) => `/${item.id}` === location.pathname,
                 )?.title || "Выбор сборки"
               : "Выбор сборки"}
           </div>
 
-
           <div className="current-combo-version">
-            {VERSIONS[selectedVersion]?.icon}
-            {" "}
-            ETS2 {selectedVersion}
+            {VERSIONS[selectedVersion]?.icon} ETS2 {selectedVersion}
           </div>
-
         </div>
 
-
-
         {/* Кнопка меню */}
-        <button
-          className="select-button"
-          onClick={() => setIsOpen(true)}
-        >
+        <button className="select-button" onClick={() => setIsOpen(true)}>
           Выбрать ☰
         </button>
 
-
-
         {/* Overlay */}
-        {isOpen && (
-          <div
-            className="menu-overlay"
-            onClick={closeMenu}
-          />
-        )}
-
-
+        {isOpen && <div className="menu-overlay" onClick={closeMenu} />}
 
         {/* Панель */}
-        <aside
-          ref={menuRef}
-          className={`side-menu ${isOpen ? "open" : ""}`}
-        >
-
+        <aside ref={menuRef} className={`side-menu ${isOpen ? "open" : ""}`}>
           <div className="side-menu-header">
             <h2>Выбор сборки</h2>
 
-            <button onClick={closeMenu}>
-              ✕
-            </button>
+            <button onClick={closeMenu}>✕</button>
           </div>
-
-
 
           {/* Версии */}
 
           <section className="menu-section">
-
-            <h3>
-              Версия игры
-            </h3>
-
+            <h3>Версия игры</h3>
 
             <div className="version-list">
-
               {Object.entries(VERSIONS)
-                .sort(([a],[b]) => b.localeCompare(a))
+                .sort(([a], [b]) => b.localeCompare(a))
                 .map(([id, version]) => (
+                  <button
+                    key={id}
+                    className={selectedVersion === id ? "active" : ""}
+                    onClick={() => handleVersionChange(id)}>
+                    {version.icon}
 
-                <button
-                  key={id}
-                  className={
-                    selectedVersion === id
-                    ? "active"
-                    : ""
-                  }
-                  onClick={() =>
-                    handleVersionChange(id)
-                  }
-                >
+                    <span>{version.label}</span>
 
-                  {version.icon}
-
-                  <span>
-                    {version.label}
-                  </span>
-
-
-                  {selectedVersion === id && (
-                    <b>✓</b>
-                  )}
-
-                </button>
-
-              ))}
-
+                    {selectedVersion === id && <b>✓</b>}
+                  </button>
+                ))}
             </div>
-
           </section>
-
-
-
 
           {/* Сборки */}
 
           <section className="menu-section">
-
-            <h3>
-              Сборки
-            </h3>
-
+            <h3>Сборки</h3>
 
             <div className="combo-list">
-
-            {currentCombos.map(combo => (
-
-              <NavLink
-                key={combo.id}
-                to={`/${combo.id}`}
-                onClick={closeMenu}
-                className={({isActive}) =>
-                  isActive ? "active" : ""
-                }
-              >
-
-                🚛 {combo.title}
-
-              </NavLink>
-
-            ))}
-
+              {currentCombos.map((combo) => (
+                <NavLink
+                  key={combo.id}
+                  to={`/${combo.id}`}
+                  onClick={closeMenu}
+                  className={({ isActive }) => (isActive ? "active" : "")}>
+                  🚛 {combo.title}
+                </NavLink>
+              ))}
             </div>
-
           </section>
-
-
-
 
           {/* Ссылки */}
 
           <section className="menu-section">
-
-            <h3>
-              Полезные ссылки
-            </h3>
-
+            <h3>Полезные ссылки</h3>
 
             <div className="external-links">
+              <a href="https://www.youtube.com/@QuperSimulator">▶ YouTube</a>
 
-              <a href="#">
-                ▶ YouTube
-              </a>
+              <a href="https://t.me/QuperSimulator">✈ Telegram</a>
 
-
-              <a href="#">
-                ✈ Telegram
-              </a>
-
-
-              <a href="#">
-                💎 Boosty
-              </a>
-
+              <a href="https://boosty.to/qupersimulator">💎 Boosty</a>
             </div>
-
           </section>
-
-
-
         </aside>
-
-
       </div>
-
     </header>
   );
 }
