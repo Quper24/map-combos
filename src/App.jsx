@@ -8,12 +8,11 @@ import Header from "./components/Header/Header";
 import "./App.css";
 
 export default function App() {
-
   // Состояние для выбранной версии
   const [selectedVersion, setSelectedVersion] = useState(() => {
     // const saved = localStorage.getItem("mapCombos_selectedVersion");
     // return saved || "1.59";
-    return "1.60";
+    return "1.61";
   });
 
   // Сохраняем версию в localStorage при изменении
@@ -23,10 +22,10 @@ export default function App() {
 
   return (
     <>
-        <Header
-          selectedVersion={selectedVersion}
-          onVersionChange={setSelectedVersion}
-        />
+      <Header
+        selectedVersion={selectedVersion}
+        onVersionChange={setSelectedVersion}
+      />
       <Routes>
         <Route
           path="/"

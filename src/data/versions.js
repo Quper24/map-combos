@@ -1,6 +1,6 @@
 // C:\Quper-projects\map-combos\src\data\versions.js
 export const VERSIONS = {
-  "1.57": {
+  1.57: {
     id: "1.57",
     label: "1.57",
     status: "legacy", // current, upcoming, legacy
@@ -9,7 +9,7 @@ export const VERSIONS = {
     description: "Устаревшая версия",
     icon: "📜",
   },
-  "1.58": {
+  1.58: {
     id: "1.58",
     label: "1.58",
     status: "legacy", // current, upcoming, legacy
@@ -18,7 +18,7 @@ export const VERSIONS = {
     description: "Устаревшая версия",
     icon: "📜",
   },
-  "1.59": {
+  1.59: {
     id: "1.59",
     label: "1.59",
     status: "legacy", // current, upcoming, legacy
@@ -33,19 +33,27 @@ export const VERSIONS = {
     status: "current", // current, upcoming, legacy
     releaseDate: "2026-06-18",
     default: true,
+    description: "Устаревшая версия",
+    icon: "📜",
+  },
+  1.61: {
+    id: "1.61",
+    label: "1.61",
+    status: "current", // current, upcoming, legacy
+    releaseDate: "2026-09-17",
+    default: true,
     description: "Текущая стабильная версия",
     icon: "✅",
   },
-
 };
 
 export const getCurrentVersion = () => {
   return (
     Object.values(VERSIONS).find((v) => v.status === "current") ||
-    VERSIONS["1.60"]
+    VERSIONS["1.61"]
   );
 };
 
 export const getDefaultVersion = () => {
-  return Object.values(VERSIONS).find((v) => v.default) || VERSIONS["1.59"];
+  return Object.values(VERSIONS).find((v) => v.default) || VERSIONS["1.61"];
 };
