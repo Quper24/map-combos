@@ -25,7 +25,7 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.4",
+    version: "1.4.1",
     date: "22.09.26",
     //video: "b7eAwWEoPxg",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
@@ -33,7 +33,7 @@ export const combos_v1_61 = [
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/4x1zurdbufbo/1.61_ETS2_BOOSTY_COMBO_MAP_1.4.zip.html",
+      "https://sharemods.com/h03npnegnawt/1.61_ETS2_BOOSTY_COMBO_MAP_1.4.1.zip.html",
   },
   {
     id: "mega-map-161",
@@ -43,7 +43,7 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.4",
+    version: "1.4.1",
     date: "22.09.26",
     //video: "b7eAwWEoPxg",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
@@ -51,7 +51,7 @@ export const combos_v1_61 = [
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?usp=sharing",
     profile:
-      "https://sharemods.com/908htpc6ds2k/1.61_ETS2_MEGA_COMBO_MAP_1.4.zip.html",
+      "https://sharemods.com/gdznllh7mdow/1.61_ETS2_MEGA_COMBO_MAP_1.4.1.zip.html",
   },
   {
     id: "gold-russia-map-161",
