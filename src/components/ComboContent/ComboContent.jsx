@@ -63,7 +63,7 @@ export default function ComboContent({ combo }) {
           )}
 
           <a
-            href="https://boosty.to/qupersimulator/posts/74db1223-4ff7-4ac6-8582-808720f23992"
+            href="https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7"
             target="_blank"
             rel="noopener noreferrer"
             className="resource-card early-access-card">
