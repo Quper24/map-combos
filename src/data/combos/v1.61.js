@@ -27,7 +27,7 @@ export const combos_v1_61 = [
     version_game: "1.61",
     version: "1.4.1",
     date: "22.09.26",
-    //video: "b7eAwWEoPxg",
+    video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
@@ -45,7 +45,7 @@ export const combos_v1_61 = [
     version_game: "1.61",
     version: "1.4.1",
     date: "22.09.26",
-    //video: "b7eAwWEoPxg",
+    video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/161/ets2-mega/mega-bottom.jpg",
     table:
