@@ -55,21 +55,21 @@ export const combos_v1_61 = [
   },
   {
     id: "gold-russia-map-161",
-    tags: ["ets2", "convoy"],
+    tags: ["ets2", "convoy", "boosty"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/161/ets2-gold/gold-russia-preview.jpg",
-    //automods: true,
+    automods: true,
     //mods: true,
     version_game: "1.61",
     version: "23.09.26",
     // date: "23.09.26",
     // video: "RXls5u4_v7c",
-    // image_top: "img/combos/160/ets2-gold/gold-russia-top.jpg",
-    // image_bottom: "img/combos/160/ets2-gold/gold-russia-bottom.jpg",
+    image_top: "img/combos/160/ets2-gold/gold-russia-top.jpg",
+    image_bottom: "img/combos/160/ets2-gold/gold-russia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1078812500#gid=1078812500",
-    // profile:
-    //   "https://sharemods.com/z5fmho9ycmsv/1.60_ETS2_GOLD_MAP_COMBO_1.6.zip.html",
+    profile:
+      "https://sharemods.com/k71reihji85c/1.61_ETS2_GOLD_COMBO_MAP_1.0.zip.html",
   },
   {
     id: "bigrussia-map-161",
