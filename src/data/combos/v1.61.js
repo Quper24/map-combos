@@ -64,8 +64,8 @@ export const combos_v1_61 = [
     version: "23.09.26",
     // date: "23.09.26",
     // video: "RXls5u4_v7c",
-    image_top: "img/combos/160/ets2-gold/gold-russia-top.jpg",
-    image_bottom: "img/combos/160/ets2-gold/gold-russia-bottom.jpg",
+    image_top: "img/combos/161/ets2-gold/gold-russia-top.jpg",
+    image_bottom: "img/combos/161/ets2-gold/gold-russia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1078812500#gid=1078812500",
     profile:
