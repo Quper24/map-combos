@@ -55,7 +55,7 @@ export const combos_v1_61 = [
   },
   {
     id: "gold-russia-map-161",
-    tags: ["ets2", "convoy", "boosty"],
+    tags: ["ets2", "convoy"],
     title: "GOLD RUSSIA MAP COMBO",
     preview: "img/combos/161/ets2-gold/gold-russia-preview.jpg",
     automods: true,
