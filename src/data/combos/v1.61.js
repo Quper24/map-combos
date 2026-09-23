@@ -7,7 +7,7 @@ export const combos_v1_61 = [
     // automods: true,
     // mods: true,
     version_game: "1.61",
-    version: "24.09.26",
+    version: "25.09.26",
     // date: "24.09.26",
     // video: "YT2OjGcQW68",
     // image_top: "img/combos/160/ets2-quper/quper-top.jpg",
@@ -79,14 +79,14 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "23.09.26",
+    version: "24.09.26",
     // date: "24.09.26",
     // video: "z_nIg8glATQ",
-    // image_top: "img/combos/160/ets2-bigrussia/bigrussia-top.jpg",
-    // image_bottom: "img/combos/160/ets2-bigrussia/bigrussia-bottom.jpg",
+    image_top: "img/combos/161/ets2-bigrussia/bigrussia-top.jpg",
+    image_bottom: "img/combos/161/ets2-bigrussia/bigrussia-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1412719290#gid=1412719290",
-    // profile:
-    //   "https://sharemods.com/85c55o3m0aat/1.60_ETS2_BIG_RUSSIA_MAP_COMBO_1.11.zip.html",
+    profile:
+      "https://sharemods.com/evxu13nn1vjz/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.0.zip.html",
   },
 ];
