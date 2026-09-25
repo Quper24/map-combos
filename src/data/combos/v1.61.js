@@ -84,8 +84,8 @@ export const combos_v1_61 = [
     video: "uuY3gUV6k70",
     image_top: "img/combos/161/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/161/ets2-bigrussia/bigrussia-bottom.jpg",
-    // table:
-    //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1412719290#gid=1412719290",
+    table:
+      "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=984573267#gid=984573267",
     profile:
       "https://sharemods.com/evxu13nn1vjz/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.0.zip.html",
   },
