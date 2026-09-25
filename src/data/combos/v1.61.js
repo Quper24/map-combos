@@ -4,7 +4,7 @@ export const combos_v1_61 = [
     tags: ["ets2"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/161/ets2-quper/quper-preview.jpg",
-    // automods: true,
+    automods: true,
     // mods: true,
     version_game: "1.61",
     version: "25.09.26",
@@ -14,8 +14,8 @@ export const combos_v1_61 = [
     // image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
-    // profile:
-    //   "https://sharemods.com/m8ofpzpafqce/1.60_ETS2_QUPER_MAP_COMBO_2.13.zip.html",
+    profile:
+      "https://sharemods.com/7nnittxof34n/1.61_ETS2_QUPER_MAP_COMBO_1.0.zip.html",
   },
   {
     id: "mega-boosty-map-161",
