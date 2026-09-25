@@ -10,8 +10,8 @@ export const combos_v1_61 = [
     version: "25.09.26",
     // date: "24.09.26",
     // video: "YT2OjGcQW68",
-    // image_top: "img/combos/160/ets2-quper/quper-top.jpg",
-    // image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
+    image_top: "img/combos/160/ets2-quper/quper-top.jpg",
+    image_bottom: "img/combos/160/ets2-quper/quper-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
     profile:
