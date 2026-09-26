@@ -1,21 +1,21 @@
 export const combos_v1_61 = [
   {
     id: "quper-map-161",
-    tags: ["ets2"],
+    tags: ["ets2", "boosty"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/161/ets2-quper/quper-preview.jpg",
     automods: true,
     // mods: true,
     version_game: "1.61",
-    version: "25.09.26",
-    // date: "24.09.26",
+    version: "1.2",
+    date: "27.09.26",
     // video: "YT2OjGcQW68",
     image_top: "img/combos/161/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/161/ets2-quper/quper-bottom.jpg",
     // table:
     //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
     profile:
-      "https://sharemods.com/ppjwvrbozm82/1.61_ETS2_QUPER_MAP_COMBO_1.1.zip.html",
+      "https://sharemods.com/v9e1mqsstb5g/1.61_ETS2_QUPER_MAP_COMBO_1.2.zip.html",
   },
   {
     id: "mega-boosty-map-161",
@@ -25,15 +25,15 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.4.1",
-    date: "22.09.26",
+    version: "1.5",
+    date: "27.09.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/h03npnegnawt/1.61_ETS2_BOOSTY_COMBO_MAP_1.4.1.zip.html",
+      "https://sharemods.com/44s85ogc32b7/1.61_ETS2_BOOSTY_COMBO_MAP_1.5.zip.html",
   },
   {
     id: "mega-map-161",
@@ -43,15 +43,15 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.4.1",
-    date: "22.09.26",
+    version: "1.5",
+    date: "27.09.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/161/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?usp=sharing",
     profile:
-      "https://sharemods.com/gdznllh7mdow/1.61_ETS2_MEGA_COMBO_MAP_1.4.1.zip.html",
+      "https://sharemods.com/v1epsh9sowuo/1.61_ETS2_MEGA_COMBO_MAP_1.5.zip.html",
   },
   {
     id: "gold-russia-map-161",
@@ -61,15 +61,15 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.0",
-    date: "24.09.26",
+    version: "1.1",
+    date: "27.09.26",
     video: "uuY3gUV6k70",
     image_top: "img/combos/161/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/161/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1593428445#gid=1593428445",
     profile:
-      "https://sharemods.com/k71reihji85c/1.61_ETS2_GOLD_COMBO_MAP_1.0.zip.html",
+      "https://sharemods.com/rn6pdfyk59mx/1.61_ETS2_GOLD_COMBO_MAP_1.1.zip.html",
   },
   {
     id: "bigrussia-map-161",
@@ -79,14 +79,14 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.0",
-    date: "24.09.26",
+    version: "1.1",
+    date: "27.09.26",
     video: "uuY3gUV6k70",
     image_top: "img/combos/161/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/161/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=984573267#gid=984573267",
     profile:
-      "https://sharemods.com/evxu13nn1vjz/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.0.zip.html",
+      "https://sharemods.com/zheteujcp6ge/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.1.zip.html",
   },
 ];
