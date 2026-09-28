@@ -67,7 +67,7 @@
  active_mods[65]: "RusMap-map_v2.59|RusMap-Map_v2.59"
  active_mods[66]: "RusMap-def_v2.59|RusMap-def_v2.59"
  active_mods[67]: "KirovMap_17_FREE|KirovMap 1.7 FREE"
- active_mods[68]: "cnx-pm-eu-v283-rm-v258-roex-v52|ProMods RusMap Roextended Connector (ProMods priority version)"
+ active_mods[68]: "cnx-pm-eu-v284-rm-v259-roex-v53|ProMods RusMap Roextended Connector (ProMods priority version)"
  active_mods[69]: "pmEU-rmVK-rc-1.58|ProMods RusMapVK RC"
  active_mods[70]: "ProMods-RusMap-ROEX-fix|ProMods RusMap Roextended RC FIX"
  active_mods[71]: "PM_RM_Roex_SRMap_RC_Donbass|ProMods RusMap SRMap Roextended Connector Donbass Map"
