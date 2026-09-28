@@ -41,7 +41,7 @@
  active_mods[39]: "uralmap_18|Ural Map 1.8"
  active_mods[40]: "rxx.ural_mrm_rc|Ural Map - Russian Federation Extended RC"
  active_mods[41]: "Ural - Sibir map rc|Ural - Sibir map rc"
- active_mods[42]: "QSMapFinalFix|QS Map Final FIX"
+ active_mods[42]: "QSMapGoldFix|QS Map Gold FIX"
  active_mods[43]: "RealisticEconomyRussianQuper|Realistic Russia Economy by Quper"
  active_mods[44]: "RealisticAddonFerryQuper|Remover Ferries by Quper"
  active_mods[45]: "ETS2 Global Background Map|ETS2 Global Background Map"
