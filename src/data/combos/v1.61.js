@@ -102,6 +102,6 @@ export const combos_v1_61 = [
     image_center: "img/combos/161/ets2-mods/ets2-mods-center.jpg",
     table: "",
     profile:
-      "https://sharemods.com/ahs9cwi7b3ld/1.61_ETS2_MODS_PACK_1.0.zip.html",
+      "https://sharemods.com/9p8vbspcvbag/1.61_ETS2_MODS_PACK_1.0_100.zip.html",
   },
 ];
