@@ -1,7 +1,7 @@
 export const combos_v1_61 = [
   {
     id: "quper-map-161",
-    tags: ["ets2", "boosty"],
+    tags: ["ets2"],
     title: "QUPER MAP COMBO",
     preview: "img/combos/161/ets2-quper/quper-preview.jpg",
     automods: true,
@@ -88,5 +88,20 @@ export const combos_v1_61 = [
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=984573267#gid=984573267",
     profile:
       "https://sharemods.com/1riw8pkzy9w1/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.2.zip.html",
+  },
+  {
+    id: "ets2-mod-combo-161",
+    tags: ["ets2", "boosty"],
+    title: "BEST MODS PACK for ETS2",
+    preview: "img/combos/161/ets2-mods/ets2-mods-preview.jpg",
+    automods: true,
+    version_game: "1.61",
+    version: "1.0",
+    date: "30.09.26",
+    //video: "oxTMNZk9FWk",
+    image_center: "img/combos/161/ets2-mods/ets2-mods-center.jpg",
+    table: "",
+    profile:
+      "https://sharemods.com/ahs9cwi7b3ld/1.61_ETS2_MODS_PACK_1.0.zip.html",
   },
 ];
