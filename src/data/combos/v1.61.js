@@ -35,6 +35,22 @@ export const combos_v1_61 = [
     profile:
       "https://sharemods.com/5b8d2a7nyr8v/1.61_ETS2_BOOSTY_COMBO_MAP_1.6.zip.html",
   },
+
+  {
+    id: "ets2-server-map-161",
+    tags: ["ets2", "server", "convoy", "boosty"],
+    title: "ETS2 SERVER MAIN COMBO",
+    preview: "img/combos/161/ets2-server/ets2-server-preview.jpg",
+    automods: true,
+    // mods: true,
+    version_game: "1.61",
+    version: "server",
+    date: "01.10.26",
+    table:
+      "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
+    image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
+    profile: "https://sharemods.com/s8q88i3ra9l9/QS_SERVER.zip.html",
+  },
   {
     id: "mega-map-161",
     tags: ["ets2"],
