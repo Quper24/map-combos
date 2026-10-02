@@ -45,11 +45,11 @@ export const combos_v1_61 = [
     // mods: true,
     version_game: "1.61",
     version: "server",
-    date: "01.10.26",
+    date: "02.10.26",
     table:
       "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
     image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/s8q88i3ra9l9/QS_SERVER.zip.html",
+    profile: "https://sharemods.com/y93xm9pzjgc2/ETS2_SERVER_MAIN.zip.html",
   },
   {
     id: "mega-map-161",
@@ -112,13 +112,13 @@ export const combos_v1_61 = [
     preview: "img/combos/161/ets2-mods/ets2-mods-preview.jpg",
     automods: true,
     version_game: "1.61",
-    version: "1.0",
-    date: "30.09.26",
-    //video: "oxTMNZk9FWk",
+    version: "1.1",
+    date: "02.10.26",
+    video: "S-riR1Sx1Ek",
     image_center: "img/combos/161/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1417379633#gid=1417379633",
     profile:
-      "https://sharemods.com/9p8vbspcvbag/1.61_ETS2_MODS_PACK_1.0_100.zip.html",
+      "https://sharemods.com/dk84zg4mixiy/1.61_ETS2_MODS_PACK_1.1.zip.html",
   },
 ];
