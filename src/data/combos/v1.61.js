@@ -7,15 +7,15 @@ export const combos_v1_61 = [
     automods: true,
     // mods: true,
     version_game: "1.61",
-    version: "1.4",
-    date: "01.10.26",
+    version: "1.5",
+    date: "03.10.26",
     // video: "YT2OjGcQW68",
     image_top: "img/combos/161/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/161/ets2-quper/quper-bottom.jpg",
-    // table:
-    //   "https://docs.google.com/spreadsheets/d/1JqBp4yAnQ2Tl-nWjD8kQZe4pwvKkaHr0O9yYPNa2gXk/edit?gid=1957474960#gid=1957474960",
+    table:
+      "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=4898205#gid=4898205",
     profile:
-      "https://sharemods.com/3vf6v86dg5km/1.61_ETS2_QUPER_MAP_COMBO_1.4.zip.html",
+      "https://sharemods.com/5i3lr2tpcrly/1.61_ETS2_QUPER_MAP_COMBO_1.5.zip.html",
   },
   {
     id: "mega-boosty-map-161",
@@ -25,15 +25,15 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.6",
-    date: "28.09.26",
+    version: "1.7",
+    date: "03.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/5b8d2a7nyr8v/1.61_ETS2_BOOSTY_COMBO_MAP_1.6.zip.html",
+      "https://sharemods.com/gci6t14enfe8/1.61_ETS2_BOOSTY_COMBO_MAP_1.7.zip.html",
   },
 
   {
@@ -59,15 +59,15 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.6",
-    date: "28.09.26",
+    version: "1.7",
+    date: "03.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/161/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?usp=sharing",
     profile:
-      "https://sharemods.com/g2ubgtzqvqiv/1.61_ETS2_MEGA_COMBO_MAP_1.6.zip.html",
+      "https://sharemods.com/1k1ayk1u0z1g/1.61_ETS2_MEGA_COMBO_MAP_1.7.zip.html",
   },
   {
     id: "gold-russia-map-161",
@@ -77,15 +77,15 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.2",
-    date: "28.09.26",
+    version: "1.3",
+    date: "03.10.26",
     video: "uuY3gUV6k70",
     image_top: "img/combos/161/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/161/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1593428445#gid=1593428445",
     profile:
-      "https://sharemods.com/ily3rl1voixn/1.61_ETS2_GOLD_COMBO_MAP_1.2.zip.html",
+      "https://sharemods.com/kcgzpsrsoav4/1.61_ETS2_GOLD_COMBO_MAP_1.3.zip.html",
   },
   {
     id: "bigrussia-map-161",
@@ -95,19 +95,19 @@ export const combos_v1_61 = [
     automods: true,
     //mods: true,
     version_game: "1.61",
-    version: "1.2",
-    date: "28.09.26",
+    version: "1.3",
+    date: "03.10.26",
     video: "uuY3gUV6k70",
     image_top: "img/combos/161/ets2-bigrussia/bigrussia-top.jpg",
     image_bottom: "img/combos/161/ets2-bigrussia/bigrussia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=984573267#gid=984573267",
     profile:
-      "https://sharemods.com/1riw8pkzy9w1/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.2.zip.html",
+      "https://sharemods.com/n3c9hml8qp1t/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.3.zip.html",
   },
   {
     id: "ets2-mod-combo-161",
-    tags: ["ets2", "boosty"],
+    tags: ["ets2"],
     title: "BEST MODS PACK for ETS2",
     preview: "img/combos/161/ets2-mods/ets2-mods-preview.jpg",
     automods: true,
@@ -118,6 +118,21 @@ export const combos_v1_61 = [
     image_center: "img/combos/161/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1417379633#gid=1417379633",
+    profile:
+      "https://sharemods.com/htcu1qi30bnm/1.61_ETS2_MODS_PACK_1.1.zip.html",
+  },
+  {
+    id: "ets2-mods-packed-combo-161",
+    tags: ["ets2", "boosty"],
+    title: "MODS PACK for ETS2 (Packed version)",
+    preview: "img/combos/161/ets2-mods-packed/ets2-mods-packed-preview.jpg",
+    automods: true,
+    version_game: "1.61",
+    version: "1.0",
+    date: "03.10.26",
+    video: "S-riR1Sx1Ek",
+    image_center: "img/combos/161/ets2-mods-packed/ets2-mods-packed-center.jpg",
+    table: "",
     profile:
       "https://sharemods.com/dk84zg4mixiy/1.61_ETS2_MODS_PACK_1.1.zip.html",
   },
