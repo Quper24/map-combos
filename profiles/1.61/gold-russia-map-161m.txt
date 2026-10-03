@@ -8,7 +8,7 @@
  active_mods[6]: "sibirmap2131fv_for161|SibirMap 2.13.0 Free Version for 1.61"
  active_mods[7]: "VolgaMap_1_5_3|VolgaMap 1.5.3"
  active_mods[8]: "Sibir2.13_AltaiMap1.7.2_RC_1.60U|SibirMap FV/SV - AltaiMap RC(UNOFFICIAL)"
- active_mods[9]: "RTC v.3.0|Road to Caucasus Version 3.0"
+ active_mods[9]: "RTC v.2.9.1|Road to Caucasus Version 2.9.1"
  active_mods[10]: "RusMap-model_v2.59|RusMap-model_v2.59"
  active_mods[11]: "RusMap-map_v2.59|RusMap-Map_v2.59"
  active_mods[12]: "RusMap-def_v2.59|RusMap-def_v2.59"

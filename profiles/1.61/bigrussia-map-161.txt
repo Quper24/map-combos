@@ -47,7 +47,7 @@
  active_mods[45]: "Donbass_Map-ROEX_RC|Donbass Map - ROEX RC"
  active_mods[46]: "ROEX53SR131|ROEX53SR131 RC"
  active_mods[47]: "db_SRfix_159U|db_SRfix_159(UNOFFICIAL)"
- active_mods[48]: "RTC v.2.9.1|Road to Caucasus Version 2.9.1"
+ active_mods[48]: "RTC v.3.0|Road to Caucasus Version 3.0"
  active_mods[49]: "RTC TGS RC v.2.2|Road to Caucasus - Promods The Great Steppe RC 2.2"
  active_mods[50]: "promods-eu-dlcsupport-v284|ProMods DLC Support Package"
  active_mods[51]: "promods-eu-media-v284|ProMods Media Package"
