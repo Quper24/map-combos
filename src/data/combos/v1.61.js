@@ -69,6 +69,7 @@ export const combos_v1_61 = [
     profile:
       "https://sharemods.com/1k1ayk1u0z1g/1.61_ETS2_MEGA_COMBO_MAP_1.7.zip.html",
   },
+
   {
     id: "gold-russia-map-161",
     tags: ["ets2", "convoy"],
