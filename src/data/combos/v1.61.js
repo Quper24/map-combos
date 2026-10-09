@@ -155,4 +155,18 @@ export const combos_v1_61 = [
     profile:
       "https://sharemods.com/gj3hiahlyhrd/1.61_ATS_QUPER_MAP_COMBO_1.3.zip.html",
   },
+  {
+    id: "ats-mod-combo-161",
+    tags: ["ats", "boosty"],
+    title: "MEGA MODS PACK for ATS",
+    preview: "img/combos/161/ats-mods/ats-mods-preview.jpg",
+    version_game: "1.61",
+    version: "1.0",
+    date: "09.10.26",
+    video: "oxTMNZk9FWk",
+    // image_center: "img/combos/161/ats-mods/ats-mods-center.jpg",
+    table: "",
+    profile:
+      "https://sharemods.com/1660ll1fbuw3/1.61_ATS_QUPER_MODS_1.0.zip.html",
+  },
 ];
