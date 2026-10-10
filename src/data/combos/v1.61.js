@@ -164,7 +164,7 @@ export const combos_v1_61 = [
     version: "1.0",
     date: "09.10.26",
     video: "oxTMNZk9FWk",
-    // image_center: "img/combos/161/ats-mods/ats-mods-center.jpg",
+    image_center: "img/combos/161/ats-mods/ats-mods-center.jpg",
     table: "",
     profile:
       "https://sharemods.com/1660ll1fbuw3/1.61_ATS_QUPER_MODS_1.0.zip.html",
