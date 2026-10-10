@@ -39,7 +39,7 @@ export const combos_v1_61 = [
   {
     id: "ets2-server-map-161",
     tags: ["ets2", "server", "convoy", "boosty"],
-    title: "ETS2 SERVER MAIN COMBO",
+    title: "ETS2 CONVOY MAIN COMBO",
     preview: "img/combos/161/ets2-server/ets2-server-preview.jpg",
     automods: true,
     mods: true,
@@ -168,5 +168,19 @@ export const combos_v1_61 = [
     table: "",
     profile:
       "https://sharemods.com/1660ll1fbuw3/1.61_ATS_QUPER_MODS_1.0.zip.html",
+  },
+  {
+    id: "ats-server-map-161",
+    tags: ["ats", "server", "convoy", "boosty"],
+    title: "ATS CONVOY COMBO 1.61",
+    preview: "img/combos/161/ats-server/ats-server-preview.jpg",
+    automods: true,
+    //mods: true,
+    version_game: "1.61",
+    version: "server",
+    date: "10.10.26",
+    video: "G4ADUHZ1ruI",
+    image_center: "img/combos/161/ats-server/ats-server-center.jpg",
+    profile: "https://sharemods.com/njnw1qofrui6/1.61_ATS_SERVER.zip.html",
   },
 ];
