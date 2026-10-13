@@ -78,15 +78,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "1.4",
-    date: "04.10.26",
+    version: "1.5",
+    date: "14.10.26",
     video: "uuY3gUV6k70",
     image_top: "img/combos/161/ets2-gold/gold-russia-top.jpg",
     image_bottom: "img/combos/161/ets2-gold/gold-russia-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1593428445#gid=1593428445",
     profile:
-      "https://sharemods.com/pi007fmenf3b/1.61_ETS2_GOLD_COMBO_MAP_1.4.zip.html",
+      "https://sharemods.com/r9natn89v1cu/1.61_ETS2_GOLD_COMBO_MAP_1.5.zip.html",
   },
   {
     id: "bigrussia-map-161",
