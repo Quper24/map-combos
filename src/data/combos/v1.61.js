@@ -25,15 +25,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "1.7",
-    date: "03.10.26",
+    version: "2.0",
+    date: "13.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/gci6t14enfe8/1.61_ETS2_BOOSTY_COMBO_MAP_1.7.zip.html",
+      "https://sharemods.com/xiy6tcmybf2e/1.61_ETS2_BOOSTY_COMBO_MAP_2.0.zip.html",
   },
 
   {
@@ -59,15 +59,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "1.7",
-    date: "03.10.26",
+    version: "2.0",
+    date: "13.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/161/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?usp=sharing",
     profile:
-      "https://sharemods.com/1k1ayk1u0z1g/1.61_ETS2_MEGA_COMBO_MAP_1.7.zip.html",
+      "https://sharemods.com/h752fd97iu5i/1.61_ETS2_MEGA_COMBO_MAP_2.0.zip.html",
   },
 
   {
@@ -113,14 +113,14 @@ export const combos_v1_61 = [
     preview: "img/combos/161/ets2-mods/ets2-mods-preview.jpg",
     automods: true,
     version_game: "1.61",
-    version: "1.1",
-    date: "02.10.26",
+    version: "1.2",
+    date: "13.10.26",
     video: "S-riR1Sx1Ek",
     image_center: "img/combos/161/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1417379633#gid=1417379633",
     profile:
-      "https://sharemods.com/htcu1qi30bnm/1.61_ETS2_MODS_PACK_1.1.zip.html",
+      "https://sharemods.com/miizjfsmrmn5/1.61_ETS2_MODS_PACK_1.2.zip.html",
   },
   {
     id: "ets2-mods-packed-combo-161",
