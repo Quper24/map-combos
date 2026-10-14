@@ -15,7 +15,7 @@ export const combos_v1_61 = [
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=4898205#gid=4898205",
     profile:
-      "https://sharemods.com/tdiylfwxdrq0/1.61_ETS2_QUPER_COMBO_MAP_1.6.zip.html",
+      "https://sharemods.com/v168x70qgp5t/1.61_ETS2_QUPER_COMBO_1.6.zip.html",
   },
   {
     id: "mega-boosty-map-161",
