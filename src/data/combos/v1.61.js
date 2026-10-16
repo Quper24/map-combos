@@ -104,7 +104,7 @@ export const combos_v1_61 = [
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=984573267#gid=984573267",
     profile:
-      "https://sharemods.com/n3c9hml8qp1t/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_1.3.zip.html",
+      "https://sharemods.com/axm3wgrn5gy6/1.61_ETS2_BIG_RUSSIA_COMBO_MAP_2.0.zip.html",
   },
   {
     id: "ets2-mod-combo-161",
