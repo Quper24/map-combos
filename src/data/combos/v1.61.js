@@ -45,11 +45,11 @@ export const combos_v1_61 = [
     mods: true,
     version_game: "1.61",
     version: "server",
-    date: "02.10.26",
+    date: "15.10.26",
     table:
       "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
     image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/y93xm9pzjgc2/ETS2_SERVER_MAIN.zip.html",
+    profile: "https://sharemods.com/876jc819dfyd/ETS2_SERVER_MAIN.zip.html",
   },
   {
     id: "mega-map-161",
