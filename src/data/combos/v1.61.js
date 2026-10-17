@@ -45,7 +45,7 @@ export const combos_v1_61 = [
     mods: true,
     version_game: "1.61",
     version: "server",
-    date: "15.10.26",
+    date: "18.10.26",
     table:
       "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
     image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
