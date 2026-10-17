@@ -7,15 +7,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "1.6",
-    date: "15.10.26",
+    version: "1.6.1",
+    date: "17.10.26",
     video: "b4MkBuYCIYE",
     image_top: "img/combos/161/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/161/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=4898205#gid=4898205",
     profile:
-      "https://sharemods.com/v168x70qgp5t/1.61_ETS2_QUPER_COMBO_1.6.zip.html",
+      "https://sharemods.com/pzcd9e7645nl/1.61_ETS2_QUPER_COMBO_1.6.1.rar.html",
   },
   {
     id: "mega-boosty-map-161",
@@ -25,15 +25,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "2.0",
-    date: "13.10.26",
+    version: "2.0.1",
+    date: "17.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/xiy6tcmybf2e/1.61_ETS2_BOOSTY_COMBO_MAP_2.0.zip.html",
+      "https://sharemods.com/ao0y1zatq5gx/1.61_ETS2_BOOSTY_COMBO_MAP_2.0.1.rar.html",
   },
 
   {
@@ -59,15 +59,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "2.0",
-    date: "13.10.26",
+    version: "2.0.1",
+    date: "17.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/161/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?usp=sharing",
     profile:
-      "https://sharemods.com/h752fd97iu5i/1.61_ETS2_MEGA_COMBO_MAP_2.0.zip.html",
+      "https://sharemods.com/95dqnm2h2cod/1.61_ETS2_MEGA_COMBO_MAP_2.0.1.rar.html",
   },
 
   {
