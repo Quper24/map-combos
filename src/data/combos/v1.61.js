@@ -42,14 +42,14 @@ export const combos_v1_61 = [
     title: "ETS2 CONVOY MAIN COMBO",
     preview: "img/combos/161/ets2-server/ets2-server-preview.jpg",
     automods: true,
-    mods: true,
+    //mods: true,
     version_game: "1.61",
     version: "server",
-    date: "18.10.26",
+    date: "19.10.26",
     table:
       "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
     image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/876jc819dfyd/ETS2_SERVER_MAIN.zip.html",
+    profile: "https://sharemods.com/tjdta4c6644m/ETS2_SERVER_MAIN.zip.html",
   },
   {
     id: "mega-map-161",
