@@ -45,7 +45,7 @@ export const combos_v1_61 = [
     mods: true,
     version_game: "1.61",
     version: "server",
-    date: "19.10.26",
+    date: "20.10.26",
     table:
       "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
     image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
@@ -143,7 +143,7 @@ export const combos_v1_61 = [
     title: "ATS QUPER COMBO",
     preview: "img/combos/161/ats-quper/ats-quper-preview.jpg",
     automods: true,
-     mods: true,
+    mods: true,
     image_top: "img/combos/161/ats-quper/ats-quper-top.jpg",
     image_bottom: "img/combos/161/ats-quper/ats-quper-bottom.jpg",
     version_game: "1.61",
