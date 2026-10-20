@@ -49,7 +49,7 @@ export const combos_v1_61 = [
     table:
       "https://boosty.to/qupersimulator/posts/fa2ac2ad-9ad3-4a17-a36c-ff848a23ac64",
     image_center: "img/combos/161/ets2-server/ets2-server-center.jpg",
-    profile: "https://sharemods.com/tjdta4c6644m/ETS2_SERVER_MAIN.zip.html",
+    profile: "https://sharemods.com/ixjc33ii103q/ETS2_SERVER_MAIN.zip.html",
   },
   {
     id: "mega-map-161",
