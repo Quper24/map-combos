@@ -81,7 +81,7 @@
  active_mods[79]: "QS_ETS_Sound_EVR_addon|QS Sound Addon Optional EVR 05.05"
  active_mods[80]: "zeemods.physics_mod_ets2_v1.0|Physics Mod (ETS2)(Wheel)"
  active_mods[81]: "zeemods.master_reverb_v3.0|Master Reverb Mod"
- active_mods[82]: "zeemods.common_v1.1.1|ZM Common Dependencies"
+ active_mods[82]: "zeemods.common_ets2_v1.0.1|ZM Common Dependencies"
  active_mods[83]: "Immersive_External_Cam__Infinite_Zoom_v1.1|Immersive External Cam + Infinite Zoom v1.1"
  active_mods[84]: "QS_Final_Fix|QS Final Fix 02.10"
  active_mods[85]: "ETS2 Blue Background Map FS (Optional)|ETS2 Blue Background Map FS (Optional)"
