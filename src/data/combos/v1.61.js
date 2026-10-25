@@ -25,15 +25,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "2.0.1",
-    date: "17.10.26",
+    version: "2.1",
+    date: "25.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/ao0y1zatq5gx/1.61_ETS2_BOOSTY_COMBO_MAP_2.0.1.rar.html",
+      "https://sharemods.com/ksu125lnu1vo/1.61_ETS2_BOOSTY_COMBO_MAP_2.1.zip.html",
   },
 
   {
