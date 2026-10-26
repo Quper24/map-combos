@@ -113,14 +113,14 @@ export const combos_v1_61 = [
     preview: "img/combos/161/ets2-mods/ets2-mods-preview.jpg",
     automods: true,
     version_game: "1.61",
-    version: "1.2",
-    date: "13.10.26",
+    version: "1.3",
+    date: "26.10.26",
     video: "S-riR1Sx1Ek",
     image_center: "img/combos/161/ets2-mods/ets2-mods-center.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1417379633#gid=1417379633",
     profile:
-      "https://sharemods.com/miizjfsmrmn5/1.61_ETS2_MODS_PACK_1.2.zip.html",
+      "https://sharemods.com/puxutpdvfb6w/1.61_ETS2_MODS_PACK_1.3.zip.html",
   },
   {
     id: "ets2-mods-packed-combo-161",
