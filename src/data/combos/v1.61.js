@@ -7,15 +7,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "1.7",
-    date: "26.10.26",
+    version: "1.7.1",
+    date: "27.10.26",
     video: "b4MkBuYCIYE",
     image_top: "img/combos/161/ets2-quper/quper-top.jpg",
     image_bottom: "img/combos/161/ets2-quper/quper-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=4898205#gid=4898205",
     profile:
-      "https://sharemods.com/z11xzpewppcb/1.61_ETS2_QUPER_COMBO_1.7.zip.html",
+      "https://sharemods.com/ts6w9lgrbj7g/1.61_ETS2_QUPER_COMBO_1.7.1.zip.html",
   },
   {
     id: "mega-boosty-map-161",
@@ -25,15 +25,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "2.1",
-    date: "25.10.26",
+    version: "2.1.1",
+    date: "27.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega-boosty/mega-boosty-top.jpg",
     image_bottom: "img/combos/161/ets2-mega-boosty/mega-boosty-bottom.jpg",
     table:
       "https://boosty.to/qupersimulator/posts/227e6b8e-edfe-40d3-aaff-4593d4447947",
     profile:
-      "https://sharemods.com/ksu125lnu1vo/1.61_ETS2_BOOSTY_COMBO_MAP_2.1.zip.html",
+      "https://sharemods.com/ymlzi3tetu60/1.61_ETS2_BOOSTY_COMBO_MAP_2.1.1.zip.html",
   },
 
   {
@@ -42,7 +42,7 @@ export const combos_v1_61 = [
     title: "ETS2 CONVOY MAIN COMBO",
     preview: "img/combos/161/ets2-server/ets2-server-preview.jpg",
     automods: true,
-    // mods: true,
+    mods: true,
     version_game: "1.61",
     version: "server",
     date: "26.10.26",
@@ -59,15 +59,15 @@ export const combos_v1_61 = [
     automods: true,
     mods: true,
     version_game: "1.61",
-    version: "2.1",
-    date: "25.10.26",
+    version: "2.1.1",
+    date: "27.10.26",
     video: "UN_AP_mfO7E",
     image_top: "img/combos/161/ets2-mega/mega-top.jpg",
     image_bottom: "img/combos/161/ets2-mega/mega-bottom.jpg",
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?usp=sharing",
     profile:
-      "https://sharemods.com/788k264xaero/1.61_ETS2_MEGA_COMBO_MAP_2.1.zip.html",
+      "https://sharemods.com/eh8kpgb0kfhe/1.61_ETS2_MEGA_COMBO_MAP_2.1.1.zip.html",
   },
 
   {
