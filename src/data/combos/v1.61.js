@@ -175,7 +175,7 @@ export const combos_v1_61 = [
     title: "ATS CONVOY COMBO 1.61",
     preview: "img/combos/161/ats-server/ats-server-preview.jpg",
     automods: true,
-    //mods: true,
+    mods: true,
     version_game: "1.61",
     version: "server",
     date: "26.10.26",
