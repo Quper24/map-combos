@@ -86,7 +86,7 @@ export const combos_v1_61 = [
     table:
       "https://docs.google.com/spreadsheets/d/1VFj7KxcfsTVbuHMkHR9KKn_Zb8qDGuMSzEfDV3icBs4/edit?gid=1593428445#gid=1593428445",
     profile:
-      "https://sharemods.com/r9natn89v1cu/1.61_ETS2_GOLD_COMBO_MAP_1.5.zip.html",
+      "https://sharemods.com/qd64m627qsh2/1.61_ETS2_GOLD_COMBO_MAP_1.5.zip.html",
   },
   {
     id: "bigrussia-map-161",
