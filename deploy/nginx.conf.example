@@ -39,5 +39,5 @@ server {
 }
 
 # Configure HTTPS using the server's actual certificate setup before production.
-# Reuse any existing proxy for api.qupersimulator.ru; it is used by profile decoding.
+# The profile decoder runs locally in the browser; no API proxy is required.
 # Game services and ports must remain unchanged.

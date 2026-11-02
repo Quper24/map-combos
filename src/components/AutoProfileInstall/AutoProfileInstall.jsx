@@ -1,184 +1,132 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import InstructionModal from './InstructionModal';
 import Icon from '../ui/Icon';
+import { MAX_PROFILE_SIZE } from '../../lib/profileMods.js';
 import './AutoProfileInstall.css';
 
 export default function AutoProfileInstall({ combo }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
-  const fileInputRef = useRef(null);
-
   const [status, setStatus] = useState('idle');
-  const [decodedText, setDecodedText] = useState('');
-  const [updatedText, setUpdatedText] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [includeMods, setIncludeMods] = useState(false);
-
-  const API_BASE = 'https://api.qupersimulator.ru';
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      if (file.size > 300 * 1024) {
-        alert('Файл слишком большой. Максимальный размер 300 КБ.');
-        e.target.value = '';
-        setSelectedFile(null);
-        setStatus('idle');
-        return;
-      }
-      setSelectedFile(file);
-      setStatus('uploaded');
-      setDecodedText('');
-      setUpdatedText('');
-      setErrorMsg('');
-    } else {
-      setSelectedFile(null);
-      setStatus('idle');
-    }
+  const fileInputRef = useRef(null);
+  const operation = useRef(null);
+  const busy = status === 'processing';
+  const cancel = () => {
+    operation.current?.controller.abort();
+    operation.current?.worker?.terminate();
+    operation.current = null;
   };
-
-  const handleDecode = async () => {
-    if (!selectedFile) {
-      alert('Пожалуйста, выберите файл profile.sii');
-      return;
-    }
-    setStatus('decoding');
+  useEffect(() => {
+    cancel();
+    setSelectedFile(null);
+    setIncludeMods(false);
+    setStatus('idle');
     setErrorMsg('');
+    return cancel;
+  }, [combo.id, combo.version_game]);
 
-    const formData = new FormData();
-    formData.append('file', selectedFile);
-
-    try {
-      const response = await fetch(`${API_BASE}/api/decode`, {
-        method: 'POST',
-        body: formData,
-      });
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Ошибка декодирования');
-      }
-
-      setDecodedText(data.decodedText);
-      setStatus('decoded');
-    } catch (err) {
-      setErrorMsg(err.message);
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    event.target.value = '';
+    if (!file) return;
+    cancel();
+    setSelectedFile(null);
+    setErrorMsg('');
+    if (file.name.toLowerCase() !== 'profile.sii' || !file.size || file.size > MAX_PROFILE_SIZE) {
+      setErrorMsg('Выбери непустой profile.sii размером до 300 КБ.');
       setStatus('error');
-    }
-  };
-
-  const handleApply = async () => {
-    if (!decodedText) {
-      alert('Сначала декодируйте файл');
       return;
     }
-    setStatus('applying');
-    setErrorMsg('');
+    setSelectedFile(file);
+    setStatus('selected');
+  };
 
+  const handleProcess = async () => {
+    if (!selectedFile || operation.current) return;
+    const task = { controller: new AbortController(), worker: null };
+    operation.current = task;
+    setStatus('processing');
+    setErrorMsg('');
     try {
-      const modsResponse = await fetch(
-        `/profiles/${combo.version_game}/${combo.id}${includeMods ? 'm' : ''}.txt`,
+      const response = await fetch(
+        `/profiles/${combo.version_game}/${combo.id}${combo.mods && includeMods ? 'm' : ''}.txt`,
+        { signal: task.controller.signal },
       );
-      if (!modsResponse.ok) {
-        throw new Error(`Файл модов для combo.id "${combo.id}" не найден (404)`);
-      }
-      const newModsBlock = await modsResponse.text();
-
-      const updated = replaceActiveMods(decodedText, newModsBlock);
-      setUpdatedText(updated);
+      if (!response.ok)
+        throw new Error('Не удалось загрузить список модов сборки. Попробуй ещё раз.');
+      const mods = await response.text();
+      const buffer = await selectedFile.arrayBuffer();
+      if (operation.current !== task) return;
+      const worker = new Worker(new URL('../../lib/profile.worker.js', import.meta.url), {
+        type: 'module',
+      });
+      task.worker = worker;
+      const text = await new Promise((resolve, reject) => {
+        const timeout = setTimeout(
+          () => reject(new Error('Время обработки истекло. Попробуй выбрать файл заново.')),
+          30000,
+        );
+        const finish = (callback, value) => {
+          clearTimeout(timeout);
+          callback(value);
+        };
+        worker.onmessage = ({ data }) =>
+          data.error ? finish(reject, new Error(data.error)) : finish(resolve, data.text);
+        worker.onerror = () =>
+          finish(
+            reject,
+            new Error('Не удалось запустить декодер в браузере. Обнови страницу и попробуй снова.'),
+          );
+        task.controller.signal.addEventListener(
+          'abort',
+          () => finish(reject, new DOMException('Aborted', 'AbortError')),
+          { once: true },
+        );
+        worker.postMessage({ buffer, mods }, [buffer]);
+      });
+      if (operation.current !== task) return;
+      const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'profile.sii';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
       setStatus('done');
-    } catch (err) {
-      setErrorMsg(err.message);
-      setStatus('error');
-    }
-  };
-
-  function replaceActiveMods(originalText, newModsBlock) {
-    const lines = originalText.split('\n');
-    let startIndex = -1;
-    let endIndex = -1;
-
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].trim().startsWith('active_mods:')) {
-        startIndex = i;
-        break;
+    } catch (error) {
+      if (operation.current === task && error.name !== 'AbortError') {
+        setErrorMsg(error.message);
+        setStatus('error');
       }
-    }
-    if (startIndex === -1) {
-      throw new Error('Строка "active_mods:" не найдена в файле');
-    }
-
-    for (let i = startIndex + 1; i < lines.length; i++) {
-      const trimmed = lines[i].trim();
-      if (trimmed.startsWith('active_mods[')) {
-        continue;
-      } else {
-        endIndex = i;
-        break;
-      }
-    }
-    if (endIndex === -1) {
-      endIndex = lines.length;
-    }
-
-    const before = lines.slice(0, startIndex).join('\n');
-    const after = lines.slice(endIndex).join('\n');
-
-    return before + '\n' + newModsBlock + '\n' + after;
-  }
-
-  const handleDownload = () => {
-    if (!updatedText) return;
-    const blob = new Blob([updatedText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'profile.sii';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const getStatusClass = () => {
-    if (status === 'error') return 'status-error';
-    if (status === 'done') return 'status-done';
-    if (status === 'decoding' || status === 'applying') return 'status-loading';
-    return 'status-idle';
-  };
-
-  const renderStatusText = () => {
-    switch (status) {
-      case 'idle':
-        return 'Ожидание файла';
-      case 'uploaded':
-        return 'Файл загружен';
-      case 'decoding':
-        return 'Декодируется...';
-      case 'decoded':
-        return 'Декодирован';
-      case 'applying':
-        return 'Применяется...';
-      case 'done':
-        return 'Готово!';
-      case 'error':
-        return `❌ Ошибка: ${errorMsg}`;
-      default:
-        return '';
+    } finally {
+      task.worker?.terminate();
+      if (operation.current === task) operation.current = null;
     }
   };
-
-  // Форматируем размер файла
-  const getFileSize = () => {
-    if (!selectedFile) return '';
-    return `(${(selectedFile.size / 1024).toFixed(0)} КБ)`;
-  };
+  const statusText = {
+    idle: 'Выбери profile.sii',
+    selected: 'Файл выбран. Можно расставить моды.',
+    processing: 'Обрабатывается в твоём браузере…',
+    done: 'Готово! Файл передан браузеру для скачивания.',
+    error: `Ошибка: ${errorMsg}`,
+  }[status];
+  const statusClass =
+    status === 'error'
+      ? 'status-error'
+      : status === 'done'
+        ? 'status-done'
+        : busy
+          ? 'status-loading'
+          : 'status-idle';
 
   return (
     <div className="auto-profile-install">
       <div className="profile-instruction-callout">
         <div className="profile-instruction-copy">
-          <span className="profile-instruction-label">Важно перед загрузкой профиля</span>
+          <span className="profile-instruction-label">Важно перед выбором профиля</span>
           <strong>Сначала прочитай инструкцию</strong>
           <p>
             Сохрани резервную копию profile.sii и ознакомься с порядком действий перед изменением
@@ -193,10 +141,8 @@ export default function AutoProfileInstall({ combo }) {
           Прочитать инструкцию <Icon name="arrow" size={18} />
         </button>
       </div>
-
       <div className="auto-profile-content">
         <div className="toolbar">
-          {/* Шаг 1 – Выбор файла */}
           <div className="toolbar-item">
             <span className="toolbar-label">1. Файл</span>
             <input
@@ -205,44 +151,38 @@ export default function AutoProfileInstall({ combo }) {
               onChange={handleFileChange}
               ref={fileInputRef}
               style={{ display: 'none' }}
-              id="file-input"
             />
-            <button className="toolbar-btn file-btn" onClick={() => fileInputRef.current?.click()}>
-              {selectedFile ? `${selectedFile.name} ${getFileSize()}` : 'Выбрать'}
-            </button>
-          </div>
-
-          {/* Шаг 2 – Декодировать */}
-          <div className="toolbar-item">
-            <span className="toolbar-label">2. Декодировать</span>
             <button
-              className="toolbar-btn action-btn"
-              onClick={handleDecode}
-              disabled={status === 'decoding' || !selectedFile}
+              className="toolbar-btn file-btn"
+              disabled={busy}
+              onClick={() => fileInputRef.current?.click()}
             >
-              {status === 'decoding' ? '...' : 'Декодировать'}
+              {selectedFile
+                ? `${selectedFile.name} (${(selectedFile.size / 1024).toFixed(0)} КБ)`
+                : 'Выбрать файл'}
             </button>
           </div>
-
-          {/* Шаг 3 – Применить */}
           <div className="toolbar-item">
-            <span className="toolbar-label">3. Применить</span>
-
+            <span className="toolbar-label">2. Расстановка и скачивание</span>
             <div className="apply-block">
               <button
                 className="toolbar-btn action-btn"
-                onClick={handleApply}
-                disabled={status !== 'decoded'}
+                onClick={handleProcess}
+                disabled={!selectedFile || busy}
               >
-                Применить
+                {busy ? 'Обрабатывается…' : 'Расставить и скачать'}
               </button>
-
               {combo.mods && (
                 <label className="mods-checkbox">
                   <input
                     type="checkbox"
                     checked={includeMods}
-                    onChange={(e) => setIncludeMods(e.target.checked)}
+                    disabled={busy}
+                    onChange={(event) => {
+                      setIncludeMods(event.target.checked);
+                      setStatus(selectedFile ? 'selected' : 'idle');
+                      setErrorMsg('');
+                    }}
                   />
                   <span>
                     {combo.tags.includes('server') ? 'Основные + опциональные' : 'Карты + Моды'}
@@ -251,27 +191,14 @@ export default function AutoProfileInstall({ combo }) {
               )}
             </div>
           </div>
-
-          {/* Шаг 4 – Скачать */}
-          <div className="toolbar-item">
-            <span className="toolbar-label">4. Скачать</span>
-            <button
-              className="toolbar-btn action-btn"
-              onClick={handleDownload}
-              disabled={status !== 'done'}
-            >
-              Скачать
-            </button>
-          </div>
         </div>
-
-        {/* Статус – под тулбаром, но компактно */}
-        <div className={`status ${getStatusClass()}`}>Статус: {renderStatusText()}</div>
-
-        {/* combo.id – мелко справа */}
-        <div className="combo-id">combo: {combo.id}</div>
+        <div role="status" aria-live="polite" className={`status ${statusClass}`}>
+          Статус: {statusText}
+        </div>
+        <p className="profile-local-note">
+          Файл обрабатывается только в твоём браузере и не отправляется на сервер.
+        </p>
       </div>
-
       <InstructionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} combo={combo} />
     </div>
   );

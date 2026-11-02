@@ -23,6 +23,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: npm test
       - run: npm run build
       - name: Test deployment validation and rollback
         run: python3 -m unittest discover -s deploy -p 'test_publish_site.py'

@@ -102,7 +102,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  height: 36px;
+  min-height: 40px;
   text-align: center;
 }
 
@@ -121,6 +121,19 @@
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
+}
+
+.file-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-local-note {
+  color: var(--muted, #aaaaaa);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 12px 0 0;
 }
 
 /* Основные кнопки (действия) */
@@ -224,5 +237,16 @@
   }
   .auto-profile-instruction {
     width: 100%;
+  }
+  .toolbar-item,
+  .apply-block,
+  .toolbar-btn {
+    width: 100%;
+  }
+  .file-btn {
+    max-width: none;
+  }
+  .mods-checkbox {
+    white-space: normal;
   }
 }
