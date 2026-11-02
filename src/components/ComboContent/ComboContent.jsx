@@ -1,186 +1,130 @@
-import AutoProfileInstall from "../AutoProfileInstall/AutoProfileInstall";
-import Video from "../Video/Video";
-import ComboNavigation from "../ComboNavigation/ComboNavigation";
-
-import "./comboContent.css";
-
+import { Link } from 'react-router-dom';
+import AutoProfileInstall from '../AutoProfileInstall/AutoProfileInstall';
+import Video from '../Video/Video';
+import ExternalLink from '../ui/ExternalLink';
+import { comboVideos, youtubeVideoId } from '../../lib/content';
+import s from './ComboContent.module.css';
 export default function ComboContent({ combo }) {
-  const { table, profile } = combo;
-
+  const related = comboVideos(combo);
+  const game = combo.tags.includes('ats') ? 'American Truck Simulator' : 'Euro Truck Simulator 2';
+  const sections = [
+    ['links', 'Ссылки'],
+    ['install', 'Установка'],
+    ...(combo.automods ? [['profile', 'Авторасстановка']] : []),
+    ['map-order', 'Порядок карт'],
+    ['launcher', 'Лаунчер'],
+  ];
   return (
-    <div className="combo-content">
-      <ComboNavigation combo={combo} />
-
-      {combo.video && (
-        <section className="combo-video">
-          <h2>🎬 Видеообзор сборки</h2>
-
-          <Video videoId={combo.video} title={combo.title} />
+    <div className={s.content}>
+      <nav className={s.navigation} aria-label="На странице сборки">
+        {sections.map(([id, label]) => (
+          <a key={id} href={`#${id}`}>
+            {label}
+          </a>
+        ))}
+      </nav>
+      <section id="links">
+        <h2>Всё для установки</h2>
+        <div className={s.links}>
+          {combo.table && (
+            <ExternalLink href={combo.table}>
+              {combo.tags.includes('server') ? 'Скачать сборку' : 'Таблица файлов карт'}
+            </ExternalLink>
+          )}
+          {combo.profile && <ExternalLink href={combo.profile}>Готовый профиль</ExternalLink>}
+          <ExternalLink href="https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7">
+            Сборка одним архивом · Boosty
+          </ExternalLink>
+        </div>
+        <p className={s.note}>
+          Таблица содержит ссылки и актуальную информацию. В готовом профиле моды уже расставлены.
+          Архив на Boosty доступен в раннем доступе.
+        </p>
+        {combo.tags.includes('server') && (
+          <Link className="text-link" to="/server-guide">
+            Инструкция по подключению к серверу →
+          </Link>
+        )}
+      </section>
+      {(related.length > 0 || combo.video) && (
+        <section>
+          <h2>Видеообзор сборки</h2>
+          {related.length ? (
+            related.map((video) => (
+              <Video
+                key={video.id}
+                videoId={youtubeVideoId(video.platforms.youtube)}
+                title={video.title}
+                thumbnail={video.thumbnail}
+                platforms={video.platforms}
+              />
+            ))
+          ) : (
+            <Video videoId={combo.video} title={combo.title} />
+          )}
         </section>
       )}
-
-      {/* Быстрые ссылки */}
-      <section id="links">
-        <h2>🔗 Ссылки</h2>
-
-        <div className="resource-grid">
-          {table && (
-            <a
-              href={table}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="resource-card table-card">
-              <span className="resource-icon">📊</span>
-
-              <div>
-                <h3>
-                  <span>
-                    {combo.tags.includes("server")
-                      ? "Скачать сборку"
-                      : "Таблица файлов карт"}
-                  </span>
-                </h3>
-
-                <p>Все ссылки и актуальная информация</p>
-              </div>
-            </a>
-          )}
-
-          {profile && (
-            <a
-              href={profile}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="resource-card profile-card">
-              <span className="resource-icon">📥</span>
-
-              <div>
-                <h3>Готовый профиль</h3>
-
-                <p>Моды уже расставлены</p>
-              </div>
-            </a>
-          )}
-
-          <a
-            href="https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="resource-card early-access-card">
-            <span className="resource-icon">💎</span>
-
-            <div>
-              <h3>Сборка одним архивом</h3>
-
-              <p>Boosty ранний доступ</p>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      {/* Автопрофиль */}
       {combo.automods && (
         <section id="profile">
-          <h2>📥 Автоматическая расстановка модификаций в вашем профиле</h2>
-
+          <h2>Автоматическая расстановка</h2>
+          <p className={s.note}>
+            Расставь модификации в своём профиле с помощью готового порядка сборки.
+          </p>
           <AutoProfileInstall combo={combo} />
         </section>
       )}
-
-      {/* Видео установки */}
-      <section>
-        <h2>🎬 Инструкция по установке</h2>
-
-        <details className="spoiler">
-          <summary className="spoiler-summary">
-            <span className="spoiler-icon">▶️</span>
-            Открыть видеоинструкцию
-          </summary>
-
-          <div className="spoiler-content">
-            <Video
-              videoId="6UWd6wJa7s8"
-              title="Подробная инструкция по установке сборки карт"
+      <section id="install">
+        <h2>Перед запуском</h2>
+        <details>
+          <summary>Видеоинструкция по установке</summary>
+          <Video videoId="6UWd6wJa7s8" title="Подробная инструкция по установке сборки карт" />
+        </details>
+        <details>
+          <summary>Настройка config.cfg</summary>
+          <div className={s.detailBody}>
+            <p>Для корректной работы модов открой файл:</p>
+            <code>Документы/{game}/config.cfg</code>
+            <p>
+              Найди параметр <code>uset r_buffer_page_size</code> и установи значение{' '}
+              <code>30</code>.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Параметры запуска Steam</summary>
+          <div className={s.detailBody}>
+            <p>Добавь параметры запуска:</p>
+            <pre>-nointro -unlimitedlog</pre>
+            <img
+              src="/img/combos/steam-params.jpg"
+              alt="Пример параметров запуска Steam"
+              loading="lazy"
             />
           </div>
         </details>
-      </section>
-
-      {/* Перед запуском */}
-      <section id="install">
-        <h2>⚙️ Перед запуском</h2>
-
-        <details className="spoiler">
-          <summary className="spoiler-summary">⚙️ Настройка config.cfg</summary>
-
-          <div className="spoiler-content">
-            Для корректной работы модов:
-            <br />
-            <br />
-            Откройте файл:
-            <br />
-            Документы/ Euro Truck Simulator 2/ config.cfg
-            <br />
-            <br />
-            Найдите:
-            <code>uset r_buffer_page_size</code>
-            <br />
-            <br />
-            Установите значение:
-            <code>30</code>
-          </div>
-        </details>
-
-        <details className="spoiler">
-          <summary className="spoiler-summary">
-            💻 Параметры запуска Steam
-          </summary>
-
-          <div className="spoiler-content">
-            <p>Добавьте параметры запуска:</p>
-
-            <pre className="code-block">-nointro -unlimitedlog</pre>
-
-            <div className="image-display">
-              <img
-                src="img/combos/steam-params.jpg"
-                alt="Пример параметров запуска Steam"
-              />
-            </div>
-          </div>
-        </details>
-
-        <details className="spoiler">
-          <summary className="spoiler-summary">
-            🚛 Обязательные DLC карт
-          </summary>
-
-          <div className="spoiler-content">
-            Для работы сборки должны быть установлены все DLC карт.
-            <br />
-            <br />
-            <a
-              href="https://store.steampowered.com/dlc/227300/Euro_Truck_Simulator_2/list/43330"
-              target="_blank"
-              rel="noopener noreferrer">
-              Все DLC в Steam
-            </a>
+        <details>
+          <summary>Обязательные DLC карт</summary>
+          <div className={s.detailBody}>
+            <p>Для работы сборки должны быть установлены все DLC карт.</p>
+            <ExternalLink
+              className="text-link"
+              href={
+                combo.tags.includes('ats')
+                  ? 'https://store.steampowered.com/dlc/270880/American_Truck_Simulator/'
+                  : 'https://store.steampowered.com/dlc/227300/Euro_Truck_Simulator_2/list/43330'
+              }
+            >
+              DLC в Steam
+            </ExternalLink>
           </div>
         </details>
       </section>
-
-      {/* Лаунчер */}
-
       <section id="launcher">
-        <h2>🚀 Лаунчер</h2>
-
-        <details className="spoiler">
-          <summary className="spoiler-summary">
-            Инструкция по использованию лаунчера (нужна рубиновая подписка на
-            Boosty)
-          </summary>
-
-          <div className="spoiler-content">
+        <h2>DQ Лаунчер</h2>
+        <details>
+          <summary>Как пользоваться лаунчером</summary>
+          <div className={s.detailBody}>
+            <p>Для использования нужна рубиновая подписка на Boosty.</p>
             <Video videoId="ey10boQxLRQ" title="Инструкция для лаунчера" />
           </div>
         </details>

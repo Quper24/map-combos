@@ -1,0 +1,165 @@
+import { readFile, readdir, access } from 'node:fs/promises';
+import { resolve, sep } from 'node:path';
+import { createHash } from 'node:crypto';
+import assert from 'node:assert/strict';
+
+const read = async (file) => JSON.parse(await readFile(file, 'utf8'));
+const errors = [];
+const check = (condition, message) => {
+  if (!condition) errors.push(message);
+};
+const site = await read('content/site.json');
+const versions = await read('content/versions.json');
+check(!!versions[site.currentGameVersion], 'Current game version is missing from versions.json');
+check(
+  Object.values(versions).filter((version) => version.status === 'current').length === 1,
+  'Expected one current game version',
+);
+check(
+  Object.values(versions).filter((version) => version.default).length === 1,
+  'Expected one default game version',
+);
+check(
+  versions[site.currentGameVersion]?.status === 'current' &&
+    versions[site.currentGameVersion]?.default,
+  'Current/default metadata differs from site.json',
+);
+const vtc = await read('content/vtc.json');
+const videos = await read('content/videos.json');
+const combos = [];
+for (const name of (await readdir('content/combos')).filter((name) => name.endsWith('.json'))) {
+  const records = await read(`content/combos/${name}`);
+  for (const record of records) {
+    check(
+      name === `v${record.version_game}.json`,
+      `${record.id}: game version and filename differ`,
+    );
+    check(!!versions[record.version_game], `${record.id}: game version metadata missing`);
+    combos.push(record);
+  }
+}
+const mods = [];
+for (const name of (await readdir('content/mods')).filter((name) => name.endsWith('.json')))
+  mods.push(await read(`content/mods/${name}`));
+function ids(records, kind) {
+  const seen = new Set();
+  for (const record of records) {
+    check(
+      typeof record.id === 'string' && /^[a-z0-9-]+$/.test(record.id),
+      `${kind}: invalid id ${record.id}`,
+    );
+    check(!seen.has(record.id), `${kind}: duplicate id ${record.id}`);
+    check(typeof record.title === 'string' && record.title.trim(), `${record.id}: title missing`);
+    seen.add(record.id);
+  }
+  return seen;
+}
+const comboIds = ids(combos, 'combo');
+const modIds = ids(mods, 'mod');
+const videoIds = ids(videos, 'video');
+function url(value, label) {
+  try {
+    check(new URL(value).protocol === 'https:', `${label}: expected https URL`);
+  } catch {
+    errors.push(`${label}: invalid URL`);
+  }
+}
+async function image(value, label) {
+  if (!value) return;
+  if (/^https:\/\//.test(value)) {
+    url(value, label);
+    return;
+  }
+  const file = resolve('public', value.replace(/^\//, ''));
+  check(file.startsWith(`${resolve('public')}${sep}`), `${label}: path outside public`);
+  try {
+    await access(file);
+  } catch {
+    errors.push(`${label}: missing file ${value}`);
+  }
+}
+for (const combo of combos) {
+  check(Array.isArray(combo.tags), `${combo.id}: tags must be an array`);
+  check(
+    typeof combo.version === 'string' && combo.version.length > 0,
+    `${combo.id}: version missing`,
+  );
+  for (const field of ['preview', 'image_top', 'image_center', 'image_bottom'])
+    await image(combo[field], `${combo.id}.${field}`);
+  for (const field of ['table', 'profile'])
+    if (combo[field]) url(combo[field], `${combo.id}.${field}`);
+}
+check(
+  combos.some((combo) => combo.version_game === site.currentGameVersion),
+  'Current game version has no combos',
+);
+await image('/img/combos/center.jpg', 'Shared center image');
+for (const mod of mods) {
+  check(['mod', 'plugin'].includes(mod.type), `${mod.id}: invalid type`);
+  check(
+    Array.isArray(mod.games) &&
+      mod.games.length &&
+      mod.games.every((game) => ['ets2', 'ats'].includes(game)),
+    `${mod.id}: invalid games`,
+  );
+  for (const field of ['description', 'features', 'images', 'links', 'videoIds'])
+    check(Array.isArray(mod[field]), `${mod.id}: ${field} must be an array`);
+  await image(mod.cover, `${mod.id}.cover`);
+  for (const entry of mod.images || []) await image(entry.src || entry, `${mod.id}.image`);
+  for (const link of mod.links || []) url(link.url, `${mod.id}.${link.platform}`);
+  for (const id of mod.videoIds || []) check(videoIds.has(id), `${mod.id}: missing video ${id}`);
+}
+for (const video of videos) {
+  check(typeof video.game === 'string' && video.game.length, `${video.id}: game missing`);
+  check(
+    ['combos', 'mods', 'drives', 'guides', 'games'].includes(video.category),
+    `${video.id}: category missing`,
+  );
+  check(
+    video.platforms && Object.values(video.platforms).some(Boolean),
+    `${video.id}: no platform links`,
+  );
+  for (const [platform, value] of Object.entries(video.platforms || {})) {
+    check(
+      ['youtube', 'rutube'].includes(platform),
+      `${video.id}: unsupported platform ${platform}`,
+    );
+    if (value) url(value, `${video.id}.${platform}`);
+  }
+  await image(video.thumbnail, `${video.id}.thumbnail`);
+  for (const id of video.relatedComboIds || []) {
+    check(comboIds.has(id), `${video.id}: missing combo ${id}`);
+    const combo = combos.find((item) => item.id === id);
+    if (combo?.video && video.platforms.youtube) {
+      const youtube = new URL(video.platforms.youtube);
+      const youtubeId =
+        youtube.hostname === 'youtu.be' ? youtube.pathname.slice(1) : youtube.searchParams.get('v');
+      check(youtubeId === combo.video, `${video.id}: YouTube id differs from ${id}`);
+    }
+  }
+  for (const id of video.relatedModIds || [])
+    check(modIds.has(id), `${video.id}: missing mod ${id}`);
+}
+for (const link of [...vtc.links, ...site.socialLinks]) url(link.url, link.label);
+if (process.argv.includes('--baseline')) {
+  const baseline = await read('docs/migration-baseline.json');
+  assert.equal(
+    combos.length,
+    Object.keys(baseline).length,
+    'Migration changed the number of combos',
+  );
+  for (const combo of combos) {
+    const hash = createHash('sha256').update(JSON.stringify(combo)).digest('hex');
+    check(
+      hash === baseline[combo.id],
+      `${combo.id}: fields differ from the original migration baseline`,
+    );
+  }
+}
+if (errors.length) {
+  console.error(errors.join('\n'));
+  process.exitCode = 1;
+} else
+  console.log(
+    `Content verified: ${combos.length} combos, ${mods.length} mods, ${videos.length} videos${process.argv.includes('--baseline') ? '; all original combo fields preserved' : ''}.`,
+  );

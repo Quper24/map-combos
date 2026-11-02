@@ -1,16 +1,70 @@
-# React + Vite
+# Quper Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сайт Quper Simulator: сборки карт ETS2 / ATS, VTC, собственные моды и плагины,
+видео. React 19, Vite, React Router, CSS Modules. Контент редактируется в JSON.
 
-Currently, two official plugins are available:
+## Разработка
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Нужен Node.js 22.12+ или совместимая более новая версия.
 
-## React Compiler
+```sh
+npm ci
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Открой адрес из вывода Vite. Для локальной проверки сайта сервер Linux не нужен.
 
-## Expanding the ESLint configuration
+```sh
+npm run check:content     # JSON, картинки, ссылки и связи материалов
+npm run check:migration   # Сверка всех 50 сборок с исходниками до переработки
+npm run format:check      # Форматирование React, CSS и JSON
+npm run build            # Проверка контента и производственная сборка в dist
+npm run preview          # Просмотр готовой сборки
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`check:migration` — проверка завершённого переноса, а не ограничение на будущие
+обновления: после изменения версии или даты сборки она ожидаемо обнаружит
+отличие от исходного состояния. Обычная сборка запускает `check:content`.
+
+## Структура
+
+```text
+content/              JSON: сборки по версиям, моды, видео, VTC и соцсети
+src/app/              маршруты, общий каркас, шапка и подвал
+src/pages/            страницы; локальные стили рядом в *.module.css
+src/components/       повторно используемые компоненты и инструменты профиля
+src/lib/              работа с контентом, датами, путями и связями
+src/styles/           общие переменные оформления
+src/data/             метаданные версий и совместимый доступ к JSON сборок
+public/img/           изображения, включая оригинальные картинки порядка карт
+public/profiles/      файлы автоматической расстановки модов
+scripts/              проверка контента и подготовка статического размещения
+deploy/               пример конфигурации Linux-хостинга
+docs/                 требования, архитектура и сведения о миграции
+```
+
+Подробнее об обновлении данных: [content/README.md](content/README.md).
+Неиспользуемая заготовка статистики серверов сохранена в
+`src/pages/Home/server-temp.js` для будущей интеграции API.
+
+## Адреса и размещение
+
+Адреса без `#`: `/`, `/combos`, `/combos/:id`, `/vtc`, `/mods`, `/mods/:id`,
+`/videos`, `/server-guide`. Старые `/#/id` и `/id` переходят на `/combos/id`.
+
+На Linux веб-сервер должен отдавать `index.html` для внутренних маршрутов.
+Пример: [deploy/nginx.conf.example](deploy/nginx.conf.example). HTTPS,
+существующие службы, API и занятые порты проверяются перед настройкой.
+Изменения на игровом сервере пока не выполнялись.
+
+В `dist/404.html` создаётся временный fallback для прямых ссылок на GitHub
+Pages. Он показывает приложение при ответе Pages 404; для HTTP 200 на всех
+валидных внутренних маршрутах нужна конфигурация Linux-сервера.
+
+Существующий GitHub Actions workflow пока продолжает публиковать на Pages
+при push в main. Публикацию на Linux настроим отдельно; текущий этап локальный.
+
+Автоматическая расстановка профиля сохраняет существующий вызов
+`https://api.qupersimulator.ru/api/decode`. Его доступность и поведение
+нужно проверить отдельно перед переносом домена; локальная проверка
+интерфейса не означает проверку серверного декодирования.

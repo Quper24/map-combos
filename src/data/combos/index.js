@@ -1,23 +1,10 @@
-// C:\Quper-projects\map-combos\src\data\combos\index.js
-import { combos_v1_57 } from "./v1.57";
-import { combos_v1_58 } from "./v1.58";
-import { combos_v1_59 } from "./v1.59";
-import { combos_v1_60 } from "./v1.60";
-import { combos_v1_61 } from "./v1.61";
-
-export const COMBOS_BY_VERSION = {
-  1.57: combos_v1_57,
-  1.58: combos_v1_58,
-  1.59: combos_v1_59,
-  "1.60": combos_v1_60,
-  1.61: combos_v1_61,
-};
-
-// Для обратной совместимости
-export const getCombosByVersion = (version) => {
-  return COMBOS_BY_VERSION[version] || [];
-};
-
-export const getAllCombos = () => {
-  return Object.values(COMBOS_BY_VERSION).flat();
-};
+// Discover JSON automatically: adding a game version needs no new imports.
+const files = import.meta.glob('../../../content/combos/*.json', {
+  eager: true,
+  import: 'default',
+});
+export const COMBOS_BY_VERSION = Object.fromEntries(
+  Object.entries(files).map(([file, records]) => [file.match(/v([\d.]+)\.json$/)[1], records]),
+);
+export const getCombosByVersion = (version) => COMBOS_BY_VERSION[version] || [];
+export const getAllCombos = () => Object.values(COMBOS_BY_VERSION).flat();

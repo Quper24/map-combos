@@ -1,0 +1,88 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  transition:
+    transform 0.22s,
+    border-color 0.22s;
+  min-width: 0;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-line);
+}
+.imageLink {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: var(--surface-raised);
+}
+.imageLink img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s;
+}
+.card:hover img {
+  transform: scale(1.025);
+}
+.body {
+  padding: 22px;
+}
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.body h3 {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.dot {
+  margin: 0 6px;
+  opacity: 0.4;
+}
+.open {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+.open svg {
+  color: var(--green);
+}
+.favorite {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #111b13dc;
+  border: 1px solid #ffffff30;
+  display: grid;
+  place-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 5px;
+}
+.favorite:hover,
+.selected {
+  color: var(--green);
+  border-color: var(--green);
+}
+.selected svg {
+  fill: currentColor;
+}

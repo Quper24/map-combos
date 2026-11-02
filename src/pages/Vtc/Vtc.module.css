@@ -1,0 +1,130 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+}
+.hero h1 {
+  max-width: 680px;
+}
+.hero p {
+  max-width: 650px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.hero .actions {
+  margin-top: 30px;
+}
+.hero .button {
+  padding: 11px 16px;
+  font-size: 11px;
+}
+.logo {
+  border: 1px solid var(--line);
+  background: #222129;
+  border-radius: 12px;
+  padding: 25px;
+  transform: rotate(2deg);
+}
+.logo img {
+  width: 100%;
+  border-radius: 7px;
+}
+.logo span {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: #b9b9b5;
+  margin: 8px 0 10px;
+}
+.benefits {
+  margin-top: 70px;
+  padding-block: 40px;
+  border-block: 1px solid var(--line);
+}
+.benefits h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.benefits > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.benefits article {
+  position: relative;
+  padding-top: 15px;
+}
+.benefits article > span {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.benefits svg {
+  color: var(--green);
+  margin-bottom: 14px;
+}
+.benefits article p {
+  font-size: 14px;
+  max-width: 320px;
+}
+.closing {
+  margin: 22px 0 0;
+  font-size: 12px;
+  color: var(--green);
+}
+.join {
+  margin-top: 64px;
+  padding: 40px;
+  border: 1px solid var(--green-line);
+  border-radius: 8px;
+  background: var(--green-dim);
+}
+.join h2 {
+  font-size: 32px;
+}
+.join p {
+  font-size: 14px;
+}
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr 0.7fr;
+    gap: 30px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .benefits > div {
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    max-width: 260px;
+    margin: auto;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .benefits {
+    margin-top: 44px;
+  }
+  .benefits > div {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .benefits article p {
+    max-width: none;
+  }
+  .join {
+    padding: 24px;
+  }
+  .join h2 {
+    font-size: 28px;
+  }
+}

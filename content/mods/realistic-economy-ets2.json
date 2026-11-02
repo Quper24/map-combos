@@ -1,0 +1,34 @@
+{
+  "id": "realistic-economy-ets2",
+  "type": "mod",
+  "title": "Realistic Economy ETS2 by Quper",
+  "games": ["ets2"],
+  "summary": "Переработанная экономика ETS2 для более реалистичных рейсов и развития транспортной компании.",
+  "description": [
+    "Мод меняет оплату перевозок, доход наёмных водителей, условия кредитов и развитие навыков. Разные типы прицепов получают более сбалансированную доходность.",
+    "Также переработаны рынок подержанных грузовиков, стоимость гаражей, топлива и паромных переправ, штрафы и износ техники."
+  ],
+  "features": [
+    "Переработанные тарифы на перевозки, включая внешние контракты World of Trucks.",
+    "Изменённые условия кредитов и начисление опыта.",
+    "Обновлённые цены и пробеги подержанных грузовиков.",
+    "Пересмотренные расходы на топливо, гаражи, паромы и нарушения ПДД.",
+    "Изменённый баланс износа компонентов и шин."
+  ],
+  "cover": "/img/mods/realistic-economy-ets2.webp",
+  "coverAlt": "Realistic Economy ETS2 by Quper",
+  "images": [],
+  "links": [
+    {
+      "platform": "truckymods",
+      "label": "TruckyMods",
+      "url": "https://truckymods.io/euro-truck-simulator-2/game-economy/realistic-economy-ferry-by-quper"
+    },
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318908089"
+    }
+  ],
+  "videoIds": []
+}

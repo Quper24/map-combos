@@ -1,409 +1,182 @@
-import { useState, useMemo, useEffect } from "react";
-import { COMBOS_BY_VERSION, VERSIONS, getCurrentVersion } from "../../data";
-import ComboCard from "../../components/ComboCard/ComboCard";
-import { tagUtils } from "../../utils/tags";
-
-import "./home.css";
-
-export default function Home({ selectedVersion }) {
-  const [activeTags, setActiveTags] = useState([]);
-  const [sortByDate, setSortByDate] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  // const [serversExpanded, setServersExpanded] = useState(false);
-  // const [hoveredServer, setHoveredServer] = useState(null); // Для отображения списка игроков при наведении
-
-  // Состояния для статистики серверов
-  // Добавьте в serverStats
-  // const [serverStats, setServerStats] = useState({
-  //   total_players: 0,
-  //   servers: {
-  //     ets2_main: {
-  //       name: "ETS2 Main",
-  //       players: 0,
-  //       players_list: [],
-  //       online: false,
-  //       has_players: false,
-  //       icon: "🚛",
-  //     },
-  //     ets2_light: {
-  //       name: "ETS2 Light",
-  //       players: 0,
-  //       players_list: [],
-  //       online: false,
-  //       has_players: false,
-  //       icon: "🚚",
-  //     },
-  //     ats: {
-  //       name: "ATS",
-  //       players: 0,
-  //       players_list: [],
-  //       online: false,
-  //       has_players: false,
-  //       icon: "⭐",
-  //     },
-  //     // Новые тестовые серверы
-  //     ets2_test: {
-  //       name: "ETS2 Test",
-  //       players: 0,
-  //       players_list: [],
-  //       online: false,
-  //       has_players: false,
-  //       icon: "🧪",
-  //     },
-  //     ats_test: {
-  //       name: "ATS Test",
-  //       players: 0,
-  //       players_list: [],
-  //       online: false,
-  //       has_players: false,
-  //       icon: "🧪",
-  //     },
-  //   },
-  //   lastUpdate: null,
-  //   loading: true,
-  //   error: null,
-  // });
-
-  // Получаем комбо для выбранной версии
-  const currentCombos = useMemo(() => {
-    return COMBOS_BY_VERSION[selectedVersion] || [];
-  }, [selectedVersion]);
-
-  // Извлекаем все уникальные теги из комбо текущей версии
-  const allTags = useMemo(() => {
-    return tagUtils.extractUniqueTags(currentCombos);
-  }, [currentCombos]);
-
-  // Фильтруем комбо
-  const filteredCombos = useMemo(() => {
-    let filtered = currentCombos;
-
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(
-        (combo) =>
-          combo.title.toLowerCase().includes(query) ||
-          combo.id.toLowerCase().includes(query),
-      );
-    }
-
-    if (activeTags.length > 0) {
-      filtered = filtered.filter((combo) =>
-        activeTags.every((tag) => combo.tags?.includes(tag)),
-      );
-    }
-
-    return filtered;
-  }, [currentCombos, activeTags, searchQuery]);
-
-  // Сохраняем выбранную версию в localStorage
-  useEffect(() => {
-    localStorage.setItem("mapCombos_selectedVersion", selectedVersion);
-  }, [selectedVersion]);
-
-  // const API_URL = "https://api.qupersimulator.ru/api/players";
-
-  // const fetchServerStats = async () => {
-  //   try {
-  //     const response = await fetch(API_URL, {
-  //       method: "GET",
-  //       headers: {
-  //         Accept: "application/json",
-  //       },
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-
-  //     const data = await response.json();
-
-  //     if (data.success) {
-  //       setServerStats({
-  //         total_players: data.total_players,
-  //         servers: {
-  //           ets2_main: {
-  //             ...data.servers.ets2_main,
-  //             icon: "🚛",
-  //             players_list: data.servers.ets2_main?.players_list || [],
-  //             has_players:
-  //               data.servers.ets2_main?.has_players ||
-  //               data.servers.ets2_main?.players > 0,
-  //           },
-  //           ets2_light: {
-  //             ...data.servers.ets2_light,
-  //             icon: "🚚",
-  //             players_list: data.servers.ets2_light?.players_list || [],
-  //             has_players:
-  //               data.servers.ets2_light?.has_players ||
-  //               data.servers.ets2_light?.players > 0,
-  //           },
-  //           ats: {
-  //             ...data.servers.ats,
-  //             icon: "⭐",
-  //             players_list: data.servers.ats?.players_list || [],
-  //             has_players:
-  //               data.servers.ats?.has_players || data.servers.ats?.players > 0,
-  //           },
-  //         },
-  //         lastUpdate: data.timestamp,
-  //         loading: false,
-  //         error: null,
-  //       });
-  //     } else {
-  //       throw new Error("Failed to fetch stats");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching server stats:", error);
-  //     setServerStats((prev) => ({
-  //       ...prev,
-  //       loading: false,
-  //       error: "Не удалось загрузить статистику",
-  //     }));
-  //   }
-  // };
-
-  // Загружаем статистику при монтировании и каждую минуту
-  // useEffect(() => {
-  //   fetchServerStats();
-  //   const interval = setInterval(fetchServerStats, 60000);
-  //   return () => clearInterval(interval);
-  // }, []);
-
-  // Функция для преобразования даты
-  const parseDate = (dateStr) => {
-    if (!dateStr) return new Date(0);
-    try {
-      const parts = dateStr.split(".");
-      if (parts.length === 3) {
-        let year = parts[2];
-        if (year.length === 2) year = "20" + year;
-        return new Date(`${year}-${parts[1]}-${parts[0]}`);
-      }
-    } catch (error) {
-      console.error("Error parsing date:", dateStr, error);
-    }
-    return new Date(0);
-  };
-
-  // Сортируем комбо
-  const sortedAndFilteredCombos = useMemo(() => {
-    if (!sortByDate) return filteredCombos;
-    return [...filteredCombos].sort((a, b) => {
-      const dateA = parseDate(a.date);
-      const dateB = parseDate(b.date);
-      if (dateB.getTime() !== dateA.getTime()) {
-        return dateB.getTime() - dateA.getTime();
-      }
-      return a.title.localeCompare(b.title);
-    });
-  }, [filteredCombos, sortByDate]);
-
-  // Функция для переключения тега
-  const toggleTag = (tag) => {
-    setActiveTags((prev) => {
-      if (prev.includes(tag)) {
-        return prev.filter((t) => t !== tag);
-      } else {
-        return [...prev, tag];
-      }
-    });
-  };
-
-  // Сброс всех фильтров
-  const resetFilters = () => {
-    setActiveTags([]);
-    setSearchQuery("");
-  };
-
-  // Получаем самую свежую дату
-  const latestUpdate = useMemo(() => {
-    if (!sortByDate || sortedAndFilteredCombos.length === 0) return null;
-    const latest = sortedAndFilteredCombos[0];
-    return latest.date ? `Последнее обновление: ${latest.date}` : null;
-  }, [sortedAndFilteredCombos, sortByDate]);
-
-  // Проверяем, есть ли активные фильтры
-  const hasActiveFilters = activeTags.length > 0 || searchQuery;
-
-  // Получаем информацию о текущей версии
-  const versionInfo = VERSIONS[selectedVersion];
-  // Функция для отображения статуса сервера
-  // const getServerStatusText = (server) => {
-  //   if (!server.online) return { text: "Офлайн", class: "offline", icon: "🔴" };
-  //   if (server.has_players)
-  //     return { text: "Играют", class: "online", icon: "🟢" };
-  //   return { text: "Пуст", class: "empty", icon: "🟡" };
-  // };
-
+import { Link } from 'react-router-dom';
+import useCurrentCombos from '../../lib/currentCombos';
+import site from '../../../content/site.json';
+import ComboCard from '../../components/ComboCard/ComboCard';
+import VideoCard from '../../components/VideoCard/VideoCard';
+import Icon from '../../components/ui/Icon';
+import ExternalLink from '../../components/ui/ExternalLink';
+import { assetUrl, dateValue, videos } from '../../lib/content';
+import s from './Home.module.css';
+const directions = [
+  {
+    to: '/combos',
+    number: '01',
+    icon: 'map',
+    title: 'Больше дорог',
+    text: 'Сборки карт ETS2 и ATS. Всё для следующего большого путешествия.',
+    label: 'Выбрать сборку',
+  },
+  {
+    to: '/mods',
+    number: '02',
+    icon: 'grid',
+    title: 'Больше возможностей',
+    text: 'Собственные моды и плагины, которые делают игру интереснее.',
+    label: 'Смотреть разработки',
+  },
+  {
+    to: '/vtc',
+    number: '03',
+    icon: 'truck',
+    title: 'Больше, чем рейсы',
+    text: 'Наша VTC, совместные конвои и люди, с которыми по пути.',
+    label: 'Познакомиться с VTC',
+  },
+];
+export default function Home() {
+  const currentCombos = useCurrentCombos();
+  const featured =
+    currentCombos.find((combo) => combo.id.startsWith('quper-map-')) || currentCombos[0];
+  const latest = [...currentCombos]
+    .sort((a, b) => dateValue(b.date) - dateValue(a.date))
+    .slice(0, 3);
   return (
     <div className="container">
-      <header className="home-header">
-        <h1 className="home-subtitle">Сборки карт для ETS2 и ATS</h1>
-
-        {latestUpdate && (
-          <div className="latest-update-badge">
-            <span className="update-icon">🔄</span>
-            {latestUpdate}
+      <section className={s.hero}>
+        <div className={s.heroCopy}>
+          <span className="eyebrow">Quper Simulator / ETS2 & ATS</span>
+          <h1>
+            Весь мир
+            <br />у наших <span>колёс.</span>
+          </h1>
+          <p>
+            Новые маршруты, любимые симуляторы
+            <br className={s.desktopBreak} /> и компания, с которой хочется ехать дальше.
+          </p>
+          <div className="actions">
+            <Link to="/combos" className="button">
+              Найти свою сборку <Icon name="arrow" size={18} />
+            </Link>
+            <Link to="/vtc" className="button button-secondary">
+              Наша VTC
+            </Link>
+          </div>
+          <div className={s.heroNote}>
+            <span /> Карты. Моды. Конвои. Одна любовь к дороге.
+          </div>
+        </div>
+        {featured ? (
+          <Link to={`/combos/${featured.id}`} className={s.featured}>
+            <div className={s.featuredImage}>
+              <img
+                src={assetUrl(featured.preview)}
+                width="960"
+                height="540"
+                alt={featured.title}
+                fetchPriority="high"
+              />
+              <span className={s.featuredBadge}>
+                ETS2 <b>{featured.version_game}</b>
+              </span>
+            </div>
+            <div className={s.featuredBottom}>
+              <div>
+                <span className={s.smallLabel}>Открой новые маршруты</span>
+                <h2>Quper Map Combo</h2>
+              </div>
+              <span className={s.featuredArrow}>
+                <Icon name="arrow" />
+              </span>
+            </div>
+          </Link>
+        ) : (
+          <div className={s.featured} aria-busy="true">
+            <div className={s.featuredImage} />
+            <div className={s.featuredBottom}>Загружаем сборки…</div>
           </div>
         )}
-      </header>
-
-      {/* КОМПАКТНЫЙ БЛОК СЕРВЕРОВ - РАСКРЫВАЕТСЯ ПО КЛИКУ */}
-      {/* server-temp.js */}
-
-      {/* Панель фильтров */}
-      <div className="filters-panel">
-        <div className="filters-header">
-          <h2 className="filters-title">
-            <span className="filter-icon">🔍</span>
-            Фильтры
-            <span className="sort-info">
-              {sortByDate
-                ? "(сортировка: сначала новые)"
-                : "(исходный порядок)"}
+      </section>
+      <section className={s.directions} aria-label="Разделы проекта">
+        {directions.map((item) => (
+          <Link className={s.direction} key={item.to} to={item.to}>
+            <div className={s.directionTop}>
+              <Icon name={item.icon} size={25} />
+              <span>{item.number}</span>
+            </div>
+            <h2>{item.title}</h2>
+            <p>{item.text}</p>
+            <span className={s.directionLink}>
+              {item.label}
+              <Icon name="arrow" size={17} />
             </span>
-          </h2>
-
-          <div className="filters-controls">
-            <button
-              onClick={() => setSortByDate(!sortByDate)}
-              className={`sort-date-btn ${sortByDate ? "active" : ""}`}
-              title={
-                sortByDate
-                  ? "Отключить сортировку по дате"
-                  : "Включить сортировку по дате"
-              }>
-              <span className="sort-icon">{sortByDate ? "📅✓" : "📅"}</span>
-              {sortByDate ? "Сортировка по дате" : "Сортировать по дате"}
-            </button>
-
-            {hasActiveFilters && (
-              <button onClick={resetFilters} className="reset-filters-btn">
-                ✕ Сбросить все фильтры
-              </button>
-            )}
+          </Link>
+        ))}
+      </section>
+      <section className="section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Выбирай свой маршрут</span>
+            <h2>Свежие сборки</h2>
+            <p>Порядок карт, ссылки и инструкции — в одном месте.</p>
           </div>
+          <Link to="/combos" className="text-link">
+            Все сборки <Icon name="arrow" size={17} />
+          </Link>
         </div>
-
-        {/* Поле поиска */}
-        <div className="search-box-wrapper">
-          <div className="search-box">
-            <span className="search-icon">🔍</span>
-            <input
-              type="text"
-              placeholder="Поиск по названию сборки..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery("")}
-                className="clear-search"
-                title="Очистить поиск">
-                ✕
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Теги */}
-        <div className="tags-container">
-          {allTags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => toggleTag(tag)}
-              className={`tag-btn ${activeTags.includes(tag) ? "active" : ""}`}
-              title={tagUtils.getDescription(tag)}>
-              <span className="tag-icon">{tagUtils.getIcon(tag)}</span>
-              <span className="tag-label">{tagUtils.getLabel(tag)}</span>
-              {activeTags.includes(tag) && <span className="tag-count">✓</span>}
-            </button>
+        <div className="card-grid">
+          {latest.map((combo) => (
+            <ComboCard key={combo.id} combo={combo} />
           ))}
         </div>
-
-        {/* Статистика */}
-        <div className="filters-stats">
-          <span className="stats-item">
-            <span className="stats-number">
-              {sortedAndFilteredCombos.length}
-            </span>
-            <span className="stats-label">сборок</span>
-          </span>
-
-          {activeTags.length > 0 && (
-            <span className="stats-item">
-              <span className="stats-number">{activeTags.length}</span>
-              <span className="stats-label">тега(ов)</span>
-            </span>
-          )}
-
-          {searchQuery && (
-            <span className="stats-item">
-              <span className="stats-icon">🔍</span>
-              <span className="stats-label">поиск: "{searchQuery}"</span>
-            </span>
-          )}
-
-          {/* Статистика по популярным тегам */}
-          <span className="stats-item">
-            <span className="stats-number">
-              {currentCombos.filter((c) => c.tags?.includes("server")).length}
-            </span>
-            <span className="stats-label">с серверами</span>
-          </span>
+      </section>
+      <section className={s.vtcBanner}>
+        <div className={s.vtcIdentity}>
+          <img src="/img/logo.jpg" width="140" height="140" alt="Логотип VTC Quper Simulator" />
+          <span>VIRTUAL TRUCKING COMPANY</span>
         </div>
-      </div>
-
-      {/* Сетка комбо */}
-      <div className="combos-grid">
-        {sortedAndFilteredCombos.length > 0 ? (
-          sortedAndFilteredCombos.map((combo) => (
-            <ComboCard key={combo.id} combo={combo} />
-          ))
-        ) : (
-          <div className="no-results">
-            <div className="no-results-icon">🔍</div>
-            <h3>Ничего не найдено</h3>
-            <p>Попробуйте изменить фильтры</p>
-            <button onClick={resetFilters} className="reset-filters-btn large">
-              Сбросить фильтры
-            </button>
-          </div>
-        )}
-      </div>
-
-      <div className="home-info">
-        <div className="info-grid">
-          <div className="info-card server-info">
-            <div className="info-icon">🖥️</div>
-            <div className="info-content">
-              <h4>Наши сервера</h4>
-              <p>Сборки с этим тегом работают на наших серверах</p>
-              <button
-                onClick={() => toggleTag("server")}
-                className="info-action-btn">
-                {activeTags.includes("server") ? "✓ Показаны" : "Показать все"}
-              </button>
-            </div>
-          </div>
-
-          <div className="info-card version-info">
-            <div className="info-icon">🔄</div>
-            <div className="info-content">
-              <h4>Версия {versionInfo.label}</h4>
-              <p>{versionInfo.description}</p>
-              {versionInfo.status === "legacy" && (
-                <p className="legacy-warning">
-                  ⚠️ Это устаревшая версия, рекомендуется использовать{" "}
-                  {getCurrentVersion().label}
-                </p>
-              )}
-            </div>
-          </div>
+        <div className={s.vtcCopy}>
+          <span className="eyebrow">Хорошая дорога начинается с компании</span>
+          <h2>Вместе интереснее.</h2>
+          <p>
+            Без обязательных пробегов, перекрасок и строгих графиков. Только удовольствие от дороги
+            и общения.
+          </p>
+          <Link className="text-link" to="/vtc">
+            Присоединиться к Quper Simulator <Icon name="arrow" size={18} />
+          </Link>
         </div>
-      </div>
+        <span className={s.roadMark} aria-hidden="true" />
+      </section>
+      <section className="section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">По ту сторону руля</span>
+            <h2>Смотри. Вдохновляйся. Поехали.</h2>
+          </div>
+          <Link className="text-link" to="/videos">
+            Все видео <Icon name="arrow" size={17} />
+          </Link>
+        </div>
+        <div className="card-grid">
+          {videos.slice(0, 3).map((video) => (
+            <VideoCard key={video.id} video={video} />
+          ))}
+        </div>
+      </section>
+      <section className={s.socialSection}>
+        <div>
+          <span className="eyebrow">Остаёмся на связи</span>
+          <h2>Встречаемся не только в игре.</h2>
+          <p>Новые видео, обновления сборок и общение — на наших площадках.</p>
+        </div>
+        <div className={s.socialLinks}>
+          {site.socialLinks.map((link) => (
+            <ExternalLink key={link.platform} href={link.url} className={s.socialLink}>
+              {link.label}
+            </ExternalLink>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

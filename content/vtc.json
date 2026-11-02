@@ -1,0 +1,34 @@
+{
+  "name": "Quper Simulator",
+  "headline": "Присоединяйся к Quper Simulator",
+  "tagline": "Весь мир у наших колёс!",
+  "description": [
+    "Мы — дружная команда водителей, увлечённых реалистичным вождением.",
+    "Независимо от опыта — будь ты новичок или бывалый дальнобойщик — тебя ждут интересные рейсы, совместные конвои и атмосфера настоящего товарищества."
+  ],
+  "benefits": [
+    "Мы любим путешествовать так, как это делают настоящие водители.",
+    "У нас нет обязательных перекрасок, минимальных пробегов или строгих графиков.",
+    "У компании есть свои онлайн-серверы ETS2 и ATS."
+  ],
+  "closing": "Всё ради удовольствия от дороги и общения!",
+  "games": ["ets2", "ats"],
+  "links": [
+    { "platform": "discord", "label": "Discord", "url": "https://discord.gg/w59wuyca4F" },
+    {
+      "platform": "vtcbase",
+      "label": "VTCBase",
+      "url": "https://vtcbase.com/ru/empresa/quper-simulator"
+    },
+    {
+      "platform": "vtcpanel",
+      "label": "VTCPanel",
+      "url": "https://vtcpanel.com/company29839"
+    },
+    {
+      "platform": "trucky",
+      "label": "Trucky",
+      "url": "https://hub.truckyapp.com/vtc/quper-simulator"
+    }
+  ]
+}

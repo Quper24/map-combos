@@ -1,0 +1,54 @@
+[
+  {
+    "id": "mega-map-combo-161",
+    "title": "Mega Map Combo 1.61 | Самая большая сборка карт для ETS2 | Установка, порядок модов, инструкция.",
+    "game": "ets2",
+    "category": "combos",
+    "thumbnail": "/img/videos/mega-map-combo-161.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/UN_AP_mfO7E",
+      "rutube": "https://rutube.ru/video/900928fed628c9714efb94a20d1e9c66/"
+    },
+    "relatedComboIds": ["mega-map-161", "mega-boosty-map-161"],
+    "relatedModIds": []
+  },
+  {
+    "id": "quper-map-combo-161",
+    "title": "Quper Map Combo 1.61! ЛУЧШАЯ сборка карт ETS2! Обзор, установка и настройка",
+    "game": "ets2",
+    "category": "combos",
+    "thumbnail": "/img/videos/quper-map-combo-161.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/b4MkBuYCIYE",
+      "rutube": "https://rutube.ru/video/41f327b0cdee9ce5c16ff1e6e4aed048/"
+    },
+    "relatedComboIds": ["quper-map-161"],
+    "relatedModIds": []
+  },
+  {
+    "id": "best-mods-combo-161",
+    "title": "BEST MODS COMBO для ETS2 1.61 | ЛУЧШИЕ МОДЫ в одной сборке | 200+ модификаций",
+    "game": "ets2",
+    "category": "combos",
+    "thumbnail": "/img/videos/best-mods-combo-161.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/S-riR1Sx1Ek",
+      "rutube": "https://rutube.ru/video/ef2cc16e46ba5a06d48f71cf2a7418b7/"
+    },
+    "relatedComboIds": ["ets2-mod-combo-161", "ets2-mods-packed-combo-161"],
+    "relatedModIds": []
+  },
+  {
+    "id": "cargo-control",
+    "title": "ФРИЗЫ с собственным прицепом в ETS2? Решение есть! | Cargo Control",
+    "game": "ets2",
+    "category": "mods",
+    "thumbnail": "/img/videos/cargo-control.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/-bIOj-NlPD8",
+      "rutube": "https://rutube.ru/video/private/3e95a6984b82135ecde61582c4823353/?p=XlYoJF4RIjZ5Nf3x-gNUbQ"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": []
+  }
+]

@@ -1,0 +1,30 @@
+# Review existing sites, TLS configuration and occupied ports before enabling.
+# This is an example, not an instruction to replace the current nginx.conf.
+server {
+    listen 80;
+    server_name qupersimulator.ru www.qupersimulator.ru;
+    root /var/www/qupersimulator/current;
+    index index.html;
+
+    location /assets/ {
+        try_files $uri =404;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location ~* \.(jpg|jpeg|png|webp|svg|ico|txt|webmanifest)$ {
+        try_files $uri =404;
+        add_header Cache-Control "public, max-age=0, must-revalidate";
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+        add_header Cache-Control "no-cache";
+    }
+
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+}
+
+# Configure HTTPS using the server's actual certificate setup before production.
+# Reuse any existing proxy for api.qupersimulator.ru; it is used by profile decoding.
+# Game services and ports must remain unchanged.

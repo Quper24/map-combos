@@ -1,0 +1,19 @@
+{
+  "name": "Quper Simulator",
+  "domain": "https://qupersimulator.ru",
+  "currentGameVersion": "1.61",
+  "socialLinks": [
+    { "platform": "youtube", "label": "YouTube", "url": "https://youtube.com/@qupersimulator" },
+    { "platform": "rutube", "label": "Rutube", "url": "https://rutube.ru/channel/13186533/" },
+    { "platform": "twitch", "label": "Twitch", "url": "https://www.twitch.tv/QuperSimulator" },
+    { "platform": "vk", "label": "VK Видео", "url": "https://live.vkvideo.ru/qupersimulator" },
+    { "platform": "telegram", "label": "Telegram", "url": "https://t.me/QuperSimulator" },
+    {
+      "platform": "telegram-chat",
+      "label": "Telegram-чат",
+      "url": "https://t.me/QuperSimulatorChat"
+    },
+    { "platform": "discord", "label": "Discord", "url": "https://discord.gg/w59wuyca4F" },
+    { "platform": "boosty", "label": "Boosty", "url": "https://boosty.to/qupersimulator" }
+  ]
+}

@@ -1,39 +1,23 @@
-import "./imageBlock.css";
-
-export const ImageBlock = ({
-  top,
-  bottom,
-  center = "img/combos/center.jpg",
-}) => (
-  <div className="image-gallery">
-    <div className="gallery-container">
-      {top && (
-        <div className="gallery-item">
-          <img
-            src={top}
-            alt="Верхняя часть списка модов"
-            className="gallery-image"
-          />
-        </div>
-      )}
-      {center && (
-        <div className="gallery-item">
-          <img
-            src={center}
-            alt="Центральная часть списка модов"
-            className="gallery-image"
-          />
-        </div>
-      )}
-      {bottom && (
-        <div className="gallery-item">
-          <img
-            src={bottom}
-            alt="Нижняя часть списка модов"
-            className="gallery-image"
-          />
-        </div>
-      )}
-    </div>
+import { assetUrl } from '../../lib/content';
+import s from './ImageBlock.module.css';
+export const ImageBlock = ({ top, bottom, center = 'img/combos/center.jpg' }) => (
+  <div className={s.gallery}>
+    {[
+      [top, 'Верхняя часть'],
+      [center, 'Центральная часть'],
+      [bottom, 'Нижняя часть'],
+    ]
+      .filter(([src]) => src)
+      .map(([src, label]) => (
+        <a
+          key={label}
+          href={assetUrl(src)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${label} порядка модов — открыть в полном размере`}
+        >
+          <img src={assetUrl(src)} alt={`${label} списка модов`} loading="lazy" decoding="async" />
+        </a>
+      ))}
   </div>
 );
