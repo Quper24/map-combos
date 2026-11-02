@@ -1,33 +1,47 @@
-name: Deploy to GitHub Pages
+name: Deploy website to Linux
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quper-production
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: "22"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          # Важно: используем github_token вместо deploy_key
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          cname: qupersimulator.ru
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Test deployment validation and rollback
+        run: python3 -m unittest discover -s deploy -p 'test_publish_site.py'
+      - name: Prepare SSH
+        env:
+          SSH_KEY: ${{ secrets.SITE_DEPLOY_KEY }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/quper-site
+          chmod 600 ~/.ssh/quper-site
+          cp deploy/ssh_known_hosts ~/.ssh/known_hosts
+      - name: Publish site atomically
+        env:
+          DEPLOY_HOST: 176.12.65.63
+        run: |
+          tar -czf "$RUNNER_TEMP/site.tar.gz" -C dist .
+          ssh -i ~/.ssh/quper-site -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=20 -o ServerAliveInterval=15 \
+            "quper-deploy@$DEPLOY_HOST" "publish $GITHUB_SHA" < "$RUNNER_TEMP/site.tar.gz"
+      - name: Remove temporary key
+        if: always()
+        run: rm -f ~/.ssh/quper-site
