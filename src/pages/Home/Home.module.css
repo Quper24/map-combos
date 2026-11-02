@@ -1,6 +1,6 @@
 .hero {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 64px;
   align-items: center;
   padding: 76px 0 66px;
@@ -11,7 +11,7 @@
   position: absolute;
   z-index: -1;
   top: -60px;
-  right: -30px;
+  right: 0;
   width: 65%;
   height: 600px;
   background: radial-gradient(ellipse, #7c9a5912, transparent 65%);
@@ -47,12 +47,12 @@
   border-radius: 50%;
 }
 .featured {
+  min-width: 0;
   border-radius: 10px;
   background: var(--surface);
   border: 1px solid var(--line);
   overflow: hidden;
   box-shadow: 0 24px 80px #0004;
-  transform: rotate(-1deg);
   transition:
     transform 0.3s,
     border-color 0.3s;
@@ -63,32 +63,16 @@
 }
 .featuredImage {
   position: relative;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
 .featuredImage > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-.featuredBadge {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  background: #111a13dd;
-  padding: 6px 12px;
-  border: 1px solid #ffffff25;
-  border-radius: 4px;
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-.featuredBadge b {
-  color: var(--green);
+  object-fit: contain;
 }
 .featuredBottom {
+  min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,16 +100,30 @@
 }
 .directions {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-block: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 .direction {
-  padding: 30px 28px 30px 0;
-  transition: background 0.2s;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  transition:
+    background 0.2s,
+    border-color 0.2s;
 }
-.direction + .direction {
-  border-left: 1px solid var(--line);
-  padding-left: 30px;
+.direction:first-child {
+  background: var(--green-dim);
+  border-color: var(--green-line);
+}
+.direction:first-child h2 {
+  color: var(--green);
+}
+.direction:hover {
+  border-color: var(--green-line);
+  background: var(--surface-raised);
 }
 .directionTop {
   display: flex;
@@ -142,7 +140,12 @@
 .direction h2 {
   font-size: 21px;
   letter-spacing: -0.025em;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+.directionSubtitle {
+  color: var(--text);
+  font-size: 12px;
+  margin-bottom: 14px;
 }
 .direction p {
   font-size: 12px;
@@ -155,7 +158,8 @@
   align-items: center;
   gap: 18px;
   font-size: 11px;
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 .directionLink svg {
   color: var(--green);
@@ -163,6 +167,33 @@
 }
 .direction:hover .directionLink svg {
   transform: translateX(5px);
+}
+.boostyBanner {
+  margin-top: 40px;
+  padding: 30px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border: 1px solid var(--boosty-line);
+  border-radius: 8px;
+  background: var(--boosty-dim);
+}
+.boostyBanner :global(.eyebrow) {
+  color: var(--boosty);
+  margin-bottom: 14px;
+}
+.boostyBanner h2 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+.boostyBanner p {
+  font-size: 13px;
+  margin: 0;
+  max-width: 620px;
+}
+.boostyBanner > a {
+  flex-shrink: 0;
 }
 .vtcBanner {
   margin-top: 72px;
@@ -234,7 +265,7 @@
   padding-top: 42px;
   border-top: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
   align-items: center;
 }
@@ -315,18 +346,13 @@
     grid-template-columns: 1fr;
   }
   .direction {
-    padding: 24px 0;
+    padding: 24px;
     display: grid;
     grid-template-columns: 44px 1fr;
     column-gap: 16px;
   }
-  .direction + .direction {
-    padding: 24px 0;
-    border-left: 0;
-    border-top: 1px solid var(--line);
-  }
   .directionTop {
-    grid-row: 1/4;
+    grid-row: 1/5;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -343,6 +369,12 @@
   }
   .directionLink {
     margin-top: 12px;
+  }
+  .boostyBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 22px;
   }
   .vtcBanner {
     grid-template-columns: 1fr;

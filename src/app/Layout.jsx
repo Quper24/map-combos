@@ -12,6 +12,7 @@ const navigation = [
   ['/videos', 'Видео'],
 ];
 export default function Layout() {
+  const boosty = site.socialLinks.find((link) => link.platform === 'boosty');
   const [open, setOpen] = useState(false);
   const { pathname, hash } = useLocation();
   useEffect(() => {
@@ -59,9 +60,11 @@ export default function Layout() {
               </NavLink>
             ))}
           </nav>
-          <ExternalLink className={s.community} href="https://t.me/QuperSimulator">
-            Наш Telegram
-          </ExternalLink>
+          {boosty && (
+            <ExternalLink className={s.community} href={boosty.url}>
+              Boosty
+            </ExternalLink>
+          )}
           <button
             className={s.toggle}
             aria-label={open ? 'Закрыть меню' : 'Открыть меню'}

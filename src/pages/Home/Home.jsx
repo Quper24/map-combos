@@ -12,15 +12,17 @@ const directions = [
     to: '/combos',
     number: '01',
     icon: 'map',
-    title: 'Больше дорог',
-    text: 'Сборки карт ETS2 и ATS. Всё для следующего большого путешествия.',
+    title: 'Сборки карт',
+    subtitle: 'Больше дорог в ETS2 и ATS',
+    text: 'Порядок карт, ссылки и готовые профили для твоего следующего путешествия.',
     label: 'Выбрать сборку',
   },
   {
     to: '/mods',
     number: '02',
     icon: 'grid',
-    title: 'Больше возможностей',
+    title: 'Моды и плагины',
+    subtitle: 'Больше возможностей',
     text: 'Собственные моды и плагины, которые делают игру интереснее.',
     label: 'Смотреть разработки',
   },
@@ -28,12 +30,14 @@ const directions = [
     to: '/vtc',
     number: '03',
     icon: 'truck',
-    title: 'Больше, чем рейсы',
+    title: 'Наша VTC',
+    subtitle: 'Больше, чем рейсы',
     text: 'Наша VTC, совместные конвои и люди, с которыми по пути.',
     label: 'Познакомиться с VTC',
   },
 ];
 export default function Home() {
+  const boosty = site.socialLinks.find((link) => link.platform === 'boosty');
   const currentCombos = useCurrentCombos();
   const featured =
     currentCombos.find((combo) => combo.id.startsWith('quper-map-')) || currentCombos[0];
@@ -44,22 +48,24 @@ export default function Home() {
     <div className="container">
       <section className={s.hero}>
         <div className={s.heroCopy}>
-          <span className="eyebrow">Quper Simulator / ETS2 & ATS</span>
+          <span className="eyebrow">Сборки карт / ETS2 & ATS</span>
           <h1>
             Весь мир
             <br />у наших <span>колёс.</span>
           </h1>
           <p>
-            Новые маршруты, любимые симуляторы
-            <br className={s.desktopBreak} /> и компания, с которой хочется ехать дальше.
+            Сборки карт для ETS2 и ATS: новые маршруты, порядок модов и всё необходимое для
+            установки.
           </p>
           <div className="actions">
             <Link to="/combos" className="button">
-              Найти свою сборку <Icon name="arrow" size={18} />
+              Выбрать сборку карт <Icon name="arrow" size={18} />
             </Link>
-            <Link to="/vtc" className="button button-secondary">
-              Наша VTC
-            </Link>
+            {boosty && (
+              <ExternalLink href={boosty.url} className="button button-boosty">
+                Сборки на Boosty
+              </ExternalLink>
+            )}
           </div>
           <div className={s.heroNote}>
             <span /> Карты. Моды. Конвои. Одна любовь к дороге.
@@ -75,13 +81,10 @@ export default function Home() {
                 alt={featured.title}
                 fetchPriority="high"
               />
-              <span className={s.featuredBadge}>
-                ETS2 <b>{featured.version_game}</b>
-              </span>
             </div>
             <div className={s.featuredBottom}>
               <div>
-                <span className={s.smallLabel}>Открой новые маршруты</span>
+                <span className={s.smallLabel}>Сборка карт · ETS2 {featured.version_game}</span>
                 <h2>Quper Map Combo</h2>
               </div>
               <span className={s.featuredArrow}>
@@ -104,6 +107,7 @@ export default function Home() {
               <span>{item.number}</span>
             </div>
             <h2>{item.title}</h2>
+            <span className={s.directionSubtitle}>{item.subtitle}</span>
             <p>{item.text}</p>
             <span className={s.directionLink}>
               {item.label}
@@ -116,7 +120,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">Выбирай свой маршрут</span>
-            <h2>Свежие сборки</h2>
+            <h2>Актуальные сборки карт</h2>
             <p>Порядок карт, ссылки и инструкции — в одном месте.</p>
           </div>
           <Link to="/combos" className="text-link">
@@ -129,6 +133,21 @@ export default function Home() {
           ))}
         </div>
       </section>
+      {boosty && (
+        <section className={s.boostyBanner} aria-label="Сборки на Boosty">
+          <div>
+            <span className="eyebrow">Поддержи проект — открой больше</span>
+            <h2>Сборки одним архивом — на Boosty</h2>
+            <p>
+              Ранний доступ к сборкам и скачивание одним архивом. Твоя подписка помогает развивать
+              Quper Simulator.
+            </p>
+          </div>
+          <ExternalLink href={boosty.url} className="button button-boosty">
+            Перейти на Boosty
+          </ExternalLink>
+        </section>
+      )}
       <section className={s.vtcBanner}>
         <div className={s.vtcIdentity}>
           <img src="/img/logo.jpg" width="140" height="140" alt="Логотип VTC Quper Simulator" />

@@ -30,7 +30,10 @@ export default function Combo() {
       <header className={s.heading}>
         <div className={s.tags}>
           {combo.tags.map((tag) => (
-            <span key={tag} className="badge badge-green">
+            <span
+              key={tag}
+              className={`badge ${tag === 'boosty' ? 'badge-boosty' : 'badge-green'}`}
+            >
               {tagUtils.getLabel(tag)}
             </span>
           ))}

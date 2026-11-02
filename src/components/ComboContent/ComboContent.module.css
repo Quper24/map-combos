@@ -73,9 +73,6 @@
 .detailBody > img {
   border-radius: 5px;
 }
-.content :global(.auto-profile-instruction) {
-  color: var(--green);
-}
 .content :global(.toolbar-btn) {
   height: auto;
   min-height: 36px;

@@ -61,17 +61,21 @@
   background: var(--green);
 }
 .community {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--boosty-line);
+  background: var(--boosty-dim);
+  color: var(--boosty);
   border-radius: 7px;
   padding: 10px 14px;
   font-size: 12px;
 }
 .community:hover {
-  border-color: var(--green);
-  color: var(--green);
+  border-color: var(--boosty);
+  background: var(--boosty);
+  color: #2a1a10;
 }
 .toggle {
   display: none;
@@ -137,7 +141,8 @@
     gap: 18px;
   }
   .community {
-    display: none;
+    padding: 9px 11px;
+    font-size: 11px;
   }
 }
 @media (max-width: 760px) {
@@ -147,6 +152,7 @@
   }
   .brand {
     font-size: 20px;
+    margin-right: auto;
   }
   .brand img {
     width: 42px;

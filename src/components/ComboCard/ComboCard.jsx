@@ -32,7 +32,7 @@ export default function ComboCard({ combo }) {
           {combo.tags?.map((tag) => (
             <span
               key={tag}
-              className={`badge ${tag === 'boosty' ? '' : 'badge-green'}`}
+              className={`badge ${tag === 'boosty' ? 'badge-boosty' : 'badge-green'}`}
               title={tagUtils.getDescription(tag)}
             >
               {tagUtils.getLabel(tag)}

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import InstructionModal from './InstructionModal';
+import Icon from '../ui/Icon';
 import './AutoProfileInstall.css';
 
 export default function AutoProfileInstall({ combo }) {
@@ -175,9 +176,23 @@ export default function AutoProfileInstall({ combo }) {
 
   return (
     <div className="auto-profile-install">
-      <button className="auto-profile-instruction" onClick={() => setIsModalOpen(true)}>
-        📖 Инструкция
-      </button>
+      <div className="profile-instruction-callout">
+        <div className="profile-instruction-copy">
+          <span className="profile-instruction-label">Важно перед загрузкой профиля</span>
+          <strong>Сначала прочитай инструкцию</strong>
+          <p>
+            Сохрани резервную копию profile.sii и ознакомься с порядком действий перед изменением
+            профиля.
+          </p>
+        </div>
+        <button
+          className="auto-profile-instruction"
+          onClick={() => setIsModalOpen(true)}
+          aria-haspopup="dialog"
+        >
+          Прочитать инструкцию <Icon name="arrow" size={18} />
+        </button>
+      </div>
 
       <div className="auto-profile-content">
         <div className="toolbar">

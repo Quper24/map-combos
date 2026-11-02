@@ -163,6 +163,21 @@ p {
   border-color: var(--green);
   color: var(--green);
 }
+.button-boosty {
+  background: var(--boosty);
+  color: #2a1a10;
+  border-color: var(--boosty);
+}
+.button-boosty:hover {
+  background: var(--boosty-bright);
+  color: #2a1a10;
+  border-color: var(--boosty-bright);
+}
+.badge.badge-boosty {
+  color: var(--boosty);
+  border-color: var(--boosty-line);
+  background: var(--boosty-dim);
+}
 .text-link {
   display: inline-flex;
   gap: 10px;

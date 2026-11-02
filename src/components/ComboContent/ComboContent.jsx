@@ -32,7 +32,10 @@ export default function ComboContent({ combo }) {
             </ExternalLink>
           )}
           {combo.profile && <ExternalLink href={combo.profile}>Готовый профиль</ExternalLink>}
-          <ExternalLink href="https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7">
+          <ExternalLink
+            className="button button-boosty"
+            href="https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7"
+          >
             Сборка одним архивом · Boosty
           </ExternalLink>
         </div>
