@@ -114,8 +114,26 @@ for (const mod of mods) {
   for (const link of mod.links || []) url(link.url, `${mod.id}.${link.platform}`);
   for (const id of mod.videoIds || []) check(videoIds.has(id), `${mod.id}: missing video ${id}`);
 }
+const platformIds = { youtube: new Set(), rutube: new Set() };
 for (const video of videos) {
   check(typeof video.game === 'string' && video.game.length, `${video.id}: game missing`);
+  if (video.games !== undefined) {
+    check(
+      Array.isArray(video.games) &&
+        video.games.length > 0 &&
+        video.games.every((game) => typeof game === 'string' && game.length > 0) &&
+        video.games.includes(video.game),
+      `${video.id}: invalid games`,
+    );
+  }
+  if (video.publishedAt !== undefined) {
+    check(
+      typeof video.publishedAt === 'string' &&
+        /^\d{4}-\d{2}-\d{2}(?:T.*(?:Z|[+-]\d{2}:\d{2}))?$/.test(video.publishedAt) &&
+        Number.isFinite(Date.parse(video.publishedAt)),
+      `${video.id}: expected ISO publication date with timezone`,
+    );
+  }
   check(
     ['combos', 'mods', 'drives', 'guides', 'games'].includes(video.category),
     `${video.id}: category missing`,
@@ -129,7 +147,24 @@ for (const video of videos) {
       ['youtube', 'rutube'].includes(platform),
       `${video.id}: unsupported platform ${platform}`,
     );
-    if (value) url(value, `${video.id}.${platform}`);
+    if (value) {
+      url(value, `${video.id}.${platform}`);
+      try {
+        const source = new URL(value);
+        const id =
+          platform === 'youtube'
+            ? source.hostname === 'youtu.be'
+              ? source.pathname.slice(1)
+              : source.searchParams.get('v')
+            : source.pathname.split('/').filter(Boolean).at(-1);
+        if (platformIds[platform] && id) {
+          check(!platformIds[platform].has(id), `${video.id}: duplicate ${platform} video ${id}`);
+          platformIds[platform].add(id);
+        }
+      } catch {
+        /* URL errors are reported above. */
+      }
+    }
   }
   await image(video.thumbnail, `${video.id}.thumbnail`);
   for (const id of video.relatedComboIds || []) {

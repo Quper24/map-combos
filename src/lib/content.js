@@ -1,4 +1,7 @@
-import videos from '../../content/videos.json';
+import videoRecords from '../../content/videos.json';
+import { sortVideos } from './videoCatalog';
+export { videoGames, sortVideos, formatVideoDate } from './videoCatalog';
+const videos = sortVideos(videoRecords);
 export const VIDEO_CATEGORIES = {
   combos: 'Сборки',
   mods: 'Моды и плагины',
@@ -6,7 +9,7 @@ export const VIDEO_CATEGORIES = {
   guides: 'Инструкции',
   games: 'Другие игры',
 };
-export const GAME_NAMES = { ets2: 'ETS2', ats: 'ATS' };
+export const GAME_NAMES = { ets2: 'ETS2', ats: 'ATS', 'transport-fever-3': 'Transport Fever 3' };
 export function assetUrl(value) {
   return value && !/^(https?:\/\/|\/)/.test(value) ? `/${value}` : value;
 }

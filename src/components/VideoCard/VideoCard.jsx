@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GAME_NAMES, VIDEO_CATEGORIES } from '../../lib/content';
+import { GAME_NAMES, VIDEO_CATEGORIES, videoGames, formatVideoDate } from '../../lib/content';
 import ExternalLink from '../ui/ExternalLink';
 import Icon from '../ui/Icon';
 import s from './VideoCard.module.css';
@@ -23,8 +23,15 @@ export default function VideoCard({ video, showRelations = false }) {
       </div>
       <div className={s.body}>
         <div className={s.meta}>
-          <span>{GAME_NAMES[video.game] || video.game}</span>
+          <span>
+            {videoGames(video)
+              .map((game) => GAME_NAMES[game] || game)
+              .join(' / ')}
+          </span>
           <span>{VIDEO_CATEGORIES[video.category] || video.category}</span>
+          {video.publishedAt && (
+            <time dateTime={video.publishedAt}>{formatVideoDate(video.publishedAt)}</time>
+          )}
         </div>
         <h3>{video.title}</h3>
         {showRelations && video.relatedComboIds.length > 0 && (

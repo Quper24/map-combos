@@ -1,20 +1,102 @@
 [
   {
-    "id": "mega-map-combo-161",
-    "title": "Mega Map Combo 1.61 | Самая большая сборка карт для ETS2 | Установка, порядок модов, инструкция.",
+    "id": "cargo-control",
+    "title": "ФРИЗЫ с собственным прицепом в ETS2? Решение есть! | Cargo Control",
     "game": "ets2",
-    "category": "combos",
-    "thumbnail": "/img/videos/mega-map-combo-161.jpg",
+    "category": "mods",
+    "thumbnail": "/img/videos/cargo-control.jpg",
     "platforms": {
-      "youtube": "https://youtu.be/UN_AP_mfO7E",
-      "rutube": "https://rutube.ru/video/900928fed628c9714efb94a20d1e9c66/"
+      "youtube": "https://youtu.be/-bIOj-NlPD8",
+      "rutube": "https://rutube.ru/video/private/3e95a6984b82135ecde61582c4823353/?p=XlYoJF4RIjZ5Nf3x-gNUbQ"
     },
-    "relatedComboIds": ["mega-map-161", "mega-boosty-map-161"],
-    "relatedModIds": []
+    "relatedComboIds": [],
+    "relatedModIds": ["cargo-control-ets2"],
+    "publishedAt": "2026-11-01T16:13:12.000Z"
+  },
+  {
+    "id": "ets2-s11e16",
+    "game": "ets2",
+    "category": "drives",
+    "thumbnail": "/img/videos/ets2-s11e16.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/74RgVI_PpFs"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "ETS2 | ЭТА ПОЕЗДКА ПОШЛА НЕ ПО ПЛАНУ! Mercedes MP3 и карта Beyond | S11E16",
+    "publishedAt": "2026-10-30T15:00:05.000Z"
+  },
+  {
+    "id": "ets2-s11e15",
+    "game": "ets2",
+    "category": "drives",
+    "thumbnail": "/img/videos/ets2-s11e15.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/EQ7GYYOmUf0"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "ETS2 1.61 | На MAN в Иран по карте Beyond | S11E15",
+    "publishedAt": "2026-10-28T15:00:21.000Z"
+  },
+  {
+    "id": "transport-fever-3-hard-01",
+    "game": "transport-fever-3",
+    "category": "games",
+    "thumbnail": "/img/videos/transport-fever-3-hard-01.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/jUm1_rfpxVw",
+      "rutube": "https://rutube.ru/video/73f15b9ba137c35014099e233c9f131a/"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "Transport Fever 3 на МАКСИМАЛЬНОЙ сложности! Первые поезда и перевозки #1",
+    "publishedAt": "2026-10-27T16:41:57.000Z"
+  },
+  {
+    "id": "ets2-s11e14",
+    "game": "ets2",
+    "category": "drives",
+    "thumbnail": "/img/videos/ets2-s11e14.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/6jSowYzXJ1k"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "ETS2 1.61 | Обновлённая мега-сборка карт и реалистичная доставка по Кавказу | S11E14",
+    "publishedAt": "2026-10-21T15:15:03.000Z"
+  },
+  {
+    "id": "transport-fever-3-03",
+    "game": "transport-fever-3",
+    "category": "games",
+    "thumbnail": "/img/videos/transport-fever-3-03.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/gdAyWyIGT7c"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "Transport Fever 3 | Спасаем Владивосток! Нефть, топливо и новые поезда | #3",
+    "publishedAt": "2026-10-20T16:24:49.000Z"
+  },
+  {
+    "id": "vtcbase-overview",
+    "game": "ets2",
+    "games": ["ets2", "ats"],
+    "category": "guides",
+    "thumbnail": "/img/videos/vtcbase-overview.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/5RFDW_9uH9k",
+      "rutube": "https://rutube.ru/video/54490cecb8a070499025512bb972750f/"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "Как играть в ETS2 и ATS вместе? Обзор VTCBase и нашей компании",
+    "publishedAt": "2026-10-19T15:00:30.000Z"
   },
   {
     "id": "quper-map-combo-161",
-    "title": "Quper Map Combo 1.61! ЛУЧШАЯ сборка карт ETS2! Обзор, установка и настройка",
+    "title": "ETS2 1.61 | Quper Map Combo: огромная сборка карт России и Европы + установка",
     "game": "ets2",
     "category": "combos",
     "thumbnail": "/img/videos/quper-map-combo-161.jpg",
@@ -23,7 +105,34 @@
       "rutube": "https://rutube.ru/video/41f327b0cdee9ce5c16ff1e6e4aed048/"
     },
     "relatedComboIds": ["quper-map-161"],
-    "relatedModIds": []
+    "relatedModIds": [],
+    "publishedAt": "2026-10-15T16:18:16.000Z"
+  },
+  {
+    "id": "ets2-s11e13",
+    "game": "ets2",
+    "category": "drives",
+    "thumbnail": "/img/videos/ets2-s11e13.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/BOUu_7h-qNY"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "ETS2 #13 | Из Турции на Кавказ | Дуб Кутузова, новости SCS | 11 сезон",
+    "publishedAt": "2026-10-08T15:00:00.000Z"
+  },
+  {
+    "id": "transport-fever-3-02",
+    "game": "transport-fever-3",
+    "category": "games",
+    "thumbnail": "/img/videos/transport-fever-3-02.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/SZ9uKGcXD-s"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "title": "Transport Fever 3 | Строим большую транспортную сеть | #2",
+    "publishedAt": "2026-10-06T15:55:13.000Z"
   },
   {
     "id": "best-mods-combo-161",
@@ -36,19 +145,35 @@
       "rutube": "https://rutube.ru/video/ef2cc16e46ba5a06d48f71cf2a7418b7/"
     },
     "relatedComboIds": ["ets2-mod-combo-161", "ets2-mods-packed-combo-161"],
-    "relatedModIds": []
+    "relatedModIds": [],
+    "publishedAt": "2026-10-02T05:25:42.000Z"
   },
   {
-    "id": "cargo-control",
-    "title": "ФРИЗЫ с собственным прицепом в ETS2? Решение есть! | Cargo Control",
+    "id": "russia-map-combos-161",
     "game": "ets2",
-    "category": "mods",
-    "thumbnail": "/img/videos/cargo-control.jpg",
+    "category": "combos",
+    "relatedComboIds": ["gold-russia-map-161", "bigrussia-map-161"],
+    "thumbnail": "/img/videos/russia-map-combos-161.jpg",
     "platforms": {
-      "youtube": "https://youtu.be/-bIOj-NlPD8",
-      "rutube": "https://rutube.ru/video/private/3e95a6984b82135ecde61582c4823353/?p=XlYoJF4RIjZ5Nf3x-gNUbQ"
+      "youtube": "https://youtu.be/uuY3gUV6k70",
+      "rutube": "https://rutube.ru/video/e81e9688a792720e380950f33c66c5f0/"
     },
-    "relatedComboIds": [],
-    "relatedModIds": ["cargo-control-ets2"]
+    "relatedModIds": [],
+    "title": "ETS2 1.61 | GOLD RUSSIA или BIG RUSSIA | Лучшие сборки карт России!",
+    "publishedAt": "2026-09-24T06:00:13.000Z"
+  },
+  {
+    "id": "mega-map-combo-161",
+    "title": "ETS2 1.61 | MEGA MAP COMBO | Самая большая сборка карт для Euro Truck Simulator 2",
+    "game": "ets2",
+    "category": "combos",
+    "thumbnail": "/img/videos/mega-map-combo-161.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/UN_AP_mfO7E",
+      "rutube": "https://rutube.ru/video/900928fed628c9714efb94a20d1e9c66/"
+    },
+    "relatedComboIds": ["mega-map-161", "mega-boosty-map-161"],
+    "relatedModIds": [],
+    "publishedAt": "2026-09-22T16:27:39.000Z"
   }
 ]

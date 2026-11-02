@@ -8,6 +8,7 @@ export default function Mods() {
   const [query, setQuery] = useState('');
   const [type, setType] = useState('all');
   const [game, setGame] = useState('all');
+  const games = [...new Set(mods.flatMap((mod) => mod.games))];
   const result = mods.filter(
     (mod) =>
       (!query || `${mod.title} ${mod.summary}`.toLowerCase().includes(query.toLowerCase())) &&
@@ -52,9 +53,9 @@ export default function Mods() {
         </div>
         <select aria-label="Игра" value={game} onChange={(event) => setGame(event.target.value)}>
           <option value="all">Все игры</option>
-          {Object.entries(GAME_NAMES).map(([id, name]) => (
+          {games.map((id) => (
             <option key={id} value={id}>
-              {name}
+              {GAME_NAMES[id] || id}
             </option>
           ))}
         </select>

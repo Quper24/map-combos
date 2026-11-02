@@ -73,11 +73,16 @@
 }
 .meta {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   color: var(--green);
   font-size: 10px;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
+}
+.meta time {
+  color: var(--muted);
+  white-space: nowrap;
 }
 .meta span + span {
   color: var(--muted);

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { videos, GAME_NAMES, VIDEO_CATEGORIES } from '../../lib/content';
+import { videos, GAME_NAMES, VIDEO_CATEGORIES, videoGames, sortVideos } from '../../lib/content';
 import VideoCard from '../../components/VideoCard/VideoCard';
 import Icon from '../../components/ui/Icon';
 import s from './Videos.module.css';
@@ -7,12 +7,16 @@ export default function Videos() {
   const [category, setCategory] = useState('all');
   const [game, setGame] = useState('all');
   const [query, setQuery] = useState('');
-  const games = [...new Set(videos.map((video) => video.game))];
-  const result = videos.filter(
-    (video) =>
-      (category === 'all' || video.category === category) &&
-      (game === 'all' || video.game === game) &&
-      video.title.toLowerCase().includes(query.toLowerCase()),
+  const [sort, setSort] = useState('newest');
+  const games = [...new Set(videos.flatMap(videoGames))];
+  const result = sortVideos(
+    videos.filter(
+      (video) =>
+        (category === 'all' || video.category === category) &&
+        (game === 'all' || videoGames(video).includes(game)) &&
+        video.title.toLowerCase().includes(query.toLowerCase()),
+    ),
+    sort,
   );
   return (
     <div className="container page">
@@ -46,6 +50,14 @@ export default function Videos() {
                 {GAME_NAMES[id] || id}
               </option>
             ))}
+          </select>
+          <select
+            aria-label="Сортировка видео"
+            value={sort}
+            onChange={(event) => setSort(event.target.value)}
+          >
+            <option value="newest">Сначала новые</option>
+            <option value="oldest">Сначала старые</option>
           </select>
         </div>
         <div className="filter-chips">
