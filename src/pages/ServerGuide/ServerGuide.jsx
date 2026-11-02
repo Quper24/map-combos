@@ -1,13 +1,42 @@
-// C:\Quper-projects\map-combos\src\pages\ServerGuide\ServerGuide.jsx
+import { Link } from 'react-router-dom';
+import servers from '../../../content/servers.json';
+import ServerList from '../../components/ServerList/ServerList';
 import './serverGuide.css';
 
 export default function ServerGuide() {
+  const ets2Combo = servers.find((group) => group.game === 'ets2').combo;
+  const atsCombo = servers.find((group) => group.game === 'ats').combo;
   return (
     <div className="container server-guide-container">
+      <nav className="breadcrumb" aria-label="Хлебные крошки">
+        <Link to="/vtc">Наша VTC</Link>
+        <span>/</span>
+        <span>Подключение к серверам</span>
+      </nav>
       <header className="guide-header">
-        <h1>SERVER ETS2 / ATS SETTING</h1>
-        <p>Инструкция по подключению к серверу Quper Simulator</p>
+        <span className="eyebrow">Quper Simulator / ETS2 &amp; ATS</span>
+        <h1>Как подключиться к нашим серверам</h1>
+        <p>
+          Выбери один из четырёх серверов, подготовь моды и найди сессию в меню «Конвои». Для каждой
+          игры установи соответствующую серверную сборку из списка ниже.
+        </p>
+        <div className="actions">
+          <a className="button" href="#connect">
+            Перейти к инструкции
+          </a>
+          <Link className="button button-secondary" to={`/combos/${ets2Combo.id}`}>
+            Сборка и порядок карт ETS2
+          </Link>
+          <Link className="button button-secondary" to={`/combos/${atsCombo.id}`}>
+            Сборка и порядок карт ATS
+          </Link>
+        </div>
       </header>
+
+      <section aria-labelledby="server-list-heading">
+        <h2 id="server-list-heading">Серверы и параметры подключения</h2>
+        <ServerList />
+      </section>
 
       <section>
         <h2>Видеоинструкции</h2>
@@ -58,14 +87,23 @@ export default function ServerGuide() {
         </div>
       </section>
 
-      <section>
+      <section id="connect">
         <h2>Подключение к серверу</h2>
 
         <div className="steps">
           <div className="step">
             <h3>1. Подготовка модов</h3>
             <ol>
-              <li>Скачайте модпак, необходимый для игры на сервере.</li>
+              <li>
+                Для любого из двух серверов ETS2 установите{' '}
+                <Link to={`/combos/${ets2Combo.id}`}>{ets2Combo.label}</Link>. На странице сборки
+                находятся ссылки, профиль и порядок карт и модов.
+              </li>
+              <li>
+                Для любого из двух серверов ATS установите{' '}
+                <Link to={`/combos/${atsCombo.id}`}>{atsCombo.label}</Link>. Используйте сборку для
+                выбранной игры.
+              </li>
               <li>При желании скачайте дополнительные необязательные модификации.</li>
               <li>
                 Переместите все файлы модов (.scs) в папку:
@@ -84,6 +122,7 @@ export default function ServerGuide() {
           <div className="step">
             <h3>2. Настройка конфигурационного файла</h3>
             <ol>
+              <li>Полностью закройте игру и сохраните копию config.cfg перед изменением.</li>
               <li>
                 Откройте файл:
                 <ul>
@@ -99,39 +138,39 @@ export default function ServerGuide() {
                 Найдите и измените параметры:
                 <ul>
                   <li>
-                    <code>uset g_max_convoy_size "8" → "128"</code>
+                    <code>uset g_max_convoy_size "128"</code>
                   </li>
                   <li>
-                    <code>uset r_buffer_page_size "10" → "30"</code>
+                    <code>uset r_buffer_page_size "30"</code>
                   </li>
                 </ul>
               </li>
               <li>Сохраните файл.</li>
             </ol>
-            <p className="note">Без этих изменений игра будет вылетать при использовании модов!</p>
+            <p className="note">
+              Это настройки из нашей инструкции для серверной игры и сборки. Меняйте значения
+              существующих строк, сохраняя кавычки.
+            </p>
           </div>
 
           <div className="step">
             <h3>3. Подключение в игре</h3>
             <ol>
               <li>Запустите игру и нажмите "Продолжить карьеру".</li>
-              <li>Перейдите в меню Конвои → Конвои.</li>
+              <li>Перейдите в меню «Конвои» и откройте список сессий.</li>
               <li>Дождитесь загрузки списка серверов.</li>
               <li>
-                В поиске слева введите <code>quper</code> и нажмите <code>Enter</code>.
+                Скопируйте сессию нужного сервера из блока выше целиком, вместе с частью после косой
+                черты. Вставьте её в поле поиска и нажмите <code>Enter</code>.
               </li>
               <li>
-                Выберите сервер:
-                <ul>
-                  <li>
-                    <strong>ETS2:</strong> Quper Simulator ETS2
-                  </li>
-                  <li>
-                    <strong>ATS:</strong> Quper Simulator ATS
-                  </li>
-                </ul>
+                Если ищете по названию, введите <code>quper</code> и сверьте полное имя с карточкой
+                выбранного сервера. Для каждой игры доступны два сервера.
               </li>
-              <li>Дождитесь, пока игра проверит моды, и нажмите "Активировать моды сессии".</li>
+              <li>
+                Проверьте совместимость версии игры, DLC и обязательных модов. Дождитесь проверки
+                модов и нажмите «Активировать моды сессии».
+              </li>
               <li>Нажмите "Присоединиться к Конвою".</li>
               <li>
                 Если всё сделано правильно, вы окажетесь в Конвое и увидите других игроков на карте.
@@ -142,22 +181,20 @@ export default function ServerGuide() {
 
         <div className="note">
           <h3>Порядок модов в игре</h3>
-          <p>Следуйте схеме ниже для правильного расположения модов:</p>
+          <p>
+            Для каждой игры используется своя общая сборка на обоих серверах. Расставьте карты и
+            моды по соответствующей схеме сверху вниз.
+          </p>
           <ul className="mod-order-links">
             <li>
-              <a href="/combos?tag=server&tag=ets2" className="mod-link">
-                Порядок server ETS2 Promods
-              </a>
+              <Link to={`/combos/${ets2Combo.id}`} className="mod-link">
+                {ets2Combo.label} — сборка и порядок загрузки
+              </Link>
             </li>
             <li>
-              <a href="/combos?version=1.57&tag=server&tag=ets2" className="mod-link">
-                Порядок server ETS2 Contracts (без карт)
-              </a>
-            </li>
-            <li>
-              <a href="/combos?tag=server&tag=ats" className="mod-link">
-                Порядок server ATS
-              </a>
+              <Link to={`/combos/${atsCombo.id}`} className="mod-link">
+                {atsCombo.label} — сборка и порядок загрузки
+              </Link>
             </li>
           </ul>
         </div>
@@ -356,16 +393,33 @@ export default function ServerGuide() {
         </p>
         <p>Спасибо тебе, ты лучший! Без тебя этот проект не достиг бы такого уровня.</p>
 
+        <h3>AlfachLTU (Эдгар)</h3>
+        <p>
+          Спасибо за помощь в выборе карт и модификаций, подготовку опциональных модов и
+          тестирование сборок. Твои советы и внимание к деталям помогают делать наши сборки
+          продуманнее и удобнее для совместных рейсов.
+        </p>
+
+        <h3>Genanadii (Гена)</h3>
+        <p>
+          Спасибо за улучшение карт, создание коннекторов, скинов и модов, за тестирование и помощь
+          проекту. За этими доработками — большой труд, который делает наши маршруты интереснее, а
+          поездки приятнее.
+        </p>
+
         <p>
           Также огромное спасибо многим другим ребятам, которые помогали советами, тестами и
           подсказками на разных этапах.
         </p>
-        <p>Ваша поддержка вдохновляет и делает сообщество Quper Simulator дружным и живым!</p>
+        <p className="acknowledgments-closing">
+          Ваша поддержка вдохновляет и делает сообщество Quper Simulator дружным и живым!
+        </p>
       </section>
 
       <footer className="guide-footer">
-        <p>Quper Simulator — Сервер для Euro Truck Simulator 2 и American Truck Simulator</p>
-        <p>Инструкция актуальна для версий игры 1.57 - 1.58</p>
+        <p>Quper Simulator — серверы Euro Truck Simulator 2 и American Truck Simulator</p>
+        <p>Актуальные имена серверов и сессии указаны в начале инструкции.</p>
+        <Link to="/vtc">Вернуться на страницу VTC →</Link>
       </footer>
     </div>
   );

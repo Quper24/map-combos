@@ -3,6 +3,7 @@ import { assetUrl } from '../../lib/content';
 import { tagUtils } from '../../utils/tags';
 import useFavorites from '../hooks/useFavorites';
 import Icon from '../ui/Icon';
+import ExternalLink from '../ui/ExternalLink';
 import s from './ComboCard.module.css';
 
 export default function ComboCard({ combo }) {
@@ -51,6 +52,11 @@ export default function ComboCard({ combo }) {
         <Link className={s.open} to={`/combos/${combo.id}`}>
           Открыть сборку <Icon name="arrow" size={17} />
         </Link>
+        {combo.boosty && (
+          <ExternalLink className={s.boosty} href={combo.boosty}>
+            Сборка на Boosty
+          </ExternalLink>
+        )}
       </div>
     </article>
   );

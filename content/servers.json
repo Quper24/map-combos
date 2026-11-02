@@ -1,0 +1,42 @@
+[
+  {
+    "game": "ets2",
+    "title": "Euro Truck Simulator 2",
+    "combo": {
+      "id": "ets2-server-map-161",
+      "label": "ETS2 CONVOY MAIN COMBO"
+    },
+    "servers": [
+      {
+        "id": "ets2-main",
+        "name": "Quper Simulator ETS2 Main",
+        "sessionId": "85568392936882219/101"
+      },
+      {
+        "id": "ets2-vtcbase",
+        "name": "Quper Simulator | v1.61 | MAIN SERVER | VTCBase.com",
+        "sessionId": "85568392936116599/141"
+      }
+    ]
+  },
+  {
+    "game": "ats",
+    "title": "American Truck Simulator",
+    "combo": {
+      "id": "ats-server-map-161",
+      "label": "ATS CONVOY COMBO"
+    },
+    "servers": [
+      {
+        "id": "ats-main",
+        "name": "Quper Simulator",
+        "sessionId": "85568392936882222/105"
+      },
+      {
+        "id": "ats-vtcbase",
+        "name": "Quper Simulator | v1.61 | MAIN SERVER | VTCBase.com",
+        "sessionId": "85568392936116601/147"
+      }
+    ]
+  }
+]

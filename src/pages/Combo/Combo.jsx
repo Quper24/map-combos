@@ -66,9 +66,14 @@ export default function Combo() {
         <div>
           <ComboContent combo={combo} />
         </div>
-        <section className={s.order} id="map-order">
+        <section
+          className={s.order}
+          id="map-order"
+          tabIndex={0}
+          aria-labelledby="map-order-heading"
+        >
           <span className="eyebrow">Менеджер модификаций</span>
-          <h2>Порядок карт и модов</h2>
+          <h2 id="map-order-heading">Порядок карт и модов</h2>
           <p>
             Расставь модификации в том же порядке, сверху вниз. Изображение можно открыть в полном
             размере.

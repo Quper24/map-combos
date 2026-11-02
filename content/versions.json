@@ -19,6 +19,7 @@
   },
   "1.59": {
     "id": "1.59",
+    "boostyUrl": "https://boosty.to/qupersimulator/posts/e95fc2f9-303b-43af-a582-25b6e24baebf",
     "label": "1.59",
     "status": "legacy",
     "releaseDate": "2026-05-12",
@@ -28,6 +29,7 @@
   },
   "1.60": {
     "id": "1.60",
+    "boostyUrl": "https://boosty.to/qupersimulator/posts/74db1223-4ff7-4ac6-8582-808720f23992",
     "label": "1.60",
     "status": "legacy",
     "releaseDate": "2026-06-18",
@@ -37,6 +39,7 @@
   },
   "1.61": {
     "id": "1.61",
+    "boostyUrl": "https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7",
     "label": "1.61",
     "status": "current",
     "releaseDate": "2026-09-17",

@@ -53,6 +53,12 @@
 .server-guide-container a {
   color: var(--green);
 }
+.server-guide-container .button {
+  color: var(--ink);
+}
+.server-guide-container .button-secondary {
+  color: var(--text);
+}
 .server-guide-container code {
   background: var(--background);
   padding: 3px 6px;
@@ -96,6 +102,9 @@
 .server-guide-container .acknowledgments {
   border-top: 1px solid var(--line);
   padding-top: 20px;
+}
+.server-guide-container .acknowledgments-closing {
+  margin-top: 32px;
 }
 .guide-footer {
   color: var(--muted);

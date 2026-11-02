@@ -30,6 +30,12 @@ const paths = {
   close: <path d="m6 6 12 12M6 18 18 6" />,
   star: <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" />,
   check: <path d="m5 12 4 4L19 6" />,
+  copy: (
+    <>
+      <rect x="8" y="8" width="13" height="13" rx="2" />
+      <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" />
+    </>
+  ),
 };
 export default function Icon({ name = 'arrow', size = 20, ...props }) {
   return (

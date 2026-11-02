@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom';
 import vtc from '../../../content/vtc.json';
-import useCurrentCombos from '../../lib/currentCombos';
-import ComboCard from '../../components/ComboCard/ComboCard';
+import ServerList from '../../components/ServerList/ServerList';
 import ExternalLink from '../../components/ui/ExternalLink';
 import Icon from '../../components/ui/Icon';
 import s from './Vtc.module.css';
 export default function Vtc() {
-  const currentCombos = useCurrentCombos();
-  const serverCombos = currentCombos.filter((combo) => combo.tags?.includes('server'));
   return (
     <div className="container page">
       <section className={s.hero}>
@@ -47,22 +44,18 @@ export default function Vtc() {
         </div>
         <p className={s.closing}>{vtc.closing}</p>
       </section>
-      <section className="section">
+      <section className="section" id="servers">
         <div className="section-heading">
           <div>
             <span className="eyebrow">Встречаемся в конвое</span>
             <h2>Наши серверы</h2>
-            <p>Играем в ETS2 и ATS. Выбери серверную сборку и подготовься к поездке.</p>
+            <p>Четыре сервера для совместных рейсов: два в ETS2 и два в ATS.</p>
           </div>
-          <Link className="text-link" to="/server-guide">
+          <Link className="button" to="/server-guide">
             Как подключиться <Icon name="arrow" size={17} />
           </Link>
         </div>
-        <div className="card-grid">
-          {serverCombos.map((combo) => (
-            <ComboCard key={combo.id} combo={combo} />
-          ))}
-        </div>
+        <ServerList />
       </section>
       <section className={s.join}>
         <span className="eyebrow">Твой следующий рейс</span>

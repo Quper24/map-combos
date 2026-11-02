@@ -66,6 +66,24 @@
 .open svg {
   color: var(--green);
 }
+.boosty {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 11px 13px;
+  border: 1px solid var(--boosty-line);
+  border-radius: 5px;
+  background: var(--boosty-dim);
+  color: var(--boosty);
+  font-size: 12px;
+  font-weight: 600;
+}
+.boosty:hover {
+  color: var(--boosty-bright);
+  border-color: var(--boosty);
+  background: var(--surface-raised);
+}
 .favorite {
   position: absolute;
   right: 12px;

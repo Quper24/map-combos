@@ -272,7 +272,7 @@ export default function AutoProfileInstall({ combo }) {
         <div className="combo-id">combo: {combo.id}</div>
       </div>
 
-      <InstructionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <InstructionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} combo={combo} />
     </div>
   );
 }

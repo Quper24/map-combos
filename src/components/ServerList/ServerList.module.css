@@ -1,0 +1,174 @@
+.groups {
+  display: grid;
+  gap: 26px;
+}
+.group {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  background: var(--surface);
+}
+.groupHeader {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.game {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border: 1px solid var(--green-line);
+  border-radius: 8px;
+  color: var(--green);
+  background: var(--green-dim);
+  font-size: 13px;
+  font-weight: 750;
+}
+.group .title {
+  font-size: 23px;
+  margin: 0 0 5px;
+}
+.count {
+  color: var(--muted);
+  font-size: 12px;
+}
+.combo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+  border: 1px solid var(--green-line);
+  border-radius: 7px;
+  background: var(--green-dim);
+}
+.combo .comboLink {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green);
+  margin-top: 8px;
+}
+.comboLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.comboHint {
+  color: var(--muted);
+  font-size: 12px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--background);
+}
+.fields {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 22px;
+  margin: 0;
+  height: 100%;
+}
+.fieldLabel {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+.fieldValue {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 8px 0 0;
+}
+.name,
+.session {
+  user-select: all;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+.name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.session {
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 7px 9px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 10px;
+  min-height: 32px;
+  min-width: 108px;
+}
+.copy:hover {
+  color: var(--green);
+  border-color: var(--green-line);
+}
+.error {
+  color: var(--boosty);
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+.groups .hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  max-width: 680px;
+}
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .group {
+    padding: 18px;
+  }
+  .group .title {
+    font-size: 20px;
+  }
+  .groupHeader {
+    gap: 12px;
+  }
+  .game {
+    width: 46px;
+    height: 46px;
+  }
+  .card,
+  .combo {
+    padding: 15px;
+  }
+  .fieldValue {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

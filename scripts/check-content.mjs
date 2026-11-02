@@ -25,6 +25,7 @@ check(
   'Current/default metadata differs from site.json',
 );
 const vtc = await read('content/vtc.json');
+const serverGroups = await read('content/servers.json');
 const videos = await read('content/videos.json');
 const combos = [];
 for (const name of (await readdir('content/combos')).filter((name) => name.endsWith('.json'))) {
@@ -57,6 +58,46 @@ function ids(records, kind) {
 const comboIds = ids(combos, 'combo');
 const modIds = ids(mods, 'mod');
 const videoIds = ids(videos, 'video');
+const serverIds = new Set();
+const sessionIds = new Set();
+const serverGames = new Set();
+for (const group of serverGroups) {
+  check(['ets2', 'ats'].includes(group.game), `Servers: invalid game ${group.game}`);
+  check(!serverGames.has(group.game), `Servers: duplicate game ${group.game}`);
+  serverGames.add(group.game);
+  check(
+    typeof group.title === 'string' && group.title.trim(),
+    `${group.game}: server group title missing`,
+  );
+  check(
+    Array.isArray(group.servers) && group.servers.length > 0,
+    `${group.game}: server list missing`,
+  );
+  if (group.combo) {
+    const combo = combos.find((item) => item.id === group.combo.id);
+    check(!!combo, `${group.game}: missing server combo ${group.combo.id}`);
+    check(
+      combo?.tags.includes(group.game) && combo?.tags.includes('server'),
+      `${group.game}: combo does not match server game`,
+    );
+    check(
+      typeof group.combo.label === 'string' && group.combo.label.trim(),
+      `${group.game}: server combo label missing`,
+    );
+  }
+  for (const server of group.servers || []) {
+    check(typeof server.id === 'string' && /^[a-z0-9-]+$/.test(server.id), 'Server: invalid id');
+    check(!serverIds.has(server.id), `Server: duplicate id ${server.id}`);
+    serverIds.add(server.id);
+    check(typeof server.name === 'string' && server.name.trim(), `${server.id}: name missing`);
+    check(
+      typeof server.sessionId === 'string' && /^\d+\/\d+$/.test(server.sessionId),
+      `${server.id}: session ID must be a string in digits/digits format`,
+    );
+    check(!sessionIds.has(server.sessionId), `${server.id}: duplicate session ID`);
+    sessionIds.add(server.sessionId);
+  }
+}
 function url(value, label) {
   try {
     check(new URL(value).protocol === 'https:', `${label}: expected https URL`);
@@ -78,6 +119,9 @@ async function image(value, label) {
     errors.push(`${label}: missing file ${value}`);
   }
 }
+for (const version of Object.values(versions)) {
+  if (version.boostyUrl) url(version.boostyUrl, `Version ${version.id}.boostyUrl`);
+}
 for (const combo of combos) {
   check(Array.isArray(combo.tags), `${combo.id}: tags must be an array`);
   check(
@@ -86,7 +130,7 @@ for (const combo of combos) {
   );
   for (const field of ['preview', 'image_top', 'image_center', 'image_bottom'])
     await image(combo[field], `${combo.id}.${field}`);
-  for (const field of ['table', 'profile'])
+  for (const field of ['table', 'boosty', 'profile'])
     if (combo[field]) url(combo[field], `${combo.id}.${field}`);
 }
 check(
@@ -201,5 +245,5 @@ if (errors.length) {
   process.exitCode = 1;
 } else
   console.log(
-    `Content verified: ${combos.length} combos, ${mods.length} mods, ${videos.length} videos${process.argv.includes('--baseline') ? '; all original combo fields preserved' : ''}.`,
+    `Content verified: ${combos.length} combos, ${mods.length} mods, ${videos.length} videos, ${serverIds.size} servers${process.argv.includes('--baseline') ? '; all original combo fields preserved' : ''}.`,
   );

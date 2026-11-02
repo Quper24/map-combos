@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import AutoProfileInstall from '../AutoProfileInstall/AutoProfileInstall';
 import Video from '../Video/Video';
 import ExternalLink from '../ui/ExternalLink';
+import { VERSIONS } from '../../data/versions';
 import { comboVideos, youtubeVideoId } from '../../lib/content';
 import s from './ComboContent.module.css';
 export default function ComboContent({ combo }) {
   const related = comboVideos(combo);
+  const versionBoostyUrl = VERSIONS[combo.version_game]?.boostyUrl;
   const game = combo.tags.includes('ats') ? 'American Truck Simulator' : 'Euro Truck Simulator 2';
   const sections = [
     ['links', 'Ссылки'],
@@ -27,26 +29,47 @@ export default function ComboContent({ combo }) {
         <h2>Всё для установки</h2>
         <div className={s.links}>
           {combo.table && (
-            <ExternalLink href={combo.table}>
-              {combo.tags.includes('server') ? 'Скачать сборку' : 'Таблица файлов карт'}
+            <ExternalLink
+              href={combo.table}
+              className={
+                combo.table.startsWith('https://boosty.to/') ? 'button button-boosty' : undefined
+              }
+            >
+              {combo.table.startsWith('https://boosty.to/')
+                ? 'Материалы сборки на Boosty'
+                : 'Таблица файлов карт'}
             </ExternalLink>
           )}
           {combo.profile && <ExternalLink href={combo.profile}>Готовый профиль</ExternalLink>}
-          <ExternalLink
-            className="button button-boosty"
-            href="https://boosty.to/qupersimulator/posts/cab7f126-f979-4360-bd7a-92a040d90ff7"
-          >
-            Сборка одним архивом · Boosty
-          </ExternalLink>
+          {combo.boosty && (
+            <ExternalLink className="button button-boosty" href={combo.boosty}>
+              Сборка на Boosty
+            </ExternalLink>
+          )}
+          {versionBoostyUrl && (
+            <ExternalLink className="button button-boosty" href={versionBoostyUrl}>
+              Все сборки на {combo.version_game} на Boosty
+            </ExternalLink>
+          )}
         </div>
-        <p className={s.note}>
-          Таблица содержит ссылки и актуальную информацию. В готовом профиле моды уже расставлены.
-          Архив на Boosty доступен в раннем доступе.
-        </p>
+        {(combo.table || combo.boosty || combo.profile) && (
+          <p className={s.note}>
+            {combo.table &&
+              !combo.table.startsWith('https://boosty.to/') &&
+              'В таблице — ссылки на файлы и информация о сборке. '}
+            {combo.boosty && 'Материалы сборки на Boosty доступны в отдельном посте. '}
+            {combo.profile && 'В готовом профиле моды уже расставлены.'}
+          </p>
+        )}
         {combo.tags.includes('server') && (
-          <Link className="text-link" to="/server-guide">
-            Инструкция по подключению к серверу →
-          </Link>
+          <aside className={s.serverGuide}>
+            <span className={s.guideLabel}>Планируешь играть на наших серверах?</span>
+            <strong>Подготовься к первому рейсу</strong>
+            <p>Параметры сессий, подготовка модов и порядок подключения — в одном гайде.</p>
+            <Link className="button" to="/server-guide">
+              Как подключиться к серверу →
+            </Link>
+          </aside>
         )}
       </section>
       {(related.length > 0 || combo.video) && (
