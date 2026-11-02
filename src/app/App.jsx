@@ -1,3 +1,4 @@
+import { useTranslation, LanguageContext } from '../i18n/Language';
 import { Component, Suspense, lazy } from 'react';
 import { Link, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import Layout from './Layout';
@@ -14,29 +15,36 @@ function LegacyCombo() {
   return <Navigate to={`/combos/${encodeURIComponent(slug)}`} replace />;
 }
 function NotFound() {
+  const { t } = useTranslation();
   return (
     <div className="container page empty-state">
-      <span className="eyebrow">404 / Конец дороги</span>
-      <h1>Здесь пока нет маршрута</h1>
-      <p>Проверь адрес или выбери раздел сайта.</p>
+      <span className="eyebrow">{t('404 / Конец дороги')}</span>
+      <h1>{t('Здесь пока нет маршрута')}</h1>
+      <p>{t('Проверь адрес или выбери раздел сайта.')}</p>
       <Link className="button" to="/">
-        На главную
+        {t('На главную')}
       </Link>
     </div>
   );
 }
 class ErrorBoundary extends Component {
-  state = { error: false };
+  static contextType = LanguageContext;
+  state = {
+    error: false,
+  };
   static getDerivedStateFromError() {
-    return { error: true };
+    return {
+      error: true,
+    };
   }
   render() {
+    const t = this.context.t;
     return this.state.error ? (
       <div className="container page empty-state">
-        <h1>Не удалось загрузить страницу</h1>
-        <p>Попробуй обновить страницу.</p>
+        <h1>{t('Не удалось загрузить страницу')}</h1>
+        <p>{t('Попробуй обновить страницу.')}</p>
         <button className="button" onClick={() => window.location.reload()}>
-          Обновить
+          {t('Обновить')}
         </button>
       </div>
     ) : (
@@ -45,13 +53,14 @@ class ErrorBoundary extends Component {
   }
 }
 export default function App() {
+  const { t } = useTranslation();
   const location = useLocation();
   return (
     <ErrorBoundary key={location.pathname}>
       <Suspense
         fallback={
           <div className="container page" role="status">
-            Загружаем маршрут…
+            {t('Загружаем маршрут…')}
           </div>
         }
       >

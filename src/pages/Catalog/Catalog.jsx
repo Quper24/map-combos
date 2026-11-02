@@ -1,3 +1,4 @@
+import { useTranslation } from '../../i18n/Language';
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { COMBOS_BY_VERSION, VERSIONS } from '../../data';
@@ -9,6 +10,7 @@ import { tagUtils } from '../../utils/tags';
 import { dateValue } from '../../lib/content';
 import s from './Catalog.module.css';
 export default function Catalog() {
+  const { t } = useTranslation();
   const [params, setParams] = useSearchParams();
   const { favorites } = useFavorites();
   const version = VERSIONS[params.get('version')] ? params.get('version') : site.currentGameVersion;
@@ -25,7 +27,9 @@ export default function Catalog() {
         value ? next.set(key, value) : next.delete(key);
         return next;
       },
-      { replace: true },
+      {
+        replace: true,
+      },
     );
   }
   function toggleTag(tag) {
@@ -40,13 +44,18 @@ export default function Catalog() {
         ).forEach((item) => next.append('tag', item));
         return next;
       },
-      { replace: true },
+      {
+        replace: true,
+      },
     );
   }
   const result = useMemo(() => {
     const filtered = combos.filter(
       (combo) =>
-        (!query || `${combo.title} ${combo.id}`.toLowerCase().includes(query.toLowerCase())) &&
+        (!query ||
+          `${t(combo.title)} ${combo.title} ${combo.id}`
+            .toLowerCase()
+            .includes(query.toLowerCase())) &&
         tags.every((tag) => combo.tags?.includes(tag)) &&
         (!onlyFavorites || favorites.includes(combo.id)),
     );
@@ -55,25 +64,33 @@ export default function Catalog() {
           (a, b) => dateValue(b.date) - dateValue(a.date) || a.title.localeCompare(b.title),
         )
       : filtered;
-  }, [combos, query, tags, onlyFavorites, favorites, sort]);
+  }, [combos, query, tags, onlyFavorites, favorites, sort, t]);
   const filtered = query || tags.length || onlyFavorites;
   function reset() {
-    setParams({ version }, { replace: true });
+    setParams(
+      {
+        version,
+      },
+      {
+        replace: true,
+      },
+    );
   }
   return (
     <div className="container page">
       <div className="page-heading">
-        <span className="eyebrow">Маршруты без границ</span>
-        <h1>Сборки карт</h1>
+        <span className="eyebrow">{t('Маршруты без границ')}</span>
+        <h1>{t('Сборки карт')}</h1>
         <p>
-          Выбери свой мир. Ссылки, готовые профили и порядок карт для ETS2 и ATS — всё собрано
-          здесь.
+          {t(
+            'Выбери свой мир. Ссылки, готовые профили и порядок карт для ETS2 и ATS — всё собрано здесь.',
+          )}
         </p>
       </div>
-      <section className={s.filters} aria-label="Фильтры сборок">
+      <section className={s.filters} aria-label={t('Фильтры сборок')}>
         <div className={s.top}>
           <label className={s.version}>
-            Версия игры
+            {t('Версия игры')}
             <select
               value={version}
               onChange={(event) => {
@@ -82,14 +99,18 @@ export default function Catalog() {
                   localStorage.setItem('mapCombos_selectedVersion', event.target.value);
                 } catch {}
               }}
-              aria-label="Версия игры"
+              aria-label={t('Версия игры')}
             >
               {Object.keys(VERSIONS)
-                .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+                .sort((a, b) =>
+                  b.localeCompare(a, undefined, {
+                    numeric: true,
+                  }),
+                )
                 .map((id) => (
                   <option key={id} value={id}>
-                    {id}
-                    {id === site.currentGameVersion ? ' — актуальная' : ' — архив'}
+                    {t(id)}
+                    {t(id === site.currentGameVersion ? ' — актуальная' : ' — архив')}
                   </option>
                 ))}
             </select>
@@ -97,21 +118,21 @@ export default function Catalog() {
           <label className={`search-field ${s.search}`}>
             <Icon name="search" size={18} />
             <input
-              aria-label="Поиск сборок"
-              placeholder="Название сборки…"
+              aria-label={t('Поиск сборок')}
+              placeholder={t('Название сборки…')}
               value={query}
               onChange={(event) => update('q', event.target.value)}
             />
           </label>
           <label className={s.sort}>
-            Порядок
+            {t('Порядок')}
             <select
-              aria-label="Сортировка"
+              aria-label={t('Сортировка')}
               value={sort}
               onChange={(event) => update('sort', event.target.value)}
             >
-              <option value="date">Сначала обновлённые</option>
-              <option value="original">Исходный порядок</option>
+              <option value="date">{t('Сначала обновлённые')}</option>
+              <option value="original">{t('Исходный порядок')}</option>
             </select>
           </label>
         </div>
@@ -124,7 +145,7 @@ export default function Catalog() {
                 aria-pressed={tags.includes(tag)}
                 onClick={() => toggleTag(tag)}
               >
-                {tagUtils.getLabel(tag)}
+                {t(tagUtils.getLabel(tag))}
               </button>
             ))}
             <button
@@ -132,22 +153,24 @@ export default function Catalog() {
               aria-pressed={onlyFavorites}
               onClick={() => update('favorites', onlyFavorites ? '' : '1')}
             >
-              ☆ Избранное
+              {t('☆ Избранное')}
             </button>
           </div>
           {filtered && (
             <button className={s.reset} onClick={reset}>
-              Сбросить фильтры <Icon name="close" size={13} />
+              {t('Сбросить фильтры ')}
+              <Icon name="close" size={13} />
             </button>
           )}
         </div>
       </section>
       <div className={s.results}>
         <span role="status">
-          Найдено сборок: <b>{result.length}</b>
+          {t('Найдено сборок: ')}
+          <b>{result.length}</b>
         </span>
         <span className={`badge ${version === site.currentGameVersion ? 'badge-green' : ''}`}>
-          {version === site.currentGameVersion ? `Версия ${version}` : `Архив / ${version}`}
+          {t(version === site.currentGameVersion ? `Версия ${version}` : `Архив / ${version}`)}
         </span>
       </div>
       {result.length ? (
@@ -158,10 +181,10 @@ export default function Catalog() {
         </div>
       ) : (
         <div className="empty-state">
-          <h2>Сборок не найдено</h2>
-          <p>Попробуй изменить запрос или убрать часть фильтров.</p>
+          <h2>{t('Сборок не найдено')}</h2>
+          <p>{t('Попробуй изменить запрос или убрать часть фильтров.')}</p>
           <button className="button button-secondary" onClick={reset}>
-            Сбросить фильтры
+            {t('Сбросить фильтры')}
           </button>
         </div>
       )}

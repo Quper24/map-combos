@@ -1,10 +1,11 @@
+import { useTranslation } from '../../i18n/Language';
 import { useState, useRef, useEffect } from 'react';
 import InstructionModal from './InstructionModal';
 import Icon from '../ui/Icon';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods.js';
 import './AutoProfileInstall.css';
-
 export default function AutoProfileInstall({ combo }) {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [status, setStatus] = useState('idle');
@@ -26,7 +27,6 @@ export default function AutoProfileInstall({ combo }) {
     setErrorMsg('');
     return cancel;
   }, [combo.id, combo.version_game]);
-
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     event.target.value = '';
@@ -42,17 +42,21 @@ export default function AutoProfileInstall({ combo }) {
     setSelectedFile(file);
     setStatus('selected');
   };
-
   const handleProcess = async () => {
     if (!selectedFile || operation.current) return;
-    const task = { controller: new AbortController(), worker: null };
+    const task = {
+      controller: new AbortController(),
+      worker: null,
+    };
     operation.current = task;
     setStatus('processing');
     setErrorMsg('');
     try {
       const response = await fetch(
         `/profiles/${combo.version_game}/${combo.id}${combo.mods && includeMods ? 'm' : ''}.txt`,
-        { signal: task.controller.signal },
+        {
+          signal: task.controller.signal,
+        },
       );
       if (!response.ok)
         throw new Error('Не удалось загрузить список модов сборки. Попробуй ещё раз.');
@@ -82,12 +86,24 @@ export default function AutoProfileInstall({ combo }) {
         task.controller.signal.addEventListener(
           'abort',
           () => finish(reject, new DOMException('Aborted', 'AbortError')),
-          { once: true },
+          {
+            once: true,
+          },
         );
-        worker.postMessage({ buffer, mods }, [buffer]);
+        worker.postMessage(
+          {
+            buffer,
+            mods,
+          },
+          [buffer],
+        );
       });
       if (operation.current !== task) return;
-      const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+      const url = URL.createObjectURL(
+        new Blob([text], {
+          type: 'text/plain;charset=utf-8',
+        }),
+      );
       const link = document.createElement('a');
       link.href = url;
       link.download = 'profile.sii';
@@ -121,16 +137,16 @@ export default function AutoProfileInstall({ combo }) {
         : busy
           ? 'status-loading'
           : 'status-idle';
-
   return (
     <div className="auto-profile-install">
       <div className="profile-instruction-callout">
         <div className="profile-instruction-copy">
-          <span className="profile-instruction-label">Важно перед выбором профиля</span>
-          <strong>Сначала прочитай инструкцию</strong>
+          <span className="profile-instruction-label">{t('Важно перед выбором профиля')}</span>
+          <strong>{t('Сначала прочитай инструкцию')}</strong>
           <p>
-            Сохрани резервную копию profile.sii и ознакомься с порядком действий перед изменением
-            профиля.
+            {t(
+              'Сохрани резервную копию profile.sii и ознакомься с порядком действий перед изменением профиля.',
+            )}
           </p>
         </div>
         <button
@@ -138,39 +154,44 @@ export default function AutoProfileInstall({ combo }) {
           onClick={() => setIsModalOpen(true)}
           aria-haspopup="dialog"
         >
-          Прочитать инструкцию <Icon name="arrow" size={18} />
+          {t('Прочитать инструкцию ')}
+          <Icon name="arrow" size={18} />
         </button>
       </div>
       <div className="auto-profile-content">
         <div className="toolbar">
           <div className="toolbar-item">
-            <span className="toolbar-label">1. Файл</span>
+            <span className="toolbar-label">{t('1. Файл')}</span>
             <input
               type="file"
               accept=".sii"
               onChange={handleFileChange}
               ref={fileInputRef}
-              style={{ display: 'none' }}
+              style={{
+                display: 'none',
+              }}
             />
             <button
               className="toolbar-btn file-btn"
               disabled={busy}
               onClick={() => fileInputRef.current?.click()}
             >
-              {selectedFile
-                ? `${selectedFile.name} (${(selectedFile.size / 1024).toFixed(0)} КБ)`
-                : 'Выбрать файл'}
+              {t(
+                selectedFile
+                  ? `${selectedFile.name} (${(selectedFile.size / 1024).toFixed(0)} КБ)`
+                  : 'Выбрать файл',
+              )}
             </button>
           </div>
           <div className="toolbar-item">
-            <span className="toolbar-label">2. Расстановка и скачивание</span>
+            <span className="toolbar-label">{t('2. Расстановка и скачивание')}</span>
             <div className="apply-block">
               <button
                 className="toolbar-btn action-btn"
                 onClick={handleProcess}
                 disabled={!selectedFile || busy}
               >
-                {busy ? 'Обрабатывается…' : 'Расставить и скачать'}
+                {t(busy ? 'Обрабатывается…' : 'Расставить и скачать')}
               </button>
               {combo.mods && (
                 <label className="mods-checkbox">
@@ -185,7 +206,7 @@ export default function AutoProfileInstall({ combo }) {
                     }}
                   />
                   <span>
-                    {combo.tags.includes('server') ? 'Основные + опциональные' : 'Карты + Моды'}
+                    {t(combo.tags.includes('server') ? 'Основные + опциональные' : 'Карты + Моды')}
                   </span>
                 </label>
               )}
@@ -193,10 +214,11 @@ export default function AutoProfileInstall({ combo }) {
           </div>
         </div>
         <div role="status" aria-live="polite" className={`status ${statusClass}`}>
-          Статус: {statusText}
+          {t('Статус: ')}
+          {t(statusText)}
         </div>
         <p className="profile-local-note">
-          Файл обрабатывается только в твоём браузере и не отправляется на сервер.
+          {t('Файл обрабатывается только в твоём браузере и не отправляется на сервер.')}
         </p>
       </div>
       <InstructionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} combo={combo} />

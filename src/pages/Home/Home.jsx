@@ -1,3 +1,4 @@
+import { useTranslation } from '../../i18n/Language';
 import { Link } from 'react-router-dom';
 import useCurrentCombos from '../../lib/currentCombos';
 import site from '../../../content/site.json';
@@ -37,6 +38,7 @@ const directions = [
   },
 ];
 export default function Home() {
+  const { t } = useTranslation();
   const boosty = site.socialLinks.find((link) => link.platform === 'boosty');
   const currentCombos = useCurrentCombos();
   const featured =
@@ -48,27 +50,32 @@ export default function Home() {
     <div className="container">
       <section className={s.hero}>
         <div className={s.heroCopy}>
-          <span className="eyebrow">Сборки карт / ETS2 & ATS</span>
+          <span className="eyebrow">{t('Сборки карт / ETS2 & ATS')}</span>
           <h1>
-            Весь мир
-            <br />у наших <span>колёс.</span>
+            {t('Весь мир')}
+            <br />
+            {t('у наших ')}
+            <span>{t('колёс.')}</span>
           </h1>
           <p>
-            Сборки карт для ETS2 и ATS: новые маршруты, порядок модов и всё необходимое для
-            установки.
+            {t(
+              'Сборки карт для ETS2 и ATS: новые маршруты, порядок модов и всё необходимое для установки.',
+            )}
           </p>
           <div className="actions">
             <Link to="/combos" className="button">
-              Выбрать сборку карт <Icon name="arrow" size={18} />
+              {t('Выбрать сборку карт ')}
+              <Icon name="arrow" size={18} />
             </Link>
             {boosty && (
               <ExternalLink href={boosty.url} className="button button-boosty">
-                Сборки на Boosty
+                {t('Сборки на Boosty')}
               </ExternalLink>
             )}
           </div>
           <div className={s.heroNote}>
-            <span /> Карты. Моды. Конвои. Одна любовь к дороге.
+            <span />
+            {t(' Карты. Моды. Конвои. Одна любовь к дороге.')}
           </div>
         </div>
         {featured ? (
@@ -78,13 +85,16 @@ export default function Home() {
                 src={assetUrl(featured.preview)}
                 width="960"
                 height="540"
-                alt={featured.title}
+                alt={t(featured.title)}
                 fetchPriority="high"
               />
             </div>
             <div className={s.featuredBottom}>
               <div>
-                <span className={s.smallLabel}>Сборка карт · ETS2 {featured.version_game}</span>
+                <span className={s.smallLabel}>
+                  {t('Сборка карт · ETS2 ')}
+                  {featured.version_game}
+                </span>
                 <h2>Quper Map Combo</h2>
               </div>
               <span className={s.featuredArrow}>
@@ -95,22 +105,22 @@ export default function Home() {
         ) : (
           <div className={s.featured} aria-busy="true">
             <div className={s.featuredImage} />
-            <div className={s.featuredBottom}>Загружаем сборки…</div>
+            <div className={s.featuredBottom}>{t('Загружаем сборки…')}</div>
           </div>
         )}
       </section>
-      <section className={s.directions} aria-label="Разделы проекта">
+      <section className={s.directions} aria-label={t('Разделы проекта')}>
         {directions.map((item) => (
           <Link className={s.direction} key={item.to} to={item.to}>
             <div className={s.directionTop}>
               <Icon name={item.icon} size={25} />
               <span>{item.number}</span>
             </div>
-            <h2>{item.title}</h2>
-            <span className={s.directionSubtitle}>{item.subtitle}</span>
-            <p>{item.text}</p>
+            <h2>{t(item.title)}</h2>
+            <span className={s.directionSubtitle}>{t(item.subtitle)}</span>
+            <p>{t(item.text)}</p>
             <span className={s.directionLink}>
-              {item.label}
+              {t(item.label)}
               <Icon name="arrow" size={17} />
             </span>
           </Link>
@@ -119,12 +129,13 @@ export default function Home() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">Выбирай свой маршрут</span>
-            <h2>Актуальные сборки карт</h2>
-            <p>Порядок карт, ссылки и инструкции — в одном месте.</p>
+            <span className="eyebrow">{t('Выбирай свой маршрут')}</span>
+            <h2>{t('Актуальные сборки карт')}</h2>
+            <p>{t('Порядок карт, ссылки и инструкции — в одном месте.')}</p>
           </div>
           <Link to="/combos" className="text-link">
-            Все сборки <Icon name="arrow" size={17} />
+            {t('Все сборки ')}
+            <Icon name="arrow" size={17} />
           </Link>
         </div>
         <div className="card-grid">
@@ -134,34 +145,42 @@ export default function Home() {
         </div>
       </section>
       {boosty && (
-        <section className={s.boostyBanner} aria-label="Сборки на Boosty">
+        <section className={s.boostyBanner} aria-label={t('Сборки на Boosty')}>
           <div>
-            <span className="eyebrow">Поддержи проект — открой больше</span>
-            <h2>Сборки одним архивом — на Boosty</h2>
+            <span className="eyebrow">{t('Поддержи проект — открой больше')}</span>
+            <h2>{t('Сборки одним архивом — на Boosty')}</h2>
             <p>
-              Ранний доступ к сборкам и скачивание одним архивом. Твоя подписка помогает развивать
-              Quper Simulator.
+              {t(
+                'Ранний доступ к сборкам и скачивание одним архивом. Твоя подписка помогает развивать Quper Simulator.',
+              )}
             </p>
           </div>
           <ExternalLink href={boosty.url} className="button button-boosty">
-            Перейти на Boosty
+            {t('Перейти на Boosty')}
           </ExternalLink>
         </section>
       )}
       <section className={s.vtcBanner}>
         <div className={s.vtcIdentity}>
-          <img src="/img/logo.jpg" width="140" height="140" alt="Логотип VTC Quper Simulator" />
+          <img
+            src="/img/logo.jpg"
+            width="140"
+            height="140"
+            alt={t('Логотип VTC Quper Simulator')}
+          />
           <span>VIRTUAL TRUCKING COMPANY</span>
         </div>
         <div className={s.vtcCopy}>
-          <span className="eyebrow">Хорошая дорога начинается с компании</span>
-          <h2>Вместе интереснее.</h2>
+          <span className="eyebrow">{t('Хорошая дорога начинается с компании')}</span>
+          <h2>{t('Вместе интереснее.')}</h2>
           <p>
-            Без обязательных пробегов, перекрасок и строгих графиков. Только удовольствие от дороги
-            и общения.
+            {t(
+              'Без обязательных пробегов, перекрасок и строгих графиков. Только удовольствие от дороги и общения.',
+            )}
           </p>
           <Link className="text-link" to="/vtc">
-            Присоединиться к Quper Simulator <Icon name="arrow" size={18} />
+            {t('Присоединиться к Quper Simulator ')}
+            <Icon name="arrow" size={18} />
           </Link>
         </div>
         <span className={s.roadMark} aria-hidden="true" />
@@ -169,11 +188,12 @@ export default function Home() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">По ту сторону руля</span>
-            <h2>Смотри. Вдохновляйся. Поехали.</h2>
+            <span className="eyebrow">{t('По ту сторону руля')}</span>
+            <h2>{t('Смотри. Вдохновляйся. Поехали.')}</h2>
           </div>
           <Link className="text-link" to="/videos">
-            Все видео <Icon name="arrow" size={17} />
+            {t('Все видео ')}
+            <Icon name="arrow" size={17} />
           </Link>
         </div>
         <div className="card-grid">
@@ -184,14 +204,14 @@ export default function Home() {
       </section>
       <section className={s.socialSection}>
         <div>
-          <span className="eyebrow">Остаёмся на связи</span>
-          <h2>Встречаемся не только в игре.</h2>
-          <p>Новые видео, обновления сборок и общение — на наших площадках.</p>
+          <span className="eyebrow">{t('Остаёмся на связи')}</span>
+          <h2>{t('Встречаемся не только в игре.')}</h2>
+          <p>{t('Новые видео, обновления сборок и общение — на наших площадках.')}</p>
         </div>
         <div className={s.socialLinks}>
           {site.socialLinks.map((link) => (
             <ExternalLink key={link.platform} href={link.url} className={s.socialLink}>
-              {link.label}
+              {t(link.label)}
             </ExternalLink>
           ))}
         </div>

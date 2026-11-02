@@ -1,3 +1,4 @@
+import { useTranslation } from '../i18n/Language';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import site from '../../content/site.json';
@@ -12,11 +13,16 @@ const navigation = [
   ['/videos', 'Видео'],
 ];
 export default function Layout() {
+  const { t, language, setLanguage } = useTranslation();
   const boosty = site.socialLinks.find((link) => link.platform === 'boosty');
   const [open, setOpen] = useState(false);
   const { pathname, hash } = useLocation();
   useEffect(() => {
-    if (!hash) window.scrollTo({ top: 0, behavior: 'instant' });
+    if (!hash)
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant',
+      });
   }, [pathname, hash]);
   useEffect(() => {
     const handler = (event) => {
@@ -28,7 +34,7 @@ export default function Layout() {
   return (
     <>
       <a className="skip-link" href="#main">
-        К содержимому
+        {t('К содержимому')}
       </a>
       <header className={s.header}>
         <div className={`container ${s.bar}`}>
@@ -36,9 +42,9 @@ export default function Layout() {
             to="/"
             className={s.brand}
             onClick={() => setOpen(false)}
-            aria-label="Quper Simulator — главная"
+            aria-label={t('Quper Simulator — главная')}
           >
-            <img src="/img/logo.jpg" width="48" height="48" alt="" />
+            <img src="/img/logo.jpg" width="48" height="48" alt={''} />
             <span>
               QUPER<span className={s.brandSub}>SIMULATOR</span>
             </span>
@@ -46,7 +52,7 @@ export default function Layout() {
           <nav
             id="main-navigation"
             className={`${s.navigation} ${open ? s.open : ''}`}
-            aria-label="Основная навигация"
+            aria-label={t('Основная навигация')}
           >
             {navigation.map(([to, label]) => (
               <NavLink
@@ -56,10 +62,34 @@ export default function Layout() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) => (isActive ? s.active : '')}
               >
-                {label}
+                {t(label)}
               </NavLink>
             ))}
           </nav>
+          <div
+            className={s.languages}
+            role="group"
+            aria-label={language === 'ru' ? 'Язык сайта' : 'Site language'}
+          >
+            <button
+              type="button"
+              lang="ru"
+              aria-label="Русский"
+              aria-pressed={language === 'ru'}
+              onClick={() => setLanguage('ru')}
+            >
+              RU
+            </button>
+            <button
+              type="button"
+              lang="en"
+              aria-label="English"
+              aria-pressed={language === 'en'}
+              onClick={() => setLanguage('en')}
+            >
+              EN
+            </button>
+          </div>
           {boosty && (
             <ExternalLink className={s.community} href={boosty.url}>
               Boosty
@@ -67,7 +97,7 @@ export default function Layout() {
           )}
           <button
             className={s.toggle}
-            aria-label={open ? 'Закрыть меню' : 'Открыть меню'}
+            aria-label={t(open ? 'Закрыть меню' : 'Открыть меню')}
             aria-controls="main-navigation"
             aria-expanded={open}
             onClick={() => setOpen(!open)}
@@ -85,27 +115,27 @@ export default function Layout() {
             <Link to="/" className={s.footerBrand}>
               QUPER <span>SIMULATOR</span>
             </Link>
-            <p>Весь мир у наших колёс.</p>
+            <p>{t('Весь мир у наших колёс.')}</p>
           </div>
-          <nav aria-label="Разделы в подвале">
+          <nav aria-label={t('Разделы в подвале')}>
             {navigation.slice(1).map(([to, label]) => (
               <Link key={to} to={to}>
-                {label}
+                {t(label)}
               </Link>
             ))}
           </nav>
           <div className={s.socials}>
             {site.socialLinks.map((link) => (
               <ExternalLink key={link.platform} href={link.url} className={s.social}>
-                {link.label}
+                {t(link.label)}
               </ExternalLink>
             ))}
           </div>
         </div>
         <div className={`container ${s.footerBottom}`}>
-          <span>© {new Date().getFullYear()} Quper Simulator</span>
-          <span>Для тех, кому всегда мало дорог.</span>
-          <a href="#main">Наверх ↑</a>
+          <span>© {t(new Date().getFullYear())} Quper Simulator</span>
+          <span>{t('Для тех, кому всегда мало дорог.')}</span>
+          <a href="#main">{t('Наверх ↑')}</a>
         </div>
       </footer>
     </>

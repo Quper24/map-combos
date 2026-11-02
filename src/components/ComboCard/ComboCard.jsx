@@ -1,3 +1,4 @@
+import { useTranslation } from '../../i18n/Language';
 import { Link } from 'react-router-dom';
 import { assetUrl } from '../../lib/content';
 import { tagUtils } from '../../utils/tags';
@@ -5,8 +6,8 @@ import useFavorites from '../hooks/useFavorites';
 import Icon from '../ui/Icon';
 import ExternalLink from '../ui/ExternalLink';
 import s from './ComboCard.module.css';
-
 export default function ComboCard({ combo }) {
+  const { t } = useTranslation();
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorite = isFavorite(combo.id);
   return (
@@ -14,7 +15,7 @@ export default function ComboCard({ combo }) {
       <Link to={`/combos/${combo.id}`} className={s.imageLink} tabIndex={-1} aria-hidden="true">
         <img
           src={assetUrl(combo.preview || combo.image)}
-          alt=""
+          alt={''}
           loading="lazy"
           width="640"
           height="360"
@@ -22,7 +23,9 @@ export default function ComboCard({ combo }) {
       </Link>
       <button
         className={`${s.favorite} ${favorite ? s.selected : ''}`}
-        aria-label={`${favorite ? 'Убрать из избранного' : 'Добавить в избранное'}: ${combo.title}`}
+        aria-label={t(
+          `${favorite ? 'Убрать из избранного' : 'Добавить в избранное'}: ${combo.title}`,
+        )}
         aria-pressed={favorite}
         onClick={() => toggleFavorite(combo.id)}
       >
@@ -34,14 +37,14 @@ export default function ComboCard({ combo }) {
             <span
               key={tag}
               className={`badge ${tag === 'boosty' ? 'badge-boosty' : 'badge-green'}`}
-              title={tagUtils.getDescription(tag)}
+              title={t(tagUtils.getDescription(tag))}
             >
-              {tagUtils.getLabel(tag)}
+              {t(tagUtils.getLabel(tag))}
             </span>
           ))}
         </div>
         <h3>
-          <Link to={`/combos/${combo.id}`}>{combo.title}</Link>
+          <Link to={`/combos/${combo.id}`}>{t(combo.title)}</Link>
         </h3>
         <div className={s.meta}>
           <span>
@@ -50,11 +53,12 @@ export default function ComboCard({ combo }) {
           <span>{combo.date}</span>
         </div>
         <Link className={s.open} to={`/combos/${combo.id}`}>
-          Открыть сборку <Icon name="arrow" size={17} />
+          {t('Открыть сборку ')}
+          <Icon name="arrow" size={17} />
         </Link>
         {combo.boosty && (
           <ExternalLink className={s.boosty} href={combo.boosty}>
-            Сборка на Boosty
+            {t('Сборка на Boosty')}
           </ExternalLink>
         )}
       </div>

@@ -1,10 +1,11 @@
+import { useTranslation } from '../../i18n/Language';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import servers from '../../../content/servers.json';
 import Icon from '../ui/Icon';
 import s from './ServerList.module.css';
-
 function CopyField({ label, value, serverName, game }) {
+  const { t } = useTranslation();
   const [status, setStatus] = useState('');
   async function copy() {
     try {
@@ -16,52 +17,58 @@ function CopyField({ label, value, serverName, game }) {
   }
   return (
     <div className={s.field}>
-      <dt className={s.fieldLabel}>{label}</dt>
+      <dt className={s.fieldLabel}>{t(label)}</dt>
       <dd className={s.fieldValue}>
-        <span className={label === 'Сессия' ? s.session : s.name}>{value}</span>
+        <span className={label === 'Сессия' ? s.session : s.name}>{t(value)}</span>
         <button
           type="button"
           className={s.copy}
-          aria-label={`Скопировать ${label === 'Сессия' ? 'сессию' : 'имя сервера'}: ${game.toUpperCase()} / ${serverName}`}
+          aria-label={t(
+            `Скопировать ${label === 'Сессия' ? 'сессию' : 'имя сервера'}: ${game.toUpperCase()} / ${serverName}`,
+          )}
           onClick={copy}
         >
           <Icon name={status === 'copied' ? 'check' : 'copy'} size={15} />
-          <span role="status">{status === 'copied' ? 'Скопировано' : 'Копировать'}</span>
+          <span role="status">{t(status === 'copied' ? 'Скопировано' : 'Копировать')}</span>
         </button>
       </dd>
       {status === 'error' && (
         <dd className={s.error} role="alert">
-          Не удалось скопировать. Выдели текст и скопируй вручную.
+          {t('Не удалось скопировать. Выдели текст и скопируй вручную.')}
         </dd>
       )}
     </div>
   );
 }
-
 export default function ServerList() {
+  const { t } = useTranslation();
   return (
     <div className={s.groups}>
       {servers.map((group) => (
         <div className={s.group} key={group.game}>
           <div className={s.groupHeader}>
-            <span className={s.game}>{group.game.toUpperCase()}</span>
+            <span className={s.game}>{t(group.game.toUpperCase())}</span>
             <div>
-              <h3 className={s.title}>{group.title}</h3>
-              <span className={s.count}>Серверов: {group.servers.length}</span>
+              <h3 className={s.title}>{t(group.title)}</h3>
+              <span className={s.count}>
+                {t('Серверов: ')}
+                {group.servers.length}
+              </span>
             </div>
           </div>
           {group.combo && (
             <div className={s.combo}>
               <div>
                 <span className={s.fieldLabel}>
-                  Общая сборка для серверов {group.game.toUpperCase()}
+                  {t('Общая сборка для серверов ')}
+                  {t(group.game.toUpperCase())}
                 </span>
                 <Link className={s.comboLink} to={`/combos/${group.combo.id}`}>
-                  <Icon name="map" size={19} /> {group.combo.label}
+                  <Icon name="map" size={19} /> {t(group.combo.label)}
                   <Icon name="arrow" size={17} />
                 </Link>
               </div>
-              <span className={s.comboHint}>Скачивание, установка и порядок карт</span>
+              <span className={s.comboHint}>{t('Скачивание, установка и порядок карт')}</span>
             </div>
           )}
           <div className={s.cards}>
@@ -69,7 +76,7 @@ export default function ServerList() {
               <article
                 className={s.card}
                 key={server.id}
-                aria-label={`${group.game.toUpperCase()} / ${server.name}`}
+                aria-label={t(`${group.game.toUpperCase()} / ${server.name}`)}
               >
                 <dl className={s.fields}>
                   <CopyField
@@ -91,8 +98,9 @@ export default function ServerList() {
         </div>
       ))}
       <p className={s.hint}>
-        Скопируй сессию нужного сервера и вставь её в поиск в меню «Конвои». Также можно искать по
-        имени сервера.
+        {t(
+          'Скопируй сессию нужного сервера и вставь её в поиск в меню «Конвои». Также можно искать по имени сервера.',
+        )}
       </p>
     </div>
   );

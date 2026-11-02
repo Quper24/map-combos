@@ -12,9 +12,9 @@ export function sortVideos(records, order = 'newest') {
   });
 }
 
-export function formatVideoDate(value) {
+export function formatVideoDate(value, language = 'ru') {
   if (!value || Number.isNaN(Date.parse(value))) return '';
-  return new Intl.DateTimeFormat('ru-RU', {
+  return new Intl.DateTimeFormat(language === 'en' ? 'en-GB' : 'ru-RU', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',

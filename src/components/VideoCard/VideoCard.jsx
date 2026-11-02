@@ -1,13 +1,15 @@
+import { useTranslation } from '../../i18n/Language';
 import { Link } from 'react-router-dom';
 import { GAME_NAMES, VIDEO_CATEGORIES, videoGames, formatVideoDate } from '../../lib/content';
 import ExternalLink from '../ui/ExternalLink';
 import Icon from '../ui/Icon';
 import s from './VideoCard.module.css';
 export default function VideoCard({ video, showRelations = false }) {
+  const { t, language } = useTranslation();
   return (
     <article className={s.card}>
       <div className={s.preview}>
-        <img src={video.thumbnail} alt="" loading="lazy" width="480" height="270" />
+        <img src={video.thumbnail} alt={''} loading="lazy" width="480" height="270" />
         <span className={s.play}>
           <Icon name="play" size={24} />
         </span>
@@ -16,7 +18,7 @@ export default function VideoCard({ video, showRelations = false }) {
             .filter(([, url]) => url)
             .map(([platform, url]) => (
               <ExternalLink key={platform} href={url} className={s.platform}>
-                {platform === 'youtube' ? 'YouTube' : 'Rutube'}
+                {t(platform === 'youtube' ? 'YouTube' : 'Rutube')}
               </ExternalLink>
             ))}
         </div>
@@ -24,24 +26,30 @@ export default function VideoCard({ video, showRelations = false }) {
       <div className={s.body}>
         <div className={s.meta}>
           <span>
-            {videoGames(video)
-              .map((game) => GAME_NAMES[game] || game)
-              .join(' / ')}
+            {t(
+              videoGames(video)
+                .map((game) => GAME_NAMES[game] || game)
+                .join(' / '),
+            )}
           </span>
-          <span>{VIDEO_CATEGORIES[video.category] || video.category}</span>
+          <span>{t(VIDEO_CATEGORIES[video.category] || video.category)}</span>
           {video.publishedAt && (
-            <time dateTime={video.publishedAt}>{formatVideoDate(video.publishedAt)}</time>
+            <time dateTime={video.publishedAt}>
+              {t(formatVideoDate(video.publishedAt, language))}
+            </time>
           )}
         </div>
-        <h3>{video.title}</h3>
+        <h3>{t(video.title)}</h3>
         {showRelations && video.relatedComboIds.length > 0 && (
           <Link className="text-link" to={`/combos/${video.relatedComboIds[0]}`}>
-            Перейти к сборке <Icon name="arrow" size={16} />
+            {t('Перейти к сборке ')}
+            <Icon name="arrow" size={16} />
           </Link>
         )}
         {showRelations && video.relatedModIds.length > 0 && (
           <Link className="text-link" to={`/mods/${video.relatedModIds[0]}`}>
-            Перейти к разработке <Icon name="arrow" size={16} />
+            {t('Перейти к разработке ')}
+            <Icon name="arrow" size={16} />
           </Link>
         )}
       </div>
