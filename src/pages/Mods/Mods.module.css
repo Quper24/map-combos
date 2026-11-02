@@ -95,6 +95,18 @@
   border: 1px solid var(--line);
   border-radius: 8px;
 }
+.notice {
+  max-width: 900px;
+  margin-top: 32px;
+  padding: 18px 22px;
+  border: 1px solid var(--green-line);
+  border-left: 3px solid var(--green);
+  border-radius: 6px;
+  background: var(--green-dim);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.8;
+}
 .description {
   border-top: 1px solid var(--line);
   padding-top: 36px;

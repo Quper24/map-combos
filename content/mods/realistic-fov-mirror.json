@@ -1,0 +1,33 @@
+{
+  "id": "realistic-fov-mirror",
+  "order": 60,
+  "type": "mod",
+  "title": "Realistic FOV Mirror",
+  "games": ["ets2"],
+  "summary": "Скорректированный угол обзора зеркал для более естественных отражений в ETS2.",
+  "description": [
+    "Мод изменяет параметры поля зрения зеркал. Отражения выглядят более естественно, а перспектива в зеркалах становится ближе к привычному восприятию.",
+    "Модификация ориентирована на настройки зеркал и не требует сложной настройки после активации."
+  ],
+  "features": [
+    "Скорректированный FOV зеркал.",
+    "Более естественная перспектива отражений.",
+    "Установка через Steam Workshop или TruckyMods."
+  ],
+  "cover": "/img/mods/realistic-fov-mirror.jpg",
+  "coverAlt": "Realistic FOV Mirror — реалистичные зеркала",
+  "images": [],
+  "links": [
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318934698"
+    },
+    {
+      "platform": "truckymods",
+      "label": "TruckyMods",
+      "url": "https://truckymods.io/euro-truck-simulator-2/graphics/realistic-fov-mirror"
+    }
+  ],
+  "videoIds": []
+}

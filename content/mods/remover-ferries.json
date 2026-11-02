@@ -1,0 +1,38 @@
+{
+  "id": "remover-ferries",
+  "order": 50,
+  "type": "mod",
+  "title": "Remover Ferries by Quper",
+  "games": ["ets2"],
+  "summary": "Меньше лишних паромных маршрутов — больше поездок по дорогам в ETS2.",
+  "description": [
+    "Мод убирает лишние паромные маршруты, чтобы путешествия по сборке карт чаще проходили по дорогам.",
+    "Создан как дополнение к Realistic Economy by Quper, но может использоваться отдельно."
+  ],
+  "features": [
+    "Сокращение лишних паромных маршрутов.",
+    "Больше путешествий по суше вместо коротких переходов на пароме.",
+    "Возможность использовать отдельно от Realistic Economy."
+  ],
+  "cover": "/img/mods/remover-ferries.jpg",
+  "coverAlt": "Remover Ferries by Quper",
+  "images": [],
+  "links": [
+    {
+      "platform": "sharemods",
+      "label": "Sharemods",
+      "url": "https://sharemods.com/nkwh9atx6rtb/RealisticAddonFerryQuper.scs.html"
+    },
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3358041900"
+    },
+    {
+      "platform": "truckymods",
+      "label": "TruckyMods",
+      "url": "https://truckymods.io/euro-truck-simulator-2/map-assets/remover-ferries-by-quper"
+    }
+  ],
+  "videoIds": []
+}

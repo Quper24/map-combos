@@ -1,0 +1,34 @@
+{
+  "id": "realistic-russia-economy",
+  "order": 30,
+  "type": "mod",
+  "title": "Realistic Russia Economy by Quper",
+  "games": ["ets2"],
+  "summary": "Экономика ETS2, адаптированная под российские условия: штрафы, гаражи и кредиты.",
+  "description": [
+    "Мод перерабатывает финансовый баланс Euro Truck Simulator 2 с акцентом на российские условия. Он подходит для поездок по картам России и делает расходы на развитие компании более привычными.",
+    "Пересмотрены размеры штрафов, стоимость гаражей и условия кредитования."
+  ],
+  "features": [
+    "Адаптация экономического баланса под российские условия.",
+    "Переработанные штрафы за нарушения ПДД.",
+    "Обновлённая стоимость гаражей и недвижимости.",
+    "Изменённые кредитные ставки и выплаты."
+  ],
+  "cover": "/img/mods/realistic-russia-economy.jpg",
+  "coverAlt": "Realistic Russia Economy by Quper — экономика России в ETS2",
+  "images": [],
+  "links": [
+    {
+      "platform": "sharemods",
+      "label": "Sharemods",
+      "url": "https://sharemods.com/dpd9iofp2941/RealisticEconomyRussianQuper.scs.html"
+    },
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3479246592"
+    }
+  ],
+  "videoIds": []
+}

@@ -78,6 +78,7 @@ export default function Mods() {
                     {GAME_NAMES[id] || id}
                   </span>
                 ))}
+                {mod.version && <span className="badge">Версия {mod.version}</span>}
               </div>
               <h2>
                 <Link to={`/mods/${mod.id}`}>{mod.title}</Link>

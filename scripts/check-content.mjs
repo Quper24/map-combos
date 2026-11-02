@@ -95,6 +95,11 @@ check(
 );
 await image('/img/combos/center.jpg', 'Shared center image');
 for (const mod of mods) {
+  if (mod.order !== undefined)
+    check(
+      Number.isFinite(mod.order) && mod.order >= 0,
+      `${mod.id}: order must be a non-negative number`,
+    );
   check(['mod', 'plugin'].includes(mod.type), `${mod.id}: invalid type`);
   check(
     Array.isArray(mod.games) &&

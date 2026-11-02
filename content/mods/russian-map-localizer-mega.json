@@ -1,0 +1,39 @@
+{
+  "id": "russian-map-localizer-mega",
+  "order": 10,
+  "type": "mod",
+  "title": "Russian Map Localizer Mega",
+  "games": ["ets2"],
+  "summary": "Русская локализация названий городов и географических объектов для сборок карт ETS2.",
+  "description": [
+    "Модификация переводит названия городов и географических объектов на русский язык. Рекомендуется для Mega Map Combo с установленным ProMods Europe.",
+    "В Steam Workshop мод опубликован под названием RU Localizer and Zoom fix. Авторы — Werwolf и Quper."
+  ],
+  "features": [
+    "Русские названия городов и географических объектов.",
+    "Рекомендуется для Mega Map Combo и ProMods Europe.",
+    "Устанавливается выше модификаций карт в менеджере модов."
+  ],
+  "installation": [
+    "Установи ProMods Europe и необходимые для выбранной сборки карты.",
+    "Выбери русский язык в настройках игры.",
+    "Подпишись на мод в Steam Workshop или скачай файл .scs с Sharemods и помести его в папку mod игры.",
+    "Активируй Russian Map Localizer Mega и размести выше всех модификаций карт."
+  ],
+  "cover": "/img/mods/russian-map-localizer-mega.jpg",
+  "coverAlt": "Russian Localizer and Zoom Fix — русская локализация для ProMods",
+  "images": [],
+  "links": [
+    {
+      "platform": "sharemods",
+      "label": "Sharemods",
+      "url": "https://sharemods.com/hmntdnhhb9ub/RussianMapLocalizerByQuperSimulator.scs.html"
+    },
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3480124474"
+    }
+  ],
+  "videoIds": []
+}

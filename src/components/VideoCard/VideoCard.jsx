@@ -32,6 +32,11 @@ export default function VideoCard({ video, showRelations = false }) {
             Перейти к сборке <Icon name="arrow" size={16} />
           </Link>
         )}
+        {showRelations && video.relatedModIds.length > 0 && (
+          <Link className="text-link" to={`/mods/${video.relatedModIds[0]}`}>
+            Перейти к разработке <Icon name="arrow" size={16} />
+          </Link>
+        )}
       </div>
     </article>
   );

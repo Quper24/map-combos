@@ -1,5 +1,6 @@
 {
   "id": "realistic-economy-ets2",
+  "order": 20,
   "type": "mod",
   "title": "Realistic Economy ETS2 by Quper",
   "games": ["ets2"],
@@ -28,6 +29,11 @@
       "platform": "steam",
       "label": "Steam Workshop",
       "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318908089"
+    },
+    {
+      "platform": "sharemods",
+      "label": "Sharemods",
+      "url": "https://sharemods.com/6tjt9wpoa9pj/RealisticEconomyQuper.scs.html"
     }
   ],
   "videoIds": []

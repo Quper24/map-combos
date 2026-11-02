@@ -66,14 +66,15 @@ export default function Mod() {
           height="360"
         />
       </div>
+      {mod.notice && <aside className={s.notice}>{mod.notice}</aside>}
       <section className={`section prose ${s.description}`}>
-        <h2>О модификации</h2>
+        <h2>{mod.type === 'plugin' ? 'О плагине' : 'О модификации'}</h2>
         {mod.description.map((text, index) => (
           <p key={index}>{text}</p>
         ))}
         {mod.features.length > 0 && (
           <>
-            <h2>Что меняется в игре</h2>
+            <h2>{mod.type === 'plugin' ? 'Возможности плагина' : 'Что меняется в игре'}</h2>
             <ul>
               {mod.features.map((feature) => (
                 <li key={feature}>{feature}</li>
