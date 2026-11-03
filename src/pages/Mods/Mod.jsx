@@ -80,6 +80,16 @@ export default function Mod() {
         {mod.description.map((text, index) => (
           <p key={index}>{t(text)}</p>
         ))}
+        {mod.compatibility?.length > 0 && (
+          <>
+            <h2>{t('Совместимость')}</h2>
+            <ul>
+              {mod.compatibility.map((build) => (
+                <li key={build}>{t(build)}</li>
+              ))}
+            </ul>
+          </>
+        )}
         {mod.features.length > 0 && (
           <>
             <h2>{t(mod.type === 'plugin' ? 'Возможности плагина' : 'Что меняется в игре')}</h2>
