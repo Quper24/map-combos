@@ -176,7 +176,7 @@ export default function Catalog() {
       {result.length ? (
         <div className="card-grid">
           {result.map((combo) => (
-            <ComboCard key={combo.id} combo={combo} />
+            <ComboCard heading="h2" key={combo.id} combo={combo} />
           ))}
         </div>
       ) : (

@@ -82,7 +82,7 @@ export default function Videos() {
       </p>
       <div className="card-grid">
         {result.map((video) => (
-          <VideoCard video={video} key={video.id} showRelations />
+          <VideoCard heading="h2" video={video} key={video.id} showRelations />
         ))}
       </div>
       {!result.length && (

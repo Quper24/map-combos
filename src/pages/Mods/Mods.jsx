@@ -75,10 +75,16 @@ export default function Mods() {
         {result.length}
       </p>
       <div className={s.list}>
-        {result.map((mod) => (
+        {result.map((mod, index) => (
           <article key={mod.id} className={s.modCard}>
             <Link to={`/mods/${mod.id}`} className={s.cover} tabIndex={-1} aria-hidden="true">
-              <img src={mod.cover} alt={''} width="640" height="360" loading="lazy" />
+              <img
+                src={mod.cover}
+                alt={''}
+                width="640"
+                height="360"
+                loading={index === 0 ? 'eager' : 'lazy'}
+              />
             </Link>
             <div className={s.modBody}>
               <div className={s.tags}>

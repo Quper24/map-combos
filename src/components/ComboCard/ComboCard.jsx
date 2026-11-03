@@ -6,7 +6,8 @@ import useFavorites from '../hooks/useFavorites';
 import Icon from '../ui/Icon';
 import ExternalLink from '../ui/ExternalLink';
 import s from './ComboCard.module.css';
-export default function ComboCard({ combo }) {
+export default function ComboCard({ heading = 'h3', combo }) {
+  const Heading = heading;
   const { t } = useTranslation();
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorite = isFavorite(combo.id);
@@ -43,9 +44,9 @@ export default function ComboCard({ combo }) {
             </span>
           ))}
         </div>
-        <h3>
+        <Heading className={s.title}>
           <Link to={`/combos/${combo.id}`}>{t(combo.title)}</Link>
-        </h3>
+        </Heading>
         <div className={s.meta}>
           <span>
             {combo.version_game} <span className={s.dot}>/</span> {combo.version}

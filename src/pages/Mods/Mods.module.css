@@ -16,10 +16,10 @@
   color: var(--text);
   border: 1px solid var(--line);
   border-radius: 5px;
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .count {
-  font-size: 12px;
+  font-size: var(--type-small);
   margin: 25px 0 20px;
 }
 .list {
@@ -63,7 +63,7 @@
   margin: 18px 0 14px;
 }
 .modBody p {
-  font-size: 13px;
+  font-size: var(--type-ui);
   max-width: 520px;
 }
 .modBody .text-link {
@@ -88,7 +88,7 @@
   margin: 22px 0;
 }
 .detailHero p {
-  font-size: 15px;
+  font-size: var(--type-ui);
 }
 .detailCover {
   width: 100%;
@@ -104,7 +104,7 @@
   border-radius: 6px;
   background: var(--green-dim);
   color: var(--text);
-  font-size: 13px;
+  font-size: var(--type-ui);
   line-height: 1.8;
 }
 .description {

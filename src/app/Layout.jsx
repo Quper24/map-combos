@@ -1,5 +1,5 @@
 import { useTranslation } from '../i18n/Language';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import site from '../../content/site.json';
 import Icon from '../components/ui/Icon';
@@ -16,6 +16,7 @@ export default function Layout() {
   const { t, language, setLanguage } = useTranslation();
   const boosty = site.socialLinks.find((link) => link.platform === 'boosty');
   const [open, setOpen] = useState(false);
+  const menuToggle = useRef(null);
   const { pathname, hash } = useLocation();
   useEffect(() => {
     if (!hash)
@@ -26,11 +27,14 @@ export default function Layout() {
   }, [pathname, hash]);
   useEffect(() => {
     const handler = (event) => {
-      if (event.key === 'Escape') setOpen(false);
+      if (event.key === 'Escape' && open) {
+        setOpen(false);
+        menuToggle.current?.focus();
+      }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, []);
+  }, [open]);
   return (
     <>
       <a className="skip-link" href="#main">
@@ -38,15 +42,10 @@ export default function Layout() {
       </a>
       <header className={s.header}>
         <div className={`container ${s.bar}`}>
-          <Link
-            to="/"
-            className={s.brand}
-            onClick={() => setOpen(false)}
-            aria-label={t('Quper Simulator — главная')}
-          >
-            <img src="/img/logo.jpg" width="48" height="48" alt={''} />
+          <Link to="/" className={s.brand} onClick={() => setOpen(false)}>
+            <img src="/img/logo-96.jpg" width="48" height="48" alt={''} />
             <span>
-              QUPER<span className={s.brandSub}>SIMULATOR</span>
+              QUPER <span className={s.brandSub}>SIMULATOR</span>
             </span>
           </Link>
           <nav
@@ -74,7 +73,7 @@ export default function Layout() {
             <button
               type="button"
               lang="ru"
-              aria-label="Русский"
+              aria-label={['RU', 'Русский'].join(' — ')}
               aria-pressed={language === 'ru'}
               onClick={() => setLanguage('ru')}
             >
@@ -83,7 +82,7 @@ export default function Layout() {
             <button
               type="button"
               lang="en"
-              aria-label="English"
+              aria-label="EN — English"
               aria-pressed={language === 'en'}
               onClick={() => setLanguage('en')}
             >
@@ -96,6 +95,7 @@ export default function Layout() {
             </ExternalLink>
           )}
           <button
+            ref={menuToggle}
             className={s.toggle}
             aria-label={t(open ? 'Закрыть меню' : 'Открыть меню')}
             aria-controls="main-navigation"
@@ -106,7 +106,7 @@ export default function Layout() {
           </button>
         </div>
       </header>
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <Outlet />
       </main>
       <footer className={s.footer}>

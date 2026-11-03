@@ -9,7 +9,7 @@
 }
 .hero p {
   max-width: 650px;
-  font-size: 15px;
+  font-size: var(--type-ui);
   line-height: 1.9;
 }
 .hero .actions {
@@ -17,7 +17,7 @@
 }
 .hero .button {
   padding: 11px 16px;
-  font-size: 11px;
+  font-size: var(--type-small);
 }
 .logo {
   border: 1px solid var(--line);
@@ -33,7 +33,7 @@
 .logo span {
   display: block;
   text-align: center;
-  font-size: 11px;
+  font-size: var(--type-small);
   color: #b9b9b5;
   margin: 8px 0 10px;
 }
@@ -60,19 +60,19 @@
   right: 0;
   top: 10px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--type-label);
 }
 .benefits svg {
   color: var(--green);
   margin-bottom: 14px;
 }
 .benefits article p {
-  font-size: 14px;
+  font-size: var(--type-ui);
   max-width: 320px;
 }
 .closing {
   margin: 22px 0 0;
-  font-size: 12px;
+  font-size: var(--type-small);
   color: var(--green);
 }
 .join {
@@ -86,7 +86,7 @@
   font-size: 32px;
 }
 .join p {
-  font-size: 14px;
+  font-size: var(--type-ui);
 }
 @media (max-width: 850px) {
   .hero {

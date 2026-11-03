@@ -1,10 +1,14 @@
 :root {
+  --type-label: 0.75rem;
+  --type-small: 0.875rem;
+  --type-ui: 0.9375rem;
+  --type-body: 1.0625rem;
   color-scheme: dark;
   --background: #101310;
   --surface: #171b17;
   --surface-raised: #20261f;
   --text: #f0f2eb;
-  --muted: #9ca499;
+  --muted: #aeb6ab;
   --green: #b0d88f;
   --green-bright: #c3eca1;
   --green-dim: #b0d88f0c;

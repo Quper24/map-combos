@@ -15,7 +15,7 @@
   flex-direction: column;
   gap: 8px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: var(--type-small);
 }
 .top select {
   background: var(--background);
@@ -23,7 +23,7 @@
   color: var(--text);
   padding: 12px 35px 12px 13px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: var(--type-small);
   min-height: 47px;
   max-width: 100%;
 }
@@ -47,7 +47,7 @@
   background: none;
   border: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: var(--type-small);
   padding: 5px;
 }
 .reset:hover {
@@ -59,7 +59,7 @@
   align-items: center;
   margin: 28px 0 20px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .results b {
   color: var(--text);

@@ -7,6 +7,7 @@ import s from './ServerList.module.css';
 function CopyField({ label, value, serverName, game }) {
   const { t } = useTranslation();
   const [status, setStatus] = useState('');
+  const copyLabel = t(status === 'copied' ? 'Скопировано' : 'Копировать');
   async function copy() {
     try {
       await navigator.clipboard.writeText(value);
@@ -23,13 +24,13 @@ function CopyField({ label, value, serverName, game }) {
         <button
           type="button"
           className={s.copy}
-          aria-label={t(
+          aria-label={`${copyLabel} — ${t(
             `Скопировать ${label === 'Сессия' ? 'сессию' : 'имя сервера'}: ${game.toUpperCase()} / ${serverName}`,
-          )}
+          )}`}
           onClick={copy}
         >
           <Icon name={status === 'copied' ? 'check' : 'copy'} size={15} />
-          <span role="status">{t(status === 'copied' ? 'Скопировано' : 'Копировать')}</span>
+          <span role="status">{copyLabel}</span>
         </button>
       </dd>
       {status === 'error' && (

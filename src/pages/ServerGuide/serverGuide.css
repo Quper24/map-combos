@@ -44,7 +44,7 @@
 }
 .server-guide-container p,
 .server-guide-container li {
-  font-size: 14px;
+  font-size: var(--type-body);
   color: var(--muted);
 }
 .server-guide-container li {
@@ -52,6 +52,11 @@
 }
 .server-guide-container a {
   color: var(--green);
+}
+.server-guide-container li a:not(.button),
+.server-guide-container p a:not(.button) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 .server-guide-container .button {
   color: var(--ink);
@@ -63,7 +68,7 @@
   background: var(--background);
   padding: 3px 6px;
   color: var(--green);
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .server-guide-container .video-links {
   display: flex;
@@ -75,7 +80,7 @@
   border: 1px solid var(--line);
   padding: 14px 18px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .server-guide-container .video-link:hover {
   border-color: var(--green);
@@ -88,7 +93,7 @@
 .server-guide-container table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .server-guide-container th,
 .server-guide-container td {
@@ -108,7 +113,7 @@
 }
 .guide-footer {
   color: var(--muted);
-  font-size: 11px;
+  font-size: var(--type-small);
   margin-top: 40px;
   border-top: 1px solid var(--line);
   padding-top: 20px;

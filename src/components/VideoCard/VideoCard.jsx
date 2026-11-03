@@ -4,7 +4,8 @@ import { GAME_NAMES, VIDEO_CATEGORIES, videoGames, formatVideoDate } from '../..
 import ExternalLink from '../ui/ExternalLink';
 import Icon from '../ui/Icon';
 import s from './VideoCard.module.css';
-export default function VideoCard({ video, showRelations = false }) {
+export default function VideoCard({ heading = 'h3', video, showRelations = false }) {
+  const Heading = heading;
   const { t, language } = useTranslation();
   return (
     <article className={s.card}>
@@ -39,7 +40,7 @@ export default function VideoCard({ video, showRelations = false }) {
             </time>
           )}
         </div>
-        <h3>{t(video.title)}</h3>
+        <Heading className={s.title}>{t(video.title)}</Heading>
         {showRelations && video.relatedComboIds.length > 0 && (
           <Link className="text-link" to={`/combos/${video.relatedComboIds[0]}`}>
             {t('Перейти к сборке ')}

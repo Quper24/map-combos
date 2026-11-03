@@ -28,7 +28,7 @@
   color: var(--green);
 }
 .heroCopy > p {
-  font-size: 16px;
+  font-size: var(--type-body);
   line-height: 1.85;
   margin-bottom: 30px;
 }
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 10px;
+  font-size: var(--type-label);
   color: var(--muted);
   margin-top: 30px;
 }
@@ -79,7 +79,7 @@
   padding: 22px 24px;
 }
 .smallLabel {
-  font-size: 9px;
+  font-size: var(--type-label);
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 1.7px;
@@ -133,9 +133,9 @@
   margin-bottom: 20px;
 }
 .directionTop > span {
-  font-size: 10px;
+  font-size: var(--type-label);
   letter-spacing: 1px;
-  color: #606d60;
+  color: var(--muted);
 }
 .direction h2 {
   font-size: 21px;
@@ -144,12 +144,11 @@
 }
 .directionSubtitle {
   color: var(--text);
-  font-size: 12px;
+  font-size: var(--type-ui);
+  font-weight: 600;
   margin-bottom: 14px;
 }
 .direction p {
-  font-size: 12px;
-  line-height: 1.8;
   max-width: 290px;
   min-height: 44px;
 }
@@ -157,7 +156,8 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  font-size: 11px;
+  font-size: var(--type-ui);
+  font-weight: 600;
   margin-top: auto;
   padding-top: 12px;
 }
@@ -188,7 +188,7 @@
   margin-bottom: 12px;
 }
 .boostyBanner p {
-  font-size: 13px;
+  font-size: var(--type-ui);
   margin: 0;
   max-width: 620px;
 }
@@ -220,7 +220,7 @@
   border-radius: 8px;
 }
 .vtcIdentity > span {
-  font-size: 7px;
+  font-size: var(--type-label);
   letter-spacing: 2px;
   color: var(--muted);
 }
@@ -234,11 +234,11 @@
   margin-bottom: 15px;
 }
 .vtcCopy .eyebrow {
-  font-size: 8px;
+  font-size: var(--type-label);
   margin-bottom: 18px;
 }
 .vtcCopy p {
-  font-size: 13px;
+  font-size: var(--type-ui);
   max-width: 500px;
 }
 .vtcCopy .text-link {
@@ -273,7 +273,7 @@
   font-size: 28px;
 }
 .socialSection p {
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .socialLinks {
   display: grid;
@@ -288,7 +288,7 @@
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 5px;
-  font-size: 10px;
+  font-size: var(--type-label);
 }
 .socialLink:hover {
   border-color: var(--green-line);
@@ -302,12 +302,11 @@
   .hero h1 {
     font-size: 58px;
   }
-  .heroCopy > p {
-    font-size: 14px;
-  }
   .hero .button {
-    font-size: 11px;
     padding: 12px 15px;
+  }
+  .direction {
+    padding: 22px;
   }
   .vtcBanner {
     padding: 30px;
@@ -330,9 +329,6 @@
   .hero h1 {
     font-size: clamp(46px, 11vw, 70px);
   }
-  .heroCopy > p {
-    font-size: 15px;
-  }
   .heroNote {
     margin-top: 24px;
   }
@@ -348,7 +344,7 @@
   .direction {
     padding: 24px;
     display: grid;
-    grid-template-columns: 44px 1fr;
+    grid-template-columns: 30px minmax(0, 1fr);
     column-gap: 16px;
   }
   .directionTop {

@@ -163,7 +163,8 @@ export default function Home() {
       <section className={s.vtcBanner}>
         <div className={s.vtcIdentity}>
           <img
-            src="/img/logo.jpg"
+            src="/img/logo-280.jpg"
+            loading="lazy"
             width="140"
             height="140"
             alt={t('Логотип VTC Quper Simulator')}

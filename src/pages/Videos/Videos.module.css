@@ -18,10 +18,10 @@
   color: var(--text);
   border: 1px solid var(--line);
   border-radius: 5px;
-  font-size: 12px;
+  font-size: var(--type-small);
 }
 .count {
-  font-size: 12px;
+  font-size: var(--type-small);
   margin: 28px 0 24px;
 }
 @media (max-width: 600px) {
