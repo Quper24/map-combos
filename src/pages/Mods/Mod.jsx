@@ -112,9 +112,9 @@ export default function Mod() {
       {mod.changelog?.length > 0 && (
         <details className={`section prose ${s.changelog}`}>
           <summary>{t('История изменений')}</summary>
-          {mod.changelog.map(({ version, changes }) => (
+          {mod.changelog.map(({ version, title, changes }) => (
             <div key={version}>
-              <h3>{version}</h3>
+              <h3>{title ? `${version} — ${t(title)}` : version}</h3>
               <ul>
                 {changes.map((change) => (
                   <li key={change}>{t(change)}</li>
