@@ -99,6 +99,21 @@ export default function Mod() {
           </>
         )}
       </section>
+      {mod.changelog?.length > 0 && (
+        <details className={`section prose ${s.changelog}`}>
+          <summary>{t('История изменений')}</summary>
+          {mod.changelog.map(({ version, changes }) => (
+            <div key={version}>
+              <h3>{version}</h3>
+              <ul>
+                {changes.map((change) => (
+                  <li key={change}>{t(change)}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </details>
+      )}
       {mod.images.length > 0 && (
         <section className="section">
           <h2>{t('Скриншоты')}</h2>

@@ -533,5 +533,10 @@
   "Помести CargoControlETS2.dll из архива в Euro Truck Simulator 2/bin/win_x64/plugins. При обновлении замени старую DLL, оставив только одну версию плагина. Добавлять его в менеджер модификаций не требуется.": "Place CargoControlETS2.dll from the archive in Euro Truck Simulator 2/bin/win_x64/plugins. When updating, replace the old DLL and keep only one version of the plugin. It does not need to be added to the Mod Manager.",
   "Запусти игру в режиме DirectX 11. Основной фикс работает автоматически. Ctrl+Alt+F9 — открыть или закрыть меню.": "Start the game in DirectX 11 mode. The main fix works automatically. Press Ctrl+Alt+F9 to open or close the menu.",
   "Горячие клавиши отдельных действий назначаются в меню и по умолчанию отключены. Перед генерацией останови грузовик.": "Shortcuts for individual actions are assigned in the menu and disabled by default. Stop the truck before generating cargo.",
-  "Скачать 0.7.2 · Sharemods": "Download 0.7.2 · Sharemods"
+  "Скачать 0.7.2 · Sharemods": "Download 0.7.2 · Sharemods",
+  "История изменений": "Changelog",
+  "Опубликован новый архив. Список изменений выпуска пока не указан.": "A new archive was published. Release notes have not been provided yet.",
+  "Автоматический фикс ограничивает попытки генерации грузов и сохраняет неистёкшие предложения для текущего прицепа.": "The automatic fix limits cargo generation attempts and preserves unexpired offers for the current trailer.",
+  "Добавление грузов и обновление рынка доступны отдельно в меню Ctrl+Alt+F9.": "Adding cargo and refreshing the market are separate actions in the Ctrl+Alt+F9 menu.",
+  "В список совместимости вошли обычная сборка, temporary_1_61, Oculus и public_beta.": "The compatibility list includes standard, temporary_1_61, Oculus, and public_beta builds."
 }

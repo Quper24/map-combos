@@ -111,6 +111,15 @@
   border-top: 1px solid var(--line);
   padding-top: 36px;
 }
+.changelog {
+  padding: 16px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.changelog summary {
+  cursor: pointer;
+  font-weight: 700;
+}
 @media (max-width: 850px) {
   .filters {
     flex-wrap: wrap;
