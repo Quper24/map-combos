@@ -4,7 +4,7 @@ import InstructionModal from './InstructionModal';
 import Icon from '../ui/Icon';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods.js';
 import './AutoProfileInstall.css';
-export default function AutoProfileInstall({ combo }) {
+export default function AutoProfileInstall({ combo, modBlock }) {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -26,7 +26,7 @@ export default function AutoProfileInstall({ combo }) {
     setStatus('idle');
     setErrorMsg('');
     return cancel;
-  }, [combo.id, combo.version_game]);
+  }, [combo.id, combo.version_game, modBlock]);
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     event.target.value = '';
@@ -52,15 +52,16 @@ export default function AutoProfileInstall({ combo }) {
     setStatus('processing');
     setErrorMsg('');
     try {
-      const response = await fetch(
-        `/profiles/${combo.version_game}/${combo.id}${combo.mods && includeMods ? 'm' : ''}.txt`,
-        {
-          signal: task.controller.signal,
-        },
-      );
-      if (!response.ok)
-        throw new Error('Не удалось загрузить список модов сборки. Попробуй ещё раз.');
-      const mods = await response.text();
+      let mods = modBlock;
+      if (mods === undefined) {
+        const response = await fetch(
+          `/profiles/${combo.version_game}/${combo.id}${combo.mods && includeMods ? 'm' : ''}.txt`,
+          { signal: task.controller.signal },
+        );
+        if (!response.ok)
+          throw new Error('Не удалось загрузить список модов сборки. Попробуй ещё раз.');
+        mods = await response.text();
+      }
       const buffer = await selectedFile.arrayBuffer();
       if (operation.current !== task) return;
       const worker = new Worker(new URL('../../lib/profile.worker.js', import.meta.url), {

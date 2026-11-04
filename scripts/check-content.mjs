@@ -2,6 +2,7 @@ import { readFile, readdir, access } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
+import { validateCatalog } from '../src/lib/comboBuilder.js';
 
 const read = async (file) => JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
@@ -132,9 +133,34 @@ for (const combo of combos) {
     await image(combo[field], `${combo.id}.${field}`);
   for (const field of ['table', 'boosty', 'profile'])
     if (combo[field]) url(combo[field], `${combo.id}.${field}`);
+  if (Number(combo.version_game.split('.')[1]) >= 62 && combo.tags?.includes('server')) {
+    check(
+      combo.boosty?.startsWith('https://boosty.to/') && !combo.table && !combo.profile,
+      `${combo.id}: server packages from 1.62 must be distributed as a single Boosty download`,
+    );
+  }
+}
+const builderVersions = new Set();
+for (const name of (await readdir('content/combo-builder')).filter((name) =>
+  name.endsWith('.json'),
+)) {
+  try {
+    const catalog = validateCatalog(await read(`content/combo-builder/${name}`));
+    check(
+      name === `${catalog.game}-${catalog.version}.json`,
+      `${name}: expected game-version.json`,
+    );
+    builderVersions.add(catalog.version);
+    for (const item of [...catalog.entries, ...catalog.order]) {
+      await image(item.image, `${name}: ${item.id || item.key}`);
+    }
+  } catch (error) {
+    errors.push(`${name}: ${error.message}`);
+  }
 }
 check(
-  combos.some((combo) => combo.version_game === site.currentGameVersion),
+  builderVersions.has(site.currentGameVersion) ||
+    combos.some((combo) => combo.version_game === site.currentGameVersion),
   'Current game version has no combos',
 );
 await image('/img/combos/center.jpg', 'Shared center image');

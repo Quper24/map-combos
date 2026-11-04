@@ -1,0 +1,747 @@
+import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/Language';
+import {
+  entryTypeLabels,
+  isSelectable,
+  mergeModOrders,
+  moveMod,
+  parseModOrder,
+  validateCatalog,
+} from '../../lib/comboBuilder';
+import { Builder } from './ComboBuilder';
+import { download } from './downloads';
+import s from './ComboBuilder.module.css';
+
+const storageKey = 'quperSimulator_comboDraft';
+const blank = { game: 'ets2', version: '1.62', entries: [], order: [], conflicts: [], presets: [] };
+const localReference = '/profiles/1.61/';
+
+function loadDraft() {
+  try {
+    const raw = localStorage.getItem(storageKey);
+    return raw ? validateCatalog(JSON.parse(raw), true) : blank;
+  } catch {
+    return blank;
+  }
+}
+
+function getForm(event) {
+  event.preventDefault();
+  return new FormData(event.currentTarget);
+}
+
+const valueOf = (form, key) => form.get(key)?.trim() || undefined;
+const replace = (list, key, item) =>
+  list.some((existing) => existing[key] === item[key])
+    ? list.map((existing) => (existing[key] === item[key] ? item : existing))
+    : [...list, item];
+
+function Field({ label, ...props }) {
+  const { t } = useTranslation();
+  return (
+    <label className={s.field}>
+      {t(label)}
+      <input {...props} />
+    </label>
+  );
+}
+
+function Choices({ label, name, items, selected = [] }) {
+  const { t } = useTranslation();
+  const [query, setQuery] = useState('');
+  return (
+    <fieldset className={s.choices}>
+      <legend>{t(label)}</legend>
+      <Field
+        label="Фильтр списка"
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+      />
+      <div className={s.choiceList}>
+        {items.map(({ id, title }) => (
+          <label
+            key={id}
+            hidden={!`${title} ${id}`.toLowerCase().includes(query.trim().toLowerCase())}
+          >
+            <input type="checkbox" name={name} value={id} defaultChecked={selected.includes(id)} />{' '}
+            {t(title)}
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
+
+export default function ComboEditor() {
+  const { t } = useTranslation();
+  const [catalog, setCatalog] = useState(loadDraft);
+  const [notice, setNotice] = useState('');
+  const [pending, setPending] = useState(null);
+  const [revision, setRevision] = useState(0);
+  const [showPreview, setShowPreview] = useState(false);
+  const [busy, setBusy] = useState(false);
+  function commit(next) {
+    try {
+      validateCatalog(next, true);
+    } catch (error) {
+      setNotice(error.message);
+      return false;
+    }
+    setCatalog(next);
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(next));
+      setNotice('Черновик сохранён в этом браузере.');
+    } catch {
+      setNotice('Хранилище браузера недоступно. Скачай черновик JSON.');
+    }
+    return true;
+  }
+  function loadOrder(source, reference = false) {
+    const files = parseModOrder(source);
+    if (!files.length) throw new Error('The template contains no files');
+    setPending({ files, reference });
+  }
+  async function readInput(event, handler) {
+    const file = event.currentTarget.files[0];
+    event.currentTarget.value = '';
+    if (!file) return;
+    setBusy(true);
+    try {
+      if (file.size > 5 * 1024 * 1024) throw new Error('File exceeds 5 MB');
+      handler(await file.text());
+    } catch (error) {
+      setNotice(error.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function readReference(id) {
+    setBusy(true);
+    try {
+      const response = await fetch(`${localReference}${id}.txt`);
+      if (!response.ok) throw new Error('Не удалось загрузить эталон 1.61.');
+      loadOrder(await response.text(), true);
+    } catch (error) {
+      setNotice(error.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  function applyImport(preferImported) {
+    const order = mergeModOrders(catalog.order, pending.files, preferImported).order;
+    const next =
+      pending.reference && !catalog.order.length
+        ? { ...catalog, game: 'ets2', version: '1.61', order }
+        : { ...catalog, order };
+    if (commit(next)) setPending(null);
+  }
+  function exportCatalog(publish) {
+    try {
+      validateCatalog(catalog, !publish);
+      const name = `${catalog.game}-${catalog.version}${publish ? '' : '-draft'}.json`;
+      download(
+        new Blob([JSON.stringify(catalog, null, 2) + '\n'], { type: 'application/json' }),
+        name,
+      );
+    } catch (error) {
+      setNotice(error.message);
+    }
+  }
+  const imported = pending && mergeModOrders(catalog.order, pending.files);
+  const displayOrder = imported ? [...imported.order].reverse() : [];
+  const incomingOrder = imported?.orderConflict
+    ? mergeModOrders(catalog.order, pending.files, true).order.slice().reverse()
+    : [];
+  return (
+    <div className="container page">
+      <div className="page-heading">
+        <span className="eyebrow">ETS2 / ATS</span>
+        <h1>{t('Редактор каталога')}</h1>
+        <p>
+          {t(
+            'Изменения сохраняются в этом браузере. Для публикации выгрузи проверенный JSON и добавь его в каталог сайта.',
+          )}
+        </p>
+        <Link className="text-link" to="/combos/builder">
+          {t('Конструктор сборок')}
+        </Link>
+      </div>
+      <div className={s.editorGrid} key={revision}>
+        <section className={s.panel}>
+          <h2>{t('Каталог')}</h2>
+          <form
+            className={s.toolbar}
+            key={`${catalog.game}-${catalog.version}`}
+            onSubmit={(event) => {
+              const form = getForm(event);
+              commit({ ...catalog, game: form.get('game'), version: form.get('version') });
+            }}
+          >
+            <label className={s.field}>
+              {t('Игра')}
+              <select name="game" defaultValue={catalog.game}>
+                <option value="ets2">ETS2</option>
+                <option value="ats">ATS</option>
+              </select>
+            </label>
+            <Field
+              label="Версия игры"
+              name="version"
+              defaultValue={catalog.version}
+              required
+              pattern="1\.\d+"
+            />
+            <button className="button button-secondary">{t('Сохранить')}</button>
+          </form>
+          <div className={s.toolbar}>
+            <Field
+              label="Открыть JSON"
+              type="file"
+              accept=".json"
+              disabled={busy}
+              onChange={(event) =>
+                readInput(event, (source) => {
+                  if (commit(JSON.parse(source))) {
+                    setPending(null);
+                    setShowPreview(false);
+                    setRevision((number) => number + 1);
+                  }
+                })
+              }
+            />
+            <button className="button button-secondary" onClick={() => exportCatalog(false)}>
+              {t('Скачать черновик JSON')}
+            </button>
+            <button className="button" onClick={() => exportCatalog(true)}>
+              {t('Выгрузить каталог для публикации')}
+            </button>
+          </div>
+        </section>
+        <section className={s.panel}>
+          <h2>{t('Импорт порядка')}</h2>
+          <p>
+            {t(
+              'Загрузи TXT с active_mods или расшифрованный profile.sii. Новые файлы появятся в общем порядке, существующие сохранят свои настройки.',
+            )}
+          </p>
+          <div className={s.toolbar}>
+            <Field
+              label="Загрузить шаблон"
+              type="file"
+              accept=".txt,.sii"
+              disabled={busy}
+              onChange={(event) => readInput(event, loadOrder)}
+            />
+            {(!catalog.order.length || catalog.version === '1.61') && (
+              <>
+                <button
+                  className="button button-secondary"
+                  disabled={busy}
+                  onClick={() => readReference('mega-boosty-map-161')}
+                >
+                  Mega Boosty 1.61
+                </button>
+                <button
+                  className="button button-secondary"
+                  disabled={busy}
+                  onClick={() => readReference('mega-map-161')}
+                >
+                  Mega 1.61
+                </button>
+              </>
+            )}
+          </div>
+          {pending && (
+            <div className={s.importPreview}>
+              <p>
+                {t('Всего файлов после объединения — ')}
+                {displayOrder.length}
+              </p>
+              {imported.orderConflict && (
+                <p className={s.reason}>
+                  {t('Общие файлы идут в разном порядке. Выбери, какой порядок сохранить.')}
+                </p>
+              )}
+              <ol className={s.importList}>
+                {displayOrder.map((file) => (
+                  <li key={file.key}>{file.name}</li>
+                ))}
+              </ol>
+              {incomingOrder.length > 0 && (
+                <details>
+                  <summary>{t('Предпросмотр порядка из файла')}</summary>
+                  <ol className={s.importList}>
+                    {incomingOrder.map((file) => (
+                      <li key={file.key}>{file.name}</li>
+                    ))}
+                  </ol>
+                </details>
+              )}
+              <div className={s.actions}>
+                <button className="button" onClick={() => applyImport(false)}>
+                  {t(imported.orderConflict ? 'Сохранить текущий порядок' : 'Объединить списки')}
+                </button>
+                {imported.orderConflict && (
+                  <button className="button" onClick={() => applyImport(true)}>
+                    {t('Применить порядок из файла')}
+                  </button>
+                )}
+                <button className="button button-secondary" onClick={() => setPending(null)}>
+                  {t('Отмена')}
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
+        <OrderEditor catalog={catalog} commit={commit} />
+        <EntryEditor catalog={catalog} commit={commit} />
+        <RulesEditor catalog={catalog} commit={commit} />
+        <PresetEditor catalog={catalog} commit={commit} />
+        <section className={s.panel}>
+          <h2>{t('Предпросмотр конструктора')}</h2>
+          <button className="button button-secondary" onClick={() => setShowPreview(!showPreview)}>
+            {t(showPreview ? 'Скрыть предпросмотр' : 'Открыть предпросмотр')}
+          </button>
+          {showPreview && <Builder key={JSON.stringify(catalog)} catalog={catalog} />}
+        </section>
+        {notice && (
+          <p className={s.notice} role="status">
+            {t(notice)}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function OrderEditor({ catalog, commit }) {
+  const { t } = useTranslation();
+  const [fileKey, setFileKey] = useState('');
+  const [anchor, setAnchor] = useState('');
+  const [query, setQuery] = useState('');
+  const dragging = useRef(null);
+  const { order } = catalog;
+  const owners = new Map(
+    catalog.entries.flatMap((entry) => entry.files.map((key) => [key, entry.title])),
+  );
+  const rows = [...order].reverse();
+  const file = order.find(({ key }) => key === fileKey);
+  const move = (key, target, above) =>
+    commit({ ...catalog, order: moveMod(order, key, target, above) });
+  return (
+    <section className={s.panel}>
+      <h2>{t('Общий порядок файлов')}</h2>
+      <p>
+        {t(
+          'Верх списка соответствует наивысшему приоритету. Перетащи строку или укажи соседний файл.',
+        )}
+      </p>
+      <div className={s.toolbar}>
+        <Field
+          label="Поиск файлов"
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+        <button className="button button-secondary" onClick={() => setFileKey('')}>
+          {t('Добавить файл вручную')}
+        </button>
+      </div>
+      {rows.length > 0 && (
+        <ol className={s.editOrder}>
+          {rows.map((item, index) => (
+            <li
+              key={item.key}
+              hidden={
+                !`${item.name} ${item.key} ${item.filename || ''}`
+                  .toLowerCase()
+                  .includes(query.trim().toLowerCase())
+              }
+              draggable
+              onDragStart={(event) => {
+                dragging.current = item.key;
+                event.dataTransfer.setData('text/plain', item.key);
+                event.dataTransfer.effectAllowed = 'move';
+              }}
+              onDragEnd={() => {
+                dragging.current = null;
+              }}
+              onDragOver={(event) => {
+                if (dragging.current) event.preventDefault();
+              }}
+              onDrop={(event) => {
+                event.preventDefault();
+                const bounds = event.currentTarget.getBoundingClientRect();
+                if (dragging.current)
+                  move(dragging.current, item.key, event.clientY < bounds.top + bounds.height / 2);
+              }}
+            >
+              <button
+                type="button"
+                className="chip"
+                onClick={() => {
+                  setFileKey(item.key);
+                  setAnchor('');
+                }}
+                aria-pressed={fileKey === item.key}
+              >
+                {index + 1}. {item.name}
+              </button>
+              <small>{owners.get(item.key) || t('Без привязки')}</small>
+            </li>
+          ))}
+        </ol>
+      )}
+      {file && order.length > 1 && (
+        <div className={s.toolbar}>
+          <label className={s.field}>
+            {t('Соседний файл')}
+            <select value={anchor} onChange={(event) => setAnchor(event.target.value)}>
+              <option value="">{t('Выбрать файл')}</option>
+              {rows
+                .filter((item) => item.key !== fileKey)
+                .map((item) => (
+                  <option key={item.key} value={item.key}>
+                    {item.name} · {item.key}
+                  </option>
+                ))}
+            </select>
+          </label>
+          <button
+            className="button button-secondary"
+            disabled={!anchor}
+            onClick={() => move(fileKey, anchor, true)}
+          >
+            {t('Поставить выше')}
+          </button>
+          <button
+            className="button button-secondary"
+            disabled={!anchor}
+            onClick={() => move(fileKey, anchor, false)}
+          >
+            {t('Поставить ниже')}
+          </button>
+        </div>
+      )}
+      <form
+        className={s.form}
+        key={file?.key || 'new'}
+        onSubmit={(event) => {
+          const form = getForm(event);
+          const key = file?.key || valueOf(form, 'key');
+          if (
+            commit({
+              ...catalog,
+              order: file ? replace(order, 'key', readFile()) : [...order, readFile()],
+            })
+          )
+            setFileKey(key);
+          function readFile() {
+            return {
+              key,
+              name: form.get('name'),
+              filename: valueOf(form, 'filename'),
+              link: valueOf(form, 'link'),
+              image: valueOf(form, 'image'),
+            };
+          }
+        }}
+      >
+        <Field
+          label="Ключ файла в профиле"
+          name="key"
+          defaultValue={file?.key}
+          readOnly={Boolean(file)}
+          required
+        />
+        <Field label="Имя в менеджере модов" name="name" defaultValue={file?.name} required />
+        <Field label="Имя файла с расширением" name="filename" defaultValue={file?.filename} />
+        <Field label="Ссылка на файл" type="url" name="link" defaultValue={file?.link} />
+        <Field label="Картинка файла (/img/…)" name="image" defaultValue={file?.image} />
+        <div className={s.actions}>
+          <button className="button">{t('Сохранить файл')}</button>
+          {file && !owners.has(file.key) && (
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={() => {
+                if (commit({ ...catalog, order: order.filter(({ key }) => key !== fileKey) })) {
+                  setFileKey('');
+                  setAnchor('');
+                }
+              }}
+            >
+              {t('Удалить файл')}
+            </button>
+          )}
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function EntryEditor({ catalog, commit }) {
+  const { t } = useTranslation();
+  const [id, setId] = useState('');
+  const entry = catalog.entries.find((item) => item.id === id);
+  const owned = new Set(
+    catalog.entries.filter((item) => item.id !== id).flatMap((item) => item.files),
+  );
+  return (
+    <section className={s.panel}>
+      <h2>{t('Карты, моды, фиксы и коннекторы')}</h2>
+      <EntityPicker items={catalog.entries} id={id} setId={setId} />
+      <form
+        className={s.form}
+        key={id}
+        onSubmit={(event) => {
+          const form = getForm(event);
+          const next = {
+            id: entry?.id || valueOf(form, 'id'),
+            title: valueOf(form, 'title'),
+            type: form.get('type'),
+            link: valueOf(form, 'link'),
+            image: valueOf(form, 'image'),
+            paid: form.has('paid'),
+            family: valueOf(form, 'family'),
+            variant: valueOf(form, 'variant'),
+            files: form.getAll('files'),
+            requires: form.getAll('requires'),
+            dlcs: (valueOf(form, 'dlcs') || '')
+              .split(',')
+              .map((dlc) => dlc.trim())
+              .filter(Boolean),
+          };
+          const entries = entry ? replace(catalog.entries, 'id', next) : [...catalog.entries, next];
+          if (commit({ ...catalog, entries })) setId(next.id);
+        }}
+      >
+        <Field
+          label="Идентификатор (a-z, 0-9, дефис)"
+          name="id"
+          defaultValue={entry?.id}
+          readOnly={Boolean(entry)}
+          required
+        />
+        <Field label="Название" name="title" defaultValue={entry?.title} required />
+        <label className={s.field}>
+          {t('Тип')}
+          <select name="type" defaultValue={entry?.type || 'map'}>
+            {Object.entries(entryTypeLabels).map(([type, label]) => (
+              <option key={type} value={type}>
+                {t(label)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <Field label="Ссылка на скачивание" name="link" type="url" defaultValue={entry?.link} />
+        <Field label="Картинка (/img/…)" name="image" defaultValue={entry?.image} />
+        <Field label="Семейство карты" name="family" defaultValue={entry?.family} />
+        <Field label="Вариант карты" name="variant" defaultValue={entry?.variant} />
+        <Field
+          label="Требуемые DLC через запятую"
+          name="dlcs"
+          defaultValue={entry?.dlcs?.join(', ')}
+        />
+        <label>
+          <input type="checkbox" name="paid" defaultChecked={entry?.paid} /> {t('Платная')}
+        </label>
+        <Choices
+          label="Файлы позиции"
+          name="files"
+          selected={entry?.files}
+          items={[...catalog.order]
+            .reverse()
+            .filter(({ key }) => !owned.has(key))
+            .map(({ key, name }) => ({ id: key, title: name }))}
+        />
+        <Choices
+          label="Обязательные зависимости (все перечисленные)"
+          name="requires"
+          selected={entry?.requires}
+          items={catalog.entries.filter((item) => item.id !== id)}
+        />
+        <div className={s.actions}>
+          <button className="button">{t('Сохранить позицию')}</button>
+          {entry && (
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={() => {
+                if (
+                  commit({ ...catalog, entries: catalog.entries.filter((item) => item.id !== id) })
+                )
+                  setId('');
+              }}
+            >
+              {t('Удалить позицию')}
+            </button>
+          )}
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function EntityPicker({ items, id, setId }) {
+  const { t } = useTranslation();
+  return (
+    <label className={s.field}>
+      {t('Что редактировать')}
+      <select value={id} onChange={(event) => setId(event.target.value)}>
+        <option value="">{t('Новая запись')}</option>
+        {items.map((item) => (
+          <option key={item.id} value={item.id}>
+            {item.title} · {item.id}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function RulesEditor({ catalog, commit }) {
+  const { t } = useTranslation();
+  const { entries, conflicts } = catalog;
+  const [index, setIndex] = useState(-1);
+  const rule = conflicts[index];
+  const name = (id) => entries.find((entry) => entry.id === id)?.title;
+  return (
+    <section className={s.panel}>
+      <h2>{t('Конфликты')}</h2>
+      <EntityPicker
+        items={conflicts.map((item, position) => ({
+          id: String(position),
+          title: item.entries.map(name).join(' + '),
+        }))}
+        id={rule ? String(index) : ''}
+        setId={(id) => setIndex(id === '' ? -1 : Number(id))}
+      />
+      <form
+        className={s.form}
+        key={index}
+        onSubmit={(event) => {
+          const form = getForm(event);
+          const next = {
+            entries: [form.get('first'), form.get('second')],
+            reason: valueOf(form, 'reason'),
+          };
+          if (
+            commit({
+              ...catalog,
+              conflicts: rule
+                ? conflicts.map((item, position) => (position === index ? next : item))
+                : [...conflicts, next],
+            })
+          ) {
+            setIndex(rule ? index : conflicts.length);
+          }
+        }}
+      >
+        {['first', 'second'].map((field, position) => (
+          <label className={s.field} key={field}>
+            {t(position ? 'Вторая позиция' : 'Первая позиция')}
+            <select name={field} defaultValue={rule?.entries[position] || ''} required>
+              <option value="">{t('Выбрать позицию')}</option>
+              {entries.map((entry) => (
+                <option key={entry.id} value={entry.id}>
+                  {entry.title}
+                </option>
+              ))}
+            </select>
+          </label>
+        ))}
+        <Field label="Причина конфликта" name="reason" defaultValue={rule?.reason} />
+        <div className={s.actions}>
+          <button className="button">{t('Сохранить конфликт')}</button>
+          {rule && (
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={() => {
+                if (
+                  commit({
+                    ...catalog,
+                    conflicts: conflicts.filter((_, position) => position !== index),
+                  })
+                )
+                  setIndex(-1);
+              }}
+            >
+              {t('Удалить конфликт')}
+            </button>
+          )}
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function PresetEditor({ catalog, commit }) {
+  const { t } = useTranslation();
+  const [id, setId] = useState('');
+  const preset = catalog.presets.find((item) => item.id === id);
+  return (
+    <section className={s.panel}>
+      <h2>{t('Готовые пресеты')}</h2>
+      <EntityPicker items={catalog.presets} id={id} setId={setId} />
+      <form
+        className={s.form}
+        key={id}
+        onSubmit={(event) => {
+          const form = getForm(event);
+          const next = {
+            id: preset?.id || valueOf(form, 'id'),
+            title: valueOf(form, 'title'),
+            boosty: valueOf(form, 'boosty'),
+            selection: form.getAll('selection'),
+          };
+          const presets = preset
+            ? replace(catalog.presets, 'id', next)
+            : [...catalog.presets, next];
+          if (commit({ ...catalog, presets })) setId(next.id);
+        }}
+      >
+        <Field
+          label="Идентификатор (a-z, 0-9, дефис)"
+          name="id"
+          defaultValue={preset?.id}
+          readOnly={Boolean(preset)}
+          required
+        />
+        <Field label="Название" name="title" defaultValue={preset?.title} required />
+        <Field
+          label="Ссылка на пост Boosty"
+          name="boosty"
+          type="url"
+          defaultValue={preset?.boosty}
+        />
+        <Choices
+          label="Выбранные карты и моды"
+          name="selection"
+          selected={preset?.selection}
+          items={catalog.entries.filter(isSelectable)}
+        />
+        <div className={s.actions}>
+          <button className="button">{t('Сохранить пресет')}</button>
+          {preset && (
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={() => {
+                if (
+                  commit({ ...catalog, presets: catalog.presets.filter((item) => item.id !== id) })
+                )
+                  setId('');
+              }}
+            >
+              {t('Удалить пресет')}
+            </button>
+          )}
+        </div>
+      </form>
+    </section>
+  );
+}

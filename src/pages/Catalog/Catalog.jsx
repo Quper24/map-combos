@@ -1,6 +1,6 @@
 import { useTranslation } from '../../i18n/Language';
 import { useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { COMBOS_BY_VERSION, VERSIONS } from '../../data';
 import site from '../../../content/site.json';
 import ComboCard from '../../components/ComboCard/ComboCard';
@@ -9,6 +9,9 @@ import Icon from '../../components/ui/Icon';
 import { tagUtils } from '../../utils/tags';
 import { dateValue } from '../../lib/content';
 import s from './Catalog.module.css';
+const hasBuilderCatalog =
+  Object.keys(import.meta.glob('../../../content/combo-builder/*.json')).length > 0;
+
 export default function Catalog() {
   const { t } = useTranslation();
   const [params, setParams] = useSearchParams();
@@ -86,6 +89,11 @@ export default function Catalog() {
             'Выбери свой мир. Ссылки, готовые профили и порядок карт для ETS2 и ATS — всё собрано здесь.',
           )}
         </p>
+        {(hasBuilderCatalog || import.meta.env.DEV) && (
+          <Link className="button" to="/combos/builder">
+            {t('Конструктор сборок')}
+          </Link>
+        )}
       </div>
       <section className={s.filters} aria-label={t('Фильтры сборок')}>
         <div className={s.top}>

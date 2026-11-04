@@ -5,6 +5,10 @@ import Layout from './Layout';
 const Home = lazy(() => import('../pages/Home/Home'));
 const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
 const Combo = lazy(() => import('../pages/Combo/Combo'));
+const ComboBuilder = lazy(() => import('../pages/ComboBuilder/ComboBuilder'));
+const ComboEditor = import.meta.env.DEV
+  ? lazy(() => import('../pages/ComboBuilder/ComboEditor'))
+  : null;
 const Vtc = lazy(() => import('../pages/Vtc/Vtc'));
 const Mods = lazy(() => import('../pages/Mods/Mods'));
 const Mod = lazy(() => import('../pages/Mods/Mod'));
@@ -68,6 +72,8 @@ export default function App() {
           <Route element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="combos" element={<Catalog />} />
+            <Route path="combos/builder" element={<ComboBuilder />} />
+            {ComboEditor && <Route path="combos/builder/editor" element={<ComboEditor />} />}
             <Route path="combos/:slug" element={<Combo />} />
             <Route path="vtc" element={<Vtc />} />
             <Route path="mods" element={<Mods />} />
