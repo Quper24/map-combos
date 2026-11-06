@@ -1,3 +1,4 @@
+ active_mods: 251
  active_mods[0]: "truck.dream.road.v3.00.model|Truck Dream Road V3 - MODEL"
  active_mods[1]: "truck.dream.road.v3.00.map|Truck Dream Road V3 - MAP"
  active_mods[2]: "truck.dream.road.v3.00.def|Truck Dream Road V3 - DEF"
