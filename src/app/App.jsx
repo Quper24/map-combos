@@ -71,6 +71,10 @@ export default function App() {
             <Route path="combos/:slug" element={<Combo />} />
             <Route path="vtc" element={<Vtc />} />
             <Route path="mods" element={<Mods />} />
+            <Route
+              path="mods/cargo-control-ets2"
+              element={<Navigate to="/mods/cargo-control" replace />}
+            />
             <Route path="mods/:slug" element={<Mod />} />
             <Route path="videos" element={<Videos />} />
             <Route path="server-guide" element={<ServerGuide />} />
