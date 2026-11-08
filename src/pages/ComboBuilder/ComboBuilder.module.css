@@ -21,7 +21,7 @@
   font-size: var(--type-small);
 }
 
-.field :is(input, select) {
+.field :is(input, select, textarea) {
   min-width: 0;
   max-width: 100%;
   min-height: 42px;
@@ -71,6 +71,41 @@
   border-radius: 20px;
   padding: 1px 9px;
   color: var(--boosty);
+  font-size: var(--type-small);
+}
+
+.newBadge,
+.updateBadge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: 8px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: var(--type-label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.newBadge {
+  color: var(--green);
+  background: var(--green-dim);
+  border: 1px solid var(--green-line);
+}
+
+.updateBadge {
+  color: var(--boosty);
+  background: var(--boosty-dim);
+  border: 1px solid var(--boosty-line);
+}
+
+.modVersion {
+  color: var(--muted);
+}
+
+.description {
+  flex-basis: 100%;
+  margin: 0;
+  white-space: pre-line;
   font-size: var(--type-small);
 }
 
@@ -145,8 +180,20 @@
   margin-top: 18px;
 }
 
-.form :is(.actions, .choices) {
+.form :is(.actions, .choices, .replacement) {
   grid-column: 1 / -1;
+}
+
+.imageField,
+.replacement[open] {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.replacement summary {
+  cursor: pointer;
+  color: var(--green);
 }
 
 .choices {

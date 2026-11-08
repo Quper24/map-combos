@@ -5,6 +5,7 @@ import ExternalLink from '../../components/ui/ExternalLink';
 import AutoProfileInstall from '../../components/AutoProfileInstall/AutoProfileInstall';
 import {
   addToCombo,
+  entryBadge,
   entryTypeLabels,
   isSelectable,
   resolveCombo,
@@ -36,7 +37,7 @@ export default function ComboBuilder() {
             'Выбери карты или возьми готовый пресет. Фиксы, коннекторы и порядок файлов подберутся автоматически.',
           )}
         </p>
-        {import.meta.env.DEV && (
+        {import.meta.env.DEV && import.meta.env.MODE === 'editor' && (
           <Link className="text-link" to="/combos/builder/editor">
             {t('Редактор каталога')}
           </Link>
@@ -140,7 +141,10 @@ export function Builder({ catalog }) {
               )
               .map(([key, items]) => (
                 <article className={s.card} key={key}>
-                  <h3>{t(items[0].family || items[0].title)}</h3>
+                  <h3>
+                    {t(items[0].family || items[0].title)}
+                    {!items[0].family && <EntryBadge entry={items[0]} />}
+                  </h3>
                   {items.map((entry) => {
                     const selected = result.manual.has(entry.id);
                     const required = result.active.has(entry.id) && !selected;
@@ -152,6 +156,8 @@ export function Builder({ catalog }) {
                           <img className={s.thumb} src={entry.image} alt="" loading="lazy" />
                         )}
                         {entry.variant && <strong>{t(entry.variant)}</strong>}
+                        {entry.variant && <EntryBadge entry={entry} />}
+                        {entry.version && <small className={s.modVersion}>{entry.version}</small>}
                         {entry.paid && <span className={s.paid}>{t('Платная')}</span>}
                         {entry.link && (
                           <ExternalLink className="text-link" href={entry.link}>
@@ -180,6 +186,9 @@ export function Builder({ catalog }) {
                             {conflictText(rule)}
                           </p>
                         ))}
+                        {entry.description && (
+                          <p className={s.description}>{t(entry.description)}</p>
+                        )}
                       </div>
                     );
                   })}
@@ -223,6 +232,13 @@ export function Builder({ catalog }) {
   );
 }
 
+function EntryBadge({ entry }) {
+  const badge = entryBadge(entry);
+  return badge ? (
+    <span className={badge === 'NEW' ? s.newBadge : s.updateBadge}>{badge}</span>
+  ) : null;
+}
+
 function OrderList({ result: { files, manual, reasons }, byId }) {
   const { t } = useTranslation();
   return (
@@ -239,7 +255,11 @@ function OrderList({ result: { files, manual, reasons }, byId }) {
               <code>{file.filename || file.key}</code>
               <small>
                 {t(entryTypeLabels[file.entry.type])} · {t(file.entry.title)}
+                <EntryBadge entry={file.entry} />
               </small>
+              {!isSelectable(file.entry) && file.entry.description && (
+                <small>{t(file.entry.description)}</small>
+              )}
               {because?.length > 0 && (
                 <small>
                   {t('Нужно для ')}

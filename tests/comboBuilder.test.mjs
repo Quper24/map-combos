@@ -3,9 +3,12 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import {
   addToCombo,
+  catalogDate,
+  entryBadge,
   mergeModOrders,
   moveMod,
   parseModOrder,
+  replaceEntryFiles,
   resolveCombo,
   serializeModOrder,
   validateCatalog,
@@ -46,6 +49,74 @@ test('when shared files disagree, the chosen order wins and saved file metadata 
   assert.deepEqual(mergeModOrders(saved, incoming, true).order, [saved[1], incoming[1], saved[0]]);
   assert.deepEqual(moveMod(saved, 'a', 'b', true), [saved[1], saved[0]]);
   assert.deepEqual(moveMod(saved, 'b', 'a', false), [saved[1], saved[0]]);
+});
+
+test('a new file takes the old slot and inherits the image and link, while the same preset and dependencies still resolve', () => {
+  const old = {
+    key: 'sibir-fv',
+    name: 'Old FV',
+    filename: 'old.scs',
+    image: '/img/fv.webp',
+    link: 'https://example.org/fv',
+  };
+  const other = { key: 'kazakhstan', name: 'Kazakhstan' };
+  const updated = { key: 'fv-v2', name: 'New FV', filename: 'fv-v2.scs' };
+  const { order, files } = replaceEntryFiles(
+    [old, other, updated],
+    [old.key, updated.key],
+    new Map([[old.key, updated.key]]),
+  );
+  assert.deepEqual(order, [{ ...updated, image: old.image, link: old.link }, other]);
+  assert.deepEqual(files, [updated.key]);
+  const next = {
+    ...catalog,
+    order: catalog.order.map((file) => (file.key === old.key ? order[0] : file)),
+    entries: catalog.entries.map((entry) =>
+      entry.id === 'sibir-fv' ? { ...entry, files } : entry,
+    ),
+  };
+  validateCatalog(next);
+  const result = resolveCombo(next, next.presets[0].selection);
+  assert.ok(result.active.has('fv-connector'));
+  assert.ok(result.files.some((file) => file.key === updated.key));
+  assert.throws(
+    () =>
+      replaceEntryFiles(
+        [old, other, updated],
+        [old.key, other.key],
+        new Map([
+          [old.key, updated.key],
+          [other.key, updated.key],
+        ]),
+      ),
+    /отдельный новый файл/,
+  );
+});
+
+test('badges last five Moscow calendar days and a recent update takes precedence', () => {
+  const entry = { addedAt: '2026-11-08', updatedAt: '2026-11-10' };
+  assert.equal(catalogDate(new Date('2026-11-08T21:00:00Z')), '2026-11-09');
+  assert.equal(entryBadge(entry, '2026-11-07'), '');
+  assert.equal(entryBadge(entry, '2026-11-09'), 'NEW');
+  assert.equal(entryBadge(entry, '2026-11-10'), 'UPDATE');
+  assert.equal(entryBadge(entry, '2026-11-14'), 'UPDATE');
+  assert.equal(entryBadge(entry, '2026-11-15'), '');
+  assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-12'), 'NEW');
+  assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-13'), '');
+  assert.equal(entryBadge({}, '2026-11-08'), '');
+  for (const dates of [
+    { addedAt: '2026-02-30' },
+    { addedAt: '2026-11-08', updatedAt: '2026-11-07' },
+  ]) {
+    assert.throws(
+      () =>
+        validateCatalog({
+          ...catalog,
+          entries: [{ ...entries[0], ...dates }, ...entries.slice(1)],
+        }),
+      /entry dates/,
+    );
+  }
 });
 
 const makeEntry = (id, type = 'map', options = {}) => ({

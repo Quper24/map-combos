@@ -6,9 +6,10 @@ const Home = lazy(() => import('../pages/Home/Home'));
 const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
 const Combo = lazy(() => import('../pages/Combo/Combo'));
 const ComboBuilder = lazy(() => import('../pages/ComboBuilder/ComboBuilder'));
-const ComboEditor = import.meta.env.DEV
-  ? lazy(() => import('../pages/ComboBuilder/ComboEditor'))
-  : null;
+const ComboEditor =
+  import.meta.env.DEV && import.meta.env.MODE === 'editor'
+    ? lazy(() => import('../pages/ComboBuilder/ComboEditor'))
+    : null;
 const Vtc = lazy(() => import('../pages/Vtc/Vtc'));
 const Mods = lazy(() => import('../pages/Mods/Mods'));
 const Mod = lazy(() => import('../pages/Mods/Mod'));

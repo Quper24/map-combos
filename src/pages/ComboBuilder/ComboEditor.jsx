@@ -2,16 +2,19 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import {
+  catalogDate,
   entryTypeLabels,
   isSelectable,
   mergeModOrders,
   moveMod,
   parseModOrder,
+  replaceEntryFiles,
   validateCatalog,
 } from '../../lib/comboBuilder';
 import { processProfile } from '../../lib/processProfile';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
 import { Builder } from './ComboBuilder';
+import EditorImageField from './EditorImageField';
 import { download } from './downloads';
 import s from './ComboBuilder.module.css';
 
@@ -83,6 +86,12 @@ export default function ComboEditor() {
   const [revision, setRevision] = useState(0);
   const [showPreview, setShowPreview] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [entryRequest, setEntryRequest] = useState({ id: '', files: [], key: 0 });
+  const unassigned = unassignedFiles(catalog);
+  function editImportedFiles(id, files) {
+    setEntryRequest(({ key }) => ({ id, files, key: key + 1 }));
+    requestAnimationFrame(() => document.getElementById('combo-entry-editor')?.focus());
+  }
   function commit(next) {
     try {
       validateCatalog(next, true);
@@ -195,6 +204,7 @@ export default function ComboEditor() {
                 readInput(event, async (file) => {
                   if (commit(JSON.parse(await file.text()))) {
                     setPending(null);
+                    setEntryRequest({ id: '', files: [], key: 0 });
                     setShowPreview(false);
                     setRevision((number) => number + 1);
                   }
@@ -273,8 +283,18 @@ export default function ComboEditor() {
             </div>
           )}
         </section>
+        {unassigned.length > 0 && (
+          <ImportedFiles files={unassigned} entries={catalog.entries} onEdit={editImportedFiles} />
+        )}
+        <EntryEditor
+          key={entryRequest.key}
+          catalog={catalog}
+          commit={commit}
+          request={entryRequest}
+          unassigned={unassigned}
+          onError={setNotice}
+        />
         <OrderEditor catalog={catalog} commit={commit} />
-        <EntryEditor catalog={catalog} commit={commit} />
         <RulesEditor catalog={catalog} commit={commit} />
         <PresetEditor catalog={catalog} commit={commit} />
         <section className={s.panel}>
@@ -291,6 +311,49 @@ export default function ComboEditor() {
         )}
       </div>
     </div>
+  );
+}
+
+function unassignedFiles(catalog) {
+  const assigned = new Set(catalog.entries.flatMap((entry) => entry.files));
+  return catalog.order.filter(({ key }) => !assigned.has(key)).reverse();
+}
+
+function ImportedFiles({ files, entries, onEdit }) {
+  const { t } = useTranslation();
+  const [id, setId] = useState('');
+  const [missing, setMissing] = useState(false);
+  return (
+    <section className={s.panel}>
+      <h2>
+        {t('Файлы без привязки')} · {files.length}
+      </h2>
+      <p>{t('Отметь все части одной карты или мода, затем открой их как одну запись.')}</p>
+      <form
+        onSubmit={(event) => {
+          const keys = getForm(event).getAll('imported');
+          setMissing(!keys.length);
+          if (keys.length) onEdit(id, keys);
+        }}
+      >
+        <Choices
+          label="Файлы из общего порядка"
+          name="imported"
+          items={files.map(({ key, name }) => ({ id: key, title: name }))}
+        />
+        <div className={s.toolbar}>
+          <EntityPicker items={entries} id={id} setId={setId} />
+          <button className="button">
+            {t(id ? 'Привязать к записи' : 'Заполнить новую запись')}
+          </button>
+        </div>
+        {missing && (
+          <p className={s.reason} role="alert">
+            {t('Отметь хотя бы один файл.')}
+          </p>
+        )}
+      </form>
+    </section>
   );
 }
 
@@ -437,7 +500,7 @@ function OrderEditor({ catalog, commit }) {
         <Field label="Имя в менеджере модов" name="name" defaultValue={file?.name} required />
         <Field label="Имя файла с расширением" name="filename" defaultValue={file?.filename} />
         <Field label="Ссылка на файл" type="url" name="link" defaultValue={file?.link} />
-        <Field label="Картинка файла (/img/…)" name="image" defaultValue={file?.image} />
+        <EditorImageField initialPath={file?.image} />
         <div className={s.actions}>
           <button className="button">{t('Сохранить файл')}</button>
           {file && !owners.has(file.key) && (
@@ -460,32 +523,72 @@ function OrderEditor({ catalog, commit }) {
   );
 }
 
-function EntryEditor({ catalog, commit }) {
+function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const { t } = useTranslation();
-  const [id, setId] = useState('');
+  const [id, setId] = useState(request.id);
+  const [seedFiles, setSeedFiles] = useState(request.files);
+  const [formRevision, setFormRevision] = useState(0);
   const entry = catalog.entries.find((item) => item.id === id);
+  const suggested = catalog.order.find(({ key }) => key === seedFiles[0]);
+  const suggestedId = suggested?.key
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  const byKey = new Map(catalog.order.map((file) => [file.key, file]));
   const owned = new Set(
     catalog.entries.filter((item) => item.id !== id).flatMap((item) => item.files),
   );
   return (
     <section className={s.panel}>
-      <h2>{t('Карты, моды, фиксы и коннекторы')}</h2>
-      <EntityPicker items={catalog.entries} id={id} setId={setId} />
+      <h2 id="combo-entry-editor" tabIndex={-1}>
+        {t('Карты, моды, фиксы и коннекторы')}
+      </h2>
+      <EntityPicker
+        items={catalog.entries}
+        id={id}
+        setId={(next) => {
+          setId(next);
+          setSeedFiles([]);
+        }}
+      />
       <form
         className={s.form}
-        key={id}
+        key={`${id}:${formRevision}`}
         onSubmit={(event) => {
           const form = getForm(event);
+          const replacements = new Map();
+          for (const key of entry?.files || []) {
+            const newKey = valueOf(form, `replace:${key}`);
+            if (newKey) replacements.set(key, newKey);
+          }
+          let fileChanges;
+          try {
+            fileChanges = replaceEntryFiles(catalog.order, form.getAll('files'), replacements);
+          } catch (error) {
+            onError(error.message);
+            return;
+          }
+          const addedAt = valueOf(form, 'addedAt') || (!entry ? catalogDate() : undefined);
+          const modVersion = valueOf(form, 'modVersion');
+          const markUpdate =
+            entry &&
+            (replacements.size ||
+              event.nativeEvent.submitter?.value === 'update' ||
+              (entry.version && modVersion && entry.version !== modVersion));
           const next = {
             id: entry?.id || valueOf(form, 'id'),
             title: valueOf(form, 'title'),
             type: form.get('type'),
             link: valueOf(form, 'link'),
             image: valueOf(form, 'image'),
+            description: valueOf(form, 'description'),
+            version: modVersion,
+            addedAt,
+            updatedAt: markUpdate ? catalogDate() : valueOf(form, 'updatedAt'),
             paid: form.has('paid'),
             family: valueOf(form, 'family'),
             variant: valueOf(form, 'variant'),
-            files: form.getAll('files'),
+            files: fileChanges.files,
             requires: form.getAll('requires'),
             dlcs: (valueOf(form, 'dlcs') || '')
               .split(',')
@@ -493,17 +596,26 @@ function EntryEditor({ catalog, commit }) {
               .filter(Boolean),
           };
           const entries = entry ? replace(catalog.entries, 'id', next) : [...catalog.entries, next];
-          if (commit({ ...catalog, entries })) setId(next.id);
+          if (commit({ ...catalog, entries, order: fileChanges.order })) {
+            setId(next.id);
+            setSeedFiles([]);
+            setFormRevision((number) => number + 1);
+          }
         }}
       >
         <Field
           label="Идентификатор (a-z, 0-9, дефис)"
           name="id"
-          defaultValue={entry?.id}
+          defaultValue={entry?.id || suggestedId}
           readOnly={Boolean(entry)}
           required
         />
-        <Field label="Название" name="title" defaultValue={entry?.title} required />
+        <Field
+          label="Название"
+          name="title"
+          defaultValue={entry?.title || suggested?.name}
+          required
+        />
         <label className={s.field}>
           {t('Тип')}
           <select name="type" defaultValue={entry?.type || 'map'}>
@@ -515,7 +627,24 @@ function EntryEditor({ catalog, commit }) {
           </select>
         </label>
         <Field label="Ссылка на скачивание" name="link" type="url" defaultValue={entry?.link} />
-        <Field label="Картинка (/img/…)" name="image" defaultValue={entry?.image} />
+        <Field label="Версия мода" name="modVersion" defaultValue={entry?.version} />
+        <Field
+          label="Дата добавления"
+          name="addedAt"
+          type="date"
+          defaultValue={entry ? entry.addedAt : catalogDate()}
+        />
+        <Field
+          label="Дата обновления"
+          name="updatedAt"
+          type="date"
+          defaultValue={entry?.updatedAt}
+        />
+        <label className={s.field}>
+          {t('Описание мода')}
+          <textarea name="description" rows={3} defaultValue={entry?.description} />
+        </label>
+        <EditorImageField initialPath={entry?.image} />
         <Field label="Семейство карты" name="family" defaultValue={entry?.family} />
         <Field label="Вариант карты" name="variant" defaultValue={entry?.variant} />
         <Field
@@ -529,12 +658,35 @@ function EntryEditor({ catalog, commit }) {
         <Choices
           label="Файлы позиции"
           name="files"
-          selected={entry?.files}
+          selected={[...(entry?.files || []), ...seedFiles]}
           items={[...catalog.order]
             .reverse()
             .filter(({ key }) => !owned.has(key))
             .map(({ key, name }) => ({ id: key, title: name }))}
         />
+        {entry?.files.length > 0 && unassigned.length > 0 && (
+          <details className={s.replacement}>
+            <summary>{t('Заменить файлы новой версией')}</summary>
+            <p>
+              {t(
+                'Выбери замену из непривязанных файлов. Новый файл займёт место старого в порядке загрузки.',
+              )}
+            </p>
+            {entry.files.map((key) => (
+              <label className={s.field} key={key}>
+                {byKey.get(key).name}
+                <select name={`replace:${key}`} defaultValue="">
+                  <option value="">{t('Оставить текущий файл')}</option>
+                  {unassigned.map((file) => (
+                    <option key={file.key} value={file.key}>
+                      {file.name} · {file.key}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ))}
+          </details>
+        )}
         <Choices
           label="Обязательные зависимости (все перечисленные)"
           name="requires"
@@ -543,6 +695,11 @@ function EntryEditor({ catalog, commit }) {
         />
         <div className={s.actions}>
           <button className="button">{t('Сохранить позицию')}</button>
+          {entry && (
+            <button className="button button-secondary" value="update">
+              {t('Сохранить как обновление')}
+            </button>
+          )}
           {entry && (
             <button
               type="button"

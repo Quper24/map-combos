@@ -175,6 +175,47 @@ export function moveMod(order, key, anchor, above) {
   return next;
 }
 
+export function replaceEntryFiles(order, files, replacements) {
+  const incoming = new Set(replacements.values());
+  if (incoming.size !== replacements.size) {
+    throw new Error('Для каждого заменяемого файла выбери отдельный новый файл.');
+  }
+  const byKey = new Map(order.map((file) => [file.key, file]));
+  const nextOrder = order
+    .filter(({ key }) => !incoming.has(key))
+    .map((file) => {
+      const replacement = byKey.get(replacements.get(file.key));
+      return replacement
+        ? {
+            ...replacement,
+            image: replacement.image ?? file.image,
+            link: replacement.link ?? file.link,
+          }
+        : file;
+    });
+  const nextFiles = new Set(files.map((key) => replacements.get(key) || key));
+  for (const key of incoming) nextFiles.add(key);
+  return { order: nextOrder, files: [...nextFiles] };
+}
+
+const moscowDay = new Intl.DateTimeFormat('sv-SE', {
+  timeZone: 'Europe/Moscow',
+  dateStyle: 'short',
+});
+export const catalogDate = (now = new Date()) => moscowDay.format(now);
+
+export function entryBadge({ addedAt, updatedAt }, today = catalogDate()) {
+  const age = (value) => (Date.parse(today) - Date.parse(value)) / 86400000;
+  if (age(updatedAt) >= 0 && age(updatedAt) < 5) return 'UPDATE';
+  if (age(addedAt) >= 0 && age(addedAt) < 5) return 'NEW';
+  return '';
+}
+
+const validDate = (value) =>
+  typeof value === 'string' &&
+  /^\d{4}-\d{2}-\d{2}$/.test(value) &&
+  Number.isFinite(Date.parse(value)) &&
+  new Date(value).toISOString().startsWith(value);
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const text = (value) => typeof value === 'string' && Boolean(value.trim());
 const validFileKey = (value) =>
@@ -249,6 +290,10 @@ export function validateCatalog(catalog, draft = false) {
       paid,
       link,
       image,
+      description,
+      version: modVersion,
+      addedAt,
+      updatedAt,
     } = entry;
     check(text(title) && Object.hasOwn(entryTypeLabels, type), `Invalid entry: ${id}`);
     check(
@@ -256,6 +301,16 @@ export function validateCatalog(catalog, draft = false) {
       `Invalid entry link or image: ${id}`,
     );
     check(paid === undefined || typeof paid === 'boolean', `Invalid paid label: ${id}`);
+    check(
+      (description === undefined || text(description)) &&
+        (modVersion === undefined || text(modVersion)),
+      `Invalid description or mod version: ${id}`,
+    );
+    check(
+      (addedAt === undefined || validDate(addedAt)) &&
+        (updatedAt === undefined || (validDate(updatedAt) && (!addedAt || updatedAt >= addedAt))),
+      `Invalid entry dates: ${id}`,
+    );
     check(
       uniqueList(files, (key) => known(key, keys) && !owners.has(key)) && (draft || files.length),
       `Invalid or shared files: ${id}`,

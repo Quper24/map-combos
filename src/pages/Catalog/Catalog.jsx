@@ -89,7 +89,7 @@ export default function Catalog() {
             'Выбери свой мир. Ссылки, готовые профили и порядок карт для ETS2 и ATS — всё собрано здесь.',
           )}
         </p>
-        {(hasBuilderCatalog || import.meta.env.DEV) && (
+        {(hasBuilderCatalog || (import.meta.env.DEV && import.meta.env.MODE === 'editor')) && (
           <Link className="button" to="/combos/builder">
             {t('Конструктор сборок')}
           </Link>
