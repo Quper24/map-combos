@@ -9,6 +9,8 @@ import {
   parseModOrder,
   validateCatalog,
 } from '../../lib/comboBuilder';
+import { processProfile } from '../../lib/processProfile';
+import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
 import { Builder } from './ComboBuilder';
 import { download } from './downloads';
 import s from './ComboBuilder.module.css';
@@ -97,7 +99,12 @@ export default function ComboEditor() {
     }
     return true;
   }
-  function loadOrder(source) {
+  async function loadOrder(file) {
+    setPending(null);
+    const isProfile = file.name.toLowerCase().endsWith('.sii');
+    if (isProfile && (!file.size || file.size > MAX_PROFILE_SIZE))
+      throw new Error('Выбери непустой profile.sii размером до 300 КБ.');
+    const source = isProfile ? await processProfile(await file.arrayBuffer()) : await file.text();
     const files = parseModOrder(source);
     if (!files.length) throw new Error('The template contains no files');
     setPending(files);
@@ -109,7 +116,7 @@ export default function ComboEditor() {
     setBusy(true);
     try {
       if (file.size > 5 * 1024 * 1024) throw new Error('File exceeds 5 MB');
-      handler(await file.text());
+      await handler(file);
     } catch (error) {
       setNotice(error.message);
     } finally {
@@ -144,7 +151,7 @@ export default function ComboEditor() {
         <h1>{t('Редактор каталога')}</h1>
         <p>
           {t(
-            'Изменения сохраняются в этом браузере. Для публикации выгрузи проверенный JSON и добавь его в каталог сайта.',
+            'Начни с импорта профиля ниже. JSON создаётся в редакторе и нужен для переноса черновика или публикации каталога.',
           )}
         </p>
         <Link className="text-link" to="/combos/builder">
@@ -180,13 +187,13 @@ export default function ComboEditor() {
           </form>
           <div className={s.toolbar}>
             <Field
-              label="Открыть JSON"
+              label="Открыть сохранённый JSON"
               type="file"
               accept=".json"
               disabled={busy}
               onChange={(event) =>
-                readInput(event, (source) => {
-                  if (commit(JSON.parse(source))) {
+                readInput(event, async (file) => {
+                  if (commit(JSON.parse(await file.text()))) {
                     setPending(null);
                     setShowPreview(false);
                     setRevision((number) => number + 1);
@@ -206,7 +213,7 @@ export default function ComboEditor() {
           <h2>{t('Импорт порядка')}</h2>
           <p>
             {t(
-              'Загрузи TXT с active_mods или расшифрованный profile.sii. Новые файлы появятся в общем порядке, существующие сохранят свои настройки.',
+              'Выбери profile.sii или TXT с active_mods. Редактор прочитает список модов в браузере и покажет порядок перед импортом.',
             )}
           </p>
           <div className={s.toolbar}>
@@ -246,7 +253,13 @@ export default function ComboEditor() {
               )}
               <div className={s.actions}>
                 <button className="button" onClick={() => applyImport(false)}>
-                  {t(imported.orderConflict ? 'Сохранить текущий порядок' : 'Объединить списки')}
+                  {t(
+                    !catalog.order.length
+                      ? 'Импортировать порядок'
+                      : imported.orderConflict
+                        ? 'Сохранить текущий порядок'
+                        : 'Объединить списки',
+                  )}
                 </button>
                 {imported.orderConflict && (
                   <button className="button" onClick={() => applyImport(true)}>

@@ -4,6 +4,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { createCipheriv } from 'node:crypto';
 import { deflateSync } from 'node:zlib';
 import { replaceActiveMods } from '../src/lib/profileMods.js';
+import { parseModOrder } from '../src/lib/comboBuilder.js';
 
 const profile =
   'SiiNunit\n{\nprofile : _nameless.1 {\n profile_name: "Тест"\n active_mods: 1\n active_mods[0]: "old|Old"\n other: 42\n}\n}\n';
@@ -46,9 +47,11 @@ test('WASM decodes plain and encrypted profiles preserving Unicode', () => {
     cipher.update(padded),
     cipher.final(),
   ]);
-  assert.equal(decode(encrypted), profile);
+  const decoded = decode(encrypted);
+  assert.equal(decoded, profile);
+  assert.deepEqual(parseModOrder(decoded), [{ key: 'old', name: 'Old' }]);
   assert.equal(
-    replaceActiveMods(decode(encrypted), block),
+    replaceActiveMods(decoded, block),
     profile.replace(' active_mods: 1\n active_mods[0]: "old|Old"', block),
   );
 });
