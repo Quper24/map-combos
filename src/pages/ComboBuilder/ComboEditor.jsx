@@ -9,6 +9,7 @@ import {
   mergeModOrders,
   moveMod,
   parseModOrder,
+  reconcilePresetSelections,
   replaceEntryFiles,
   validateCatalog,
 } from '../../lib/comboBuilder';
@@ -747,6 +748,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           }
           const addedAt = valueOf(form, 'addedAt') || (!entry ? catalogDate() : undefined);
           const modVersion = valueOf(form, 'modVersion');
+          const type = form.get('type');
           const markUpdate =
             entry &&
             (replacements.size ||
@@ -755,7 +757,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           const next = {
             id: entry?.id || valueOf(form, 'id'),
             title: valueOf(form, 'title'),
-            type: form.get('type'),
+            type,
             autoWithMaps: form.has('autoWithMaps') || undefined,
             link: valueOf(form, 'link'),
             image: valueOf(form, 'image'),
@@ -764,8 +766,8 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             addedAt,
             updatedAt: markUpdate ? catalogDate() : valueOf(form, 'updatedAt'),
             paid: form.has('paid'),
-            family: valueOf(form, 'family'),
-            variant: valueOf(form, 'variant'),
+            family: type === 'map' ? valueOf(form, 'family') : undefined,
+            variant: type === 'map' ? valueOf(form, 'variant') : undefined,
             files: fileChanges.files,
             requires: form.getAll('requires'),
             dlcs: (valueOf(form, 'dlcs') || '')
@@ -774,17 +776,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
               .filter(Boolean),
           };
           const entries = entry ? replace(catalog.entries, 'id', next) : [...catalog.entries, next];
-          const presets =
-            next.autoWithMaps || next.type === 'resource'
-              ? catalog.presets.map((preset) =>
-                  preset.selection.includes(next.id)
-                    ? {
-                        ...preset,
-                        selection: preset.selection.filter((selected) => selected !== next.id),
-                      }
-                    : preset,
-                )
-              : catalog.presets;
+          const presets = reconcilePresetSelections(catalog.presets, next);
           if (commit({ ...catalog, entries, presets, order: fileChanges.order })) {
             setId(next.id);
             setSeedFiles([]);

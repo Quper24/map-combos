@@ -12,6 +12,15 @@ export const canAutoWithMaps = (type) => type === 'mod' || type === 'fix';
 export const isSelectable = (entry) =>
   !entry.autoWithMaps && (entry.type === 'map' || entry.type === 'mod');
 
+export function reconcilePresetSelections(presets, entry) {
+  if (isSelectable(entry)) return presets;
+  return presets.map((preset) =>
+    preset.selection.includes(entry.id)
+      ? { ...preset, selection: preset.selection.filter((id) => id !== entry.id) }
+      : preset,
+  );
+}
+
 export function resolveCombo(catalog, selection) {
   const entries = new Map(catalog.entries.map((entry) => [entry.id, entry]));
   const active = new Set();

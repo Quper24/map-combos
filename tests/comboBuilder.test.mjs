@@ -9,6 +9,7 @@ import {
   mergeModOrders,
   moveMod,
   parseModOrder,
+  reconcilePresetSelections,
   removeFromCombo,
   replaceEntryFiles,
   resolveCombo,
@@ -377,6 +378,32 @@ test('disabling a map removes its connector and keeps maps required by other sel
     selection,
     requiredBy: [dependent.id],
   });
+});
+
+test('reclassifying a selected map as a fix updates presets and keeps conditional activation', () => {
+  const patch = makeEntry('reforma-othermaps-patch');
+  const original = {
+    ...catalog.presets[0],
+    id: 'ats-quper-map-combo-1-62',
+    selection: ['eurafrica', 'kazakhstan', patch.id],
+  };
+  const before = {
+    ...catalog,
+    entries: [...catalog.entries, patch],
+    order: [...catalog.order, { key: patch.id, name: patch.title }],
+    presets: [original, catalog.presets[0]],
+  };
+  validateCatalog(before);
+  assert.equal(reconcilePresetSelections(before.presets, patch), before.presets);
+
+  const fix = { ...patch, type: 'fix', requires: ['eurafrica', 'kazakhstan'] };
+  const presets = reconcilePresetSelections(before.presets, fix);
+  const after = { ...before, entries: [...catalog.entries, fix], presets };
+  validateCatalog(after);
+  assert.deepEqual(presets[0], { ...original, selection: ['eurafrica', 'kazakhstan'] });
+  assert.equal(presets[1], before.presets[1]);
+  assert.ok(resolveCombo(after, presets[0].selection).active.has(fix.id));
+  assert.equal(resolveCombo(after, ['eurafrica']).active.has(fix.id), false);
 });
 
 test('generated profile blocks safely escape names and replace all original active mods', () => {
