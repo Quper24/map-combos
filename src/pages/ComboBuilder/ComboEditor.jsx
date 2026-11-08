@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import {
+  canAutoWithMaps,
   catalogDate,
   entryTypeLabels,
   isSelectable,
@@ -51,11 +52,11 @@ function Field({ label, ...props }) {
   );
 }
 
-function Choices({ label, name, items, selected = [], onChecked }) {
+function Choices({ label, name, items, selected = [], onChecked, disabled = false }) {
   const { t } = useTranslation();
   const [query, setQuery] = useState('');
   return (
-    <fieldset className={s.choices}>
+    <fieldset className={s.choices} disabled={disabled}>
       <legend>{t(label)}</legend>
       <Field
         label="Фильтр списка"
@@ -611,6 +612,49 @@ function EntryFiles({ order, selected }) {
   );
 }
 
+function EntryActivationFields({ entry, dependencies }) {
+  const { t } = useTranslation();
+  const [type, setType] = useState(entry?.type || 'map');
+  const [auto, setAuto] = useState(Boolean(entry?.autoWithMaps));
+  const autoAvailable = canAutoWithMaps(type);
+  const autoEnabled = autoAvailable && auto;
+  return (
+    <>
+      <label className={s.field}>
+        {t('Тип')}
+        <select name="type" value={type} onChange={(event) => setType(event.target.value)}>
+          {Object.entries(entryTypeLabels).map(([id, label]) => (
+            <option key={id} value={id}>
+              {t(label)}
+            </option>
+          ))}
+        </select>
+      </label>
+      {autoAvailable && (
+        <label>
+          <input
+            type="checkbox"
+            name="autoWithMaps"
+            checked={auto}
+            onChange={(event) => setAuto(event.target.checked)}
+          />{' '}
+          {t('Подключать при выборе любой карты')}
+        </label>
+      )}
+      {autoEnabled && (
+        <p className={s.entryFiles}>{t('Этот режим заменяет список обязательных зависимостей.')}</p>
+      )}
+      <Choices
+        label="Обязательные зависимости (все перечисленные)"
+        name="requires"
+        selected={entry?.requires}
+        items={dependencies}
+        disabled={autoEnabled}
+      />
+    </>
+  );
+}
+
 function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const { t } = useTranslation();
   const [id, setId] = useState(request.id);
@@ -674,6 +718,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             id: entry?.id || valueOf(form, 'id'),
             title: valueOf(form, 'title'),
             type: form.get('type'),
+            autoWithMaps: form.has('autoWithMaps') || undefined,
             link: valueOf(form, 'link'),
             image: valueOf(form, 'image'),
             description: valueOf(form, 'description'),
@@ -691,7 +736,17 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
               .filter(Boolean),
           };
           const entries = entry ? replace(catalog.entries, 'id', next) : [...catalog.entries, next];
-          if (commit({ ...catalog, entries, order: fileChanges.order })) {
+          const presets = next.autoWithMaps
+            ? catalog.presets.map((preset) =>
+                preset.selection.includes(next.id)
+                  ? {
+                      ...preset,
+                      selection: preset.selection.filter((selected) => selected !== next.id),
+                    }
+                  : preset,
+              )
+            : catalog.presets;
+          if (commit({ ...catalog, entries, presets, order: fileChanges.order })) {
             setId(next.id);
             setSeedFiles([]);
             setFormRevision((number) => number + 1);
@@ -711,16 +766,10 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           defaultValue={entry?.title || suggested?.name}
           required
         />
-        <label className={s.field}>
-          {t('Тип')}
-          <select name="type" defaultValue={entry?.type || 'map'}>
-            {Object.entries(entryTypeLabels).map(([type, label]) => (
-              <option key={type} value={type}>
-                {t(label)}
-              </option>
-            ))}
-          </select>
-        </label>
+        <EntryActivationFields
+          entry={entry}
+          dependencies={catalog.entries.filter((item) => item.id !== id)}
+        />
         <Field
           label="Общая ссылка на скачивание"
           name="link"
@@ -782,12 +831,6 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             ))}
           </details>
         )}
-        <Choices
-          label="Обязательные зависимости (все перечисленные)"
-          name="requires"
-          selected={entry?.requires}
-          items={catalog.entries.filter((item) => item.id !== id)}
-        />
         <div className={s.actions}>
           <button className="button">{t('Сохранить позицию')}</button>
           {entry && (

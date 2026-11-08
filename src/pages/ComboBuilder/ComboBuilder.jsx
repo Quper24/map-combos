@@ -266,6 +266,9 @@ function OrderList({ result: { files, manual, reasons }, byId }) {
                   {because.map((id) => t(byId.get(id).title)).join(' + ')}
                 </small>
               )}
+              {file.entry.autoWithMaps && !because?.length && (
+                <small>{t('Подключается при выборе любой карты')}</small>
+              )}
             </div>
             {(file.link || file.entry.link) && (
               <ExternalLink className="text-link" href={file.link || file.entry.link}>

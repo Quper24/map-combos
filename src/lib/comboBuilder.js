@@ -5,13 +5,15 @@ export const entryTypeLabels = {
   connector: 'Коннектор',
 };
 
-export const isSelectable = (entry) => entry.type === 'map' || entry.type === 'mod';
+export const canAutoWithMaps = (type) => type === 'mod' || type === 'fix';
+export const isSelectable = (entry) =>
+  !entry.autoWithMaps && (entry.type === 'map' || entry.type === 'mod');
 
 export function resolveCombo(catalog, selection) {
   const entries = new Map(catalog.entries.map((entry) => [entry.id, entry]));
   const active = new Set();
   const reasons = new Map();
-  const manual = new Set(selection);
+  const manual = new Set();
   function include(id, because = []) {
     const entry = entries.get(id);
     if (!entry || active.has(id)) return;
@@ -19,8 +21,16 @@ export function resolveCombo(catalog, selection) {
     reasons.set(id, because);
     for (const dependency of entry.requires || []) include(dependency, [id]);
   }
-  for (const id of manual) {
-    if (entries.has(id) && isSelectable(entries.get(id))) include(id);
+  for (const id of selection || []) {
+    const entry = entries.get(id);
+    if (!entry || !isSelectable(entry)) continue;
+    manual.add(id);
+    include(id);
+  }
+  if ([...active].some((id) => entries.get(id).type === 'map')) {
+    for (const entry of entries.values()) {
+      if (entry.autoWithMaps) include(entry.id);
+    }
   }
   let previousSize;
   do {
@@ -68,6 +78,7 @@ export function resolveCombo(catalog, selection) {
 
 export function addToCombo(catalog, selection, id) {
   const entry = catalog.entries.find((item) => item.id === id);
+  if (!entry || !isSelectable(entry)) return { selection, conflicts: [] };
   const alternatives = new Set(
     entry.family
       ? catalog.entries.filter((item) => item.family === entry.family).map((item) => item.id)
@@ -291,6 +302,7 @@ export function validateCatalog(catalog, draft = false) {
       family,
       variant,
       paid,
+      autoWithMaps,
       link,
       image,
       description,
@@ -304,6 +316,11 @@ export function validateCatalog(catalog, draft = false) {
       `Invalid entry link or image: ${id}`,
     );
     check(paid === undefined || typeof paid === 'boolean', `Invalid paid label: ${id}`);
+    check(
+      (autoWithMaps === undefined || typeof autoWithMaps === 'boolean') &&
+        (!autoWithMaps || canAutoWithMaps(type)),
+      `Invalid automatic map rule: ${id}`,
+    );
     check(
       (description === undefined || text(description)) &&
         (modVersion === undefined || text(modVersion)),
@@ -321,7 +338,7 @@ export function validateCatalog(catalog, draft = false) {
     files.forEach((key) => owners.add(key));
     check(
       uniqueList(requires, (dep) => dep !== id && known(dep, byId)) &&
-        (draft || isSelectable(entry) || requires.length),
+        (autoWithMaps ? !requires.length : draft || isSelectable(entry) || requires.length),
       `Invalid dependencies: ${id}`,
     );
     check(uniqueList(dlcs, text), `Invalid DLC list: ${id}`);
@@ -373,7 +390,7 @@ export function validateCatalog(catalog, draft = false) {
     check(
       text(preset.title) &&
         uniqueList(preset.selection, (id) => known(id, byId) && isSelectable(byId.get(id))) &&
-        preset.selection.length,
+        (draft || preset.selection.length),
       `Invalid preset: ${preset.id}`,
     );
     check(

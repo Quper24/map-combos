@@ -5,6 +5,7 @@ import {
   addToCombo,
   catalogDate,
   entryBadge,
+  isSelectable,
   mergeModOrders,
   moveMod,
   parseModOrder,
@@ -184,6 +185,58 @@ const catalog = {
     },
   ],
 };
+
+test('common mods and fixes are hidden from selection and activate with any map in the template order', () => {
+  const commonMod = makeEntry('common-mod', 'mod', { autoWithMaps: true });
+  const commonFix = makeEntry('common-fix', 'fix', { autoWithMaps: true });
+  const standalone = makeEntry('standalone', 'mod');
+  const combined = {
+    ...catalog,
+    entries: [...catalog.entries, commonMod, commonFix, standalone],
+    order: [
+      { key: commonMod.id, name: 'Common Mod' },
+      ...catalog.order,
+      { key: commonFix.id, name: 'Common Fix' },
+      { key: standalone.id, name: 'Standalone Mod' },
+    ],
+  };
+  validateCatalog(combined);
+  assert.equal(isSelectable(commonMod), false);
+  assert.equal(isSelectable(commonFix), false);
+  assert.deepEqual(addToCombo(combined, [], commonMod.id).selection, []);
+  assert.deepEqual(resolveCombo(combined, []).files, []);
+  assert.deepEqual(
+    resolveCombo(combined, [standalone.id]).files.map(({ key }) => key),
+    [standalone.id],
+  );
+  for (const map of ['maghreb', 'kazakhstan']) {
+    const { files } = resolveCombo(combined, [map]);
+    assert.deepEqual(
+      files.map(({ key }) => key),
+      [commonMod.id, map, commonFix.id],
+    );
+  }
+  const { active } = resolveCombo(combined, combined.presets[0].selection);
+  assert.ok(active.has(commonFix.id) && active.has('fv-connector'));
+  assert.throws(
+    () =>
+      validateCatalog({
+        ...combined,
+        entries: [{ ...combined.entries[0], autoWithMaps: true }, ...combined.entries.slice(1)],
+      }),
+    /automatic map rule/,
+  );
+  assert.throws(
+    () =>
+      validateCatalog({
+        ...combined,
+        entries: combined.entries.map((entry) =>
+          entry.id === commonFix.id ? { ...entry, requires: ['kazakhstan'] } : entry,
+        ),
+      }),
+    /dependencies/,
+  );
+});
 
 test('conflicts block adding in both directions without clearing the selected map', () => {
   validateCatalog(catalog);
