@@ -9,11 +9,12 @@ import ExternalLink from '../../components/ui/ExternalLink';
 import Video from '../../components/Video/Video';
 import { addToCombo, isSelectable, removeFromCombo, resolveCombo } from '../../lib/comboBuilder';
 import { youtubeVideoId } from '../../lib/content';
-import { EntryBadge, OrderDownloads, OrderList } from './ComboBuilder';
+import { EntryBadge, OrderDownloads, OrderList, OrderProfileInstall } from './ComboBuilder';
+import ShareCombo from './ShareCombo';
 import s from './ComboBuilder.module.css';
 import page from '../Combo/Combo.module.css';
 
-export default function PresetContent({ catalog, preset }) {
+export default function PresetContent({ catalog, preset, share = true }) {
   const { t } = useTranslation();
   const heading = useId();
   const accordion = `combo-info-${heading}`;
@@ -24,6 +25,8 @@ export default function PresetContent({ catalog, preset }) {
   const original =
     selection.length === preset.selection.length &&
     preset.selection.every((id) => selection.includes(id));
+  const canUseOrder = !server && result.files.length > 0 && !result.conflicts.length;
+  const orderTitle = original ? preset.title : 'Своя сборка';
   const removals = server
     ? undefined
     : new Map(
@@ -55,6 +58,11 @@ export default function PresetContent({ catalog, preset }) {
             </button>
           )}
         </div>
+        {canUseOrder && (
+          <ComboDisclosure name={accordion} title="Автоматическая расстановка модов">
+            <OrderProfileInstall catalog={catalog} files={result.files} title={orderTitle} />
+          </ComboDisclosure>
+        )}
         {preset.video && (
           <ComboDisclosure name={accordion} title="Видеообзор сборки">
             <PresetVideo url={preset.video} title={preset.title} />
@@ -85,6 +93,9 @@ export default function PresetContent({ catalog, preset }) {
           {t(original ? 'Готовая сборка' : 'Своя сборка')} · {t('Файлов — ')}
           {result.files.length}
         </p>
+        {share && selection.length > 0 && canUseOrder && (
+          <ShareCombo catalog={catalog} selection={selection} />
+        )}
         <ConflictList rules={result.conflicts} byId={byId} announce />
         {result.files.length ? (
           <OrderList
@@ -98,12 +109,8 @@ export default function PresetContent({ catalog, preset }) {
         ) : (
           <p>{t('Выбери карты, чтобы увидеть порядок.')}</p>
         )}
-        {!server && result.files.length > 0 && !result.conflicts.length && (
-          <OrderDownloads
-            catalog={catalog}
-            files={result.files}
-            title={original ? preset.title : 'Своя сборка'}
-          />
+        {canUseOrder && (
+          <OrderDownloads catalog={catalog} files={result.files} title={orderTitle} />
         )}
       </section>
     </div>

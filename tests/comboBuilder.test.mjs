@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
+import { restorePresetFileSlugs } from '../src/lib/builderDraft.js';
 import {
   addToCombo,
   catalogDate,
@@ -18,6 +19,11 @@ import {
 } from '../src/lib/comboBuilder.js';
 import { replaceActiveMods } from '../src/lib/profileMods.js';
 import { attachPresetFiles, presetCombo, presetFileName } from '../src/lib/presetCombos.js';
+import {
+  comboSharePath,
+  readSharedSelection,
+  restoreSharedSelection,
+} from '../src/lib/comboShare.js';
 import { fileImage } from '../src/pages/ComboBuilder/downloads.js';
 
 const filesFor = (id) =>
@@ -261,6 +267,47 @@ test('named map and mod combo files use the same release catalog and preserve th
       }),
     /Имя файла сборки уже используется/,
   );
+});
+
+test('an older editor draft recovers its published filename without losing local edits', () => {
+  const id = 'ats-quper-map-combo-1-62';
+  const edited = { ...catalog.presets[0], id, title: 'Local changes' };
+  const draft = { ...catalog, game: 'ats', presets: [edited] };
+  const published = {
+    ...draft,
+    presets: [{ ...catalog.presets[0], id, fileSlug: 'quper-map' }],
+  };
+
+  const [restored] = restorePresetFileSlugs(draft, [published]).presets;
+  assert.deepEqual(restored, { ...edited, fileSlug: 'quper-map' });
+  assert.equal(presetFileName(draft, restored), 'ats-quper-map-1.62.json');
+  assert.equal(restorePresetFileSlugs(draft, [{ ...published, version: '1.63' }]), draft);
+
+  const custom = { ...edited, fileSlug: 'custom' };
+  const conflicting = { ...edited, id: 'other', fileSlug: 'quper-map' };
+  for (const presets of [[custom], [edited, conflicting]]) {
+    assert.deepEqual(restorePresetFileSlugs({ ...draft, presets }, [published]).presets, presets);
+  }
+});
+
+test('a shared selection keeps its release and recalculates dependencies, even with unavailable IDs', () => {
+  const release = { ...catalog, game: 'ats' };
+  const url = new URL(comboSharePath(release, ['sibir-fv', 'kazakhstan']), 'https://example.org');
+  assert.equal(url.pathname, '/combos/builder');
+  assert.equal(url.searchParams.get('release'), 'ats-1.62');
+  const ids = readSharedSelection(url.hash);
+  assert.deepEqual(ids, ['sibir-fv', 'kazakhstan']);
+  assert.deepEqual(restoreSharedSelection(release, ids), { selection: ids, missing: 0 });
+  assert.ok(resolveCombo(release, ids).active.has('fv-connector'));
+  const changed = readSharedSelection('#mods=sibir-fv,deleted,fv-connector,sibir-fv');
+  assert.deepEqual(restoreSharedSelection(release, changed), {
+    selection: ['sibir-fv'],
+    missing: 2,
+  });
+  assert.equal(readSharedSelection('#map-order'), null);
+  const longSelection = Array.from({ length: 200 }, (_, index) => `map-entry-number-${index}`);
+  const large = new URL(comboSharePath(release, longSelection), 'https://example.org');
+  assert.deepEqual(readSharedSelection(large.hash), longSelection);
 });
 
 test('common mods and fixes are hidden from selection and activate with any map in the template order', () => {

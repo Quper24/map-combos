@@ -76,7 +76,7 @@ export default function Combo() {
         </aside>
       )}
       {combo.builder ? (
-        <PresetContent {...combo.builder} />
+        <PresetContent {...combo.builder} share={!combo.draft} />
       ) : (
         <div className={s.layout}>
           <div>

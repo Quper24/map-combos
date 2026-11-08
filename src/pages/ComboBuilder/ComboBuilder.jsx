@@ -1,5 +1,5 @@
 import { useId, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import ExternalLink from '../../components/ui/ExternalLink';
 import AutoProfileInstall from '../../components/AutoProfileInstall/AutoProfileInstall';
@@ -13,14 +13,28 @@ import {
   resolveCombo,
   serializeModOrder,
 } from '../../lib/comboBuilder';
+import {
+  comboBuilderPath,
+  readSharedSelection,
+  restoreSharedSelection,
+} from '../../lib/comboShare';
+import { catalogKey } from '../../lib/presetCombos';
 import { download, fileImage, orderImage, previewSize } from './downloads';
+import ShareCombo from './ShareCombo';
 import s from './ComboBuilder.module.css';
-
-const releaseKey = ({ game, version }) => `${game}-${version}`;
 
 export default function ComboBuilder() {
   const { t } = useTranslation();
-  const [release, setRelease] = useState(builderCatalogs[0]);
+  const { search, hash } = useLocation();
+  const navigate = useNavigate();
+  const releaseParam = new URLSearchParams(search).get('release');
+  const requestedRelease = builderCatalogs.find((catalog) => catalogKey(catalog) === releaseParam);
+  const release = requestedRelease || builderCatalogs[0];
+  const shared = readSharedSelection(hash);
+  const initial =
+    shared && requestedRelease
+      ? restoreSharedSelection(requestedRelease, shared)
+      : { selection: [], missing: 0 };
   return (
     <div className="container page">
       <div className="page-heading">
@@ -37,24 +51,43 @@ export default function ComboBuilder() {
           </Link>
         )}
       </div>
+      {shared && !requestedRelease && (
+        <p role="alert" className={s.reason}>
+          {t('Версия каталога из ссылки недоступна.')}
+        </p>
+      )}
+      {initial.missing > 0 && (
+        <p role="alert" className={s.reason}>
+          {t('Позиций из ссылки больше нет в выборе — ')}
+          {initial.missing}
+        </p>
+      )}
       {release ? (
         <>
           <label className={s.field}>
             {t('Версия игры')}
             <select
-              value={releaseKey(release)}
+              value={catalogKey(release)}
               onChange={(event) =>
-                setRelease(builderCatalogs.find((item) => releaseKey(item) === event.target.value))
+                navigate(
+                  `${comboBuilderPath}?${new URLSearchParams({ release: event.target.value })}`,
+                  { replace: true },
+                )
               }
             >
               {builderCatalogs.map((item) => (
-                <option key={releaseKey(item)} value={releaseKey(item)}>
+                <option key={catalogKey(item)} value={catalogKey(item)}>
                   {item.game.toUpperCase()} · {item.version}
                 </option>
               ))}
             </select>
           </label>
-          <Builder key={releaseKey(release)} catalog={release} />
+          <Builder
+            key={`${catalogKey(release)}:${hash}`}
+            catalog={release}
+            initialSelection={initial.selection}
+            share
+          />
         </>
       ) : (
         <div className="empty-state">
@@ -68,16 +101,22 @@ export default function ComboBuilder() {
   );
 }
 
-export function Builder({ catalog }) {
+export function Builder({ catalog, initialSelection = [], share = false }) {
   const { t } = useTranslation();
   const [presetId, setPresetId] = useState('');
   const preset = catalog.presets.find(({ id }) => id === presetId);
-  const [selection, setSelection] = useState([]);
+  const [selection, setSelection] = useState(initialSelection);
   const [query, setQuery] = useState('');
+  const [filter, setFilter] = useState('all');
+  const descriptionGroup = useId();
   const result = useMemo(() => resolveCombo(catalog, selection), [catalog, selection]);
   const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
   const groups = new Map();
   for (const entry of catalog.entries.filter(isSelectable)) {
+    if (filter === 'enabled' && !result.active.has(entry.id)) continue;
+    if ((filter === 'map' || filter === 'mod') && entry.type !== filter) continue;
+    const name = `${entry.title} ${t(entry.title)} ${entry.family || ''} ${entry.variant || ''} ${entry.id}`;
+    if (!name.toLowerCase().includes(query.trim().toLowerCase())) continue;
     const key = entry.family ? `family:${entry.family}` : entry.id;
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(entry);
@@ -90,6 +129,7 @@ export function Builder({ catalog }) {
     preset &&
     selection.length === preset.selection.length &&
     preset.selection.every((id) => selection.includes(id));
+  const orderTitle = isPreset ? preset.title : 'Своя сборка';
   return (
     <>
       <div className={s.toolbar}>
@@ -127,73 +167,83 @@ export function Builder({ catalog }) {
           {t('Поиск карт и модов')}
           <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} />
         </label>
+        <label className={s.field}>
+          {t('Показать в списке')}
+          <select value={filter} onChange={(event) => setFilter(event.target.value)}>
+            <option value="all">{t('Все карты и моды')}</option>
+            <option value="map">{t('Только карты')}</option>
+            <option value="mod">{t('Только моды')}</option>
+            <option value="enabled">{t('Подключённые')}</option>
+          </select>
+        </label>
       </div>
       <div className={s.columns}>
         <section aria-label={t('Доступные карты и моды')}>
           <h2>{t('Доступные карты и моды')}</h2>
-          <div className={s.cards}>
-            {[...groups]
-              .filter(([, items]) =>
-                items.some((entry) =>
-                  `${entry.title} ${t(entry.title)} ${entry.family || ''} ${entry.variant || ''}`
-                    .toLowerCase()
-                    .includes(query.trim().toLowerCase()),
-                ),
-              )
-              .map(([key, items]) => (
-                <article className={s.card} key={key}>
-                  <h3>
-                    {t(items[0].family || items[0].title)}
-                    {!items[0].family && <EntryBadge entry={items[0]} />}
-                  </h3>
-                  {items.map((entry) => {
-                    const enabled = result.active.has(entry.id);
-                    const candidate = enabled ? null : addToCombo(catalog, selection, entry.id);
-                    return (
-                      <div key={entry.id} className={s.variant}>
-                        {entry.image && (
-                          <img className={s.thumb} src={entry.image} alt="" loading="lazy" />
-                        )}
-                        {entry.variant && <strong>{t(entry.variant)}</strong>}
-                        {entry.variant && <EntryBadge entry={entry} />}
-                        {entry.version && <small className={s.modVersion}>{entry.version}</small>}
-                        {entry.paid && <span className={s.paid}>{t('Платная')}</span>}
-                        {entry.link && (
-                          <ExternalLink className="text-link" href={entry.link}>
-                            {t('Скачать')}
-                          </ExternalLink>
-                        )}
-                        {enabled ? (
-                          <RemoveEntryButton
-                            entry={entry}
-                            removal={removeFromCombo(catalog, selection, entry.id, result.active)}
-                            byId={byId}
-                            onRemove={setSelection}
-                            className="chip"
-                          />
-                        ) : (
-                          <button
-                            type="button"
-                            className="chip"
-                            disabled={candidate.conflicts.length > 0}
-                            onClick={() => setSelection(candidate.selection)}
-                          >
-                            {t('Выбрать')}
-                          </button>
-                        )}
-                        {candidate?.conflicts.map((rule) => (
-                          <p className={s.reason} key={rule.entries.join('/')}>
-                            {conflictText(rule)}
-                          </p>
-                        ))}
-                        {entry.description && (
+          <div
+            className={s.cards}
+            tabIndex={0}
+            role="group"
+            aria-label={t('Доступные карты и моды')}
+          >
+            {!groups.size && <p>{t('По этому запросу моды не найдены.')}</p>}
+            {[...groups].map(([key, items]) => (
+              <article className={s.card} key={key}>
+                <h3>
+                  {t(items[0].family || items[0].title)}
+                  {!items[0].family && <EntryBadge entry={items[0]} />}
+                </h3>
+                {items.map((entry) => {
+                  const enabled = result.active.has(entry.id);
+                  const candidate = enabled ? null : addToCombo(catalog, selection, entry.id);
+                  return (
+                    <div key={entry.id} className={s.variant}>
+                      {entry.image && (
+                        <img className={s.thumb} src={entry.image} alt="" loading="lazy" />
+                      )}
+                      {entry.variant && <strong>{t(entry.variant)}</strong>}
+                      {entry.variant && <EntryBadge entry={entry} />}
+                      {entry.version && <small className={s.modVersion}>{entry.version}</small>}
+                      {entry.paid && <span className={s.paid}>{t('Платная')}</span>}
+                      {entry.link && (
+                        <ExternalLink className="text-link" href={entry.link}>
+                          {t('Скачать')}
+                        </ExternalLink>
+                      )}
+                      {enabled ? (
+                        <RemoveEntryButton
+                          entry={entry}
+                          removal={removeFromCombo(catalog, selection, entry.id, result.active)}
+                          byId={byId}
+                          onRemove={setSelection}
+                          className="chip"
+                        />
+                      ) : (
+                        <button
+                          type="button"
+                          className="chip"
+                          disabled={candidate.conflicts.length > 0}
+                          onClick={() => setSelection(candidate.selection)}
+                        >
+                          {t('Выбрать')}
+                        </button>
+                      )}
+                      {candidate?.conflicts.map((rule) => (
+                        <p className={s.reason} key={rule.entries.join('/')}>
+                          {conflictText(rule)}
+                        </p>
+                      ))}
+                      {entry.description && (
+                        <details className={s.entryDescription} name={descriptionGroup}>
+                          <summary>{t('Описание')}</summary>
                           <p className={s.description}>{t(entry.description)}</p>
-                        )}
-                      </div>
-                    );
-                  })}
-                </article>
-              ))}
+                        </details>
+                      )}
+                    </div>
+                  );
+                })}
+              </article>
+            ))}
           </div>
         </section>
         <section aria-label={t('Порядок загрузки')}>
@@ -209,6 +259,9 @@ export function Builder({ catalog }) {
                 {t(isPreset ? 'Готовая сборка' : 'Своя сборка')} · {t('Файлов — ')}
                 {result.files.length}
               </p>
+              {share && selection.length > 0 && !result.conflicts.length && (
+                <ShareCombo catalog={catalog} selection={selection} />
+              )}
               {result.dlcs.length > 0 && (
                 <p>
                   {t('Требуемые DLC')} · {result.dlcs.join(', ')}
@@ -216,11 +269,10 @@ export function Builder({ catalog }) {
               )}
               <OrderList result={result} byId={byId} />
               {!result.conflicts.length && (
-                <OrderDownloads
-                  catalog={catalog}
-                  files={result.files}
-                  title={isPreset ? preset.title : 'Своя сборка'}
-                />
+                <OrderDownloads catalog={catalog} files={result.files} title={orderTitle}>
+                  <h3>{t('Автоматическая расстановка')}</h3>
+                  <OrderProfileInstall catalog={catalog} files={result.files} title={orderTitle} />
+                </OrderDownloads>
               )}
             </>
           ) : (
@@ -344,12 +396,12 @@ export function OrderList({
   );
 }
 
-export function OrderDownloads({ catalog, files, title }) {
+export function OrderDownloads({ catalog, files, title, children }) {
   const { t } = useTranslation();
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);
   const modBlock = serializeModOrder(files);
-  const prefix = releaseKey(catalog);
+  const prefix = catalogKey(catalog);
   const count = Math.ceil(files.length / previewSize);
   async function saveImage(part) {
     setBusy(true);
@@ -396,12 +448,25 @@ export function OrderDownloads({ catalog, files, title }) {
         ))}
       </div>
       {failed && <p role="alert">{t('Не удалось создать картинку порядка.')}</p>}
-      <h3>{t('Автоматическая расстановка')}</h3>
+      {children}
+    </div>
+  );
+}
+
+export function OrderProfileInstall({ catalog, files, title }) {
+  const { t } = useTranslation();
+  return (
+    <>
       <p>{t('Авторасстановка полностью заменит список активных модов в скачанном профиле.')}</p>
       <AutoProfileInstall
-        combo={{ id: prefix, tags: [catalog.game], title, version_game: catalog.version }}
-        modBlock={modBlock}
+        combo={{
+          id: catalogKey(catalog),
+          tags: [catalog.game],
+          title,
+          version_game: catalog.version,
+        }}
+        modBlock={serializeModOrder(files)}
       />
-    </div>
+    </>
   );
 }

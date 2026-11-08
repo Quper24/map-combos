@@ -1,0 +1,405 @@
+{
+  "game": "ats",
+  "version": "1.62",
+  "entries": [
+    {
+      "id": "coast-to-coast-v2-24-62-0",
+      "title": "Coast to Coast",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/coast-to-coast",
+      "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp",
+      "description": "Эта карта, начатая в 2016 году, добавляет все смежные штаты, не охваченные базовой игрой и дополнениями к ней. Карта всё ещё находится в разработке, так что наслаждайтесь ею такой, какая она есть!",
+      "version": "v2.24.62.0",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Coast_to_Coast_v2.24.62.0"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "promods-ats",
+      "title": "ProMods Canada",
+      "type": "map",
+      "link": "https://promods.net/setup.php?game=ats",
+      "image": "/img/combo-builder/4a6cc60a7fa4d279171b04d007948a1e1d82f6b5041309bcd5f8f226a13ab29a.webp",
+      "description": "Высококачественная модификация для American Truck Simulator, добавляющая детально проработанную карту канадской провинции Британская Колумбия с реалистичной дорожной инфраструктурой и атмосферой.",
+      "version": "v1.7.1",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "promods-ats-def-v171",
+        "promods-ats-map-v171",
+        "promods-ats-assets-v171",
+        "promods-ats-models-v171"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-c2c-promods-fix",
+      "title": "QS ATS Coast to Coast + ProMods Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/dfa709lli8mw/QS_ATS_C2C_ProMods_Fix.scs.html",
+      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
+      "description": "Устраняет дубль определения шлагбаума при совместной загрузке Coast to Coast и ProMods Canada. Подключайте выше обеих карт.",
+      "version": "1.0",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "QS_ATS_C2C_ProMods_Fix"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "promods-ats"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "ats-quper-background-map-optional",
+      "title": "ATS Quper Background Map (Optional)",
+      "type": "mod",
+      "autoWithMaps": true,
+      "link": "https://sharemods.com/vsousybch91r/ATS_Quper_Background_Map___40_Optional__41_.scs.html",
+      "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
+      "description": "Подложка для карты",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "ATS Quper Background Map (Optional)"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "atsrealisticeconomy",
+      "title": "Realistic Economy ATS by Quper",
+      "type": "mod",
+      "autoWithMaps": true,
+      "link": "https://truckymods.io/american-truck-simulator/game-economy/realistic-economy-ats-by-quper",
+      "image": "/img/combo-builder/90c363739c98c2d27ac13604cb248f7c871e4e60d462785df03dd6147f86a4b1.webp",
+      "version": "1.62.3",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "ATSRealisticEconomy"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-map-final-fix",
+      "title": "QS ATS Map Final Fix",
+      "type": "fix",
+      "autoWithMaps": true,
+      "link": "https://sharemods.com/pq9kkgd8yhgq/QS_ATS_Map_Final_Fix.scs.html",
+      "image": "/img/combo-builder/aa7d23f9c73c9a8817448bf4904c4d5dcdd3becf3d860b7e8e80fe680217d45e.webp",
+      "description": "Общие фиксы для сборки карт",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "QS_ATS_Map_Final_Fix"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "nascar-map-combo-pack",
+      "title": "ATS NASCAR Map Combo Pack v1.0.1",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/nascar-map-combo-pack-601795",
+      "image": "/img/combo-builder/80a03df9e5fc5506149101cd852d5df07141681e5de97e8c94978f5d94c61cfd.webp",
+      "version": "1.0.1",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "NASCAR_Map_Combo_Pack_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "reforma",
+      "title": "Reforma",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/reforma",
+      "image": "/img/combo-builder/3feacfc6eb08e465b994718714196cbbed65e840195f12fa13df1e681f3ab690.webp",
+      "description": "Мексика",
+      "version": "3.0.4.162",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Reforma_3_0_4_162"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "reforma-megaresources",
+      "title": "Mega Resources",
+      "type": "resource",
+      "link": "https://truckymods.io/american-truck-simulator/map-assets/reforma-mega-resources",
+      "image": "/img/combo-builder/c33e2f1d1fe4a4fa11a9dfc89b96a0e4dfa4da1dd0eecab674e3789f49f9209c.webp",
+      "description": "Ресурсы для карты Мексики (Reforma)",
+      "version": "3.0.4.162",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Reforma_MegaResources_v3_0_4_162"
+      ],
+      "requires": [
+        "reforma"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "reforma-sierra-nevada-remake",
+      "title": "Reforma Sierra Nevada",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/reforma-sierra-nevada",
+      "image": "/img/combo-builder/26ff944967d83e66182c0a0e0a26d8cef4ac58e9dcfa7221f0b3d48db8a76da4.webp",
+      "description": "Мод карты добавляющий в игру сложный горный регион Сьерра-Невада на границе Калифорнии и Невады с такими детально воссозданными локациями, как озеро Тахо, Рино и Йосемитский национальный парк. Модификация предлагает уникальный опыт вождения по опасным перевалам и серпантинам, работает на актуальной версии игры 1.62 и требует для запуска наличие официальных DLC Arizona, New Mexico, Oregon, Washington, а также вспомогательного мода Reforma Mega Resources.",
+      "version": "1.21.162",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Reforma_Sierra_Nevada_Remake_v1_21_162"
+      ],
+      "requires": [
+        "reforma",
+        "reforma-megaresources"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "reforma-othermaps-patch",
+      "title": "Reforma OtherMaps Compatibility Patch",
+      "type": "fix",
+      "link": "https://truckymods.io/american-truck-simulator/map-patches/reforma-other-maps-patch",
+      "image": "/img/combo-builder/b11746e71336ad0d5befce6c16976d64f5c12cccc047274a6fe92099b8d8efbe.webp",
+      "version": "42.162",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Reforma_OtherMaps_Patch_42_162"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "reforma"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-reforma-punta-prieta-fix",
+      "title": "QS ATS Reforma Punta Prieta Fix",
+      "type": "map",
+      "link": "https://sharemods.com/l0wkbahz2f65/QS_ATS_Reforma_Punta_Prieta_Fix.scs.html",
+      "image": "/img/combo-builder/b503d2e6e61ae2598ddcc29cf4b94cf7e28a4aac6e8ca16cef961c7cc4b82dfb.webp",
+      "description": "Исправляет привязку двух зон города Пунта-Приета в Reforma",
+      "version": "1.0",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "QS_ATS_Reforma_Punta_Prieta_Fix"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "discover-oregon-revived-v1-0-1",
+      "title": "Discover Oregon Revived",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/discover-oregon-revived-688685",
+      "image": "/img/combo-builder/de161185096b3cccf44a62748d818bbf991783cb09c064d3cb9e3035aea675be.webp",
+      "version": "v1.0.1",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Discover_Oregon_Revived_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "trinity-county-revived-v1-0-1",
+      "title": "Trinity County Revived",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/trinity-county-revived-636329",
+      "image": "/img/combo-builder/c384ca54034cefc0eab7f9f45fc85e2d9a317bfede5884886a5ac4c652b7c527.webp",
+      "version": "v1.0.1",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Trinity_County_Revived_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "vermont-map-revived-v1-0-1",
+      "title": "Vermont Map Revived",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/vermont-map-revived-463298",
+      "image": "/img/combo-builder/54b6216e2d3ce379830ffac32e2d4e12bc294f2561746d571811d4c097e360c3.webp",
+      "version": "v1.0.1",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Vermont_Map_Revived_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "aleutian-islands-revived-v1-0-1",
+      "title": "Aleutian Islands Revived",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/aleutian-islands-revived-270672",
+      "image": "/img/combo-builder/7cd6bf7c87c045bb55dbc74dab7a2062d01046839072a9dd2881a157433b6034.webp",
+      "version": "v1.0.1",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Aleutian_Islands_Revived_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "petersburg-alaska-revived-v1-0-1",
+      "title": "Petersburg Alaska Revived",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/petersburg-alaska-revived-925542",
+      "image": "/img/combo-builder/d5baff173bce46a362c27d9e287175feb8660cad8143f93513322ba7e3d83657.webp",
+      "version": "v1.0.1",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Petersburg_Alaska_Revived_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "washington-extended-revived-v1-0-1",
+      "title": "Washington Extended Revived",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/washington-extended-revived-406006",
+      "image": "/img/combo-builder/73b595a10e29fbbd0615f48a1dee12339ca5c9d93e3de5da2f238b20809f1137.webp",
+      "version": "v1.0.1",
+      "addedAt": "2026-11-08",
+      "paid": false,
+      "files": [
+        "Washington_Extended_Revived_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    }
+  ],
+  "order": [
+    {
+      "key": "NASCAR_Map_Combo_Pack_v1.0.1",
+      "name": "ATS NASCAR Map Combo Pack v1.0.1"
+    },
+    {
+      "key": "Reforma_MegaResources_v3_0_4_162",
+      "name": "Mega Resources 3.0.4.162"
+    },
+    {
+      "key": "Reforma_3_0_4_162",
+      "name": "Reforma 3.0.4.162"
+    },
+    {
+      "key": "QS_ATS_Reforma_Punta_Prieta_Fix",
+      "name": "QS ATS Reforma Punta Prieta Fix"
+    },
+    {
+      "key": "Reforma_Sierra_Nevada_Remake_v1_21_162",
+      "name": "Reforma Sierra Nevada 1.21.162"
+    },
+    {
+      "key": "Coast_to_Coast_v2.24.62.0",
+      "name": "Coast to Coast v2.24.62.0",
+      "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp"
+    },
+    {
+      "key": "Discover_Oregon_Revived_v1.0.1",
+      "name": "Discover Oregon Revived v1.0.1"
+    },
+    {
+      "key": "Trinity_County_Revived_v1.0.1",
+      "name": "Trinity County Revived v1.0.1"
+    },
+    {
+      "key": "Vermont_Map_Revived_v1.0.1",
+      "name": "Vermont Map Revived v1.0.1"
+    },
+    {
+      "key": "Washington_Extended_Revived_v1.0.1",
+      "name": "Washington Extended Revived v1.0.1"
+    },
+    {
+      "key": "promods-ats-models-v171",
+      "name": "ProMods Canada Models Package",
+      "filename": "promods-ats-models-v171.scs",
+      "image": "/img/combo-builder/cc4ab4db10f03154282f3015f85ec529206f24b252e4685e2c2d3d962e79a26e.webp"
+    },
+    {
+      "key": "promods-ats-assets-v171",
+      "name": "ProMods Canada Assets Package",
+      "filename": "promods-ats-assets-v171.scs",
+      "image": "/img/combo-builder/2a494a0922feeb9ef9663ebaf51b071b0adfd827a70ee26b5ff1c6bdf0f6b996.webp"
+    },
+    {
+      "key": "promods-ats-map-v171",
+      "name": "ProMods Canada Map Package",
+      "filename": "promods-ats-map-v171.scs",
+      "image": "/img/combo-builder/c218dc29c5aa0fc90517e0ca062d147b4e5f0f4ed33af8c110d5fdc950f29ed0.webp"
+    },
+    {
+      "key": "promods-ats-def-v171",
+      "name": "ProMods Canada Definition Package",
+      "filename": "promods-ats-def-v171.scs",
+      "image": "/img/combo-builder/b42c7c2adb8dd156067783731d85ea219058375d3b17d51f98396b528bd526d4.webp"
+    },
+    {
+      "key": "QS_ATS_C2C_ProMods_Fix",
+      "name": "QS ATS Coast to Coast + ProMods Fix",
+      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp"
+    },
+    {
+      "key": "Petersburg_Alaska_Revived_v1.0.1",
+      "name": "Petersburg Alaska Revived v1.0.1"
+    },
+    {
+      "key": "Aleutian_Islands_Revived_v1.0.1",
+      "name": "Aleutian Islands Revived v1.0.1"
+    },
+    {
+      "key": "Reforma_OtherMaps_Patch_42_162",
+      "name": "Reforma OtherMaps Compatibility Patch 42.162"
+    },
+    {
+      "key": "QS_ATS_Map_Final_Fix",
+      "name": "QS ATS Map Final Fix"
+    },
+    {
+      "key": "ATSRealisticEconomy",
+      "name": "Realistic Economy ATS by Quper"
+    },
+    {
+      "key": "ATS Quper Background Map (Optional)",
+      "name": "ATS Quper Background Map (Optional)"
+    }
+  ],
+  "conflicts": [],
+  "presets": []
+}

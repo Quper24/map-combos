@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { builderCatalogs } from '../../data/builderCatalogs';
 import { useTranslation } from '../../i18n/Language';
 import {
   canAutoWithMaps,
@@ -18,7 +19,7 @@ import { processProfile } from '../../lib/processProfile';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
 import { Builder } from './ComboBuilder';
 import PresetContent from './PresetContent';
-import { builderDraftKey, readBuilderDraft } from '../../lib/builderDraft';
+import { builderDraftKey, readBuilderDraft, restorePresetFileSlugs } from '../../lib/builderDraft';
 import { attachPresetFiles, catalogKey, presetFileName, presetTags } from '../../lib/presetCombos';
 import { tagUtils } from '../../utils/tags';
 import EditorImageField from './EditorImageField';
@@ -87,7 +88,9 @@ function Choices({ label, name, items, selected = [], onChecked, disabled = fals
 
 export default function ComboEditor() {
   const { t } = useTranslation();
-  const [catalog, setCatalog] = useState(() => readBuilderDraft() || blank);
+  const [catalog, setCatalog] = useState(() =>
+    restorePresetFileSlugs(readBuilderDraft() || blank, builderCatalogs),
+  );
   const [notice, setNotice] = useState('');
   const [pending, setPending] = useState(null);
   const [revision, setRevision] = useState(0);
@@ -150,7 +153,7 @@ export default function ComboEditor() {
       [{ ...base, presets: base.presets.filter(({ id }) => !importedIds.has(id)) }],
       presetFiles,
     );
-    if (commit(next)) {
+    if (commit(restorePresetFileSlugs(next, builderCatalogs))) {
       setPending(null);
       setEntryRequest({ id: '', files: [], key: 0 });
       setShowPreview(false);
@@ -1031,7 +1034,7 @@ function PresetEditor({ catalog, commit, onExport }) {
       <h2>{t('Готовые сборки')}</h2>
       <p>
         {t(
-          'Сохранённая сборка появится в локальном каталоге как черновик. Для публичного сайта выгрузи каталог.',
+          'Локальный каталог показывает сборку из JSON, если файл уже добавлен в проект. Изменения черновика можно проверить в предпросмотре ниже.',
         )}
       </p>
       <Link className="text-link" to={`/combos?version=${catalog.version}`}>
@@ -1149,7 +1152,7 @@ function PresetEditor({ catalog, commit, onExport }) {
       {preset && (
         <details>
           <summary>{t('Предпросмотр страницы сборки')}</summary>
-          <PresetContent key={preset.id} catalog={catalog} preset={preset} />
+          <PresetContent key={preset.id} catalog={catalog} preset={preset} share={false} />
         </details>
       )}
     </section>
