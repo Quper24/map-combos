@@ -94,7 +94,7 @@ test('a new file takes the old slot and inherits the image and link, while the s
   );
 });
 
-test('badges last five Moscow calendar days and a recent update takes precedence', () => {
+test('badges last five Moscow calendar days; only updates after the added date take precedence', () => {
   const entry = { addedAt: '2026-11-08', updatedAt: '2026-11-10' };
   assert.equal(catalogDate(new Date('2026-11-08T21:00:00Z')), '2026-11-09');
   assert.equal(entryBadge(entry, '2026-11-07'), '');
@@ -104,6 +104,11 @@ test('badges last five Moscow calendar days and a recent update takes precedence
   assert.equal(entryBadge(entry, '2026-11-15'), '');
   assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-12'), 'NEW');
   assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-13'), '');
+  const sameDay = { addedAt: entry.addedAt, updatedAt: entry.addedAt };
+  assert.equal(entryBadge(sameDay, '2026-11-08'), 'NEW');
+  assert.equal(entryBadge(sameDay, '2026-11-12'), 'NEW');
+  assert.equal(entryBadge(sameDay, '2026-11-13'), '');
+  assert.equal(entryBadge({ updatedAt: entry.updatedAt }, '2026-11-10'), 'UPDATE');
   assert.equal(entryBadge({}, '2026-11-08'), '');
   for (const dates of [
     { addedAt: '2026-02-30' },

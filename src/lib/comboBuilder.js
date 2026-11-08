@@ -205,9 +205,12 @@ const moscowDay = new Intl.DateTimeFormat('sv-SE', {
 export const catalogDate = (now = new Date()) => moscowDay.format(now);
 
 export function entryBadge({ addedAt, updatedAt }, today = catalogDate()) {
-  const age = (value) => (Date.parse(today) - Date.parse(value)) / 86400000;
-  if (age(updatedAt) >= 0 && age(updatedAt) < 5) return 'UPDATE';
-  if (age(addedAt) >= 0 && age(addedAt) < 5) return 'NEW';
+  const isRecent = (value) => {
+    const age = (Date.parse(today) - Date.parse(value)) / 86400000;
+    return age >= 0 && age < 5;
+  };
+  if ((!addedAt || updatedAt > addedAt) && isRecent(updatedAt)) return 'UPDATE';
+  if (isRecent(addedAt)) return 'NEW';
   return '';
 }
 
