@@ -30,6 +30,8 @@
   "Подключить": "Enable",
   "Отключить карту": "Disable map",
   "Отключить мод": "Disable mod",
+  "Также отключатся": "Also disables",
+  "Также отключится": "Also disables",
   "Вернуть исходную сборку": "Restore original combo",
   "По этому запросу моды не найдены.": "No mods match your search.",
   "Все доступные карты и моды уже подключены.": "All available maps and mods are already enabled.",

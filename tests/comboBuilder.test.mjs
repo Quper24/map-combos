@@ -363,20 +363,47 @@ test('SibirMap variants switch atomically and recalculate only their matching co
   assert.deepEqual(catalog.presets[0].selection, ['eurafrica', 'sibir-fv', 'kazakhstan']);
 });
 
-test('disabling a map removes its connector and keeps maps required by other selected entries', () => {
+test('disabling a map recalculates connectors without reporting them as selected mods', () => {
   const original = catalog.presets[0].selection;
   const removed = removeFromCombo(catalog, original, 'kazakhstan');
-  assert.deepEqual(removed, { selection: ['eurafrica', 'sibir-fv'], requiredBy: [] });
+  assert.deepEqual(removed, { selection: ['eurafrica', 'sibir-fv'], alsoDisabled: [] });
   assert.equal(resolveCombo(catalog, removed.selection).active.has('fv-connector'), false);
   const added = addToCombo(catalog, removed.selection, 'kazakhstan');
   assert.equal(resolveCombo(catalog, added.selection).active.has('fv-connector'), true);
+});
 
-  const dependent = makeEntry('dependent', 'mod', { requires: ['kazakhstan'] });
-  const withDependent = { ...catalog, entries: [...catalog.entries, dependent] };
-  const selection = ['kazakhstan', dependent.id];
-  assert.deepEqual(removeFromCombo(withDependent, selection, 'kazakhstan'), {
-    selection,
-    requiredBy: [dependent.id],
+test('disabling an explicitly or implicitly enabled map also disables its dependent maps and mods', () => {
+  const reforma = makeEntry('reforma');
+  const sierra = makeEntry('sierra-nevada', 'map', { requires: [reforma.id] });
+  const extension = makeEntry('extension', 'mod', { requires: [sierra.id] });
+  const coast = makeEntry('coast-to-coast');
+  const patch = makeEntry('patch', 'fix', { requires: [reforma.id], requiresAny: [coast.id] });
+  const entries = [reforma, sierra, extension, coast, patch];
+  const next = {
+    game: 'ats',
+    version: '1.62',
+    entries,
+    order: entries.map(({ id }) => ({ key: id, name: id })),
+    conflicts: [],
+    presets: [],
+  };
+  validateCatalog(next);
+  for (const selection of [
+    [reforma.id, sierra.id, extension.id, coast.id],
+    [extension.id, coast.id],
+  ]) {
+    const result = resolveCombo(next, selection);
+    assert.ok(result.active.has(patch.id));
+    const removal = removeFromCombo(next, selection, reforma.id, result.active);
+    assert.deepEqual(removal, { selection: [coast.id], alsoDisabled: [sierra.id, extension.id] });
+    assert.deepEqual(
+      resolveCombo(next, removal.selection).files.map(({ key }) => key),
+      [coast.id],
+    );
+  }
+  assert.deepEqual(removeFromCombo(next, [reforma.id, sierra.id, coast.id], coast.id), {
+    selection: [reforma.id, sierra.id],
+    alsoDisabled: [],
   });
 });
 

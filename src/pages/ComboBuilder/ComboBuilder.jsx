@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import ExternalLink from '../../components/ui/ExternalLink';
@@ -9,6 +9,7 @@ import {
   entryBadge,
   entryTypeLabels,
   isSelectable,
+  removeFromCombo,
   resolveCombo,
   serializeModOrder,
 } from '../../lib/comboBuilder';
@@ -146,10 +147,8 @@ export function Builder({ catalog }) {
                     {!items[0].family && <EntryBadge entry={items[0]} />}
                   </h3>
                   {items.map((entry) => {
-                    const selected = result.manual.has(entry.id);
-                    const required = result.active.has(entry.id) && !selected;
-                    const candidate =
-                      !selected && !required ? addToCombo(catalog, selection, entry.id) : null;
+                    const enabled = result.active.has(entry.id);
+                    const candidate = enabled ? null : addToCombo(catalog, selection, entry.id);
                     return (
                       <div key={entry.id} className={s.variant}>
                         {entry.image && (
@@ -164,23 +163,24 @@ export function Builder({ catalog }) {
                             {t('Скачать')}
                           </ExternalLink>
                         )}
-                        <button
-                          type="button"
-                          className="chip"
-                          aria-pressed={selected || required}
-                          disabled={required || Boolean(candidate?.conflicts.length)}
-                          onClick={() =>
-                            setSelection(
-                              selected
-                                ? selection.filter((id) => id !== entry.id)
-                                : candidate.selection,
-                            )
-                          }
-                        >
-                          {t(
-                            required ? 'Подключено автоматически' : selected ? 'Убрать' : 'Выбрать',
-                          )}
-                        </button>
+                        {enabled ? (
+                          <RemoveEntryButton
+                            entry={entry}
+                            removal={removeFromCombo(catalog, selection, entry.id, result.active)}
+                            byId={byId}
+                            onRemove={setSelection}
+                            className="chip"
+                          />
+                        ) : (
+                          <button
+                            type="button"
+                            className="chip"
+                            disabled={candidate.conflicts.length > 0}
+                            onClick={() => setSelection(candidate.selection)}
+                          >
+                            {t('Выбрать')}
+                          </button>
+                        )}
                         {candidate?.conflicts.map((rule) => (
                           <p className={s.reason} key={rule.entries.join('/')}>
                             {conflictText(rule)}
@@ -239,6 +239,43 @@ export function EntryBadge({ entry }) {
   ) : null;
 }
 
+function RemoveEntryButton({
+  entry,
+  removal,
+  byId,
+  onRemove,
+  className = 'button button-secondary',
+}) {
+  const { t } = useTranslation();
+  const hintId = useId();
+  const label = t(entry.type === 'map' ? 'Отключить карту' : 'Отключить мод');
+  const affected = removal.alsoDisabled.map((id) => t(byId.get(id).title)).join(', ');
+  return (
+    <span className={s.removeControl}>
+      <button
+        type="button"
+        className={className}
+        aria-label={`${label} — ${t(entry.title)}`}
+        aria-describedby={affected ? hintId : undefined}
+        onClick={() => onRemove(removal.selection)}
+      >
+        {label}
+        {affected && (
+          <span className={s.removeWarning} aria-hidden="true">
+            !
+          </span>
+        )}
+      </button>
+      {affected && (
+        <span id={hintId} className={s.removeHint}>
+          {t(removal.alsoDisabled.length === 1 ? 'Также отключится' : 'Также отключатся')} ·{' '}
+          {affected}
+        </span>
+      )}
+    </span>
+  );
+}
+
 export function OrderList({
   result: { files, manual, reasons },
   byId,
@@ -257,8 +294,6 @@ export function OrderList({
         const link = file.link || file.entry.link;
         const removal =
           topFile.get(file.entry.id) === file.key ? removals?.get(file.entry.id) : undefined;
-        const removeLabel = t(file.entry.type === 'map' ? 'Отключить карту' : 'Отключить мод');
-        const requiredBy = removal?.requiredBy.map((id) => t(byId.get(id).title)).join(' + ');
         return (
           <li key={file.key}>
             <div className={s.orderRow}>
@@ -292,16 +327,12 @@ export function OrderList({
                     </ExternalLink>
                   )}
                   {removal && (
-                    <button
-                      type="button"
-                      className="button button-secondary"
-                      disabled={Boolean(requiredBy)}
-                      title={requiredBy ? t('Нужно для ') + requiredBy : undefined}
-                      aria-label={`${removeLabel} — ${t(file.entry.title)}`}
-                      onClick={() => onRemove(removal.selection)}
-                    >
-                      {removeLabel}
-                    </button>
+                    <RemoveEntryButton
+                      entry={file.entry}
+                      removal={removal}
+                      byId={byId}
+                      onRemove={onRemove}
+                    />
                   )}
                 </div>
               )}

@@ -182,6 +182,45 @@
   font-size: var(--type-small);
 }
 
+.removeControl {
+  display: inline-grid;
+  align-self: start;
+  justify-items: start;
+}
+
+.removeWarning {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  margin-inline-start: 5px;
+  border: 1px solid var(--boosty-line);
+  border-radius: 50%;
+  color: var(--boosty-bright);
+  font-weight: 700;
+}
+
+.removeHint {
+  display: none;
+  inline-size: 0;
+  min-inline-size: 100%;
+  margin-top: 4px;
+  color: var(--boosty-bright);
+  font-size: var(--type-small);
+  overflow-wrap: anywhere;
+}
+
+.removeControl:hover .removeHint,
+.removeControl:focus-within .removeHint {
+  display: block;
+}
+
+@media (hover: none) {
+  .removeHint {
+    display: block;
+  }
+}
+
 .presetOrder .order {
   max-height: none;
   overflow: visible;

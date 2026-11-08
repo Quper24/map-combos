@@ -105,12 +105,33 @@ export function addToCombo(catalog, selection, id) {
   return { selection: conflicts.length ? selection : next, conflicts };
 }
 
-export function removeFromCombo(catalog, selection, id) {
-  const next = selection.filter((selected) => selected !== id);
-  const result = resolveCombo(catalog, next);
-  return result.active.has(id)
-    ? { selection, requiredBy: result.reasons.get(id) }
-    : { selection: next, requiredBy: [] };
+export function removeFromCombo(
+  catalog,
+  selection,
+  id,
+  active = resolveCombo(catalog, selection).active,
+) {
+  const dependents = new Map();
+  for (const entry of catalog.entries) {
+    for (const dependency of entry.requires || []) {
+      const list = dependents.get(dependency) || [];
+      list.push(entry.id);
+      dependents.set(dependency, list);
+    }
+  }
+  const affected = new Set([id]);
+  for (const dependency of affected) {
+    for (const dependent of dependents.get(dependency) || []) affected.add(dependent);
+  }
+  const next = selection.filter((selected) => !affected.has(selected));
+  const remaining = resolveCombo(catalog, next).active;
+  const alsoDisabled = catalog.entries
+    .filter(
+      (entry) =>
+        entry.id !== id && isSelectable(entry) && active.has(entry.id) && !remaining.has(entry.id),
+    )
+    .map((entry) => entry.id);
+  return { selection: next, alsoDisabled };
 }
 
 // Stored in active_mods index order. The manager shows the highest priority first.

@@ -26,7 +26,11 @@ export default function PresetContent({ catalog, preset }) {
     preset.selection.every((id) => selection.includes(id));
   const removals = server
     ? undefined
-    : new Map([...result.manual].map((id) => [id, removeFromCombo(catalog, selection, id)]));
+    : new Map(
+        catalog.entries
+          .filter((entry) => isSelectable(entry) && result.active.has(entry.id))
+          .map(({ id }) => [id, removeFromCombo(catalog, selection, id, result.active)]),
+      );
 
   return (
     <div className={page.layout}>
