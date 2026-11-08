@@ -2,8 +2,14 @@ export const presetTags = ['boosty', 'server', 'convoy'];
 
 export const catalogKey = ({ game, version }) => `${game}-${version}`;
 
+const presetName = (catalog, preset) => `${catalog.game}-${preset.fileSlug || preset.id}`;
+
 export function presetFileName(catalog, preset) {
-  return `${catalog.game}-${preset.fileSlug || preset.id}-${catalog.version}.json`;
+  return `${presetName(catalog, preset)}-${catalog.version}.json`;
+}
+
+export function comboPath(combo) {
+  return combo.slug && !combo.draft ? `/${combo.slug}` : `/combos/${combo.id}`;
 }
 
 export function attachPresetFiles(catalogs, files) {
@@ -32,6 +38,7 @@ export function presetCombo(catalog, preset) {
   )?.image;
   return {
     id: `${catalog.game}-${catalog.version.replace('.', '-')}-${preset.id}`,
+    slug: `${presetName(catalog, preset)}-${catalog.version.replace('.', '')}`,
     title: preset.title,
     version_game: catalog.version,
     tags: [catalog.game, ...(preset.tags || [])],

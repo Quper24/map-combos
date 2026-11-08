@@ -7,6 +7,7 @@ import VideoCard from '../../components/VideoCard/VideoCard';
 import Icon from '../../components/ui/Icon';
 import ExternalLink from '../../components/ui/ExternalLink';
 import { assetUrl, dateValue, videos } from '../../lib/content';
+import { comboPath } from '../../lib/presetCombos';
 import s from './Home.module.css';
 const directions = [
   {
@@ -79,7 +80,7 @@ export default function Home() {
           </div>
         </div>
         {featured ? (
-          <Link to={`/combos/${featured.id}`} className={s.featured}>
+          <Link to={comboPath(featured)} className={s.featured}>
             <div className={s.featuredImage}>
               <img
                 src={assetUrl(featured.preview)}

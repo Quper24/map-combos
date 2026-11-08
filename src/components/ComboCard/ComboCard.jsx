@@ -1,6 +1,7 @@
 import { useTranslation } from '../../i18n/Language';
 import { Link } from 'react-router-dom';
 import { assetUrl } from '../../lib/content';
+import { comboPath } from '../../lib/presetCombos';
 import { tagUtils } from '../../utils/tags';
 import useFavorites from '../hooks/useFavorites';
 import Icon from '../ui/Icon';
@@ -11,9 +12,10 @@ export default function ComboCard({ heading = 'h3', combo }) {
   const { t } = useTranslation();
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorite = isFavorite(combo.id);
+  const path = comboPath(combo);
   return (
     <article className={s.card}>
-      <Link to={`/combos/${combo.id}`} className={s.imageLink} tabIndex={-1} aria-hidden="true">
+      <Link to={path} className={s.imageLink} tabIndex={-1} aria-hidden="true">
         <img
           src={assetUrl(combo.preview || combo.image)}
           alt={''}
@@ -46,7 +48,7 @@ export default function ComboCard({ heading = 'h3', combo }) {
           ))}
         </div>
         <Heading className={s.title}>
-          <Link to={`/combos/${combo.id}`}>{t(combo.title)}</Link>
+          <Link to={path}>{t(combo.title)}</Link>
         </Heading>
         <div className={s.meta}>
           <span>
@@ -60,7 +62,7 @@ export default function ComboCard({ heading = 'h3', combo }) {
           </span>
           <span>{combo.date}</span>
         </div>
-        <Link className={s.open} to={`/combos/${combo.id}`}>
+        <Link className={s.open} to={path}>
           {t('Открыть сборку ')}
           <Icon name="arrow" size={17} />
         </Link>

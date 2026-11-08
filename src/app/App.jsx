@@ -1,6 +1,6 @@
 import { useTranslation, LanguageContext } from '../i18n/Language';
 import { Component, Suspense, lazy } from 'react';
-import { Link, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
+import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Layout from './Layout';
 const Home = lazy(() => import('../pages/Home/Home'));
 const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
@@ -15,10 +15,6 @@ const Mods = lazy(() => import('../pages/Mods/Mods'));
 const Mod = lazy(() => import('../pages/Mods/Mod'));
 const Videos = lazy(() => import('../pages/Videos/Videos'));
 const ServerGuide = lazy(() => import('../pages/ServerGuide/ServerGuide'));
-function LegacyCombo() {
-  const { slug } = useParams();
-  return <Navigate to={`/combos/${encodeURIComponent(slug)}`} replace />;
-}
 function NotFound() {
   const { t } = useTranslation();
   return (
@@ -85,7 +81,7 @@ export default function App() {
             <Route path="mods/:slug" element={<Mod />} />
             <Route path="videos" element={<Videos />} />
             <Route path="server-guide" element={<ServerGuide />} />
-            <Route path=":slug" element={<LegacyCombo />} />
+            <Route path=":slug" element={<Combo root />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

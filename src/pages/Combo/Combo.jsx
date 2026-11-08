@@ -1,18 +1,26 @@
 import { useTranslation } from '../../i18n/Language';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
 import { getAllCombos } from '../../data';
 import { currentComboVersion, editorDraftCombos } from '../../data/builderCatalogs';
 import ComboContent from '../../components/ComboContent/ComboContent';
 import { ImageBlock } from '../../components/ImageBlock/ImageBlock';
 import { tagUtils } from '../../utils/tags';
+import { comboPath } from '../../lib/presetCombos';
 import PresetContent from '../ComboBuilder/PresetContent';
 import s from './Combo.module.css';
-export default function Combo() {
+export default function Combo({ root = false }) {
   const { t } = useTranslation();
   const { slug } = useParams();
+  const { search, hash } = useLocation();
   const combo =
-    editorDraftCombos().find((item) => item.id === slug) ||
-    getAllCombos().find((item) => item.id === slug);
+    getAllCombos().find((item) => item.slug === slug || item.id === slug) ||
+    editorDraftCombos().find((item) => item.id === slug);
+  const legacyPath = `/combos/${encodeURIComponent(slug)}`;
+  const requestedPath = root ? `/${slug}` : legacyPath;
+  const destination = combo ? comboPath(combo) : legacyPath;
+  if (destination !== requestedPath) {
+    return <Navigate to={{ pathname: destination, search, hash }} replace />;
+  }
   if (!combo)
     return (
       <div className="container page empty-state">
