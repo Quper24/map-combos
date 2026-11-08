@@ -15,6 +15,7 @@ import {
   validateCatalog,
 } from '../src/lib/comboBuilder.js';
 import { replaceActiveMods } from '../src/lib/profileMods.js';
+import { presetCombo } from '../src/lib/presetCombos.js';
 import { fileImage } from '../src/pages/ComboBuilder/downloads.js';
 
 const filesFor = (id) =>
@@ -181,10 +182,39 @@ const catalog = {
       id: 'mega',
       title: 'Mega',
       boosty: 'https://boosty.to/example',
+      profile: 'https://example.org/profile.zip',
       selection: ['eurafrica', 'sibir-fv', 'kazakhstan'],
     },
   ],
 };
+
+test('published presets produce unique catalog cards with game tags, cover and ready profile', () => {
+  const preset = {
+    ...catalog.presets[0],
+    tags: ['server', 'convoy', 'boosty'],
+    image: '/img/cover.webp',
+    updatedAt: '2026-11-08',
+  };
+  const ats = { ...catalog, game: 'ats', presets: [preset] };
+  validateCatalog(ats);
+  const card = presetCombo(ats, preset);
+  assert.equal(card.id, 'ats-1-62-mega');
+  assert.notEqual(card.id, presetCombo(catalog, preset).id);
+  assert.notEqual(card.id, presetCombo({ ...ats, version: '1.63' }, preset).id);
+  assert.deepEqual(card.tags, ['ats', 'server', 'convoy', 'boosty']);
+  assert.equal(card.version_game, '1.62');
+  assert.equal(card.date, '08.11.2026');
+  assert.equal(card.preview, preset.image);
+  assert.equal(card.profile, preset.profile);
+  assert.equal(card.boosty, preset.boosty);
+  const draft = { ...ats, presets: [{ ...preset, profile: undefined }] };
+  assert.doesNotThrow(() => validateCatalog(draft, true));
+  assert.throws(() => validateCatalog(draft), /HTTPS-ссылку на готовый профиль/);
+  assert.throws(
+    () => validateCatalog({ ...ats, presets: [{ ...preset, tags: ['ats'] }] }),
+    /metadata/,
+  );
+});
 
 test('common mods and fixes are hidden from selection and activate with any map in the template order', () => {
   const commonMod = makeEntry('common-mod', 'mod', { autoWithMaps: true });

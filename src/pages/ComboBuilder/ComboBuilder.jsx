@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import ExternalLink from '../../components/ui/ExternalLink';
 import AutoProfileInstall from '../../components/AutoProfileInstall/AutoProfileInstall';
+import { builderCatalogs } from '../../data/builderCatalogs';
 import {
   addToCombo,
   entryBadge,
@@ -14,19 +15,11 @@ import {
 import { download, fileImage, orderImage, previewSize } from './downloads';
 import s from './ComboBuilder.module.css';
 
-const releases = Object.values(
-  import.meta.glob('../../../content/combo-builder/*.json', { eager: true, import: 'default' }),
-).sort(
-  (a, b) =>
-    Number(b.version.split('.')[1]) - Number(a.version.split('.')[1]) ||
-    b.game.localeCompare(a.game),
-);
-
 const releaseKey = ({ game, version }) => `${game}-${version}`;
 
 export default function ComboBuilder() {
   const { t } = useTranslation();
-  const [release, setRelease] = useState(releases[0]);
+  const [release, setRelease] = useState(builderCatalogs[0]);
   return (
     <div className="container page">
       <div className="page-heading">
@@ -50,10 +43,10 @@ export default function ComboBuilder() {
             <select
               value={releaseKey(release)}
               onChange={(event) =>
-                setRelease(releases.find((item) => releaseKey(item) === event.target.value))
+                setRelease(builderCatalogs.find((item) => releaseKey(item) === event.target.value))
               }
             >
-              {releases.map((item) => (
+              {builderCatalogs.map((item) => (
                 <option key={releaseKey(item)} value={releaseKey(item)}>
                   {item.game.toUpperCase()} · {item.version}
                 </option>
@@ -100,7 +93,7 @@ export function Builder({ catalog }) {
     <>
       <div className={s.toolbar}>
         <label className={s.field}>
-          {t('Готовый пресет')}
+          {t('Готовая сборка')}
           <select
             value={presetId}
             onChange={(event) => {
@@ -110,16 +103,23 @@ export function Builder({ catalog }) {
             }}
           >
             <option value="">{t('Своя сборка')}</option>
-            {catalog.presets.map(({ id, title }) => (
-              <option key={id} value={id}>
-                {t(title)}
-              </option>
-            ))}
+            {catalog.presets
+              .filter((item) => !item.tags?.includes('server'))
+              .map(({ id, title }) => (
+                <option key={id} value={id}>
+                  {t(title)}
+                </option>
+              ))}
           </select>
         </label>
         {preset?.boosty && (
           <ExternalLink className="button button-boosty" href={preset.boosty}>
-            {t(isPreset ? 'Сборка на Boosty' : 'Исходный пресет на Boosty')}
+            {t(isPreset ? 'Сборка на Boosty' : 'Исходная сборка на Boosty')}
+          </ExternalLink>
+        )}
+        {isPreset && preset.profile && (
+          <ExternalLink className="button button-secondary" href={preset.profile}>
+            {t('Готовый профиль')}
           </ExternalLink>
         )}
         <label className={s.field}>
@@ -206,7 +206,7 @@ export function Builder({ catalog }) {
           {result.files.length ? (
             <>
               <p role="status">
-                {t(isPreset ? 'Готовый пресет' : 'Своя сборка')} · {t('Файлов — ')}
+                {t(isPreset ? 'Готовая сборка' : 'Своя сборка')} · {t('Файлов — ')}
                 {result.files.length}
               </p>
               {result.dlcs.length > 0 && (
@@ -232,6 +232,46 @@ export function Builder({ catalog }) {
   );
 }
 
+export function PresetContent({ catalog, preset }) {
+  const { t } = useTranslation();
+  const result = resolveCombo(catalog, preset.selection);
+  const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
+  const server = preset.tags?.includes('server');
+  return (
+    <section aria-label={t('Порядок загрузки')}>
+      <div className={s.toolbar}>
+        {preset.profile && (
+          <ExternalLink href={preset.profile}>{t('Готовый профиль')}</ExternalLink>
+        )}
+        {preset.boosty && (
+          <ExternalLink className="button button-boosty" href={preset.boosty}>
+            {t('Сборка на Boosty')}
+          </ExternalLink>
+        )}
+      </div>
+      <h2>{t('Порядок загрузки')}</h2>
+      <p>
+        {t('Файлов — ')}
+        {result.files.length}
+      </p>
+      {result.dlcs.length > 0 && (
+        <p>
+          {t('Требуемые DLC')} · {result.dlcs.join(', ')}
+        </p>
+      )}
+      {result.conflicts.length > 0 && (
+        <p role="alert" className={s.reason}>
+          {t('В составе сборки есть конфликтующие позиции.')}
+        </p>
+      )}
+      <OrderList result={result} byId={byId} showLinks={!server} />
+      {!server && result.files.length > 0 && !result.conflicts.length && (
+        <OrderDownloads catalog={catalog} files={result.files} title={preset.title} />
+      )}
+    </section>
+  );
+}
+
 function EntryBadge({ entry }) {
   const badge = entryBadge(entry);
   return badge ? (
@@ -239,7 +279,7 @@ function EntryBadge({ entry }) {
   ) : null;
 }
 
-function OrderList({ result: { files, manual, reasons }, byId }) {
+function OrderList({ result: { files, manual, reasons }, byId, showLinks = true }) {
   const { t } = useTranslation();
   return (
     <ol className={s.order}>
@@ -270,7 +310,7 @@ function OrderList({ result: { files, manual, reasons }, byId }) {
                 <small>{t('Подключается при выборе любой карты')}</small>
               )}
             </div>
-            {(file.link || file.entry.link) && (
+            {showLinks && (file.link || file.entry.link) && (
               <ExternalLink className="text-link" href={file.link || file.entry.link}>
                 {t('Скачать')}
               </ExternalLink>

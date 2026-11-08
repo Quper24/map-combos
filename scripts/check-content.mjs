@@ -3,6 +3,7 @@ import { resolve, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { validateCatalog } from '../src/lib/comboBuilder.js';
+import { presetCombo } from '../src/lib/presetCombos.js';
 
 const read = async (file) => JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
@@ -37,9 +38,34 @@ for (const name of (await readdir('content/combos')).filter((name) => name.endsW
       `${record.id}: game version and filename differ`,
     );
     check(!!versions[record.version_game], `${record.id}: game version metadata missing`);
+    check(
+      Number(record.version_game.split('.')[1]) < 62,
+      `${record.id}: use a builder preset from 1.62`,
+    );
     combos.push(record);
   }
 }
+const builderVersions = new Set();
+const presetCombos = [];
+for (const name of (await readdir('content/combo-builder')).filter((name) =>
+  name.endsWith('.json'),
+)) {
+  try {
+    const catalog = validateCatalog(await read(`content/combo-builder/${name}`));
+    check(
+      name === `${catalog.game}-${catalog.version}.json`,
+      `${name}: expected game-version.json`,
+    );
+    builderVersions.add(catalog.version);
+    for (const item of [...catalog.entries, ...catalog.order, ...catalog.presets]) {
+      await image(item.image, `${name}: ${item.id || item.key}`);
+    }
+    presetCombos.push(...catalog.presets.map((preset) => presetCombo(catalog, preset)));
+  } catch (error) {
+    errors.push(`${name}: ${error.message}`);
+  }
+}
+const allCombos = [...combos, ...presetCombos];
 const mods = [];
 for (const name of (await readdir('content/mods')).filter((name) => name.endsWith('.json')))
   mods.push(await read(`content/mods/${name}`));
@@ -56,7 +82,7 @@ function ids(records, kind) {
   }
   return seen;
 }
-const comboIds = ids(combos, 'combo');
+const comboIds = ids(allCombos, 'combo');
 const modIds = ids(mods, 'mod');
 const videoIds = ids(videos, 'video');
 const serverIds = new Set();
@@ -75,7 +101,7 @@ for (const group of serverGroups) {
     `${group.game}: server list missing`,
   );
   if (group.combo) {
-    const combo = combos.find((item) => item.id === group.combo.id);
+    const combo = allCombos.find((item) => item.id === group.combo.id);
     check(!!combo, `${group.game}: missing server combo ${group.combo.id}`);
     check(
       combo?.tags.includes(group.game) && combo?.tags.includes('server'),
@@ -133,30 +159,6 @@ for (const combo of combos) {
     await image(combo[field], `${combo.id}.${field}`);
   for (const field of ['table', 'boosty', 'profile'])
     if (combo[field]) url(combo[field], `${combo.id}.${field}`);
-  if (Number(combo.version_game.split('.')[1]) >= 62 && combo.tags?.includes('server')) {
-    check(
-      combo.boosty?.startsWith('https://boosty.to/') && !combo.table && !combo.profile,
-      `${combo.id}: server packages from 1.62 must be distributed as a single Boosty download`,
-    );
-  }
-}
-const builderVersions = new Set();
-for (const name of (await readdir('content/combo-builder')).filter((name) =>
-  name.endsWith('.json'),
-)) {
-  try {
-    const catalog = validateCatalog(await read(`content/combo-builder/${name}`));
-    check(
-      name === `${catalog.game}-${catalog.version}.json`,
-      `${name}: expected game-version.json`,
-    );
-    builderVersions.add(catalog.version);
-    for (const item of [...catalog.entries, ...catalog.order]) {
-      await image(item.image, `${name}: ${item.id || item.key}`);
-    }
-  } catch (error) {
-    errors.push(`${name}: ${error.message}`);
-  }
 }
 check(
   builderVersions.has(site.currentGameVersion) ||
@@ -239,7 +241,7 @@ for (const video of videos) {
   await image(video.thumbnail, `${video.id}.thumbnail`);
   for (const id of video.relatedComboIds || []) {
     check(comboIds.has(id), `${video.id}: missing combo ${id}`);
-    const combo = combos.find((item) => item.id === id);
+    const combo = allCombos.find((item) => item.id === id);
     if (combo?.video && video.platforms.youtube) {
       const youtube = new URL(video.platforms.youtube);
       const youtubeId =
@@ -271,5 +273,5 @@ if (errors.length) {
   process.exitCode = 1;
 } else
   console.log(
-    `Content verified: ${combos.length} combos, ${mods.length} mods, ${videos.length} videos, ${serverIds.size} servers${process.argv.includes('--baseline') ? '; all original combo fields preserved' : ''}.`,
+    `Content verified: ${allCombos.length} combos, ${mods.length} mods, ${videos.length} videos, ${serverIds.size} servers${process.argv.includes('--baseline') ? '; all original combo fields preserved' : ''}.`,
   );

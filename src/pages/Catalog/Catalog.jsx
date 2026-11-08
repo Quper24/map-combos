@@ -1,27 +1,48 @@
 import { useTranslation } from '../../i18n/Language';
-import { useMemo } from 'react';
+import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { COMBOS_BY_VERSION, VERSIONS } from '../../data';
-import site from '../../../content/site.json';
+import {
+  builderCatalogs,
+  currentComboVersion,
+  editorDraftCombos,
+} from '../../data/builderCatalogs';
 import ComboCard from '../../components/ComboCard/ComboCard';
 import useFavorites from '../../components/hooks/useFavorites';
 import Icon from '../../components/ui/Icon';
 import { tagUtils } from '../../utils/tags';
 import { dateValue } from '../../lib/content';
 import s from './Catalog.module.css';
-const hasBuilderCatalog =
-  Object.keys(import.meta.glob('../../../content/combo-builder/*.json')).length > 0;
+const compareVersions = (a, b) => b.localeCompare(a, undefined, { numeric: true });
+const publishedVersions = [
+  ...new Set([...Object.keys(VERSIONS), ...Object.keys(COMBOS_BY_VERSION)]),
+];
 
 export default function Catalog() {
   const { t } = useTranslation();
   const [params, setParams] = useSearchParams();
   const { favorites } = useFavorites();
-  const version = VERSIONS[params.get('version')] ? params.get('version') : site.currentGameVersion;
+  const [drafts] = useState(editorDraftCombos);
+  const draftVersion = drafts[0]?.version_game;
+  const versions = [
+    ...new Set(draftVersion ? [...publishedVersions, draftVersion] : publishedVersions),
+  ].sort(compareVersions);
+  const currentVersion =
+    draftVersion && compareVersions(draftVersion, currentComboVersion) < 0
+      ? draftVersion
+      : currentComboVersion;
+  const version = versions.includes(params.get('version')) ? params.get('version') : currentVersion;
   const query = params.get('q') || '';
   const tags = params.getAll('tag');
   const onlyFavorites = params.get('favorites') === '1';
   const sort = params.get('sort') || 'date';
-  const combos = COMBOS_BY_VERSION[version] || [];
+  const draftCards = drafts.filter((combo) => combo.version_game === version);
+  const combos = [
+    ...draftCards,
+    ...(COMBOS_BY_VERSION[version] || []).filter(
+      (combo) => !draftCards.some((draft) => draft.id === combo.id),
+    ),
+  ];
   const allTags = tagUtils.extractUniqueTags(combos);
   function update(key, value) {
     setParams(
@@ -52,22 +73,18 @@ export default function Catalog() {
       },
     );
   }
-  const result = useMemo(() => {
-    const filtered = combos.filter(
-      (combo) =>
-        (!query ||
-          `${t(combo.title)} ${combo.title} ${combo.id}`
-            .toLowerCase()
-            .includes(query.toLowerCase())) &&
-        tags.every((tag) => combo.tags?.includes(tag)) &&
-        (!onlyFavorites || favorites.includes(combo.id)),
-    );
-    return sort === 'date'
-      ? filtered.sort(
-          (a, b) => dateValue(b.date) - dateValue(a.date) || a.title.localeCompare(b.title),
-        )
-      : filtered;
-  }, [combos, query, tags, onlyFavorites, favorites, sort, t]);
+  const result = combos.filter(
+    (combo) =>
+      (!query ||
+        `${t(combo.title)} ${combo.title} ${combo.id}`
+          .toLowerCase()
+          .includes(query.toLowerCase())) &&
+      tags.every((tag) => combo.tags?.includes(tag)) &&
+      (!onlyFavorites || favorites.includes(combo.id)),
+  );
+  if (sort === 'date') {
+    result.sort((a, b) => dateValue(b.date) - dateValue(a.date) || a.title.localeCompare(b.title));
+  }
   const filtered = query || tags.length || onlyFavorites;
   function reset() {
     setParams(
@@ -89,7 +106,8 @@ export default function Catalog() {
             'Выбери свой мир. Ссылки, готовые профили и порядок карт для ETS2 и ATS — всё собрано здесь.',
           )}
         </p>
-        {(hasBuilderCatalog || (import.meta.env.DEV && import.meta.env.MODE === 'editor')) && (
+        {(builderCatalogs.length > 0 ||
+          (import.meta.env.DEV && import.meta.env.MODE === 'editor')) && (
           <Link className="button" to="/combos/builder">
             {t('Конструктор сборок')}
           </Link>
@@ -105,22 +123,18 @@ export default function Catalog() {
                 update('version', event.target.value);
                 try {
                   localStorage.setItem('mapCombos_selectedVersion', event.target.value);
-                } catch {}
+                } catch {
+                  // The version filter still works if storage is unavailable.
+                }
               }}
               aria-label={t('Версия игры')}
             >
-              {Object.keys(VERSIONS)
-                .sort((a, b) =>
-                  b.localeCompare(a, undefined, {
-                    numeric: true,
-                  }),
-                )
-                .map((id) => (
-                  <option key={id} value={id}>
-                    {t(id)}
-                    {t(id === site.currentGameVersion ? ' — актуальная' : ' — архив')}
-                  </option>
-                ))}
+              {versions.map((id) => (
+                <option key={id} value={id}>
+                  {t(id)}
+                  {t(id === currentVersion ? ' — актуальная' : ' — архив')}
+                </option>
+              ))}
             </select>
           </label>
           <label className={`search-field ${s.search}`}>
@@ -177,8 +191,8 @@ export default function Catalog() {
           {t('Найдено сборок: ')}
           <b>{result.length}</b>
         </span>
-        <span className={`badge ${version === site.currentGameVersion ? 'badge-green' : ''}`}>
-          {t(version === site.currentGameVersion ? `Версия ${version}` : `Архив / ${version}`)}
+        <span className={`badge ${version === currentVersion ? 'badge-green' : ''}`}>
+          {t(version === currentVersion ? `Версия ${version}` : `Архив / ${version}`)}
         </span>
       </div>
       {result.length ? (

@@ -92,10 +92,10 @@ export default function Home() {
             <div className={s.featuredBottom}>
               <div>
                 <span className={s.smallLabel}>
-                  {t('Сборка карт · ETS2 ')}
+                  {t('Сборка карт')} · {featured.tags.includes('ats') ? 'ATS' : 'ETS2'}{' '}
                   {featured.version_game}
                 </span>
-                <h2>Quper Map Combo</h2>
+                <h2>{t(featured.title)}</h2>
               </div>
               <span className={s.featuredArrow}>
                 <Icon name="arrow" />

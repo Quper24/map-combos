@@ -14,22 +14,15 @@ import {
 } from '../../lib/comboBuilder';
 import { processProfile } from '../../lib/processProfile';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
-import { Builder } from './ComboBuilder';
+import { Builder, PresetContent } from './ComboBuilder';
+import { builderDraftKey, readBuilderDraft } from '../../lib/builderDraft';
+import { presetTags } from '../../lib/presetCombos';
+import { tagUtils } from '../../utils/tags';
 import EditorImageField from './EditorImageField';
 import { download } from './downloads';
 import s from './ComboBuilder.module.css';
 
-const storageKey = 'quperSimulator_comboDraft';
 const blank = { game: 'ats', version: '1.62', entries: [], order: [], conflicts: [], presets: [] };
-
-function loadDraft() {
-  try {
-    const raw = localStorage.getItem(storageKey);
-    return raw ? validateCatalog(JSON.parse(raw), true) : blank;
-  } catch {
-    return blank;
-  }
-}
 
 function getForm(event) {
   event.preventDefault();
@@ -87,7 +80,7 @@ function Choices({ label, name, items, selected = [], onChecked, disabled = fals
 
 export default function ComboEditor() {
   const { t } = useTranslation();
-  const [catalog, setCatalog] = useState(loadDraft);
+  const [catalog, setCatalog] = useState(() => readBuilderDraft() || blank);
   const [notice, setNotice] = useState('');
   const [pending, setPending] = useState(null);
   const [revision, setRevision] = useState(0);
@@ -108,7 +101,7 @@ export default function ComboEditor() {
     }
     setCatalog(next);
     try {
-      localStorage.setItem(storageKey, JSON.stringify(next));
+      localStorage.setItem(builderDraftKey, JSON.stringify(next));
       setNotice('Черновик сохранён в этом браузере.');
     } catch {
       setNotice('Хранилище браузера недоступно. Скачай черновик JSON.');
@@ -400,7 +393,7 @@ function FileFields({ file, prefix = '' }) {
 
 function OrderEditor({ catalog, commit }) {
   const { t } = useTranslation();
-  const [fileKey, setFileKey] = useState('');
+  const [fileKey, setFileKey] = useState(null);
   const [anchor, setAnchor] = useState('');
   const [query, setQuery] = useState('');
   const dragging = useRef(null);
@@ -417,9 +410,42 @@ function OrderEditor({ catalog, commit }) {
       <h2>{t('Общий порядок файлов')}</h2>
       <p>
         {t(
-          'Верх списка соответствует наивысшему приоритету. Перетащи строку или укажи соседний файл.',
+          'Это шаблон расположения всех файлов. Сборка берёт из него нужные строки в том же порядке. Верх списка соответствует наивысшему приоритету.',
         )}
       </p>
+      <details>
+        <summary>{t('Что означают поля файла')}</summary>
+        <dl>
+          <dt>{t('Ключ файла в профиле')}</dt>
+          <dd>
+            {t(
+              'Идентификатор перед знаком | в profile.sii. При импорте заполняется автоматически.',
+            )}
+          </dd>
+          <dt>{t('Имя в менеджере модов')}</dt>
+          <dd>{t('Название после знака | в profile.sii. Оно видно в списке и на PNG.')}</dd>
+          <dt>{t('Имя файла с расширением')}</dt>
+          <dd>{t('Необязательное имя для подсказки игроку, например map.scs.')}</dd>
+          <dt>{t('Ссылка на файл')}</dt>
+          <dd>
+            {t(
+              'Необязательная отдельная ссылка. По умолчанию файл использует общую ссылку карты или мода.',
+            )}
+          </dd>
+          <dt>{t('Загрузить картинку файла')}</dt>
+          <dd>
+            {t(
+              'Выбери картинку для этой строки порядка. Редактор сохранит её и заполнит путь сам.',
+            )}
+          </dd>
+          <dt>{t('Путь к картинке (/img/…)')}</dt>
+          <dd>
+            {t(
+              'Внутренний адрес картинки на сайте. Его можно указать вручную для уже добавленного изображения.',
+            )}
+          </dd>
+        </dl>
+      </details>
       <div className={s.toolbar}>
         <Field
           label="Поиск файлов"
@@ -507,48 +533,50 @@ function OrderEditor({ catalog, commit }) {
           </button>
         </div>
       )}
-      <form
-        className={s.form}
-        key={file?.key || 'new'}
-        onSubmit={(event) => {
-          const form = getForm(event);
-          const key = file?.key || valueOf(form, 'key');
-          const next = readFileFields(form, key);
-          if (
-            commit({
-              ...catalog,
-              order: file ? replace(order, 'key', next) : [...order, next],
-            })
-          )
-            setFileKey(key);
-        }}
-      >
-        <Field
-          label="Ключ файла в профиле"
-          name="key"
-          defaultValue={file?.key}
-          readOnly={Boolean(file)}
-          required
-        />
-        <FileFields file={file} />
-        <div className={s.actions}>
-          <button className="button">{t('Сохранить файл')}</button>
-          {file && !owners.has(file.key) && (
-            <button
-              type="button"
-              className="button button-secondary"
-              onClick={() => {
-                if (commit({ ...catalog, order: order.filter(({ key }) => key !== fileKey) })) {
-                  setFileKey('');
-                  setAnchor('');
-                }
-              }}
-            >
-              {t('Удалить файл')}
-            </button>
-          )}
-        </div>
-      </form>
+      {fileKey !== null && (
+        <form
+          className={s.form}
+          key={file?.key || 'new'}
+          onSubmit={(event) => {
+            const form = getForm(event);
+            const key = file?.key || valueOf(form, 'key');
+            const next = readFileFields(form, key);
+            if (
+              commit({
+                ...catalog,
+                order: file ? replace(order, 'key', next) : [...order, next],
+              })
+            )
+              setFileKey(key);
+          }}
+        >
+          <Field
+            label="Ключ файла в профиле"
+            name="key"
+            defaultValue={file?.key}
+            readOnly={Boolean(file)}
+            required
+          />
+          <FileFields file={file} />
+          <div className={s.actions}>
+            <button className="button">{t('Сохранить файл')}</button>
+            {file && !owners.has(file.key) && (
+              <button
+                type="button"
+                className="button button-secondary"
+                onClick={() => {
+                  if (commit({ ...catalog, order: order.filter(({ key }) => key !== fileKey) })) {
+                    setFileKey(null);
+                    setAnchor('');
+                  }
+                }}
+              >
+                {t('Удалить файл')}
+              </button>
+            )}
+          </div>
+        </form>
+      )}
     </section>
   );
 }
@@ -968,7 +996,15 @@ function PresetEditor({ catalog, commit }) {
   const preset = catalog.presets.find((item) => item.id === id);
   return (
     <section className={s.panel}>
-      <h2>{t('Готовые пресеты')}</h2>
+      <h2>{t('Готовые сборки')}</h2>
+      <p>
+        {t(
+          'Сохранённая сборка появится в локальном каталоге как черновик. Для публичного сайта выгрузи каталог.',
+        )}
+      </p>
+      <Link className="text-link" to={`/combos?version=${catalog.version}`}>
+        {t('Открыть готовые сборки')}
+      </Link>
       <EntityPicker items={catalog.presets} id={id} setId={setId} />
       <form
         className={s.form}
@@ -979,6 +1015,10 @@ function PresetEditor({ catalog, commit }) {
             id: preset?.id || valueOf(form, 'id'),
             title: valueOf(form, 'title'),
             boosty: valueOf(form, 'boosty'),
+            profile: valueOf(form, 'profile'),
+            image: valueOf(form, 'image'),
+            tags: form.getAll('tags'),
+            updatedAt: catalogDate(),
             selection: form.getAll('selection'),
           };
           const presets = preset
@@ -995,12 +1035,37 @@ function PresetEditor({ catalog, commit }) {
           required
         />
         <Field label="Название" name="title" defaultValue={preset?.title} required />
+        <Field label="Игра" value={catalog.game.toUpperCase()} readOnly />
+        <Field label="Версия игры" value={catalog.version} readOnly />
         <Field
           label="Ссылка на пост Boosty"
           name="boosty"
           type="url"
           defaultValue={preset?.boosty}
         />
+        <Field
+          label="Ссылка на готовый профиль"
+          name="profile"
+          type="url"
+          defaultValue={preset?.profile}
+        />
+        <EditorImageField initialPath={preset?.image} label="Загрузить обложку для карточки" />
+        <fieldset className={s.choices}>
+          <legend>{t('Теги сборки')}</legend>
+          <div className={s.choiceList}>
+            {presetTags.map((tag) => (
+              <label key={tag}>
+                <input
+                  type="checkbox"
+                  name="tags"
+                  value={tag}
+                  defaultChecked={preset?.tags?.includes(tag)}
+                />{' '}
+                {t(tagUtils.getLabel(tag))}
+              </label>
+            ))}
+          </div>
+        </fieldset>
         <Choices
           label="Выбранные карты и моды"
           name="selection"
@@ -1008,7 +1073,7 @@ function PresetEditor({ catalog, commit }) {
           items={catalog.entries.filter(isSelectable)}
         />
         <div className={s.actions}>
-          <button className="button">{t('Сохранить пресет')}</button>
+          <button className="button">{t('Сохранить сборку')}</button>
           {preset && (
             <button
               type="button"
@@ -1020,11 +1085,17 @@ function PresetEditor({ catalog, commit }) {
                   setId('');
               }}
             >
-              {t('Удалить пресет')}
+              {t('Удалить сборку')}
             </button>
           )}
         </div>
       </form>
+      {preset && (
+        <details>
+          <summary>{t('Предпросмотр страницы сборки')}</summary>
+          <PresetContent key={preset.id} catalog={catalog} preset={preset} />
+        </details>
+      )}
     </section>
   );
 }

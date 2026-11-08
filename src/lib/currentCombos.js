@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react';
-import site from '../../content/site.json';
+import { currentComboVersion, presetCombosByVersion } from '../data/builderCatalogs';
 const files = import.meta.glob('../../content/combos/*.json', { import: 'default' });
+const publishedPresets = presetCombosByVersion[currentComboVersion];
+const loadArchive = files[`../../content/combos/v${currentComboVersion}.json`];
 export default function useCurrentCombos() {
-  const [records, setRecords] = useState([]);
+  const [records, setRecords] = useState(publishedPresets || []);
   const [error, setError] = useState(null);
   useEffect(() => {
+    if (publishedPresets || !loadArchive) return;
     let active = true;
-    const load = files[`../../content/combos/v${site.currentGameVersion}.json`];
-    if (!load) {
-      setError(new Error('Current combo data not found'));
-      return;
-    }
-    load()
+    loadArchive()
       .then((value) => {
         if (active) setRecords(value);
       })
@@ -23,5 +21,6 @@ export default function useCurrentCombos() {
     };
   }, []);
   if (error) throw error;
+  if (!publishedPresets && !loadArchive) throw new Error('Current combo data not found');
   return records;
 }

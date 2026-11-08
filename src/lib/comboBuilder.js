@@ -1,3 +1,5 @@
+import { presetTags } from './presetCombos.js';
+
 export const entryTypeLabels = {
   map: 'Карта',
   mod: 'Мод',
@@ -406,6 +408,16 @@ export function validateCatalog(catalog, draft = false) {
       (draft && preset.boosty === undefined) ||
         (isDownloadLink(preset.boosty) && new URL(preset.boosty).hostname === 'boosty.to'),
       `Invalid Boosty link: ${preset.id}`,
+    );
+    check(
+      (draft && preset.profile === undefined) || isDownloadLink(preset.profile),
+      `Укажи HTTPS-ссылку на готовый профиль. Сборка — ${preset.id}`,
+    );
+    check(
+      uniqueList(preset.tags === undefined ? [] : preset.tags, (tag) => presetTags.includes(tag)) &&
+        validImage(preset.image) &&
+        (preset.updatedAt === undefined || validDate(preset.updatedAt)),
+      `Invalid preset metadata: ${preset.id}`,
     );
     check(
       draft || !resolveCombo(catalog, preset.selection).conflicts.length,

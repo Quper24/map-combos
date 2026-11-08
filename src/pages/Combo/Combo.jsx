@@ -1,15 +1,18 @@
 import { useTranslation } from '../../i18n/Language';
 import { Link, useParams } from 'react-router-dom';
 import { getAllCombos } from '../../data';
-import site from '../../../content/site.json';
+import { currentComboVersion, editorDraftCombos } from '../../data/builderCatalogs';
 import ComboContent from '../../components/ComboContent/ComboContent';
 import { ImageBlock } from '../../components/ImageBlock/ImageBlock';
 import { tagUtils } from '../../utils/tags';
+import { PresetContent } from '../ComboBuilder/ComboBuilder';
 import s from './Combo.module.css';
 export default function Combo() {
   const { t } = useTranslation();
   const { slug } = useParams();
-  const combo = getAllCombos().find((item) => item.id === slug);
+  const combo =
+    editorDraftCombos().find((item) => item.id === slug) ||
+    getAllCombos().find((item) => item.id === slug);
   if (!combo)
     return (
       <div className="container page empty-state">
@@ -20,6 +23,7 @@ export default function Combo() {
         </Link>
       </div>
     );
+  const archived = !combo.draft && combo.version_game !== currentComboVersion;
   return (
     <div className="container page">
       <nav className="breadcrumb" aria-label={t('Хлебные крошки')}>
@@ -42,9 +46,8 @@ export default function Combo() {
               {t(tagUtils.getLabel(tag))}
             </span>
           ))}
-          {combo.version_game !== site.currentGameVersion && (
-            <span className="badge">{t('Архивная версия')}</span>
-          )}
+          {combo.draft && <span className="badge">{t('Черновик')}</span>}
+          {archived && <span className="badge">{t('Архивная версия')}</span>}
         </div>
         <h1>{t(combo.title)}</h1>
         <div className={s.meta}>
@@ -52,10 +55,12 @@ export default function Combo() {
             {t('Версия игры ')}
             <b>{combo.version_game}</b>
           </span>
-          <span>
-            {t('Версия сборки ')}
-            <b>{combo.version}</b>
-          </span>
+          {combo.version && (
+            <span>
+              {t('Версия сборки ')}
+              <b>{combo.version}</b>
+            </span>
+          )}
           {combo.date && (
             <span>
               {t('Обновлено ')}
@@ -64,36 +69,40 @@ export default function Combo() {
           )}
         </div>
       </header>
-      {combo.version_game !== site.currentGameVersion && (
+      {archived && (
         <aside className={s.archive}>
           {t('Это сборка для версии игры ')}
           {combo.version_game}. <Link to="/combos">{t('Перейти к актуальным сборкам →')}</Link>
         </aside>
       )}
-      <div className={s.layout}>
-        <div>
-          <ComboContent combo={combo} />
+      {combo.builder ? (
+        <PresetContent {...combo.builder} />
+      ) : (
+        <div className={s.layout}>
+          <div>
+            <ComboContent combo={combo} />
+          </div>
+          <section
+            className={s.order}
+            id="map-order"
+            tabIndex={0}
+            aria-labelledby="map-order-heading"
+          >
+            <span className="eyebrow">{t('Менеджер модификаций')}</span>
+            <h2 id="map-order-heading">{t('Порядок карт и модов')}</h2>
+            <p>
+              {t(
+                'Расставь модификации в том же порядке, сверху вниз. Изображение можно открыть в полном размере.',
+              )}
+            </p>
+            <ImageBlock
+              top={combo.image_top}
+              center={combo.image_center}
+              bottom={combo.image_bottom}
+            />
+          </section>
         </div>
-        <section
-          className={s.order}
-          id="map-order"
-          tabIndex={0}
-          aria-labelledby="map-order-heading"
-        >
-          <span className="eyebrow">{t('Менеджер модификаций')}</span>
-          <h2 id="map-order-heading">{t('Порядок карт и модов')}</h2>
-          <p>
-            {t(
-              'Расставь модификации в том же порядке, сверху вниз. Изображение можно открыть в полном размере.',
-            )}
-          </p>
-          <ImageBlock
-            top={combo.image_top}
-            center={combo.image_center}
-            bottom={combo.image_bottom}
-          />
-        </section>
-      </div>
+      )}
     </div>
   );
 }
