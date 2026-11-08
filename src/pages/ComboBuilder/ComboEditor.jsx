@@ -19,7 +19,7 @@ import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
 import { Builder } from './ComboBuilder';
 import PresetContent from './PresetContent';
 import { builderDraftKey, readBuilderDraft } from '../../lib/builderDraft';
-import { presetTags } from '../../lib/presetCombos';
+import { attachPresetFiles, catalogKey, presetFileName, presetTags } from '../../lib/presetCombos';
 import { tagUtils } from '../../utils/tags';
 import EditorImageField from './EditorImageField';
 import { download } from './downloads';
@@ -37,6 +37,10 @@ const replace = (list, key, item) =>
   list.some((existing) => existing[key] === item[key])
     ? list.map((existing) => (existing[key] === item[key] ? item : existing))
     : [...list, item];
+
+function downloadJson(data, name) {
+  download(new Blob([JSON.stringify(data, null, 2) + '\n'], { type: 'application/json' }), name);
+}
 
 function Field({ label, ...props }) {
   const { t } = useTranslation();
@@ -122,17 +126,35 @@ export default function ComboEditor() {
     setPending(files);
   }
   async function readInput(event, handler) {
-    const file = event.currentTarget.files[0];
+    const files = Array.from(event.currentTarget.files);
     event.currentTarget.value = '';
-    if (!file) return;
+    if (!files.length) return;
     setBusy(true);
     try {
-      if (file.size > 5 * 1024 * 1024) throw new Error('File exceeds 5 MB');
-      await handler(file);
+      if (files.some((file) => file.size > 5 * 1024 * 1024)) throw new Error('File exceeds 5 MB');
+      await handler(files);
     } catch (error) {
       setNotice(error.message);
     } finally {
       setBusy(false);
+    }
+  }
+  async function openCatalog(files) {
+    const records = await Promise.all(files.map(async (file) => JSON.parse(await file.text())));
+    const shared = records.filter((record) => !Object.hasOwn(record ?? {}, 'preset'));
+    if (shared.length > 1) throw new Error('Выбери один общий каталог и файлы его сборок.');
+    const base = validateCatalog(shared.length ? shared[0] : catalog, true);
+    const presetFiles = records.filter((record) => Object.hasOwn(record ?? {}, 'preset'));
+    const importedIds = new Set(presetFiles.map((file) => file.preset?.id));
+    const [next] = attachPresetFiles(
+      [{ ...base, presets: base.presets.filter(({ id }) => !importedIds.has(id)) }],
+      presetFiles,
+    );
+    if (commit(next)) {
+      setPending(null);
+      setEntryRequest({ id: '', files: [], key: 0 });
+      setShowPreview(false);
+      setRevision((number) => number + 1);
     }
   }
   function applyImport(preferImported) {
@@ -141,11 +163,19 @@ export default function ComboEditor() {
   }
   function exportCatalog(publish) {
     try {
-      validateCatalog(catalog, !publish);
-      const name = `${catalog.game}-${catalog.version}${publish ? '' : '-draft'}.json`;
-      download(
-        new Blob([JSON.stringify(catalog, null, 2) + '\n'], { type: 'application/json' }),
-        name,
+      const data = publish ? { ...catalog, presets: [] } : catalog;
+      validateCatalog(data, !publish);
+      downloadJson(data, `${catalogKey(catalog)}${publish ? '' : '-draft'}.json`);
+    } catch (error) {
+      setNotice(error.message);
+    }
+  }
+  function exportPreset(preset) {
+    try {
+      validateCatalog({ ...catalog, presets: [preset] });
+      downloadJson(
+        { game: catalog.game, version: catalog.version, preset },
+        presetFileName(catalog, preset),
       );
     } catch (error) {
       setNotice(error.message);
@@ -202,25 +232,22 @@ export default function ComboEditor() {
               label="Открыть сохранённый JSON"
               type="file"
               accept=".json"
+              multiple
               disabled={busy}
-              onChange={(event) =>
-                readInput(event, async (file) => {
-                  if (commit(JSON.parse(await file.text()))) {
-                    setPending(null);
-                    setEntryRequest({ id: '', files: [], key: 0 });
-                    setShowPreview(false);
-                    setRevision((number) => number + 1);
-                  }
-                })
-              }
+              onChange={(event) => readInput(event, openCatalog)}
             />
             <button className="button button-secondary" onClick={() => exportCatalog(false)}>
               {t('Скачать черновик JSON')}
             </button>
             <button className="button" onClick={() => exportCatalog(true)}>
-              {t('Выгрузить каталог для публикации')}
+              {t('Выгрузить общий каталог')}
             </button>
           </div>
+          <p>
+            {t(
+              'Для публикации выгрузи общий каталог и JSON каждой готовой сборки. Их можно открыть вместе.',
+            )}
+          </p>
         </section>
         <section className={s.panel}>
           <h2>{t('Импорт порядка')}</h2>
@@ -235,7 +262,7 @@ export default function ComboEditor() {
               type="file"
               accept=".txt,.sii"
               disabled={busy}
-              onChange={(event) => readInput(event, loadOrder)}
+              onChange={(event) => readInput(event, ([file]) => loadOrder(file))}
             />
           </div>
           {pending && (
@@ -299,7 +326,7 @@ export default function ComboEditor() {
         />
         <OrderEditor catalog={catalog} commit={commit} />
         <RulesEditor catalog={catalog} commit={commit} />
-        <PresetEditor catalog={catalog} commit={commit} />
+        <PresetEditor catalog={catalog} commit={commit} onExport={exportPreset} />
         <section className={s.panel}>
           <h2>{t('Предпросмотр конструктора')}</h2>
           <button className="button button-secondary" onClick={() => setShowPreview(!showPreview)}>
@@ -995,7 +1022,7 @@ function RulesEditor({ catalog, commit }) {
   );
 }
 
-function PresetEditor({ catalog, commit }) {
+function PresetEditor({ catalog, commit, onExport }) {
   const { t } = useTranslation();
   const [id, setId] = useState('');
   const preset = catalog.presets.find((item) => item.id === id);
@@ -1019,6 +1046,7 @@ function PresetEditor({ catalog, commit }) {
           const next = {
             id: preset?.id || valueOf(form, 'id'),
             title: valueOf(form, 'title'),
+            fileSlug: valueOf(form, 'fileSlug'),
             boosty: valueOf(form, 'boosty'),
             profile: valueOf(form, 'profile'),
             video: valueOf(form, 'video'),
@@ -1041,6 +1069,13 @@ function PresetEditor({ catalog, commit }) {
           required
         />
         <Field label="Название" name="title" defaultValue={preset?.title} required />
+        <Field
+          label="Короткое имя файла сборки"
+          name="fileSlug"
+          defaultValue={preset?.fileSlug}
+          placeholder="quper-map"
+          pattern="[a-z0-9]+(?:\x2D[a-z0-9]+)*"
+        />
         <Field label="Игра" value={catalog.game.toUpperCase()} readOnly />
         <Field label="Версия игры" value={catalog.version} readOnly />
         <Field
@@ -1085,6 +1120,15 @@ function PresetEditor({ catalog, commit }) {
             <button
               type="button"
               className="button button-secondary"
+              onClick={() => onExport(preset)}
+            >
+              {t('Выгрузить сборку JSON')}
+            </button>
+          )}
+          {preset && (
+            <button
+              type="button"
+              className="button button-secondary"
               onClick={() => {
                 if (
                   commit({ ...catalog, presets: catalog.presets.filter((item) => item.id !== id) })
@@ -1097,6 +1141,11 @@ function PresetEditor({ catalog, commit }) {
           )}
         </div>
       </form>
+      {preset && (
+        <p>
+          {t('Файл сборки')} · <code>{presetFileName(catalog, preset)}</code>
+        </p>
+      )}
       {preset && (
         <details>
           <summary>{t('Предпросмотр страницы сборки')}</summary>

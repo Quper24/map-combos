@@ -17,7 +17,7 @@ import {
   validateCatalog,
 } from '../src/lib/comboBuilder.js';
 import { replaceActiveMods } from '../src/lib/profileMods.js';
-import { presetCombo } from '../src/lib/presetCombos.js';
+import { attachPresetFiles, presetCombo, presetFileName } from '../src/lib/presetCombos.js';
 import { fileImage } from '../src/pages/ComboBuilder/downloads.js';
 
 const filesFor = (id) =>
@@ -220,6 +220,46 @@ test('published presets produce unique catalog cards with game tags, cover and r
   assert.throws(
     () => validateCatalog({ ...ats, presets: [{ ...preset, tags: ['ats'] }] }),
     /metadata/,
+  );
+});
+
+test('named map and mod combo files use the same release catalog and preserve their card IDs', () => {
+  const { version, presets, ...shared } = catalog;
+  const game = 'ats';
+  const mod = makeEntry('graphics', 'mod');
+  const base = {
+    ...shared,
+    game,
+    version,
+    entries: [...shared.entries, mod],
+    order: [...shared.order, { key: mod.id, name: mod.title }],
+    presets: [],
+  };
+  const mapPreset = { ...presets[0], fileSlug: 'quper-map' };
+  const modPreset = { ...presets[0], id: 'mods', fileSlug: 'quper-mods', selection: [mod.id] };
+  const files = [mapPreset, modPreset].map((preset) => ({ game, version, preset }));
+  assert.equal(presetFileName(base, mapPreset), 'ats-quper-map-1.62.json');
+  assert.equal(presetFileName(base, modPreset), 'ats-quper-mods-1.62.json');
+  const [combined] = attachPresetFiles([base], files);
+  validateCatalog(combined);
+  assert.deepEqual(base.presets, []);
+  assert.equal(presetCombo(combined, mapPreset).id, presetCombo(base, presets[0]).id);
+  assert.deepEqual(
+    resolveCombo(combined, modPreset.selection).files.map(({ key }) => key),
+    [mod.id],
+  );
+  assert.throws(() => attachPresetFiles([base], [...files, files[0]]), /нескольких файлах/);
+  assert.throws(
+    () => attachPresetFiles([base], [{ ...files[0], version: '1.63' }]),
+    /каталог для сборки не найден/,
+  );
+  assert.throws(
+    () =>
+      validateCatalog({
+        ...combined,
+        presets: [mapPreset, { ...modPreset, fileSlug: mapPreset.fileSlug }],
+      }),
+    /Имя файла сборки уже используется/,
   );
 });
 

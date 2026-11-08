@@ -1,4 +1,4 @@
-import { presetTags } from './presetCombos.js';
+import { presetFileName, presetTags } from './presetCombos.js';
 
 export const entryTypeLabels = {
   map: 'Карта',
@@ -443,6 +443,7 @@ export function validateCatalog(catalog, draft = false) {
     ),
     'Invalid or duplicate preset ID',
   );
+  const presetFileNames = new Set();
   for (const preset of presets) {
     check(
       text(preset.title) &&
@@ -469,6 +470,14 @@ export function validateCatalog(catalog, draft = false) {
         (preset.updatedAt === undefined || validDate(preset.updatedAt)),
       `Invalid preset metadata: ${preset.id}`,
     );
+    check(
+      preset.fileSlug === undefined ||
+        (typeof preset.fileSlug === 'string' && idPattern.test(preset.fileSlug)),
+      `Проверь имя файла сборки — ${preset.id}`,
+    );
+    const fileName = presetFileName(catalog, preset);
+    check(!presetFileNames.has(fileName), `Имя файла сборки уже используется — ${fileName}`);
+    presetFileNames.add(fileName);
     check(
       draft || !resolveCombo(catalog, preset.selection).conflicts.length,
       `Conflicting preset: ${preset.id}`,

@@ -1,11 +1,19 @@
 import site from '../../content/site.json';
-import { presetCombo } from '../lib/presetCombos.js';
+import { attachPresetFiles, presetCombo } from '../lib/presetCombos.js';
 import { readBuilderDraft } from '../lib/builderDraft.js';
 
 const newestFirst = (left, right) => Number(right.split('.')[1]) - Number(left.split('.')[1]);
 
-export const builderCatalogs = Object.values(
-  import.meta.glob('../../content/combo-builder/*.json', { eager: true, import: 'default' }),
+export const builderCatalogs = attachPresetFiles(
+  Object.values(
+    import.meta.glob('../../content/combo-builder/*.json', { eager: true, import: 'default' }),
+  ),
+  Object.values(
+    import.meta.glob('../../content/combo-builder/presets/*.json', {
+      eager: true,
+      import: 'default',
+    }),
+  ),
 ).sort((a, b) => newestFirst(a.version, b.version) || b.game.localeCompare(a.game));
 
 export const presetCombosByVersion = {};

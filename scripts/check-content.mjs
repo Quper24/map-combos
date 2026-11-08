@@ -3,7 +3,12 @@ import { resolve, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { validateCatalog } from '../src/lib/comboBuilder.js';
-import { presetCombo } from '../src/lib/presetCombos.js';
+import {
+  attachPresetFiles,
+  catalogKey,
+  presetCombo,
+  presetFileName,
+} from '../src/lib/presetCombos.js';
 
 const read = async (file) => JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
@@ -47,23 +52,48 @@ for (const name of (await readdir('content/combos')).filter((name) => name.endsW
 }
 const builderVersions = new Set();
 const presetCombos = [];
+const sharedCatalogs = [];
+const presetFiles = [];
 for (const name of (await readdir('content/combo-builder')).filter((name) =>
   name.endsWith('.json'),
 )) {
   try {
-    const catalog = validateCatalog(await read(`content/combo-builder/${name}`));
-    check(
-      name === `${catalog.game}-${catalog.version}.json`,
-      `${name}: expected game-version.json`,
-    );
-    builderVersions.add(catalog.version);
-    for (const item of [...catalog.entries, ...catalog.order, ...catalog.presets]) {
-      await image(item.image, `${name}: ${item.id || item.key}`);
-    }
-    presetCombos.push(...catalog.presets.map((preset) => presetCombo(catalog, preset)));
+    const catalog = await read(`content/combo-builder/${name}`);
+    check(name === `${catalogKey(catalog)}.json`, `${name}: expected game-version.json`);
+    sharedCatalogs.push(catalog);
   } catch (error) {
     errors.push(`${name}: ${error.message}`);
   }
+}
+const presetFolder = 'content/combo-builder/presets';
+const presetNames = await readdir(presetFolder).catch((error) => {
+  if (error.code === 'ENOENT') return [];
+  throw error;
+});
+for (const name of presetNames.filter((file) => file.endsWith('.json'))) {
+  try {
+    const file = await read(`${presetFolder}/${name}`);
+    check(name === presetFileName(file, file.preset), `${name}: expected game-combo-version.json`);
+    presetFiles.push(file);
+  } catch (error) {
+    errors.push(`${name}: ${error.message}`);
+  }
+}
+try {
+  for (const catalog of attachPresetFiles(sharedCatalogs, presetFiles)) {
+    try {
+      validateCatalog(catalog);
+      builderVersions.add(catalog.version);
+      for (const item of [...catalog.entries, ...catalog.order, ...catalog.presets]) {
+        await image(item.image, `${catalogKey(catalog)}: ${item.id || item.key}`);
+      }
+      presetCombos.push(...catalog.presets.map((preset) => presetCombo(catalog, preset)));
+    } catch (error) {
+      errors.push(`${catalogKey(catalog)}: ${error.message}`);
+    }
+  }
+} catch (error) {
+  errors.push(error.message);
 }
 const allCombos = [...combos, ...presetCombos];
 const mods = [];
