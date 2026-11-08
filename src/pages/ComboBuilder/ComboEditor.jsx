@@ -644,6 +644,11 @@ function EntryActivationFields({ entry, dependencies }) {
       {autoEnabled && (
         <p className={s.entryFiles}>{t('Этот режим заменяет список обязательных зависимостей.')}</p>
       )}
+      {type === 'resource' && (
+        <p className={s.entryFiles}>
+          {t('Добавь этот пакет в зависимости каждой карты, которой он нужен.')}
+        </p>
+      )}
       <Choices
         label="Обязательные зависимости (все перечисленные)"
         name="requires"
@@ -736,16 +741,17 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
               .filter(Boolean),
           };
           const entries = entry ? replace(catalog.entries, 'id', next) : [...catalog.entries, next];
-          const presets = next.autoWithMaps
-            ? catalog.presets.map((preset) =>
-                preset.selection.includes(next.id)
-                  ? {
-                      ...preset,
-                      selection: preset.selection.filter((selected) => selected !== next.id),
-                    }
-                  : preset,
-              )
-            : catalog.presets;
+          const presets =
+            next.autoWithMaps || next.type === 'resource'
+              ? catalog.presets.map((preset) =>
+                  preset.selection.includes(next.id)
+                    ? {
+                        ...preset,
+                        selection: preset.selection.filter((selected) => selected !== next.id),
+                      }
+                    : preset,
+                )
+              : catalog.presets;
           if (commit({ ...catalog, entries, presets, order: fileChanges.order })) {
             setId(next.id);
             setSeedFiles([]);

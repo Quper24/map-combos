@@ -3,6 +3,7 @@ export const entryTypeLabels = {
   mod: 'Мод',
   fix: 'Фикс',
   connector: 'Коннектор',
+  resource: 'Пакет ресурсов',
 };
 
 export const canAutoWithMaps = (type) => type === 'mod' || type === 'fix';
@@ -37,7 +38,7 @@ export function resolveCombo(catalog, selection) {
     previousSize = active.size;
     for (const entry of entries.values()) {
       if (
-        !isSelectable(entry) &&
+        (entry.type === 'fix' || entry.type === 'connector') &&
         entry.requires?.length &&
         entry.requires.every((id) => active.has(id))
       ) {
@@ -338,8 +339,12 @@ export function validateCatalog(catalog, draft = false) {
     files.forEach((key) => owners.add(key));
     check(
       uniqueList(requires, (dep) => dep !== id && known(dep, byId)) &&
-        (autoWithMaps ? !requires.length : draft || isSelectable(entry) || requires.length),
+        (!autoWithMaps || !requires.length),
       `Invalid dependencies: ${id}`,
+    );
+    check(
+      draft || (type !== 'fix' && type !== 'connector') || autoWithMaps || requires.length,
+      `Для фикса или коннектора укажи, какие записи должны быть выбраны. Запись — ${id}`,
     );
     check(uniqueList(dlcs, text), `Invalid DLC list: ${id}`);
     if (family !== undefined || variant !== undefined) {

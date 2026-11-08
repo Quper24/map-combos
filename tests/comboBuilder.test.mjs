@@ -238,6 +238,47 @@ test('common mods and fixes are hidden from selection and activate with any map 
   );
 });
 
+test('a shared resource pack is added once when any map that requires it is selected', () => {
+  const base = makeEntry('base-assets', 'mod');
+  const resource = makeEntry('reforma-megaresources', 'resource', { requires: [base.id] });
+  const maps = [
+    makeEntry('reforma', 'map', { requires: [resource.id] }),
+    makeEntry('dependent-map', 'map', { requires: [resource.id] }),
+    makeEntry('unrelated-map'),
+  ];
+  const entries = [base, resource, ...maps];
+  const catalog = {
+    game: 'ats',
+    version: '1.62',
+    entries,
+    order: entries.map(({ id }) => ({ key: id, name: id })),
+    conflicts: [],
+    presets: [],
+  };
+  validateCatalog(catalog);
+  const keys = (selection) => resolveCombo(catalog, selection).files.map(({ key }) => key);
+  assert.equal(isSelectable(resource), false);
+  assert.deepEqual(keys([base.id]), [base.id]);
+  assert.deepEqual(keys(['unrelated-map']), ['unrelated-map']);
+  assert.deepEqual(keys(['reforma']), [base.id, resource.id, 'reforma']);
+  assert.deepEqual(keys(['dependent-map']), [base.id, resource.id, 'dependent-map']);
+  assert.deepEqual(keys(['dependent-map', 'reforma']), [
+    base.id,
+    resource.id,
+    'reforma',
+    'dependent-map',
+  ]);
+
+  const emptyFix = {
+    ...catalog,
+    entries: entries.map((entry) =>
+      entry.id === resource.id ? { ...entry, type: 'fix', requires: [] } : entry,
+    ),
+  };
+  assert.doesNotThrow(() => validateCatalog(emptyFix, true));
+  assert.throws(() => validateCatalog(emptyFix), /Для фикса или коннектора.*reforma-megaresources/);
+});
+
 test('conflicts block adding in both directions without clearing the selected map', () => {
   validateCatalog(catalog);
   for (const [a, b] of [
