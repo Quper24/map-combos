@@ -5,6 +5,7 @@ import {
   canAutoWithMaps,
   catalogDate,
   entryTypeLabels,
+  isFixOrConnector,
   isSelectable,
   mergeModOrders,
   moveMod,
@@ -690,6 +691,15 @@ function EntryActivationFields({ entry, dependencies }) {
         items={dependencies}
         disabled={autoEnabled}
       />
+      {isFixOrConnector(type) && (
+        <Choices
+          label="Альтернативные зависимости (достаточно одной)"
+          name="requiresAny"
+          selected={entry?.requiresAny}
+          items={dependencies}
+          disabled={autoEnabled}
+        />
+      )}
     </>
   );
 }
@@ -749,6 +759,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           const addedAt = valueOf(form, 'addedAt') || (!entry ? catalogDate() : undefined);
           const modVersion = valueOf(form, 'modVersion');
           const type = form.get('type');
+          const alternatives = form.getAll('requiresAny');
           const markUpdate =
             entry &&
             (replacements.size ||
@@ -770,6 +781,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             variant: type === 'map' ? valueOf(form, 'variant') : undefined,
             files: fileChanges.files,
             requires: form.getAll('requires'),
+            requiresAny: alternatives.length ? alternatives : undefined,
             dlcs: (valueOf(form, 'dlcs') || '')
               .split(',')
               .map((dlc) => dlc.trim())

@@ -9,6 +9,7 @@ export const entryTypeLabels = {
 };
 
 export const canAutoWithMaps = (type) => type === 'mod' || type === 'fix';
+export const isFixOrConnector = (type) => type === 'fix' || type === 'connector';
 export const isSelectable = (entry) =>
   !entry.autoWithMaps && (entry.type === 'map' || entry.type === 'mod');
 
@@ -48,13 +49,13 @@ export function resolveCombo(catalog, selection) {
   do {
     previousSize = active.size;
     for (const entry of entries.values()) {
-      if (
-        (entry.type === 'fix' || entry.type === 'connector') &&
-        entry.requires?.length &&
-        entry.requires.every((id) => active.has(id))
-      ) {
-        include(entry.id, entry.requires);
-      }
+      if (!isFixOrConnector(entry.type)) continue;
+      const required = entry.requires || [];
+      const alternatives = entry.requiresAny || [];
+      if (!required.length && !alternatives.length) continue;
+      if (!required.every((id) => active.has(id))) continue;
+      const matched = alternatives.filter((id) => active.has(id));
+      if (!alternatives.length || matched.length) include(entry.id, [...required, ...matched]);
     }
   } while (active.size !== previousSize);
 
@@ -318,6 +319,7 @@ export function validateCatalog(catalog, draft = false) {
       type,
       files,
       requires = [],
+      requiresAny = [],
       dlcs = [],
       family,
       variant,
@@ -362,7 +364,12 @@ export function validateCatalog(catalog, draft = false) {
       `Invalid dependencies: ${id}`,
     );
     check(
-      draft || (type !== 'fix' && type !== 'connector') || autoWithMaps || requires.length,
+      uniqueList(requiresAny, (dep) => dep !== id && known(dep, byId) && !requires.includes(dep)) &&
+        (!requiresAny.length || (isFixOrConnector(type) && !autoWithMaps)),
+      `Проверь список альтернативных зависимостей. Запись — ${id}`,
+    );
+    check(
+      draft || !isFixOrConnector(type) || autoWithMaps || requires.length || requiresAny.length,
       `Для фикса или коннектора укажи, какие записи должны быть выбраны. Запись — ${id}`,
     );
     check(uniqueList(dlcs, text), `Invalid DLC list: ${id}`);
@@ -389,7 +396,8 @@ export function validateCatalog(catalog, draft = false) {
     }
     if (visited.has(id)) return;
     visiting.add(id);
-    for (const dependency of byId.get(id).requires || []) visit(dependency);
+    const { requires = [], requiresAny = [] } = byId.get(id);
+    for (const dependency of [...requires, ...requiresAny]) visit(dependency);
     visiting.delete(id);
     visited.add(id);
   }

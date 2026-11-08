@@ -406,6 +406,50 @@ test('reclassifying a selected map as a fix updates presets and keeps conditiona
   assert.equal(resolveCombo(after, ['eurafrica']).active.has(fix.id), false);
 });
 
+test('an OtherMaps patch needs Reforma and at least one compatible map', () => {
+  const reforma = makeEntry('reforma');
+  const coast = makeEntry('coast-to-coast');
+  const promods = makeEntry('promods-canada');
+  const patch = makeEntry('reforma-othermaps-patch', 'fix', {
+    requires: [reforma.id],
+    requiresAny: [coast.id, promods.id],
+  });
+  const entries = [reforma, coast, promods, patch];
+  const next = {
+    game: 'ats',
+    version: '1.62',
+    entries,
+    order: entries.map(({ id }) => ({ key: id, name: id })),
+    conflicts: [],
+    presets: [],
+  };
+  validateCatalog(next);
+  const active = (selection) => resolveCombo(next, selection).active.has(patch.id);
+  assert.equal(active([reforma.id]), false);
+  assert.equal(active([coast.id, promods.id]), false);
+  assert.equal(active([reforma.id, coast.id]), true);
+  assert.equal(active([reforma.id, promods.id]), true);
+  const withBoth = resolveCombo(next, [reforma.id, coast.id, promods.id]);
+  assert.equal(withBoth.files.filter(({ key }) => key === patch.id).length, 1);
+  assert.deepEqual(withBoth.reasons.get(patch.id), [reforma.id, coast.id, promods.id]);
+  assert.throws(
+    () =>
+      validateCatalog({
+        ...next,
+        entries: [...entries.slice(0, 3), { ...patch, requiresAny: [reforma.id] }],
+      }),
+    /альтернативных зависимостей/,
+  );
+  assert.throws(
+    () =>
+      validateCatalog({
+        ...next,
+        entries: [{ ...reforma, requires: [patch.id] }, ...entries.slice(1)],
+      }),
+    /Циклическая зависимость/,
+  );
+});
+
 test('generated profile blocks safely escape names and replace all original active mods', () => {
   const files = [{ key: 'example', name: 'SibirMap "SV" \\ Česko' }];
   const block = serializeModOrder(files);
