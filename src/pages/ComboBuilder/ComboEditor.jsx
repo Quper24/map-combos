@@ -51,7 +51,7 @@ function Field({ label, ...props }) {
   );
 }
 
-function Choices({ label, name, items, selected = [] }) {
+function Choices({ label, name, items, selected = [], onChecked }) {
   const { t } = useTranslation();
   const [query, setQuery] = useState('');
   return (
@@ -69,7 +69,13 @@ function Choices({ label, name, items, selected = [] }) {
             key={id}
             hidden={!`${title} ${id}`.toLowerCase().includes(query.trim().toLowerCase())}
           >
-            <input type="checkbox" name={name} value={id} defaultChecked={selected.includes(id)} />{' '}
+            <input
+              type="checkbox"
+              name={name}
+              value={id}
+              defaultChecked={selected.includes(id)}
+              onChange={onChecked ? (event) => onChecked(id, event.target.checked) : undefined}
+            />{' '}
             {t(title)}
           </label>
         ))}
@@ -357,6 +363,40 @@ function ImportedFiles({ files, entries, onEdit }) {
   );
 }
 
+function readFileFields(form, key, prefix = '') {
+  return {
+    key,
+    name: form.get(`${prefix}name`),
+    filename: valueOf(form, `${prefix}filename`),
+    link: valueOf(form, `${prefix}link`),
+    image: valueOf(form, `${prefix}image`),
+  };
+}
+
+function FileFields({ file, prefix = '' }) {
+  return (
+    <>
+      <Field
+        label="Имя в менеджере модов"
+        name={`${prefix}name`}
+        defaultValue={file?.name}
+        required
+      />
+      <Field
+        label="Имя файла с расширением"
+        name={`${prefix}filename`}
+        defaultValue={file?.filename}
+      />
+      <Field label="Ссылка на файл" type="url" name={`${prefix}link`} defaultValue={file?.link} />
+      <EditorImageField
+        name={`${prefix}image`}
+        initialPath={file?.image}
+        label="Загрузить картинку файла"
+      />
+    </>
+  );
+}
+
 function OrderEditor({ catalog, commit }) {
   const { t } = useTranslation();
   const [fileKey, setFileKey] = useState('');
@@ -472,22 +512,14 @@ function OrderEditor({ catalog, commit }) {
         onSubmit={(event) => {
           const form = getForm(event);
           const key = file?.key || valueOf(form, 'key');
+          const next = readFileFields(form, key);
           if (
             commit({
               ...catalog,
-              order: file ? replace(order, 'key', readFile()) : [...order, readFile()],
+              order: file ? replace(order, 'key', next) : [...order, next],
             })
           )
             setFileKey(key);
-          function readFile() {
-            return {
-              key,
-              name: form.get('name'),
-              filename: valueOf(form, 'filename'),
-              link: valueOf(form, 'link'),
-              image: valueOf(form, 'image'),
-            };
-          }
         }}
       >
         <Field
@@ -497,10 +529,7 @@ function OrderEditor({ catalog, commit }) {
           readOnly={Boolean(file)}
           required
         />
-        <Field label="Имя в менеджере модов" name="name" defaultValue={file?.name} required />
-        <Field label="Имя файла с расширением" name="filename" defaultValue={file?.filename} />
-        <Field label="Ссылка на файл" type="url" name="link" defaultValue={file?.link} />
-        <EditorImageField initialPath={file?.image} />
+        <FileFields file={file} />
         <div className={s.actions}>
           <button className="button">{t('Сохранить файл')}</button>
           {file && !owners.has(file.key) && (
@@ -520,6 +549,65 @@ function OrderEditor({ catalog, commit }) {
         </div>
       </form>
     </section>
+  );
+}
+
+const filePrefix = (key) => `part:${key}:`;
+
+function EntryFiles({ order, selected }) {
+  const { t } = useTranslation();
+  const [checked, setChecked] = useState(() => new Set(selected));
+  const [visited, setVisited] = useState(() => new Set(selected));
+
+  function toggle(key, included) {
+    setChecked((current) => {
+      const next = new Set(current);
+      if (included) next.add(key);
+      else next.delete(key);
+      return next;
+    });
+    if (included) setVisited((current) => new Set([...current, key]));
+  }
+
+  return (
+    <>
+      <Choices
+        label="Файлы позиции"
+        name="files"
+        selected={selected}
+        items={order.map(({ key, name }) => ({ id: key, title: name }))}
+        onChecked={toggle}
+      />
+      {visited.size > 0 && (
+        <div className={s.entryFiles}>
+          {checked.size > 0 && (
+            <>
+              <h3>{t('Картинки и настройки отдельных файлов')}</h3>
+              <p>
+                {t(
+                  'Картинка каждого файла попадёт в свою строку PNG. Чтобы использовать одну общую ссылку, оставь ссылки на файлы пустыми.',
+                )}
+              </p>
+            </>
+          )}
+          <div className={s.fileParts}>
+            {order
+              .filter(({ key }) => visited.has(key))
+              .map((file) => (
+                <fieldset
+                  className={s.filePart}
+                  key={file.key}
+                  hidden={!checked.has(file.key)}
+                  disabled={!checked.has(file.key)}
+                >
+                  <legend>{file.name}</legend>
+                  <FileFields file={file} prefix={filePrefix(file.key)} />
+                </fieldset>
+              ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -561,9 +649,16 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             const newKey = valueOf(form, `replace:${key}`);
             if (newKey) replacements.set(key, newKey);
           }
+          const files = form.getAll('files');
+          const fileKeys = new Set(files);
+          const order = catalog.order.map((file) =>
+            fileKeys.has(file.key)
+              ? { ...file, ...readFileFields(form, file.key, filePrefix(file.key)) }
+              : file,
+          );
           let fileChanges;
           try {
-            fileChanges = replaceEntryFiles(catalog.order, form.getAll('files'), replacements);
+            fileChanges = replaceEntryFiles(order, files, replacements);
           } catch (error) {
             onError(error.message);
             return;
@@ -626,7 +721,12 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             ))}
           </select>
         </label>
-        <Field label="Ссылка на скачивание" name="link" type="url" defaultValue={entry?.link} />
+        <Field
+          label="Общая ссылка на скачивание"
+          name="link"
+          type="url"
+          defaultValue={entry?.link}
+        />
         <Field label="Версия мода" name="modVersion" defaultValue={entry?.version} />
         <Field
           label="Дата добавления"
@@ -644,7 +744,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           {t('Описание мода')}
           <textarea name="description" rows={3} defaultValue={entry?.description} />
         </label>
-        <EditorImageField initialPath={entry?.image} />
+        <EditorImageField initialPath={entry?.image} label="Загрузить обложку для карточки" />
         <Field label="Семейство карты" name="family" defaultValue={entry?.family} />
         <Field label="Вариант карты" name="variant" defaultValue={entry?.variant} />
         <Field
@@ -655,14 +755,9 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
         <label>
           <input type="checkbox" name="paid" defaultChecked={entry?.paid} /> {t('Платная')}
         </label>
-        <Choices
-          label="Файлы позиции"
-          name="files"
+        <EntryFiles
           selected={[...(entry?.files || []), ...seedFiles]}
-          items={[...catalog.order]
-            .reverse()
-            .filter(({ key }) => !owned.has(key))
-            .map(({ key, name }) => ({ id: key, title: name }))}
+          order={[...catalog.order].reverse().filter(({ key }) => !owned.has(key))}
         />
         {entry?.files.length > 0 && unassigned.length > 0 && (
           <details className={s.replacement}>

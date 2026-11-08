@@ -20,7 +20,11 @@ async function uploadImage(file) {
   return (await response.json()).path;
 }
 
-export default function EditorImageField({ initialPath = '' }) {
+export default function EditorImageField({
+  initialPath = '',
+  name = 'image',
+  label = 'Загрузить картинку',
+}) {
   const { t } = useTranslation();
   const [path, setPath] = useState(initialPath);
   const [status, setStatus] = useState('');
@@ -50,7 +54,7 @@ export default function EditorImageField({ initialPath = '' }) {
   return (
     <div className={s.imageField}>
       <label className={s.field}>
-        {t('Загрузить картинку')}
+        {t(label)}
         <input
           type="file"
           accept="image/jpeg,image/png,image/webp,image/avif"
@@ -61,7 +65,7 @@ export default function EditorImageField({ initialPath = '' }) {
       <label className={s.field}>
         {t('Путь к картинке (/img/…)')}
         <input
-          name="image"
+          name={name}
           ref={pathInput}
           value={path}
           onChange={(event) => setPath(event.target.value)}

@@ -14,6 +14,7 @@ import {
   validateCatalog,
 } from '../src/lib/comboBuilder.js';
 import { replaceActiveMods } from '../src/lib/profileMods.js';
+import { fileImage } from '../src/pages/ComboBuilder/downloads.js';
 
 const filesFor = (id) =>
   readFileSync(new URL(`../public/profiles/1.61/${id}-map-161.txt`, import.meta.url), 'utf8')
@@ -126,6 +127,32 @@ const makeEntry = (id, type = 'map', options = {}) => ({
   files: [id],
   link: 'https://example.org',
   ...options,
+});
+
+test('a multipart mod uses distinct load-order images and shares one entry and download link', () => {
+  const parts = ['Definition', 'Map', 'Assets', 'Models'];
+  const order = parts.map((part) => ({
+    key: part.toLowerCase(),
+    name: `ProMods Canada ${part} Package`,
+    image: `/img/canada-${part.toLowerCase()}.webp`,
+  }));
+  const canada = makeEntry('promods-canada', 'map', {
+    title: 'ProMods Canada',
+    image: '/img/canada-cover.webp',
+    files: order.map(({ key }) => key),
+  });
+  const { files } = resolveCombo({ order, entries: [canada], conflicts: [] }, [canada.id]);
+  assert.deepEqual(
+    files.map(fileImage),
+    order.map(({ image }) => image),
+  );
+  assert.deepEqual(
+    files.map(({ name }) => name),
+    order.map(({ name }) => name),
+  );
+  assert.ok(files.every((file) => !file.link && file.entry.link === canada.link));
+  assert.equal(fileImage({ ...files[0], image: undefined }), undefined);
+  assert.equal(fileImage({ entry: { ...canada, files: ['definition'] } }), canada.image);
 });
 const entries = [
   makeEntry('eurafrica', 'map', { files: ['eurafrica-base', 'eurafrica-models'] }),

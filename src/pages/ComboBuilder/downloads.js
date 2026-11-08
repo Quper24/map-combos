@@ -10,7 +10,8 @@ export function download(blob, name) {
 }
 
 export const previewSize = 60;
-export const fileImage = (file) => file.image || file.entry.image;
+export const fileImage = ({ image, entry }) =>
+  image || (entry.files.length === 1 ? entry.image : undefined);
 
 export async function orderImage(files, offset, title) {
   const canvas = document.createElement('canvas');
