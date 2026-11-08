@@ -30,7 +30,6 @@
   "Фильтр списка": "Filter list",
   "Черновик сохранён в этом браузере.": "Draft saved in this browser.",
   "Хранилище браузера недоступно. Скачай черновик JSON.": "Browser storage is unavailable. Download the JSON draft.",
-  "Не удалось загрузить эталон 1.61.": "Could not load the 1.61 reference.",
   "Изменения сохраняются в этом браузере. Для публикации выгрузи проверенный JSON и добавь его в каталог сайта.": "Changes are saved in this browser. To publish, export the validated JSON and add it to the site catalog.",
   "Каталог": "Catalog",
   "Сохранить": "Save",

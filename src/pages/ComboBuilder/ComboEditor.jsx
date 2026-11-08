@@ -14,8 +14,7 @@ import { download } from './downloads';
 import s from './ComboBuilder.module.css';
 
 const storageKey = 'quperSimulator_comboDraft';
-const blank = { game: 'ets2', version: '1.62', entries: [], order: [], conflicts: [], presets: [] };
-const localReference = '/profiles/1.61/';
+const blank = { game: 'ats', version: '1.62', entries: [], order: [], conflicts: [], presets: [] };
 
 function loadDraft() {
   try {
@@ -98,10 +97,10 @@ export default function ComboEditor() {
     }
     return true;
   }
-  function loadOrder(source, reference = false) {
+  function loadOrder(source) {
     const files = parseModOrder(source);
     if (!files.length) throw new Error('The template contains no files');
-    setPending({ files, reference });
+    setPending(files);
   }
   async function readInput(event, handler) {
     const file = event.currentTarget.files[0];
@@ -117,25 +116,9 @@ export default function ComboEditor() {
       setBusy(false);
     }
   }
-  async function readReference(id) {
-    setBusy(true);
-    try {
-      const response = await fetch(`${localReference}${id}.txt`);
-      if (!response.ok) throw new Error('Не удалось загрузить эталон 1.61.');
-      loadOrder(await response.text(), true);
-    } catch (error) {
-      setNotice(error.message);
-    } finally {
-      setBusy(false);
-    }
-  }
   function applyImport(preferImported) {
-    const order = mergeModOrders(catalog.order, pending.files, preferImported).order;
-    const next =
-      pending.reference && !catalog.order.length
-        ? { ...catalog, game: 'ets2', version: '1.61', order }
-        : { ...catalog, order };
-    if (commit(next)) setPending(null);
+    const { order } = mergeModOrders(catalog.order, pending, preferImported);
+    if (commit({ ...catalog, order })) setPending(null);
   }
   function exportCatalog(publish) {
     try {
@@ -149,10 +132,10 @@ export default function ComboEditor() {
       setNotice(error.message);
     }
   }
-  const imported = pending && mergeModOrders(catalog.order, pending.files);
+  const imported = pending && mergeModOrders(catalog.order, pending);
   const displayOrder = imported ? [...imported.order].reverse() : [];
   const incomingOrder = imported?.orderConflict
-    ? mergeModOrders(catalog.order, pending.files, true).order.slice().reverse()
+    ? mergeModOrders(catalog.order, pending, true).order.slice().reverse()
     : [];
   return (
     <div className="container page">
@@ -234,24 +217,6 @@ export default function ComboEditor() {
               disabled={busy}
               onChange={(event) => readInput(event, loadOrder)}
             />
-            {(!catalog.order.length || catalog.version === '1.61') && (
-              <>
-                <button
-                  className="button button-secondary"
-                  disabled={busy}
-                  onClick={() => readReference('mega-boosty-map-161')}
-                >
-                  Mega Boosty 1.61
-                </button>
-                <button
-                  className="button button-secondary"
-                  disabled={busy}
-                  onClick={() => readReference('mega-map-161')}
-                >
-                  Mega 1.61
-                </button>
-              </>
-            )}
           </div>
           {pending && (
             <div className={s.importPreview}>

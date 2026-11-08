@@ -135,6 +135,7 @@ test('generated profile blocks safely escape names and replace all original acti
 
 test('publication rejects archive versions, unsafe links, unassigned files and invalid dependencies', () => {
   assert.throws(() => validateCatalog({ ...catalog, version: '1.61' }), /start at 1.62/);
+  assert.throws(() => validateCatalog({ ...catalog, version: '1.61' }, true), /start at 1.62/);
   assert.throws(
     () =>
       validateCatalog({ ...catalog, order: [...catalog.order, { key: 'extra', name: 'Extra' }] }),

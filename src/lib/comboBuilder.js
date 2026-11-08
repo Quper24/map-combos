@@ -207,7 +207,7 @@ export function validateCatalog(catalog, draft = false) {
     ['ets2', 'ats'].includes(game) && typeof version === 'string' && /^1\.\d+$/.test(version),
     'Invalid game or version',
   );
-  check(draft || Number(version.split('.')[1]) >= 62, 'Public catalogs start at 1.62');
+  check(Number(version.split('.')[1]) >= 62, 'Catalogs start at 1.62');
   check([entries, order, conflicts, presets].every(Array.isArray), 'Missing catalog lists');
   check(
     uniqueList(
