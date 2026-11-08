@@ -31,15 +31,21 @@ const filesFor = (id) =>
     .replaceAll('\r\n', '\n')
     .trimEnd();
 
-test('Mega Boosty and Mega project back to their exact original active_mods after merging', () => {
+test('merging Mega Boosty and Mega preserves both orders and the saved file names', () => {
   const sources = ['mega-boosty', 'mega'].map(filesFor);
   const lists = sources.map(parseModOrder);
+  const savedByKey = new Map(lists[0].map((file) => [file.key, file]));
   const { order, orderConflict } = mergeModOrders(...lists);
   assert.equal(orderConflict, false);
-  assert.equal(order.length, 260);
+  const keys = new Set(lists.flat().map(({ key }) => key));
+  assert.equal(order.length, keys.size);
   for (const [i, files] of lists.entries()) {
+    assert.equal(serializeModOrder(files), sources[i]);
     const wanted = new Set(files.map(({ key }) => key));
-    assert.equal(serializeModOrder(order.filter(({ key }) => wanted.has(key))), sources[i]);
+    assert.deepEqual(
+      order.filter(({ key }) => wanted.has(key)),
+      files.map((file) => savedByKey.get(file.key) ?? file),
+    );
   }
 });
 
