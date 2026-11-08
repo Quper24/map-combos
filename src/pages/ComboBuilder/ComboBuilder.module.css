@@ -124,10 +124,18 @@
   padding-left: 36px;
 }
 
-.order li,
 .editOrder li {
   padding: 10px;
   border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.order li {
+  margin-bottom: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-raised);
   overflow-wrap: anywhere;
 }
 
@@ -136,8 +144,7 @@
   color: var(--green);
 }
 
-.order li div,
-.order li :is(code, small) {
+.orderTitle :is(code, small) {
   display: block;
 }
 
@@ -153,15 +160,44 @@
   border-radius: 4px;
 }
 
-.order .thumb {
-  float: left;
-  margin: 4px 12px 4px 0;
+.orderRow,
+.orderActions,
+.inactiveRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
 }
 
-.order li::after {
-  display: block;
-  clear: both;
-  content: '';
+.orderTitle,
+.inactiveRow > strong {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.orderActions :global(.button),
+.inactiveRow :global(.button) {
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: var(--type-small);
+}
+
+.presetOrder .order {
+  max-height: none;
+  overflow: visible;
+  padding-left: 22px;
+}
+
+.inactiveMods {
+  list-style: none;
+  padding: 0;
+  max-height: 55vh;
+  overflow: auto;
+}
+
+.inactiveMods > li {
+  padding-block: 10px;
+  border-bottom: 1px solid var(--line);
 }
 
 .downloads h3 {

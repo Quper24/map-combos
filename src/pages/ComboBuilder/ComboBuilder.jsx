@@ -232,89 +232,80 @@ export function Builder({ catalog }) {
   );
 }
 
-export function PresetContent({ catalog, preset }) {
-  const { t } = useTranslation();
-  const result = resolveCombo(catalog, preset.selection);
-  const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
-  const server = preset.tags?.includes('server');
-  return (
-    <section aria-label={t('Порядок загрузки')}>
-      <div className={s.toolbar}>
-        {preset.profile && (
-          <ExternalLink href={preset.profile}>{t('Готовый профиль')}</ExternalLink>
-        )}
-        {preset.boosty && (
-          <ExternalLink className="button button-boosty" href={preset.boosty}>
-            {t('Сборка на Boosty')}
-          </ExternalLink>
-        )}
-      </div>
-      <h2>{t('Порядок загрузки')}</h2>
-      <p>
-        {t('Файлов — ')}
-        {result.files.length}
-      </p>
-      {result.dlcs.length > 0 && (
-        <p>
-          {t('Требуемые DLC')} · {result.dlcs.join(', ')}
-        </p>
-      )}
-      {result.conflicts.length > 0 && (
-        <p role="alert" className={s.reason}>
-          {t('В составе сборки есть конфликтующие позиции.')}
-        </p>
-      )}
-      <OrderList result={result} byId={byId} showLinks={!server} />
-      {!server && result.files.length > 0 && !result.conflicts.length && (
-        <OrderDownloads catalog={catalog} files={result.files} title={preset.title} />
-      )}
-    </section>
-  );
-}
-
-function EntryBadge({ entry }) {
+export function EntryBadge({ entry }) {
   const badge = entryBadge(entry);
   return badge ? (
     <span className={badge === 'NEW' ? s.newBadge : s.updateBadge}>{badge}</span>
   ) : null;
 }
 
-function OrderList({ result: { files, manual, reasons }, byId, showLinks = true }) {
+export function OrderList({
+  result: { files, manual, reasons },
+  byId,
+  showLinks = true,
+  compact = false,
+  removals,
+  onRemove,
+}) {
   const { t } = useTranslation();
+  const topFile = new Map(files.map((file) => [file.entry.id, file.key]));
   return (
     <ol className={s.order}>
       {[...files].reverse().map((file) => {
         const because = !manual.has(file.entry.id) && reasons.get(file.entry.id);
+        const image = fileImage(file);
+        const link = file.link || file.entry.link;
+        const removal =
+          topFile.get(file.entry.id) === file.key ? removals?.get(file.entry.id) : undefined;
+        const removeLabel = t(file.entry.type === 'map' ? 'Отключить карту' : 'Отключить мод');
+        const requiredBy = removal?.requiredBy.map((id) => t(byId.get(id).title)).join(' + ');
         return (
           <li key={file.key}>
-            {fileImage(file) && (
-              <img className={s.thumb} src={fileImage(file)} alt="" loading="lazy" />
-            )}
-            <div>
-              <strong>{file.name}</strong>
-              <code>{file.filename || file.key}</code>
-              <small>
-                {t(entryTypeLabels[file.entry.type])} · {t(file.entry.title)}
+            <div className={s.orderRow}>
+              {image && <img className={s.thumb} src={image} alt="" loading="lazy" />}
+              <div className={s.orderTitle}>
+                <strong>{file.name}</strong>
                 <EntryBadge entry={file.entry} />
-              </small>
-              {!isSelectable(file.entry) && file.entry.description && (
-                <small>{t(file.entry.description)}</small>
-              )}
-              {because?.length > 0 && (
-                <small>
-                  {t('Нужно для ')}
-                  {because.map((id) => t(byId.get(id).title)).join(' + ')}
-                </small>
-              )}
-              {file.entry.autoWithMaps && !because?.length && (
-                <small>{t('Подключается при выборе любой карты')}</small>
+                {!compact && (
+                  <>
+                    <code>{file.filename || file.key}</code>
+                    <small>
+                      {t(entryTypeLabels[file.entry.type])} · {t(file.entry.title)}
+                    </small>
+                    {because?.length > 0 && (
+                      <small>
+                        {t('Нужно для ')}
+                        {because.map((id) => t(byId.get(id).title)).join(' + ')}
+                      </small>
+                    )}
+                    {file.entry.autoWithMaps && !because?.length && (
+                      <small>{t('Подключается при выборе любой карты')}</small>
+                    )}
+                  </>
+                )}
+              </div>
+              {(removal || (showLinks && link)) && (
+                <div className={s.orderActions}>
+                  {showLinks && link && (
+                    <ExternalLink className="button" href={link}>
+                      {t('Скачать')}
+                    </ExternalLink>
+                  )}
+                  {removal && (
+                    <button
+                      type="button"
+                      className="button button-secondary"
+                      disabled={Boolean(requiredBy)}
+                      title={requiredBy ? t('Нужно для ') + requiredBy : undefined}
+                      aria-label={`${removeLabel} — ${t(file.entry.title)}`}
+                      onClick={() => onRemove(removal.selection)}
+                    >
+                      {removeLabel}
+                    </button>
+                  )}
+                </div>
               )}
             </div>
-            {showLinks && (file.link || file.entry.link) && (
-              <ExternalLink className="text-link" href={file.link || file.entry.link}>
-                {t('Скачать')}
-              </ExternalLink>
-            )}
           </li>
         );
       })}
@@ -322,7 +313,7 @@ function OrderList({ result: { files, manual, reasons }, byId, showLinks = true 
   );
 }
 
-function OrderDownloads({ catalog, files, title }) {
+export function OrderDownloads({ catalog, files, title }) {
   const { t } = useTranslation();
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);

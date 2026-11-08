@@ -14,7 +14,8 @@ import {
 } from '../../lib/comboBuilder';
 import { processProfile } from '../../lib/processProfile';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
-import { Builder, PresetContent } from './ComboBuilder';
+import { Builder } from './ComboBuilder';
+import PresetContent from './PresetContent';
 import { builderDraftKey, readBuilderDraft } from '../../lib/builderDraft';
 import { presetTags } from '../../lib/presetCombos';
 import { tagUtils } from '../../utils/tags';
@@ -1016,6 +1017,7 @@ function PresetEditor({ catalog, commit }) {
             title: valueOf(form, 'title'),
             boosty: valueOf(form, 'boosty'),
             profile: valueOf(form, 'profile'),
+            video: valueOf(form, 'video'),
             image: valueOf(form, 'image'),
             tags: form.getAll('tags'),
             updatedAt: catalogDate(),
@@ -1049,6 +1051,7 @@ function PresetEditor({ catalog, commit }) {
           type="url"
           defaultValue={preset?.profile}
         />
+        <Field label="Ссылка на видеообзор" name="video" type="url" defaultValue={preset?.video} />
         <EditorImageField initialPath={preset?.image} label="Загрузить обложку для карточки" />
         <fieldset className={s.choices}>
           <legend>{t('Теги сборки')}</legend>

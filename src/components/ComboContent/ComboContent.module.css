@@ -64,19 +64,19 @@
   line-height: 1.8;
   margin: 0;
 }
-.content details {
+.disclosure {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface);
   margin-bottom: 10px;
   overflow: hidden;
 }
-.content summary {
+.disclosure > summary {
   cursor: pointer;
   padding: 15px 18px;
   font-size: var(--type-small);
 }
-.content details[open] summary {
+.disclosure[open] > summary {
   border-bottom: 1px solid var(--line);
   color: var(--green);
 }

@@ -9,6 +9,7 @@ import {
   mergeModOrders,
   moveMod,
   parseModOrder,
+  removeFromCombo,
   replaceEntryFiles,
   resolveCombo,
   serializeModOrder,
@@ -192,6 +193,7 @@ test('published presets produce unique catalog cards with game tags, cover and r
   const preset = {
     ...catalog.presets[0],
     tags: ['server', 'convoy', 'boosty'],
+    video: 'https://youtu.be/6UWd6wJa7s8',
     image: '/img/cover.webp',
     updatedAt: '2026-11-08',
   };
@@ -210,6 +212,10 @@ test('published presets produce unique catalog cards with game tags, cover and r
   const draft = { ...ats, presets: [{ ...preset, profile: undefined }] };
   assert.doesNotThrow(() => validateCatalog(draft, true));
   assert.throws(() => validateCatalog(draft), /HTTPS-ссылку на готовый профиль/);
+  assert.throws(
+    () => validateCatalog({ ...ats, presets: [{ ...preset, video: 'http://example.org/video' }] }),
+    /HTTPS-ссылку на видеообзор/,
+  );
   assert.throws(
     () => validateCatalog({ ...ats, presets: [{ ...preset, tags: ['ats'] }] }),
     /metadata/,
@@ -354,6 +360,23 @@ test('SibirMap variants switch atomically and recalculate only their matching co
   );
   assert.deepEqual(reasons.get('sv-connector'), ['sibir-sv', 'kazakhstan']);
   assert.deepEqual(catalog.presets[0].selection, ['eurafrica', 'sibir-fv', 'kazakhstan']);
+});
+
+test('disabling a map removes its connector and keeps maps required by other selected entries', () => {
+  const original = catalog.presets[0].selection;
+  const removed = removeFromCombo(catalog, original, 'kazakhstan');
+  assert.deepEqual(removed, { selection: ['eurafrica', 'sibir-fv'], requiredBy: [] });
+  assert.equal(resolveCombo(catalog, removed.selection).active.has('fv-connector'), false);
+  const added = addToCombo(catalog, removed.selection, 'kazakhstan');
+  assert.equal(resolveCombo(catalog, added.selection).active.has('fv-connector'), true);
+
+  const dependent = makeEntry('dependent', 'mod', { requires: ['kazakhstan'] });
+  const withDependent = { ...catalog, entries: [...catalog.entries, dependent] };
+  const selection = ['kazakhstan', dependent.id];
+  assert.deepEqual(removeFromCombo(withDependent, selection, 'kazakhstan'), {
+    selection,
+    requiredBy: [dependent.id],
+  });
 });
 
 test('generated profile blocks safely escape names and replace all original active mods', () => {

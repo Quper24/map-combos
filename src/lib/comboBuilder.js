@@ -95,6 +95,14 @@ export function addToCombo(catalog, selection, id) {
   return { selection: conflicts.length ? selection : next, conflicts };
 }
 
+export function removeFromCombo(catalog, selection, id) {
+  const next = selection.filter((selected) => selected !== id);
+  const result = resolveCombo(catalog, next);
+  return result.active.has(id)
+    ? { selection, requiredBy: result.reasons.get(id) }
+    : { selection: next, requiredBy: [] };
+}
+
 // Stored in active_mods index order. The manager shows the highest priority first.
 export function serializeModOrder(files) {
   const encoder = new TextEncoder();
@@ -412,6 +420,10 @@ export function validateCatalog(catalog, draft = false) {
     check(
       (draft && preset.profile === undefined) || isDownloadLink(preset.profile),
       `Укажи HTTPS-ссылку на готовый профиль. Сборка — ${preset.id}`,
+    );
+    check(
+      preset.video === undefined || isDownloadLink(preset.video),
+      `Укажи HTTPS-ссылку на видеообзор. Сборка — ${preset.id}`,
     );
     check(
       uniqueList(preset.tags === undefined ? [] : preset.tags, (tag) => presetTags.includes(tag)) &&

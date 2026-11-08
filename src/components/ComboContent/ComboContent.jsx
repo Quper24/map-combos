@@ -5,12 +5,12 @@ import Video from '../Video/Video';
 import ExternalLink from '../ui/ExternalLink';
 import { VERSIONS } from '../../data/versions';
 import { comboVideos, youtubeVideoId } from '../../lib/content';
+import { BeforeLaunchDetails, LauncherDetails } from './ComboGuides';
 import s from './ComboContent.module.css';
 export default function ComboContent({ combo }) {
   const { t } = useTranslation();
   const related = comboVideos(combo);
   const versionBoostyUrl = VERSIONS[combo.version_game]?.boostyUrl;
-  const game = combo.tags.includes('ats') ? 'American Truck Simulator' : 'Euro Truck Simulator 2';
   const sections = [
     ['links', 'Ссылки'],
     ['install', 'Установка'],
@@ -111,63 +111,11 @@ export default function ComboContent({ combo }) {
       )}
       <section id="install">
         <h2>{t('Перед запуском')}</h2>
-        <details>
-          <summary>{t('Видеоинструкция по установке')}</summary>
-          <Video videoId="6UWd6wJa7s8" title={t('Подробная инструкция по установке сборки карт')} />
-        </details>
-        <details>
-          <summary>{t('Настройка config.cfg')}</summary>
-          <div className={s.detailBody}>
-            <p>{t('Для корректной работы модов открой файл:')}</p>
-            <code>
-              {t('Документы/')}
-              {t(game)}/config.cfg
-            </code>
-            <p>
-              {t('Найди параметр ')}
-              <code>uset r_buffer_page_size</code>
-              {t(' и установи значение')} <code>30</code>.
-            </p>
-          </div>
-        </details>
-        <details>
-          <summary>{t('Параметры запуска Steam')}</summary>
-          <div className={s.detailBody}>
-            <p>{t('Добавь параметры запуска:')}</p>
-            <pre>-nointro -unlimitedlog</pre>
-            <img
-              src="/img/combos/steam-params.jpg"
-              alt={t('Пример параметров запуска Steam')}
-              loading="lazy"
-            />
-          </div>
-        </details>
-        <details>
-          <summary>{t('Обязательные DLC карт')}</summary>
-          <div className={s.detailBody}>
-            <p>{t('Для работы сборки должны быть установлены все DLC карт.')}</p>
-            <ExternalLink
-              className="text-link"
-              href={
-                combo.tags.includes('ats')
-                  ? 'https://store.steampowered.com/dlc/270880/American_Truck_Simulator/'
-                  : 'https://store.steampowered.com/dlc/227300/Euro_Truck_Simulator_2/list/43330'
-              }
-            >
-              {t('DLC в Steam')}
-            </ExternalLink>
-          </div>
-        </details>
+        <BeforeLaunchDetails game={combo.tags.includes('ats') ? 'ats' : 'ets2'} />
       </section>
       <section id="launcher">
         <h2>{t('DQ Лаунчер')}</h2>
-        <details>
-          <summary>{t('Как пользоваться лаунчером')}</summary>
-          <div className={s.detailBody}>
-            <p>{t('Для использования нужна рубиновая подписка на Boosty.')}</p>
-            <Video videoId="ey10boQxLRQ" title={t('Инструкция для лаунчера')} />
-          </div>
-        </details>
+        <LauncherDetails />
       </section>
     </div>
   );

@@ -5,7 +5,7 @@ import { currentComboVersion, editorDraftCombos } from '../../data/builderCatalo
 import ComboContent from '../../components/ComboContent/ComboContent';
 import { ImageBlock } from '../../components/ImageBlock/ImageBlock';
 import { tagUtils } from '../../utils/tags';
-import { PresetContent } from '../ComboBuilder/ComboBuilder';
+import PresetContent from '../ComboBuilder/PresetContent';
 import s from './Combo.module.css';
 export default function Combo() {
   const { t } = useTranslation();
