@@ -268,6 +268,17 @@ test('a shared resource pack is added once when any map that requires it is sele
     'reforma',
     'dependent-map',
   ]);
+  assert.throws(
+    () =>
+      validateCatalog(
+        {
+          ...catalog,
+          entries: [base, { ...resource, requires: ['reforma'] }, ...maps],
+        },
+        true,
+      ),
+    /Циклическая зависимость — reforma-megaresources → reforma → reforma-megaresources/,
+  );
 
   const emptyFix = {
     ...catalog,

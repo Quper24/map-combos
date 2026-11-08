@@ -3,6 +3,8 @@
   "Фикс": "Fix",
   "Коннектор": "Connector",
   "Пакет ресурсов": "Resource pack",
+  "Циклическая зависимость —": "Circular dependency —",
+  "Что требуется самому пакету": "What this pack requires",
   "Конструктор сборок": "Map combo builder",
   "Выбери карты или возьми готовый пресет. Фиксы, коннекторы и порядок файлов подберутся автоматически.": "Choose maps or start from a preset. Fixes, connectors, and load order are added automatically.",
   "Редактор каталога": "Catalog editor",

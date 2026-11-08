@@ -650,7 +650,11 @@ function EntryActivationFields({ entry, dependencies }) {
         </p>
       )}
       <Choices
-        label="Обязательные зависимости (все перечисленные)"
+        label={
+          type === 'resource'
+            ? 'Что требуется самому пакету'
+            : 'Обязательные зависимости (все перечисленные)'
+        }
         name="requires"
         selected={entry?.requires}
         items={dependencies}

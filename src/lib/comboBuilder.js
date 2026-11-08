@@ -363,7 +363,11 @@ export function validateCatalog(catalog, draft = false) {
   const visited = new Set();
   const visiting = new Set();
   function visit(id) {
-    check(!visiting.has(id), `Circular dependency: ${id}`);
+    if (visiting.has(id)) {
+      const path = [...visiting];
+      const cycle = [...path.slice(path.indexOf(id)), id].join(' → ');
+      throw new Error(`Циклическая зависимость — ${cycle}`);
+    }
     if (visited.has(id)) return;
     visiting.add(id);
     for (const dependency of byId.get(id).requires || []) visit(dependency);
