@@ -1,0 +1,393 @@
+.toolbar,
+.actions,
+.variant {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.toolbar {
+  align-items: end;
+  margin-block: 12px 24px;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--muted);
+  font-size: var(--type-small);
+}
+
+.field :is(input, select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(280px, 2fr) minmax(0, 3fr);
+  gap: 24px;
+  margin-block: 24px;
+}
+
+.editorGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.cards {
+  display: grid;
+  gap: 8px;
+  max-height: min(720px, 70vh);
+  padding: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.cards:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
+.card,
+.panel,
+.downloads,
+.importPreview {
+  padding: clamp(12px, 3vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.card {
+  padding: 9px 12px;
+}
+
+.card .variant {
+  gap: 6px 10px;
+}
+
+.card .thumb {
+  width: 64px;
+}
+
+.variant + .variant {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.paid {
+  border: 1px solid var(--boosty-line);
+  border-radius: 20px;
+  padding: 1px 9px;
+  color: var(--boosty);
+  font-size: var(--type-small);
+}
+
+.newBadge,
+.updateBadge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: 8px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: var(--type-label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.newBadge {
+  color: var(--green);
+  background: var(--green-dim);
+  border: 1px solid var(--green-line);
+}
+
+.updateBadge {
+  color: var(--boosty);
+  background: var(--boosty-dim);
+  border: 1px solid var(--boosty-line);
+}
+
+.modVersion {
+  color: var(--muted);
+}
+
+.entryDescription[open] {
+  flex-basis: 100%;
+}
+
+.entryDescription summary {
+  cursor: pointer;
+  color: var(--green);
+  font-size: var(--type-small);
+}
+
+.description {
+  margin: 4px 0 0;
+  white-space: pre-line;
+  font-size: var(--type-small);
+}
+
+.shareCombo {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  margin-block: 12px 18px;
+}
+
+.shareCombo .field {
+  width: 100%;
+}
+
+.shareCombo p {
+  margin: 0;
+  font-size: var(--type-small);
+}
+
+.reason {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--boosty-bright);
+  font-size: var(--type-small);
+}
+
+.order,
+.editOrder,
+.importList {
+  max-height: 580px;
+  overflow: auto;
+  padding-left: 36px;
+}
+
+.editOrder li {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.order li {
+  margin-bottom: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-raised);
+  overflow-wrap: anywhere;
+}
+
+.order li::marker,
+.importList li::marker {
+  color: var(--green);
+}
+
+.orderTitle :is(code, small) {
+  display: block;
+}
+
+.order li :is(code, small),
+.editOrder small {
+  color: var(--muted);
+}
+
+.thumb {
+  width: 92px;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.orderRow,
+.orderActions,
+.inactiveRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.orderTitle,
+.inactiveRow > strong {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.orderActions :global(.button),
+.inactiveRow :global(.button) {
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: var(--type-small);
+}
+
+.removeControl {
+  display: inline-grid;
+  align-self: start;
+  justify-items: start;
+}
+
+.removeWarning {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  margin-inline-start: 5px;
+  border: 1px solid var(--boosty-line);
+  border-radius: 50%;
+  color: var(--boosty-bright);
+  font-weight: 700;
+}
+
+.removeHint {
+  display: none;
+  inline-size: 0;
+  min-inline-size: 100%;
+  margin-top: 4px;
+  color: var(--boosty-bright);
+  font-size: var(--type-small);
+  overflow-wrap: anywhere;
+}
+
+.removeControl:hover .removeHint,
+.removeControl:focus-within .removeHint {
+  display: block;
+}
+
+@media (hover: none) {
+  .removeHint {
+    display: block;
+  }
+}
+
+.presetOrder .order {
+  max-height: none;
+  overflow: visible;
+  padding-left: 22px;
+}
+
+.inactiveMods {
+  list-style: none;
+  padding: 0;
+  max-height: 55vh;
+  overflow: auto;
+}
+
+.inactiveMods > li {
+  padding-block: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.downloads h3 {
+  margin-top: 24px;
+}
+
+.editorGrid {
+  margin-bottom: 32px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: end;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.form > :is(.actions, .choices, .replacement, .entryFiles) {
+  grid-column: 1 / -1;
+}
+
+.fileParts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.filePart:not([hidden]) {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.filePart legend {
+  font-weight: 650;
+}
+
+.imageField,
+.replacement[open] {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.replacement summary {
+  cursor: pointer;
+  color: var(--green);
+}
+
+.choices {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.choiceList {
+  max-height: 220px;
+  overflow: auto;
+}
+
+.choiceList label:not([hidden]) {
+  display: block;
+}
+
+.editOrder {
+  list-style: none;
+  padding: 0;
+}
+
+.editOrder li:not([hidden]) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: grab;
+}
+
+.importList {
+  max-height: 260px;
+}
+
+.notice {
+  position: sticky;
+  z-index: 1;
+  bottom: 16px;
+  padding: 10px 16px;
+  border: 1px solid var(--green-line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--green);
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .columns,
+  .form,
+  .fileParts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "game": "ats",
+  "version": "1.62",
+  "preset": {
+    "id": "ats-quper-map-combo-1-62",
+    "title": "ATS Quper Map Combo",
+    "fileSlug": "quper-map",
+    "boosty": "https://boosty.to/qupersimulator/posts/3816eaba-fa6e-40fb-ab42-328854834fa1",
+    "profile": "https://sharemods.com/vpmsh8iyncl3/1.62_ATS_QUPER_MAP_COMBO_1.0.zip.html",
+    "image": "/img/combo-builder/8defeee299dd965a80548aa9ea9514eeeb4b70b5e27aa2c12ca32671621cd7b5.webp",
+    "tags": [
+      "convoy"
+    ],
+    "updatedAt": "2026-11-09",
+    "selection": [
+      "coast-to-coast-v2-24-62-0",
+      "promods-ats",
+      "nascar-map-combo-pack",
+      "reforma",
+      "reforma-sierra-nevada-remake",
+      "qs-ats-reforma-punta-prieta-fix",
+      "discover-oregon-revived-v1-0-1",
+      "trinity-county-revived-v1-0-1",
+      "vermont-map-revived-v1-0-1",
+      "aleutian-islands-revived-v1-0-1",
+      "petersburg-alaska-revived-v1-0-1",
+      "washington-extended-revived-v1-0-1"
+    ]
+  }
+}

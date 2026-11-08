@@ -3,8 +3,9 @@ import { useState, useRef, useEffect } from 'react';
 import InstructionModal from './InstructionModal';
 import Icon from '../ui/Icon';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods.js';
+import { processProfile } from '../../lib/processProfile.js';
 import './AutoProfileInstall.css';
-export default function AutoProfileInstall({ combo }) {
+export default function AutoProfileInstall({ combo, modBlock }) {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -16,7 +17,6 @@ export default function AutoProfileInstall({ combo }) {
   const busy = status === 'processing';
   const cancel = () => {
     operation.current?.controller.abort();
-    operation.current?.worker?.terminate();
     operation.current = null;
   };
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function AutoProfileInstall({ combo }) {
     setStatus('idle');
     setErrorMsg('');
     return cancel;
-  }, [combo.id, combo.version_game]);
+  }, [combo.id, combo.version_game, modBlock]);
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     event.target.value = '';
@@ -46,58 +46,24 @@ export default function AutoProfileInstall({ combo }) {
     if (!selectedFile || operation.current) return;
     const task = {
       controller: new AbortController(),
-      worker: null,
     };
     operation.current = task;
     setStatus('processing');
     setErrorMsg('');
     try {
-      const response = await fetch(
-        `/profiles/${combo.version_game}/${combo.id}${combo.mods && includeMods ? 'm' : ''}.txt`,
-        {
-          signal: task.controller.signal,
-        },
-      );
-      if (!response.ok)
-        throw new Error('Не удалось загрузить список модов сборки. Попробуй ещё раз.');
-      const mods = await response.text();
+      let mods = modBlock;
+      if (mods === undefined) {
+        const response = await fetch(
+          `/profiles/${combo.version_game}/${combo.id}${combo.mods && includeMods ? 'm' : ''}.txt`,
+          { signal: task.controller.signal },
+        );
+        if (!response.ok)
+          throw new Error('Не удалось загрузить список модов сборки. Попробуй ещё раз.');
+        mods = await response.text();
+      }
       const buffer = await selectedFile.arrayBuffer();
       if (operation.current !== task) return;
-      const worker = new Worker(new URL('../../lib/profile.worker.js', import.meta.url), {
-        type: 'module',
-      });
-      task.worker = worker;
-      const text = await new Promise((resolve, reject) => {
-        const timeout = setTimeout(
-          () => reject(new Error('Время обработки истекло. Попробуй выбрать файл заново.')),
-          30000,
-        );
-        const finish = (callback, value) => {
-          clearTimeout(timeout);
-          callback(value);
-        };
-        worker.onmessage = ({ data }) =>
-          data.error ? finish(reject, new Error(data.error)) : finish(resolve, data.text);
-        worker.onerror = () =>
-          finish(
-            reject,
-            new Error('Не удалось запустить декодер в браузере. Обнови страницу и попробуй снова.'),
-          );
-        task.controller.signal.addEventListener(
-          'abort',
-          () => finish(reject, new DOMException('Aborted', 'AbortError')),
-          {
-            once: true,
-          },
-        );
-        worker.postMessage(
-          {
-            buffer,
-            mods,
-          },
-          [buffer],
-        );
-      });
+      const text = await processProfile(buffer, { mods, signal: task.controller.signal });
       if (operation.current !== task) return;
       const url = URL.createObjectURL(
         new Blob([text], {
@@ -118,7 +84,6 @@ export default function AutoProfileInstall({ combo }) {
         setStatus('error');
       }
     } finally {
-      task.worker?.terminate();
       if (operation.current === task) operation.current = null;
     }
   };

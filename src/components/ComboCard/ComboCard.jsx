@@ -34,6 +34,7 @@ export default function ComboCard({ heading = 'h3', combo }) {
       </button>
       <div className={s.body}>
         <div className={s.tags}>
+          {combo.draft && <span className="badge">{t('Черновик')}</span>}
           {combo.tags?.map((tag) => (
             <span
               key={tag}
@@ -49,7 +50,13 @@ export default function ComboCard({ heading = 'h3', combo }) {
         </Heading>
         <div className={s.meta}>
           <span>
-            {combo.version_game} <span className={s.dot}>/</span> {combo.version}
+            {combo.version_game}
+            {combo.version && (
+              <>
+                {' '}
+                <span className={s.dot}>/</span> {combo.version}
+              </>
+            )}
           </span>
           <span>{combo.date}</span>
         </div>
