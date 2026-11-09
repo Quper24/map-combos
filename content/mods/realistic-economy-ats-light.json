@@ -26,8 +26,13 @@
     },
     {
       "platform": "steam",
-      "label": "Steam Workshop",
+      "label": "Steam Workshop · версии игры 1.50–1.62",
       "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835995739"
+    },
+    {
+      "platform": "truckymods",
+      "label": "Архив: все 3 варианта · TruckyMods",
+      "url": "https://truckymods.io/american-truck-simulator/game-economy/realistic-economy-ats-by-quper"
     }
   ],
   "videoIds": [],
