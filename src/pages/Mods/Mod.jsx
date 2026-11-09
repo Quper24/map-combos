@@ -77,9 +77,18 @@ export default function Mod() {
       {mod.notice && <aside className={s.notice}>{t(mod.notice)}</aside>}
       <section className={`section prose ${s.description}`}>
         <h2>{t(mod.type === 'plugin' ? 'О плагине' : 'О модификации')}</h2>
-        {mod.description.map((text, index) => (
-          <p key={index}>{t(text)}</p>
-        ))}
+        {mod.description.map((entry, index) =>
+          typeof entry === 'string' ? (
+            <p key={index}>{t(entry)}</p>
+          ) : (
+            <section key={index}>
+              <h3>{t(entry.heading)}</h3>
+              {entry.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{t(paragraph)}</p>
+              ))}
+            </section>
+          ),
+        )}
         {mod.compatibility?.length > 0 && (
           <>
             <h2>{t('Совместимость')}</h2>
