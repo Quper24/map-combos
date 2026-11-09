@@ -22,19 +22,72 @@
   "links": [
     {
       "platform": "truckymods",
-      "label": "TruckyMods",
+      "label": "Архив: все 4 варианта · TruckyMods",
       "url": "https://truckymods.io/euro-truck-simulator-2/game-economy/realistic-economy-ferry-by-quper"
-    },
-    {
-      "platform": "steam",
-      "label": "Steam Workshop",
-      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318908089"
-    },
-    {
-      "platform": "sharemods",
-      "label": "Sharemods",
-      "url": "https://sharemods.com/6tjt9wpoa9pj/RealisticEconomyQuper.scs.html"
     }
   ],
-  "videoIds": []
+  "videoIds": [],
+  "gameVersions": ["1.62"],
+  "variants": [
+    {
+      "title": "Light",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/ocoq0ui89645/RealisticEconomyQuper-Light.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835998309"
+        }
+      ]
+    },
+    {
+      "title": "Standard",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/uu6sxfxhjcub/RealisticEconomyQuper.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318908089"
+        }
+      ]
+    },
+    {
+      "title": "Hard",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/111dmysgi3di/RealisticEconomyQuper-Hard.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835997581"
+        }
+      ]
+    },
+    {
+      "title": "Russia",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/es984ixwvg0t/RealisticEconomyRussianQuper.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3479246592"
+        }
+      ]
+    }
+  ]
 }

@@ -75,6 +75,27 @@ export default function Mod() {
         />
       </div>
       {mod.notice && <aside className={s.notice}>{t(mod.notice)}</aside>}
+      {mod.variants?.length > 0 && (
+        <section className="section">
+          <h2>{t('Варианты экономики')}</h2>
+          {mod.variants.map((variant) => (
+            <div key={variant.title}>
+              <h3>{variant.title}</h3>
+              <div className="actions">
+                {variant.links.map((link) => (
+                  <ExternalLink
+                    key={link.platform}
+                    href={link.url}
+                    className="button button-secondary"
+                  >
+                    {t(link.label)}
+                  </ExternalLink>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
       <section className={`section prose ${s.description}`}>
         <h2>{t(mod.type === 'plugin' ? 'О плагине' : 'О модификации')}</h2>
         {mod.description.map((text, index) => (

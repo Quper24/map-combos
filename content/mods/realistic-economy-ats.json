@@ -20,20 +20,58 @@
   "images": [],
   "links": [
     {
-      "platform": "steam",
-      "label": "Steam Workshop",
-      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3334090136"
-    },
-    {
-      "platform": "sharemods",
-      "label": "Sharemods",
-      "url": "https://sharemods.com/8qvunqr6c3mw/ATSRealisticEconomyXPandFerry.scs.html"
-    },
-    {
       "platform": "truckymods",
-      "label": "TruckyMods",
+      "label": "Архив: все 3 варианта · TruckyMods",
       "url": "https://truckymods.io/american-truck-simulator/game-economy/realistic-economy-ats-by-quper"
     }
   ],
-  "videoIds": []
+  "videoIds": [],
+  "gameVersions": ["1.62"],
+  "variants": [
+    {
+      "title": "Light",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/897s03k36o2k/ATSRealisticEconomy-Light.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835995739"
+        }
+      ]
+    },
+    {
+      "title": "Standard",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/g3nvkwg2y4io/ATSRealisticEconomy.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3334090136"
+        }
+      ]
+    },
+    {
+      "title": "Hard",
+      "links": [
+        {
+          "platform": "sharemods",
+          "label": "ShareMods",
+          "url": "https://sharemods.com/ombnwmzj2d49/ATSRealisticEconomy-Hard.scs.html"
+        },
+        {
+          "platform": "steam",
+          "label": "Steam Workshop",
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835996772"
+        }
+      ]
+    }
+  ]
 }

@@ -21,8 +21,8 @@
   "links": [
     {
       "platform": "sharemods",
-      "label": "Sharemods",
-      "url": "https://sharemods.com/dpd9iofp2941/RealisticEconomyRussianQuper.scs.html"
+      "label": "ShareMods",
+      "url": "https://sharemods.com/es984ixwvg0t/RealisticEconomyRussianQuper.scs.html"
     },
     {
       "platform": "steam",
@@ -30,5 +30,6 @@
       "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3479246592"
     }
   ],
-  "videoIds": []
+  "videoIds": [],
+  "gameVersions": ["1.62"]
 }
