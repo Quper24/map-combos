@@ -139,7 +139,9 @@
       "files": [
         "Reforma_3_0_4_162"
       ],
-      "requires": [],
+      "requires": [
+        "reforma-megaresources"
+      ],
       "dlcs": []
     },
     {
@@ -155,9 +157,7 @@
       "files": [
         "Reforma_MegaResources_v3_0_4_162"
       ],
-      "requires": [
-        "reforma"
-      ],
+      "requires": [],
       "dlcs": []
     },
     {
@@ -302,6 +302,92 @@
       ],
       "requires": [],
       "dlcs": []
+    },
+    {
+      "id": "mexssimap-0-82-162-public",
+      "title": "Mexssimap 0.82.162 Public",
+      "type": "map",
+      "link": "https://modsfire.com/VR5aFDfJQ5c6q85",
+      "image": "/img/combo-builder/2823fe164c9d987e06c135673381d1e7e6eb5e9b34e6d354641f4e12e65b3c59.webp",
+      "version": "0.82.162",
+      "addedAt": "2026-11-09",
+      "paid": false,
+      "files": [
+        "Mexssimap_0_82_162_Public"
+      ],
+      "requires": [
+        "reforma"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "project-better-arizona-0-5-4-1-62",
+      "title": "Project Better Arizona 0.5.4",
+      "type": "map",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=300618",
+      "image": "/img/combo-builder/faa01e18a470084fc789bf03c4f7f9000e53b9e22f0851bc51b9d68323336c68.webp",
+      "version": "0.5.4",
+      "addedAt": "2026-11-09",
+      "paid": false,
+      "files": [
+        "Project_Better_Arizona_0.5.4_1.62"
+      ],
+      "requires": [
+        "reforma-megaresources"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "project-better-arizona-reforma-connection-1-17-1-62",
+      "title": "Project Better Arizona Reforma Connection 1.17",
+      "type": "connector",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=300618",
+      "image": "/img/combo-builder/533157e29ba4e3d7b9a961b3e24f92422fd6db1a80361aa78bacb361bc19ad23.webp",
+      "version": "1.17",
+      "addedAt": "2026-11-09",
+      "paid": false,
+      "files": [
+        "Project_Better_Arizona_Reforma_Connection_1.17_1.62"
+      ],
+      "requires": [
+        "reforma",
+        "project-better-arizona-0-5-4-1-62"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-pba-reforma-service-fix",
+      "title": "QS ATS PBA Reforma Service Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/0dd76cgu2a0g/QS_ATS_Project_Better_Arizona_Fix.scs.html",
+      "image": "/img/combo-builder/7018b736bf73f9829756fa706f7a3d843b17f48913d4c54340ee152b1f83d772.webp",
+      "version": "0.2.0",
+      "addedAt": "2026-11-09",
+      "paid": false,
+      "files": [
+        "QS_ATS_PBA_Reforma_Service_Fix"
+      ],
+      "requires": [
+        "project-better-arizona-0-5-4-1-62"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-project-better-arizona-fix",
+      "title": "QS ATS Project Better Arizona Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/8j24vpbo0vz9/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
+      "image": "/img/combo-builder/5c93f85cb9c3c96ff61f5c05ca7bac9a33cacbc6354e86a37fdbd4f3be41afc9.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-09",
+      "paid": false,
+      "files": [
+        "QS_ATS_Project_Better_Arizona_Fix"
+      ],
+      "requires": [
+        "project-better-arizona-reforma-connection-1-17-1-62"
+      ],
+      "dlcs": []
     }
   ],
   "order": [
@@ -318,17 +404,33 @@
       "name": "Reforma 3.0.4.162"
     },
     {
-      "key": "QS_ATS_Reforma_Punta_Prieta_Fix",
-      "name": "QS ATS Reforma Punta Prieta Fix"
-    },
-    {
       "key": "Reforma_Sierra_Nevada_Remake_v1_21_162",
       "name": "Reforma Sierra Nevada 1.21.162"
+    },
+    {
+      "key": "Project_Better_Arizona_0.5.4_1.62",
+      "name": "Project Better Arizona 0.5.4"
+    },
+    {
+      "key": "QS_ATS_Project_Better_Arizona_Fix",
+      "name": "QS ATS Project Better Arizona Fix"
+    },
+    {
+      "key": "Project_Better_Arizona_Reforma_Connection_1.17_1.62",
+      "name": "Project Better Arizona Reforma Connection 1.17"
+    },
+    {
+      "key": "QS_ATS_PBA_Reforma_Service_Fix",
+      "name": "QS ATS PBA Reforma Service Fix"
     },
     {
       "key": "Coast_to_Coast_v2.24.62.0",
       "name": "Coast to Coast v2.24.62.0",
       "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp"
+    },
+    {
+      "key": "Mexssimap_0_82_162_Public",
+      "name": "Mexssimap 0.82.162 Public"
     },
     {
       "key": "Discover_Oregon_Revived_v1.0.1",
@@ -386,6 +488,10 @@
     {
       "key": "Reforma_OtherMaps_Patch_42_162",
       "name": "Reforma OtherMaps Compatibility Patch 42.162"
+    },
+    {
+      "key": "QS_ATS_Reforma_Punta_Prieta_Fix",
+      "name": "QS ATS Reforma Punta Prieta Fix"
     },
     {
       "key": "QS_ATS_Map_Final_Fix",
