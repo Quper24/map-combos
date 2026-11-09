@@ -49,7 +49,7 @@ export default function Mod() {
             )}
             {mod.gameVersions?.map((version) => (
               <span className="badge" key={version}>
-                {t('Игра ')}
+                {mod.version ? t('Игра ') : t('Версия ')}
                 {t(version)}
               </span>
             ))}
