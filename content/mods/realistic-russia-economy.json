@@ -1,8 +1,8 @@
 {
   "id": "realistic-russia-economy",
-  "order": 30,
+  "order": 23,
   "type": "mod",
-  "title": "Realistic Russia Economy by Quper",
+  "title": "Realistic Economy ETS2 Russia by Quper",
   "games": ["ets2"],
   "summary": "Экономика ETS2, адаптированная под российские условия: штрафы, гаражи и кредиты.",
   "description": [
@@ -15,8 +15,8 @@
     "Обновлённая стоимость гаражей и недвижимости.",
     "Изменённые кредитные ставки и выплаты."
   ],
-  "cover": "/img/mods/realistic-russia-economy.jpg",
-  "coverAlt": "Realistic Russia Economy by Quper — экономика России в ETS2",
+  "cover": "/img/mods/realistic-economy-ets2-russia.jpg",
+  "coverAlt": "Realistic Economy ETS2 Russia by Quper",
   "images": [],
   "links": [
     {

@@ -1,0 +1,35 @@
+{
+  "id": "realistic-economy-ats-light",
+  "order": 40,
+  "type": "mod",
+  "title": "Realistic Economy ATS Light by Quper",
+  "games": ["ats"],
+  "summary": "Light — Реалистичная экономика American Truck Simulator: оплата рейсов, кредиты, опыт и расходы компании.",
+  "description": [
+    "Модификация перерабатывает экономику American Truck Simulator: оплату перевозок, условия кредитов, начисление опыта и развитие навыков.",
+    "Также изменены цены гаражей и топлива, штрафы и рынок подержанных грузовиков — стоимость, пробеги и соотношение износа с ценой."
+  ],
+  "features": [
+    "Пересмотренная оплата перевозок и условия кредитования.",
+    "Обновлённый баланс опыта и бонусов навыков.",
+    "Переработанные цены и пробеги подержанных грузовиков.",
+    "Изменённые расходы на гаражи, топливо и штрафы."
+  ],
+  "cover": "/img/mods/realistic-economy-ats-light.jpg",
+  "coverAlt": "Realistic Economy ATS Light by Quper",
+  "images": [],
+  "links": [
+    {
+      "platform": "sharemods",
+      "label": "ShareMods",
+      "url": "https://sharemods.com/897s03k36o2k/ATSRealisticEconomy-Light.scs.html"
+    },
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835995739"
+    }
+  ],
+  "videoIds": [],
+  "gameVersions": ["1.62"]
+}

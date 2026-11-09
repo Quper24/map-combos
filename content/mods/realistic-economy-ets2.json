@@ -1,10 +1,10 @@
 {
   "id": "realistic-economy-ets2",
-  "order": 20,
+  "order": 21,
   "type": "mod",
-  "title": "Realistic Economy ETS2 by Quper",
+  "title": "Realistic Economy ETS2 Standard by Quper",
   "games": ["ets2"],
-  "summary": "Переработанная экономика ETS2 для более реалистичных рейсов и развития транспортной компании.",
+  "summary": "Standard — Переработанная экономика ETS2 для более реалистичных рейсов и развития транспортной компании.",
   "description": [
     "Мод меняет оплату перевозок, доход наёмных водителей, условия кредитов и развитие навыков. Разные типы прицепов получают более сбалансированную доходность.",
     "Также переработаны рынок подержанных грузовиков, стоимость гаражей, топлива и паромных переправ, штрафы и износ техники."
@@ -16,10 +16,20 @@
     "Пересмотренные расходы на топливо, гаражи, паромы и нарушения ПДД.",
     "Изменённый баланс износа компонентов и шин."
   ],
-  "cover": "/img/mods/realistic-economy-ets2.webp",
-  "coverAlt": "Realistic Economy ETS2 by Quper",
+  "cover": "/img/mods/realistic-economy-ets2-standard.jpg",
+  "coverAlt": "Realistic Economy ETS2 Standard by Quper",
   "images": [],
   "links": [
+    {
+      "platform": "sharemods",
+      "label": "ShareMods",
+      "url": "https://sharemods.com/uu6sxfxhjcub/RealisticEconomyQuper.scs.html"
+    },
+    {
+      "platform": "steam",
+      "label": "Steam Workshop",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318908089"
+    },
     {
       "platform": "truckymods",
       "label": "Архив: все 4 варианта · TruckyMods",
@@ -27,67 +37,5 @@
     }
   ],
   "videoIds": [],
-  "gameVersions": ["1.62"],
-  "variants": [
-    {
-      "title": "Light",
-      "links": [
-        {
-          "platform": "sharemods",
-          "label": "ShareMods",
-          "url": "https://sharemods.com/ocoq0ui89645/RealisticEconomyQuper-Light.scs.html"
-        },
-        {
-          "platform": "steam",
-          "label": "Steam Workshop",
-          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835998309"
-        }
-      ]
-    },
-    {
-      "title": "Standard",
-      "links": [
-        {
-          "platform": "sharemods",
-          "label": "ShareMods",
-          "url": "https://sharemods.com/uu6sxfxhjcub/RealisticEconomyQuper.scs.html"
-        },
-        {
-          "platform": "steam",
-          "label": "Steam Workshop",
-          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318908089"
-        }
-      ]
-    },
-    {
-      "title": "Hard",
-      "links": [
-        {
-          "platform": "sharemods",
-          "label": "ShareMods",
-          "url": "https://sharemods.com/111dmysgi3di/RealisticEconomyQuper-Hard.scs.html"
-        },
-        {
-          "platform": "steam",
-          "label": "Steam Workshop",
-          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835997581"
-        }
-      ]
-    },
-    {
-      "title": "Russia",
-      "links": [
-        {
-          "platform": "sharemods",
-          "label": "ShareMods",
-          "url": "https://sharemods.com/es984ixwvg0t/RealisticEconomyRussianQuper.scs.html"
-        },
-        {
-          "platform": "steam",
-          "label": "Steam Workshop",
-          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3479246592"
-        }
-      ]
-    }
-  ]
+  "gameVersions": ["1.62"]
 }

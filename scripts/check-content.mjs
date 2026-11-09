@@ -214,11 +214,6 @@ for (const mod of mods) {
   await image(mod.cover, `${mod.id}.cover`);
   for (const entry of mod.images || []) await image(entry.src || entry, `${mod.id}.image`);
   for (const link of mod.links || []) url(link.url, `${mod.id}.${link.platform}`);
-  for (const variant of mod.variants || []) {
-    for (const link of variant.links) {
-      url(link.url, `${mod.id}.${variant.title}.${link.platform}`);
-    }
-  }
   for (const id of mod.videoIds || []) check(videoIds.has(id), `${mod.id}: missing video ${id}`);
 }
 const platformIds = { youtube: new Set(), rutube: new Set() };
