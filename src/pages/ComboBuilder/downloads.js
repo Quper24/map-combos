@@ -13,7 +13,7 @@ export const previewSize = 60;
 export const fileImage = ({ image, entry }) =>
   image || (entry.files.length === 1 ? entry.image : undefined);
 
-export async function orderImage(files, offset, title) {
+export async function orderImage(files, offset, title, paidLabel) {
   const canvas = document.createElement('canvas');
   const rowHeight = 68;
   canvas.width = 1200;
@@ -53,7 +53,7 @@ export async function orderImage(files, offset, title) {
     }
     ctx.font = 'bold 22px system-ui';
     ctx.fillStyle = '#f0f2eb';
-    ctx.fillText(file.name, 178, y + 26, 990);
+    ctx.fillText(file.entry.paid ? `${file.name} · ${paidLabel}` : file.name, 178, y + 26, 990);
     ctx.font = '16px system-ui';
     ctx.fillStyle = '#aeb6ab';
     ctx.fillText(file.filename || file.key, 178, y + 49, 990);

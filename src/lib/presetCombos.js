@@ -41,6 +41,7 @@ export function presetCombo(catalog, preset) {
     slug: `${presetName(catalog, preset)}-${catalog.version.replace('.', '')}`,
     title: preset.title,
     version_game: catalog.version,
+    version: preset.version,
     tags: [catalog.game, ...(preset.tags || [])],
     preview: preset.image || mapCover || '/img/logo-280.jpg',
     date: preset.updatedAt?.split('-').reverse().join('.'),

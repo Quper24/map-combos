@@ -1050,6 +1050,7 @@ function PresetEditor({ catalog, commit, onExport }) {
             id: preset?.id || valueOf(form, 'id'),
             title: valueOf(form, 'title'),
             fileSlug: valueOf(form, 'fileSlug'),
+            version: valueOf(form, 'version'),
             boosty: valueOf(form, 'boosty'),
             profile: valueOf(form, 'profile'),
             video: valueOf(form, 'video'),
@@ -1081,6 +1082,12 @@ function PresetEditor({ catalog, commit, onExport }) {
         />
         <Field label="Игра" value={catalog.game.toUpperCase()} readOnly />
         <Field label="Версия игры" value={catalog.version} readOnly />
+        <Field
+          label="Версия сборки"
+          name="version"
+          defaultValue={preset?.version}
+          placeholder="1.2"
+        />
         <Field
           label="Ссылка на пост Boosty"
           name="boosty"

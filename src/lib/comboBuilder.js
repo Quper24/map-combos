@@ -475,6 +475,10 @@ export function validateCatalog(catalog, draft = false) {
         (typeof preset.fileSlug === 'string' && idPattern.test(preset.fileSlug)),
       `Проверь имя файла сборки — ${preset.id}`,
     );
+    check(
+      preset.version === undefined || text(preset.version),
+      `Invalid combo version: ${preset.id}`,
+    );
     const fileName = presetFileName(catalog, preset);
     check(!presetFileNames.has(fileName), `Имя файла сборки уже используется — ${fileName}`);
     presetFileNames.add(fileName);

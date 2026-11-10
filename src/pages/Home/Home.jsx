@@ -65,8 +65,10 @@ export default function Home() {
           </p>
           <div className="actions">
             <Link to="/combos" className="button">
-              {t('Выбрать сборку карт ')}
-              <Icon name="arrow" size={18} />
+              {t('Готовые сборки')} <Icon name="arrow" size={18} />
+            </Link>
+            <Link to="/combos/builder" className="button button-secondary">
+              {t('Конструктор сборок')} <Icon name="arrow" size={18} />
             </Link>
             {boosty && (
               <ExternalLink href={boosty.url} className="button button-boosty">
@@ -74,6 +76,9 @@ export default function Home() {
               </ExternalLink>
             )}
           </div>
+          <Link to="/faq" className="text-link">
+            {t('Частые вопросы')} →
+          </Link>
           <div className={s.heroNote}>
             <span />
             {t(' Карты. Моды. Конвои. Одна любовь к дороге.')}

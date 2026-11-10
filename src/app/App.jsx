@@ -15,6 +15,7 @@ const Mods = lazy(() => import('../pages/Mods/Mods'));
 const Mod = lazy(() => import('../pages/Mods/Mod'));
 const Videos = lazy(() => import('../pages/Videos/Videos'));
 const ServerGuide = lazy(() => import('../pages/ServerGuide/ServerGuide'));
+const Faq = lazy(() => import('../pages/Faq/Faq'));
 function NotFound() {
   const { t } = useTranslation();
   return (
@@ -81,6 +82,7 @@ export default function App() {
             <Route path="mods/:slug" element={<Mod />} />
             <Route path="videos" element={<Videos />} />
             <Route path="server-guide" element={<ServerGuide />} />
+            <Route path="faq" element={<Faq />} />
             <Route path=":slug" element={<Combo root />} />
             <Route path="*" element={<NotFound />} />
           </Route>

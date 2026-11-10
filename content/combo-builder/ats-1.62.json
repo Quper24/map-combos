@@ -97,11 +97,12 @@
       "title": "QS ATS Map Final Fix",
       "type": "fix",
       "autoWithMaps": true,
-      "link": "https://sharemods.com/pq9kkgd8yhgq/QS_ATS_Map_Final_Fix.scs.html",
+      "link": "https://sharemods.com/88j6vcm8w8bt/QS_ATS_Map_Final_Fix.scs.html",
       "image": "/img/combo-builder/aa7d23f9c73c9a8817448bf4904c4d5dcdd3becf3d860b7e8e80fe680217d45e.webp",
       "description": "Общие фиксы для сборки карт",
+      "version": "0.3.1",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-10",
       "paid": false,
       "files": [
         "QS_ATS_Map_Final_Fix"
@@ -255,7 +256,9 @@
       "files": [
         "Vermont_Map_Revived_v1.0.1"
       ],
-      "requires": [],
+      "requires": [
+        "coast-to-coast-v2-24-62-0"
+      ],
       "dlcs": []
     },
     {
@@ -388,6 +391,110 @@
         "project-better-arizona-reforma-connection-1-17-1-62"
       ],
       "dlcs": []
+    },
+    {
+      "id": "alaska-north-to-the-future",
+      "title": "Alaska - North to the future",
+      "type": "map",
+      "link": "https://alaskamod.com/",
+      "image": "/img/combo-builder/f006052ccd1e8d02ac1ece92e5b0c843d499623b7ceab162ac6cc218c22c0b28.webp",
+      "description": "Штат Аляска, выполнен очень хорошо, со своими моделями, погодой и компаниями.",
+      "version": "0.8.9 beta",
+      "addedAt": "2026-11-10",
+      "paid": true,
+      "files": [
+        "Alaska_North_to_the_Future"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-reforma-promods-model-fix",
+      "title": "QS ATS Reforma + ProMods Model Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/xgov2x8ddpw0/QS_ATS_Reforma_ProMods_Model_Fix.scs.html",
+      "image": "/img/combo-builder/acaa497913f571bbcbcb6ca37fc03e68517f2d35a98d140d5b8f7c2936b3f862.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-10",
+      "paid": false,
+      "files": [
+        "QS_ATS_Reforma_ProMods_Model_Fix"
+      ],
+      "requires": [
+        "promods-ats",
+        "reforma"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "washington-extended-revived-promods-connection-v1-0-1",
+      "title": "Washington Extended Revived - Promods Canada Connection v1.0.1",
+      "type": "connector",
+      "link": "https://truckymods.io/american-truck-simulator/map-patches/washington-extended-revived-promods-canada-connection-104659",
+      "image": "/img/combo-builder/a58ea82aadde91d0fa5f3ac24249966ea06592a1b836d261c2185b0bcb46b889.webp",
+      "version": "1.0.1",
+      "addedAt": "2026-11-10",
+      "paid": false,
+      "files": [
+        "Washington_Extended_Revived_Promods_Connection_v1.0.1"
+      ],
+      "requires": [
+        "promods-ats",
+        "washington-extended-revived-v1-0-1"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-alaska-nttf-traffic-fix",
+      "title": "QS ATS Alaska NTTF Traffic Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/nyvlgabo402s/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
+      "image": "/img/combo-builder/fcfa1ff9caf08fc0ebec025e004de01340acb4b7ab9608bdc74e3dd74c219934.webp",
+      "version": "0.2.0",
+      "addedAt": "2026-11-10",
+      "paid": false,
+      "files": [
+        "QS_ATS_Alaska_NTTF_Traffic_Fix"
+      ],
+      "requires": [
+        "alaska-north-to-the-future"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "alaska-nttf-to-promods-rc-v0-6-7-2",
+      "title": "Alaska NTTF to Promods Canada RC",
+      "type": "connector",
+      "link": "https://truckymods.io/american-truck-simulator/maps/road-connection-between-promods-canada-and-alaska-north-to-the-future",
+      "image": "/img/combo-builder/98f4ae6ca42124822c424d435bea5fb15433bdd5b6701d988c8aec459df7f605.webp",
+      "version": "0.6.7.2",
+      "addedAt": "2026-11-10",
+      "paid": false,
+      "files": [
+        "Alaska_NTTF_to_Promods_RC_V0.6.7.2"
+      ],
+      "requires": [
+        "promods-ats",
+        "alaska-north-to-the-future"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-alaska-promods-sign-fix",
+      "title": "QS ATS Alaska + ProMods Sign Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/bm5p13ayz5cy/QS_ATS_Alaska_ProMods_Sign_Fix.scs.html",
+      "image": "/img/combo-builder/9777855cbb312043a65c69e38ab749966eba5616dd654439015164fc75814bd2.webp",
+      "version": "0.2.0",
+      "addedAt": "2026-11-10",
+      "paid": false,
+      "files": [
+        "QS_ATS_Alaska_ProMods_Sign_Fix"
+      ],
+      "requires": [
+        "alaska-nttf-to-promods-rc-v0-6-7-2"
+      ],
+      "dlcs": []
     }
   ],
   "order": [
@@ -478,12 +585,36 @@
       "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp"
     },
     {
+      "key": "QS_ATS_Reforma_ProMods_Model_Fix",
+      "name": "QS ATS Reforma + ProMods Model Fix"
+    },
+    {
+      "key": "Washington_Extended_Revived_Promods_Connection_v1.0.1",
+      "name": "Washington Extended Revived - Promods Canada Connection v1.0.1"
+    },
+    {
+      "key": "Alaska_North_to_the_Future",
+      "name": "Alaska - North to the future"
+    },
+    {
+      "key": "QS_ATS_Alaska_NTTF_Traffic_Fix",
+      "name": "QS ATS Alaska NTTF Traffic Fix"
+    },
+    {
       "key": "Petersburg_Alaska_Revived_v1.0.1",
       "name": "Petersburg Alaska Revived v1.0.1"
     },
     {
       "key": "Aleutian_Islands_Revived_v1.0.1",
       "name": "Aleutian Islands Revived v1.0.1"
+    },
+    {
+      "key": "Alaska_NTTF_to_Promods_RC_V0.6.7.2",
+      "name": "Alaska NTTF to Promods Canada RC"
+    },
+    {
+      "key": "QS_ATS_Alaska_ProMods_Sign_Fix",
+      "name": "QS ATS Alaska + ProMods Sign Fix"
     },
     {
       "key": "Reforma_OtherMaps_Patch_42_162",

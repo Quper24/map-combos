@@ -252,7 +252,12 @@ test('named map and mod combo files use the same release catalog and preserve th
     order: [...shared.order, { key: mod.id, name: mod.title }],
     presets: [],
   };
-  const mapPreset = { ...presets[0], id: 'ats-quper-map-combo-1-62', fileSlug: 'quper-map' };
+  const mapPreset = {
+    ...presets[0],
+    id: 'ats-quper-map-combo-1-62',
+    fileSlug: 'quper-map',
+    version: '1.2',
+  };
   const modPreset = { ...presets[0], id: 'mods', fileSlug: 'quper-mods', selection: [mod.id] };
   const files = [mapPreset, modPreset].map((preset) => ({ game, version, preset }));
   assert.equal(presetFileName(base, mapPreset), 'ats-quper-map-1.62.json');
@@ -261,6 +266,9 @@ test('named map and mod combo files use the same release catalog and preserve th
   validateCatalog(combined);
   assert.deepEqual(base.presets, []);
   const mapCard = presetCombo(combined, mapPreset);
+  assert.equal(mapCard.version, '1.2');
+  assert.equal(mapCard.version_game, version);
+  assert.equal(presetCombo(combined, modPreset).version, undefined);
   assert.equal(mapCard.id, 'ats-1-62-ats-quper-map-combo-1-62');
   assert.equal(presetCombo(combined, { ...mapPreset, fileSlug: undefined }).id, mapCard.id);
   assert.equal(comboPath(mapCard), '/ats-quper-map-162');
@@ -283,6 +291,10 @@ test('named map and mod combo files use the same release catalog and preserve th
         presets: [mapPreset, { ...modPreset, fileSlug: mapPreset.fileSlug }],
       }),
     /Имя файла сборки уже используется/,
+  );
+  assert.throws(
+    () => validateCatalog({ ...combined, presets: [{ ...mapPreset, version: 1.2 }] }),
+    /Invalid combo version/,
   );
 });
 

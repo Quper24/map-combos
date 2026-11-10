@@ -195,8 +195,28 @@
   color: var(--green);
 }
 
-.orderTitle :is(code, small) {
+.orderTitle :is(strong, code, small) {
   display: block;
+}
+
+.orderTitle > strong {
+  line-height: 1.35;
+}
+
+.orderBadges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  margin-top: 5px;
+}
+
+.orderBadges:empty {
+  display: none;
+}
+
+.orderBadges > :is(.newBadge, .updateBadge) {
+  margin-inline-start: 0;
 }
 
 .order li :is(code, small),
@@ -211,8 +231,55 @@
   border-radius: 4px;
 }
 
-.orderRow,
-.orderActions,
+.orderHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.orderHeader > .thumb {
+  flex: 0 0 auto;
+  width: clamp(60px, 23%, 92px);
+}
+
+.orderTitle {
+  flex: 1;
+  min-width: 0;
+}
+
+.orderActions {
+  display: grid;
+  grid-template-columns: minmax(0, min(40%, 7.25rem)) minmax(0, 10.5rem);
+  align-items: start;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.orderActions > :global(.button) {
+  grid-area: 1 / 1;
+}
+
+.orderActions > .removeControl {
+  grid-area: 1 / 2;
+  justify-items: stretch;
+}
+
+.orderActions :global(.button) {
+  gap: 5px;
+  min-width: 0;
+  min-height: 42px;
+  padding: 3px 8px;
+  font-size: var(--type-small);
+  line-height: 1.15;
+  text-align: center;
+}
+
+.orderActions :is(svg, .removeWarning) {
+  flex-shrink: 0;
+}
+
 .inactiveRow {
   display: flex;
   align-items: center;
@@ -220,13 +287,11 @@
   gap: 8px 12px;
 }
 
-.orderTitle,
 .inactiveRow > strong {
   flex: 1 1 160px;
   min-width: 0;
 }
 
-.orderActions :global(.button),
 .inactiveRow :global(.button) {
   min-height: 36px;
   padding: 6px 12px;
@@ -389,5 +454,26 @@
   .form,
   .fileParts {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 350px) {
+  .orderActions {
+    grid-template-columns: minmax(0, 35%) minmax(0, 10.5rem);
+  }
+
+  .orderActions :global(.button) {
+    padding-inline: 6px;
+    font-size: 0.8125rem;
+  }
+
+  .orderActions > :global(.button) svg {
+    display: none;
+  }
+
+  .orderActions .removeWarning {
+    flex-basis: 1rem;
+    block-size: 1rem;
+    margin-inline-start: 0;
   }
 }

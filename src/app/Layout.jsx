@@ -11,6 +11,7 @@ const navigation = [
   ['/vtc', 'VTC'],
   ['/mods', 'Моды и плагины'],
   ['/videos', 'Видео'],
+  ['/faq', 'FAQ'],
 ];
 export default function Layout() {
   const { t, language, setLanguage } = useTranslation();

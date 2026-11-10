@@ -348,11 +348,14 @@ export function OrderList({
           topFile.get(file.entry.id) === file.key ? removals?.get(file.entry.id) : undefined;
         return (
           <li key={file.key}>
-            <div className={s.orderRow}>
+            <div className={s.orderHeader}>
               {image && <img className={s.thumb} src={image} alt="" loading="lazy" />}
               <div className={s.orderTitle}>
                 <strong>{file.name}</strong>
-                <EntryBadge entry={file.entry} />
+                <div className={s.orderBadges}>
+                  <EntryBadge entry={file.entry} />
+                  {file.entry.paid && <span className={s.paid}>{t('Платная')}</span>}
+                </div>
                 {!compact && (
                   <>
                     <code>{file.filename || file.key}</code>
@@ -371,24 +374,24 @@ export function OrderList({
                   </>
                 )}
               </div>
-              {(removal || (showLinks && link)) && (
-                <div className={s.orderActions}>
-                  {showLinks && link && (
-                    <ExternalLink className="button" href={link}>
-                      {t('Скачать')}
-                    </ExternalLink>
-                  )}
-                  {removal && (
-                    <RemoveEntryButton
-                      entry={file.entry}
-                      removal={removal}
-                      byId={byId}
-                      onRemove={onRemove}
-                    />
-                  )}
-                </div>
-              )}
             </div>
+            {(removal || (showLinks && link)) && (
+              <div className={s.orderActions}>
+                {showLinks && link && (
+                  <ExternalLink className="button" href={link}>
+                    {t('Скачать')}
+                  </ExternalLink>
+                )}
+                {removal && (
+                  <RemoveEntryButton
+                    entry={file.entry}
+                    removal={removal}
+                    byId={byId}
+                    onRemove={onRemove}
+                  />
+                )}
+              </div>
+            )}
           </li>
         );
       })}
@@ -413,6 +416,7 @@ export function OrderDownloads({ catalog, files, title, children }) {
         page,
         offset,
         `${t(title)} · ${catalog.game.toUpperCase()} ${catalog.version} · ${part + 1}/${count}`,
+        t('Платная'),
       );
       download(blob, `${prefix}-order-${part + 1}.png`);
     } catch {
