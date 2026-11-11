@@ -1,5 +1,20 @@
 [
   {
+    "id": "install-map-combo-162",
+    "title": "Как установить сборку карт ETS2 и ATS 1.62? ПОЛНЫЙ ГАЙД от А до Я!",
+    "game": "ets2",
+    "games": ["ets2", "ats"],
+    "category": "guides",
+    "thumbnail": "/img/videos/install-map-combo-162.jpg",
+    "platforms": {
+      "youtube": "https://youtu.be/_yOrQldAwu8",
+      "rutube": "https://rutube.ru/video/private/c53fe7be2eefa20731088af38610e03b/?p=Pvcix1JnUZx3uW-ZBPXL-A"
+    },
+    "relatedComboIds": [],
+    "relatedModIds": [],
+    "publishedAt": "2026-11-11T17:00:00.000Z"
+  },
+  {
     "id": "cargo-control",
     "title": "ФРИЗЫ с собственным прицепом в ETS2? Решение есть! | Cargo Control",
     "game": "ets2",

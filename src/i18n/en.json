@@ -858,5 +858,6 @@
   "ETS2: Документы → Euro Truck Simulator 2 → config.cfg": "ETS2: Documents → Euro Truck Simulator 2 → config.cfg",
   "ATS: Документы → American Truck Simulator → config.cfg": "ATS: Documents → American Truck Simulator → config.cfg",
   "Чтобы открыть нужную папку, нажми Win+R, введи shell:Personal и нажми Enter. Windows откроет твои «Документы», даже если они перенесены в OneDrive. Затем открой папку своей игры.": "To open the correct folder, press Win+R, type shell:Personal, and press Enter. Windows opens your Documents folder even if it has been moved to OneDrive. Then open your game’s folder.",
-  "Открой config.cfg в Блокноте, найди r_buffer_page_size и замени значение в существующей строке. Сохрани файл. Если там уже стоит больше 30, оставь текущее значение.": "Open config.cfg in Notepad, find r_buffer_page_size, and update the value on the existing line. Save the file. If the value is already above 30, keep it."
+  "Открой config.cfg в Блокноте, найди r_buffer_page_size и замени значение в существующей строке. Сохрани файл. Если там уже стоит больше 30, оставь текущее значение.": "Open config.cfg in Notepad, find r_buffer_page_size, and update the value on the existing line. Save the file. If the value is already above 30, keep it.",
+  "Как установить сборку карт ETS2 и ATS 1.62? ПОЛНЫЙ ГАЙД от А до Я!": "How to Install a Map Combo for ETS2 and ATS 1.62? Complete Guide from A to Z!"
 }

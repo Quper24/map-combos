@@ -1,6 +1,7 @@
 import { useTranslation } from '../../i18n/Language';
 import Video from '../Video/Video';
 import ExternalLink from '../ui/ExternalLink';
+import { videos, youtubeVideoId } from '../../lib/content';
 import s from './ComboContent.module.css';
 
 export function ComboDisclosure({ title, name, children }) {
@@ -13,14 +14,23 @@ export function ComboDisclosure({ title, name, children }) {
   );
 }
 
-export function BeforeLaunchDetails({ game, dlcs }) {
+const installationGuide = videos.find(({ id }) => id === 'install-map-combo-162');
+
+export function BeforeLaunchDetails({ game, gameVersion, dlcs }) {
   const { t } = useTranslation();
   const ats = game === 'ats';
   const directory = ats ? 'American Truck Simulator' : 'Euro Truck Simulator 2';
+  const [major, minor] = (gameVersion ?? '').split('.').map(Number);
+  const guide = major > 1 || (major === 1 && minor >= 62) ? installationGuide : undefined;
   return (
     <>
       <ComboDisclosure title="Видеоинструкция по установке">
-        <Video videoId="6UWd6wJa7s8" title={t('Подробная инструкция по установке сборки карт')} />
+        <Video
+          videoId={guide ? youtubeVideoId(guide.platforms.youtube) : '6UWd6wJa7s8'}
+          title={guide?.title ?? 'Подробная инструкция по установке сборки карт'}
+          thumbnail={guide?.thumbnail}
+          platforms={guide?.platforms}
+        />
       </ComboDisclosure>
       <ComboDisclosure title="Настройка config.cfg">
         <p>{t('Для корректной работы модов открой файл:')}</p>

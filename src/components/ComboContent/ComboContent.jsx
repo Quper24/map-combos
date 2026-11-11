@@ -111,7 +111,10 @@ export default function ComboContent({ combo }) {
       )}
       <section id="install">
         <h2>{t('Перед запуском')}</h2>
-        <BeforeLaunchDetails game={combo.tags.includes('ats') ? 'ats' : 'ets2'} />
+        <BeforeLaunchDetails
+          game={combo.tags.includes('ats') ? 'ats' : 'ets2'}
+          gameVersion={combo.version_game}
+        />
       </section>
       <section id="launcher">
         <h2>{t('DQ Лаунчер')}</h2>

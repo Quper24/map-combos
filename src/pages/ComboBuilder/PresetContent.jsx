@@ -69,7 +69,11 @@ export default function PresetContent({ catalog, preset, share = true }) {
           </ComboDisclosure>
         )}
         <ComboDisclosure name={accordion} title="Перед запуском">
-          <BeforeLaunchDetails game={catalog.game} dlcs={result.dlcs} />
+          <BeforeLaunchDetails
+            game={catalog.game}
+            gameVersion={catalog.version}
+            dlcs={result.dlcs}
+          />
         </ComboDisclosure>
         <ComboDisclosure name={accordion} title="DQ Лаунчер">
           <LauncherDetails />
