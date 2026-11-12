@@ -19,8 +19,13 @@ import { processProfile } from '../../lib/processProfile';
 import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
 import { Builder } from './ComboBuilder';
 import PresetContent from './PresetContent';
-import { builderDraftKey, readBuilderDraft, restorePresetFileSlugs } from '../../lib/builderDraft';
+import {
+  builderDraftKey,
+  readBuilderDraft,
+  restorePublishedPresetMetadata,
+} from '../../lib/builderDraft';
 import { attachPresetFiles, catalogKey, presetFileName, presetTags } from '../../lib/presetCombos';
+import { preparePresetRelease } from '../../lib/presetReleases';
 import { tagUtils } from '../../utils/tags';
 import EditorImageField from './EditorImageField';
 import { download } from './downloads';
@@ -89,7 +94,7 @@ function Choices({ label, name, items, selected = [], onChecked, disabled = fals
 export default function ComboEditor() {
   const { t } = useTranslation();
   const [catalog, setCatalog] = useState(() =>
-    restorePresetFileSlugs(readBuilderDraft() || blank, builderCatalogs),
+    restorePublishedPresetMetadata(readBuilderDraft() || blank, builderCatalogs),
   );
   const [notice, setNotice] = useState('');
   const [pending, setPending] = useState(null);
@@ -102,7 +107,7 @@ export default function ComboEditor() {
     setEntryRequest(({ key }) => ({ id, files, key: key + 1 }));
     requestAnimationFrame(() => document.getElementById('combo-entry-editor')?.focus());
   }
-  function commit(next) {
+  function commit(next, successNotice = 'Черновик сохранён в этом браузере.') {
     try {
       validateCatalog(next, true);
     } catch (error) {
@@ -112,7 +117,7 @@ export default function ComboEditor() {
     setCatalog(next);
     try {
       localStorage.setItem(builderDraftKey, JSON.stringify(next));
-      setNotice('Черновик сохранён в этом браузере.');
+      setNotice(successNotice);
     } catch {
       setNotice('Хранилище браузера недоступно. Скачай черновик JSON.');
     }
@@ -153,7 +158,8 @@ export default function ComboEditor() {
       [{ ...base, presets: base.presets.filter(({ id }) => !importedIds.has(id)) }],
       presetFiles,
     );
-    if (commit(restorePresetFileSlugs(next, builderCatalogs))) {
+    validateCatalog(next, true);
+    if (commit(restorePublishedPresetMetadata(next, builderCatalogs))) {
       setPending(null);
       setEntryRequest({ id: '', files: [], key: 0 });
       setShowPreview(false);
@@ -173,9 +179,20 @@ export default function ComboEditor() {
       setNotice(error.message);
     }
   }
-  function exportPreset(preset) {
+  function exportPreset(draft) {
     try {
+      const { preset, needsVersion } = preparePresetRelease(catalog, draft, draft.updatedAt);
       validateCatalog({ ...catalog, presets: [preset] });
+      const next = { ...catalog, presets: replace(catalog.presets, 'id', preset) };
+      if (
+        !commit(
+          next,
+          needsVersion
+            ? 'Состав или версии модов изменились. Укажи новый номер версии сборки, чтобы добавить выпуск.'
+            : 'JSON сборки выгружен.',
+        )
+      )
+        return;
       downloadJson(
         { game: catalog.game, version: catalog.version, preset },
         presetFileName(catalog, preset),
@@ -1045,6 +1062,7 @@ function PresetEditor({ catalog, commit, onExport }) {
         className={s.form}
         key={id}
         onSubmit={(event) => {
+          const exporting = event.nativeEvent.submitter?.value === 'export';
           const form = getForm(event);
           const next = {
             id: preset?.id || valueOf(form, 'id'),
@@ -1058,7 +1076,12 @@ function PresetEditor({ catalog, commit, onExport }) {
             tags: form.getAll('tags'),
             updatedAt: catalogDate(),
             selection: form.getAll('selection'),
+            releases: preset?.releases,
           };
+          if (exporting) {
+            onExport(next);
+            return;
+          }
           const presets = preset
             ? replace(catalog.presets, 'id', next)
             : [...catalog.presets, next];
@@ -1127,11 +1150,7 @@ function PresetEditor({ catalog, commit, onExport }) {
         <div className={s.actions}>
           <button className="button">{t('Сохранить сборку')}</button>
           {preset && (
-            <button
-              type="button"
-              className="button button-secondary"
-              onClick={() => onExport(preset)}
-            >
+            <button type="submit" value="export" className="button button-secondary">
               {t('Выгрузить сборку JSON')}
             </button>
           )}

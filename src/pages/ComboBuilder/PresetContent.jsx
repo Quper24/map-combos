@@ -9,7 +9,14 @@ import ExternalLink from '../../components/ui/ExternalLink';
 import Video from '../../components/Video/Video';
 import { addToCombo, isSelectable, removeFromCombo, resolveCombo } from '../../lib/comboBuilder';
 import { youtubeVideoId } from '../../lib/content';
-import { EntryBadge, OrderDownloads, OrderList, OrderProfileInstall } from './ComboBuilder';
+import { diffPresetEntries } from '../../lib/presetReleases';
+import {
+  EntryBadge,
+  ModVersion,
+  OrderDownloads,
+  OrderList,
+  OrderProfileInstall,
+} from './ComboBuilder';
 import ShareCombo from './ShareCombo';
 import s from './ComboBuilder.module.css';
 import page from '../Combo/Combo.module.css';
@@ -89,6 +96,11 @@ export default function PresetContent({ catalog, preset, share = true }) {
             />
           </ComboDisclosure>
         )}
+        {preset.releases?.length > 0 && (
+          <ComboDisclosure name={accordion} title="История обновлений">
+            <ReleaseHistory releases={preset.releases} />
+          </ComboDisclosure>
+        )}
       </aside>
       <section className={`${page.order} ${s.presetOrder}`} tabIndex={0} aria-labelledby={heading}>
         <span className="eyebrow">{t('Менеджер модификаций')}</span>
@@ -118,6 +130,85 @@ export default function PresetContent({ catalog, preset, share = true }) {
         )}
       </section>
     </div>
+  );
+}
+
+function ReleaseHistory({ releases }) {
+  const { t, language } = useTranslation();
+  const formatDate = new Intl.DateTimeFormat(language === 'en' ? 'en-GB' : 'ru-RU', {
+    dateStyle: 'long',
+    timeZone: 'UTC',
+  });
+  return (
+    <ol className={s.releaseHistory}>
+      {[...releases].reverse().map(({ version, date, entries }, index) => {
+        const previous = releases[releases.length - index - 2];
+        return (
+          <li key={version}>
+            <header>
+              <h3>
+                {t('Версия')} {version}
+              </h3>
+              <time dateTime={date}>{formatDate.format(new Date(date))}</time>
+            </header>
+            {previous ? (
+              <ReleaseChanges previous={previous.entries} current={entries} />
+            ) : (
+              <p>{t('Первый выпуск')}</p>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+function ReleaseChanges({ previous, current }) {
+  const { t } = useTranslation();
+  const { added, removed, versionChanges } = diffPresetEntries(previous, current);
+  if (!added.length && !removed.length && !versionChanges.length) {
+    return <p>{t('Состав и версии модов без изменений.')}</p>;
+  }
+  return (
+    <>
+      {[
+        ['Добавлено', added],
+        ['Удалено', removed],
+      ].map(
+        ([label, entries]) =>
+          entries.length > 0 && (
+            <div key={label}>
+              <h4>{t(label)}</h4>
+              <ul>
+                {entries.map(({ id, title, version }) => (
+                  <li key={id}>
+                    {t(title)}
+                    {version && <small> · {version}</small>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ),
+      )}
+      {versionChanges.length > 0 && (
+        <div>
+          <h4>{t('Изменения версий')}</h4>
+          <ul>
+            {versionChanges.map(({ entry, previousVersion }) => (
+              <li key={entry.id}>
+                {t(entry.title)}
+                <small>
+                  {' · '}
+                  {previousVersion
+                    ? `${previousVersion} → ${entry.version || t('Версия неизвестна')}`
+                    : `${t('Версия уточнена')} · ${entry.version}`}
+                </small>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -172,6 +263,7 @@ function InactiveMods({ catalog, selection, active, byId, onChange }) {
                   <strong>
                     {t(entry.title)}
                     <EntryBadge entry={entry} />
+                    <ModVersion entry={entry} />
                   </strong>
                   <button
                     type="button"

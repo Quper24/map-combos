@@ -1,6 +1,5 @@
 .toolbar,
-.actions,
-.variant {
+.actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -59,6 +58,7 @@
 }
 
 .card,
+.cardGroup,
 .panel,
 .downloads,
 .importPreview {
@@ -69,27 +69,85 @@
   overflow-wrap: anywhere;
 }
 
-.card h3 {
-  margin-bottom: 6px;
+.cardGroup {
+  padding: 9px;
+}
+
+.cardGroup h3 {
+  margin: 0 3px 8px;
   font-size: 1rem;
 }
 
 .card {
+  position: relative;
   padding: 9px 12px;
 }
 
-.card .variant {
+.card + .card {
+  margin-top: 8px;
+}
+
+.card[data-enabled='true'] {
+  border-color: var(--green-line);
+  background: var(--surface-raised);
+  background: color-mix(in srgb, var(--green) 13%, var(--surface));
+}
+
+.cardToggle {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: start;
+}
+
+.cardToggle::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+}
+
+.cardToggle:focus-visible {
+  outline: none;
+}
+
+.card:has(.cardToggle:focus-visible) {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.cardToggle[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cardName,
+.cardMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 6px 10px;
+}
+
+.cardName :is(.newBadge, .updateBadge) {
+  margin-inline-start: 0;
+}
+
+.enabledMark {
+  margin-inline-start: auto;
+  color: var(--green-bright);
+  font-weight: 700;
 }
 
 .card .thumb {
   width: 64px;
 }
 
-.variant + .variant {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
+.cardHint,
+.entryDescription {
+  margin-top: 5px;
 }
 
 .paid {
@@ -128,8 +186,9 @@
   color: var(--muted);
 }
 
-.entryDescription[open] {
-  flex-basis: 100%;
+.entryDescription {
+  position: relative;
+  width: fit-content;
 }
 
 .entryDescription summary {
@@ -181,9 +240,9 @@
   overflow-wrap: anywhere;
 }
 
-.order li {
+.order > li {
+  container-type: inline-size;
   margin-bottom: 8px;
-  padding: 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface-raised);
@@ -195,7 +254,7 @@
   color: var(--green);
 }
 
-.orderTitle :is(strong, code, small) {
+.orderTitle > :is(strong, code, small) {
   display: block;
 }
 
@@ -209,10 +268,6 @@
   align-items: center;
   gap: 4px 6px;
   margin-top: 5px;
-}
-
-.orderBadges:empty {
-  display: none;
 }
 
 .orderBadges > :is(.newBadge, .updateBadge) {
@@ -231,39 +286,46 @@
   border-radius: 4px;
 }
 
-.orderHeader {
-  display: flex;
+.orderRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    'cover title'
+    'cover actions';
   align-items: center;
-  gap: 12px;
+  min-block-size: 72px;
 }
 
-.orderHeader > .thumb {
-  flex: 0 0 auto;
-  width: clamp(60px, 23%, 92px);
+.orderCover {
+  grid-area: cover;
+  position: relative;
+  align-self: stretch;
+  inline-size: clamp(62px, 32cqi, 168px);
+  border-radius: 5px 0 0 5px;
+  overflow: hidden;
+}
+
+.orderCover img {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
 }
 
 .orderTitle {
-  flex: 1;
-  min-width: 0;
+  grid-area: title;
+  padding: 10px;
 }
 
 .orderActions {
-  display: grid;
-  grid-template-columns: minmax(0, min(40%, 7.25rem)) minmax(0, 10.5rem);
+  grid-area: actions;
+  display: flex;
+  flex-wrap: wrap;
   align-items: start;
-  gap: 8px;
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid var(--line);
-}
-
-.orderActions > :global(.button) {
-  grid-area: 1 / 1;
-}
-
-.orderActions > .removeControl {
-  grid-area: 1 / 2;
-  justify-items: stretch;
+  justify-content: end;
+  gap: 6px;
+  padding: 0 10px 10px;
 }
 
 .orderActions :global(.button) {
@@ -290,6 +352,11 @@
 .inactiveRow > strong {
   flex: 1 1 160px;
   min-width: 0;
+}
+
+.inactiveRow .modVersion {
+  display: block;
+  font-weight: 400;
 }
 
 .inactiveRow :global(.button) {
@@ -341,6 +408,51 @@
   max-height: none;
   overflow: visible;
   padding-left: 22px;
+}
+
+.releaseHistory {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.releaseHistory > li + li {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.releaseHistory header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+
+.releaseHistory h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.releaseHistory :is(time, small) {
+  color: var(--muted);
+  font-size: var(--type-small);
+}
+
+.releaseHistory h4 {
+  margin: 8px 0 2px;
+  font-size: var(--type-small);
+}
+
+.releaseHistory ul {
+  padding-inline-start: 20px;
+}
+
+.releaseHistory p {
+  margin: 0;
 }
 
 .inactiveMods {
@@ -458,10 +570,6 @@
 }
 
 @media (max-width: 350px) {
-  .orderActions {
-    grid-template-columns: minmax(0, 35%) minmax(0, 10.5rem);
-  }
-
   .orderActions :global(.button) {
     padding-inline: 6px;
     font-size: 0.8125rem;

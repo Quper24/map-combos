@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import { restorePresetFileSlugs } from '../src/lib/builderDraft.js';
+import { restorePublishedPresetMetadata } from '../src/lib/builderDraft.js';
 import {
   addToCombo,
   catalogDate,
@@ -24,6 +24,7 @@ import {
   presetCombo,
   presetFileName,
 } from '../src/lib/presetCombos.js';
+import { diffPresetEntries, preparePresetRelease } from '../src/lib/presetReleases.js';
 import {
   comboSharePath,
   readSharedSelection,
@@ -298,25 +299,121 @@ test('named map and mod combo files use the same release catalog and preserve th
   );
 });
 
-test('an older editor draft recovers its published filename without losing local edits', () => {
+test('an older editor draft recovers its published filename and releases without losing local edits', () => {
   const id = 'ats-quper-map-combo-1-62';
   const edited = { ...catalog.presets[0], id, title: 'Local changes' };
   const draft = { ...catalog, game: 'ats', presets: [edited] };
+  const releases = [{ version: '1.2.1', date: '2026-11-11', entries: [] }];
   const published = {
     ...draft,
-    presets: [{ ...catalog.presets[0], id, fileSlug: 'quper-map' }],
+    presets: [{ ...catalog.presets[0], id, fileSlug: 'quper-map', releases }],
   };
 
-  const [restored] = restorePresetFileSlugs(draft, [published]).presets;
-  assert.deepEqual(restored, { ...edited, fileSlug: 'quper-map' });
+  const [restored] = restorePublishedPresetMetadata(draft, [published]).presets;
+  assert.deepEqual(restored, { ...edited, fileSlug: 'quper-map', releases });
   assert.equal(presetFileName(draft, restored), 'ats-quper-map-1.62.json');
-  assert.equal(restorePresetFileSlugs(draft, [{ ...published, version: '1.63' }]), draft);
+  assert.equal(restorePublishedPresetMetadata(draft, [{ ...published, version: '1.63' }]), draft);
 
-  const custom = { ...edited, fileSlug: 'custom' };
+  const newer = { version: '1.3', date: '2026-11-12', entries: [] };
+  const custom = { ...edited, fileSlug: 'custom', releases: [...releases, newer] };
   const conflicting = { ...edited, id: 'other', fileSlug: 'quper-map' };
-  for (const presets of [[custom], [edited, conflicting]]) {
-    assert.deepEqual(restorePresetFileSlugs({ ...draft, presets }, [published]).presets, presets);
-  }
+  assert.deepEqual(
+    restorePublishedPresetMetadata({ ...draft, presets: [custom] }, [published]).presets,
+    [custom],
+  );
+  assert.deepEqual(
+    restorePublishedPresetMetadata({ ...draft, presets: [edited, conflicting] }, [published])
+      .presets,
+    [{ ...edited, releases }, conflicting],
+  );
+});
+
+test('an ETS2 export records one entry per mod and compares releases by stable ID', () => {
+  const draft = { ...catalog.presets[0], version: '1.0' };
+  const { preset: first } = preparePresetRelease(catalog, draft, '2026-11-12');
+  assert.deepEqual(
+    first.releases[0].entries.map(({ id }) => id),
+    ['eurafrica', 'sibir-fv', 'kazakhstan', 'fv-connector'],
+  );
+  validateCatalog({ ...catalog, presets: [first] });
+
+  const updatedCatalog = {
+    ...catalog,
+    entries: entries.map((entry) =>
+      entry.id === 'kazakhstan' ? { ...entry, version: '2.0' } : entry,
+    ),
+  };
+  const changed = { ...first, selection: ['sibir-sv', 'kazakhstan'] };
+  assert.deepEqual(preparePresetRelease(updatedCatalog, changed, '2026-11-13'), {
+    preset: changed,
+    needsVersion: true,
+  });
+  const { preset: second } = preparePresetRelease(
+    updatedCatalog,
+    { ...changed, version: '1.1' },
+    '2026-11-13',
+  );
+  const diff = diffPresetEntries(first.releases[0].entries, second.releases[1].entries);
+  assert.deepEqual(
+    diff.added.map(({ id }) => id),
+    ['sibir-sv', 'sv-connector', 'sv-fix'],
+  );
+  assert.deepEqual(
+    diff.removed.map(({ id }) => id),
+    ['eurafrica', 'sibir-fv', 'fv-connector'],
+  );
+  assert.deepEqual(diff.versionChanges, [
+    {
+      entry: { id: 'kazakhstan', title: 'kazakhstan', version: '2.0' },
+      previousVersion: undefined,
+    },
+  ]);
+  assert.deepEqual(preparePresetRelease(updatedCatalog, second, '2026-11-14'), {
+    preset: second,
+    needsVersion: false,
+  });
+  assert.throws(
+    () => preparePresetRelease(updatedCatalog, { ...second, version: '1.0' }),
+    /Эта версия уже есть/,
+  );
+  validateCatalog({ ...updatedCatalog, presets: [second] });
+  assert.throws(
+    () =>
+      validateCatalog({
+        ...updatedCatalog,
+        presets: [{ ...second, releases: [...second.releases, second.releases[0]] }],
+      }),
+    /Invalid release history/,
+  );
+});
+
+test('the ATS history preserves the original four releases and the 1.2.1 fix updates', () => {
+  const { preset } = JSON.parse(
+    readFileSync(
+      new URL('../content/combo-builder/presets/ats-quper-map-1.62.json', import.meta.url),
+    ),
+  );
+  assert.deepEqual(
+    preset.releases.slice(0, 4).map(({ version, date }) => [version, date]),
+    [
+      ['1.0', '2026-11-09'],
+      ['1.1', '2026-11-09'],
+      ['1.2', '2026-11-10'],
+      ['1.2.1', '2026-11-11'],
+    ],
+  );
+  const [, , before, current] = preset.releases;
+  const { added, removed, versionChanges } = diffPresetEntries(before.entries, current.entries);
+  assert.deepEqual(added, []);
+  assert.deepEqual(removed, []);
+  assert.deepEqual(
+    versionChanges.map(({ entry, previousVersion }) => [entry.id, previousVersion, entry.version]),
+    [
+      ['qs-ats-map-final-fix', '0.3.1', '0.3.2'],
+      ['qs-ats-alaska-nttf-traffic-fix', '0.2.0', '0.2.1'],
+      ['qs-ats-alaska-promods-sign-fix', '0.2.0', '0.2.1'],
+    ],
+  );
 });
 
 test('a shared selection keeps its release and recalculates dependencies, even with unavailable IDs', () => {

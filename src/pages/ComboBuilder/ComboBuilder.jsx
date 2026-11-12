@@ -188,58 +188,27 @@ export function Builder({ catalog, initialSelection = [], share = false }) {
           >
             {!groups.size && <p>{t('По этому запросу моды не найдены.')}</p>}
             {[...groups].map(([key, items]) => (
-              <article className={s.card} key={key}>
-                <h3>
-                  {t(items[0].family || items[0].title)}
-                  {!items[0].family && <EntryBadge entry={items[0]} />}
-                </h3>
+              <article className={items[0].family ? s.cardGroup : undefined} key={key}>
+                {items[0].family && <h3>{t(items[0].family)}</h3>}
                 {items.map((entry) => {
                   const enabled = result.active.has(entry.id);
-                  const candidate = enabled ? null : addToCombo(catalog, selection, entry.id);
+                  const next = enabled
+                    ? removeFromCombo(catalog, selection, entry.id, result.active)
+                    : addToCombo(catalog, selection, entry.id);
                   return (
-                    <div key={entry.id} className={s.variant}>
-                      {entry.image && (
-                        <img className={s.thumb} src={entry.image} alt="" loading="lazy" />
-                      )}
-                      {entry.variant && <strong>{t(entry.variant)}</strong>}
-                      {entry.variant && <EntryBadge entry={entry} />}
-                      {entry.version && <small className={s.modVersion}>{entry.version}</small>}
-                      {entry.paid && <span className={s.paid}>{t('Платная')}</span>}
-                      {entry.link && (
-                        <ExternalLink className="text-link" href={entry.link}>
-                          {t('Скачать')}
-                        </ExternalLink>
-                      )}
-                      {enabled ? (
-                        <RemoveEntryButton
-                          entry={entry}
-                          removal={removeFromCombo(catalog, selection, entry.id, result.active)}
-                          byId={byId}
-                          onRemove={setSelection}
-                          className="chip"
-                        />
-                      ) : (
-                        <button
-                          type="button"
-                          className="chip"
-                          disabled={candidate.conflicts.length > 0}
-                          onClick={() => setSelection(candidate.selection)}
-                        >
-                          {t('Выбрать')}
-                        </button>
-                      )}
-                      {candidate?.conflicts.map((rule) => (
-                        <p className={s.reason} key={rule.entries.join('/')}>
-                          {conflictText(rule)}
-                        </p>
-                      ))}
-                      {entry.description && (
-                        <details className={s.entryDescription} name={descriptionGroup}>
-                          <summary>{t('Описание')}</summary>
-                          <p className={s.description}>{t(entry.description)}</p>
-                        </details>
-                      )}
-                    </div>
+                    <BuilderEntry
+                      key={entry.id}
+                      entry={entry}
+                      enabled={enabled}
+                      conflicts={next.conflicts?.map(conflictText) ?? []}
+                      warning={removalHint(next.alsoDisabled, byId, t)}
+                      descriptionGroup={descriptionGroup}
+                      onToggle={(button) => {
+                        if (enabled && filter === 'enabled')
+                          button.closest('[role="group"]')?.focus();
+                        setSelection(next.selection);
+                      }}
+                    />
                   );
                 })}
               </article>
@@ -284,6 +253,59 @@ export function Builder({ catalog, initialSelection = [], share = false }) {
   );
 }
 
+function BuilderEntry({ entry, enabled, conflicts, warning, descriptionGroup, onToggle }) {
+  const { t } = useTranslation();
+  const hintId = useId();
+  const blocked = conflicts.length > 0;
+  const name = t(entry.variant || entry.title);
+  return (
+    <div className={s.card} data-enabled={enabled}>
+      <button
+        type="button"
+        className={s.cardToggle}
+        aria-label={entry.family ? `${t(entry.family)} · ${name}` : name}
+        aria-pressed={enabled}
+        aria-disabled={blocked || undefined}
+        aria-describedby={`${hintId}-meta${blocked || warning ? ` ${hintId}` : ''}`}
+        onClick={(event) => {
+          if (!blocked) onToggle(event.currentTarget);
+        }}
+      >
+        <span className={s.cardName}>
+          <strong>{name}</strong>
+          <EntryBadge entry={entry} />
+          {enabled && (
+            <span className={s.enabledMark} aria-hidden="true">
+              ✓
+            </span>
+          )}
+        </span>
+        <span id={`${hintId}-meta`} className={s.cardMeta}>
+          {entry.image && <img className={s.thumb} src={entry.image} alt="" loading="lazy" />}
+          <ModVersion entry={entry} />
+          {entry.paid && <span className={s.paid}>{t('Платная')}</span>}
+        </span>
+      </button>
+      {(blocked || warning) && (
+        <div id={hintId} className={s.cardHint}>
+          {warning && <p className={s.reason}>{warning}</p>}
+          {conflicts.map((conflict) => (
+            <p key={conflict} className={s.reason}>
+              {conflict}
+            </p>
+          ))}
+        </div>
+      )}
+      {entry.description && (
+        <details className={s.entryDescription} name={descriptionGroup}>
+          <summary>{t('Описание')}</summary>
+          <p className={s.description}>{t(entry.description)}</p>
+        </details>
+      )}
+    </div>
+  );
+}
+
 export function EntryBadge({ entry }) {
   const badge = entryBadge(entry);
   return badge ? (
@@ -291,37 +313,41 @@ export function EntryBadge({ entry }) {
   ) : null;
 }
 
-function RemoveEntryButton({
-  entry,
-  removal,
-  byId,
-  onRemove,
-  className = 'button button-secondary',
-}) {
+export function ModVersion({ entry }) {
+  const { t } = useTranslation();
+  return <small className={s.modVersion}>{entry.version || t('Версия неизвестна')}</small>;
+}
+
+function removalHint(ids, byId, t) {
+  if (!ids?.length) return '';
+  const names = ids.map((id) => t(byId.get(id).title)).join(', ');
+  return `${t(ids.length === 1 ? 'Также отключится' : 'Также отключатся')} · ${names}`;
+}
+
+function RemoveEntryButton({ entry, removal, byId, onRemove }) {
   const { t } = useTranslation();
   const hintId = useId();
   const label = t(entry.type === 'map' ? 'Отключить карту' : 'Отключить мод');
-  const affected = removal.alsoDisabled.map((id) => t(byId.get(id).title)).join(', ');
+  const hint = removalHint(removal.alsoDisabled, byId, t);
   return (
     <span className={s.removeControl}>
       <button
         type="button"
-        className={className}
+        className="button button-secondary"
         aria-label={`${label} — ${t(entry.title)}`}
-        aria-describedby={affected ? hintId : undefined}
+        aria-describedby={hint ? hintId : undefined}
         onClick={() => onRemove(removal.selection)}
       >
         {label}
-        {affected && (
+        {hint && (
           <span className={s.removeWarning} aria-hidden="true">
             !
           </span>
         )}
       </button>
-      {affected && (
+      {hint && (
         <span id={hintId} className={s.removeHint}>
-          {t(removal.alsoDisabled.length === 1 ? 'Также отключится' : 'Также отключатся')} ·{' '}
-          {affected}
+          {hint}
         </span>
       )}
     </span>
@@ -348,11 +374,16 @@ export function OrderList({
           topFile.get(file.entry.id) === file.key ? removals?.get(file.entry.id) : undefined;
         return (
           <li key={file.key}>
-            <div className={s.orderHeader}>
-              {image && <img className={s.thumb} src={image} alt="" loading="lazy" />}
+            <div className={s.orderRow}>
+              {image && (
+                <div className={s.orderCover}>
+                  <img src={image} alt="" loading="lazy" />
+                </div>
+              )}
               <div className={s.orderTitle}>
                 <strong>{file.name}</strong>
                 <div className={s.orderBadges}>
+                  <ModVersion entry={file.entry} />
                   <EntryBadge entry={file.entry} />
                   {file.entry.paid && <span className={s.paid}>{t('Платная')}</span>}
                 </div>
@@ -374,24 +405,24 @@ export function OrderList({
                   </>
                 )}
               </div>
+              {(removal || (showLinks && link)) && (
+                <div className={s.orderActions}>
+                  {showLinks && link && (
+                    <ExternalLink className="button" href={link}>
+                      {t('Скачать')}
+                    </ExternalLink>
+                  )}
+                  {removal && (
+                    <RemoveEntryButton
+                      entry={file.entry}
+                      removal={removal}
+                      byId={byId}
+                      onRemove={onRemove}
+                    />
+                  )}
+                </div>
+              )}
             </div>
-            {(removal || (showLinks && link)) && (
-              <div className={s.orderActions}>
-                {showLinks && link && (
-                  <ExternalLink className="button" href={link}>
-                    {t('Скачать')}
-                  </ExternalLink>
-                )}
-                {removal && (
-                  <RemoveEntryButton
-                    entry={file.entry}
-                    removal={removal}
-                    byId={byId}
-                    onRemove={onRemove}
-                  />
-                )}
-              </div>
-            )}
           </li>
         );
       })}

@@ -479,6 +479,34 @@ export function validateCatalog(catalog, draft = false) {
       preset.version === undefined || text(preset.version),
       `Invalid combo version: ${preset.id}`,
     );
+    if (preset.releases !== undefined) {
+      const { releases } = preset;
+      check(
+        Array.isArray(releases) &&
+          uniqueList(
+            releases.map((release) => release?.version),
+            text,
+          ) &&
+          releases.every(
+            ({ date, entries }, index) =>
+              validDate(date) &&
+              (index === 0 || date >= releases[index - 1].date) &&
+              Array.isArray(entries) &&
+              uniqueList(
+                entries.map((entry) => entry?.id),
+                (id) => text(id) && idPattern.test(id),
+              ) &&
+              entries.every(
+                ({ title, version }) => text(title) && (version === undefined || text(version)),
+              ),
+          ),
+        `Invalid release history: ${preset.id}`,
+      );
+      check(
+        draft || !releases.length || releases.at(-1).version === preset.version,
+        `Версия сборки должна совпадать с последним выпуском — ${preset.id}`,
+      );
+    }
     const fileName = presetFileName(catalog, preset);
     check(!presetFileNames.has(fileName), `Имя файла сборки уже используется — ${fileName}`);
     presetFileNames.add(fileName);

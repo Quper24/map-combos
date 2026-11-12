@@ -12,16 +12,32 @@ export function readBuilderDraft() {
   }
 }
 
-export function restorePresetFileSlugs(catalog, publishedCatalogs) {
+export function restorePublishedPresetMetadata(catalog, publishedCatalogs) {
   const published = publishedCatalogs.find(
     (release) => catalogKey(release) === catalogKey(catalog),
   );
   if (!published) return catalog;
 
-  const publishedSlugs = new Map(published.presets.map(({ id, fileSlug }) => [id, fileSlug]));
+  const publishedById = new Map(published.presets.map((preset) => [preset.id, preset]));
   const usedNames = new Set(catalog.presets.map((preset) => presetFileName(catalog, preset)));
   const presets = catalog.presets.map((preset) => {
-    const fileSlug = publishedSlugs.get(preset.id);
+    const { fileSlug, releases } = publishedById.get(preset.id) ?? {};
+    if (releases?.length) {
+      const latest = releases.at(-1);
+      const publishedVersions = new Set(releases.map(({ version }) => version));
+      const draftIndex =
+        preset.releases?.findIndex(({ version }) => version === latest.version) ?? -1;
+      const newer = draftIndex < 0 ? [] : preset.releases.slice(draftIndex + 1);
+      preset = {
+        ...preset,
+        releases: [
+          ...releases,
+          ...newer.filter(
+            ({ version, date }) => !publishedVersions.has(version) && date >= latest.date,
+          ),
+        ],
+      };
+    }
     if (preset.fileSlug || !fileSlug) return preset;
 
     const next = { ...preset, fileSlug };
