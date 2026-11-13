@@ -46,6 +46,7 @@ export default function Mods() {
             ['all', 'Все'],
             ['mod', 'Моды'],
             ['plugin', 'Плагины'],
+            ['app', 'Программы'],
           ].map(([value, label]) => (
             <button
               key={value}
@@ -89,7 +90,7 @@ export default function Mods() {
             <div className={s.modBody}>
               <div className={s.tags}>
                 <span className="badge badge-green">
-                  {t(mod.type === 'plugin' ? 'Плагин' : 'Мод')}
+                  {t({ mod: 'Мод', plugin: 'Плагин', app: 'Программа' }[mod.type])}
                 </span>
                 {mod.games.map((id) => (
                   <span key={id} className="badge">

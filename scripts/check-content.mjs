@@ -202,7 +202,7 @@ for (const mod of mods) {
       Number.isFinite(mod.order) && mod.order >= 0,
       `${mod.id}: order must be a non-negative number`,
     );
-  check(['mod', 'plugin'].includes(mod.type), `${mod.id}: invalid type`);
+  check(['mod', 'plugin', 'app'].includes(mod.type), `${mod.id}: invalid type`);
   check(
     Array.isArray(mod.games) &&
       mod.games.length &&

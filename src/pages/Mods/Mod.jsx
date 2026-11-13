@@ -76,7 +76,7 @@ export default function Mod() {
       </div>
       {mod.notice && <aside className={s.notice}>{t(mod.notice)}</aside>}
       <section className={`section prose ${s.description}`}>
-        <h2>{t(mod.type === 'plugin' ? 'О плагине' : 'О модификации')}</h2>
+        <h2>{t({ mod: 'О модификации', plugin: 'О плагине', app: 'О программе' }[mod.type])}</h2>
         {mod.description.map((entry, index) =>
           typeof entry === 'string' ? (
             <p key={index}>{t(entry)}</p>
@@ -101,7 +101,15 @@ export default function Mod() {
         )}
         {mod.features.length > 0 && (
           <>
-            <h2>{t(mod.type === 'plugin' ? 'Возможности плагина' : 'Что меняется в игре')}</h2>
+            <h2>
+              {t(
+                {
+                  mod: 'Что меняется в игре',
+                  plugin: 'Возможности плагина',
+                  app: 'Возможности программы',
+                }[mod.type],
+              )}
+            </h2>
             <ul>
               {mod.features.map((feature) => (
                 <li key={feature}>{t(feature)}</li>

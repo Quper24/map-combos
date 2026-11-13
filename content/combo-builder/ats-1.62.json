@@ -60,24 +60,6 @@
       "dlcs": []
     },
     {
-      "id": "ats-quper-background-map-optional",
-      "title": "ATS Quper Background Map (Optional)",
-      "type": "mod",
-      "autoWithMaps": true,
-      "link": "https://sharemods.com/uola2i89k54o/ATS_Quper_Background_Map.scs.html",
-      "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
-      "description": "Подложка для карты",
-      "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-13",
-      "paid": false,
-      "files": [
-        "ATS Quper Background Map",
-        "ATS Quper Background Map (Optional)"
-      ],
-      "requires": [],
-      "dlcs": []
-    },
-    {
       "id": "atsrealisticeconomy",
       "title": "Realistic Economy ATS by Quper",
       "type": "mod",
@@ -515,6 +497,22 @@
         "alaska-north-to-the-future"
       ],
       "dlcs": []
+    },
+    {
+      "id": "ats-quper-background-map",
+      "title": "ATS Quper Background Map (Optional)",
+      "type": "mod",
+      "autoWithMaps": true,
+      "link": "https://sharemods.com/uola2i89k54o/ATS_Quper_Background_Map.scs.html",
+      "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
+      "version": "1.3",
+      "addedAt": "2026-11-13",
+      "paid": false,
+      "files": [
+        "ATS Quper Background Map"
+      ],
+      "requires": [],
+      "dlcs": []
     }
   ],
   "order": [
@@ -654,10 +652,6 @@
     {
       "key": "ATSRealisticEconomy",
       "name": "Realistic Economy ATS by Quper"
-    },
-    {
-      "key": "ATS Quper Background Map (Optional)",
-      "name": "ATS Quper Background Map (Optional)"
     },
     {
       "key": "ATS Quper Background Map",
