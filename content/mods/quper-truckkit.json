@@ -1,12 +1,12 @@
 {
-  "id": "quper-simulator",
+  "id": "quper-truckkit",
   "order": 1,
   "type": "app",
-  "title": "Quper Simulator",
+  "title": "Quper TruckKit",
   "games": ["ets2", "ats"],
   "summary": "Помощник для профилей, сохранений и порядка модов в ETS2 и ATS.",
   "description": [
-    "Quper Simulator помогает попробовать другую сборку на копии профиля, перенести любимый тягач или скопировать настройки руля между ETS2 и ATS.",
+    "Quper TruckKit помогает попробовать другую сборку на копии профиля, перенести любимый тягач или скопировать настройки руля между ETS2 и ATS.",
     "Программа работает на Windows 10 и 11 (64 бит) и запускается без установки. Профили и сохранения обрабатываются локально. Перед изменением файлов программа создаёт резервную копию."
   ],
   "features": [
@@ -17,27 +17,31 @@
     "Выбирай сборку из встроенного каталога. Программа покажет недостающие файлы и применит порядок загрузки, когда все нужные моды на месте."
   ],
   "installation": [
-    "Скачай архив, распакуй его и запусти Quper Simulator.exe. Выбери ETS2 или ATS.",
+    "Скачай архив, распакуй его и запусти Quper TruckKit.exe. Выбери ETS2 или ATS.",
     "Если нужный профиль использует Steam Cloud, отключи эту опцию в настройках профиля. Сделай ручное сохранение и полностью закрой игру перед внесением изменений.",
     "Подробные инструкции есть во вкладке «Как пользоваться»."
   ],
-  "cover": "/img/mods/quper-simulator-profiles.png",
-  "coverAlt": "Копирование профиля",
+  "cover": "/img/mods/quper-truckkit-cover.png",
+  "coverAlt": "Quper TruckKit · ETS2 + ATS",
   "images": [
     {
-      "src": "/img/mods/quper-simulator-trucks.png",
+      "src": "/img/mods/quper-truckkit-profiles.png",
+      "alt": "Копирование профиля"
+    },
+    {
+      "src": "/img/mods/quper-truckkit-trucks.png",
       "alt": "Перенос тягачей"
     },
     {
-      "src": "/img/mods/quper-simulator-money.png",
+      "src": "/img/mods/quper-truckkit-money.png",
       "alt": "Деньги и опыт"
     },
     {
-      "src": "/img/mods/quper-simulator-maps.png",
+      "src": "/img/mods/quper-truckkit-maps.png",
       "alt": "Порядок модов для сборки карт"
     },
     {
-      "src": "/img/mods/quper-simulator-controls.png",
+      "src": "/img/mods/quper-truckkit-controls.png",
       "alt": "Перенос настроек управления"
     }
   ],
@@ -45,8 +49,9 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/pnm631f1nr3r/Quper_Simulator.rar.html"
+      "url": "https://sharemods.com/ikcdw5w1jlss/Quper_TruckKit.rar.html"
     }
   ],
-  "videoIds": []
+  "videoIds": [],
+  "version": "0.2.1"
 }

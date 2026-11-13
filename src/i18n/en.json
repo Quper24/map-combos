@@ -882,14 +882,14 @@
   "О программе": "About the app",
   "Возможности программы": "App features",
   "Помощник для профилей, сохранений и порядка модов в ETS2 и ATS.": "A desktop tool for profiles, saves, and mod load order in ETS2 and ATS.",
-  "Quper Simulator помогает попробовать другую сборку на копии профиля, перенести любимый тягач или скопировать настройки руля между ETS2 и ATS.": "Quper Simulator lets you try another map combo on a copy of your profile, transfer a favorite truck, or copy wheel settings between ETS2 and ATS.",
   "Программа работает на Windows 10 и 11 (64 бит) и запускается без установки. Профили и сохранения обрабатываются локально. Перед изменением файлов программа создаёт резервную копию.": "The app runs on 64-bit Windows 10 and 11 without installation. Profiles and saves are processed locally. The app creates a backup before changing files.",
   "Скопируй профиль под новым именем, чтобы протестировать другую сборку отдельно от основного профиля.": "Copy a profile under a new name to test another combo separately from your main profile.",
   "Переноси тягачи вместе с тюнингом между профилями одной игры. В гараже назначения нужны свободные места, а в игре должны быть доступны моды и DLC тягача.": "Transfer trucks with their upgrades between profiles in the same game. The destination garage needs free slots, and the truck’s mods and DLC must be available.",
   "Копируй кнопки, оси и обратную связь руля между профилями, в том числе из ETS2 в ATS и обратно.": "Copy button assignments, axes, and wheel force feedback between profiles, including from ETS2 to ATS and back.",
   "Добавляй деньги и опыт в выбранное сохранение. Итоговые значения видны до применения.": "Add money and experience to a selected save. Preview the resulting values before applying changes.",
   "Выбирай сборку из встроенного каталога. Программа покажет недостающие файлы и применит порядок загрузки, когда все нужные моды на месте.": "Choose a combo from the built-in catalog. The app identifies missing files and applies the load order when all required mods are present.",
-  "Скачай архив, распакуй его и запусти Quper Simulator.exe. Выбери ETS2 или ATS.": "Download and extract the archive, run Quper Simulator.exe, and select ETS2 or ATS.",
   "Если нужный профиль использует Steam Cloud, отключи эту опцию в настройках профиля. Сделай ручное сохранение и полностью закрой игру перед внесением изменений.": "If the profile uses Steam Cloud, disable it in the profile settings. Make a manual save and close the game before making changes.",
-  "Подробные инструкции есть во вкладке «Как пользоваться».": "See the How to Use tab for detailed instructions."
+  "Подробные инструкции есть во вкладке «Как пользоваться».": "See the How to Use tab for detailed instructions.",
+  "Quper TruckKit помогает попробовать другую сборку на копии профиля, перенести любимый тягач или скопировать настройки руля между ETS2 и ATS.": "Quper TruckKit lets you try another map combo on a copy of your profile, transfer a favorite truck, or copy wheel settings between ETS2 and ATS.",
+  "Скачай архив, распакуй его и запусти Quper TruckKit.exe. Выбери ETS2 или ATS.": "Download and extract the archive, run Quper TruckKit.exe, and select ETS2 or ATS."
 }

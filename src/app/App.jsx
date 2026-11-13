@@ -79,6 +79,10 @@ export default function App() {
               path="mods/cargo-control-ets2"
               element={<Navigate to="/mods/cargo-control" replace />}
             />
+            <Route
+              path="mods/quper-simulator"
+              element={<Navigate to="/mods/quper-truckkit" replace />}
+            />
             <Route path="mods/:slug" element={<Mod />} />
             <Route path="videos" element={<Videos />} />
             <Route path="server-guide" element={<ServerGuide />} />
