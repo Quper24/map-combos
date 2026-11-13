@@ -891,5 +891,8 @@
   "Если нужный профиль использует Steam Cloud, отключи эту опцию в настройках профиля. Сделай ручное сохранение и полностью закрой игру перед внесением изменений.": "If the profile uses Steam Cloud, disable it in the profile settings. Make a manual save and close the game before making changes.",
   "Подробные инструкции есть во вкладке «Как пользоваться».": "See the How to Use tab for detailed instructions.",
   "Quper TruckKit помогает попробовать другую сборку на копии профиля, перенести любимый тягач или скопировать настройки руля между ETS2 и ATS.": "Quper TruckKit lets you try another map combo on a copy of your profile, transfer a favorite truck, or copy wheel settings between ETS2 and ATS.",
-  "Скачай архив, распакуй его и запусти Quper TruckKit.exe. Выбери ETS2 или ATS.": "Download and extract the archive, run Quper TruckKit.exe, and select ETS2 or ATS."
+  "Скачай архив, распакуй его и запусти Quper TruckKit.exe. Выбери ETS2 или ATS.": "Download and extract the archive, run Quper TruckKit.exe, and select ETS2 or ATS.",
+  "Опыт автобусов и оценки доставок": "Coach XP and delivery ratings",
+  "ETS2 (Coaches). Во вкладке «Деньги и опыт» можно добавлять опыт автобусов отдельно от опыта грузовиков.": "ETS2 (Coaches). In the Money and Experience tab, you can add coach XP separately from truck XP.",
+  "ATS (Road Trip). Оценки завершённых курьерских доставок можно повысить до 5 звёзд. Перед сохранением программа показывает, сколько оценок изменится.": "ATS (Road Trip). You can raise the ratings of completed courier deliveries to 5 stars. Before saving, the app shows how many ratings will change."
 }

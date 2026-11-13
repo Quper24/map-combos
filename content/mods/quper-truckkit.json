@@ -49,9 +49,19 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/ikcdw5w1jlss/Quper_TruckKit.rar.html"
+      "url": "https://sharemods.com/bhl9pmkjk9xu/Quper_TruckKit.rar.html"
     }
   ],
   "videoIds": [],
-  "version": "0.2.1"
+  "version": "0.2.2",
+  "changelog": [
+    {
+      "version": "0.2.2",
+      "title": "Опыт автобусов и оценки доставок",
+      "changes": [
+        "ETS2 (Coaches). Во вкладке «Деньги и опыт» можно добавлять опыт автобусов отдельно от опыта грузовиков.",
+        "ATS (Road Trip). Оценки завершённых курьерских доставок можно повысить до 5 звёзд. Перед сохранением программа показывает, сколько оценок изменится."
+      ]
+    }
+  ]
 }
