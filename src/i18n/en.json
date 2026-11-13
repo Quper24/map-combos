@@ -895,5 +895,6 @@
   "ETS2 (Coaches). Во вкладке «Деньги и опыт» можно добавлять опыт автобусов отдельно от опыта грузовиков.": "ETS2 (Coaches). In the Money and Experience tab, you can add coach XP separately from truck XP.",
   "ATS (Road Trip). Оценки завершённых курьерских доставок можно повысить до 5 звёзд. Перед сохранением программа показывает, сколько оценок изменится.": "ATS (Road Trip). You can raise the ratings of completed courier deliveries to 5 stars. Before saving, the app shows how many ratings will change.",
   "Добавлять опыт можно только после достижения 1-го уровня.": "You can add XP only after reaching level 1.",
-  "Добавляй деньги и опыт в выбранное сохранение. Итоговые значения видны до применения. Добавлять опыт можно только после достижения 1-го уровня.": "Add money and experience to a selected save. Preview the resulting values before applying changes. You can add XP only after reaching level 1."
+  "Добавляй деньги и опыт в выбранное сохранение. Итоговые значения видны до применения. Добавлять опыт можно только после достижения 1-го уровня.": "Add money and experience to a selected save. Preview the resulting values before applying changes. You can add XP only after reaching level 1.",
+  "Добавлен английский язык интерфейса.": "Added English interface support."
 }

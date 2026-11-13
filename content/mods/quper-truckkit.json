@@ -49,12 +49,16 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/r4rmdzjf0f1l/Quper_TruckKit.zip.html"
+      "url": "https://sharemods.com/wsvczyejbtpl/Quper_TruckKit.rar.html"
     }
   ],
   "videoIds": [],
-  "version": "0.2.3",
+  "version": "0.2.4",
   "changelog": [
+    {
+      "version": "0.2.4",
+      "changes": ["Добавлен английский язык интерфейса."]
+    },
     {
       "version": "0.2.3",
       "changes": ["Добавлять опыт можно только после достижения 1-го уровня."]
