@@ -8,7 +8,7 @@
     "test": "node --test tests/*.test.mjs",
     "dev": "vite",
     "editor": "node scripts/start-editor.mjs",
-    "build": "node scripts/check-content.mjs && vite build && node scripts/prepare-hosting.mjs",
+    "build": "node scripts/check-content.mjs && vite build && node scripts/prepare-hosting.mjs && node scripts/export-desktop-catalog.mjs . dist/app/catalog.json",
     "check:content": "node scripts/check-content.mjs",
     "check:migration": "node scripts/check-content.mjs --baseline",
     "format": "prettier --write src content scripts index.html vite.config.js",
