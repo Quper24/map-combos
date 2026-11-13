@@ -4,17 +4,17 @@
   "entries": [
     {
       "id": "coast-to-coast-v2-24-62-0",
-      "title": "Coast to Coast",
+      "title": "Coast to Coast v2.24.62.1",
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/coast-to-coast",
       "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp",
       "description": "Эта карта, начатая в 2016 году, добавляет все смежные штаты, не охваченные базовой игрой и дополнениями к ней. Карта всё ещё находится в разработке, так что наслаждайтесь ею такой, какая она есть!",
-      "version": "v2.24.62.0",
+      "version": "v2.24.62.1",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-13",
       "paid": false,
       "files": [
-        "Coast_to_Coast_v2.24.62.0"
+        "Coast_to_Coast_v2.24.62.1"
       ],
       "requires": [],
       "dlcs": []
@@ -64,13 +64,14 @@
       "title": "ATS Quper Background Map (Optional)",
       "type": "mod",
       "autoWithMaps": true,
-      "link": "https://sharemods.com/vsousybch91r/ATS_Quper_Background_Map___40_Optional__41_.scs.html",
+      "link": "https://sharemods.com/uola2i89k54o/ATS_Quper_Background_Map.scs.html",
       "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
       "description": "Подложка для карты",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-13",
       "paid": false,
       "files": [
+        "ATS Quper Background Map",
         "ATS Quper Background Map (Optional)"
       ],
       "requires": [],
@@ -97,12 +98,12 @@
       "title": "QS ATS Map Final Fix",
       "type": "fix",
       "autoWithMaps": true,
-      "link": "https://sharemods.com/r2gx25vop6sv/QS_ATS_Map_Final_Fix.scs.html",
+      "link": "https://sharemods.com/so67esnvd6d4/QS_ATS_Map_Final_Fix.scs.html",
       "image": "/img/combo-builder/aa7d23f9c73c9a8817448bf4904c4d5dcdd3becf3d860b7e8e80fe680217d45e.webp",
       "description": "Общие фиксы для сборки карт",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-13",
       "paid": false,
       "files": [
         "QS_ATS_Map_Final_Fix"
@@ -448,11 +449,11 @@
       "id": "qs-ats-alaska-nttf-traffic-fix",
       "title": "QS ATS Alaska NTTF Traffic Fix",
       "type": "fix",
-      "link": "https://sharemods.com/2qmn3ltgrrla/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
+      "link": "https://sharemods.com/653m7kdn9ohn/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
       "image": "/img/combo-builder/fcfa1ff9caf08fc0ebec025e004de01340acb4b7ab9608bdc74e3dd74c219934.webp",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "addedAt": "2026-11-10",
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-13",
       "paid": false,
       "files": [
         "QS_ATS_Alaska_NTTF_Traffic_Fix"
@@ -497,6 +498,23 @@
         "alaska-nttf-to-promods-rc-v0-6-7-2"
       ],
       "dlcs": []
+    },
+    {
+      "id": "alaska-nttf-midnight-sun-optional-addon",
+      "title": "Alaska NTTF - Midnight Sun Addon",
+      "type": "mod",
+      "link": "https://alaskamod.com/",
+      "image": "/img/combo-builder/82e24ec214806418a63bee4de0c0b7396287c1115f76579b1ec5ce764455f072.webp",
+      "version": "0.8.9 beta",
+      "addedAt": "2026-11-13",
+      "paid": true,
+      "files": [
+        "Alaska_NTTF_Midnight_Sun_Optional_Addon"
+      ],
+      "requires": [
+        "alaska-north-to-the-future"
+      ],
+      "dlcs": []
     }
   ],
   "order": [
@@ -533,9 +551,8 @@
       "name": "QS ATS PBA Reforma Service Fix"
     },
     {
-      "key": "Coast_to_Coast_v2.24.62.0",
-      "name": "Coast to Coast v2.24.62.0",
-      "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp"
+      "key": "Coast_to_Coast_v2.24.62.1",
+      "name": "Coast to Coast v2.24.62.1"
     },
     {
       "key": "Mexssimap_0_82_162_Public",
@@ -599,6 +616,10 @@
       "name": "Alaska - North to the future"
     },
     {
+      "key": "Alaska_NTTF_Midnight_Sun_Optional_Addon",
+      "name": "Alaska NTTF - Midnight Sun Addon"
+    },
+    {
       "key": "QS_ATS_Alaska_NTTF_Traffic_Fix",
       "name": "QS ATS Alaska NTTF Traffic Fix"
     },
@@ -636,6 +657,10 @@
     },
     {
       "key": "ATS Quper Background Map (Optional)",
+      "name": "ATS Quper Background Map (Optional)"
+    },
+    {
+      "key": "ATS Quper Background Map",
       "name": "ATS Quper Background Map (Optional)"
     }
   ],
