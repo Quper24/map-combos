@@ -517,6 +517,12 @@
   color: var(--green);
 }
 
+.presetSelectionColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .choices {
   min-width: 0;
   border: 1px solid var(--line);
@@ -562,6 +568,9 @@
 }
 
 @media (max-width: 760px) {
+  .presetSelectionColumns {
+    grid-template-columns: 1fr;
+  }
   .columns,
   .form,
   .fileParts {

@@ -222,7 +222,8 @@
       "dlcs": [],
       "description": "Добавляет автобусы различных моделей в дорожный трафик.",
       "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-017.jpg",
-      "link": "https://www.modland.net/euro-truck-simulator-2/other/bigbus-traffic-pack.html"
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/bigbus-traffic-pack.html",
+      "version": "2.0.18"
     },
     {
       "id": "mod-ets2-162-018",
@@ -1024,7 +1025,8 @@
       "dlcs": [],
       "description": "Изменяет появление трафика в зависимости от страны и региона.",
       "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-075.jpg",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=323222"
+      "link": "https://forum.scssoft.com/viewtopic.php?t=323222",
+      "version": "21.8.15"
     },
     {
       "id": "mod-ets2-162-076",
@@ -1135,16 +1137,16 @@
       "id": "mod-ets2-162-083",
       "title": "Abasstreppas wheel pack Truck and Trailers 25.06",
       "type": "mod",
+      "link": "https://drive.google.com/file/d/1R0d9x3nEWnz4Gs2jLWXPBSPXkV0dyXST/view?usp=drive_link",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-083.jpg",
+      "description": "Добавляет новые модели колёс и дисков для грузовиков и прицепов.",
+      "version": "01.10",
+      "paid": false,
       "files": [
         "abasstreppas_wheelpack_for_truck_and_trailers"
       ],
       "requires": [],
-      "requiresAny": [],
-      "dlcs": [],
-      "description": "Добавляет новые модели колёс и дисков для грузовиков и прицепов.",
-      "version": "01.10",
-      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-083.jpg",
-      "link": "https://drive.google.com/file/d/1R0d9x3nEWnz4Gs2jLWXPBSPXkV0dyXST/view?usp=drive_link"
+      "dlcs": []
     },
     {
       "id": "mod-ets2-162-084",
@@ -3438,6 +3440,60 @@
         "mod-ets2-162-155"
       ],
       "dlcs": []
+    },
+    {
+      "id": "temp-maps",
+      "title": "Место для карт",
+      "type": "mod",
+      "link": "https://sharemods.com/u3fw43p52h5c/temp_maps.scs.html",
+      "image": "/img/combo-builder/6ed6b029837c65ce2ab8dc1600e80a88101d6478a9545d41aa5385b503902613.webp",
+      "description": "ЗАГЛУЧШКА ДЛЯ КАРТ",
+      "version": "0.1",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "temp_maps"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "ets2-global-background-map-country-colours",
+      "title": "ETS2 Global Background Map - Country Colours",
+      "type": "mod",
+      "link": "https://www.leobmods.net/mod?id=ets2-global-background-map-country-colours",
+      "image": "/img/combo-builder/1e11dc0d9ff0934aa632c01ecb207df8c1f45bef7f4fc87247a814b0158997d0.webp",
+      "description": "Подложка под карты для всего мира, раскрашена каждая страна",
+      "version": "2.9",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "ETS2 Global Background Map - Country Colours"
+      ],
+      "requires": [
+        "mod-ets2-162-005"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-wheelpack-bus-compatibility",
+      "title": "MAN 6x2 Wheel Fix - QUPER SIMULATOR",
+      "type": "fix",
+      "link": "https://sharemods.com/1un3fk9dp0eu/QS_Wheelpack_Bus_Compatibility.scs.html",
+      "image": "/img/combo-builder/2be106d2b6129c85aab8ab5d6f15c880d2254ceb8e54611ad8dcb23819eff919.webp",
+      "description": "Исправляет вылет при выборе колёс J Ruda и Abass",
+      "version": "1.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "QS_Wheelpack_Bus_Compatibility"
+      ],
+      "requires": [],
+      "requiresAny": [
+        "mod-ets2-162-077",
+        "mod-ets2-162-083"
+      ],
+      "dlcs": []
     }
   ],
   "order": [
@@ -3446,6 +3502,11 @@
       "name": "PNG: PE-BASE1",
       "logVersion": "1.5",
       "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-001.jpg"
+    },
+    {
+      "key": "temp_maps",
+      "name": "Место для карт",
+      "logVersion": "0"
     },
     {
       "key": "Arnooks Container Pack",
@@ -3916,6 +3977,11 @@
       "name": "Abasstreppas wheel pack Truck and Trailers 25.06",
       "logVersion": "01.10",
       "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-083.jpg"
+    },
+    {
+      "key": "QS_Wheelpack_Bus_Compatibility",
+      "name": "MAN 6x2 Wheel Fix - QUPER SIMULATOR",
+      "logVersion": "1.0"
     },
     {
       "key": "EU Trailer Pack Container Trailer",
@@ -4865,8 +4931,21 @@
       "name": "ETS2 Global Background Map",
       "logVersion": "2.8",
       "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-242.jpg"
+    },
+    {
+      "key": "ETS2 Global Background Map - Country Colours",
+      "name": "ETS2 Global Background Map - Country Colours",
+      "logVersion": "2.9"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "entries": [
+        "ets2-global-background-map-country-colours",
+        "mod-ets2-162-242"
+      ],
+      "reason": "Подложки"
+    }
+  ],
   "presets": []
 }

@@ -14,6 +14,7 @@ import {
   parseModOrder,
   reconcilePresetSelections,
   replaceEntryFiles,
+  resolveCombo,
   suggestModVersion,
   validateCatalog,
 } from '../../lib/comboBuilder';
@@ -1331,12 +1332,7 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
               ))}
             </div>
           </fieldset>
-          <Choices
-            label="Выбранные карты и моды"
-            name="selection"
-            selected={preset?.selection}
-            items={catalog.entries.filter(isSelectable)}
-          />
+          <PresetSelection catalog={catalog} initialSelection={preset?.selection} />
           <div className={s.actions}>
             <button className="button">{t('Сохранить сборку')}</button>
             {preset && (
@@ -1376,5 +1372,153 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
         </details>
       )}
     </section>
+  );
+}
+
+function PresetSelection({ catalog, initialSelection = [] }) {
+  const { t } = useTranslation();
+  const [selection, setSelection] = useState(initialSelection);
+  const [query, setQuery] = useState('');
+  const [profile, setProfile] = useState(null);
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+  const selectable = catalog.entries.filter(isSelectable);
+  const selected = new Set(selection);
+  const filter = query.trim().toLowerCase();
+  const matches = selectable.filter(({ id, title }) =>
+    `${title} ${t(title)} ${id}`.toLowerCase().includes(filter),
+  );
+
+  async function loadProfile(event) {
+    const file = event.currentTarget.files[0];
+    event.currentTarget.value = '';
+    if (!file) return;
+    setProfile(null);
+    setError('');
+    setBusy(true);
+    try {
+      if (!file.name.toLowerCase().endsWith('.sii') || !file.size || file.size > MAX_PROFILE_SIZE)
+        throw new Error('Выбери непустой profile.sii размером до 300 КБ.');
+      const files = parseModOrder(await processProfile(await file.arrayBuffer()));
+      const keys = new Set(files.map(({ key }) => key));
+      const next = selectable
+        .filter((entry) => entry.files.some((key) => keys.has(key)))
+        .map(({ id }) => id);
+      const result = resolveCombo(catalog, next);
+      const resolvedKeys = new Set(result.files.map(({ key }) => key));
+      setProfile({
+        selection: next,
+        missing: files.filter(({ key }) => !resolvedKeys.has(key)),
+        extra: result.files.filter(({ key }) => !keys.has(key)),
+      });
+    } catch (cause) {
+      setError(cause.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <fieldset className={s.choices}>
+      <legend>{t('Состав сборки')}</legend>
+      <div className={s.toolbar}>
+        <Field
+          label="Загрузить profile.sii для состава сборки"
+          type="file"
+          accept=".sii"
+          disabled={busy}
+          onChange={loadProfile}
+        />
+        <Field
+          label="Поиск карт и модов"
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+      </div>
+      {error && <p role="alert">{t(error)}</p>}
+      {profile && (
+        <div className={s.importPreview}>
+          <p role="status">
+            {t('Найдено карт и модов — ')}
+            {profile.selection.length}
+          </p>
+          {[
+            ['Файлы профиля вне итоговой сборки', profile.missing],
+            ['Дополнительные файлы в итоговой сборке', profile.extra],
+          ].map(
+            ([label, files]) =>
+              files.length > 0 && (
+                <details key={label}>
+                  <summary>
+                    {t(label)} · {files.length}
+                  </summary>
+                  <ul className={s.importList}>
+                    {files.map(({ key, name }) => (
+                      <li key={key}>
+                        {name} · {key}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ),
+          )}
+          <div className={s.actions}>
+            <button
+              type="button"
+              className="button"
+              disabled={!profile.selection.length}
+              onClick={() => {
+                setSelection(profile.selection);
+                setQuery('');
+                setProfile(null);
+              }}
+            >
+              {t('Заменить выбор составом из профиля')}
+            </button>
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={() => setProfile(null)}
+            >
+              {t('Отмена')}
+            </button>
+          </div>
+        </div>
+      )}
+      {selection.map((id) => (
+        <input key={id} type="hidden" name="selection" value={id} />
+      ))}
+      <div className={s.presetSelectionColumns}>
+        {[
+          ['Доступные карты и моды', false, selectable.length - selected.size],
+          ['Выбранные карты и моды', true, selected.size],
+        ].map(([label, checked, count]) => (
+          <fieldset key={label} className={s.choices}>
+            <legend>
+              {t(label)} · {count}
+            </legend>
+            <div className={s.choiceList}>
+              {matches
+                .filter(({ id }) => selected.has(id) === checked)
+                .map(({ id, title }) => (
+                  <label key={id}>
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() =>
+                        setSelection((ids) =>
+                          checked ? ids.filter((item) => item !== id) : [...ids, id],
+                        )
+                      }
+                    />{' '}
+                    {t(title)}
+                  </label>
+                ))}
+            </div>
+          </fieldset>
+        ))}
+      </div>
+    </fieldset>
   );
 }
