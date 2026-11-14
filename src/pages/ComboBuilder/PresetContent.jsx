@@ -16,7 +16,7 @@ import {
   OrderDownloads,
   OrderList,
   OrderProfileInstall,
-  RemovePaidMapsButton,
+  RemovePaidEntriesButton,
 } from './ComboBuilder';
 import ShareCombo from './ShareCombo';
 import s from './ComboBuilder.module.css';
@@ -57,7 +57,7 @@ export default function PresetContent({ catalog, preset, share = true }) {
             </ExternalLink>
           )}
           {!server && (
-            <RemovePaidMapsButton
+            <RemovePaidEntriesButton
               catalog={catalog}
               selection={selection}
               active={result.active}

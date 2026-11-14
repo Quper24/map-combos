@@ -105,9 +105,9 @@ export function addToCombo(catalog, selection, id) {
   return { selection: conflicts.length ? selection : next, conflicts };
 }
 
-export function removePaidMaps(catalog, selection, active) {
+export function removePaidEntries(catalog, selection, active) {
   const ids = catalog.entries
-    .filter((entry) => entry.type === 'map' && entry.paid && active.has(entry.id))
+    .filter((entry) => entry.paid && active.has(entry.id))
     .map(({ id }) => id);
   return ids.length ? removeFromCombo(catalog, selection, ids, active).selection : selection;
 }

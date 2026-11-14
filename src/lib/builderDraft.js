@@ -1,4 +1,4 @@
-import { validateCatalog } from './comboBuilder.js';
+import { isSelectable, validateCatalog } from './comboBuilder.js';
 import { catalogKey, presetFileName } from './presetCombos.js';
 
 export const builderDraftKey = 'quperSimulator_comboDraft';
@@ -54,4 +54,21 @@ export function restorePublishedPresetMetadata(catalog, publishedCatalogs) {
     return next;
   });
   return { ...catalog, presets };
+}
+
+export function restoreProjectPresets(catalog, publishedCatalogs) {
+  const restored = restorePublishedPresetMetadata(catalog, publishedCatalogs);
+  const published = publishedCatalogs.find((item) => catalogKey(item) === catalogKey(catalog));
+  if (!published) return restored;
+
+  const ids = new Set(restored.presets.map(({ id }) => id));
+  const names = new Set(restored.presets.map((preset) => presetFileName(catalog, preset)));
+  const selectable = new Set(catalog.entries.filter(isSelectable).map(({ id }) => id));
+  const missing = published.presets.filter(
+    (preset) =>
+      !ids.has(preset.id) &&
+      !names.has(presetFileName(catalog, preset)) &&
+      preset.selection.every((id) => selectable.has(id)),
+  );
+  return missing.length ? { ...restored, presets: [...restored.presets, ...missing] } : restored;
 }

@@ -10,7 +10,7 @@ import {
   entryTypeLabels,
   isSelectable,
   removeFromCombo,
-  removePaidMaps,
+  removePaidEntries,
   resolveCombo,
   serializeModOrder,
 } from '../../lib/comboBuilder';
@@ -102,13 +102,13 @@ export default function ComboBuilder() {
   );
 }
 
-export function RemovePaidMapsButton({ catalog, selection, active, onRemove }) {
+export function RemovePaidEntriesButton({ catalog, selection, active, onRemove }) {
   const { t } = useTranslation();
-  const next = removePaidMaps(catalog, selection, active);
+  const next = removePaidEntries(catalog, selection, active);
   if (next === selection) return null;
   return (
     <button type="button" className="button button-secondary" onClick={() => onRemove(next)}>
-      {t('Убрать платные карты')}
+      {t('Убрать платные карты и моды')}
     </button>
   );
 }
@@ -175,7 +175,7 @@ export function Builder({ catalog, initialSelection = [], share = false }) {
             {t('Готовый профиль')}
           </ExternalLink>
         )}
-        <RemovePaidMapsButton
+        <RemovePaidEntriesButton
           catalog={catalog}
           selection={selection}
           active={result.active}
