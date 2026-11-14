@@ -1,6 +1,6 @@
 import site from '../../content/site.json';
 import { attachPresetFiles, catalogKey, presetCombo } from '../lib/presetCombos.js';
-import { readBuilderDraft } from '../lib/builderDraft.js';
+import { readBuilderDrafts } from '../lib/builderDraft.js';
 
 const newestFirst = (left, right) => Number(right.split('.')[1]) - Number(left.split('.')[1]);
 
@@ -30,11 +30,11 @@ export const currentComboVersion = [
 
 export function editorDraftCombos() {
   if (!(import.meta.env.DEV && import.meta.env.MODE === 'editor')) return [];
-  const catalog = readBuilderDraft();
-  if (!catalog) return [];
-  const exported = builderCatalogs.find((release) => catalogKey(release) === catalogKey(catalog));
-  const exportedIds = new Set(exported?.presets.map(({ id }) => id));
-  return catalog.presets
-    .filter(({ id }) => !exportedIds.has(id))
-    .map((preset) => ({ ...presetCombo(catalog, preset), draft: true }));
+  return readBuilderDrafts().catalogs.flatMap((catalog) => {
+    const exported = builderCatalogs.find((release) => catalogKey(release) === catalogKey(catalog));
+    const exportedIds = new Set(exported?.presets.map(({ id }) => id));
+    return catalog.presets
+      .filter(({ id }) => !exportedIds.has(id))
+      .map((preset) => ({ ...presetCombo(catalog, preset), draft: true }));
+  });
 }

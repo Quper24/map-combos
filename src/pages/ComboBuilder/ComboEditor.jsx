@@ -10,9 +10,11 @@ import {
   isSelectable,
   mergeModOrders,
   moveMod,
+  parseGameLogVersions,
   parseModOrder,
   reconcilePresetSelections,
   replaceEntryFiles,
+  suggestModVersion,
   validateCatalog,
 } from '../../lib/comboBuilder';
 import { processProfile } from '../../lib/processProfile';
@@ -21,7 +23,7 @@ import { Builder } from './ComboBuilder';
 import PresetContent from './PresetContent';
 import {
   builderDraftKey,
-  readBuilderDraft,
+  readBuilderDrafts,
   restorePublishedPresetMetadata,
 } from '../../lib/builderDraft';
 import { attachPresetFiles, catalogKey, presetFileName, presetTags } from '../../lib/presetCombos';
@@ -93,11 +95,18 @@ function Choices({ label, name, items, selected = [], onChecked, disabled = fals
 
 export default function ComboEditor() {
   const { t } = useTranslation();
-  const [catalog, setCatalog] = useState(() =>
-    restorePublishedPresetMetadata(readBuilderDraft() || blank, builderCatalogs),
-  );
+  const [drafts, setDrafts] = useState(() => {
+    const saved = readBuilderDrafts();
+    return {
+      ...saved,
+      catalogs: saved.catalogs.map((item) => restorePublishedPresetMetadata(item, builderCatalogs)),
+    };
+  });
+  const catalog = drafts.catalogs.find((item) => catalogKey(item) === drafts.active) || blank;
   const [notice, setNotice] = useState('');
   const [pending, setPending] = useState(null);
+  const [logVersions, setLogVersions] = useState(null);
+  const [updateVersions, setUpdateVersions] = useState(false);
   const [revision, setRevision] = useState(0);
   const [showPreview, setShowPreview] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -114,17 +123,32 @@ export default function ComboEditor() {
       setNotice(error.message);
       return false;
     }
-    setCatalog(next);
+    const active = catalogKey(next);
+    const updated = {
+      active,
+      catalogs: [...drafts.catalogs.filter((item) => catalogKey(item) !== active), next],
+    };
+    setDrafts(updated);
     try {
-      localStorage.setItem(builderDraftKey, JSON.stringify(next));
+      localStorage.setItem(builderDraftKey, JSON.stringify(updated));
       setNotice(successNotice);
     } catch {
       setNotice('Хранилище браузера недоступно. Скачай черновик JSON.');
     }
     return true;
   }
+  function openRelease(next) {
+    if (!commit(restorePublishedPresetMetadata(next, builderCatalogs))) return;
+    setPending(null);
+    setLogVersions(null);
+    setUpdateVersions(false);
+    setEntryRequest({ id: '', files: [], key: 0 });
+    setShowPreview(false);
+    setRevision((number) => number + 1);
+  }
   async function loadOrder(file) {
     setPending(null);
+    setUpdateVersions(false);
     const isProfile = file.name.toLowerCase().endsWith('.sii');
     if (isProfile && (!file.size || file.size > MAX_PROFILE_SIZE))
       throw new Error('Выбери непустой profile.sii размером до 300 КБ.');
@@ -132,6 +156,15 @@ export default function ComboEditor() {
     const files = parseModOrder(source);
     if (!files.length) throw new Error('The template contains no files');
     setPending(files);
+  }
+  async function loadGameLog(file) {
+    setLogVersions(null);
+    setUpdateVersions(false);
+    const versions = parseGameLogVersions(await file.text());
+    if (![...versions.values()].some(Boolean))
+      throw new Error('В журнале не найдены версии загруженных модов.');
+    setLogVersions(versions);
+    setNotice('');
   }
   async function readInput(event, handler) {
     const files = Array.from(event.currentTarget.files);
@@ -158,17 +191,27 @@ export default function ComboEditor() {
       [{ ...base, presets: base.presets.filter(({ id }) => !importedIds.has(id)) }],
       presetFiles,
     );
-    validateCatalog(next, true);
-    if (commit(restorePublishedPresetMetadata(next, builderCatalogs))) {
-      setPending(null);
-      setEntryRequest({ id: '', files: [], key: 0 });
-      setShowPreview(false);
-      setRevision((number) => number + 1);
-    }
+    openRelease(next);
   }
   function applyImport(preferImported) {
-    const { order } = mergeModOrders(catalog.order, pending, preferImported);
-    if (commit({ ...catalog, order })) setPending(null);
+    const { order } = mergeModOrders(catalog.order, pending || [], preferImported);
+    const nextOrder = order.map((file) => {
+      const logVersion = logVersions?.get(file.key);
+      return logVersion ? { ...file, logVersion } : file;
+    });
+    const entries = updateVersions
+      ? catalog.entries.map((entry) => {
+          const version = versionUpdates.get(entry.id);
+          return version
+            ? { ...entry, version, updatedAt: entry.version ? catalogDate() : entry.updatedAt }
+            : entry;
+        })
+      : catalog.entries;
+    if (commit({ ...catalog, order: nextOrder, entries })) {
+      setPending(null);
+      setLogVersions(null);
+      setUpdateVersions(false);
+    }
   }
   function exportCatalog(publish) {
     try {
@@ -202,6 +245,19 @@ export default function ComboEditor() {
     }
   }
   const imported = pending && mergeModOrders(catalog.order, pending);
+  const logMatches = (imported?.order || catalog.order).filter(({ key }) => logVersions?.get(key));
+  const versionUpdates = new Map();
+  if (pending || logVersions) {
+    const importedByKey = new Map((pending || []).map((file) => [file.key, file]));
+    for (const file of logMatches) {
+      importedByKey.set(file.key, { ...file, logVersion: logVersions.get(file.key) });
+    }
+    for (const entry of catalog.entries) {
+      const files = entry.files.map((key) => importedByKey.get(key)).filter(Boolean);
+      const version = suggestModVersion(files);
+      if (version && version !== entry.version) versionUpdates.set(entry.id, version);
+    }
+  }
   const displayOrder = imported ? [...imported.order].reverse() : [];
   const incomingOrder = imported?.orderConflict
     ? mergeModOrders(catalog.order, pending, true).order.slice().reverse()
@@ -213,7 +269,7 @@ export default function ComboEditor() {
         <h1>{t('Редактор каталога')}</h1>
         <p>
           {t(
-            'Начни с импорта профиля ниже. JSON создаётся в редакторе и нужен для переноса черновика или публикации каталога.',
+            'Сначала выбери игру и версию, затем импортируй профиль. Черновики каталогов сохраняются отдельно.',
           )}
         </p>
         <Link className="text-link" to="/combos/builder">
@@ -228,7 +284,18 @@ export default function ComboEditor() {
             key={`${catalog.game}-${catalog.version}`}
             onSubmit={(event) => {
               const form = getForm(event);
-              commit({ ...catalog, game: form.get('game'), version: form.get('version') });
+              if (busy) return;
+              const release = {
+                ...blank,
+                game: form.get('game'),
+                version: valueOf(form, 'version'),
+              };
+              const key = catalogKey(release);
+              if (key === catalogKey(catalog) && drafts.active) return;
+              const existing = [...drafts.catalogs, ...builderCatalogs].find(
+                (item) => catalogKey(item) === key,
+              );
+              openRelease(existing || release);
             }}
           >
             <label className={s.field}>
@@ -243,9 +310,11 @@ export default function ComboEditor() {
               name="version"
               defaultValue={catalog.version}
               required
-              pattern="1\.\d+"
+              pattern={String.raw`1\.\d+`}
             />
-            <button className="button button-secondary">{t('Сохранить')}</button>
+            <button className="button button-secondary" disabled={busy}>
+              {t('Открыть каталог')}
+            </button>
           </form>
           <div className={s.toolbar}>
             <Field
@@ -272,8 +341,13 @@ export default function ComboEditor() {
         <section className={s.panel}>
           <h2>{t('Импорт порядка')}</h2>
           <p>
+            <strong>
+              {t('Импорт в каталог')} · {catalog.game.toUpperCase()} {catalog.version}
+            </strong>
+          </p>
+          <p>
             {t(
-              'Выбери profile.sii или TXT с active_mods. Редактор прочитает список модов в браузере и покажет порядок перед импортом.',
+              'Выбери profile.sii или TXT с active_mods. Игра берётся из открытого каталога. Редактор покажет порядок перед импортом.',
             )}
           </p>
           <div className={s.toolbar}>
@@ -284,23 +358,69 @@ export default function ComboEditor() {
               disabled={busy}
               onChange={(event) => readInput(event, ([file]) => loadOrder(file))}
             />
+            <Field
+              label="Загрузить game.log.txt"
+              type="file"
+              accept=".txt,.log"
+              disabled={busy}
+              onChange={(event) => readInput(event, ([file]) => loadGameLog(file))}
+            />
           </div>
-          {pending && (
+          {(pending || logVersions) && (
             <div className={s.importPreview}>
-              <p>
-                {t('Всего файлов после объединения — ')}
-                {displayOrder.length}
-              </p>
-              {imported.orderConflict && (
+              {logVersions && (
+                <p role="status">
+                  {t('Файлов с версией из журнала — ')}
+                  {logMatches.length}
+                  {!logMatches.length && (
+                    <> · {t('Загрузи профиль из той же игры и с теми же модами.')}</>
+                  )}
+                </p>
+              )}
+              {versionUpdates.size > 0 && (
+                <>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={updateVersions}
+                      onChange={(event) => setUpdateVersions(event.target.checked)}
+                    />{' '}
+                    {t('Обновить версии существующих записей')}
+                  </label>
+                  <ul>
+                    {catalog.entries
+                      .filter(({ id }) => versionUpdates.has(id))
+                      .map((entry) => (
+                        <li key={entry.id}>
+                          {t(entry.title)} · {entry.version || t('Версия неизвестна')} →{' '}
+                          {versionUpdates.get(entry.id)}
+                        </li>
+                      ))}
+                  </ul>
+                </>
+              )}
+              {pending && (
+                <p>
+                  {t(
+                    catalog.order.length
+                      ? 'Всего файлов после объединения — '
+                      : 'Файлов в загруженном профиле — ',
+                  )}
+                  {displayOrder.length}
+                </p>
+              )}
+              {imported?.orderConflict && (
                 <p className={s.reason}>
                   {t('Общие файлы идут в разном порядке. Выбери, какой порядок сохранить.')}
                 </p>
               )}
-              <ol className={s.importList}>
-                {displayOrder.map((file) => (
-                  <li key={file.key}>{file.name}</li>
-                ))}
-              </ol>
+              {pending && (
+                <ol className={s.importList}>
+                  {displayOrder.map((file) => (
+                    <li key={file.key}>{file.name}</li>
+                  ))}
+                </ol>
+              )}
               {incomingOrder.length > 0 && (
                 <details>
                   <summary>{t('Предпросмотр порядка из файла')}</summary>
@@ -312,21 +432,35 @@ export default function ComboEditor() {
                 </details>
               )}
               <div className={s.actions}>
-                <button className="button" onClick={() => applyImport(false)}>
+                <button
+                  className="button"
+                  disabled={busy || (!pending && !logMatches.length)}
+                  onClick={() => applyImport(false)}
+                >
                   {t(
-                    !catalog.order.length
-                      ? 'Импортировать порядок'
-                      : imported.orderConflict
-                        ? 'Сохранить текущий порядок'
-                        : 'Объединить списки',
+                    !pending
+                      ? 'Импортировать версии из журнала'
+                      : !catalog.order.length
+                        ? 'Импортировать порядок'
+                        : imported.orderConflict
+                          ? 'Сохранить текущий порядок'
+                          : 'Объединить списки',
                   )}
                 </button>
-                {imported.orderConflict && (
-                  <button className="button" onClick={() => applyImport(true)}>
+                {imported?.orderConflict && (
+                  <button className="button" disabled={busy} onClick={() => applyImport(true)}>
                     {t('Применить порядок из файла')}
                   </button>
                 )}
-                <button className="button button-secondary" onClick={() => setPending(null)}>
+                <button
+                  className="button button-secondary"
+                  disabled={busy}
+                  onClick={() => {
+                    setPending(null);
+                    setLogVersions(null);
+                    setUpdateVersions(false);
+                  }}
+                >
                   {t('Отмена')}
                 </button>
               </div>
@@ -590,7 +724,7 @@ function OrderEditor({ catalog, commit }) {
           onSubmit={(event) => {
             const form = getForm(event);
             const key = file?.key || valueOf(form, 'key');
-            const next = readFileFields(form, key);
+            const next = { ...file, ...readFileFields(form, key) };
             if (
               commit({
                 ...catalog,
@@ -763,6 +897,9 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
   const byKey = new Map(catalog.order.map((file) => [file.key, file]));
+  const suggestedVersion = suggestModVersion(
+    [...(entry?.files || []), ...seedFiles].map((key) => byKey.get(key)).filter(Boolean),
+  );
   const owned = new Set(
     catalog.entries.filter((item) => item.id !== id).flatMap((item) => item.files),
   );
@@ -866,7 +1003,14 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           type="url"
           defaultValue={entry?.link}
         />
-        <Field label="Версия мода" name="modVersion" defaultValue={entry?.version} />
+        <Field
+          label="Версия мода"
+          name="modVersion"
+          defaultValue={entry?.version ?? suggestedVersion}
+          placeholder={
+            seedFiles.length && !suggestedVersion ? t('Версия не распознана') : undefined
+          }
+        />
         <Field
           label="Дата добавления"
           name="addedAt"

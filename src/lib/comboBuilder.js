@@ -193,6 +193,45 @@ export function parseModOrder(source) {
   });
 }
 
+export function parseGameLogVersions(source) {
+  const versions = new Map();
+  for (const [, key, version] of source.matchAll(
+    /\[mod_package_manager\] Mod "[^\r\n]*" has been mount(?:ed)?\. \(package_name: (.+?), version: ([^\r\n]*?), source: [^\r\n]+\)\s*$/gm,
+  )) {
+    const value = version.trim();
+    if (!value || /^(?:unknown|none|n\/a|<[^>]+>|-)$/i.test(value)) continue;
+    const previous = versions.get(key.trim());
+    versions.set(key.trim(), previous === undefined || previous === value ? value : null);
+  }
+  return versions;
+}
+
+export function suggestModVersion(files) {
+  const logged = new Set(files.map(({ logVersion }) => logVersion).filter(Boolean));
+  if (logged.size) return logged.size === 1 ? logged.values().next().value : undefined;
+  const versions = new Set();
+  for (const { key, name } of files) {
+    const fileVersions = new Set();
+    for (const value of [key, name]) {
+      for (const [, version] of value.matchAll(
+        /(?:^|[\s_.([-])(?:version|ver\.?|v)[\s_-]*(\d+(?:\.\d+)*[a-z]?)(?=$|[\s_.)\]-])/gi,
+      )) {
+        fileVersions.add(version);
+      }
+    }
+    if (!fileVersions.size) {
+      const version = name
+        .trim()
+        .match(/\s(\d+(?:\.\d+)+[a-z]?)(?:\s+(?:public|def|map|models?|assets))?$/i)?.[1];
+      if (version && !/\b(?:ATS|ETS2)\s+\d+(?:\.\d+)+[a-z]?$/i.test(name.trim())) {
+        fileVersions.add(version);
+      }
+    }
+    for (const version of fileVersions) versions.add(version);
+  }
+  return versions.size === 1 ? versions.values().next().value : undefined;
+}
+
 export function mergeModOrders(saved, imported, preferImported = false) {
   const primary = preferImported ? imported : saved;
   const secondary = preferImported ? saved : imported;

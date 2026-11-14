@@ -3,13 +3,18 @@ import { catalogKey, presetFileName } from './presetCombos.js';
 
 export const builderDraftKey = 'quperSimulator_comboDraft';
 
-export function readBuilderDraft() {
+export function readBuilderDrafts() {
   try {
     const raw = localStorage.getItem(builderDraftKey);
-    return raw ? validateCatalog(JSON.parse(raw), true) : null;
+    if (raw) {
+      const saved = JSON.parse(raw);
+      const catalogs = (saved.catalogs ?? [saved]).map((catalog) => validateCatalog(catalog, true));
+      return { active: saved.active ?? (catalogs[0] ? catalogKey(catalogs[0]) : null), catalogs };
+    }
   } catch {
-    return null;
+    // Ignore unreadable browser data.
   }
+  return { active: null, catalogs: [] };
 }
 
 export function restorePublishedPresetMetadata(catalog, publishedCatalogs) {
