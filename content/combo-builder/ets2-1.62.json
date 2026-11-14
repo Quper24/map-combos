@@ -1,0 +1,4872 @@
+{
+  "game": "ets2",
+  "version": "1.62",
+  "entries": [
+    {
+      "id": "mod-ets2-162-001",
+      "title": "PNG: PhotorealisticExperience",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ets2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-001.jpg",
+      "description": "Базовый файл от PNG",
+      "version": "1.5",
+      "paid": true,
+      "files": [
+        "PNG_PE_WEATHER_CLASSIC",
+        "PNG_PE_BASE_2",
+        "PNG_PE_BASE_1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-003",
+      "title": "Arnook's Container Pack",
+      "type": "mod",
+      "files": [
+        "Arnooks Container Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет контейнеры разных типов и размеров для перевозок.",
+      "version": "21",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-003.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3294653064"
+    },
+    {
+      "id": "mod-ets2-162-004",
+      "title": "Arnook's Container Pack - Train AddOn",
+      "type": "mod",
+      "link": "https://www.mediafire.com/file/njrirx7miyv4y43/Arnooks_Container_Pack_Train_AddOn_Jan25-2026.zip/file",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-004.jpg",
+      "description": "Мод добавляет раскраски контейнеров от Arnook для поездов",
+      "version": "20",
+      "paid": false,
+      "files": [
+        "Arnooks Container Pack Train AddOn Jan25-2026"
+      ],
+      "requires": [
+        "mod-ets2-162-003"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-005",
+      "title": "Sound Fixes Pack 26.66",
+      "type": "mod",
+      "files": [
+        "Sound Fixes Pack - ETS2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает и расширяет звуковое оформление игры: транспорта, окружения и других игровых объектов.",
+      "version": "26.77",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-005.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/sounds/sound-fixes-pack"
+    },
+    {
+      "id": "mod-ets2-162-006",
+      "title": "Real Train Lengths ETS2",
+      "type": "mod",
+      "files": [
+        "Realistic Train Lengths"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Изменяет длину железнодорожных составов, делая её более реалистичной.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-006.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3209674677"
+    },
+    {
+      "id": "mod-ets2-162-007",
+      "title": "Real Train Sounds ETS2",
+      "type": "mod",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2439106226",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-007.jpg",
+      "description": "Улучшает звуки поездов в игре.",
+      "version": "1.62",
+      "paid": false,
+      "files": [
+        "Real Train Sounds ETS2"
+      ],
+      "requires": [
+        "mod-ets2-162-005"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-008",
+      "title": "Reefer trailer sound addon for ETS2",
+      "type": "mod",
+      "files": [
+        "ets2_reefer_sound_addon"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет звуки работы холодильных установок рефрижераторных прицепов.",
+      "version": "2026NOV05",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-008.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?l=russian&id=2655223039"
+    },
+    {
+      "id": "mod-ets2-162-009",
+      "title": "Better Flares - Base v4.9.1",
+      "type": "mod",
+      "link": "https://modsfire.com/31QyAgOdHa36eTw",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-009.jpg",
+      "description": "Базовая часть мода Better Flares, улучшающая световые эффекты.",
+      "version": "4.9.1",
+      "paid": false,
+      "files": [
+        "bf_h2_5000K_hal_v4.9.1",
+        "bf_h1_proj_ece1_v4.9.1",
+        "bf_base_v4.9.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-010",
+      "title": "Better Flares - Traffic Addon ETS2 v4.9.1",
+      "type": "mod",
+      "link": "https://modsfire.com/6AE271I90278xIH",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-010.jpg",
+      "description": "Улучшает световые эффекты фар и огней транспорта в трафике.",
+      "version": "4.9.1",
+      "paid": false,
+      "files": [
+        "bf_ta_ets2_v4.9.1"
+      ],
+      "requires": [
+        "mod-ets2-162-005",
+        "mod-ets2-162-009"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-011",
+      "title": "Better Flares - City Lights Addon with Fog v4.9",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-011.jpg",
+      "description": "Улучшает эффекты городского освещения с учётом тумана.",
+      "version": "4.9",
+      "paid": false,
+      "files": [
+        "bf_city_lights_fog_v4.9"
+      ],
+      "requires": [
+        "mod-ets2-162-009"
+      ],
+      "dlcs": [],
+      "link": "https://modsfire.com/31QyAgOdHa36eTw"
+    },
+    {
+      "id": "mod-ets2-162-014",
+      "title": "AI Traffic Pack by Jazzycat 21.8.15",
+      "type": "mod",
+      "files": [
+        "ai_traffic_pack_by_Jazzycat_v21.8.15"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Расширяет разнообразие легковых автомобилей в дорожном трафике.",
+      "version": "21.8.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-014.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/ai-traffic-pack-by-jazzycat-23.html"
+    },
+    {
+      "id": "mod-ets2-162-015",
+      "title": "Egon's AI traffic pack v1.2",
+      "type": "mod",
+      "files": [
+        "Egons_ai_traffic_pack_1.2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные автомобили в трафик.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-015.jpg",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=349108"
+    },
+    {
+      "id": "mod-ets2-162-016",
+      "title": "Bus Traffic Pack by Jazzycat v18.2.1",
+      "type": "mod",
+      "files": [
+        "bus_traffic_pack_by_Jazzycat_v18.2.1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в трафик автобусы различных моделей.",
+      "version": "18.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-016.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/bus-traffic-pack-by-jazzycat-22.html"
+    },
+    {
+      "id": "mod-ets2-162-017",
+      "title": "BigBus Traffic Pack",
+      "type": "mod",
+      "files": [
+        "BigBus_traffic_pack_v2.0.18"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет автобусы различных моделей в дорожный трафик.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-017.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/bigbus-traffic-pack.html"
+    },
+    {
+      "id": "mod-ets2-162-018",
+      "title": "Classic Cars Traffic Pack by TrafficManiac v11.6.15",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-018.jpg",
+      "version": "11.6.15",
+      "paid": false,
+      "files": [
+        "classic_cars_traffic_pack_by_TrafficManiac_v11.6.15_jaz",
+        "classic_cars_traffic_pack_by_TrafficManiac_v11.6.15_base"
+      ],
+      "requires": [
+        "mod-ets2-162-014"
+      ],
+      "dlcs": [],
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/classic-cars-traffic-pack-by-trafficmaniac-7.html"
+    },
+    {
+      "id": "mod-ets2-162-020",
+      "title": "Sport Cars Traffic Pack by TrafficManiac v12.7.16",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-020.jpg",
+      "version": "12.7.16",
+      "paid": false,
+      "files": [
+        "sport_cars_traffic_pack_by_TrafficManiac_v12.7.16_jaz",
+        "sport_cars_traffic_pack_by_TrafficManiac_v12.7.16_base"
+      ],
+      "requires": [
+        "mod-ets2-162-014"
+      ],
+      "dlcs": [],
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/sport-cars-traffic-pack-by-trafficmaniac-8.html"
+    },
+    {
+      "id": "mod-ets2-162-022",
+      "title": "NFS Traffic Pack 1.61",
+      "type": "mod",
+      "files": [
+        "NFS Traffic Pack 1.61"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет автомобили из серии игр Need for Speed в дорожный трафик.",
+      "version": "1.61",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-022.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/need-for-speed-traffic-pack-2.html"
+    },
+    {
+      "id": "mod-ets2-162-023",
+      "title": "BMW Traffic Pack",
+      "type": "mod",
+      "files": [
+        "bmw_traffic_pack161"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет автомобили BMW в дорожный трафик.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-023.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/bmw-traffic-pack-3.html"
+    },
+    {
+      "id": "mod-ets2-162-024",
+      "title": "Police & ambulance extended pack",
+      "type": "mod",
+      "files": [
+        "Police_ambulance_extended_pack_1.56.1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные полицейские автомобили и машины скорой помощи в дорожный трафик.",
+      "version": "1.56.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-024.jpg",
+      "link": "https://sharemods.com/ia83ey5opjeh/Police_ambulance_extended_pack_1.56.1.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-025",
+      "title": "emergency traffic pack",
+      "type": "mod",
+      "files": [
+        "emergency_traffic_pack_v1.2.19"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет автомобили экстренных служб в дорожный трафик.",
+      "version": "1.2.19",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-025.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/emergency-traffic-pack.html"
+    },
+    {
+      "id": "mod-ets2-162-026",
+      "title": "Emergency vehicles by Egon 1.3",
+      "type": "mod",
+      "files": [
+        "Emergency_vehicles_by_Egon_v1.3"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет автомобили экстренных служб в дорожный трафик.",
+      "version": "1.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-026.jpg",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=340341"
+    },
+    {
+      "id": "mod-ets2-162-027",
+      "title": "Taxi_Traffic_Pack 3.5.14",
+      "type": "mod",
+      "files": [
+        "Taxi_Traffic_Pack_v3.5.14"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет разнообразные автомобили такси в дорожный трафик.",
+      "version": "3.5.14",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-027.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/taxi-traffic-pack.html"
+    },
+    {
+      "id": "mod-ets2-162-028",
+      "title": "AI Taxicabs pack by Egon 1.5.1",
+      "type": "mod",
+      "files": [
+        "Taxicabs_AI_pack_by_Egon_1.5.1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "version": "1.5.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-028.jpg",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=338441"
+    },
+    {
+      "id": "mod-ets2-162-029",
+      "title": "Density add-on for Jazzycat mods - AI Taxicabs pack by Egon 1.6",
+      "type": "fix",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=338441",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-029.jpg",
+      "description": "Добавляет различные модели такси в дорожный трафик.",
+      "version": "1.6",
+      "paid": false,
+      "files": [
+        "Taxicabs_AI_pack_by_Egon_1.5.1_density_addon"
+      ],
+      "requires": [
+        "mod-ets2-162-014",
+        "mod-ets2-162-028"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-030",
+      "title": "Painted Truck Traffic by Jazzycat v18.7.15",
+      "type": "mod",
+      "files": [
+        "painted_truck_traffic_pack_by_Jazzycat_v18.7.15"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в дорожный трафик грузовики с разнообразными фирменными раскрасками.",
+      "version": "18.7.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-030.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/painted-truck-traffic-pack-by-jazzycat-22.html"
+    },
+    {
+      "id": "mod-ets2-162-031",
+      "title": "Painted BDF Traffic Pack by Jazzycat 15.6.14",
+      "type": "mod",
+      "files": [
+        "painted_bdf_traffic_pack_by_Jazzycat_v15.6.14"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в дорожный трафик раскрашенные грузовики и сцепки BDF со сменными кузовами.",
+      "version": "15.6.14",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-031.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/painted-bdf-traffic-pack-by-jazzycat-20.html"
+    },
+    {
+      "id": "mod-ets2-162-032",
+      "title": "Truck Traffic Pack by Jazzycat v9.1.20",
+      "type": "mod",
+      "files": [
+        "truck_traffic_pack_by_Jazzycat_v9.1.20"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет большой набор разнообразных грузовиков в дорожный трафик.",
+      "version": "9.1.20",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-032.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/truck-traffic-pack-by-jazzycat-11.html"
+    },
+    {
+      "id": "mod-ets2-162-033",
+      "title": "Trailers Traffic Pack by TrafficManiac v12.10.1",
+      "type": "mod",
+      "files": [
+        "trailers_traffic_pack_by_TrafficManiac_v12.10.1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет разнообразные модели прицепов в дорожный трафик.",
+      "version": "12.10.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-033.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/trailers-traffic-pack-by-trafficmaniac-7.html"
+    },
+    {
+      "id": "mod-ets2-162-034",
+      "title": "Real European Traffic Pack",
+      "type": "mod",
+      "files": [
+        "Real European Traffic Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в европейский дорожный трафик реалистичные раскраски грузовиков, компаний и опознавательные наклейки.",
+      "version": "1.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-034.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3826117403"
+    },
+    {
+      "id": "mod-ets2-162-035",
+      "title": "Tuned Truck Traffic Pack by TrafficManiac v7.1.14",
+      "type": "mod",
+      "files": [
+        "tuned_truck_traffic_pack_by_TrafficManiac_v7.1.14"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в дорожный трафик тюнингованные грузовики с различными вариантами внешнего оформления.",
+      "version": "7.1.14",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-035.jpg",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/tuned-truck-traffic-pack-by-trafficmaniac-2.html"
+    },
+    {
+      "id": "mod-ets2-162-036",
+      "title": "Russian Trailer Traffic Pack",
+      "type": "mod",
+      "files": [
+        "Russian Trailer Traffic Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет российские прицепы в дорожный трафик.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-036.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3150377069"
+    },
+    {
+      "id": "mod-ets2-162-037",
+      "title": "russian-company",
+      "type": "mod",
+      "files": [
+        "russian-company"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски российских компаний для грузовиков и прицепов.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-037.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3360991397"
+    },
+    {
+      "id": "mod-ets2-162-038",
+      "title": "Pack skins of Russian companies by Mr.Fox v2.1",
+      "type": "mod",
+      "files": [
+        "skinfox"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски российских компаний для грузовиков и прицепов.",
+      "version": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-038.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2124049997"
+    },
+    {
+      "id": "mod-ets2-162-039",
+      "title": "Skinpack of Ukrainian companies by Mr.Fox",
+      "type": "mod",
+      "files": [
+        "ukrskin"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски украинских компаний для грузовиков и прицепов.",
+      "version": "1.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-039.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2178776116"
+    },
+    {
+      "id": "mod-ets2-162-040",
+      "title": "Skins of Russian transport companies",
+      "type": "mod",
+      "files": [
+        "ruscompanies"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски российских транспортных компаний для грузовиков и прицепов.",
+      "version": "1.0.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-040.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2852602520"
+    },
+    {
+      "id": "mod-ets2-162-041",
+      "title": "Pack skins of Russian companies for Schmitz Cargobull Trailer Pack by Mr.Fox v2.1",
+      "type": "mod",
+      "files": [
+        "shmitzfox"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски российских компаний для прицепов из Schmitz Cargobull Trailer Pack.",
+      "version": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-041.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3353539727"
+    },
+    {
+      "id": "mod-ets2-162-042",
+      "title": "Деловые линии",
+      "type": "mod",
+      "files": [
+        "dellinefox"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменные раскраски транспортной компании «Деловые линии» для грузовиков и прицепов.",
+      "version": "1.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-042.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2204462174"
+    },
+    {
+      "id": "mod-ets2-162-043",
+      "title": "Coca-Cola Skinpack by Mr.Fox",
+      "type": "mod",
+      "files": [
+        "cocacolafox"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски с логотипами Coca-Cola для грузовиков и прицепов.",
+      "version": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-043.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2204468871"
+    },
+    {
+      "id": "mod-ets2-162-044",
+      "title": "Skinpack of Belarusian companies by Mr.Fox",
+      "type": "mod",
+      "files": [
+        "belskin"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски белорусских транспортных и коммерческих компаний для грузовиков и прицепов.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-044.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2166080877"
+    },
+    {
+      "id": "mod-ets2-162-045",
+      "title": "russian shmitz",
+      "type": "mod",
+      "files": [
+        "russian shmitz"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраски российских компаний для прицепов Schmitz Cargobull.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-045.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3353977141"
+    },
+    {
+      "id": "mod-ets2-162-046",
+      "title": "PEK Skin Pack",
+      "type": "mod",
+      "files": [
+        "PEK Skin Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменные раскраски грузовиков и прицепов транспортной компании ПЭК.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-046.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3381365172"
+    },
+    {
+      "id": "mod-ets2-162-047",
+      "title": "Magnit Skin Pack",
+      "type": "mod",
+      "files": [
+        "Magnit Skin Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменные раскраски транспортных средств и прицепов компании «Магнит».",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-047.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3369424878"
+    },
+    {
+      "id": "mod-ets2-162-048",
+      "title": "Kamaz_Trailer",
+      "type": "mod",
+      "files": [
+        "Kamaz_Trailer"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет прицепы для перевозок с оформлением в стиле КамАЗ.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-048.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3357165949"
+    },
+    {
+      "id": "mod-ets2-162-049",
+      "title": "Wildberries Skin Pack",
+      "type": "mod",
+      "files": [
+        "Wildberries Skin Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменные раскраски Wildberries для грузовиков и прицепов.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-049.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3383601924"
+    },
+    {
+      "id": "mod-ets2-162-050",
+      "title": "sotrans",
+      "type": "mod",
+      "files": [
+        "sotrans.zip"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску Sotrans для грузовика или прицепа.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-050.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3282307666"
+    },
+    {
+      "id": "mod-ets2-162-051",
+      "title": "X5 Transport Skin Pack",
+      "type": "mod",
+      "files": [
+        "X5 Transport Skin Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменные раскраски транспортной компании X5 Transport для грузовиков и прицепов.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-051.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3369507063"
+    },
+    {
+      "id": "mod-ets2-162-052",
+      "title": "Skin Ozon by Mr.Fox",
+      "type": "mod",
+      "files": [
+        "ozon"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску Ozon для грузовика или прицепа.",
+      "version": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-052.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2548004551"
+    },
+    {
+      "id": "mod-ets2-162-053",
+      "title": "Russian Traffic by Jazzycat v4.3.6base",
+      "type": "mod",
+      "link": "https://drive.google.com/file/d/15iudqGIoFLFWN0SCZZOztYlvdpAKznRZ/view?usp=drive_link",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-053.jpg",
+      "version": "4.3.6",
+      "paid": false,
+      "files": [
+        "russian_traffic_pack_by_Jazzycat_v4.3.6_def_for_russian_maps",
+        "russian_traffic_pack_by_Jazzycat_v4.3.6_base"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-055",
+      "title": "MAZ traffic pack base",
+      "type": "mod",
+      "link": "https://drive.google.com/file/d/1SciywkR9_hf5OxwySBYqXxRx2LvHM4cF/view?usp=drive_link",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-055.jpg",
+      "description": "Добавляет грузовики МАЗ в дорожный трафик.",
+      "version": "1.49",
+      "paid": false,
+      "files": [
+        "MAZ_traffic_pack_def_for_russian_map",
+        "MAZ_traffic_pack_base"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-057",
+      "title": "ZIL Traffic BASE",
+      "type": "mod",
+      "files": [
+        "ZIL_traffic_pack_base"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовики ЗИЛ в дорожный трафик.",
+      "version": "1.49",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-057.jpg",
+      "link": "https://drive.google.com/file/d/1TaeLGEw5Kez8O8VMD67uvS6abQdBa3d7/view?usp=drive_link"
+    },
+    {
+      "id": "mod-ets2-162-058",
+      "title": "ZIL Traffic def for russian map",
+      "type": "mod",
+      "files": [
+        "ZIL_traffic_pack_def_for_russian_maps"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет определения для появления грузовиков ЗИЛ в трафике на российских картах.",
+      "version": "1.49",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-058.jpg",
+      "link": "https://drive.google.com/file/d/1QZw2Dwpev2ZuxXsuAnPa3jK6MTVnjzhV/view?usp=drive_link"
+    },
+    {
+      "id": "mod-ets2-162-059",
+      "title": "Russian Trailer Traffic Pack RU/BY only",
+      "type": "mod",
+      "files": [
+        "russian_trailer_traffic_pack_ruby_only"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет российские и белорусские прицепы в дорожный трафик России и Беларуси.",
+      "version": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-059.jpg",
+      "link": "https://sharemods.com/r73tnxaib5xk/russian_trailer_traffic_pack_ruby_only.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-060",
+      "title": "Ownable Trailers Megamod",
+      "type": "mod",
+      "files": [
+        "Ownable Trailers Megamod"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет большой выбор собственных прицепов для покупки и использования в перевозках.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-060.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3730021858"
+    },
+    {
+      "id": "mod-ets2-162-061",
+      "title": "ETS2 Traffic Trailers Mega Pack",
+      "type": "mod",
+      "files": [
+        "ETS2 Traffic Trailers Mega Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет большой набор новых прицепов для грузового трафика.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-061.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=russian&id=3701130517"
+    },
+    {
+      "id": "mod-ets2-162-062",
+      "title": "RB18_Actros_byDedan",
+      "type": "mod",
+      "files": [
+        "RB18_Actros_byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску болида Red Bull Racing RB18 для Mercedes-Benz Actros.",
+      "link": "https://sharemods.com/86w5xgncfzho/RB18_Actros_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-063",
+      "title": "RB18trailerbydedan",
+      "type": "mod",
+      "files": [
+        "RB18trailerbydedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску Red Bull Racing RB18 для прицепа.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-063.jpg",
+      "link": "https://sharemods.com/1wbjc5eiee7o/RB18trailerbydedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-064",
+      "title": "RB18 SCANIA byDedan",
+      "type": "mod",
+      "files": [
+        "RB18 SCANIA byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску болида Red Bull Racing RB18 для Scania.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-064.jpg",
+      "link": "https://sharemods.com/31wze54v2hah/RB18_SCANIA_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-065",
+      "title": "RB18 Renaut T byDedan",
+      "type": "mod",
+      "files": [
+        "RB18 Renaut T byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску болида Red Bull Racing RB18 для Renault T.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-065.jpg",
+      "link": "https://sharemods.com/mt6r19c32gd6/RB18_Renaut_T_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-066",
+      "title": "MAN TGX Pikachu by Dedan",
+      "type": "mod",
+      "files": [
+        "MAN TGX Pikachu by Dedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску с Пикачу для MAN TGX.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-066.jpg",
+      "link": "https://sharemods.com/rl4fp4mnqic8/MAN_TGX_Pikachu_by_Dedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-067",
+      "title": "Anime DAF NGD byDedan",
+      "type": "mod",
+      "files": [
+        "Anime DAF NGD byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет аниме-раскраску для DAF NGD.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-067.jpg",
+      "link": "https://sharemods.com/pa171r5061w3/Anime_DAF_NGD_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-068",
+      "title": "GTA SA by Dedan",
+      "type": "mod",
+      "files": [
+        "GTA SA by Dedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску в стиле Grand Theft Auto: San Andreas для грузовика.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-068.jpg",
+      "link": "https://sharemods.com/5jp17qrkeugx/GTA_SA_by_Dedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-069",
+      "title": "GTA VC byDedan",
+      "type": "mod",
+      "files": [
+        "GTA VC byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет раскраску в стиле Grand Theft Auto: Vice City для грузовика.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-069.jpg",
+      "link": "https://sharemods.com/9pxtpra8mi2n/GTA_VC_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-070",
+      "title": "QS byDedan",
+      "type": "mod",
+      "files": [
+        "QS byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменную раскраску Quper Simulator от Dedan.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-070.jpg",
+      "link": "https://sharemods.com/zh2h9e05tm9k/QS_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-071",
+      "title": "QS MAN TGX byDedan",
+      "type": "mod",
+      "files": [
+        "QS MAN TGX byDedan"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменную раскраску Quper Simulator для MAN TGX от Dedan.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-071.jpg",
+      "link": "https://sharemods.com/gqdwgptqsabm/QS_MAN_TGX_byDedan.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-072",
+      "title": "Trucks skins pack QS VTC",
+      "type": "mod",
+      "files": [
+        "QS_trucks_skins_pack_0.0.1-a"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет фирменные раскраски Quper Simulator VTC для грузовиков.",
+      "version": "0.0.1-alpha",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-072.jpg",
+      "link": "https://sharemods.com/pingf6vasjke/QS_trucks_skins_pack_0.0.1-a.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-073",
+      "title": "ETS2 Gennadii Skins Pack v1.3.1",
+      "type": "mod",
+      "files": [
+        "ETS2_Gennadii_Skins_Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет набор раскрасок для грузовиков и прицепов.",
+      "version": "1.3.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-073.jpg",
+      "link": "https://sharemods.com/tc59rl278c9p/ETS2_Gennadii_Skins_Pack.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-074",
+      "title": "MB AeroDynamic Trailer by AM",
+      "type": "mod",
+      "files": [
+        "A-MB AeroDynamic Trailer by AM"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет аэродинамический прицеп Mercedes-Benz.",
+      "version": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-074.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2091516269"
+    },
+    {
+      "id": "mod-ets2-162-075",
+      "title": "Real country AI spawns ADD-ON - v21.8.15",
+      "type": "mod",
+      "files": [
+        "Real_ai_spawns_addon_for_Jazzy_21.8.15"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Изменяет появление трафика в зависимости от страны и региона.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-075.jpg",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=323222"
+    },
+    {
+      "id": "mod-ets2-162-076",
+      "title": "Flarepack for ETS2",
+      "type": "mod",
+      "files": [
+        "ETS2 Flarepack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные световые эффекты для фар и фонарей.",
+      "version": "24.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-076.jpg",
+      "link": "https://byjonruda.com/torpedo-nextgen.html"
+    },
+    {
+      "id": "mod-ets2-162-077",
+      "title": "EU Trailer Pack Wheels",
+      "type": "resource",
+      "link": "https://byjonruda.ru/eu-trailer-pack.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-077.jpg",
+      "description": "Дополнительный мод с колёсами для прицепов из семейства EU Trailer Pack",
+      "version": "3.2.1",
+      "paid": false,
+      "files": [
+        "EU Trailer Pack Wheels"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-078",
+      "title": "Dirt tires and rims pack",
+      "type": "mod",
+      "files": [
+        "Dirt tires and rims pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грязевые шины и диски для грузовиков.",
+      "version": "1.03",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-078.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2645226003"
+    },
+    {
+      "id": "mod-ets2-162-079",
+      "title": "Luminous Tires 发光轮胎",
+      "type": "mod",
+      "files": [
+        "Luminous Tires"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет светящиеся шины для грузовиков.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-079.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3615346800"
+    },
+    {
+      "id": "mod-ets2-162-080",
+      "title": "Real Tyres Mod",
+      "type": "mod",
+      "files": [
+        "Real_Tyres_Mod_6.3"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет более реалистичные текстуры автомобильных шин.",
+      "version": "6.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-080.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=645501409&searchtext="
+    },
+    {
+      "id": "mod-ets2-162-081",
+      "title": "Real Trailer Tyres Mod",
+      "type": "mod",
+      "files": [
+        "real_trailer_tyres_mod_18"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает внешний вид шин прицепов, добавляя более реалистичные текстуры.",
+      "version": "1.8",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-081.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=brazilian&id=1503412219"
+    },
+    {
+      "id": "mod-ets2-162-082",
+      "title": "No More Slippery Tires ETS2",
+      "type": "mod",
+      "files": [
+        "No More Slippery Tires ETS2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Уменьшает скольжение шин и улучшает сцепление колёс с дорогой.",
+      "version": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-082.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3477173019"
+    },
+    {
+      "id": "mod-ets2-162-083",
+      "title": "Abasstreppas wheel pack Truck and Trailers 25.06",
+      "type": "mod",
+      "files": [
+        "abasstreppas_wheelpack_for_truck_and_trailers"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет новые модели колёс и дисков для грузовиков и прицепов.",
+      "version": "01.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-083.jpg",
+      "link": "https://drive.google.com/file/d/1R0d9x3nEWnz4Gs2jLWXPBSPXkV0dyXST/view?usp=drive_link"
+    },
+    {
+      "id": "mod-ets2-162-084",
+      "title": "EU Trailer Pack Container Trailer",
+      "type": "mod",
+      "link": "https://byjonruda.ru/eu-trailer-pack.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-084.jpg",
+      "description": "Контейнерный полуприцеп для перевозки морских контейнеров. В описании набора также упоминается специальная конфигурация для SpecTransGroup.",
+      "version": "3.2.1",
+      "paid": true,
+      "files": [
+        "EU Trailer Pack Container Trailer"
+      ],
+      "requires": [
+        "mod-ets2-162-077"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-085",
+      "title": "EU Trailer Pack Refrigerated Trailer",
+      "type": "mod",
+      "link": "https://byjonruda.ru/eu-trailer-pack.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-085.jpg",
+      "description": "Рефрижераторный полуприцеп для продуктов питания и других грузов, требующих температурного режима.",
+      "version": "3.2.1",
+      "paid": true,
+      "files": [
+        "EU Trailer Pack Refrigerated Trailer"
+      ],
+      "requires": [
+        "mod-ets2-162-077"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-086",
+      "title": "EU Trailer Pack Food Tank Trailer",
+      "type": "mod",
+      "link": "https://byjonruda.ru/eu-trailer-pack.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-086.jpg",
+      "description": "Пищевая цистерна для жидких пищевых продуктов, например молока и пищевых масел. Это не обычная топливная цистерна.",
+      "version": "3.2.1",
+      "paid": true,
+      "files": [
+        "EU Trailer Pack Food Tank Trailer"
+      ],
+      "requires": [
+        "mod-ets2-162-077"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-087",
+      "title": "EU Trailer Pack Curtain Trailer",
+      "type": "mod",
+      "link": "https://byjonruda.ru/eu-trailer-pack.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-087.jpg",
+      "description": "Шторный полуприцеп с боковыми сдвижными тентами. Подходит для перевозки палет, коробок, строительных материалов и обычных генеральных грузов.",
+      "version": "3.2.1",
+      "paid": true,
+      "files": [
+        "EU Trailer Pack Curtain Trailer"
+      ],
+      "requires": [
+        "mod-ets2-162-077"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-088",
+      "title": "EU Trailer Pack Tipper Trailer",
+      "type": "mod",
+      "link": "https://byjonruda.ru/eu-trailer-pack.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-088.jpg",
+      "description": "Самосвальный полуприцеп для перевозки сыпучих грузов: песка, щебня и других строительных материалов.",
+      "version": "3.2.1",
+      "paid": true,
+      "files": [
+        "EU Trailer Pack Tipper Trailer"
+      ],
+      "requires": [
+        "mod-ets2-162-077"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-089",
+      "title": "KamAZ 5460/6460/65117/65201",
+      "type": "mod",
+      "files": [
+        "KamAZ_8x1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовики КамАЗ-5460, 6460, 65117 и 65201.",
+      "version": "7.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-089.jpg",
+      "link": "https://goga.zone/u/TheAlive55/p/kamaz-6460"
+    },
+    {
+      "id": "mod-ets2-162-090",
+      "title": "[mTG] KamAZ Pack v3.2 ETS2",
+      "type": "mod",
+      "files": [
+        "KamAZ Pack v3.2 ETS2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет набор грузовиков КамАЗ и варианты их комплектации.",
+      "version": "3.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-090.jpg",
+      "link": "https://modsfire.com/oTfP910SZKZ4Gut"
+    },
+    {
+      "id": "mod-ets2-162-091",
+      "title": "KamAZ 5490+65206 Neo ETS2",
+      "type": "mod",
+      "files": [
+        "KamAZ 5490-65206 Neo v3"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовики КамАЗ-5490 и КамАЗ-65206 Neo.",
+      "version": "2.9.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-091.jpg",
+      "link": "https://modsfire.com/a84V016RI4p68KB"
+    },
+    {
+      "id": "mod-ets2-162-092",
+      "title": "MAZ 6422 (1981) ETS2",
+      "type": "mod",
+      "files": [
+        "MAZ 6422 (1981) ETS2 v1.60.x"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовик МАЗ-6422 образца 1981 года.",
+      "version": "17.06.2026",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-092.jpg",
+      "link": "https://www.playground.ru/euro_truck_simulator_2/file/euro_truck_simulator_2_maz_6422_pritsepy_1_60-1777588"
+    },
+    {
+      "id": "mod-ets2-162-093",
+      "title": "MAN F2000 Evo - COG Patched",
+      "type": "mod",
+      "files": [
+        "MAN_F2000_xbs_kiesi"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовик MAN F2000 Evo с исправлениями совместимости.",
+      "version": "2.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-093.jpg",
+      "link": "https://kieskutscheref.gumroad.com/l/dvdbun"
+    },
+    {
+      "id": "mod-ets2-162-094",
+      "title": "scania_pgr_series_161",
+      "type": "mod",
+      "files": [
+        "scania_pgr_series_161"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовики Scania P, G и R серий 2004–2018 годов.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-094.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3355663140"
+    },
+    {
+      "id": "mod-ets2-162-095",
+      "title": "RJL Scania G, R & Streamline",
+      "type": "mod",
+      "files": [
+        "RJL Scania G, R, R 4-series & Streamline"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет переработанные грузовики Scania R и Streamline, а также Scania G и R 4-й серии с вариантами шасси, кабин и двигателей.",
+      "version": "23.6.25",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-095.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2466514780"
+    },
+    {
+      "id": "mod-ets2-162-096",
+      "title": "actros_mp2_159",
+      "type": "mod",
+      "files": [
+        "actros_mp2_159"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовик Mercedes-Benz Actros MP2.",
+      "version": "1.6.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-096.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2333621047"
+    },
+    {
+      "id": "mod-ets2-162-097",
+      "title": "actros_mp3_159",
+      "type": "mod",
+      "files": [
+        "actros_mp3_159"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовик Mercedes-Benz Actros MP3.",
+      "version": "1.3.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-097.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2462431555"
+    },
+    {
+      "id": "mod-ets2-162-098",
+      "title": "Actros 2019",
+      "type": "mod",
+      "files": [
+        "HW - Actros 2019 - 2021"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовик Mercedes-Benz Actros 2019 года.",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-098.jpg",
+      "link": "https://allmods.net/euro-truck-simulator-2/ets-2-trucks/mercedes-benz-new-actros-2019-by-actros-5-crew-v-1-0/"
+    },
+    {
+      "id": "mod-ets2-162-099",
+      "title": "Actros 2023 [L Addon]",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=287117",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-099.jpg",
+      "description": "Добавляет дополнительные варианты и аксессуары для Mercedes-Benz Actros 2023.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HW - ACTROS L 2023 - Addon"
+      ],
+      "requires": [
+        "mod-ets2-162-098"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-100",
+      "title": "Ford Trucks F-MAX",
+      "type": "mod",
+      "files": [
+        "Ford_Trucks_F-MAX_v161"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет грузовик Ford Trucks F-MAX с различными вариантами комплектации и аксессуарами.",
+      "version": "1.62.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-100.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3459583210"
+    },
+    {
+      "id": "mod-ets2-162-101",
+      "title": "Torpedo NextGen",
+      "type": "mod",
+      "link": "https://byjonruda.com/torpedo-nextgen.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-101.jpg",
+      "version": "4.1",
+      "paid": true,
+      "files": [
+        "Torpedo NextGen"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-102",
+      "title": "Torpedo NextGen/SpecTransGroup Trailer",
+      "type": "mod",
+      "link": "https://byjonruda.com/torpedo-nextgen.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-102.jpg",
+      "description": "Добавляет грузовик Scania Torpedo NextGen 730 с несколькими кабинами, вариантами шасси, интерьера и тюнинга.",
+      "version": "4.1",
+      "paid": true,
+      "files": [
+        "Torpedo NextGen Trailer"
+      ],
+      "requires": [
+        "mod-ets2-162-101"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-103",
+      "title": "HVT - Neoplan Cityliner (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-103.jpg",
+      "description": "Добавляет туристический автобус Neoplan New Cityliner с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_Neoplan_Cityliner_DEF",
+        "HVT_Neoplan_Cityliner_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/neoplan-new-cityliner"
+    },
+    {
+      "id": "mod-ets2-162-105",
+      "title": "HVT - Temsa Safir Plus (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-105.jpg",
+      "description": "Добавляет туристический автобус Temsa Safir Plus / HD 13 с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_Temsa_Safir_Plus_DEF",
+        "HVT_Temsa_Safir_Plus_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/temsa-safir-plus-hd-13"
+    },
+    {
+      "id": "mod-ets2-162-107",
+      "title": "HVT - Temsa Safir II VIP (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-107.jpg",
+      "description": "Добавляет туристический автобус Temsa Safir II VIP с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_Temsa_Safir_II_DEF",
+        "HVT_Temsa_Safir_II_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/temsa-safir-ii-vip"
+    },
+    {
+      "id": "mod-ets2-162-109",
+      "title": "HVT - MB New Travego 15 SHD (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-109.jpg",
+      "description": "Добавляет туристический автобус Mercedes-Benz New Travego 15 SHD с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_MB_New_Travego_15_DEF",
+        "HVT_MB_New_Travego_15_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/mercedes-benz-new-travego-15shd"
+    },
+    {
+      "id": "mod-ets2-162-111",
+      "title": "HVT - Neoplan Tourliner (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-111.jpg",
+      "description": "Добавляет туристический автобус Neoplan New Tourliner с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_Neoplan_Tourliner_DEF",
+        "HVT_Neoplan_Tourliner_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/neoplan-new-tourliner"
+    },
+    {
+      "id": "mod-ets2-162-113",
+      "title": "HVT - MAN Lion's Coach 3rd Gen (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-113.jpg",
+      "description": "Добавляет туристический автобус MAN Lion’s Coach третьего поколения с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_Gen3_DEF",
+        "HVT_Gen3_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/man-lions-coach-3rd-gen"
+    },
+    {
+      "id": "mod-ets2-162-115",
+      "title": "HVT - Temsa Maraton VIP (BASE)",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-115.jpg",
+      "description": "Добавляет туристический автобус Temsa Maraton 13 VIP с реалистичным интерьером, звуками и настройками.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "HVT_Temsa_Maraton_DEF",
+        "HVT_Temsa_Maraton_BASE"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "link": "https://heavyvehiclesturkey.com.tr/modlar/temsa-maraton-13-vip"
+    },
+    {
+      "id": "mod-ets2-162-117",
+      "title": "Carbon and Steel skins",
+      "type": "mod",
+      "files": [
+        "Carbon and Steel skins"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет варианты окраски с текстурами под карбон и сталь.",
+      "version": "2.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-117.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2638401276"
+    },
+    {
+      "id": "mod-ets2-162-118",
+      "title": "Crayon Metallic Paint Job Mod",
+      "type": "mod",
+      "files": [
+        "Metallic Crayon Paint Jobs - 120 Different Brilliant Colors"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет металлические варианты окраски для грузовиков.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-118.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3046048852"
+    },
+    {
+      "id": "mod-ets2-162-119",
+      "title": "Crayon Pearl Paint Job Mod",
+      "type": "mod",
+      "files": [
+        "Pearl Crayon Paint Jobs - 120 Different Brilliant Colors"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет перламутровые варианты окраски для грузовиков.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-119.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3062563418"
+    },
+    {
+      "id": "mod-ets2-162-120",
+      "title": "Crayon Gel Paint Job Mod",
+      "type": "mod",
+      "files": [
+        "Gel Crayon Paint Jobs - 120 Different Brilliant Colors"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет гелевые варианты окраски для грузовиков.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-120.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3062565107"
+    },
+    {
+      "id": "mod-ets2-162-121",
+      "title": "Animated LED Window Eyes",
+      "type": "mod",
+      "files": [
+        "Animated LED Window Eyes"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет анимированные светящиеся глаза для установки на окна грузовика.",
+      "version": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-121.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3409265507"
+    },
+    {
+      "id": "mod-ets2-162-122",
+      "title": "A_W_LED_Panel",
+      "type": "mod",
+      "files": [
+        "A_W_LED_Panel"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в кабину программируемую LED-панель с анимированными глазами для поддерживаемых грузовиков.",
+      "version": "1.8.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-122.jpg",
+      "link": "https://modsfire.com/G1nK53Zd5HICsRN"
+    },
+    {
+      "id": "mod-ets2-162-123",
+      "title": "scs_trailer_tuning_pack",
+      "type": "mod",
+      "files": [
+        "scs_trailer_tuning_pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Дополнительные элементы для настройки стандартных прицепов SCS: колёсные диски, боковые юбки, шасси, окраска, габаритные огни и другие аксессуары. Позволяет сделать внешний вид прицепа более индивидуальным.",
+      "version": "2.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-123.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?l=malay&id=1765159059"
+    },
+    {
+      "id": "mod-ets2-162-124",
+      "title": "SGD TRUCK TUNING PACK",
+      "type": "mod",
+      "files": [
+        "sgd_tuning_pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Большой набор дополнительных деталей для грузовиков, прежде всего IVECO и MAN. Включает элементы внешнего тюнинга, колёсные диски, шасси, зеркала, бамперы и решётки, светотехнику, выхлопные трубы, козырьки, аксессуары и другие детали.",
+      "version": "1.4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-124.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3540960579"
+    },
+    {
+      "id": "mod-ets2-162-125",
+      "title": "Trailer light",
+      "type": "mod",
+      "files": [
+        "Trailer light"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет боковую и заднюю подсветку прицепов с выбором цвета и направления света.",
+      "version": "1.61",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-125.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3487598082"
+    },
+    {
+      "id": "mod-ets2-162-126",
+      "title": "Strands Ambassador 9'' [1.1]",
+      "type": "mod",
+      "files": [
+        "Strands_Ambassador"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные светодиодные фары Strands Ambassador диаметром 9 дюймов.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-126.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2921504967"
+    },
+    {
+      "id": "mod-ets2-162-127",
+      "title": "Virotic LED Package",
+      "type": "mod",
+      "files": [
+        "Virotic LED Package"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные светодиодные световые аксессуары для грузовиков.",
+      "version": "3.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-127.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2739658912"
+    },
+    {
+      "id": "mod-ets2-162-128",
+      "title": "hella_rallye_3000_v17_obelihnio",
+      "type": "mod",
+      "files": [
+        "hella_rallye_3000_v17_obelihnio"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные фары Hella Rallye 3000 для установки на грузовик.",
+      "version": "1.7",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-128.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1424988081"
+    },
+    {
+      "id": "mod-ets2-162-129",
+      "title": "obel_bore_led_v19",
+      "type": "mod",
+      "files": [
+        "obel_bore_led_v19"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет светодиодные фары и дополнительные световые аксессуары для грузовиков.",
+      "version": "1.9",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-129.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1307792187"
+    },
+    {
+      "id": "mod-ets2-162-130",
+      "title": "lightpack",
+      "type": "mod",
+      "files": [
+        "lightpack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет большой набор дополнительных световых приборов для грузовиков, включая более 100 вариантов Strands Ambassador, фары Hella Rallye 3000, маячки и дополнительные фонари.",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-130.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3477866795"
+    },
+    {
+      "id": "mod-ets2-162-131",
+      "title": "NkD LED & AUX LIGHT 4.3",
+      "type": "mod",
+      "files": [
+        "NkD LED & AUX LIGHT 4.3"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Большой набор дополнительного светового тюнинга для грузовиков и прицепов. Включает:\n- Светодиодные габаритные огни разных цветов, в пластиковом и алюминиевом исполнении.\n- Габаритные огни со стробоскопическим эффектом.\n- Дополнительные фары на крышу и переднюю решётку.\n- Различные цвета корпусов фар: хромированные и окрашенные.\n- Фары с буквами A–Z, цифрами 0–9 и символами.",
+      "version": "4.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-131.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3043529349"
+    },
+    {
+      "id": "mod-ets2-162-132",
+      "title": "Truck Underglow",
+      "type": "mod",
+      "files": [
+        "Truck_Underglow_v1.2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет на грузовики и прицепы нижнюю светодиодную подсветку семи цветов.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-132.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/ets-2-truck-and-trailer-underglow-v11-120878"
+    },
+    {
+      "id": "mod-ets2-162-133",
+      "title": "彩虹劈叉分八瓣(colorful ambient lights)",
+      "type": "mod",
+      "files": [
+        "colorful ambient lights"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет разноцветную подсветку в нижней части кабины, на переднем обтекателе и передних крыльях грузовиков.",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-133.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3573721206"
+    },
+    {
+      "id": "mod-ets2-162-134",
+      "title": "可以发光的前格栅",
+      "type": "mod",
+      "files": [
+        "Front grille light"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет светящуюся подсветку передней решётки радиатора для грузовиков Scania P, G, R и S.",
+      "version": "5.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-134.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3486139221"
+    },
+    {
+      "id": "mod-ets2-162-135",
+      "title": "炫彩氛围灯",
+      "type": "mod",
+      "files": [
+        "Ambient Lights"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет многоцветную атмосферную подсветку в кабину грузовика.",
+      "version": "5.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-135.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3478509489"
+    },
+    {
+      "id": "mod-ets2-162-136",
+      "title": "Meteor Ambient Light",
+      "type": "mod",
+      "files": [
+        "Meteor Ambient Light"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Мод на цветную подсветку салона Scania S нового поколения. Предлагает 8 цветов: красный, оранжевый, жёлтый, зелёный, голубой, синий, фиолетовый и розовый. Подсветка устанавливается в штатное место интерьерного освещения кабины.",
+      "version": "1.60",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-136.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779219305"
+    },
+    {
+      "id": "mod-ets2-162-137",
+      "title": "Kelsa Packs",
+      "type": "mod",
+      "files": [
+        "Kelsa Addon Packs"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет световые балки и другие аксессуары Kelsa для внешнего тюнинга грузовиков.",
+      "version": "1.8.5.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-137.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=2728943809"
+    },
+    {
+      "id": "mod-ets2-162-138",
+      "title": "kelsa_daf_v20_obelihnio",
+      "type": "mod",
+      "files": [
+        "kelsa_daf_v20_obelihnio"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет аксессуары Kelsa для внешнего тюнинга грузовиков DAF.",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-138.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1114294266"
+    },
+    {
+      "id": "mod-ets2-162-139",
+      "title": "kelsa_mb_act_v13_obelihnio",
+      "type": "mod",
+      "files": [
+        "kelsa_mb_act_v13_obelihnio"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет аксессуары Kelsa для внешнего тюнинга Mercedes-Benz Actros.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-139.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1498949912"
+    },
+    {
+      "id": "mod-ets2-162-140",
+      "title": "Kelsa light bars for MB Actros 2019 [DEF]",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=287117",
+      "description": "Добавляет дополнительные световые балки Kelsa для Mercedes-Benz Actros 2019.",
+      "version": "1.2",
+      "paid": false,
+      "files": [
+        "HW - ACTROS 2019 - 2023 - Lightbar by  obelihnio [DEF]"
+      ],
+      "requires": [
+        "mod-ets2-162-139"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-141",
+      "title": "Actros Plus: New Actros MP4 Cabin Overhaul",
+      "type": "mod",
+      "files": [
+        "actros_plus_new_actros_mp4_cabin_overhaul_v1.2.4"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Полностью перерабатывает интерьер Mercedes-Benz Actros MP4, включая приборную панель, освещение, материалы и элементы управления.",
+      "version": "1.2.4",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-141.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2761101154"
+    },
+    {
+      "id": "mod-ets2-162-142",
+      "title": "Actros Plus: Accessory-Addon",
+      "type": "mod",
+      "files": [
+        "actros_plus_new_actros_mp4_cabin_overhaul_accessory_addon_dlc_and_mods"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные аксессуары и слоты для Mercedes-Benz Actros MP4.",
+      "version": "1.0.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-142.jpg",
+      "link": "https://modsfire.com/6BZQ88r09r69qp0"
+    },
+    {
+      "id": "mod-ets2-162-143",
+      "title": "Cabin ACC for Trucks",
+      "type": "mod",
+      "files": [
+        "HW - Cabin ACC"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные аксессуары для оформления кабины грузовиков.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-143.jpg",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=287117"
+    },
+    {
+      "id": "mod-ets2-162-144",
+      "title": "Venus Scania Badge",
+      "type": "mod",
+      "files": [
+        "Venus Scania Badge"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "дополнительный мод с шильдиками и эмблемами для Scania",
+      "version": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-144.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3154822743"
+    },
+    {
+      "id": "mod-ets2-162-145",
+      "title": "Venus Scania NG Parts",
+      "type": "mod",
+      "files": [
+        "Venus Scania NG Parts"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет элементы внешнего тюнинга, которые можно использовать для индивидуальной сборки грузовика",
+      "version": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-145.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3109836661"
+    },
+    {
+      "id": "mod-ets2-162-146",
+      "title": "BC-Collection Exterior tuning Belka accessory",
+      "type": "mod",
+      "files": [
+        "BC-Collection Exterior Belka accessory"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные аксессуары для внешнего тюнинга грузовиков.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-146.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3794768929"
+    },
+    {
+      "id": "mod-ets2-162-147",
+      "title": "DigiCam - Iveco Hi-Way",
+      "type": "mod",
+      "files": [
+        "DigiCam_Iveco_HiWay_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для Iveco Hi-Way и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-147.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-iveco-232227"
+    },
+    {
+      "id": "mod-ets2-162-148",
+      "title": "DigiCam - Mercedes-Benz Actros",
+      "type": "mod",
+      "files": [
+        "DigiCam_Mercedes_Actros_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для Mercedes-Benz Actros и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-148.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-mercedes-510996"
+    },
+    {
+      "id": "mod-ets2-162-149",
+      "title": "DigiCam - Scania",
+      "type": "mod",
+      "files": [
+        "DigiCam_Scania_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для грузовиков Scania и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-149.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-390578"
+    },
+    {
+      "id": "mod-ets2-162-150",
+      "title": "DigiCam - Volvo FH Series 3, 4 and 5",
+      "type": "mod",
+      "files": [
+        "DigiCam_Volvo_FH3_FH4_FH5_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для Volvo FH 3-го, 4-го и 5-го поколений и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-150.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-volvo-216888"
+    },
+    {
+      "id": "mod-ets2-162-151",
+      "title": "DigiCam - Renault",
+      "type": "mod",
+      "files": [
+        "DigiCam_Renault_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для грузовиков Renault и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-151.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-renault-782836"
+    },
+    {
+      "id": "mod-ets2-162-152",
+      "title": "DigiCam - DAF XF Euro 6",
+      "type": "mod",
+      "files": [
+        "DigiCam_DAF_XF_Euro6_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для DAF XF Euro 6 и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-152.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-daf-318619"
+    },
+    {
+      "id": "mod-ets2-162-153",
+      "title": "DigiCam - MAN TGX Euro 6",
+      "type": "mod",
+      "files": [
+        "DigiCam_MAN_TGX_Euro6_1.0.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет цифровые камеры вместо зеркал для MAN TGX Euro 6 и открывает модели марки в обычном автосалоне.",
+      "version": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-153.jpg",
+      "link": "https://truckymods.io/euro-truck-simulator-2/exterior-accessories/digicam-man-259493"
+    },
+    {
+      "id": "mod-ets2-162-154",
+      "title": "Lots of slots",
+      "type": "mod",
+      "files": [
+        "Lots of slots"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные слоты на лобовое стекло для аксессуаров.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-154.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2985218599"
+    },
+    {
+      "id": "mod-ets2-162-155",
+      "title": "SiSL's Mega Pack",
+      "type": "mod",
+      "files": [
+        "SiSL_Mega_Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет большой набор аксессуаров для оформления кабины: игрушки, подушки, флаги, электронику и другие предметы.",
+      "version": "3.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-155.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=645553604"
+    },
+    {
+      "id": "mod-ets2-162-157",
+      "title": "Torpedo NextGen DLC Accessories Compatibility",
+      "type": "mod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-157.jpg",
+      "description": "Обеспечивает совместимость аксессуаров Torpedo NextGen с DLC Cabin Accessories.",
+      "version": "4.1",
+      "paid": false,
+      "files": [
+        "Torpedo NextGen DLC Accessories Compatibility"
+      ],
+      "requires": [
+        "mod-ets2-162-101"
+      ],
+      "dlcs": [],
+      "link": "https://byjonruda.com/torpedo-nextgen.html"
+    },
+    {
+      "id": "mod-ets2-162-158",
+      "title": "just_clutter_revisited",
+      "type": "mod",
+      "files": [
+        "just_clutter_revisited"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные мелкие предметы и аксессуары для оформления кабины.",
+      "version": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-158.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3632599098"
+    },
+    {
+      "id": "mod-ets2-162-159",
+      "title": "RaudUlfur's Cabin Accessories",
+      "type": "mod",
+      "files": [
+        "RaudUlfur_Cabin_Accessories"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные аксессуары для украшения кабины грузовика.",
+      "version": "1.25",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-159.jpg",
+      "link": "https://goga.zone/u/RaudUlfur/p/cabin-accessories"
+    },
+    {
+      "id": "mod-ets2-162-160",
+      "title": "Knight Kitty Interior Toy",
+      "type": "mod",
+      "files": [
+        "Knight Kitty Interior Toy"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет в салон грузовика игрушку Knight Kitty — фигурку кошки-рыцаря для установки на консоль или панель.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-160.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3832492788"
+    },
+    {
+      "id": "mod-ets2-162-161",
+      "title": "ETS2 QS Cube Accessories (Optional)",
+      "type": "mod",
+      "files": [
+        "ETS2 QS Cubes Accessories"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Висюлька кубики Quper Simulator",
+      "version": "2026.06.18",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-161.jpg",
+      "link": "https://sharemods.com/s6qxnyiyu8qr/ETS2_QS_Cubes_Accessories.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-162",
+      "title": "Logo QS Wheel",
+      "type": "mod",
+      "files": [
+        "Logo QS Wheel"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Логотип на руль QS, кружка и подушка",
+      "version": "2026",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-162.jpg",
+      "link": "https://sharemods.com/lbg3ungvmtld/Logo_QS_Wheel.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-163",
+      "title": "Actros Edition 1 Prestige",
+      "type": "mod",
+      "link": "https://sharemods.com/548fkk0e7s5f/Actros_Edition1_Prestige.scs.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-163.jpg",
+      "description": "Новый салон для Mercedes Actros 2019, фикс багов мода Actros 2019.\nДобавляет аксесуары, GPS, Бортовой компьютер и Электронные зеркала",
+      "version": "0.7",
+      "paid": false,
+      "files": [
+        "Actros_Edition1_Prestige"
+      ],
+      "requires": [
+        "mod-ets2-162-098",
+        "mod-ets2-162-099"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-164",
+      "title": "Truck Accessory Pack",
+      "type": "mod",
+      "files": [
+        "Truck Accessory Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные аксессуары и детали тюнинга для грузовиков DAF, MAN, Mercedes-Benz, Renault, Scania и Volvo: фары, зеркала, диски, решётки, козырьки и другое.",
+      "version": "v16.8.1 May 6th 2026",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-164.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=695738881"
+    },
+    {
+      "id": "mod-ets2-162-165",
+      "title": "Scania S&R Interiors",
+      "type": "mod",
+      "files": [
+        "Scania S&R Interiors"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет новые варианты интерьера для Scania S и Scania R.",
+      "version": "2.2 Release 1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-165.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=2747408913"
+    },
+    {
+      "id": "mod-ets2-162-166",
+      "title": "Scania NG Addon Packs",
+      "type": "mod",
+      "files": [
+        "Scania NG Addon Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет аксессуары и детали тюнинга для Scania Next Generation: решётки, бамперы, световые элементы, зеркала, выхлопные трубы и варианты интерьера.",
+      "version": "2.1.7",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-166.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2672652174"
+    },
+    {
+      "id": "mod-ets2-162-167",
+      "title": "daf addon pack",
+      "type": "mod",
+      "files": [
+        "Daf Addon Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные варианты интерьера, шторки, задние полки и аксессуары для DAF XF 105 и XF 106.",
+      "version": "1.6.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-167.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2873972323"
+    },
+    {
+      "id": "mod-ets2-162-168",
+      "title": "Man Addon Pack",
+      "type": "mod",
+      "files": [
+        "Man Addon Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные детали для MAN TGX и MAN TGX Euro 6: варианты интерьера, рулевое колесо, противотуманные фары, задние боксы и боковые юбки.",
+      "version": "1.4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-168.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2892265068"
+    },
+    {
+      "id": "mod-ets2-162-169",
+      "title": "YTHQ GPS",
+      "type": "mod",
+      "files": [
+        "YTHQ GPS"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет GPS-навигацию и расширенную информацию на приборную панель, включая скорость, передачу, уровень топлива и предупреждения.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-169.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3537181407"
+    },
+    {
+      "id": "mod-ets2-162-170",
+      "title": "YTHQ GPS Expand",
+      "type": "mod",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3590387913",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-170.jpg",
+      "description": "Расширяет совместимость GPS-мода YTHQ GPS, добавляя навигацию и элементы приборной панели для дополнительных моделей грузовиков.",
+      "version": "1.0",
+      "paid": false,
+      "files": [
+        "YTHQ GPS Expand"
+      ],
+      "requires": [
+        "mod-ets2-162-169"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-171",
+      "title": "Tjs HD GPS Mod",
+      "type": "mod",
+      "files": [
+        "Tjs HD GPS Mod"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет наборы аксессуаров для GPS, включая подвесные элементы, украшения для лобового стекла и приборной панели.",
+      "version": "1.62.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-171.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3111513442"
+    },
+    {
+      "id": "mod-ets2-162-172",
+      "title": "ETA and rest on GPS - SCS Trucks",
+      "type": "mod",
+      "files": [
+        "ETA and rest on GPS - SCS Trucks"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет варианты GPS-навигатора и телефона с отображением расчётного времени прибытия и времени до отдыха. Доступны разные цвета текста; требуется DLC Cabin Accessories.",
+      "version": "1.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-172.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3228970157"
+    },
+    {
+      "id": "mod-ets2-162-173",
+      "title": "GPS/PC",
+      "type": "mod",
+      "files": [
+        "laser_gps"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет аксессуары GPS-навигатора и компьютера в кабины поддерживаемых грузовиков.",
+      "version": "1.22",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-173.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3348584965"
+    },
+    {
+      "id": "mod-ets2-162-174",
+      "title": "ETS2 GPS-PC TSA (Optional)",
+      "type": "mod",
+      "link": "https://sharemods.com/tdvin88wh42k/ETS2_GPS-PC_TSA___40_Optional__41_.scs.html",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-174.jpg",
+      "description": "Добавляет поддержку GPC/PC для модовых грузовиков из сборки",
+      "version": "2026.06.13",
+      "paid": false,
+      "files": [
+        "ETS2 GPS-PC TSA (Optional)"
+      ],
+      "requires": [
+        "mod-ets2-162-173"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-175",
+      "title": "Pack of pennants of Russian regions",
+      "type": "mod",
+      "files": [
+        "pennants"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с символикой регионов России для украшения кабины.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-175.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2402291586"
+    },
+    {
+      "id": "mod-ets2-162-176",
+      "title": "Pack of pennants of Belarusian regions",
+      "type": "mod",
+      "files": [
+        "belarus"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с символикой регионов Беларуси для украшения кабины.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-176.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2611121012"
+    },
+    {
+      "id": "mod-ets2-162-177",
+      "title": "Pack of pennants of EPL",
+      "type": "mod",
+      "files": [
+        "pennants_epl"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с символикой клубов Английской Премьер-лиги для украшения кабины.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-177.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3290376470"
+    },
+    {
+      "id": "mod-ets2-162-178",
+      "title": "Pack of pennants of RPL",
+      "type": "mod",
+      "files": [
+        "pennants_rpl"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с символикой клубов Российской Премьер-Лиги для украшения кабины.",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-178.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3167501374"
+    },
+    {
+      "id": "mod-ets2-162-179",
+      "title": "Pack of pennants of KHL 25/26",
+      "type": "mod",
+      "files": [
+        "pen_khl"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с символикой клубов КХЛ сезона 2025/2026 для украшения кабины.",
+      "version": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-179.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3702448891"
+    },
+    {
+      "id": "mod-ets2-162-180",
+      "title": "Pack of pennants of truck companies",
+      "type": "mod",
+      "files": [
+        "truckpennant"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с логотипами транспортных компаний для украшения кабины.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-180.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3440563344"
+    },
+    {
+      "id": "mod-ets2-162-181",
+      "title": "Int accessory rus rock",
+      "type": "mod",
+      "files": [
+        "pennants_rock"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет вымпелы с логотипами рок групп для украшения кабины.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-181.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3329086592"
+    },
+    {
+      "id": "mod-ets2-162-182",
+      "title": "Interior Cabin Lights",
+      "type": "mod",
+      "files": [
+        "Interior Cabin Lights"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительное освещение в кабину грузовика.",
+      "version": "2307",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-182.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2974113091"
+    },
+    {
+      "id": "mod-ets2-162-183",
+      "title": "Quper Simulator - Illuminated Emblem",
+      "type": "mod",
+      "files": [
+        "Quper_Simulator_Emblem"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Эмблема компании на стенку грузовиков Mercedes Actros 2019 и Scania S",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-183.jpg",
+      "link": "https://sharemods.com/qpzrk0wp1tnc/Quper_Simulator_Emblem.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-184",
+      "title": "Interior Light & Emblems Part 1",
+      "type": "mod",
+      "files": [
+        "Interior Light & Emblems Part 1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет эмблемы и светящиеся логотипы для грузовиков.",
+      "version": "v26.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-184.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2624828551"
+    },
+    {
+      "id": "mod-ets2-162-185",
+      "title": "Interior Light & Emblems Part 2",
+      "type": "mod",
+      "files": [
+        "Interior Light & Emblems Part 2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет дополнительные эмблемы и светящиеся логотипы для грузовиков.",
+      "version": "v26.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-185.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3102768847"
+    },
+    {
+      "id": "mod-ets2-162-186",
+      "title": "Interior Light & Emblems beacon add-on",
+      "type": "mod",
+      "files": [
+        "Interior Light & Emblems beacon add-on"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Позволяет включать подсветку эмблем в кабине с помощью клавиши маячков.",
+      "version": "v26.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-186.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1278103583"
+    },
+    {
+      "id": "mod-ets2-162-187",
+      "title": "Animated Co-Driver Pack Optional 21.02.26",
+      "type": "mod",
+      "files": [
+        "Animated Co-Driver Pack"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет анимированных пассажиров в кабину грузовика.",
+      "version": "14.11",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-187.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3669820347"
+    },
+    {
+      "id": "mod-ets2-162-188",
+      "title": "Mercedes-Benz Actros MP3 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Mercedes-Benz Actros MP3 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Mercedes-Benz Actros MP3.",
+      "version": "2.01",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-188.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3019204048"
+    },
+    {
+      "id": "mod-ets2-162-189",
+      "title": "Mercedes-Benz Actros MP4 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Mercedes-Benz Actros MP4 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Mercedes-Benz Actros MP4.",
+      "version": "1.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-189.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=french&id=2818849265"
+    },
+    {
+      "id": "mod-ets2-162-190",
+      "title": "IVECO S-Way Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "IVECO S-Way Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели IVECO S-Way.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-190.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3522851905"
+    },
+    {
+      "id": "mod-ets2-162-191",
+      "title": "Volvo FH3 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Volvo FH3 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Volvo FH3.",
+      "version": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-191.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?l=russian&id=2980608259"
+    },
+    {
+      "id": "mod-ets2-162-192",
+      "title": "Volvo FH4 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Volvo FH4 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Volvo FH4.",
+      "version": "3.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-192.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2719473760"
+    },
+    {
+      "id": "mod-ets2-162-193",
+      "title": "Volvo FH5 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Volvo FH5 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Volvo FH5.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-193.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3481581598"
+    },
+    {
+      "id": "mod-ets2-162-194",
+      "title": "Volvo FH6 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Volvo FH6 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Volvo FH6.",
+      "version": "1.9",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-194.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3387530958"
+    },
+    {
+      "id": "mod-ets2-162-195",
+      "title": "DAF XF 105 Custom Dashboard",
+      "type": "mod",
+      "files": [
+        "DAF XF 105 Custom Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели DAF XF 105",
+      "version": "1.2.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-195.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2719702626"
+    },
+    {
+      "id": "mod-ets2-162-196",
+      "title": "Daf XF Euro6 more readable display",
+      "type": "mod",
+      "files": [
+        "Daf XF Euro 6 more readable dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Делает информацию на дисплее приборной панели DAF XF Euro 6 более читаемой.",
+      "version": "3.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-196.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1117624709"
+    },
+    {
+      "id": "mod-ets2-162-197",
+      "title": "DAF 2021 Needle Dashboard",
+      "type": "mod",
+      "files": [
+        "DAF 2021 Needle Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели DAF 2021 (NGD)",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-197.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3665829494"
+    },
+    {
+      "id": "mod-ets2-162-198",
+      "title": "Scania R 2009 and Streamline Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Scania R 2009 and Streamline Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Scania R 2009 и Streamline.",
+      "version": "1.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-198.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2819222695"
+    },
+    {
+      "id": "mod-ets2-162-199",
+      "title": "Scania NG Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Scania NG Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Scania Next Generation.",
+      "version": "5.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-199.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2716102181"
+    },
+    {
+      "id": "mod-ets2-162-200",
+      "title": "Scania Smart Dash Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Scania Smart Dash Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Scania с системой Smart Dash.",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-200.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3609112917"
+    },
+    {
+      "id": "mod-ets2-162-201",
+      "title": "Scania PGR-Series 2004-2008 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "Scania PGR-Series 2004-2008 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели Scania P, G и R серии 2004–2008 годов.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-201.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3621002476"
+    },
+    {
+      "id": "mod-ets2-162-202",
+      "title": "Scania Dashboard Add-on - Trucks + Coaches",
+      "type": "mod",
+      "files": [
+        "Scania Dashboard Add-on - Trucks + Coaches"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Перерабатывает отображение приборной панели Scania.",
+      "version": "2.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-202.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3823678052"
+    },
+    {
+      "id": "mod-ets2-162-203",
+      "title": "Volvo Dashboard Add-on - Trucks + Coaches",
+      "type": "mod",
+      "files": [
+        "Volvo Dashboard Add-on - Trucks + Coaches"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Перерабатывает отображение приборной панели Volvo.",
+      "version": "2.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-203.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3822760947"
+    },
+    {
+      "id": "mod-ets2-162-204",
+      "title": "MAN Dashboard Add-on - Trucks + Coaches",
+      "type": "mod",
+      "files": [
+        "MAN Dashboard Add-on - Trucks + Coaches"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Перерабатывает отображение приборной панели MAN.",
+      "version": "2.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-204.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835782280"
+    },
+    {
+      "id": "mod-ets2-162-205",
+      "title": "Renault T Dashboard Add-on",
+      "type": "mod",
+      "files": [
+        "Renault T Dashboard Add-on"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Перерабатывает отображение приборной панели Renault T.",
+      "version": "1.00",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3821068399"
+    },
+    {
+      "id": "mod-ets2-162-206",
+      "title": "DAF NGD Dashboard Add-on",
+      "type": "mod",
+      "files": [
+        "DAF NGD Dashboard Add-on"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Перерабатывает отображение приборной панели DAF NGD.",
+      "version": "1.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-206.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3820888051"
+    },
+    {
+      "id": "mod-ets2-162-207",
+      "title": "MAN TGX 2020 Improved Dashboard",
+      "type": "mod",
+      "files": [
+        "MAN TGX 2020 Improved Dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает отображение приборной панели MAN TGX 2020.",
+      "version": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-207.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=spanish&id=2979446693"
+    },
+    {
+      "id": "mod-ets2-162-208",
+      "title": "renaultT 2024 +visible Dashboard",
+      "type": "mod",
+      "files": [
+        "Renault T 2024 + visible dashboard"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает читаемость показаний приборной панели Renault T 2024, включая скорость и пробег, а также отображение максимальной скорости на GPS. Поддерживает интерьеры Anthracite и Carbon.",
+      "version": "1.57",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-208.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3664411060"
+    },
+    {
+      "id": "mod-ets2-162-209",
+      "title": "Real European Companies V1",
+      "type": "mod",
+      "files": [
+        "Real European Companies"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Заменяет названия и логотипы игровых компаний на реальные европейские бренды.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-209.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3632077326"
+    },
+    {
+      "id": "mod-ets2-162-210",
+      "title": "Ru_Advert_Rework_By10avoid_3.0",
+      "type": "mod",
+      "files": [
+        "addon_ru_adv_sum_3"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Изменяет билборды в России на более актуальные",
+      "version": "3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-210.jpg",
+      "link": "https://boosty.to/sibirmap/posts/d3c7719f-1afa-45bd-a18b-b1166c79226c"
+    },
+    {
+      "id": "mod-ets2-162-211",
+      "title": "Reflective Road Markings",
+      "type": "mod",
+      "files": [
+        "reflective_road_markings_v6.2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет светоотражающие свойства дорожной разметке.",
+      "version": "6.2 for ETS2/ATS",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-211.jpg",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=339713"
+    },
+    {
+      "id": "mod-ets2-162-212",
+      "title": "Real Icons Trucks + Coaches",
+      "type": "mod",
+      "files": [
+        "Real Icons Trucks + Coaches"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Заменяет дорожные маркеры заданий и остановок Coaches на более реалистичные разметку и сигнальные конусы.",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-212.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3815983865"
+    },
+    {
+      "id": "mod-ets2-162-213",
+      "title": "QS Company",
+      "type": "mod",
+      "files": [
+        "QS_Company"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Мод который добавляет компании Quper Simulator, раскраски для прицепов, грузовиков и трафик",
+      "version": "3.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-213.jpg",
+      "link": "https://sharemods.com/5lfm0ekcfyvm/QS_Company.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-216",
+      "title": "PNG: PE-FOGGY WEATHER",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ets2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-216.jpg",
+      "version": "1.4",
+      "paid": true,
+      "files": [
+        "PNG_PE_WEATHER_CLASSIC_FOGGY"
+      ],
+      "requires": [
+        "mod-ets2-162-001"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-217",
+      "title": "PNG: NorthExperience",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ne",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-217.jpg",
+      "version": "0511",
+      "paid": true,
+      "files": [
+        "zPNG_NORTH_EXPERIENCE"
+      ],
+      "requires": [
+        "mod-ets2-162-001"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-218",
+      "title": "PNG: PE-RAIN",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ets2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-218.jpg",
+      "version": "1.5",
+      "paid": true,
+      "files": [
+        "zPNG_PE_RAIN"
+      ],
+      "requires": [
+        "mod-ets2-162-001"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-219",
+      "title": "PNG: PE-AUTUMN",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ets2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-219.jpg",
+      "description": "Улучшает графику игры, обновляя текстуры дорог, растительности и окружения, а также перерабатывая освещение и погодные эффекты.",
+      "version": "1.4",
+      "paid": true,
+      "files": [
+        "zPNG_PE_AUTUMN"
+      ],
+      "requires": [
+        "mod-ets2-162-001"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-220",
+      "title": "PNG: Street Lamps",
+      "type": "mod",
+      "files": [
+        "zzPNG_StreetLamps_[FreeAddon]"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает свет от уличных фонарей",
+      "version": "1.2",
+      "link": "https://store.n-artworks.workers.dev/sl"
+    },
+    {
+      "id": "mod-ets2-162-221",
+      "title": "Project Ultimate Weather 2.5",
+      "type": "mod",
+      "link": "https://boosty.to/projectultimate?isFromFeed=true",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-221.jpg",
+      "description": "Улучшает графику и погодные эффекты, добавляя более реалистичные текстуры дождя и капель на стёклах.",
+      "version": "2.5",
+      "paid": true,
+      "files": [
+        "Project_Ultimate_Weather_2.5"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-222",
+      "title": "QS Sound Addon Optional 30.09",
+      "type": "mod",
+      "link": "https://boosty.to/qupersimulator/posts/ba832074-52ce-4586-8e75-ae7ea24b0aa6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-222.jpg",
+      "description": "Двигатели и трансмиссии с реалистичными звуками",
+      "version": "01.10",
+      "paid": true,
+      "files": [
+        "QS_ETS2_Sound_addon"
+      ],
+      "requires": [
+        "mod-ets2-162-005"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-223",
+      "title": "Crystal Tweet Air Horn",
+      "type": "mod",
+      "files": [
+        "Crystal Tweet Air Horn by Player Thurein"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Чистый реалистчиный звук гудка",
+      "version": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-223.jpg",
+      "link": "https://modsfile.com/oqvq6zsekwz8/Crystal_Tweet_Air_Horn_by_Player_Thurein.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-224",
+      "title": "Physics Mod (ETS2)(Wheel)",
+      "type": "mod",
+      "files": [
+        "zeemods.physics_mod_ets2_v1.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает физику грузовиков: работу подвески, раскачку кабины, управление, переключение передач, реакцию двигателя и сцепление шин с дорогой.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-224.jpg",
+      "link": "https://www.zeemods.com/p/physics-mod/"
+    },
+    {
+      "id": "mod-ets2-162-225",
+      "title": "Scania NG I&E Pack",
+      "type": "mod",
+      "link": "https://www.zeemods.com/p/scania-ng-interior-effect-sound-pack/",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-225.jpg",
+      "description": "Звуки интрерьера и различных эффектов для Scania (работает с фреймворком и common)",
+      "version": "1.0.1-G5+",
+      "paid": true,
+      "files": [
+        "zeemods.scania.ng_ie_g5_v1.0.1"
+      ],
+      "requires": [
+        "mod-ets2-162-229"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-226",
+      "title": "Weather Sound & Effect Mod",
+      "type": "mod",
+      "link": "https://www.zeemods.com/p/weather-sound-and-effect-mod/",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-226.jpg",
+      "description": "Улучшает звуки и визуальные эффекты дождя и грозы, включая шум дождя в кабине и звуки грома.",
+      "version": "1.4.1-G5",
+      "paid": false,
+      "files": [
+        "zeemods.weather.effect_g5_v1.4.1"
+      ],
+      "requires": [
+        "mod-ets2-162-229"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-227",
+      "title": "Wind, Tire & Trailer Effects Pack",
+      "type": "mod",
+      "files": [
+        "zeemods.wind.tire.trailer_effects_g5_v1.4.6"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет реалистичные звуки ветра, шин, скольжения колёс и элементов прицепа.",
+      "version": "1.4.6-G5+",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-227.jpg",
+      "link": "https://www.zeemods.com/p/wind-tire-trailer-effects-mod/"
+    },
+    {
+      "id": "mod-ets2-162-228",
+      "title": "Master Reverb Mod",
+      "type": "mod",
+      "files": [
+        "zeemods.master_reverb_v3.0"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает реверберацию и отражение звуков, делая акустику окружающего пространства реалистичнее.",
+      "version": "2.0.1-G5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-228.jpg",
+      "link": "https://www.zeemods.com/p/master-reverb-effects-mod/"
+    },
+    {
+      "id": "mod-ets2-162-229",
+      "title": "ZM Common Dependencies",
+      "type": "mod",
+      "link": "https://www.zeemods.com/p/zeemods-audio-framework-plugin/",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-229.jpg",
+      "description": "Добавляет необходимые звуковые компоненты и зависимости для работы модов Zeemod.",
+      "version": "1.0.1",
+      "paid": false,
+      "files": [
+        "zeemods.common_ets2_v1.0.1"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-230",
+      "title": "ETS2 Sound Navigation",
+      "type": "mod",
+      "files": [
+        "ETS2 Sound Navigation"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Голоса для навигации",
+      "version": "2026.09.30",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-230.jpg",
+      "link": "https://sharemods.com/wzwprcltgtbj/ETS2_Sound_Navigation.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-231",
+      "title": "Двигатели КамАЗ 740",
+      "type": "fix",
+      "link": "https://drive.google.com/file/d/1wXwt7Y_yiMSTWDS3LkgqfZOXWGiDFuCm/view?usp=drive_link",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-231.jpg",
+      "description": "Двигатель для Камаза 740",
+      "version": "1.5.3",
+      "paid": false,
+      "files": [
+        "kamaz_740_sound"
+      ],
+      "requires": [
+        "mod-ets2-162-089"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "mod-ets2-162-232",
+      "title": "Yandex.Navigator - All voices",
+      "type": "mod",
+      "files": [
+        "All Voices from Yandex.Navigator"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет голоса из Яндекс Навигатора для голосовых подсказок в игре.",
+      "version": "25.04.21",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-232.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=finnish&id=1937473215"
+    },
+    {
+      "id": "mod-ets2-162-233",
+      "title": "Russian Voice Navigation",
+      "type": "mod",
+      "files": [
+        "aurora_borealis.ets2.russian_voice_navigation"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет голосовую навигацию на русском языке.",
+      "version": "1.1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-233.jpg",
+      "link": "https://drive.google.com/file/d/1iMfhfsHLfScKVsyier5Gz9KTYDiFYnld/view?usp=drive_link"
+    },
+    {
+      "id": "mod-ets2-162-234",
+      "title": "Realistic Soundproofing v1.0",
+      "type": "mod",
+      "files": [
+        "realsoundproof"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает звукоизоляцию кабины, уменьшая слышимость внешних звуков внутри грузовика.",
+      "version": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-234.jpg",
+      "link": "https://steamcommunity.com/workshop/filedetails/?id=3710074411"
+    },
+    {
+      "id": "mod-ets2-162-235",
+      "title": "Real Logos for jon-ruda mods",
+      "type": "mod",
+      "files": [
+        "Real Logos for jon-ruda mods ETS2"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет оригинальные логотипы и названия брендов на грузовики и прицепы Jon Ruda.",
+      "version": "27.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-235.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2609683104"
+    },
+    {
+      "id": "mod-ets2-162-236",
+      "title": "Immersive External Cam + Infinite Zoom v1.1",
+      "type": "mod",
+      "files": [
+        "Immersive_External_Cam__Infinite_Zoom_v1.1"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Улучшает внешнюю камеру и позволяет сильнее приближать и отдалять изображение.",
+      "version": "v1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-236.jpg",
+      "link": "https://www.jaspermodding.com/p/realistic-exterior/"
+    },
+    {
+      "id": "mod-ets2-162-237",
+      "title": "Unlimited Seat Adjustment 1.15",
+      "type": "mod",
+      "files": [
+        "Unlimited Seat Adjustment"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Позволяет свободно регулировать положение сиденья в кабине.",
+      "version": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-237.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2976862357"
+    },
+    {
+      "id": "mod-ets2-162-238",
+      "title": "Realistic FOV Mirror Quper",
+      "type": "mod",
+      "files": [
+        "RealFOVQuper"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Изменяет угол обзора зеркал для более реалистичного отображения объектов.",
+      "version": "3.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-238.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3318934698"
+    },
+    {
+      "id": "mod-ets2-162-239",
+      "title": "no_camera_photo_mode",
+      "type": "mod",
+      "files": [
+        "no_camera_photo_mode"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Убирает значок камеры в фоторежиме и подсказку с управлением в правом нижнем углу экрана.",
+      "version": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-239.jpg",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2888048490"
+    },
+    {
+      "id": "mod-ets2-162-240",
+      "title": "Realistic Economy by Quper",
+      "type": "mod",
+      "files": [
+        "RealisticEconomyQuper"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Realistic Economy & Ferry by Quper - Оптимизирует паромные соединенеия, снижает их стоимость и меняет экономику игры на более реалистичную\nМОД не обязательный, ставить по желанию",
+      "version": "1.61 Final",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-240.jpg",
+      "link": "https://sharemods.com/6tjt9wpoa9pj/RealisticEconomyQuper.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-241",
+      "title": "Remover Ferries by Quper",
+      "type": "mod",
+      "files": [
+        "RealisticAddonFerryQuper"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Удаляет лишние паромные переправы из игры.",
+      "version": "1.61.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-241.jpg",
+      "link": "https://sharemods.com/nkwh9atx6rtb/RealisticAddonFerryQuper.scs.html"
+    },
+    {
+      "id": "mod-ets2-162-242",
+      "title": "ETS2 Global Background Map",
+      "type": "mod",
+      "files": [
+        "ETS2 Global Background Map"
+      ],
+      "requires": [],
+      "requiresAny": [],
+      "dlcs": [],
+      "description": "Добавляет расширенную фоновую карту мира с отображением Европы, Азии, Африки, Северной и Южной Америки, Австралии и Новой Зеландии.",
+      "version": "2.8",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-242.jpg",
+      "link": "https://www.leobmods.net/mod?id=ets2-global-background-map"
+    },
+    {
+      "id": "torpedo-nextgen-sisl-pack-compatibility",
+      "title": "Torpedo NextGen SISL's Pack Compatibility",
+      "type": "map",
+      "link": "https://byjonruda.ru/torpedo-nextgen.html",
+      "image": "/img/combo-builder/6545bd0dce77d582ead8af8df4bd087be4841c71ba5d08798f6aae6473f65831.webp",
+      "description": "Обеспечивает совместимость аксессуаров Torpedo NextGen с DLC Cabin Accessories.",
+      "version": "4.1",
+      "addedAt": "2026-11-14",
+      "paid": true,
+      "files": [
+        "Torpedo NextGen SISL Pack Compatibility"
+      ],
+      "requires": [
+        "mod-ets2-162-101",
+        "mod-ets2-162-155"
+      ],
+      "dlcs": []
+    }
+  ],
+  "order": [
+    {
+      "key": "PNG_PE_BASE_1",
+      "name": "PNG: PE-BASE1",
+      "logVersion": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-001.jpg"
+    },
+    {
+      "key": "Arnooks Container Pack",
+      "name": "Arnook's Container Pack",
+      "logVersion": "21",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-003.jpg"
+    },
+    {
+      "key": "Arnooks Container Pack Train AddOn Jan25-2026",
+      "name": "Arnook's Container Pack - Train AddOn",
+      "logVersion": "20",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-004.jpg"
+    },
+    {
+      "key": "Sound Fixes Pack - ETS2",
+      "name": "Sound Fixes Pack 26.66",
+      "logVersion": "26.77",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-005.jpg"
+    },
+    {
+      "key": "Realistic Train Lengths",
+      "name": "Real Train Lengths ETS2",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-006.jpg"
+    },
+    {
+      "key": "Real Train Sounds ETS2",
+      "name": "Real Train Sounds ETS2",
+      "logVersion": "1.62",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-007.jpg"
+    },
+    {
+      "key": "ets2_reefer_sound_addon",
+      "name": "Reefer trailer sound addon for ETS2",
+      "logVersion": "2026NOV05",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-008.jpg"
+    },
+    {
+      "key": "bf_base_v4.9.1",
+      "name": "Better Flares - Base v4.9.1",
+      "logVersion": "4.9.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-009.jpg"
+    },
+    {
+      "key": "bf_ta_ets2_v4.9.1",
+      "name": "Better Flares - Traffic Addon ETS2 v4.9.1",
+      "logVersion": "4.9.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-010.jpg"
+    },
+    {
+      "key": "bf_city_lights_fog_v4.9",
+      "name": "Better Flares - City Lights Addon with Fog v4.9",
+      "logVersion": "4.9",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-011.jpg"
+    },
+    {
+      "key": "bf_h1_proj_ece1_v4.9.1",
+      "name": "Better Flares - Headlights.1 Projector ECE 1 v4.9.1",
+      "logVersion": "4.9.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-012.jpg"
+    },
+    {
+      "key": "bf_h2_5000K_hal_v4.9.1",
+      "name": "Better Flares - Headlights.2 5000K Halogen  v4.9.1",
+      "logVersion": "4.9.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-013.jpg"
+    },
+    {
+      "key": "ai_traffic_pack_by_Jazzycat_v21.8.15",
+      "name": "AI Traffic Pack by Jazzycat 21.8.15",
+      "logVersion": "21.8.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-014.jpg"
+    },
+    {
+      "key": "Egons_ai_traffic_pack_1.2",
+      "name": "Egon's AI traffic pack v1.2",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-015.jpg"
+    },
+    {
+      "key": "bus_traffic_pack_by_Jazzycat_v18.2.1",
+      "name": "Bus Traffic Pack by Jazzycat v18.2.1",
+      "logVersion": "18.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-016.jpg"
+    },
+    {
+      "key": "BigBus_traffic_pack_v2.0.18",
+      "name": "BigBus Traffic Pack",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-017.jpg"
+    },
+    {
+      "key": "classic_cars_traffic_pack_by_TrafficManiac_v11.6.15_base",
+      "name": "Classic Cars Traffic Pack by TrafficManiac v11.6.15",
+      "logVersion": "11.6.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-018.jpg"
+    },
+    {
+      "key": "classic_cars_traffic_pack_by_TrafficManiac_v11.6.15_jaz",
+      "name": "Classic Cars Traffic Pack by TrafficManiac v11.6.15",
+      "logVersion": "11.6.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-019.jpg"
+    },
+    {
+      "key": "sport_cars_traffic_pack_by_TrafficManiac_v12.7.16_base",
+      "name": "Sport Cars Traffic Pack by TrafficManiac v12.7.16",
+      "logVersion": "12.7.16",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-020.jpg"
+    },
+    {
+      "key": "sport_cars_traffic_pack_by_TrafficManiac_v12.7.16_jaz",
+      "name": "Sport Cars Traffic Pack by TrafficManiac v12.7.16",
+      "logVersion": "12.7.16",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-021.jpg"
+    },
+    {
+      "key": "NFS Traffic Pack 1.61",
+      "name": "NFS Traffic Pack 1.61",
+      "logVersion": "1.61",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-022.jpg"
+    },
+    {
+      "key": "bmw_traffic_pack161",
+      "name": "BMW Traffic Pack",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-023.jpg"
+    },
+    {
+      "key": "Police_ambulance_extended_pack_1.56.1",
+      "name": "Police & ambulance extended pack",
+      "logVersion": "1.56.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-024.jpg"
+    },
+    {
+      "key": "emergency_traffic_pack_v1.2.19",
+      "name": "emergency traffic pack",
+      "logVersion": "1.2.19",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-025.jpg"
+    },
+    {
+      "key": "Emergency_vehicles_by_Egon_v1.3",
+      "name": "Emergency vehicles by Egon 1.3",
+      "logVersion": "1.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-026.jpg"
+    },
+    {
+      "key": "Taxi_Traffic_Pack_v3.5.14",
+      "name": "Taxi_Traffic_Pack 3.5.14",
+      "logVersion": "3.5.14",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-027.jpg"
+    },
+    {
+      "key": "Taxicabs_AI_pack_by_Egon_1.5.1",
+      "name": "AI Taxicabs pack by Egon 1.5.1",
+      "logVersion": "1.5.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-028.jpg"
+    },
+    {
+      "key": "Taxicabs_AI_pack_by_Egon_1.5.1_density_addon",
+      "name": "Density add-on for Jazzycat mods - AI Taxicabs pack by Egon 1.6",
+      "logVersion": "1.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-029.jpg"
+    },
+    {
+      "key": "painted_truck_traffic_pack_by_Jazzycat_v18.7.15",
+      "name": "Painted Truck Traffic by Jazzycat v18.7.15",
+      "logVersion": "18.7.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-030.jpg"
+    },
+    {
+      "key": "painted_bdf_traffic_pack_by_Jazzycat_v15.6.14",
+      "name": "Painted BDF Traffic Pack by Jazzycat 15.6.14",
+      "logVersion": "15.6.14",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-031.jpg"
+    },
+    {
+      "key": "truck_traffic_pack_by_Jazzycat_v9.1.20",
+      "name": "Truck Traffic Pack by Jazzycat v9.1.20",
+      "logVersion": "9.1.20",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-032.jpg"
+    },
+    {
+      "key": "trailers_traffic_pack_by_TrafficManiac_v12.10.1",
+      "name": "Trailers Traffic Pack by TrafficManiac v12.10.1",
+      "logVersion": "12.10.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-033.jpg"
+    },
+    {
+      "key": "Real European Traffic Pack",
+      "name": "Real European Traffic Pack",
+      "logVersion": "1.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-034.jpg"
+    },
+    {
+      "key": "tuned_truck_traffic_pack_by_TrafficManiac_v7.1.14",
+      "name": "Tuned Truck Traffic Pack by TrafficManiac v7.1.14",
+      "logVersion": "7.1.14",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-035.jpg"
+    },
+    {
+      "key": "Russian Trailer Traffic Pack",
+      "name": "Russian Trailer Traffic Pack",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-036.jpg"
+    },
+    {
+      "key": "russian-company",
+      "name": "russian-company",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-037.jpg"
+    },
+    {
+      "key": "skinfox",
+      "name": "Pack skins of Russian companies by Mr.Fox v2.1",
+      "logVersion": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-038.jpg"
+    },
+    {
+      "key": "ukrskin",
+      "name": "Skinpack of Ukrainian companies by Mr.Fox",
+      "logVersion": "1.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-039.jpg"
+    },
+    {
+      "key": "ruscompanies",
+      "name": "Skins of Russian transport companies",
+      "logVersion": "1.0.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-040.jpg"
+    },
+    {
+      "key": "shmitzfox",
+      "name": "Pack skins of Russian companies for Schmitz Cargobull Trailer Pack by Mr.Fox v2.1",
+      "logVersion": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-041.jpg"
+    },
+    {
+      "key": "dellinefox",
+      "name": "Деловые линии",
+      "logVersion": "1.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-042.jpg"
+    },
+    {
+      "key": "cocacolafox",
+      "name": "Coca-Cola Skinpack by Mr.Fox",
+      "logVersion": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-043.jpg"
+    },
+    {
+      "key": "belskin",
+      "name": "Skinpack of Belarusian companies by Mr.Fox",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-044.jpg"
+    },
+    {
+      "key": "russian shmitz",
+      "name": "russian shmitz",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-045.jpg"
+    },
+    {
+      "key": "PEK Skin Pack",
+      "name": "PEK Skin Pack",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-046.jpg"
+    },
+    {
+      "key": "Magnit Skin Pack",
+      "name": "Magnit Skin Pack",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-047.jpg"
+    },
+    {
+      "key": "Kamaz_Trailer",
+      "name": "Kamaz_Trailer",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-048.jpg"
+    },
+    {
+      "key": "Wildberries Skin Pack",
+      "name": "Wildberries Skin Pack",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-049.jpg"
+    },
+    {
+      "key": "sotrans.zip",
+      "name": "sotrans",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-050.jpg"
+    },
+    {
+      "key": "X5 Transport Skin Pack",
+      "name": "X5 Transport Skin Pack",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-051.jpg"
+    },
+    {
+      "key": "ozon",
+      "name": "Skin Ozon by Mr.Fox",
+      "logVersion": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-052.jpg"
+    },
+    {
+      "key": "russian_traffic_pack_by_Jazzycat_v4.3.6_base",
+      "name": "Russian Traffic by Jazzycat v4.3.6base",
+      "logVersion": "4.3.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-053.jpg"
+    },
+    {
+      "key": "russian_traffic_pack_by_Jazzycat_v4.3.6_def_for_russian_maps",
+      "name": "Russian Traffic by Jazzycat v4.3.6base",
+      "logVersion": "4.3.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-054.jpg"
+    },
+    {
+      "key": "MAZ_traffic_pack_base",
+      "name": "MAZ traffic pack base",
+      "logVersion": "1.49",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-055.jpg"
+    },
+    {
+      "key": "MAZ_traffic_pack_def_for_russian_map",
+      "name": "MAZ traffic pack def for russian map",
+      "logVersion": "1.49",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-056.jpg"
+    },
+    {
+      "key": "ZIL_traffic_pack_base",
+      "name": "ZIL Traffic BASE",
+      "logVersion": "1.49",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-057.jpg"
+    },
+    {
+      "key": "ZIL_traffic_pack_def_for_russian_maps",
+      "name": "ZIL Traffic def for russian map",
+      "logVersion": "1.49",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-058.jpg"
+    },
+    {
+      "key": "russian_trailer_traffic_pack_ruby_only",
+      "name": "Russian Trailer Traffic Pack RU/BY only",
+      "logVersion": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-059.jpg"
+    },
+    {
+      "key": "Ownable Trailers Megamod",
+      "name": "Ownable Trailers Megamod",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-060.jpg"
+    },
+    {
+      "key": "ETS2 Traffic Trailers Mega Pack",
+      "name": "ETS2 Traffic Trailers Mega Pack",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-061.jpg"
+    },
+    {
+      "key": "RB18_Actros_byDedan",
+      "name": "RB18_Actros_byDedan"
+    },
+    {
+      "key": "RB18trailerbydedan",
+      "name": "RB18trailerbydedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-063.jpg"
+    },
+    {
+      "key": "RB18 SCANIA byDedan",
+      "name": "RB18 SCANIA byDedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-064.jpg"
+    },
+    {
+      "key": "RB18 Renaut T byDedan",
+      "name": "RB18 Renaut T byDedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-065.jpg"
+    },
+    {
+      "key": "MAN TGX Pikachu by Dedan",
+      "name": "MAN TGX Pikachu by Dedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-066.jpg"
+    },
+    {
+      "key": "Anime DAF NGD byDedan",
+      "name": "Anime DAF NGD byDedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-067.jpg"
+    },
+    {
+      "key": "GTA SA by Dedan",
+      "name": "GTA SA by Dedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-068.jpg"
+    },
+    {
+      "key": "GTA VC byDedan",
+      "name": "GTA VC byDedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-069.jpg"
+    },
+    {
+      "key": "QS byDedan",
+      "name": "QS byDedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-070.jpg"
+    },
+    {
+      "key": "QS MAN TGX byDedan",
+      "name": "QS MAN TGX byDedan",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-071.jpg"
+    },
+    {
+      "key": "QS_trucks_skins_pack_0.0.1-a",
+      "name": "Trucks skins pack QS VTC",
+      "logVersion": "0.0.1-alpha",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-072.jpg"
+    },
+    {
+      "key": "ETS2_Gennadii_Skins_Pack",
+      "name": "ETS2 Gennadii Skins Pack v1.3.1",
+      "logVersion": "1.3.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-073.jpg"
+    },
+    {
+      "key": "A-MB AeroDynamic Trailer by AM",
+      "name": "MB AeroDynamic Trailer by AM",
+      "logVersion": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-074.jpg"
+    },
+    {
+      "key": "Real_ai_spawns_addon_for_Jazzy_21.8.15",
+      "name": "Real country AI spawns ADD-ON - v21.8.15",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-075.jpg"
+    },
+    {
+      "key": "ETS2 Flarepack",
+      "name": "Flarepack for ETS2",
+      "logVersion": "24.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-076.jpg"
+    },
+    {
+      "key": "EU Trailer Pack Wheels",
+      "name": "EU Trailer Pack Wheels",
+      "logVersion": "3.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-077.jpg"
+    },
+    {
+      "key": "Dirt tires and rims pack",
+      "name": "Dirt tires and rims pack",
+      "logVersion": "1.03",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-078.jpg"
+    },
+    {
+      "key": "Luminous Tires",
+      "name": "Luminous Tires 发光轮胎",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-079.jpg"
+    },
+    {
+      "key": "Real_Tyres_Mod_6.3",
+      "name": "Real Tyres Mod",
+      "logVersion": "6.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-080.jpg"
+    },
+    {
+      "key": "real_trailer_tyres_mod_18",
+      "name": "Real Trailer Tyres Mod",
+      "logVersion": "1.8",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-081.jpg"
+    },
+    {
+      "key": "No More Slippery Tires ETS2",
+      "name": "No More Slippery Tires ETS2",
+      "logVersion": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-082.jpg"
+    },
+    {
+      "key": "abasstreppas_wheelpack_for_truck_and_trailers",
+      "name": "Abasstreppas wheel pack Truck and Trailers 25.06",
+      "logVersion": "01.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-083.jpg"
+    },
+    {
+      "key": "EU Trailer Pack Container Trailer",
+      "name": "EU Trailer Pack Container Trailer",
+      "logVersion": "3.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-084.jpg"
+    },
+    {
+      "key": "EU Trailer Pack Refrigerated Trailer",
+      "name": "EU Trailer Pack Refrigerated Trailer",
+      "logVersion": "3.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-085.jpg"
+    },
+    {
+      "key": "EU Trailer Pack Food Tank Trailer",
+      "name": "EU Trailer Pack Food Tank Trailer",
+      "logVersion": "3.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-086.jpg"
+    },
+    {
+      "key": "EU Trailer Pack Curtain Trailer",
+      "name": "EU Trailer Pack Curtain Trailer",
+      "logVersion": "3.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-087.jpg"
+    },
+    {
+      "key": "EU Trailer Pack Tipper Trailer",
+      "name": "EU Trailer Pack Tipper Trailer",
+      "logVersion": "3.2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-088.jpg"
+    },
+    {
+      "key": "KamAZ_8x1",
+      "name": "KamAZ 5460/6460/65117/65201",
+      "logVersion": "7.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-089.jpg"
+    },
+    {
+      "key": "KamAZ Pack v3.2 ETS2",
+      "name": "[mTG] KamAZ Pack v3.2 ETS2",
+      "logVersion": "3.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-090.jpg"
+    },
+    {
+      "key": "KamAZ 5490-65206 Neo v3",
+      "name": "KamAZ 5490+65206 Neo ETS2",
+      "logVersion": "2.9.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-091.jpg"
+    },
+    {
+      "key": "MAZ 6422 (1981) ETS2 v1.60.x",
+      "name": "MAZ 6422 (1981) ETS2",
+      "logVersion": "17.06.2026",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-092.jpg"
+    },
+    {
+      "key": "MAN_F2000_xbs_kiesi",
+      "name": "MAN F2000 Evo - COG Patched",
+      "logVersion": "2.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-093.jpg"
+    },
+    {
+      "key": "scania_pgr_series_161",
+      "name": "scania_pgr_series_161",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-094.jpg"
+    },
+    {
+      "key": "RJL Scania G, R, R 4-series & Streamline",
+      "name": "RJL Scania G, R & Streamline",
+      "logVersion": "23.6.25",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-095.jpg"
+    },
+    {
+      "key": "actros_mp2_159",
+      "name": "actros_mp2_159",
+      "logVersion": "1.6.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-096.jpg"
+    },
+    {
+      "key": "actros_mp3_159",
+      "name": "actros_mp3_159",
+      "logVersion": "1.3.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-097.jpg"
+    },
+    {
+      "key": "HW - Actros 2019 - 2021",
+      "name": "Actros 2019",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-098.jpg"
+    },
+    {
+      "key": "HW - ACTROS L 2023 - Addon",
+      "name": "Actros 2023 [L Addon]",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-099.jpg"
+    },
+    {
+      "key": "Ford_Trucks_F-MAX_v161",
+      "name": "Ford Trucks F-MAX",
+      "logVersion": "1.62.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-100.jpg"
+    },
+    {
+      "key": "Torpedo NextGen",
+      "name": "Torpedo NextGen",
+      "logVersion": "4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-101.jpg"
+    },
+    {
+      "key": "Torpedo NextGen Trailer",
+      "name": "Torpedo NextGen/SpecTransGroup Trailer",
+      "logVersion": "4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-102.jpg"
+    },
+    {
+      "key": "HVT_Neoplan_Cityliner_BASE",
+      "name": "HVT - Neoplan Cityliner (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-103.jpg"
+    },
+    {
+      "key": "HVT_Neoplan_Cityliner_DEF",
+      "name": "HVT - Neoplan Cityliner (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-104.jpg"
+    },
+    {
+      "key": "HVT_Temsa_Safir_Plus_BASE",
+      "name": "HVT - Temsa Safir Plus (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-105.jpg"
+    },
+    {
+      "key": "HVT_Temsa_Safir_Plus_DEF",
+      "name": "HVT - Temsa Safir Plus (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-106.jpg"
+    },
+    {
+      "key": "HVT_Temsa_Safir_II_BASE",
+      "name": "HVT - Temsa Safir II VIP (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-107.jpg"
+    },
+    {
+      "key": "HVT_Temsa_Safir_II_DEF",
+      "name": "HVT - Temsa Safir II VIP (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-108.jpg"
+    },
+    {
+      "key": "HVT_MB_New_Travego_15_BASE",
+      "name": "HVT - MB New Travego 15 SHD (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-109.jpg"
+    },
+    {
+      "key": "HVT_MB_New_Travego_15_DEF",
+      "name": "HVT - MB New Travego 15 SHD (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-110.jpg"
+    },
+    {
+      "key": "HVT_Neoplan_Tourliner_BASE",
+      "name": "HVT - Neoplan Tourliner (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-111.jpg"
+    },
+    {
+      "key": "HVT_Neoplan_Tourliner_DEF",
+      "name": "HVT - Neoplan Tourliner (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-112.jpg"
+    },
+    {
+      "key": "HVT_Gen3_BASE",
+      "name": "HVT - MAN Lion's Coach 3rd Gen (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-113.jpg"
+    },
+    {
+      "key": "HVT_Gen3_DEF",
+      "name": "HVT - MAN Lion's Coach 3rd Gen (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-114.jpg"
+    },
+    {
+      "key": "HVT_Temsa_Maraton_BASE",
+      "name": "HVT - Temsa Maraton VIP (BASE)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-115.jpg"
+    },
+    {
+      "key": "HVT_Temsa_Maraton_DEF",
+      "name": "HVT - Temsa Maraton VIP (DEF)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-116.jpg"
+    },
+    {
+      "key": "Carbon and Steel skins",
+      "name": "Carbon and Steel skins",
+      "logVersion": "2.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-117.jpg"
+    },
+    {
+      "key": "Metallic Crayon Paint Jobs - 120 Different Brilliant Colors",
+      "name": "Crayon Metallic Paint Job Mod",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-118.jpg"
+    },
+    {
+      "key": "Pearl Crayon Paint Jobs - 120 Different Brilliant Colors",
+      "name": "Crayon Pearl Paint Job Mod",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-119.jpg"
+    },
+    {
+      "key": "Gel Crayon Paint Jobs - 120 Different Brilliant Colors",
+      "name": "Crayon Gel Paint Job Mod",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-120.jpg"
+    },
+    {
+      "key": "Animated LED Window Eyes",
+      "name": "Animated LED Window Eyes",
+      "logVersion": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-121.jpg"
+    },
+    {
+      "key": "A_W_LED_Panel",
+      "name": "A_W_LED_Panel",
+      "logVersion": "1.8.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-122.jpg"
+    },
+    {
+      "key": "scs_trailer_tuning_pack",
+      "name": "scs_trailer_tuning_pack",
+      "logVersion": "2.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-123.jpg"
+    },
+    {
+      "key": "sgd_tuning_pack",
+      "name": "SGD TRUCK TUNING PACK",
+      "logVersion": "1.4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-124.jpg"
+    },
+    {
+      "key": "Trailer light",
+      "name": "Trailer light",
+      "logVersion": "1.61",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-125.jpg"
+    },
+    {
+      "key": "Strands_Ambassador",
+      "name": "Strands Ambassador 9'' [1.1]",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-126.jpg"
+    },
+    {
+      "key": "Virotic LED Package",
+      "name": "Virotic LED Package",
+      "logVersion": "3.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-127.jpg"
+    },
+    {
+      "key": "hella_rallye_3000_v17_obelihnio",
+      "name": "hella_rallye_3000_v17_obelihnio",
+      "logVersion": "1.7",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-128.jpg"
+    },
+    {
+      "key": "obel_bore_led_v19",
+      "name": "obel_bore_led_v19",
+      "logVersion": "1.9",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-129.jpg"
+    },
+    {
+      "key": "lightpack",
+      "name": "lightpack",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-130.jpg"
+    },
+    {
+      "key": "NkD LED & AUX LIGHT 4.3",
+      "name": "NkD LED & AUX LIGHT 4.3",
+      "logVersion": "4.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-131.jpg"
+    },
+    {
+      "key": "Truck_Underglow_v1.2",
+      "name": "Truck Underglow",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-132.jpg"
+    },
+    {
+      "key": "colorful ambient lights",
+      "name": "彩虹劈叉分八瓣(colorful ambient lights)",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-133.jpg"
+    },
+    {
+      "key": "Front grille light",
+      "name": "可以发光的前格栅",
+      "logVersion": "5.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-134.jpg"
+    },
+    {
+      "key": "Ambient Lights",
+      "name": "炫彩氛围灯",
+      "logVersion": "5.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-135.jpg"
+    },
+    {
+      "key": "Meteor Ambient Light",
+      "name": "Meteor Ambient Light",
+      "logVersion": "1.60",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-136.jpg"
+    },
+    {
+      "key": "Kelsa Addon Packs",
+      "name": "Kelsa Packs",
+      "logVersion": "1.8.5.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-137.jpg"
+    },
+    {
+      "key": "kelsa_daf_v20_obelihnio",
+      "name": "kelsa_daf_v20_obelihnio",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-138.jpg"
+    },
+    {
+      "key": "kelsa_mb_act_v13_obelihnio",
+      "name": "kelsa_mb_act_v13_obelihnio",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-139.jpg"
+    },
+    {
+      "key": "HW - ACTROS 2019 - 2023 - Lightbar by  obelihnio [DEF]",
+      "name": "Kelsa light bars for MB Actros 2019 [DEF]",
+      "logVersion": "1.2"
+    },
+    {
+      "key": "actros_plus_new_actros_mp4_cabin_overhaul_v1.2.4",
+      "name": "Actros Plus: New Actros MP4 Cabin Overhaul",
+      "logVersion": "1.2.4",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-141.jpg"
+    },
+    {
+      "key": "actros_plus_new_actros_mp4_cabin_overhaul_accessory_addon_dlc_and_mods",
+      "name": "Actros Plus: Accessory-Addon",
+      "logVersion": "1.0.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-142.jpg"
+    },
+    {
+      "key": "HW - Cabin ACC",
+      "name": "Cabin ACC for Trucks",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-143.jpg"
+    },
+    {
+      "key": "Venus Scania Badge",
+      "name": "Venus Scania Badge",
+      "logVersion": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-144.jpg"
+    },
+    {
+      "key": "Venus Scania NG Parts",
+      "name": "Venus Scania NG Parts",
+      "logVersion": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-145.jpg"
+    },
+    {
+      "key": "BC-Collection Exterior Belka accessory",
+      "name": "BC-Collection Exterior tuning Belka accessory",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-146.jpg"
+    },
+    {
+      "key": "DigiCam_Iveco_HiWay_1.0.0",
+      "name": "DigiCam - Iveco Hi-Way",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-147.jpg"
+    },
+    {
+      "key": "DigiCam_Mercedes_Actros_1.0.0",
+      "name": "DigiCam - Mercedes-Benz Actros",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-148.jpg"
+    },
+    {
+      "key": "DigiCam_Scania_1.0.0",
+      "name": "DigiCam - Scania",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-149.jpg"
+    },
+    {
+      "key": "DigiCam_Volvo_FH3_FH4_FH5_1.0.0",
+      "name": "DigiCam - Volvo FH Series 3, 4 and 5",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-150.jpg"
+    },
+    {
+      "key": "DigiCam_Renault_1.0.0",
+      "name": "DigiCam - Renault",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-151.jpg"
+    },
+    {
+      "key": "DigiCam_DAF_XF_Euro6_1.0.0",
+      "name": "DigiCam - DAF XF Euro 6",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-152.jpg"
+    },
+    {
+      "key": "DigiCam_MAN_TGX_Euro6_1.0.0",
+      "name": "DigiCam - MAN TGX Euro 6",
+      "logVersion": "1.0.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-153.jpg"
+    },
+    {
+      "key": "Lots of slots",
+      "name": "Lots of slots",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-154.jpg"
+    },
+    {
+      "key": "SiSL_Mega_Pack",
+      "name": "SiSL's Mega Pack",
+      "logVersion": "3.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-155.jpg"
+    },
+    {
+      "key": "Torpedo NextGen SISL Pack Compatibility",
+      "name": "Torpedo NextGen SISL's Pack Compatibility",
+      "logVersion": "4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-156.jpg"
+    },
+    {
+      "key": "Torpedo NextGen DLC Accessories Compatibility",
+      "name": "Torpedo NextGen DLC Accessories Compatibility",
+      "logVersion": "4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-157.jpg"
+    },
+    {
+      "key": "just_clutter_revisited",
+      "name": "just_clutter_revisited",
+      "logVersion": "1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-158.jpg"
+    },
+    {
+      "key": "RaudUlfur_Cabin_Accessories",
+      "name": "RaudUlfur's Cabin Accessories",
+      "logVersion": "1.25",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-159.jpg"
+    },
+    {
+      "key": "Knight Kitty Interior Toy",
+      "name": "Knight Kitty Interior Toy",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-160.jpg"
+    },
+    {
+      "key": "ETS2 QS Cubes Accessories",
+      "name": "ETS2 QS Cube Accessories (Optional)",
+      "logVersion": "2026.06.18",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-161.jpg"
+    },
+    {
+      "key": "Logo QS Wheel",
+      "name": "Logo QS Wheel",
+      "logVersion": "2026",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-162.jpg"
+    },
+    {
+      "key": "Actros_Edition1_Prestige",
+      "name": "Actros Edition 1 Prestige",
+      "logVersion": "0.7",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-163.jpg"
+    },
+    {
+      "key": "Truck Accessory Pack",
+      "name": "Truck Accessory Pack",
+      "logVersion": "v16.8.1 May 6th 2026",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-164.jpg"
+    },
+    {
+      "key": "Scania S&R Interiors",
+      "name": "Scania S&R Interiors",
+      "logVersion": "2.2 Release 1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-165.jpg"
+    },
+    {
+      "key": "Scania NG Addon Pack",
+      "name": "Scania NG Addon Packs",
+      "logVersion": "2.1.7",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-166.jpg"
+    },
+    {
+      "key": "Daf Addon Pack",
+      "name": "daf addon pack",
+      "logVersion": "1.6.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-167.jpg"
+    },
+    {
+      "key": "Man Addon Pack",
+      "name": "Man Addon Pack",
+      "logVersion": "1.4.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-168.jpg"
+    },
+    {
+      "key": "YTHQ GPS",
+      "name": "YTHQ GPS",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-169.jpg"
+    },
+    {
+      "key": "YTHQ GPS Expand",
+      "name": "YTHQ GPS Expand",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-170.jpg"
+    },
+    {
+      "key": "Tjs HD GPS Mod",
+      "name": "Tjs HD GPS Mod",
+      "logVersion": "1.62.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-171.jpg"
+    },
+    {
+      "key": "ETA and rest on GPS - SCS Trucks",
+      "name": "ETA and rest on GPS - SCS Trucks",
+      "logVersion": "1.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-172.jpg"
+    },
+    {
+      "key": "laser_gps",
+      "name": "GPS/PC",
+      "logVersion": "1.22",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-173.jpg"
+    },
+    {
+      "key": "ETS2 GPS-PC TSA (Optional)",
+      "name": "ETS2 GPS-PC TSA (Optional)",
+      "logVersion": "2026.06.13",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-174.jpg"
+    },
+    {
+      "key": "pennants",
+      "name": "Pack of pennants of Russian regions",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-175.jpg"
+    },
+    {
+      "key": "belarus",
+      "name": "Pack of pennants of Belarusian regions",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-176.jpg"
+    },
+    {
+      "key": "pennants_epl",
+      "name": "Pack of pennants of EPL",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-177.jpg"
+    },
+    {
+      "key": "pennants_rpl",
+      "name": "Pack of pennants of RPL",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-178.jpg"
+    },
+    {
+      "key": "pen_khl",
+      "name": "Pack of pennants of KHL 25/26",
+      "logVersion": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-179.jpg"
+    },
+    {
+      "key": "truckpennant",
+      "name": "Pack of pennants of truck companies",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-180.jpg"
+    },
+    {
+      "key": "pennants_rock",
+      "name": "Int accessory rus rock",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-181.jpg"
+    },
+    {
+      "key": "Interior Cabin Lights",
+      "name": "Interior Cabin Lights",
+      "logVersion": "2307",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-182.jpg"
+    },
+    {
+      "key": "Quper_Simulator_Emblem",
+      "name": "Quper Simulator - Illuminated Emblem",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-183.jpg"
+    },
+    {
+      "key": "Interior Light & Emblems Part 1",
+      "name": "Interior Light & Emblems Part 1",
+      "logVersion": "v26.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-184.jpg"
+    },
+    {
+      "key": "Interior Light & Emblems Part 2",
+      "name": "Interior Light & Emblems Part 2",
+      "logVersion": "v26.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-185.jpg"
+    },
+    {
+      "key": "Interior Light & Emblems beacon add-on",
+      "name": "Interior Light & Emblems beacon add-on",
+      "logVersion": "v26.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-186.jpg"
+    },
+    {
+      "key": "Animated Co-Driver Pack",
+      "name": "Animated Co-Driver Pack Optional 21.02.26",
+      "logVersion": "14.11",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-187.jpg"
+    },
+    {
+      "key": "Mercedes-Benz Actros MP3 Improved Dashboard",
+      "name": "Mercedes-Benz Actros MP3 Improved Dashboard",
+      "logVersion": "2.01",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-188.jpg"
+    },
+    {
+      "key": "Mercedes-Benz Actros MP4 Improved Dashboard",
+      "name": "Mercedes-Benz Actros MP4 Improved Dashboard",
+      "logVersion": "1.6",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-189.jpg"
+    },
+    {
+      "key": "IVECO S-Way Improved Dashboard",
+      "name": "IVECO S-Way Improved Dashboard",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-190.jpg"
+    },
+    {
+      "key": "Volvo FH3 Improved Dashboard",
+      "name": "Volvo FH3 Improved Dashboard",
+      "logVersion": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-191.jpg"
+    },
+    {
+      "key": "Volvo FH4 Improved Dashboard",
+      "name": "Volvo FH4 Improved Dashboard",
+      "logVersion": "3.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-192.jpg"
+    },
+    {
+      "key": "Volvo FH5 Improved Dashboard",
+      "name": "Volvo FH5 Improved Dashboard",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-193.jpg"
+    },
+    {
+      "key": "Volvo FH6 Improved Dashboard",
+      "name": "Volvo FH6 Improved Dashboard",
+      "logVersion": "1.9",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-194.jpg"
+    },
+    {
+      "key": "DAF XF 105 Custom Dashboard",
+      "name": "DAF XF 105 Custom Dashboard",
+      "logVersion": "1.2.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-195.jpg"
+    },
+    {
+      "key": "Daf XF Euro 6 more readable dashboard",
+      "name": "Daf XF Euro6 more readable display",
+      "logVersion": "3.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-196.jpg"
+    },
+    {
+      "key": "DAF 2021 Needle Dashboard",
+      "name": "DAF 2021 Needle Dashboard",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-197.jpg"
+    },
+    {
+      "key": "Scania R 2009 and Streamline Improved Dashboard",
+      "name": "Scania R 2009 and Streamline Improved Dashboard",
+      "logVersion": "1.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-198.jpg"
+    },
+    {
+      "key": "Scania NG Improved Dashboard",
+      "name": "Scania NG Improved Dashboard",
+      "logVersion": "5.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-199.jpg"
+    },
+    {
+      "key": "Scania Smart Dash Improved Dashboard",
+      "name": "Scania Smart Dash Improved Dashboard",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-200.jpg"
+    },
+    {
+      "key": "Scania PGR-Series 2004-2008 Improved Dashboard",
+      "name": "Scania PGR-Series 2004-2008 Improved Dashboard",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-201.jpg"
+    },
+    {
+      "key": "Scania Dashboard Add-on - Trucks + Coaches",
+      "name": "Scania Dashboard Add-on - Trucks + Coaches",
+      "logVersion": "2.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-202.jpg"
+    },
+    {
+      "key": "Volvo Dashboard Add-on - Trucks + Coaches",
+      "name": "Volvo Dashboard Add-on - Trucks + Coaches",
+      "logVersion": "2.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-203.jpg"
+    },
+    {
+      "key": "MAN Dashboard Add-on - Trucks + Coaches",
+      "name": "MAN Dashboard Add-on - Trucks + Coaches",
+      "logVersion": "2.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-204.jpg"
+    },
+    {
+      "key": "Renault T Dashboard Add-on",
+      "name": "Renault T Dashboard Add-on",
+      "logVersion": "1.00"
+    },
+    {
+      "key": "DAF NGD Dashboard Add-on",
+      "name": "DAF NGD Dashboard Add-on",
+      "logVersion": "1.00",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-206.jpg"
+    },
+    {
+      "key": "MAN TGX 2020 Improved Dashboard",
+      "name": "MAN TGX 2020 Improved Dashboard",
+      "logVersion": "2.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-207.jpg"
+    },
+    {
+      "key": "Renault T 2024 + visible dashboard",
+      "name": "renaultT 2024 +visible Dashboard",
+      "logVersion": "1.57",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-208.jpg"
+    },
+    {
+      "key": "Real European Companies",
+      "name": "Real European Companies V1",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-209.jpg"
+    },
+    {
+      "key": "addon_ru_adv_sum_3",
+      "name": "Ru_Advert_Rework_By10avoid_3.0",
+      "logVersion": "3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-210.jpg"
+    },
+    {
+      "key": "reflective_road_markings_v6.2",
+      "name": "Reflective Road Markings",
+      "logVersion": "6.2 for ETS2/ATS",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-211.jpg"
+    },
+    {
+      "key": "Real Icons Trucks + Coaches",
+      "name": "Real Icons Trucks + Coaches",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-212.jpg"
+    },
+    {
+      "key": "QS_Company",
+      "name": "QS Company",
+      "logVersion": "3.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-213.jpg"
+    },
+    {
+      "key": "PNG_PE_BASE_2",
+      "name": "PNG: PE-BASE2",
+      "logVersion": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-214.jpg"
+    },
+    {
+      "key": "PNG_PE_WEATHER_CLASSIC",
+      "name": "PNG: PE-WEATHER",
+      "logVersion": "1.4",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-215.jpg"
+    },
+    {
+      "key": "PNG_PE_WEATHER_CLASSIC_FOGGY",
+      "name": "PNG: PE-FOGGY WEATHER",
+      "logVersion": "1.4",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-216.jpg"
+    },
+    {
+      "key": "zPNG_NORTH_EXPERIENCE",
+      "name": "PNG: NorthExperience",
+      "logVersion": "0511",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-217.jpg"
+    },
+    {
+      "key": "zPNG_PE_RAIN",
+      "name": "PNG: PE-RAIN",
+      "logVersion": "1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-218.jpg"
+    },
+    {
+      "key": "zPNG_PE_AUTUMN",
+      "name": "PNG: PE-AUTUMN",
+      "logVersion": "1.4",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-219.jpg"
+    },
+    {
+      "key": "zzPNG_StreetLamps_[FreeAddon]",
+      "name": "PNG: Street Lamps",
+      "logVersion": "1.2"
+    },
+    {
+      "key": "Project_Ultimate_Weather_2.5",
+      "name": "Project Ultimate Weather 2.5",
+      "logVersion": "2.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-221.jpg"
+    },
+    {
+      "key": "QS_ETS2_Sound_addon",
+      "name": "QS Sound Addon Optional 30.09",
+      "logVersion": "01.10",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-222.jpg"
+    },
+    {
+      "key": "Crystal Tweet Air Horn by Player Thurein",
+      "name": "Crystal Tweet Air Horn",
+      "logVersion": "2.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-223.jpg"
+    },
+    {
+      "key": "zeemods.physics_mod_ets2_v1.0",
+      "name": "Physics Mod (ETS2)(Wheel)",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-224.jpg"
+    },
+    {
+      "key": "zeemods.scania.ng_ie_g5_v1.0.1",
+      "name": "Scania NG I&E Pack",
+      "logVersion": "1.0.1-G5+",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-225.jpg"
+    },
+    {
+      "key": "zeemods.weather.effect_g5_v1.4.1",
+      "name": "Weather Sound & Effect Mod",
+      "logVersion": "1.4.1-G5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-226.jpg"
+    },
+    {
+      "key": "zeemods.wind.tire.trailer_effects_g5_v1.4.6",
+      "name": "Wind, Tire & Trailer Effects Pack",
+      "logVersion": "1.4.6-G5+",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-227.jpg"
+    },
+    {
+      "key": "zeemods.master_reverb_v3.0",
+      "name": "Master Reverb Mod",
+      "logVersion": "2.0.1-G5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-228.jpg"
+    },
+    {
+      "key": "zeemods.common_ets2_v1.0.1",
+      "name": "ZM Common Dependencies",
+      "logVersion": "1.0.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-229.jpg"
+    },
+    {
+      "key": "ETS2 Sound Navigation",
+      "name": "ETS2 Sound Navigation",
+      "logVersion": "2026.09.30",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-230.jpg"
+    },
+    {
+      "key": "kamaz_740_sound",
+      "name": "Двигатели КамАЗ 740",
+      "logVersion": "1.5.3",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-231.jpg"
+    },
+    {
+      "key": "All Voices from Yandex.Navigator",
+      "name": "Yandex.Navigator - All voices",
+      "logVersion": "25.04.21",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-232.jpg"
+    },
+    {
+      "key": "aurora_borealis.ets2.russian_voice_navigation",
+      "name": "Russian Voice Navigation",
+      "logVersion": "1.1.5",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-233.jpg"
+    },
+    {
+      "key": "realsoundproof",
+      "name": "Realistic Soundproofing v1.0",
+      "logVersion": "1.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-234.jpg"
+    },
+    {
+      "key": "Real Logos for jon-ruda mods ETS2",
+      "name": "Real Logos for jon-ruda mods",
+      "logVersion": "27.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-235.jpg"
+    },
+    {
+      "key": "Immersive_External_Cam__Infinite_Zoom_v1.1",
+      "name": "Immersive External Cam + Infinite Zoom v1.1",
+      "logVersion": "v1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-236.jpg"
+    },
+    {
+      "key": "Unlimited Seat Adjustment",
+      "name": "Unlimited Seat Adjustment 1.15",
+      "logVersion": "1.2",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-237.jpg"
+    },
+    {
+      "key": "RealFOVQuper",
+      "name": "Realistic FOV Mirror Quper",
+      "logVersion": "3.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-238.jpg"
+    },
+    {
+      "key": "no_camera_photo_mode",
+      "name": "no_camera_photo_mode",
+      "logVersion": "1.1",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-239.jpg"
+    },
+    {
+      "key": "RealisticEconomyQuper",
+      "name": "Realistic Economy by Quper",
+      "logVersion": "1.61 Final",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-240.jpg"
+    },
+    {
+      "key": "RealisticAddonFerryQuper",
+      "name": "Remover Ferries by Quper",
+      "logVersion": "1.61.0",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-241.jpg"
+    },
+    {
+      "key": "ETS2 Global Background Map",
+      "name": "ETS2 Global Background Map",
+      "logVersion": "2.8",
+      "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-242.jpg"
+    }
+  ],
+  "conflicts": [],
+  "presets": []
+}

@@ -1,0 +1,1354 @@
+{
+  "game": "ets2",
+  "version": "1.62",
+  "preset": {
+    "id": "best-mods-combo-ets2-1-62",
+    "title": "Best Mods Combo ETS2",
+    "fileSlug": "best-mods-combo-ets2",
+    "version": "1.1",
+    "boosty": "https://boosty.to/qupersimulator/posts/6b124bc6-668c-4991-813b-9f9e31c63ddb",
+    "profile": "https://sharemods.com/xjb6ihf5t4l5/1.61_ETS2_MODS_PACK_1.1.zip.html",
+    "image": "/img/combo-builder/d830b8c1d994e16d5468b5fafd4911479e5879a6b39fd24febf20c11e5e7fa7a.webp",
+    "tags": [],
+    "updatedAt": "2026-11-14",
+    "selection": [
+      "mod-ets2-162-001",
+      "mod-ets2-162-003",
+      "mod-ets2-162-004",
+      "mod-ets2-162-005",
+      "mod-ets2-162-006",
+      "mod-ets2-162-007",
+      "mod-ets2-162-008",
+      "mod-ets2-162-009",
+      "mod-ets2-162-010",
+      "mod-ets2-162-011",
+      "mod-ets2-162-014",
+      "mod-ets2-162-015",
+      "mod-ets2-162-016",
+      "mod-ets2-162-017",
+      "mod-ets2-162-018",
+      "mod-ets2-162-020",
+      "mod-ets2-162-022",
+      "mod-ets2-162-023",
+      "mod-ets2-162-024",
+      "mod-ets2-162-025",
+      "mod-ets2-162-026",
+      "mod-ets2-162-027",
+      "mod-ets2-162-028",
+      "mod-ets2-162-030",
+      "mod-ets2-162-031",
+      "mod-ets2-162-032",
+      "mod-ets2-162-033",
+      "mod-ets2-162-034",
+      "mod-ets2-162-035",
+      "mod-ets2-162-036",
+      "mod-ets2-162-037",
+      "mod-ets2-162-038",
+      "mod-ets2-162-039",
+      "mod-ets2-162-040",
+      "mod-ets2-162-041",
+      "mod-ets2-162-042",
+      "mod-ets2-162-043",
+      "mod-ets2-162-044",
+      "mod-ets2-162-045",
+      "mod-ets2-162-046",
+      "mod-ets2-162-047",
+      "mod-ets2-162-048",
+      "mod-ets2-162-049",
+      "mod-ets2-162-050",
+      "mod-ets2-162-051",
+      "mod-ets2-162-052",
+      "mod-ets2-162-053",
+      "mod-ets2-162-055",
+      "mod-ets2-162-057",
+      "mod-ets2-162-058",
+      "mod-ets2-162-059",
+      "mod-ets2-162-060",
+      "mod-ets2-162-061",
+      "mod-ets2-162-062",
+      "mod-ets2-162-063",
+      "mod-ets2-162-064",
+      "mod-ets2-162-065",
+      "mod-ets2-162-066",
+      "mod-ets2-162-067",
+      "mod-ets2-162-068",
+      "mod-ets2-162-069",
+      "mod-ets2-162-070",
+      "mod-ets2-162-071",
+      "mod-ets2-162-072",
+      "mod-ets2-162-073",
+      "mod-ets2-162-074",
+      "mod-ets2-162-075",
+      "mod-ets2-162-076",
+      "mod-ets2-162-078",
+      "mod-ets2-162-079",
+      "mod-ets2-162-080",
+      "mod-ets2-162-081",
+      "mod-ets2-162-082",
+      "mod-ets2-162-083",
+      "mod-ets2-162-084",
+      "mod-ets2-162-085",
+      "mod-ets2-162-086",
+      "mod-ets2-162-087",
+      "mod-ets2-162-088",
+      "mod-ets2-162-089",
+      "mod-ets2-162-090",
+      "mod-ets2-162-091",
+      "mod-ets2-162-092",
+      "mod-ets2-162-093",
+      "mod-ets2-162-094",
+      "mod-ets2-162-095",
+      "mod-ets2-162-097",
+      "mod-ets2-162-098",
+      "mod-ets2-162-099",
+      "mod-ets2-162-100",
+      "mod-ets2-162-101",
+      "mod-ets2-162-102",
+      "mod-ets2-162-103",
+      "mod-ets2-162-105",
+      "mod-ets2-162-107",
+      "mod-ets2-162-109",
+      "mod-ets2-162-111",
+      "mod-ets2-162-113",
+      "mod-ets2-162-115",
+      "mod-ets2-162-117",
+      "mod-ets2-162-118",
+      "mod-ets2-162-119",
+      "mod-ets2-162-120",
+      "mod-ets2-162-121",
+      "mod-ets2-162-122",
+      "mod-ets2-162-123",
+      "mod-ets2-162-124",
+      "mod-ets2-162-125",
+      "mod-ets2-162-126",
+      "mod-ets2-162-127",
+      "mod-ets2-162-128",
+      "mod-ets2-162-129",
+      "mod-ets2-162-130",
+      "mod-ets2-162-131",
+      "mod-ets2-162-132",
+      "mod-ets2-162-133",
+      "mod-ets2-162-134",
+      "mod-ets2-162-135",
+      "mod-ets2-162-136",
+      "mod-ets2-162-137",
+      "mod-ets2-162-138",
+      "mod-ets2-162-139",
+      "mod-ets2-162-140",
+      "mod-ets2-162-141",
+      "mod-ets2-162-142",
+      "mod-ets2-162-143",
+      "mod-ets2-162-144",
+      "mod-ets2-162-145",
+      "mod-ets2-162-146",
+      "mod-ets2-162-147",
+      "mod-ets2-162-148",
+      "mod-ets2-162-149",
+      "mod-ets2-162-150",
+      "mod-ets2-162-151",
+      "mod-ets2-162-152",
+      "mod-ets2-162-153",
+      "mod-ets2-162-154",
+      "mod-ets2-162-155",
+      "mod-ets2-162-157",
+      "mod-ets2-162-158",
+      "mod-ets2-162-159",
+      "mod-ets2-162-160",
+      "mod-ets2-162-161",
+      "mod-ets2-162-162",
+      "mod-ets2-162-163",
+      "mod-ets2-162-164",
+      "mod-ets2-162-165",
+      "mod-ets2-162-166",
+      "mod-ets2-162-167",
+      "mod-ets2-162-168",
+      "mod-ets2-162-169",
+      "mod-ets2-162-170",
+      "mod-ets2-162-171",
+      "mod-ets2-162-172",
+      "mod-ets2-162-173",
+      "mod-ets2-162-174",
+      "mod-ets2-162-175",
+      "mod-ets2-162-176",
+      "mod-ets2-162-177",
+      "mod-ets2-162-178",
+      "mod-ets2-162-179",
+      "mod-ets2-162-180",
+      "mod-ets2-162-181",
+      "mod-ets2-162-182",
+      "mod-ets2-162-183",
+      "mod-ets2-162-184",
+      "mod-ets2-162-185",
+      "mod-ets2-162-186",
+      "mod-ets2-162-187",
+      "mod-ets2-162-188",
+      "mod-ets2-162-189",
+      "mod-ets2-162-190",
+      "mod-ets2-162-191",
+      "mod-ets2-162-192",
+      "mod-ets2-162-193",
+      "mod-ets2-162-194",
+      "mod-ets2-162-195",
+      "mod-ets2-162-196",
+      "mod-ets2-162-197",
+      "mod-ets2-162-198",
+      "mod-ets2-162-199",
+      "mod-ets2-162-200",
+      "mod-ets2-162-201",
+      "mod-ets2-162-202",
+      "mod-ets2-162-203",
+      "mod-ets2-162-204",
+      "mod-ets2-162-205",
+      "mod-ets2-162-206",
+      "mod-ets2-162-207",
+      "mod-ets2-162-208",
+      "mod-ets2-162-209",
+      "mod-ets2-162-210",
+      "mod-ets2-162-211",
+      "mod-ets2-162-212",
+      "mod-ets2-162-213",
+      "mod-ets2-162-216",
+      "mod-ets2-162-217",
+      "mod-ets2-162-218",
+      "mod-ets2-162-219",
+      "mod-ets2-162-220",
+      "mod-ets2-162-221",
+      "mod-ets2-162-222",
+      "mod-ets2-162-223",
+      "mod-ets2-162-224",
+      "mod-ets2-162-225",
+      "mod-ets2-162-226",
+      "mod-ets2-162-227",
+      "mod-ets2-162-228",
+      "mod-ets2-162-230",
+      "mod-ets2-162-232",
+      "mod-ets2-162-233",
+      "mod-ets2-162-234",
+      "mod-ets2-162-235",
+      "mod-ets2-162-236",
+      "mod-ets2-162-237",
+      "mod-ets2-162-238",
+      "mod-ets2-162-239",
+      "mod-ets2-162-240",
+      "mod-ets2-162-241",
+      "mod-ets2-162-242",
+      "torpedo-nextgen-sisl-pack-compatibility"
+    ],
+    "releases": [
+      {
+        "version": "1.1",
+        "date": "2026-11-14",
+        "entries": [
+          {
+            "id": "mod-ets2-162-001",
+            "title": "PNG: PhotorealisticExperience",
+            "version": "1.5"
+          },
+          {
+            "id": "mod-ets2-162-003",
+            "title": "Arnook's Container Pack",
+            "version": "21"
+          },
+          {
+            "id": "mod-ets2-162-004",
+            "title": "Arnook's Container Pack - Train AddOn",
+            "version": "20"
+          },
+          {
+            "id": "mod-ets2-162-005",
+            "title": "Sound Fixes Pack 26.66",
+            "version": "26.77"
+          },
+          {
+            "id": "mod-ets2-162-006",
+            "title": "Real Train Lengths ETS2",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-007",
+            "title": "Real Train Sounds ETS2",
+            "version": "1.62"
+          },
+          {
+            "id": "mod-ets2-162-008",
+            "title": "Reefer trailer sound addon for ETS2",
+            "version": "2026NOV05"
+          },
+          {
+            "id": "mod-ets2-162-009",
+            "title": "Better Flares - Base v4.9.1",
+            "version": "4.9.1"
+          },
+          {
+            "id": "mod-ets2-162-010",
+            "title": "Better Flares - Traffic Addon ETS2 v4.9.1",
+            "version": "4.9.1"
+          },
+          {
+            "id": "mod-ets2-162-011",
+            "title": "Better Flares - City Lights Addon with Fog v4.9",
+            "version": "4.9"
+          },
+          {
+            "id": "mod-ets2-162-014",
+            "title": "AI Traffic Pack by Jazzycat 21.8.15",
+            "version": "21.8.15"
+          },
+          {
+            "id": "mod-ets2-162-015",
+            "title": "Egon's AI traffic pack v1.2",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-016",
+            "title": "Bus Traffic Pack by Jazzycat v18.2.1",
+            "version": "18.2.1"
+          },
+          {
+            "id": "mod-ets2-162-017",
+            "title": "BigBus Traffic Pack"
+          },
+          {
+            "id": "mod-ets2-162-018",
+            "title": "Classic Cars Traffic Pack by TrafficManiac v11.6.15",
+            "version": "11.6.15"
+          },
+          {
+            "id": "mod-ets2-162-020",
+            "title": "Sport Cars Traffic Pack by TrafficManiac v12.7.16",
+            "version": "12.7.16"
+          },
+          {
+            "id": "mod-ets2-162-022",
+            "title": "NFS Traffic Pack 1.61",
+            "version": "1.61"
+          },
+          {
+            "id": "mod-ets2-162-023",
+            "title": "BMW Traffic Pack"
+          },
+          {
+            "id": "mod-ets2-162-024",
+            "title": "Police & ambulance extended pack",
+            "version": "1.56.1"
+          },
+          {
+            "id": "mod-ets2-162-025",
+            "title": "emergency traffic pack",
+            "version": "1.2.19"
+          },
+          {
+            "id": "mod-ets2-162-026",
+            "title": "Emergency vehicles by Egon 1.3",
+            "version": "1.3"
+          },
+          {
+            "id": "mod-ets2-162-027",
+            "title": "Taxi_Traffic_Pack 3.5.14",
+            "version": "3.5.14"
+          },
+          {
+            "id": "mod-ets2-162-028",
+            "title": "AI Taxicabs pack by Egon 1.5.1",
+            "version": "1.5.1"
+          },
+          {
+            "id": "mod-ets2-162-029",
+            "title": "Density add-on for Jazzycat mods - AI Taxicabs pack by Egon 1.6",
+            "version": "1.6"
+          },
+          {
+            "id": "mod-ets2-162-030",
+            "title": "Painted Truck Traffic by Jazzycat v18.7.15",
+            "version": "18.7.15"
+          },
+          {
+            "id": "mod-ets2-162-031",
+            "title": "Painted BDF Traffic Pack by Jazzycat 15.6.14",
+            "version": "15.6.14"
+          },
+          {
+            "id": "mod-ets2-162-032",
+            "title": "Truck Traffic Pack by Jazzycat v9.1.20",
+            "version": "9.1.20"
+          },
+          {
+            "id": "mod-ets2-162-033",
+            "title": "Trailers Traffic Pack by TrafficManiac v12.10.1",
+            "version": "12.10.1"
+          },
+          {
+            "id": "mod-ets2-162-034",
+            "title": "Real European Traffic Pack",
+            "version": "1.6"
+          },
+          {
+            "id": "mod-ets2-162-035",
+            "title": "Tuned Truck Traffic Pack by TrafficManiac v7.1.14",
+            "version": "7.1.14"
+          },
+          {
+            "id": "mod-ets2-162-036",
+            "title": "Russian Trailer Traffic Pack",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-037",
+            "title": "russian-company",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-038",
+            "title": "Pack skins of Russian companies by Mr.Fox v2.1",
+            "version": "2.1"
+          },
+          {
+            "id": "mod-ets2-162-039",
+            "title": "Skinpack of Ukrainian companies by Mr.Fox",
+            "version": "1.3"
+          },
+          {
+            "id": "mod-ets2-162-040",
+            "title": "Skins of Russian transport companies",
+            "version": "1.0.2"
+          },
+          {
+            "id": "mod-ets2-162-041",
+            "title": "Pack skins of Russian companies for Schmitz Cargobull Trailer Pack by Mr.Fox v2.1",
+            "version": "2.1"
+          },
+          {
+            "id": "mod-ets2-162-042",
+            "title": "Деловые линии",
+            "version": "1.2.1"
+          },
+          {
+            "id": "mod-ets2-162-043",
+            "title": "Coca-Cola Skinpack by Mr.Fox",
+            "version": "1.5"
+          },
+          {
+            "id": "mod-ets2-162-044",
+            "title": "Skinpack of Belarusian companies by Mr.Fox",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-045",
+            "title": "russian shmitz",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-046",
+            "title": "PEK Skin Pack",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-047",
+            "title": "Magnit Skin Pack",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-048",
+            "title": "Kamaz_Trailer",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-049",
+            "title": "Wildberries Skin Pack",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-050",
+            "title": "sotrans",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-051",
+            "title": "X5 Transport Skin Pack",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-052",
+            "title": "Skin Ozon by Mr.Fox",
+            "version": "1.0.1"
+          },
+          {
+            "id": "mod-ets2-162-053",
+            "title": "Russian Traffic by Jazzycat v4.3.6base",
+            "version": "4.3.6"
+          },
+          {
+            "id": "mod-ets2-162-055",
+            "title": "MAZ traffic pack base",
+            "version": "1.49"
+          },
+          {
+            "id": "mod-ets2-162-057",
+            "title": "ZIL Traffic BASE",
+            "version": "1.49"
+          },
+          {
+            "id": "mod-ets2-162-058",
+            "title": "ZIL Traffic def for russian map",
+            "version": "1.49"
+          },
+          {
+            "id": "mod-ets2-162-059",
+            "title": "Russian Trailer Traffic Pack RU/BY only",
+            "version": "2.1"
+          },
+          {
+            "id": "mod-ets2-162-060",
+            "title": "Ownable Trailers Megamod"
+          },
+          {
+            "id": "mod-ets2-162-061",
+            "title": "ETS2 Traffic Trailers Mega Pack"
+          },
+          {
+            "id": "mod-ets2-162-062",
+            "title": "RB18_Actros_byDedan"
+          },
+          {
+            "id": "mod-ets2-162-063",
+            "title": "RB18trailerbydedan"
+          },
+          {
+            "id": "mod-ets2-162-064",
+            "title": "RB18 SCANIA byDedan"
+          },
+          {
+            "id": "mod-ets2-162-065",
+            "title": "RB18 Renaut T byDedan"
+          },
+          {
+            "id": "mod-ets2-162-066",
+            "title": "MAN TGX Pikachu by Dedan"
+          },
+          {
+            "id": "mod-ets2-162-067",
+            "title": "Anime DAF NGD byDedan"
+          },
+          {
+            "id": "mod-ets2-162-068",
+            "title": "GTA SA by Dedan"
+          },
+          {
+            "id": "mod-ets2-162-069",
+            "title": "GTA VC byDedan"
+          },
+          {
+            "id": "mod-ets2-162-070",
+            "title": "QS byDedan"
+          },
+          {
+            "id": "mod-ets2-162-071",
+            "title": "QS MAN TGX byDedan"
+          },
+          {
+            "id": "mod-ets2-162-072",
+            "title": "Trucks skins pack QS VTC",
+            "version": "0.0.1-alpha"
+          },
+          {
+            "id": "mod-ets2-162-073",
+            "title": "ETS2 Gennadii Skins Pack v1.3.1",
+            "version": "1.3.2"
+          },
+          {
+            "id": "mod-ets2-162-074",
+            "title": "MB AeroDynamic Trailer by AM",
+            "version": "1.5"
+          },
+          {
+            "id": "mod-ets2-162-075",
+            "title": "Real country AI spawns ADD-ON - v21.8.15"
+          },
+          {
+            "id": "mod-ets2-162-076",
+            "title": "Flarepack for ETS2",
+            "version": "24.0"
+          },
+          {
+            "id": "mod-ets2-162-077",
+            "title": "EU Trailer Pack Wheels",
+            "version": "3.2.1"
+          },
+          {
+            "id": "mod-ets2-162-078",
+            "title": "Dirt tires and rims pack",
+            "version": "1.03"
+          },
+          {
+            "id": "mod-ets2-162-079",
+            "title": "Luminous Tires 发光轮胎",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-080",
+            "title": "Real Tyres Mod",
+            "version": "6.3"
+          },
+          {
+            "id": "mod-ets2-162-081",
+            "title": "Real Trailer Tyres Mod",
+            "version": "1.8"
+          },
+          {
+            "id": "mod-ets2-162-082",
+            "title": "No More Slippery Tires ETS2",
+            "version": "1.0.1"
+          },
+          {
+            "id": "mod-ets2-162-083",
+            "title": "Abasstreppas wheel pack Truck and Trailers 25.06",
+            "version": "01.10"
+          },
+          {
+            "id": "mod-ets2-162-084",
+            "title": "EU Trailer Pack Container Trailer",
+            "version": "3.2.1"
+          },
+          {
+            "id": "mod-ets2-162-085",
+            "title": "EU Trailer Pack Refrigerated Trailer",
+            "version": "3.2.1"
+          },
+          {
+            "id": "mod-ets2-162-086",
+            "title": "EU Trailer Pack Food Tank Trailer",
+            "version": "3.2.1"
+          },
+          {
+            "id": "mod-ets2-162-087",
+            "title": "EU Trailer Pack Curtain Trailer",
+            "version": "3.2.1"
+          },
+          {
+            "id": "mod-ets2-162-088",
+            "title": "EU Trailer Pack Tipper Trailer",
+            "version": "3.2.1"
+          },
+          {
+            "id": "mod-ets2-162-089",
+            "title": "KamAZ 5460/6460/65117/65201",
+            "version": "7.3"
+          },
+          {
+            "id": "mod-ets2-162-090",
+            "title": "[mTG] KamAZ Pack v3.2 ETS2",
+            "version": "3.2"
+          },
+          {
+            "id": "mod-ets2-162-091",
+            "title": "KamAZ 5490+65206 Neo ETS2",
+            "version": "2.9.1"
+          },
+          {
+            "id": "mod-ets2-162-092",
+            "title": "MAZ 6422 (1981) ETS2",
+            "version": "17.06.2026"
+          },
+          {
+            "id": "mod-ets2-162-093",
+            "title": "MAN F2000 Evo - COG Patched",
+            "version": "2.5"
+          },
+          {
+            "id": "mod-ets2-162-094",
+            "title": "scania_pgr_series_161"
+          },
+          {
+            "id": "mod-ets2-162-095",
+            "title": "RJL Scania G, R & Streamline",
+            "version": "23.6.25"
+          },
+          {
+            "id": "mod-ets2-162-097",
+            "title": "actros_mp3_159",
+            "version": "1.3.5"
+          },
+          {
+            "id": "mod-ets2-162-098",
+            "title": "Actros 2019",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-099",
+            "title": "Actros 2023 [L Addon]",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-100",
+            "title": "Ford Trucks F-MAX",
+            "version": "1.62.1"
+          },
+          {
+            "id": "mod-ets2-162-101",
+            "title": "Torpedo NextGen",
+            "version": "4.1"
+          },
+          {
+            "id": "mod-ets2-162-102",
+            "title": "Torpedo NextGen/SpecTransGroup Trailer",
+            "version": "4.1"
+          },
+          {
+            "id": "mod-ets2-162-103",
+            "title": "HVT - Neoplan Cityliner (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-105",
+            "title": "HVT - Temsa Safir Plus (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-107",
+            "title": "HVT - Temsa Safir II VIP (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-109",
+            "title": "HVT - MB New Travego 15 SHD (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-111",
+            "title": "HVT - Neoplan Tourliner (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-113",
+            "title": "HVT - MAN Lion's Coach 3rd Gen (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-115",
+            "title": "HVT - Temsa Maraton VIP (BASE)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-117",
+            "title": "Carbon and Steel skins",
+            "version": "2.2"
+          },
+          {
+            "id": "mod-ets2-162-118",
+            "title": "Crayon Metallic Paint Job Mod",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-119",
+            "title": "Crayon Pearl Paint Job Mod",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-120",
+            "title": "Crayon Gel Paint Job Mod",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-121",
+            "title": "Animated LED Window Eyes",
+            "version": "1"
+          },
+          {
+            "id": "mod-ets2-162-122",
+            "title": "A_W_LED_Panel",
+            "version": "1.8.1"
+          },
+          {
+            "id": "mod-ets2-162-123",
+            "title": "scs_trailer_tuning_pack",
+            "version": "2.0.0"
+          },
+          {
+            "id": "mod-ets2-162-124",
+            "title": "SGD TRUCK TUNING PACK",
+            "version": "1.4.1"
+          },
+          {
+            "id": "mod-ets2-162-125",
+            "title": "Trailer light",
+            "version": "1.61"
+          },
+          {
+            "id": "mod-ets2-162-126",
+            "title": "Strands Ambassador 9'' [1.1]",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-127",
+            "title": "Virotic LED Package",
+            "version": "3.6"
+          },
+          {
+            "id": "mod-ets2-162-128",
+            "title": "hella_rallye_3000_v17_obelihnio",
+            "version": "1.7"
+          },
+          {
+            "id": "mod-ets2-162-129",
+            "title": "obel_bore_led_v19",
+            "version": "1.9"
+          },
+          {
+            "id": "mod-ets2-162-130",
+            "title": "lightpack"
+          },
+          {
+            "id": "mod-ets2-162-131",
+            "title": "NkD LED & AUX LIGHT 4.3",
+            "version": "4.3"
+          },
+          {
+            "id": "mod-ets2-162-132",
+            "title": "Truck Underglow",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-133",
+            "title": "彩虹劈叉分八瓣(colorful ambient lights)",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-134",
+            "title": "可以发光的前格栅",
+            "version": "5.0"
+          },
+          {
+            "id": "mod-ets2-162-135",
+            "title": "炫彩氛围灯",
+            "version": "5.3"
+          },
+          {
+            "id": "mod-ets2-162-136",
+            "title": "Meteor Ambient Light",
+            "version": "1.60"
+          },
+          {
+            "id": "mod-ets2-162-137",
+            "title": "Kelsa Packs",
+            "version": "1.8.5.2"
+          },
+          {
+            "id": "mod-ets2-162-138",
+            "title": "kelsa_daf_v20_obelihnio",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-139",
+            "title": "kelsa_mb_act_v13_obelihnio",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-140",
+            "title": "Kelsa light bars for MB Actros 2019 [DEF]",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-141",
+            "title": "Actros Plus: New Actros MP4 Cabin Overhaul",
+            "version": "1.2.4"
+          },
+          {
+            "id": "mod-ets2-162-142",
+            "title": "Actros Plus: Accessory-Addon",
+            "version": "1.0.2"
+          },
+          {
+            "id": "mod-ets2-162-143",
+            "title": "Cabin ACC for Trucks",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-144",
+            "title": "Venus Scania Badge",
+            "version": "1"
+          },
+          {
+            "id": "mod-ets2-162-145",
+            "title": "Venus Scania NG Parts",
+            "version": "1"
+          },
+          {
+            "id": "mod-ets2-162-146",
+            "title": "BC-Collection Exterior tuning Belka accessory",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-147",
+            "title": "DigiCam - Iveco Hi-Way",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-148",
+            "title": "DigiCam - Mercedes-Benz Actros",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-149",
+            "title": "DigiCam - Scania",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-150",
+            "title": "DigiCam - Volvo FH Series 3, 4 and 5",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-151",
+            "title": "DigiCam - Renault",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-152",
+            "title": "DigiCam - DAF XF Euro 6",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-153",
+            "title": "DigiCam - MAN TGX Euro 6",
+            "version": "1.0.0"
+          },
+          {
+            "id": "mod-ets2-162-154",
+            "title": "Lots of slots",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-155",
+            "title": "SiSL's Mega Pack",
+            "version": "3.3"
+          },
+          {
+            "id": "mod-ets2-162-157",
+            "title": "Torpedo NextGen DLC Accessories Compatibility",
+            "version": "4.1"
+          },
+          {
+            "id": "mod-ets2-162-158",
+            "title": "just_clutter_revisited",
+            "version": "1"
+          },
+          {
+            "id": "mod-ets2-162-159",
+            "title": "RaudUlfur's Cabin Accessories",
+            "version": "1.25"
+          },
+          {
+            "id": "mod-ets2-162-160",
+            "title": "Knight Kitty Interior Toy",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-161",
+            "title": "ETS2 QS Cube Accessories (Optional)",
+            "version": "2026.06.18"
+          },
+          {
+            "id": "mod-ets2-162-162",
+            "title": "Logo QS Wheel",
+            "version": "2026"
+          },
+          {
+            "id": "mod-ets2-162-163",
+            "title": "Actros Edition 1 Prestige",
+            "version": "0.7"
+          },
+          {
+            "id": "mod-ets2-162-164",
+            "title": "Truck Accessory Pack",
+            "version": "v16.8.1 May 6th 2026"
+          },
+          {
+            "id": "mod-ets2-162-165",
+            "title": "Scania S&R Interiors",
+            "version": "2.2 Release 1"
+          },
+          {
+            "id": "mod-ets2-162-166",
+            "title": "Scania NG Addon Packs",
+            "version": "2.1.7"
+          },
+          {
+            "id": "mod-ets2-162-167",
+            "title": "daf addon pack",
+            "version": "1.6.3"
+          },
+          {
+            "id": "mod-ets2-162-168",
+            "title": "Man Addon Pack",
+            "version": "1.4.1"
+          },
+          {
+            "id": "mod-ets2-162-169",
+            "title": "YTHQ GPS",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-170",
+            "title": "YTHQ GPS Expand",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-171",
+            "title": "Tjs HD GPS Mod",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mod-ets2-162-172",
+            "title": "ETA and rest on GPS - SCS Trucks",
+            "version": "1.10"
+          },
+          {
+            "id": "mod-ets2-162-173",
+            "title": "GPS/PC",
+            "version": "1.22"
+          },
+          {
+            "id": "mod-ets2-162-174",
+            "title": "ETS2 GPS-PC TSA (Optional)",
+            "version": "2026.06.13"
+          },
+          {
+            "id": "mod-ets2-162-175",
+            "title": "Pack of pennants of Russian regions",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-176",
+            "title": "Pack of pennants of Belarusian regions",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-177",
+            "title": "Pack of pennants of EPL",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-178",
+            "title": "Pack of pennants of RPL",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-179",
+            "title": "Pack of pennants of KHL 25/26",
+            "version": "1.0.1"
+          },
+          {
+            "id": "mod-ets2-162-180",
+            "title": "Pack of pennants of truck companies",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-181",
+            "title": "Int accessory rus rock",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-182",
+            "title": "Interior Cabin Lights",
+            "version": "2307"
+          },
+          {
+            "id": "mod-ets2-162-183",
+            "title": "Quper Simulator - Illuminated Emblem",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-184",
+            "title": "Interior Light & Emblems Part 1",
+            "version": "v26.10"
+          },
+          {
+            "id": "mod-ets2-162-185",
+            "title": "Interior Light & Emblems Part 2",
+            "version": "v26.10"
+          },
+          {
+            "id": "mod-ets2-162-186",
+            "title": "Interior Light & Emblems beacon add-on",
+            "version": "v26.10"
+          },
+          {
+            "id": "mod-ets2-162-187",
+            "title": "Animated Co-Driver Pack Optional 21.02.26",
+            "version": "14.11"
+          },
+          {
+            "id": "mod-ets2-162-188",
+            "title": "Mercedes-Benz Actros MP3 Improved Dashboard",
+            "version": "2.01"
+          },
+          {
+            "id": "mod-ets2-162-189",
+            "title": "Mercedes-Benz Actros MP4 Improved Dashboard",
+            "version": "1.6"
+          },
+          {
+            "id": "mod-ets2-162-190",
+            "title": "IVECO S-Way Improved Dashboard",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-191",
+            "title": "Volvo FH3 Improved Dashboard",
+            "version": "2.1"
+          },
+          {
+            "id": "mod-ets2-162-192",
+            "title": "Volvo FH4 Improved Dashboard",
+            "version": "3.0"
+          },
+          {
+            "id": "mod-ets2-162-193",
+            "title": "Volvo FH5 Improved Dashboard",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-194",
+            "title": "Volvo FH6 Improved Dashboard",
+            "version": "1.9"
+          },
+          {
+            "id": "mod-ets2-162-195",
+            "title": "DAF XF 105 Custom Dashboard",
+            "version": "1.2.3"
+          },
+          {
+            "id": "mod-ets2-162-196",
+            "title": "Daf XF Euro6 more readable display",
+            "version": "3.0"
+          },
+          {
+            "id": "mod-ets2-162-197",
+            "title": "DAF 2021 Needle Dashboard",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-198",
+            "title": "Scania R 2009 and Streamline Improved Dashboard",
+            "version": "1.3"
+          },
+          {
+            "id": "mod-ets2-162-199",
+            "title": "Scania NG Improved Dashboard",
+            "version": "5.2"
+          },
+          {
+            "id": "mod-ets2-162-200",
+            "title": "Scania Smart Dash Improved Dashboard",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-201",
+            "title": "Scania PGR-Series 2004-2008 Improved Dashboard",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-202",
+            "title": "Scania Dashboard Add-on - Trucks + Coaches",
+            "version": "2.00"
+          },
+          {
+            "id": "mod-ets2-162-203",
+            "title": "Volvo Dashboard Add-on - Trucks + Coaches",
+            "version": "2.00"
+          },
+          {
+            "id": "mod-ets2-162-204",
+            "title": "MAN Dashboard Add-on - Trucks + Coaches",
+            "version": "2.00"
+          },
+          {
+            "id": "mod-ets2-162-205",
+            "title": "Renault T Dashboard Add-on",
+            "version": "1.00"
+          },
+          {
+            "id": "mod-ets2-162-206",
+            "title": "DAF NGD Dashboard Add-on",
+            "version": "1.00"
+          },
+          {
+            "id": "mod-ets2-162-207",
+            "title": "MAN TGX 2020 Improved Dashboard",
+            "version": "2.1"
+          },
+          {
+            "id": "mod-ets2-162-208",
+            "title": "renaultT 2024 +visible Dashboard",
+            "version": "1.57"
+          },
+          {
+            "id": "mod-ets2-162-209",
+            "title": "Real European Companies V1",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-210",
+            "title": "Ru_Advert_Rework_By10avoid_3.0",
+            "version": "3"
+          },
+          {
+            "id": "mod-ets2-162-211",
+            "title": "Reflective Road Markings",
+            "version": "6.2 for ETS2/ATS"
+          },
+          {
+            "id": "mod-ets2-162-212",
+            "title": "Real Icons Trucks + Coaches",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-213",
+            "title": "QS Company",
+            "version": "3.1"
+          },
+          {
+            "id": "mod-ets2-162-216",
+            "title": "PNG: PE-FOGGY WEATHER",
+            "version": "1.4"
+          },
+          {
+            "id": "mod-ets2-162-217",
+            "title": "PNG: NorthExperience",
+            "version": "0511"
+          },
+          {
+            "id": "mod-ets2-162-218",
+            "title": "PNG: PE-RAIN",
+            "version": "1.5"
+          },
+          {
+            "id": "mod-ets2-162-219",
+            "title": "PNG: PE-AUTUMN",
+            "version": "1.4"
+          },
+          {
+            "id": "mod-ets2-162-220",
+            "title": "PNG: Street Lamps",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-221",
+            "title": "Project Ultimate Weather 2.5",
+            "version": "2.5"
+          },
+          {
+            "id": "mod-ets2-162-222",
+            "title": "QS Sound Addon Optional 30.09",
+            "version": "01.10"
+          },
+          {
+            "id": "mod-ets2-162-223",
+            "title": "Crystal Tweet Air Horn",
+            "version": "2.0"
+          },
+          {
+            "id": "mod-ets2-162-224",
+            "title": "Physics Mod (ETS2)(Wheel)",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-225",
+            "title": "Scania NG I&E Pack",
+            "version": "1.0.1-G5+"
+          },
+          {
+            "id": "mod-ets2-162-226",
+            "title": "Weather Sound & Effect Mod",
+            "version": "1.4.1-G5"
+          },
+          {
+            "id": "mod-ets2-162-227",
+            "title": "Wind, Tire & Trailer Effects Pack",
+            "version": "1.4.6-G5+"
+          },
+          {
+            "id": "mod-ets2-162-228",
+            "title": "Master Reverb Mod",
+            "version": "2.0.1-G5"
+          },
+          {
+            "id": "mod-ets2-162-229",
+            "title": "ZM Common Dependencies",
+            "version": "1.0.1"
+          },
+          {
+            "id": "mod-ets2-162-230",
+            "title": "ETS2 Sound Navigation",
+            "version": "2026.09.30"
+          },
+          {
+            "id": "mod-ets2-162-231",
+            "title": "Двигатели КамАЗ 740",
+            "version": "1.5.3"
+          },
+          {
+            "id": "mod-ets2-162-232",
+            "title": "Yandex.Navigator - All voices",
+            "version": "25.04.21"
+          },
+          {
+            "id": "mod-ets2-162-233",
+            "title": "Russian Voice Navigation",
+            "version": "1.1.5"
+          },
+          {
+            "id": "mod-ets2-162-234",
+            "title": "Realistic Soundproofing v1.0",
+            "version": "1.0"
+          },
+          {
+            "id": "mod-ets2-162-235",
+            "title": "Real Logos for jon-ruda mods",
+            "version": "27.0"
+          },
+          {
+            "id": "mod-ets2-162-236",
+            "title": "Immersive External Cam + Infinite Zoom v1.1",
+            "version": "v1.1"
+          },
+          {
+            "id": "mod-ets2-162-237",
+            "title": "Unlimited Seat Adjustment 1.15",
+            "version": "1.2"
+          },
+          {
+            "id": "mod-ets2-162-238",
+            "title": "Realistic FOV Mirror Quper",
+            "version": "3.0"
+          },
+          {
+            "id": "mod-ets2-162-239",
+            "title": "no_camera_photo_mode",
+            "version": "1.1"
+          },
+          {
+            "id": "mod-ets2-162-240",
+            "title": "Realistic Economy by Quper",
+            "version": "1.61 Final"
+          },
+          {
+            "id": "mod-ets2-162-241",
+            "title": "Remover Ferries by Quper",
+            "version": "1.61.0"
+          },
+          {
+            "id": "mod-ets2-162-242",
+            "title": "ETS2 Global Background Map",
+            "version": "2.8"
+          },
+          {
+            "id": "torpedo-nextgen-sisl-pack-compatibility",
+            "title": "Torpedo NextGen SISL's Pack Compatibility",
+            "version": "4.1"
+          }
+        ]
+      }
+    ]
+  }
+}
