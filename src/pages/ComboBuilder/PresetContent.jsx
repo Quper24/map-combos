@@ -16,6 +16,7 @@ import {
   OrderDownloads,
   OrderList,
   OrderProfileInstall,
+  RemovePaidMapsButton,
 } from './ComboBuilder';
 import ShareCombo from './ShareCombo';
 import s from './ComboBuilder.module.css';
@@ -54,6 +55,14 @@ export default function PresetContent({ catalog, preset, share = true }) {
             <ExternalLink className="button button-boosty" href={preset.boosty}>
               {t(original ? 'Сборка на Boosty' : 'Исходная сборка на Boosty')}
             </ExternalLink>
+          )}
+          {!server && (
+            <RemovePaidMapsButton
+              catalog={catalog}
+              selection={selection}
+              active={result.active}
+              onRemove={setSelection}
+            />
           )}
           {!original && (
             <button

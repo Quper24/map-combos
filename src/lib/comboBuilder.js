@@ -105,10 +105,17 @@ export function addToCombo(catalog, selection, id) {
   return { selection: conflicts.length ? selection : next, conflicts };
 }
 
+export function removePaidMaps(catalog, selection, active) {
+  const ids = catalog.entries
+    .filter((entry) => entry.type === 'map' && entry.paid && active.has(entry.id))
+    .map(({ id }) => id);
+  return ids.length ? removeFromCombo(catalog, selection, ids, active).selection : selection;
+}
+
 export function removeFromCombo(
   catalog,
   selection,
-  id,
+  ids,
   active = resolveCombo(catalog, selection).active,
 ) {
   const dependents = new Map();
@@ -119,7 +126,8 @@ export function removeFromCombo(
       dependents.set(dependency, list);
     }
   }
-  const affected = new Set([id]);
+  const removed = new Set(Array.isArray(ids) ? ids : [ids]);
+  const affected = new Set(removed);
   for (const dependency of affected) {
     for (const dependent of dependents.get(dependency) || []) affected.add(dependent);
   }
@@ -128,7 +136,10 @@ export function removeFromCombo(
   const alsoDisabled = catalog.entries
     .filter(
       (entry) =>
-        entry.id !== id && isSelectable(entry) && active.has(entry.id) && !remaining.has(entry.id),
+        !removed.has(entry.id) &&
+        isSelectable(entry) &&
+        active.has(entry.id) &&
+        !remaining.has(entry.id),
     )
     .map((entry) => entry.id);
   return { selection: next, alsoDisabled };
