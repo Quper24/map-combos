@@ -897,6 +897,14 @@ function EntryActivationFields({ entry, dependencies }) {
           disabled={autoEnabled}
         />
       )}
+      {isFixOrConnector(type) && (
+        <Choices
+          label="Заменяет фиксы"
+          name="replaces"
+          selected={entry?.replaces}
+          items={dependencies.filter((item) => isFixOrConnector(item.type))}
+        />
+      )}
     </>
   );
 }
@@ -960,6 +968,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           const modVersion = valueOf(form, 'modVersion');
           const type = form.get('type');
           const alternatives = form.getAll('requiresAny');
+          const replacementsForFix = form.getAll('replaces');
           const markUpdate =
             entry &&
             (replacements.size ||
@@ -982,6 +991,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             files: fileChanges.files,
             requires: form.getAll('requires'),
             requiresAny: alternatives.length ? alternatives : undefined,
+            replaces: replacementsForFix.length ? replacementsForFix : undefined,
             dlcs: (valueOf(form, 'dlcs') || '')
               .split(',')
               .map((dlc) => dlc.trim())

@@ -9,9 +9,9 @@
       "link": "https://truckymods.io/american-truck-simulator/maps/coast-to-coast",
       "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp",
       "description": "Эта карта, начатая в 2016 году, добавляет все смежные штаты, не охваченные базовой игрой и дополнениями к ней. Карта всё ещё находится в разработке, так что наслаждайтесь ею такой, какая она есть!",
-      "version": "v2.24.62.1",
+      "version": "2.24.62.1",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-13",
+      "updatedAt": "2026-11-15",
       "paid": false,
       "files": [
         "Coast_to_Coast_v2.24.62.1"
@@ -26,9 +26,9 @@
       "link": "https://promods.net/setup.php?game=ats",
       "image": "/img/combo-builder/70ca2c84375b5c76054bf89fa45b946d1f89d45fff1c7ab01b51431b439ba021.webp",
       "description": "Высококачественная модификация для American Truck Simulator, добавляющая детально проработанную карту канадской провинции Британская Колумбия с реалистичной дорожной инфраструктурой и атмосферой.",
-      "version": "v1.7.1",
+      "version": "1.7.1",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-15",
       "paid": false,
       "files": [
         "promods-ats-def-v171",
@@ -46,9 +46,9 @@
       "link": "https://sharemods.com/dfa709lli8mw/QS_ATS_C2C_ProMods_Fix.scs.html",
       "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
       "description": "Устраняет дубль определения шлагбаума при совместной загрузке Coast to Coast и ProMods Canada. Подключайте выше обеих карт.",
-      "version": "1.0",
+      "version": "0.1.0",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-15",
       "paid": false,
       "files": [
         "QS_ATS_C2C_ProMods_Fix"
@@ -188,14 +188,15 @@
       "link": "https://sharemods.com/l0wkbahz2f65/QS_ATS_Reforma_Punta_Prieta_Fix.scs.html",
       "image": "/img/combo-builder/b503d2e6e61ae2598ddcc29cf4b94cf7e28a4aac6e8ca16cef961c7cc4b82dfb.webp",
       "description": "Исправляет привязку двух зон города Пунта-Приета в Reforma",
-      "version": "1.0",
+      "version": "0.1.0",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
         "QS_ATS_Reforma_Punta_Prieta_Fix"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "discover-oregon-revived-v1-0-1",
@@ -203,14 +204,15 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/discover-oregon-revived-688685",
       "image": "/img/combo-builder/de161185096b3cccf44a62748d818bbf991783cb09c064d3cb9e3035aea675be.webp",
-      "version": "v1.0.1",
+      "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
         "Discover_Oregon_Revived_v1.0.1"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "trinity-county-revived-v1-0-1",
@@ -218,14 +220,15 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/trinity-county-revived-636329",
       "image": "/img/combo-builder/c384ca54034cefc0eab7f9f45fc85e2d9a317bfede5884886a5ac4c652b7c527.webp",
-      "version": "v1.0.1",
+      "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
         "Trinity_County_Revived_v1.0.1"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "vermont-map-revived-v1-0-1",
@@ -233,7 +236,7 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/vermont-map-revived-463298",
       "image": "/img/combo-builder/54b6216e2d3ce379830ffac32e2d4e12bc294f2561746d571811d4c097e360c3.webp",
-      "version": "v1.0.1",
+      "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
@@ -242,7 +245,8 @@
       "requires": [
         "coast-to-coast-v2-24-62-0"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "aleutian-islands-revived-v1-0-1",
@@ -250,14 +254,15 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/aleutian-islands-revived-270672",
       "image": "/img/combo-builder/7cd6bf7c87c045bb55dbc74dab7a2062d01046839072a9dd2881a157433b6034.webp",
-      "version": "v1.0.1",
+      "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
         "Aleutian_Islands_Revived_v1.0.1"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "petersburg-alaska-revived-v1-0-1",
@@ -265,14 +270,15 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/petersburg-alaska-revived-925542",
       "image": "/img/combo-builder/d5baff173bce46a362c27d9e287175feb8660cad8143f93513322ba7e3d83657.webp",
-      "version": "v1.0.1",
+      "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
         "Petersburg_Alaska_Revived_v1.0.1"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "washington-extended-revived-v1-0-1",
@@ -280,14 +286,15 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/washington-extended-revived-406006",
       "image": "/img/combo-builder/73b595a10e29fbbd0615f48a1dee12339ca5c9d93e3de5da2f238b20809f1137.webp",
-      "version": "v1.0.1",
+      "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
       "files": [
         "Washington_Extended_Revived_v1.0.1"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "mexssimap-0-82-162-public",
@@ -347,7 +354,7 @@
       "type": "fix",
       "link": "https://sharemods.com/0dd76cgu2a0g/QS_ATS_Project_Better_Arizona_Fix.scs.html",
       "image": "/img/combo-builder/7018b736bf73f9829756fa706f7a3d843b17f48913d4c54340ee152b1f83d772.webp",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "addedAt": "2026-11-09",
       "paid": false,
       "files": [
@@ -356,7 +363,8 @@
       "requires": [
         "project-better-arizona-0-5-4-1-62"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "qs-ats-project-better-arizona-fix",
@@ -364,7 +372,7 @@
       "type": "fix",
       "link": "https://sharemods.com/8j24vpbo0vz9/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
       "image": "/img/combo-builder/5c93f85cb9c3c96ff61f5c05ca7bac9a33cacbc6354e86a37fdbd4f3be41afc9.webp",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "addedAt": "2026-11-09",
       "paid": false,
       "files": [
@@ -373,7 +381,8 @@
       "requires": [
         "project-better-arizona-reforma-connection-1-17-1-62"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "alaska-north-to-the-future",
@@ -382,14 +391,15 @@
       "link": "https://alaskamod.com/",
       "image": "/img/combo-builder/f006052ccd1e8d02ac1ece92e5b0c843d499623b7ceab162ac6cc218c22c0b28.webp",
       "description": "Штат Аляска, выполнен очень хорошо, со своими моделями, погодой и компаниями.",
-      "version": "0.8.9 beta",
+      "version": "v0.8.9 Beta",
       "addedAt": "2026-11-10",
       "paid": true,
       "files": [
         "Alaska_North_to_the_Future"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "qs-ats-reforma-promods-model-fix",
@@ -487,7 +497,7 @@
       "type": "mod",
       "link": "https://alaskamod.com/",
       "image": "/img/combo-builder/82e24ec214806418a63bee4de0c0b7396287c1115f76579b1ec5ce764455f072.webp",
-      "version": "0.8.9 beta",
+      "version": "v0.8.9 Beta",
       "addedAt": "2026-11-13",
       "paid": true,
       "files": [
@@ -496,7 +506,8 @@
       "requires": [
         "alaska-north-to-the-future"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
     },
     {
       "id": "ats-quper-background-map",
@@ -505,157 +516,419 @@
       "autoWithMaps": true,
       "link": "https://sharemods.com/uola2i89k54o/ATS_Quper_Background_Map.scs.html",
       "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
-      "version": "1.3",
+      "version": "2026.10.27 - 1.3",
       "addedAt": "2026-11-13",
       "paid": false,
       "files": [
         "ATS Quper Background Map"
       ],
       "requires": [],
+      "dlcs": [],
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "beyond-by-tm-for-ats-1",
+      "title": "Beyond by TerraMaps",
+      "type": "map",
+      "link": "https://terramaps.net/download/view.php?game=beyondats",
+      "image": "/img/combo-builder/1ca45627ede519a0b035429490f588fb19d75d5c5f3898ed0663eb39fdec891c.webp",
+      "version": "V12",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "Beyond_by_TM_for_ATS_1",
+        "Beyond_by_TM_for_ATS_2",
+        "Beyond_by_TM_for_ATS_3",
+        "Beyond_by_TM_for_ATS_4"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "ats-expansion-v23-0-1-62",
+      "title": "ATS Expansion v23.0",
+      "type": "map",
+      "link": "https://drive.google.com/file/d/1kdv81SXTplDc-9xWrZVH4RXJKgdprogd/view?usp=drive_link",
+      "image": "/img/combo-builder/2d40f698dd733eaef47cfe11fc93c90570af61e5f867ab2e513a39baedb2efed.webp",
+      "version": "23.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "ATS_Expansion_v23.0_1.62"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "c2c-beyond-connections-v1-1-3",
+      "title": "Coast to Coast + Beyond Connections v1.1.3",
+      "type": "connector",
+      "link": "https://truckymods.io/american-truck-simulator/map-patches/coast-to-coast-beyond-ats-connections-913688",
+      "image": "/img/combo-builder/663172c6273d0580b08f67c28d721ec8360362e2740ccca879f5736136b73fa2.webp",
+      "version": "1.1.3",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "C2C_Beyond_Connections_v1.1.3"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "beyond-by-tm-for-ats-1"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "c2c-ats-exp-connections-v1-1-2",
+      "title": "Coast to Coast + ATS Expansion Connections v1.1.2",
+      "type": "connector",
+      "link": "https://truckymods.io/american-truck-simulator/map-patches/coast-to-coast-ats-expansion-connections-659199",
+      "image": "/img/combo-builder/1f63ae607002d3878081647e3fd94afe837187cce958e8d0653bd3c754697f57.webp",
+      "version": "1.1.2",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "C2C_ATS_Exp_Connections_v1.1.2"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "ats-expansion-v23-0-1-62"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-expansion-fix",
+      "title": "QS ATS Expansion Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/3hy4ji6gazth/QS_ATS_Expansion_Fix.scs.html",
+      "image": "/img/combo-builder/bd8d2a4b93deeed4b95c3a3feb2d0c870c4f160ed9c935f075c83e38d5d361ed.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "QS_ATS_Expansion_Fix"
+      ],
+      "requires": [
+        "ats-expansion-v23-0-1-62"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-expansion-sierra-connection-fix",
+      "title": "QS ATS Expansion + Sierra Connection Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/rl6suvbnz2nz/QS_ATS_Expansion_Sierra_Connection_Fix.scs.html",
+      "image": "/img/combo-builder/a877839c618a69070488fb932622ec3cba1aa4df794502d89df03e576adfaa95.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "QS_ATS_Expansion_Sierra_Connection_Fix"
+      ],
+      "requires": [
+        "reforma-sierra-nevada-remake",
+        "ats-expansion-v23-0-1-62"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-alaska-garage-fix",
+      "title": "QS ATS Alaska Garage Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/ozamcy4mbghz/QS_ATS_Alaska_Garage_Fix.scs.html",
+      "image": "/img/combo-builder/cc00c515d04811eec812f6ee01945a63fdbe43d6fe93ba3c392ff3c8097f58c6.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "QS_ATS_Alaska_Garage_Fix"
+      ],
+      "requires": [
+        "alaska-north-to-the-future"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-expansion-garage-fix",
+      "title": "QS ATS Expansion Garage Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/m7zpnpxgcfj3/QS_ATS_Expansion_Garage_Fix.scs.html",
+      "image": "/img/combo-builder/d7b0a003ae1bd727381c6f30c08ea6a1dae7fa80ba66da48485321ef420b48ff.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "QS_ATS_Expansion_Garage_Fix"
+      ],
+      "requires": [
+        "ats-expansion-v23-0-1-62"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-alaska-expansion-garage-fix",
+      "title": "QS ATS Alaska + Expansion Garage Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/nxymf9dlgb8f/QS_ATS_Alaska_Expansion_Garage_Fix.scs.html",
+      "image": "/img/combo-builder/f523795899a362b958a8fb5ab766a42b7f3f18a65331419f0ee74f2d0c008a80.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-15",
+      "paid": false,
+      "files": [
+        "QS_ATS_Alaska_Expansion_Garage_Fix"
+      ],
+      "requires": [
+        "alaska-north-to-the-future",
+        "ats-expansion-v23-0-1-62"
+      ],
+      "replaces": [
+        "qs-ats-alaska-garage-fix",
+        "qs-ats-expansion-garage-fix"
+      ],
       "dlcs": []
     }
   ],
   "order": [
     {
       "key": "NASCAR_Map_Combo_Pack_v1.0.1",
-      "name": "ATS NASCAR Map Combo Pack v1.0.1"
+      "name": "ATS NASCAR Map Combo Pack v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Reforma_MegaResources_v3_0_4_162",
-      "name": "Mega Resources 3.0.4.162"
+      "name": "Mega Resources 3.0.4.162",
+      "logVersion": "3.0.4.162"
     },
     {
       "key": "Reforma_3_0_4_162",
-      "name": "Reforma 3.0.4.162"
+      "name": "Reforma 3.0.4.162",
+      "logVersion": "3.0.4.162"
+    },
+    {
+      "key": "QS_ATS_Reforma_Punta_Prieta_Fix",
+      "name": "QS ATS Reforma Punta Prieta Fix",
+      "logVersion": "0.1.0"
     },
     {
       "key": "Reforma_Sierra_Nevada_Remake_v1_21_162",
-      "name": "Reforma Sierra Nevada 1.21.162"
+      "name": "Reforma Sierra Nevada 1.21.162",
+      "logVersion": "1.21.162"
     },
     {
       "key": "Project_Better_Arizona_0.5.4_1.62",
-      "name": "Project Better Arizona 0.5.4"
+      "name": "Project Better Arizona 0.5.4",
+      "logVersion": "0.5.4"
     },
     {
       "key": "QS_ATS_Project_Better_Arizona_Fix",
-      "name": "QS ATS Project Better Arizona Fix"
+      "name": "QS ATS Project Better Arizona Fix",
+      "logVersion": "0.2.0"
     },
     {
       "key": "Project_Better_Arizona_Reforma_Connection_1.17_1.62",
-      "name": "Project Better Arizona Reforma Connection 1.17"
+      "name": "Project Better Arizona Reforma Connection 1.17",
+      "logVersion": "1.17"
     },
     {
       "key": "QS_ATS_PBA_Reforma_Service_Fix",
-      "name": "QS ATS PBA Reforma Service Fix"
+      "name": "QS ATS PBA Reforma Service Fix",
+      "logVersion": "0.1.0"
     },
     {
       "key": "Coast_to_Coast_v2.24.62.1",
-      "name": "Coast to Coast v2.24.62.1"
+      "name": "Coast to Coast v2.24.62.1",
+      "logVersion": "2.24.62.1"
+    },
+    {
+      "key": "Beyond_by_TM_for_ATS_4",
+      "name": "Beyond by TerraMaps 4",
+      "logVersion": "V12",
+      "link": "https://sharemods.com/uqoag2dk9san/Beyond_by_TM_for_ATS_4.scs.html",
+      "image": "/img/combo-builder/1ca45627ede519a0b035429490f588fb19d75d5c5f3898ed0663eb39fdec891c.webp"
+    },
+    {
+      "key": "Beyond_by_TM_for_ATS_3",
+      "name": "Beyond by TerraMaps 3",
+      "logVersion": "V12",
+      "link": "https://sharemods.com/3zgchqad520a/Beyond_by_TM_for_ATS_3.scs.html",
+      "image": "/img/combo-builder/1ca45627ede519a0b035429490f588fb19d75d5c5f3898ed0663eb39fdec891c.webp"
+    },
+    {
+      "key": "Beyond_by_TM_for_ATS_2",
+      "name": "Beyond by TerraMaps 2",
+      "logVersion": "V12",
+      "link": "https://sharemods.com/c2dmm8lgufff/Beyond_by_TM_for_ATS_2.scs.html",
+      "image": "/img/combo-builder/1ca45627ede519a0b035429490f588fb19d75d5c5f3898ed0663eb39fdec891c.webp"
+    },
+    {
+      "key": "Beyond_by_TM_for_ATS_1",
+      "name": "Beyond by TerraMaps 1",
+      "logVersion": "V12",
+      "link": "https://sharemods.com/rm6ux2j540qa/Beyond_by_TM_for_ATS_1.scs.html",
+      "image": "/img/combo-builder/1ca45627ede519a0b035429490f588fb19d75d5c5f3898ed0663eb39fdec891c.webp"
+    },
+    {
+      "key": "C2C_Beyond_Connections_v1.1.3",
+      "name": "Coast to Coast + Beyond Connections v1.1.3",
+      "logVersion": "1.1.3"
     },
     {
       "key": "Mexssimap_0_82_162_Public",
-      "name": "Mexssimap 0.82.162 Public"
+      "name": "Mexssimap 0.82.162 Public",
+      "logVersion": "0.82.162"
+    },
+    {
+      "key": "ATS_Expansion_v23.0_1.62",
+      "name": "ATS Expansion v23.0",
+      "logVersion": "23.0"
+    },
+    {
+      "key": "QS_ATS_Expansion_Fix",
+      "name": "QS ATS Expansion Fix",
+      "logVersion": "0.1.0"
+    },
+    {
+      "key": "QS_ATS_Expansion_Sierra_Connection_Fix",
+      "name": "QS ATS Expansion + Sierra Connection Fix",
+      "logVersion": "0.1.0"
+    },
+    {
+      "key": "C2C_ATS_Exp_Connections_v1.1.2",
+      "name": "Coast to Coast + ATS Expansion Connections v1.1.2",
+      "logVersion": "1.1.2"
     },
     {
       "key": "Discover_Oregon_Revived_v1.0.1",
-      "name": "Discover Oregon Revived v1.0.1"
+      "name": "Discover Oregon Revived v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Trinity_County_Revived_v1.0.1",
-      "name": "Trinity County Revived v1.0.1"
+      "name": "Trinity County Revived v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Vermont_Map_Revived_v1.0.1",
-      "name": "Vermont Map Revived v1.0.1"
+      "name": "Vermont Map Revived v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Washington_Extended_Revived_v1.0.1",
-      "name": "Washington Extended Revived v1.0.1"
+      "name": "Washington Extended Revived v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "promods-ats-models-v171",
       "name": "ProMods Canada Models Package",
       "filename": "promods-ats-models-v171.scs",
-      "image": "/img/combo-builder/cc4ab4db10f03154282f3015f85ec529206f24b252e4685e2c2d3d962e79a26e.webp"
+      "image": "/img/combo-builder/cc4ab4db10f03154282f3015f85ec529206f24b252e4685e2c2d3d962e79a26e.webp",
+      "logVersion": "1.7.1"
     },
     {
       "key": "promods-ats-assets-v171",
       "name": "ProMods Canada Assets Package",
       "filename": "promods-ats-assets-v171.scs",
-      "image": "/img/combo-builder/2a494a0922feeb9ef9663ebaf51b071b0adfd827a70ee26b5ff1c6bdf0f6b996.webp"
+      "image": "/img/combo-builder/2a494a0922feeb9ef9663ebaf51b071b0adfd827a70ee26b5ff1c6bdf0f6b996.webp",
+      "logVersion": "1.7.1"
     },
     {
       "key": "promods-ats-map-v171",
       "name": "ProMods Canada Map Package",
       "filename": "promods-ats-map-v171.scs",
-      "image": "/img/combo-builder/c218dc29c5aa0fc90517e0ca062d147b4e5f0f4ed33af8c110d5fdc950f29ed0.webp"
+      "image": "/img/combo-builder/c218dc29c5aa0fc90517e0ca062d147b4e5f0f4ed33af8c110d5fdc950f29ed0.webp",
+      "logVersion": "1.7.1"
     },
     {
       "key": "promods-ats-def-v171",
       "name": "ProMods Canada Definition Package",
       "filename": "promods-ats-def-v171.scs",
-      "image": "/img/combo-builder/b42c7c2adb8dd156067783731d85ea219058375d3b17d51f98396b528bd526d4.webp"
+      "image": "/img/combo-builder/b42c7c2adb8dd156067783731d85ea219058375d3b17d51f98396b528bd526d4.webp",
+      "logVersion": "1.7.1"
     },
     {
       "key": "QS_ATS_C2C_ProMods_Fix",
       "name": "QS ATS Coast to Coast + ProMods Fix",
-      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp"
+      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
+      "logVersion": "0.1.0"
     },
     {
       "key": "QS_ATS_Reforma_ProMods_Model_Fix",
-      "name": "QS ATS Reforma + ProMods Model Fix"
+      "name": "QS ATS Reforma + ProMods Model Fix",
+      "logVersion": "0.1.0"
     },
     {
       "key": "Washington_Extended_Revived_Promods_Connection_v1.0.1",
-      "name": "Washington Extended Revived - Promods Canada Connection v1.0.1"
+      "name": "Washington Extended Revived - Promods Canada Connection v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Alaska_North_to_the_Future",
-      "name": "Alaska - North to the future"
+      "name": "Alaska - North to the future",
+      "logVersion": "v0.8.9 Beta"
     },
     {
       "key": "Alaska_NTTF_Midnight_Sun_Optional_Addon",
-      "name": "Alaska NTTF - Midnight Sun Addon"
+      "name": "Alaska NTTF - Midnight Sun Addon",
+      "logVersion": "v0.8.9 Beta"
     },
     {
       "key": "QS_ATS_Alaska_NTTF_Traffic_Fix",
-      "name": "QS ATS Alaska NTTF Traffic Fix"
+      "name": "QS ATS Alaska NTTF Traffic Fix",
+      "logVersion": "0.2.2"
     },
     {
       "key": "Petersburg_Alaska_Revived_v1.0.1",
-      "name": "Petersburg Alaska Revived v1.0.1"
+      "name": "Petersburg Alaska Revived v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Aleutian_Islands_Revived_v1.0.1",
-      "name": "Aleutian Islands Revived v1.0.1"
+      "name": "Aleutian Islands Revived v1.0.1",
+      "logVersion": "1.0.1"
     },
     {
       "key": "Alaska_NTTF_to_Promods_RC_V0.6.7.2",
-      "name": "Alaska NTTF to Promods Canada RC"
+      "name": "Alaska NTTF to Promods Canada RC",
+      "logVersion": "0.6.7.2"
     },
     {
       "key": "QS_ATS_Alaska_ProMods_Sign_Fix",
-      "name": "QS ATS Alaska + ProMods Sign Fix"
+      "name": "QS ATS Alaska + ProMods Sign Fix",
+      "logVersion": "0.2.1"
+    },
+    {
+      "key": "QS_ATS_Expansion_Garage_Fix",
+      "name": "QS ATS Expansion Garage Fix",
+      "logVersion": "0.1.0"
+    },
+    {
+      "key": "QS_ATS_Alaska_Garage_Fix",
+      "name": "QS ATS Alaska Garage Fix",
+      "logVersion": "0.1.0"
+    },
+    {
+      "key": "QS_ATS_Alaska_Expansion_Garage_Fix",
+      "name": "QS ATS Alaska + Expansion Garage Fix",
+      "logVersion": "0.1.0"
     },
     {
       "key": "Reforma_OtherMaps_Patch_42_162",
-      "name": "Reforma OtherMaps Compatibility Patch 42.162"
-    },
-    {
-      "key": "QS_ATS_Reforma_Punta_Prieta_Fix",
-      "name": "QS ATS Reforma Punta Prieta Fix"
+      "name": "Reforma OtherMaps Compatibility Patch 42.162",
+      "logVersion": "42.162"
     },
     {
       "key": "QS_ATS_Map_Final_Fix",
-      "name": "QS ATS Map Final Fix"
+      "name": "QS ATS Map Final Fix",
+      "logVersion": "0.3.3"
     },
     {
       "key": "ATSRealisticEconomy",
-      "name": "Realistic Economy ATS by Quper"
+      "name": "Realistic Economy ATS by Quper",
+      "logVersion": "1.62.3"
     },
     {
       "key": "ATS Quper Background Map",
-      "name": "ATS Quper Background Map (Optional)"
+      "name": "ATS Quper Background Map (Optional)",
+      "logVersion": "2026.10.27 - 1.3"
     }
   ],
   "conflicts": [],

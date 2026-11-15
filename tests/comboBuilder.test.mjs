@@ -156,6 +156,43 @@ const makeEntry = (id, type = 'map', options = {}) => ({
   ...options,
 });
 
+test('a combined garage fix replaces the individual fixes when both maps are active', () => {
+  const entries = [
+    makeEntry('alaska'),
+    makeEntry('expansion'),
+    makeEntry('alaska-garage', 'fix', { requires: ['alaska'] }),
+    makeEntry('expansion-garage', 'fix', { requires: ['expansion'] }),
+    makeEntry('combined-garage', 'fix', {
+      requires: ['alaska', 'expansion'],
+      replaces: ['alaska-garage', 'expansion-garage'],
+    }),
+  ];
+  const catalog = {
+    game: 'ats',
+    version: '1.62',
+    entries,
+    order: entries.map(({ id }) => ({ key: id, name: id })),
+    conflicts: [],
+    presets: [],
+  };
+  validateCatalog(catalog);
+
+  for (const [selection, expected] of [
+    [[], []],
+    [['alaska'], ['alaska', 'alaska-garage']],
+    [['expansion'], ['expansion', 'expansion-garage']],
+    [
+      ['alaska', 'expansion'],
+      ['alaska', 'expansion', 'combined-garage'],
+    ],
+  ]) {
+    assert.deepEqual(
+      resolveCombo(catalog, selection).files.map(({ key }) => key),
+      expected,
+    );
+  }
+});
+
 test('a multipart mod uses distinct load-order images and shares one entry and download link', () => {
   const parts = ['Definition', 'Map', 'Assets', 'Models'];
   const order = parts.map((part) => ({

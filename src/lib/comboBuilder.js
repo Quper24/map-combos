@@ -59,6 +59,27 @@ export function resolveCombo(catalog, selection) {
     }
   } while (active.size !== previousSize);
 
+  const replaced = new Set([...active].flatMap((id) => entries.get(id).replaces || []));
+  if (replaced.size) {
+    for (const id of replaced) active.delete(id);
+    do {
+      previousSize = active.size;
+      for (const id of active) {
+        const { requires = [], requiresAny = [] } = entries.get(id);
+        const missingRequired = requires.some((dependency) => !active.has(dependency));
+        const missingAlternative =
+          requiresAny.length && !requiresAny.some((dependency) => active.has(dependency));
+        if (missingRequired || missingAlternative) active.delete(id);
+      }
+    } while (active.size !== previousSize);
+    for (const id of reasons.keys()) {
+      if (!active.has(id)) {
+        reasons.delete(id);
+        manual.delete(id);
+      }
+    }
+  }
+
   const conflicts = catalog.conflicts.filter(({ entries: pair }) =>
     pair.every((id) => active.has(id)),
   );
@@ -391,6 +412,7 @@ export function validateCatalog(catalog, draft = false) {
       files,
       requires = [],
       requiresAny = [],
+      replaces = [],
       dlcs = [],
       family,
       variant,
@@ -440,6 +462,18 @@ export function validateCatalog(catalog, draft = false) {
       `Проверь список альтернативных зависимостей. Запись — ${id}`,
     );
     check(
+      uniqueList(
+        replaces,
+        (dep) =>
+          dep !== id &&
+          isFixOrConnector(byId.get(dep)?.type) &&
+          !requires.includes(dep) &&
+          !requiresAny.includes(dep),
+      ) &&
+        (!replaces.length || isFixOrConnector(type)),
+      `Проверь список заменяемых фиксов. Запись — ${id}`,
+    );
+    check(
       draft || !isFixOrConnector(type) || autoWithMaps || requires.length || requiresAny.length,
       `Для фикса или коннектора укажи, какие записи должны быть выбраны. Запись — ${id}`,
     );
@@ -467,8 +501,8 @@ export function validateCatalog(catalog, draft = false) {
     }
     if (visited.has(id)) return;
     visiting.add(id);
-    const { requires = [], requiresAny = [] } = byId.get(id);
-    for (const dependency of [...requires, ...requiresAny]) visit(dependency);
+    const { requires = [], requiresAny = [], replaces = [] } = byId.get(id);
+    for (const dependency of [...requires, ...requiresAny, ...replaces]) visit(dependency);
     visiting.delete(id);
     visited.add(id);
   }
