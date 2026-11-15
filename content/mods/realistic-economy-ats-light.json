@@ -53,7 +53,7 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/897s03k36o2k/ATSRealisticEconomy-Light.scs.html"
+      "url": "https://sharemods.com/gvag9v42984h/ATSRealisticEconomy-Light.scs.html"
     },
     {
       "platform": "steam",
@@ -67,5 +67,5 @@
     }
   ],
   "videoIds": [],
-  "gameVersions": ["1.62"]
+  "gameVersions": ["1.62.4"]
 }

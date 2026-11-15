@@ -47,7 +47,7 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/g3nvkwg2y4io/ATSRealisticEconomy.scs.html"
+      "url": "https://sharemods.com/eapuwrwswyj7/ATSRealisticEconomy.scs.html"
     },
     {
       "platform": "steam",
@@ -61,5 +61,5 @@
     }
   ],
   "videoIds": [],
-  "gameVersions": ["1.62"]
+  "gameVersions": ["1.62.4"]
 }

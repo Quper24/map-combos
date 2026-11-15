@@ -61,7 +61,7 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/ocoq0ui89645/RealisticEconomyQuper-Light.scs.html"
+      "url": "https://sharemods.com/7y9xrxno5rjd/RealisticEconomyQuper-Light.scs.html"
     },
     {
       "platform": "steam",
@@ -75,5 +75,5 @@
     }
   ],
   "videoIds": [],
-  "gameVersions": ["1.62"]
+  "gameVersions": ["1.62.4"]
 }

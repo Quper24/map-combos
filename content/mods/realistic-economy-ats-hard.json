@@ -53,7 +53,7 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/ombnwmzj2d49/ATSRealisticEconomy-Hard.scs.html"
+      "url": "https://sharemods.com/b63j4o3yfmrq/ATSRealisticEconomy-Hard.scs.html"
     },
     {
       "platform": "steam",
@@ -67,5 +67,5 @@
     }
   ],
   "videoIds": [],
-  "gameVersions": ["1.62"]
+  "gameVersions": ["1.62.4"]
 }

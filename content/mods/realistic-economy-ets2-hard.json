@@ -61,7 +61,7 @@
     {
       "platform": "sharemods",
       "label": "ShareMods",
-      "url": "https://sharemods.com/111dmysgi3di/RealisticEconomyQuper-Hard.scs.html"
+      "url": "https://sharemods.com/bn1dsbchlsh4/RealisticEconomyQuper-Hard.scs.html"
     },
     {
       "platform": "steam",
@@ -75,5 +75,5 @@
     }
   ],
   "videoIds": [],
-  "gameVersions": ["1.62"]
+  "gameVersions": ["1.62.4"]
 }
