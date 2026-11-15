@@ -13,9 +13,7 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "Coast_to_Coast_v2.24.62.1"
-      ],
+      "files": ["Coast_to_Coast_v2.24.62.1"],
       "requires": [],
       "dlcs": []
     },
@@ -50,13 +48,8 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "QS_ATS_C2C_ProMods_Fix"
-      ],
-      "requires": [
-        "coast-to-coast-v2-24-62-0",
-        "promods-ats"
-      ],
+      "files": ["QS_ATS_C2C_ProMods_Fix"],
+      "requires": ["coast-to-coast-v2-24-62-0", "promods-ats"],
       "dlcs": []
     },
     {
@@ -69,9 +62,7 @@
       "version": "1.62.3",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "ATSRealisticEconomy"
-      ],
+      "files": ["ATSRealisticEconomy"],
       "requires": [],
       "dlcs": []
     },
@@ -87,9 +78,7 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-13",
       "paid": false,
-      "files": [
-        "QS_ATS_Map_Final_Fix"
-      ],
+      "files": ["QS_ATS_Map_Final_Fix"],
       "requires": [],
       "dlcs": []
     },
@@ -103,9 +92,7 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "NASCAR_Map_Combo_Pack_v1.0.1"
-      ],
+      "files": ["NASCAR_Map_Combo_Pack_v1.0.1"],
       "requires": [],
       "dlcs": []
     },
@@ -120,12 +107,8 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Reforma_3_0_4_162"
-      ],
-      "requires": [
-        "reforma-megaresources"
-      ],
+      "files": ["Reforma_3_0_4_162"],
+      "requires": ["reforma-megaresources"],
       "dlcs": []
     },
     {
@@ -138,9 +121,7 @@
       "version": "3.0.4.162",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Reforma_MegaResources_v3_0_4_162"
-      ],
+      "files": ["Reforma_MegaResources_v3_0_4_162"],
       "requires": [],
       "dlcs": []
     },
@@ -154,13 +135,8 @@
       "version": "1.21.162",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Reforma_Sierra_Nevada_Remake_v1_21_162"
-      ],
-      "requires": [
-        "reforma",
-        "reforma-megaresources"
-      ],
+      "files": ["Reforma_Sierra_Nevada_Remake_v1_21_162"],
+      "requires": ["reforma", "reforma-megaresources"],
       "dlcs": []
     },
     {
@@ -172,13 +148,8 @@
       "version": "42.162",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Reforma_OtherMaps_Patch_42_162"
-      ],
-      "requires": [
-        "coast-to-coast-v2-24-62-0",
-        "reforma"
-      ],
+      "files": ["Reforma_OtherMaps_Patch_42_162"],
+      "requires": ["coast-to-coast-v2-24-62-0", "reforma"],
       "dlcs": []
     },
     {
@@ -191,9 +162,7 @@
       "version": "0.1.0",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "QS_ATS_Reforma_Punta_Prieta_Fix"
-      ],
+      "files": ["QS_ATS_Reforma_Punta_Prieta_Fix"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -207,9 +176,7 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Discover_Oregon_Revived_v1.0.1"
-      ],
+      "files": ["Discover_Oregon_Revived_v1.0.1"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -223,9 +190,7 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Trinity_County_Revived_v1.0.1"
-      ],
+      "files": ["Trinity_County_Revived_v1.0.1"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -239,12 +204,8 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Vermont_Map_Revived_v1.0.1"
-      ],
-      "requires": [
-        "coast-to-coast-v2-24-62-0"
-      ],
+      "files": ["Vermont_Map_Revived_v1.0.1"],
+      "requires": ["coast-to-coast-v2-24-62-0"],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
@@ -257,9 +218,7 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Aleutian_Islands_Revived_v1.0.1"
-      ],
+      "files": ["Aleutian_Islands_Revived_v1.0.1"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -273,9 +232,7 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Petersburg_Alaska_Revived_v1.0.1"
-      ],
+      "files": ["Petersburg_Alaska_Revived_v1.0.1"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -289,9 +246,7 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": [
-        "Washington_Extended_Revived_v1.0.1"
-      ],
+      "files": ["Washington_Extended_Revived_v1.0.1"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -305,12 +260,8 @@
       "version": "0.82.162",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": [
-        "Mexssimap_0_82_162_Public"
-      ],
-      "requires": [
-        "reforma"
-      ],
+      "files": ["Mexssimap_0_82_162_Public"],
+      "requires": ["reforma"],
       "dlcs": []
     },
     {
@@ -322,12 +273,8 @@
       "version": "0.5.4",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": [
-        "Project_Better_Arizona_0.5.4_1.62"
-      ],
-      "requires": [
-        "reforma-megaresources"
-      ],
+      "files": ["Project_Better_Arizona_0.5.4_1.62"],
+      "requires": ["reforma-megaresources"],
       "dlcs": []
     },
     {
@@ -339,30 +286,21 @@
       "version": "1.17",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": [
-        "Project_Better_Arizona_Reforma_Connection_1.17_1.62"
-      ],
-      "requires": [
-        "reforma",
-        "project-better-arizona-0-5-4-1-62"
-      ],
+      "files": ["Project_Better_Arizona_Reforma_Connection_1.17_1.62"],
+      "requires": ["reforma", "project-better-arizona-0-5-4-1-62"],
       "dlcs": []
     },
     {
       "id": "qs-ats-pba-reforma-service-fix",
       "title": "QS ATS PBA Reforma Service Fix",
       "type": "fix",
-      "link": "https://sharemods.com/0dd76cgu2a0g/QS_ATS_Project_Better_Arizona_Fix.scs.html",
+      "link": "https://sharemods.com/8j24vpbo0vz9/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
       "image": "/img/combo-builder/7018b736bf73f9829756fa706f7a3d843b17f48913d4c54340ee152b1f83d772.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": [
-        "QS_ATS_PBA_Reforma_Service_Fix"
-      ],
-      "requires": [
-        "project-better-arizona-0-5-4-1-62"
-      ],
+      "files": ["QS_ATS_PBA_Reforma_Service_Fix"],
+      "requires": ["project-better-arizona-0-5-4-1-62"],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
@@ -370,17 +308,13 @@
       "id": "qs-ats-project-better-arizona-fix",
       "title": "QS ATS Project Better Arizona Fix",
       "type": "fix",
-      "link": "https://sharemods.com/8j24vpbo0vz9/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
+      "link": "https://sharemods.com/0dd76cgu2a0g/QS_ATS_Project_Better_Arizona_Fix.scs.html",
       "image": "/img/combo-builder/5c93f85cb9c3c96ff61f5c05ca7bac9a33cacbc6354e86a37fdbd4f3be41afc9.webp",
       "version": "0.2.0",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": [
-        "QS_ATS_Project_Better_Arizona_Fix"
-      ],
-      "requires": [
-        "project-better-arizona-reforma-connection-1-17-1-62"
-      ],
+      "files": ["QS_ATS_Project_Better_Arizona_Fix"],
+      "requires": ["project-better-arizona-reforma-connection-1-17-1-62"],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
@@ -394,9 +328,7 @@
       "version": "v0.8.9 Beta",
       "addedAt": "2026-11-10",
       "paid": true,
-      "files": [
-        "Alaska_North_to_the_Future"
-      ],
+      "files": ["Alaska_North_to_the_Future"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -410,13 +342,8 @@
       "version": "0.1.0",
       "addedAt": "2026-11-10",
       "paid": false,
-      "files": [
-        "QS_ATS_Reforma_ProMods_Model_Fix"
-      ],
-      "requires": [
-        "promods-ats",
-        "reforma"
-      ],
+      "files": ["QS_ATS_Reforma_ProMods_Model_Fix"],
+      "requires": ["promods-ats", "reforma"],
       "dlcs": []
     },
     {
@@ -428,13 +355,8 @@
       "version": "1.0.1",
       "addedAt": "2026-11-10",
       "paid": false,
-      "files": [
-        "Washington_Extended_Revived_Promods_Connection_v1.0.1"
-      ],
-      "requires": [
-        "promods-ats",
-        "washington-extended-revived-v1-0-1"
-      ],
+      "files": ["Washington_Extended_Revived_Promods_Connection_v1.0.1"],
+      "requires": ["promods-ats", "washington-extended-revived-v1-0-1"],
       "dlcs": []
     },
     {
@@ -447,12 +369,8 @@
       "addedAt": "2026-11-10",
       "updatedAt": "2026-11-13",
       "paid": false,
-      "files": [
-        "QS_ATS_Alaska_NTTF_Traffic_Fix"
-      ],
-      "requires": [
-        "alaska-north-to-the-future"
-      ],
+      "files": ["QS_ATS_Alaska_NTTF_Traffic_Fix"],
+      "requires": ["alaska-north-to-the-future"],
       "dlcs": []
     },
     {
@@ -464,13 +382,8 @@
       "version": "0.6.7.2",
       "addedAt": "2026-11-10",
       "paid": false,
-      "files": [
-        "Alaska_NTTF_to_Promods_RC_V0.6.7.2"
-      ],
-      "requires": [
-        "promods-ats",
-        "alaska-north-to-the-future"
-      ],
+      "files": ["Alaska_NTTF_to_Promods_RC_V0.6.7.2"],
+      "requires": ["promods-ats", "alaska-north-to-the-future"],
       "dlcs": []
     },
     {
@@ -483,12 +396,8 @@
       "addedAt": "2026-11-10",
       "updatedAt": "2026-11-11",
       "paid": false,
-      "files": [
-        "QS_ATS_Alaska_ProMods_Sign_Fix"
-      ],
-      "requires": [
-        "alaska-nttf-to-promods-rc-v0-6-7-2"
-      ],
+      "files": ["QS_ATS_Alaska_ProMods_Sign_Fix"],
+      "requires": ["alaska-nttf-to-promods-rc-v0-6-7-2"],
       "dlcs": []
     },
     {
@@ -500,12 +409,8 @@
       "version": "v0.8.9 Beta",
       "addedAt": "2026-11-13",
       "paid": true,
-      "files": [
-        "Alaska_NTTF_Midnight_Sun_Optional_Addon"
-      ],
-      "requires": [
-        "alaska-north-to-the-future"
-      ],
+      "files": ["Alaska_NTTF_Midnight_Sun_Optional_Addon"],
+      "requires": ["alaska-north-to-the-future"],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
@@ -519,9 +424,7 @@
       "version": "2026.10.27 - 1.3",
       "addedAt": "2026-11-13",
       "paid": false,
-      "files": [
-        "ATS Quper Background Map"
-      ],
+      "files": ["ATS Quper Background Map"],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -553,9 +456,7 @@
       "version": "23.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "ATS_Expansion_v23.0_1.62"
-      ],
+      "files": ["ATS_Expansion_v23.0_1.62"],
       "requires": [],
       "dlcs": []
     },
@@ -568,13 +469,8 @@
       "version": "1.1.3",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "C2C_Beyond_Connections_v1.1.3"
-      ],
-      "requires": [
-        "coast-to-coast-v2-24-62-0",
-        "beyond-by-tm-for-ats-1"
-      ],
+      "files": ["C2C_Beyond_Connections_v1.1.3"],
+      "requires": ["coast-to-coast-v2-24-62-0", "beyond-by-tm-for-ats-1"],
       "dlcs": []
     },
     {
@@ -586,13 +482,8 @@
       "version": "1.1.2",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "C2C_ATS_Exp_Connections_v1.1.2"
-      ],
-      "requires": [
-        "coast-to-coast-v2-24-62-0",
-        "ats-expansion-v23-0-1-62"
-      ],
+      "files": ["C2C_ATS_Exp_Connections_v1.1.2"],
+      "requires": ["coast-to-coast-v2-24-62-0", "ats-expansion-v23-0-1-62"],
       "dlcs": []
     },
     {
@@ -604,12 +495,8 @@
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "QS_ATS_Expansion_Fix"
-      ],
-      "requires": [
-        "ats-expansion-v23-0-1-62"
-      ],
+      "files": ["QS_ATS_Expansion_Fix"],
+      "requires": ["ats-expansion-v23-0-1-62"],
       "dlcs": []
     },
     {
@@ -621,13 +508,8 @@
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "QS_ATS_Expansion_Sierra_Connection_Fix"
-      ],
-      "requires": [
-        "reforma-sierra-nevada-remake",
-        "ats-expansion-v23-0-1-62"
-      ],
+      "files": ["QS_ATS_Expansion_Sierra_Connection_Fix"],
+      "requires": ["reforma-sierra-nevada-remake", "ats-expansion-v23-0-1-62"],
       "dlcs": []
     },
     {
@@ -639,12 +521,8 @@
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "QS_ATS_Alaska_Garage_Fix"
-      ],
-      "requires": [
-        "alaska-north-to-the-future"
-      ],
+      "files": ["QS_ATS_Alaska_Garage_Fix"],
+      "requires": ["alaska-north-to-the-future"],
       "dlcs": []
     },
     {
@@ -656,12 +534,8 @@
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "QS_ATS_Expansion_Garage_Fix"
-      ],
-      "requires": [
-        "ats-expansion-v23-0-1-62"
-      ],
+      "files": ["QS_ATS_Expansion_Garage_Fix"],
+      "requires": ["ats-expansion-v23-0-1-62"],
       "dlcs": []
     },
     {
@@ -673,17 +547,9 @@
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": [
-        "QS_ATS_Alaska_Expansion_Garage_Fix"
-      ],
-      "requires": [
-        "alaska-north-to-the-future",
-        "ats-expansion-v23-0-1-62"
-      ],
-      "replaces": [
-        "qs-ats-alaska-garage-fix",
-        "qs-ats-expansion-garage-fix"
-      ],
+      "files": ["QS_ATS_Alaska_Expansion_Garage_Fix"],
+      "requires": ["alaska-north-to-the-future", "ats-expansion-v23-0-1-62"],
+      "replaces": ["qs-ats-alaska-garage-fix", "qs-ats-expansion-garage-fix"],
       "dlcs": []
     }
   ],
