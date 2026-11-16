@@ -185,7 +185,7 @@
     {
       "id": "qs-ats-reforma-punta-prieta-fix",
       "title": "QS ATS Reforma Punta Prieta Fix",
-      "type": "map",
+      "type": "fix",
       "link": "https://sharemods.com/or7uy1x41o9z/QS_ATS_Reforma_Punta_Prieta_Fix.scs.html",
       "image": "/img/combo-builder/be18741313937056b4aa312aad197d9eced35f51e58737f457a165efb03f171c.webp",
       "description": "Исправляет привязку двух зон города Пунта-Приета в Reforma",
@@ -196,10 +196,12 @@
       "files": [
         "QS_ATS_Reforma_Punta_Prieta_Fix"
       ],
+      "requires": [
+        "reforma"
+      ],
       "disabledByMaps": [
         "reforma-baja-beta-5-6-162"
       ],
-      "requires": [],
       "dlcs": []
     },
     {
@@ -796,6 +798,7 @@
       "title": "QS ATS Baja + PBA Yuma Garage Fix",
       "type": "fix",
       "link": "https://sharemods.com/1u4309agxijr/QS_ATS_Baja_PBA_Yuma_Garage_Fix.scs.html",
+      "image": "/img/combo-builder/39379248be8367a07ca512bbd68f90f43b1e280e2bf05f65266c761e679e914e.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-16",
       "paid": false,
@@ -806,14 +809,14 @@
         "project-better-arizona-reforma-connection-1-17-1-62",
         "reforma-baja-beta-5-6-162"
       ],
-      "dlcs": [],
-      "image": "/img/combo-builder/39379248be8367a07ca512bbd68f90f43b1e280e2bf05f65266c761e679e914e.webp"
+      "dlcs": []
     },
     {
       "id": "qs-ats-dna-promods-signal-fix",
       "title": "QS ATS DNA + ProMods Signal Fix",
       "type": "fix",
       "link": "https://sharemods.com/2ttzi2fde10v/QS_ATS_DNA_ProMods_Signal_Fix.scs.html",
+      "image": "/img/combo-builder/1e83aed39ee7016ff66918d5847ff920ed3862f791457b74d04933ff82bac024.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-16",
       "paid": false,
@@ -824,8 +827,7 @@
         "promods-ats",
         "dna-v1-8-2"
       ],
-      "dlcs": [],
-      "image": "/img/combo-builder/1e83aed39ee7016ff66918d5847ff920ed3862f791457b74d04933ff82bac024.webp"
+      "dlcs": []
     },
     {
       "id": "qs-ats-great-america-sector-fix",
@@ -1118,7 +1120,7 @@
     {
       "key": "QS_ATS_C2C_ProMods_Fix",
       "name": "QS ATS Coast to Coast + ProMods Fix",
-      "image": "/img/combo-builder/07a1a21e89e2b4cd19f63fd6f999f620a22779bd9009cfe9c9d9a6cfce0acedf.webp",
+      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
       "logVersion": "0.1.0"
     },
     {
