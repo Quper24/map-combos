@@ -44,7 +44,7 @@
       "title": "QS ATS Coast to Coast + ProMods Fix",
       "type": "fix",
       "link": "https://sharemods.com/7d59fef1jo5y/QS_ATS_C2C_ProMods_Fix.scs.html",
-      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
+      "image": "/img/combo-builder/07a1a21e89e2b4cd19f63fd6f999f620a22779bd9009cfe9c9d9a6cfce0acedf.webp",
       "description": "Устраняет дубль определения шлагбаума при совместной загрузке Coast to Coast и ProMods Canada. Подключайте выше обеих карт.",
       "version": "0.1.0",
       "addedAt": "2026-11-08",
@@ -187,7 +187,7 @@
       "title": "QS ATS Reforma Punta Prieta Fix",
       "type": "map",
       "link": "https://sharemods.com/or7uy1x41o9z/QS_ATS_Reforma_Punta_Prieta_Fix.scs.html",
-      "image": "/img/combo-builder/b503d2e6e61ae2598ddcc29cf4b94cf7e28a4aac6e8ca16cef961c7cc4b82dfb.webp",
+      "image": "/img/combo-builder/be18741313937056b4aa312aad197d9eced35f51e58737f457a165efb03f171c.webp",
       "description": "Исправляет привязку двух зон города Пунта-Приета в Reforma",
       "version": "0.1.0",
       "addedAt": "2026-11-08",
@@ -357,7 +357,7 @@
       "title": "QS ATS PBA Reforma Service Fix",
       "type": "fix",
       "link": "https://sharemods.com/u4ruyhxijsch/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
-      "image": "/img/combo-builder/7018b736bf73f9829756fa706f7a3d843b17f48913d4c54340ee152b1f83d772.webp",
+      "image": "/img/combo-builder/42ee91b0882e964f78401b6fd3dc32ce4e118e4f06e1f777eefda0cb9c2a0ddb.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-09",
       "updatedAt": "2026-11-15",
@@ -375,7 +375,7 @@
       "title": "QS ATS Project Better Arizona Fix",
       "type": "fix",
       "link": "https://sharemods.com/9kf5rbrdd8n0/QS_ATS_Project_Better_Arizona_Fix.scs.html",
-      "image": "/img/combo-builder/5c93f85cb9c3c96ff61f5c05ca7bac9a33cacbc6354e86a37fdbd4f3be41afc9.webp",
+      "image": "/img/combo-builder/8dac278135206e6947632d8a01e0d019dcc785d067a3402df1b01a5bffbe8727.webp",
       "version": "0.2.0",
       "addedAt": "2026-11-09",
       "updatedAt": "2026-11-15",
@@ -410,7 +410,7 @@
       "title": "QS ATS Reforma + ProMods Model Fix",
       "type": "fix",
       "link": "https://sharemods.com/5u6n1akcloww/QS_ATS_Reforma_ProMods_Model_Fix.scs.html",
-      "image": "/img/combo-builder/acaa497913f571bbcbcb6ca37fc03e68517f2d35a98d140d5b8f7c2936b3f862.webp",
+      "image": "/img/combo-builder/7cf79b0beddf88410cb177eea88b2e03e3dbe1a18afa349dc07d2ce9cf27de8c.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-10",
       "paid": false,
@@ -446,7 +446,7 @@
       "title": "QS ATS Alaska NTTF Traffic Fix",
       "type": "fix",
       "link": "https://sharemods.com/w31a1whog7i6/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
-      "image": "/img/combo-builder/fcfa1ff9caf08fc0ebec025e004de01340acb4b7ab9608bdc74e3dd74c219934.webp",
+      "image": "/img/combo-builder/ce57c9a00c3466fe07819d9a3684a38bc54207a8f5f04fd3ecf2f82c5530a54d.webp",
       "version": "0.2.2",
       "addedAt": "2026-11-10",
       "updatedAt": "2026-11-13",
@@ -482,7 +482,7 @@
       "title": "QS ATS Alaska + ProMods Sign Fix",
       "type": "fix",
       "link": "https://sharemods.com/4jto1bu5itg8/QS_ATS_Alaska_ProMods_Sign_Fix.scs.html",
-      "image": "/img/combo-builder/9777855cbb312043a65c69e38ab749966eba5616dd654439015164fc75814bd2.webp",
+      "image": "/img/combo-builder/da78a4cfcbe33fa4ace611415215fa856a8a0f9441084d552f06db83ad09539a.webp",
       "version": "0.2.1",
       "addedAt": "2026-11-10",
       "updatedAt": "2026-11-11",
@@ -806,7 +806,8 @@
         "project-better-arizona-reforma-connection-1-17-1-62",
         "reforma-baja-beta-5-6-162"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "image": "/img/combo-builder/39379248be8367a07ca512bbd68f90f43b1e280e2bf05f65266c761e679e914e.webp"
     },
     {
       "id": "qs-ats-dna-promods-signal-fix",
@@ -823,7 +824,8 @@
         "promods-ats",
         "dna-v1-8-2"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "image": "/img/combo-builder/1e83aed39ee7016ff66918d5847ff920ed3862f791457b74d04933ff82bac024.webp"
     },
     {
       "id": "qs-ats-great-america-sector-fix",
@@ -1116,7 +1118,7 @@
     {
       "key": "QS_ATS_C2C_ProMods_Fix",
       "name": "QS ATS Coast to Coast + ProMods Fix",
-      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
+      "image": "/img/combo-builder/07a1a21e89e2b4cd19f63fd6f999f620a22779bd9009cfe9c9d9a6cfce0acedf.webp",
       "logVersion": "0.1.0"
     },
     {
