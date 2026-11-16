@@ -905,6 +905,12 @@ function EntryActivationFields({ entry, dependencies }) {
           items={dependencies.filter((item) => isFixOrConnector(item.type))}
         />
       )}
+      <Choices
+        label="Отключать при подключении любой из этих карт"
+        name="disabledByMaps"
+        selected={entry?.disabledByMaps}
+        items={dependencies.filter((item) => item.type === 'map')}
+      />
     </>
   );
 }
@@ -914,7 +920,24 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const [id, setId] = useState(request.id);
   const [seedFiles, setSeedFiles] = useState(request.files);
   const [formRevision, setFormRevision] = useState(0);
+  const [query, setQuery] = useState('');
   const entry = catalog.entries.find((item) => item.id === id);
+  const filePositions = new Map(catalog.order.map(({ key }, index) => [key, index]));
+  const search = query.trim().toLowerCase();
+  const editorEntries = catalog.entries
+    .filter(
+      (item) =>
+        item.id === id ||
+        [item.title, t(item.title), item.id, ...item.files].some((value) =>
+          value.toLowerCase().includes(search),
+        ),
+    )
+    .map((item) => ({
+      item,
+      priority: Math.max(-1, ...item.files.map((key) => filePositions.get(key) ?? -1)),
+    }))
+    .sort((a, b) => b.priority - a.priority)
+    .map(({ item }) => item);
   const suggested = catalog.order.find(({ key }) => key === seedFiles[0]);
   const suggestedId = suggested?.key
     .toLowerCase()
@@ -932,8 +955,14 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
       <h2 id="combo-entry-editor" tabIndex={-1}>
         {t('Карты, моды, фиксы и коннекторы')}
       </h2>
+      <Field
+        label="Фильтр списка"
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+      />
       <EntityPicker
-        items={catalog.entries}
+        items={editorEntries}
         id={id}
         setId={(next) => {
           setId(next);
@@ -969,6 +998,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           const type = form.get('type');
           const alternatives = form.getAll('requiresAny');
           const replacementsForFix = form.getAll('replaces');
+          const disabledByMaps = form.getAll('disabledByMaps');
           const markUpdate =
             entry &&
             (replacements.size ||
@@ -992,6 +1022,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             requires: form.getAll('requires'),
             requiresAny: alternatives.length ? alternatives : undefined,
             replaces: replacementsForFix.length ? replacementsForFix : undefined,
+            disabledByMaps: disabledByMaps.length ? disabledByMaps : undefined,
             dlcs: (valueOf(form, 'dlcs') || '')
               .split(',')
               .map((dlc) => dlc.trim())

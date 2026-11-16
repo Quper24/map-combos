@@ -4,7 +4,7 @@
   "entries": [
     {
       "id": "coast-to-coast-v2-24-62-0",
-      "title": "Coast to Coast v2.24.62.1",
+      "title": "Coast to Coast",
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/coast-to-coast",
       "image": "/img/combo-builder/7d491af24f744ef58eaa9e2e309bd39f6d6dcb4424cb9240dee2e3dcfeae70a7.webp",
@@ -13,7 +13,9 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-15",
       "paid": false,
-      "files": ["Coast_to_Coast_v2.24.62.1"],
+      "files": [
+        "Coast_to_Coast_v2.24.62.1"
+      ],
       "requires": [],
       "dlcs": []
     },
@@ -41,15 +43,20 @@
       "id": "qs-ats-c2c-promods-fix",
       "title": "QS ATS Coast to Coast + ProMods Fix",
       "type": "fix",
-      "link": "https://sharemods.com/dfa709lli8mw/QS_ATS_C2C_ProMods_Fix.scs.html",
+      "link": "https://sharemods.com/7d59fef1jo5y/QS_ATS_C2C_ProMods_Fix.scs.html",
       "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
       "description": "Устраняет дубль определения шлагбаума при совместной загрузке Coast to Coast и ProMods Canada. Подключайте выше обеих карт.",
       "version": "0.1.0",
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_C2C_ProMods_Fix"],
-      "requires": ["coast-to-coast-v2-24-62-0", "promods-ats"],
+      "files": [
+        "QS_ATS_C2C_ProMods_Fix"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "promods-ats"
+      ],
       "dlcs": []
     },
     {
@@ -59,26 +66,31 @@
       "autoWithMaps": true,
       "link": "https://truckymods.io/american-truck-simulator/game-economy/realistic-economy-ats-by-quper",
       "image": "/img/combo-builder/90c363739c98c2d27ac13604cb248f7c871e4e60d462785df03dd6147f86a4b1.webp",
-      "version": "1.62.3",
+      "version": "1.62.4",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["ATSRealisticEconomy"],
+      "files": [
+        "ATSRealisticEconomy"
+      ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "updatedAt": "2026-11-16"
     },
     {
       "id": "qs-ats-map-final-fix",
       "title": "QS ATS Map Final Fix",
       "type": "fix",
       "autoWithMaps": true,
-      "link": "https://sharemods.com/so67esnvd6d4/QS_ATS_Map_Final_Fix.scs.html",
+      "link": "https://sharemods.com/zmz36q4aqcwi/QS_ATS_Map_Final_Fix.scs.html",
       "image": "/img/combo-builder/aa7d23f9c73c9a8817448bf4904c4d5dcdd3becf3d860b7e8e80fe680217d45e.webp",
       "description": "Общие фиксы для сборки карт",
-      "version": "0.3.3",
+      "version": "0.3.4",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-13",
+      "updatedAt": "2026-11-16",
       "paid": false,
-      "files": ["QS_ATS_Map_Final_Fix"],
+      "files": [
+        "QS_ATS_Map_Final_Fix"
+      ],
       "requires": [],
       "dlcs": []
     },
@@ -92,7 +104,9 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-08",
       "paid": false,
-      "files": ["NASCAR_Map_Combo_Pack_v1.0.1"],
+      "files": [
+        "NASCAR_Map_Combo_Pack_v1.0.1"
+      ],
       "requires": [],
       "dlcs": []
     },
@@ -107,8 +121,12 @@
       "addedAt": "2026-11-08",
       "updatedAt": "2026-11-08",
       "paid": false,
-      "files": ["Reforma_3_0_4_162"],
-      "requires": ["reforma-megaresources"],
+      "files": [
+        "Reforma_3_0_4_162"
+      ],
+      "requires": [
+        "reforma-megaresources"
+      ],
       "dlcs": []
     },
     {
@@ -121,7 +139,9 @@
       "version": "3.0.4.162",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Reforma_MegaResources_v3_0_4_162"],
+      "files": [
+        "Reforma_MegaResources_v3_0_4_162"
+      ],
       "requires": [],
       "dlcs": []
     },
@@ -135,8 +155,13 @@
       "version": "1.21.162",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Reforma_Sierra_Nevada_Remake_v1_21_162"],
-      "requires": ["reforma", "reforma-megaresources"],
+      "files": [
+        "Reforma_Sierra_Nevada_Remake_v1_21_162"
+      ],
+      "requires": [
+        "reforma",
+        "reforma-megaresources"
+      ],
       "dlcs": []
     },
     {
@@ -148,24 +173,34 @@
       "version": "42.162",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Reforma_OtherMaps_Patch_42_162"],
-      "requires": ["coast-to-coast-v2-24-62-0", "reforma"],
+      "files": [
+        "Reforma_OtherMaps_Patch_42_162"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "reforma"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-reforma-punta-prieta-fix",
       "title": "QS ATS Reforma Punta Prieta Fix",
       "type": "map",
-      "link": "https://sharemods.com/l0wkbahz2f65/QS_ATS_Reforma_Punta_Prieta_Fix.scs.html",
+      "link": "https://sharemods.com/or7uy1x41o9z/QS_ATS_Reforma_Punta_Prieta_Fix.scs.html",
       "image": "/img/combo-builder/b503d2e6e61ae2598ddcc29cf4b94cf7e28a4aac6e8ca16cef961c7cc4b82dfb.webp",
       "description": "Исправляет привязку двух зон города Пунта-Приета в Reforma",
       "version": "0.1.0",
       "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_Reforma_Punta_Prieta_Fix"],
+      "files": [
+        "QS_ATS_Reforma_Punta_Prieta_Fix"
+      ],
+      "disabledByMaps": [
+        "reforma-baja-beta-5-6-162"
+      ],
       "requires": [],
-      "dlcs": [],
-      "updatedAt": "2026-11-15"
+      "dlcs": []
     },
     {
       "id": "discover-oregon-revived-v1-0-1",
@@ -176,7 +211,9 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Discover_Oregon_Revived_v1.0.1"],
+      "files": [
+        "Discover_Oregon_Revived_v1.0.1"
+      ],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -190,7 +227,9 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Trinity_County_Revived_v1.0.1"],
+      "files": [
+        "Trinity_County_Revived_v1.0.1"
+      ],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -204,8 +243,12 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Vermont_Map_Revived_v1.0.1"],
-      "requires": ["coast-to-coast-v2-24-62-0"],
+      "files": [
+        "Vermont_Map_Revived_v1.0.1"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0"
+      ],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
@@ -218,7 +261,9 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Aleutian_Islands_Revived_v1.0.1"],
+      "files": [
+        "Aleutian_Islands_Revived_v1.0.1"
+      ],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -232,7 +277,9 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Petersburg_Alaska_Revived_v1.0.1"],
+      "files": [
+        "Petersburg_Alaska_Revived_v1.0.1"
+      ],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -246,7 +293,9 @@
       "version": "1.0.1",
       "addedAt": "2026-11-08",
       "paid": false,
-      "files": ["Washington_Extended_Revived_v1.0.1"],
+      "files": [
+        "Washington_Extended_Revived_v1.0.1"
+      ],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -260,8 +309,12 @@
       "version": "0.82.162",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": ["Mexssimap_0_82_162_Public"],
-      "requires": ["reforma"],
+      "files": [
+        "Mexssimap_0_82_162_Public"
+      ],
+      "requires": [
+        "reforma"
+      ],
       "dlcs": []
     },
     {
@@ -273,8 +326,12 @@
       "version": "0.5.4",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": ["Project_Better_Arizona_0.5.4_1.62"],
-      "requires": ["reforma-megaresources"],
+      "files": [
+        "Project_Better_Arizona_0.5.4_1.62"
+      ],
+      "requires": [
+        "reforma-megaresources"
+      ],
       "dlcs": []
     },
     {
@@ -286,37 +343,50 @@
       "version": "1.17",
       "addedAt": "2026-11-09",
       "paid": false,
-      "files": ["Project_Better_Arizona_Reforma_Connection_1.17_1.62"],
-      "requires": ["reforma", "project-better-arizona-0-5-4-1-62"],
+      "files": [
+        "Project_Better_Arizona_Reforma_Connection_1.17_1.62"
+      ],
+      "requires": [
+        "reforma",
+        "project-better-arizona-0-5-4-1-62"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-pba-reforma-service-fix",
       "title": "QS ATS PBA Reforma Service Fix",
       "type": "fix",
-      "link": "https://sharemods.com/8j24vpbo0vz9/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
+      "link": "https://sharemods.com/u4ruyhxijsch/QS_ATS_PBA_Reforma_Service_Fix.scs.html",
       "image": "/img/combo-builder/7018b736bf73f9829756fa706f7a3d843b17f48913d4c54340ee152b1f83d772.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-09",
+      "updatedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_PBA_Reforma_Service_Fix"],
-      "requires": ["project-better-arizona-0-5-4-1-62"],
-      "dlcs": [],
-      "updatedAt": "2026-11-15"
+      "files": [
+        "QS_ATS_PBA_Reforma_Service_Fix"
+      ],
+      "requires": [
+        "project-better-arizona-0-5-4-1-62"
+      ],
+      "dlcs": []
     },
     {
       "id": "qs-ats-project-better-arizona-fix",
       "title": "QS ATS Project Better Arizona Fix",
       "type": "fix",
-      "link": "https://sharemods.com/0dd76cgu2a0g/QS_ATS_Project_Better_Arizona_Fix.scs.html",
+      "link": "https://sharemods.com/9kf5rbrdd8n0/QS_ATS_Project_Better_Arizona_Fix.scs.html",
       "image": "/img/combo-builder/5c93f85cb9c3c96ff61f5c05ca7bac9a33cacbc6354e86a37fdbd4f3be41afc9.webp",
       "version": "0.2.0",
       "addedAt": "2026-11-09",
+      "updatedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_Project_Better_Arizona_Fix"],
-      "requires": ["project-better-arizona-reforma-connection-1-17-1-62"],
-      "dlcs": [],
-      "updatedAt": "2026-11-15"
+      "files": [
+        "QS_ATS_Project_Better_Arizona_Fix"
+      ],
+      "requires": [
+        "project-better-arizona-reforma-connection-1-17-1-62"
+      ],
+      "dlcs": []
     },
     {
       "id": "alaska-north-to-the-future",
@@ -328,7 +398,9 @@
       "version": "v0.8.9 Beta",
       "addedAt": "2026-11-10",
       "paid": true,
-      "files": ["Alaska_North_to_the_Future"],
+      "files": [
+        "Alaska_North_to_the_Future"
+      ],
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15"
@@ -337,13 +409,18 @@
       "id": "qs-ats-reforma-promods-model-fix",
       "title": "QS ATS Reforma + ProMods Model Fix",
       "type": "fix",
-      "link": "https://sharemods.com/xgov2x8ddpw0/QS_ATS_Reforma_ProMods_Model_Fix.scs.html",
+      "link": "https://sharemods.com/5u6n1akcloww/QS_ATS_Reforma_ProMods_Model_Fix.scs.html",
       "image": "/img/combo-builder/acaa497913f571bbcbcb6ca37fc03e68517f2d35a98d140d5b8f7c2936b3f862.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-10",
       "paid": false,
-      "files": ["QS_ATS_Reforma_ProMods_Model_Fix"],
-      "requires": ["promods-ats", "reforma"],
+      "files": [
+        "QS_ATS_Reforma_ProMods_Model_Fix"
+      ],
+      "requires": [
+        "promods-ats",
+        "reforma"
+      ],
       "dlcs": []
     },
     {
@@ -355,22 +432,31 @@
       "version": "1.0.1",
       "addedAt": "2026-11-10",
       "paid": false,
-      "files": ["Washington_Extended_Revived_Promods_Connection_v1.0.1"],
-      "requires": ["promods-ats", "washington-extended-revived-v1-0-1"],
+      "files": [
+        "Washington_Extended_Revived_Promods_Connection_v1.0.1"
+      ],
+      "requires": [
+        "promods-ats",
+        "washington-extended-revived-v1-0-1"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-alaska-nttf-traffic-fix",
       "title": "QS ATS Alaska NTTF Traffic Fix",
       "type": "fix",
-      "link": "https://sharemods.com/653m7kdn9ohn/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
+      "link": "https://sharemods.com/w31a1whog7i6/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
       "image": "/img/combo-builder/fcfa1ff9caf08fc0ebec025e004de01340acb4b7ab9608bdc74e3dd74c219934.webp",
       "version": "0.2.2",
       "addedAt": "2026-11-10",
       "updatedAt": "2026-11-13",
       "paid": false,
-      "files": ["QS_ATS_Alaska_NTTF_Traffic_Fix"],
-      "requires": ["alaska-north-to-the-future"],
+      "files": [
+        "QS_ATS_Alaska_NTTF_Traffic_Fix"
+      ],
+      "requires": [
+        "alaska-north-to-the-future"
+      ],
       "dlcs": []
     },
     {
@@ -382,22 +468,31 @@
       "version": "0.6.7.2",
       "addedAt": "2026-11-10",
       "paid": false,
-      "files": ["Alaska_NTTF_to_Promods_RC_V0.6.7.2"],
-      "requires": ["promods-ats", "alaska-north-to-the-future"],
+      "files": [
+        "Alaska_NTTF_to_Promods_RC_V0.6.7.2"
+      ],
+      "requires": [
+        "promods-ats",
+        "alaska-north-to-the-future"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-alaska-promods-sign-fix",
       "title": "QS ATS Alaska + ProMods Sign Fix",
       "type": "fix",
-      "link": "https://sharemods.com/whpboj2l8scq/QS_ATS_Alaska_ProMods_Sign_Fix.scs.html",
+      "link": "https://sharemods.com/4jto1bu5itg8/QS_ATS_Alaska_ProMods_Sign_Fix.scs.html",
       "image": "/img/combo-builder/9777855cbb312043a65c69e38ab749966eba5616dd654439015164fc75814bd2.webp",
       "version": "0.2.1",
       "addedAt": "2026-11-10",
       "updatedAt": "2026-11-11",
       "paid": false,
-      "files": ["QS_ATS_Alaska_ProMods_Sign_Fix"],
-      "requires": ["alaska-nttf-to-promods-rc-v0-6-7-2"],
+      "files": [
+        "QS_ATS_Alaska_ProMods_Sign_Fix"
+      ],
+      "requires": [
+        "alaska-nttf-to-promods-rc-v0-6-7-2"
+      ],
       "dlcs": []
     },
     {
@@ -409,23 +504,12 @@
       "version": "v0.8.9 Beta",
       "addedAt": "2026-11-13",
       "paid": true,
-      "files": ["Alaska_NTTF_Midnight_Sun_Optional_Addon"],
-      "requires": ["alaska-north-to-the-future"],
-      "dlcs": [],
-      "updatedAt": "2026-11-15"
-    },
-    {
-      "id": "ats-quper-background-map",
-      "title": "ATS Quper Background Map (Optional)",
-      "type": "mod",
-      "autoWithMaps": true,
-      "link": "https://sharemods.com/uola2i89k54o/ATS_Quper_Background_Map.scs.html",
-      "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
-      "version": "2026.10.27 - 1.3",
-      "addedAt": "2026-11-13",
-      "paid": false,
-      "files": ["ATS Quper Background Map"],
-      "requires": [],
+      "files": [
+        "Alaska_NTTF_Midnight_Sun_Optional_Addon"
+      ],
+      "requires": [
+        "alaska-north-to-the-future"
+      ],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
@@ -448,19 +532,6 @@
       "dlcs": []
     },
     {
-      "id": "ats-expansion-v23-0-1-62",
-      "title": "ATS Expansion v23.0",
-      "type": "map",
-      "link": "https://drive.google.com/file/d/1kdv81SXTplDc-9xWrZVH4RXJKgdprogd/view?usp=drive_link",
-      "image": "/img/combo-builder/2d40f698dd733eaef47cfe11fc93c90570af61e5f867ab2e513a39baedb2efed.webp",
-      "version": "23.0",
-      "addedAt": "2026-11-15",
-      "paid": false,
-      "files": ["ATS_Expansion_v23.0_1.62"],
-      "requires": [],
-      "dlcs": []
-    },
-    {
       "id": "c2c-beyond-connections-v1-1-3",
       "title": "Coast to Coast + Beyond Connections v1.1.3",
       "type": "connector",
@@ -469,8 +540,13 @@
       "version": "1.1.3",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": ["C2C_Beyond_Connections_v1.1.3"],
-      "requires": ["coast-to-coast-v2-24-62-0", "beyond-by-tm-for-ats-1"],
+      "files": [
+        "C2C_Beyond_Connections_v1.1.3"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "beyond-by-tm-for-ats-1"
+      ],
       "dlcs": []
     },
     {
@@ -482,74 +558,341 @@
       "version": "1.1.2",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": ["C2C_ATS_Exp_Connections_v1.1.2"],
-      "requires": ["coast-to-coast-v2-24-62-0", "ats-expansion-v23-0-1-62"],
+      "files": [
+        "C2C_ATS_Exp_Connections_v1.1.2"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "ats-expansion"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-expansion-fix",
       "title": "QS ATS Expansion Fix",
       "type": "fix",
-      "link": "https://sharemods.com/rhmu23v4vrs2/QS_ATS_Expansion_Fix.scs.html",
+      "link": "https://sharemods.com/dkveaqulyact/QS_ATS_Expansion_Fix.scs.html",
       "image": "/img/combo-builder/bd8d2a4b93deeed4b95c3a3feb2d0c870c4f160ed9c935f075c83e38d5d361ed.webp",
-      "version": "0.1.1",
+      "version": "0.1.4",
       "addedAt": "2026-11-15",
+      "updatedAt": "2026-11-16",
       "paid": false,
-      "files": ["QS_ATS_Expansion_Fix"],
-      "requires": ["ats-expansion-v23-0-1-62"],
+      "files": [
+        "QS_ATS_Expansion_Fix"
+      ],
+      "requires": [
+        "ats-expansion"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-expansion-sierra-connection-fix",
       "title": "QS ATS Expansion + Sierra Connection Fix",
       "type": "fix",
-      "link": "https://sharemods.com/rl6suvbnz2nz/QS_ATS_Expansion_Sierra_Connection_Fix.scs.html",
+      "link": "https://sharemods.com/o9ck5r2ffbty/QS_ATS_Expansion_Sierra_Connection_Fix.scs.html",
       "image": "/img/combo-builder/a877839c618a69070488fb932622ec3cba1aa4df794502d89df03e576adfaa95.webp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "addedAt": "2026-11-15",
+      "updatedAt": "2026-11-16",
       "paid": false,
-      "files": ["QS_ATS_Expansion_Sierra_Connection_Fix"],
-      "requires": ["reforma-sierra-nevada-remake", "ats-expansion-v23-0-1-62"],
+      "files": [
+        "QS_ATS_Expansion_Sierra_Connection_Fix"
+      ],
+      "requires": [
+        "reforma-sierra-nevada-remake",
+        "ats-expansion"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-alaska-garage-fix",
       "title": "QS ATS Alaska Garage Fix",
       "type": "fix",
-      "link": "https://sharemods.com/ozamcy4mbghz/QS_ATS_Alaska_Garage_Fix.scs.html",
+      "link": "https://sharemods.com/b3qes0kfbz8r/QS_ATS_Alaska_Garage_Fix.scs.html",
       "image": "/img/combo-builder/cc00c515d04811eec812f6ee01945a63fdbe43d6fe93ba3c392ff3c8097f58c6.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_Alaska_Garage_Fix"],
-      "requires": ["alaska-north-to-the-future"],
+      "files": [
+        "QS_ATS_Alaska_Garage_Fix"
+      ],
+      "requires": [
+        "alaska-north-to-the-future"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-expansion-garage-fix",
       "title": "QS ATS Expansion Garage Fix",
       "type": "fix",
-      "link": "https://sharemods.com/m7zpnpxgcfj3/QS_ATS_Expansion_Garage_Fix.scs.html",
+      "link": "https://sharemods.com/sv7vvmhk8c8c/QS_ATS_Expansion_Garage_Fix.scs.html",
       "image": "/img/combo-builder/d7b0a003ae1bd727381c6f30c08ea6a1dae7fa80ba66da48485321ef420b48ff.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_Expansion_Garage_Fix"],
-      "requires": ["ats-expansion-v23-0-1-62"],
+      "files": [
+        "QS_ATS_Expansion_Garage_Fix"
+      ],
+      "requires": [
+        "ats-expansion"
+      ],
       "dlcs": []
     },
     {
       "id": "qs-ats-alaska-expansion-garage-fix",
       "title": "QS ATS Alaska + Expansion Garage Fix",
       "type": "fix",
-      "link": "https://sharemods.com/nxymf9dlgb8f/QS_ATS_Alaska_Expansion_Garage_Fix.scs.html",
+      "link": "https://sharemods.com/hd3uehqiuq2h/QS_ATS_Alaska_Expansion_Garage_Fix.scs.html",
       "image": "/img/combo-builder/f523795899a362b958a8fb5ab766a42b7f3f18a65331419f0ee74f2d0c008a80.webp",
       "version": "0.1.0",
       "addedAt": "2026-11-15",
       "paid": false,
-      "files": ["QS_ATS_Alaska_Expansion_Garage_Fix"],
-      "requires": ["alaska-north-to-the-future", "ats-expansion-v23-0-1-62"],
-      "replaces": ["qs-ats-alaska-garage-fix", "qs-ats-expansion-garage-fix"],
+      "files": [
+        "QS_ATS_Alaska_Expansion_Garage_Fix"
+      ],
+      "requires": [
+        "alaska-north-to-the-future",
+        "ats-expansion"
+      ],
+      "replaces": [
+        "qs-ats-alaska-garage-fix",
+        "qs-ats-expansion-garage-fix"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "ats-expansion",
+      "title": "ATS Expansion",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/ats-expansion-v13-for-151",
+      "image": "/img/combo-builder/2d40f698dd733eaef47cfe11fc93c90570af61e5f867ab2e513a39baedb2efed.webp",
+      "version": "24.0",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "ATS_Expansion_v24.0_1.62"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "great-america-v6-2",
+      "title": "GREAT AMERICA",
+      "type": "map",
+      "link": "https://www.patreon.com/c/voith/home",
+      "image": "/img/combo-builder/76be39275cc4c7da38836a1143767b9d959fa71afbd92b017f32a0d57ec507df.webp",
+      "version": "6.2",
+      "addedAt": "2026-11-16",
+      "paid": true,
+      "files": [
+        "great_america_v6.2"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "dna-v1-8-2",
+      "title": "Discover North America",
+      "type": "map",
+      "link": "https://www.patreon.com/Astranautica/posts/dna-1-8-2-ea-175171626",
+      "image": "/img/combo-builder/7416ce6350650bcc6ef98c18c141c3e24c2d9f4d93b311415d42f0b6a32fad1b.webp",
+      "version": "1.8.2",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "DNA_v1.8.2"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "reforma-baja-beta-5-6-162",
+      "title": "Reforma Baja Beta",
+      "type": "map",
+      "link": "https://www.patreon.com/eblem",
+      "image": "/img/combo-builder/d58b9bd4c3b111f7e53f0e4a69d9d602532cd49b2f47693ab026334d6886ea67.webp",
+      "version": "5.6.162",
+      "addedAt": "2026-11-16",
+      "paid": true,
+      "files": [
+        "Reforma_Baja_Beta_5_6_162"
+      ],
+      "requires": [
+        "reforma"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "reforma-sonora-beta-1-5-162",
+      "title": "Reforma Sonora Beta",
+      "type": "map",
+      "link": "https://www.patreon.com/eblem",
+      "image": "/img/combo-builder/f3bbbf06ad8d954a6c47e398dcfd1aea3af14ace0140e0a1434e90c53cce7f3e.webp",
+      "version": "1.5.162",
+      "addedAt": "2026-11-16",
+      "paid": true,
+      "files": [
+        "Reforma_Sonora_Beta_1_5_162"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "more-american-cities-v1-1b",
+      "title": "More American Cities",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/more-american-cities-601138",
+      "image": "/img/combo-builder/77b336555e1d33425028a544989f953523c2f646f5960253ceaa7be56e187a10.webp",
+      "version": "1.1b",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "More American Cities (v1.1b)"
+      ],
+      "requires": [],
+      "dlcs": []
+    },
+    {
+      "id": "dna-ats-exp-ga-connections-v1-4-0-1",
+      "title": "DNA + ATS Expansion And Great America Connections",
+      "type": "fix",
+      "link": "https://truckymods.io/american-truck-simulator/map-patches/dna-and-ats-expansion-great-america-connections-256850",
+      "image": "/img/combo-builder/1ddb3bf9ab21a39f31dda9040401416fa97d8853221de5a0718bb232bededc13.webp",
+      "version": "1.4.0.1",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "DNA_ATS_Exp_GA_Connections_v1.4.0.1"
+      ],
+      "requires": [
+        "coast-to-coast-v2-24-62-0",
+        "discover-oregon-revived-v1-0-1",
+        "ats-expansion",
+        "great-america-v6-2"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-baja-ensenada-port-fix",
+      "title": "QS ATS Baja Ensenada Port Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/wlussqn461fw/QS_ATS_Baja_Ensenada_Port_Fix.scs.html",
+      "image": "/img/combo-builder/5e6fcd242533ef927856bc1161a8cf30c0d0e878baade39e463d992907fe4200.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "QS_ATS_Baja_Ensenada_Port_Fix"
+      ],
+      "requires": [
+        "reforma-baja-beta-5-6-162"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-baja-pba-yuma-garage-fix",
+      "title": "QS ATS Baja + PBA Yuma Garage Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/1u4309agxijr/QS_ATS_Baja_PBA_Yuma_Garage_Fix.scs.html",
+      "version": "0.1.0",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "QS_ATS_Baja_PBA_Yuma_Garage_Fix"
+      ],
+      "requires": [
+        "project-better-arizona-reforma-connection-1-17-1-62",
+        "reforma-baja-beta-5-6-162"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-dna-promods-signal-fix",
+      "title": "QS ATS DNA + ProMods Signal Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/2ttzi2fde10v/QS_ATS_DNA_ProMods_Signal_Fix.scs.html",
+      "version": "0.1.0",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "QS_ATS_DNA_ProMods_Signal_Fix"
+      ],
+      "requires": [
+        "promods-ats",
+        "dna-v1-8-2"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-great-america-sector-fix",
+      "title": "QS ATS Great America Sector Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/01vm9stjgz06/QS_ATS_Great_America_Sector_Fix.scs.html",
+      "image": "/img/combo-builder/fa3605dc975d4fbb6a142080465ebf9bd40bf5bd02df21df17a1cad83b1cbd9c.webp",
+      "version": "0.4.0",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "QS_ATS_Great_America_Sector_Fix"
+      ],
+      "requires": [
+        "dna-ats-exp-ga-connections-v1-4-0-1"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-more-cities-sierra-connection-fix",
+      "title": "QS ATS More Cities + Sierra Nevada Connection Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/r06qox94dnzc/QS_ATS_More_Cities_Sierra_Connection_Fix.scs.html",
+      "image": "/img/combo-builder/8e2bc6768c3361425815338178ba8f93fb9348f7578b9549d6c428804707c6bb.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "QS_ATS_More_Cities_Sierra_Connection_Fix"
+      ],
+      "requires": [
+        "reforma-sierra-nevada-remake",
+        "more-american-cities-v1-1b"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "qs-ats-more-cities-trinity-connection-fix",
+      "title": "QS ATS More Cities + Trinity County Connection Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/v3hk9mqtgeu3/QS_ATS_More_Cities_Trinity_Connection_Fix.scs.html",
+      "image": "/img/combo-builder/2092ffdaa217fb63c399a030eb7202a4236b5984cfe9eed1a1d92ef425bfa86e.webp",
+      "version": "0.1.1",
+      "addedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "QS_ATS_More_Cities_Trinity_Connection_Fix"
+      ],
+      "requires": [
+        "trinity-county-revived-v1-0-1",
+        "more-american-cities-v1-1b"
+      ],
+      "dlcs": []
+    },
+    {
+      "id": "ats-quper-background-map",
+      "title": "ATS Quper Background Map (Optional)",
+      "type": "mod",
+      "autoWithMaps": true,
+      "link": "https://sharemods.com/x46d1dq8ny5z/ATS_Quper_Background_Map.scs.html",
+      "image": "/img/combo-builder/fc8956af56b6390acb44250e2ef30f633f0f421e099f3d3dce08c475ff6d657c.webp",
+      "version": "2026.10.27 - 1.3",
+      "addedAt": "2026-11-16",
+      "updatedAt": "2026-11-16",
+      "paid": false,
+      "files": [
+        "ATS_Quper_Background_Map"
+      ],
+      "requires": [],
       "dlcs": []
     }
   ],
@@ -558,6 +901,11 @@
       "key": "NASCAR_Map_Combo_Pack_v1.0.1",
       "name": "ATS NASCAR Map Combo Pack v1.0.1",
       "logVersion": "1.0.1"
+    },
+    {
+      "key": "More American Cities (v1.1b)",
+      "name": "More American Cities",
+      "logVersion": "1.1b"
     },
     {
       "key": "Reforma_MegaResources_v3_0_4_162",
@@ -575,9 +923,29 @@
       "logVersion": "0.1.0"
     },
     {
+      "key": "Reforma_Sonora_Beta_1_5_162",
+      "name": "Reforma Sonora Beta 1.5.162",
+      "logVersion": "1.5.162"
+    },
+    {
+      "key": "Reforma_Baja_Beta_5_6_162",
+      "name": "Reforma Baja Beta 5.6.162",
+      "logVersion": "5.6.162"
+    },
+    {
+      "key": "QS_ATS_Baja_Ensenada_Port_Fix",
+      "name": "QS ATS Baja Ensenada Port Fix",
+      "logVersion": "0.1.0"
+    },
+    {
       "key": "Reforma_Sierra_Nevada_Remake_v1_21_162",
       "name": "Reforma Sierra Nevada 1.21.162",
       "logVersion": "1.21.162"
+    },
+    {
+      "key": "QS_ATS_More_Cities_Sierra_Connection_Fix",
+      "name": "QS ATS More Cities + Sierra Nevada Connection Fix",
+      "logVersion": "0.1.0"
     },
     {
       "key": "Project_Better_Arizona_0.5.4_1.62",
@@ -597,6 +965,11 @@
     {
       "key": "QS_ATS_PBA_Reforma_Service_Fix",
       "name": "QS ATS PBA Reforma Service Fix",
+      "logVersion": "0.1.0"
+    },
+    {
+      "key": "QS_ATS_Baja_PBA_Yuma_Garage_Fix",
+      "name": "QS ATS Baja + PBA Yuma Garage Fix",
       "logVersion": "0.1.0"
     },
     {
@@ -643,24 +1016,44 @@
       "logVersion": "0.82.162"
     },
     {
-      "key": "ATS_Expansion_v23.0_1.62",
-      "name": "ATS Expansion v23.0",
-      "logVersion": "23.0"
+      "key": "DNA_v1.8.2",
+      "name": "Discover North America v1.8.2",
+      "logVersion": "1.8.2"
+    },
+    {
+      "key": "ATS_Expansion_v24.0_1.62",
+      "name": "ATS Expansion v24.0",
+      "logVersion": "24.0"
     },
     {
       "key": "QS_ATS_Expansion_Fix",
       "name": "QS ATS Expansion Fix",
-      "logVersion": "0.1.0"
+      "logVersion": "0.1.4"
     },
     {
       "key": "QS_ATS_Expansion_Sierra_Connection_Fix",
       "name": "QS ATS Expansion + Sierra Connection Fix",
-      "logVersion": "0.1.0"
+      "logVersion": "0.1.1"
     },
     {
       "key": "C2C_ATS_Exp_Connections_v1.1.2",
       "name": "Coast to Coast + ATS Expansion Connections v1.1.2",
       "logVersion": "1.1.2"
+    },
+    {
+      "key": "great_america_v6.2",
+      "name": "GREAT AMERICA v6.2",
+      "logVersion": "6.2"
+    },
+    {
+      "key": "DNA_ATS_Exp_GA_Connections_v1.4.0.1",
+      "name": "DNA + ATS Expansion And Great America Connections v1.4.0.1",
+      "logVersion": "1.4.0.1"
+    },
+    {
+      "key": "QS_ATS_Great_America_Sector_Fix",
+      "name": "QS ATS Great America Sector Fix",
+      "logVersion": "0.4.0"
     },
     {
       "key": "Discover_Oregon_Revived_v1.0.1",
@@ -676,6 +1069,11 @@
       "key": "Vermont_Map_Revived_v1.0.1",
       "name": "Vermont Map Revived v1.0.1",
       "logVersion": "1.0.1"
+    },
+    {
+      "key": "QS_ATS_More_Cities_Trinity_Connection_Fix",
+      "name": "QS ATS More Cities + Trinity County Connection Fix",
+      "logVersion": "0.1.1"
     },
     {
       "key": "Washington_Extended_Revived_v1.0.1",
@@ -709,6 +1107,11 @@
       "filename": "promods-ats-def-v171.scs",
       "image": "/img/combo-builder/b42c7c2adb8dd156067783731d85ea219058375d3b17d51f98396b528bd526d4.webp",
       "logVersion": "1.7.1"
+    },
+    {
+      "key": "QS_ATS_DNA_ProMods_Signal_Fix",
+      "name": "QS ATS DNA + ProMods Signal Fix",
+      "logVersion": "0.1.0"
     },
     {
       "key": "QS_ATS_C2C_ProMods_Fix",
@@ -784,15 +1187,15 @@
     {
       "key": "QS_ATS_Map_Final_Fix",
       "name": "QS ATS Map Final Fix",
-      "logVersion": "0.3.3"
+      "logVersion": "0.3.4"
     },
     {
       "key": "ATSRealisticEconomy",
       "name": "Realistic Economy ATS by Quper",
-      "logVersion": "1.62.3"
+      "logVersion": "1.62.4"
     },
     {
-      "key": "ATS Quper Background Map",
+      "key": "ATS_Quper_Background_Map",
       "name": "ATS Quper Background Map (Optional)",
       "logVersion": "2026.10.27 - 1.3"
     }

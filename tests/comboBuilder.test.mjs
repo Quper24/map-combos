@@ -193,6 +193,32 @@ test('a combined garage fix replaces the individual fixes when both maps are act
   }
 });
 
+test('an active map disables its optional fix and fixes that depend on it', () => {
+  const entries = [
+    makeEntry('reforma'),
+    makeEntry('baja', 'map', { requires: ['reforma'] }),
+    makeEntry('punta-prieta', 'fix', { requires: ['reforma'], disabledByMaps: ['baja'] }),
+    makeEntry('garage', 'fix', { requires: ['punta-prieta'] }),
+  ];
+  const catalog = {
+    game: 'ats',
+    version: '1.62',
+    entries,
+    order: entries.map(({ id }) => ({ key: id, name: id })),
+    conflicts: [],
+    presets: [],
+  };
+  validateCatalog(catalog);
+  assert.deepEqual(
+    resolveCombo(catalog, ['reforma']).files.map(({ key }) => key),
+    ['reforma', 'punta-prieta', 'garage'],
+  );
+  assert.deepEqual(
+    resolveCombo(catalog, ['baja']).files.map(({ key }) => key),
+    ['reforma', 'baja'],
+  );
+});
+
 test('a multipart mod uses distinct load-order images and shares one entry and download link', () => {
   const parts = ['Definition', 'Map', 'Assets', 'Models'];
   const order = parts.map((part) => ({

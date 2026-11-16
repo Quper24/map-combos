@@ -1,4 +1,6 @@
 {
+  "Отключать при подключении любой из этих карт": "Disable when any of these maps is active",
+  "Проверь список карт, отключающих позицию. Запись —": "Check the list of maps that disable this entry. Entry —",
   "Заменяет фиксы": "Replaces fixes",
   "Проверь список заменяемых фиксов. Запись —": "Check the list of replaced fixes. Entry —",
   "Место для карт": "Map slot",

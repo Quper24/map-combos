@@ -59,9 +59,12 @@ export function resolveCombo(catalog, selection) {
     }
   } while (active.size !== previousSize);
 
-  const replaced = new Set([...active].flatMap((id) => entries.get(id).replaces || []));
-  if (replaced.size) {
-    for (const id of replaced) active.delete(id);
+  const disabled = new Set([...active].flatMap((id) => entries.get(id).replaces || []));
+  for (const id of active) {
+    if (entries.get(id).disabledByMaps?.some((map) => active.has(map))) disabled.add(id);
+  }
+  if (disabled.size) {
+    for (const id of disabled) active.delete(id);
     do {
       previousSize = active.size;
       for (const id of active) {
@@ -413,6 +416,7 @@ export function validateCatalog(catalog, draft = false) {
       requires = [],
       requiresAny = [],
       replaces = [],
+      disabledByMaps = [],
       dlcs = [],
       family,
       variant,
@@ -477,6 +481,17 @@ export function validateCatalog(catalog, draft = false) {
       draft || !isFixOrConnector(type) || autoWithMaps || requires.length || requiresAny.length,
       `Для фикса или коннектора укажи, какие записи должны быть выбраны. Запись — ${id}`,
     );
+    check(
+      uniqueList(
+        disabledByMaps,
+        (dep) =>
+          dep !== id &&
+          byId.get(dep)?.type === 'map' &&
+          !requires.includes(dep) &&
+          !requiresAny.includes(dep),
+      ),
+      `Проверь список карт, отключающих позицию. Запись — ${id}`,
+    );
     check(uniqueList(dlcs, text), `Invalid DLC list: ${id}`);
     if (family !== undefined || variant !== undefined) {
       const variantKey = JSON.stringify([family, variant]);
@@ -501,8 +516,10 @@ export function validateCatalog(catalog, draft = false) {
     }
     if (visited.has(id)) return;
     visiting.add(id);
-    const { requires = [], requiresAny = [], replaces = [] } = byId.get(id);
-    for (const dependency of [...requires, ...requiresAny, ...replaces]) visit(dependency);
+    const { requires = [], requiresAny = [], replaces = [], disabledByMaps = [] } = byId.get(id);
+    for (const dependency of [...requires, ...requiresAny, ...replaces, ...disabledByMaps]) {
+      visit(dependency);
+    }
     visiting.delete(id);
     visited.add(id);
   }
