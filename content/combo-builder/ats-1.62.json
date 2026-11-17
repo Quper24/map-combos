@@ -769,10 +769,13 @@
         "DNA_ATS_Exp_GA_Connections_v1.4.0.1"
       ],
       "requires": [
-        "coast-to-coast-v2-24-62-0",
         "discover-oregon-revived-v1-0-1",
+        "great-america-v6-2",
         "ats-expansion",
-        "great-america-v6-2"
+        "coast-to-coast-v2-24-62-0"
+      ],
+      "replaces": [
+        "c2c-ats-exp-connections-v1-1-2"
       ],
       "dlcs": []
     },
