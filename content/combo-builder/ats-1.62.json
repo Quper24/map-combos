@@ -1362,17 +1362,21 @@
     },
     {
       "id": "sport-cars-traffic-pack-by-trafficmaniac-v12-7-13-ats-jaz",
-      "type": "mod",
       "title": "Sport Cars Traffic Pack by TrafficManiac",
+      "type": "fix",
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/sport-cars-traffic-pack-by-trafficmaniac-8.html",
+      "image": "/img/combo-builder/482e5d7d7c04714745fca6c0e9a82b0bf2164e68d97756053dedd448c302f744.jpg",
+      "version": "12.7.13",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "sport_cars_traffic_pack_by_TrafficManiac_v12.7.13_ats_jaz"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "12.7.13",
-      "link": "https://www.modland.net/euro-truck-simulator-2/other/sport-cars-traffic-pack-by-trafficmaniac-8.html",
-      "image": "/img/combo-builder/482e5d7d7c04714745fca6c0e9a82b0bf2164e68d97756053dedd448c302f744.jpg"
+      "requires": [
+        "sport-cars-traffic-pack-by-trafficmaniac-v12-7-13-ats-def",
+        "ai-traffic-pack-by-jazzycat-v16-6-9-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "dodge-daytona-traffic-by-alexp",
@@ -1473,17 +1477,21 @@
     },
     {
       "id": "motorcycle-traffic-pack-by-jazzycat-v6-5-15-ats-jaz",
-      "type": "mod",
       "title": "Motorcycle Traffic Pack by Jazzycat",
+      "type": "fix",
+      "link": "https://www.modland.net/american-truck-simulator-mods/other/motorcycle-traffic-packats-by-jazzycat-3.html",
+      "image": "/img/combo-builder/042490552132fe91102365fbe1d99a175ba22eb1fc421cd4f0c76540c025e27a.jpg",
+      "version": "6.5.15",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "motorcycle_traffic_pack_by_Jazzycat_v6.5.15_ats_jaz"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "6.5.15",
-      "link": "https://www.modland.net/american-truck-simulator-mods/other/motorcycle-traffic-packats-by-jazzycat-3.html",
-      "image": "/img/combo-builder/042490552132fe91102365fbe1d99a175ba22eb1fc421cd4f0c76540c025e27a.jpg"
+      "requires": [
+        "motorcycle-traffic-pack-by-jazzycat-v6-5-15-ats",
+        "ai-traffic-pack-by-jazzycat-v16-6-9-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "motorcycle-traffic-jazzycat-1980s-patch",
@@ -1730,171 +1738,216 @@
     },
     {
       "id": "mr-l-ats-double-and-triple-trailer-traffic",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Double And Triple Trailer Traffic",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/7fd1e6ed169c38a18f864bcaea43e80e6840e300773b17a48e73b49bdf65d9df.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Double_And_Triple_Trailer_Traffic"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/7fd1e6ed169c38a18f864bcaea43e80e6840e300773b17a48e73b49bdf65d9df.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-single-trailer-traffic",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Single Trailer Traffic",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/6adbc4f2a700f9d27feb6e5258cc15fc28f070d1b40ea6dddf3cb19fbba7187b.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Single_Trailer_Traffic"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/6adbc4f2a700f9d27feb6e5258cc15fc28f070d1b40ea6dddf3cb19fbba7187b.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-oversize-dlc-traffic",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Oversize DLC Traffic",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/d596972a25283f0b2383bf8c2d3eadbdcf2a15d1b469246361e6bddf7269d8ac.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Oversize_DLC_Traffic"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/d596972a25283f0b2383bf8c2d3eadbdcf2a15d1b469246361e6bddf7269d8ac.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": [
+        "Special Transport"
+      ]
     },
     {
       "id": "mr-l-ats-dlc-cargo-traffic-lodeking",
-      "type": "mod",
       "title": "Mr L's ATS Pack - DLC Cargo Traffic: Lode King",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/9a8cea83f736cd0ed5585636559267b34dd9865d13ea6f10340978f314eb873a.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_DLC_Cargo_Traffic_Lodeking"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/9a8cea83f736cd0ed5585636559267b34dd9865d13ea6f10340978f314eb873a.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": [
+        "Lode King"
+      ]
     },
     {
       "id": "mr-l-ats-extra-boxes",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Extra Boxes",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/892ebc79c51ca02b3328e6f7a79d4271cd43630d40b70136e1de2f301abe2b6c.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Extra_Boxes"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/892ebc79c51ca02b3328e6f7a79d4271cd43630d40b70136e1de2f301abe2b6c.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-arnook-container-addon",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Arnook Container Addon",
+      "type": "fix",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/70f41ba7259c4abc8e90b889983fcc7f963bb4955f722c78aebf71439b290396.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Arnook_Container_Addon"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/70f41ba7259c4abc8e90b889983fcc7f963bb4955f722c78aebf71439b290396.jpg"
+      "requires": [
+        "mr-l-ats-base",
+        "arnook-s-container-pack-for-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-jazzycat-unpainted-addon",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Jazzycat Unpainted Addon",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/799351e502ce683691e11cda1e90f5b20f6945cbcda5588cd0ee00c9517a9d88.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Jazzycat_Unpainted_Addon"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/799351e502ce683691e11cda1e90f5b20f6945cbcda5588cd0ee00c9517a9d88.jpg"
+      "requires": [
+        "mr-l-ats-base",
+        "truck-traffic-pack-by-jazzycat-v3-5-14-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-jazzycat-painted-addon",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Jazzycat Painted Addon",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/ff9273dd1a909de57e8d21e2a79b77811901e76f69d5f42429bf17823f57d550.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Jazzycat_Painted_Addon"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/ff9273dd1a909de57e8d21e2a79b77811901e76f69d5f42429bf17823f57d550.jpg"
+      "requires": [
+        "mr-l-ats-base",
+        "painted-truck-traffic-pack-by-jazzycat-v6-1-17-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-cargo-trailers",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Cargo Trailers",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/818229f83e45fb18b29f09d55a4a515927fa73f2776693898f1506a989ba77dd.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Cargo_Trailers"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/818229f83e45fb18b29f09d55a4a515927fa73f2776693898f1506a989ba77dd.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-atstig",
-      "type": "mod",
       "title": "Mr L's ATS Pack - The Stig",
+      "type": "mod",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/d8d3f7dc3b726cb2ad4cc6c65d5aa9771a72d22af4ece68e781ef1df747ced6e.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATStig"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/d8d3f7dc3b726cb2ad4cc6c65d5aa9771a72d22af4ece68e781ef1df747ced6e.jpg"
+      "requires": [
+        "mr-l-ats-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-sound-fixes-fix",
-      "type": "mod",
       "title": "Mr L's ATS Pack - Sound Fixes Fix",
+      "type": "fix",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/99d0ddad8a7ad9d1b32d066f5aa17c0724821d40c1aff2657cfa773020362cb2.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_Sound_Fixes_Fix"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/99d0ddad8a7ad9d1b32d066f5aa17c0724821d40c1aff2657cfa773020362cb2.jpg"
+      "requires": [
+        "mr-l-ats-base",
+        "sound-fixes-pack-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "mr-l-ats-trafficmaniac-classic-addon",
-      "type": "mod",
       "title": "Mr L's ATS Pack - TrafficManiac Classic Addon",
+      "type": "fix",
+      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
+      "image": "/img/combo-builder/2852790bde72d473b07df03c0d13d32c70098f5c10f37451d851d25bf495f912.jpg",
+      "version": "1.62.0",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Mr_L_ATS_TrafficManiac_Classic_Addon"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "1.62.0",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
-      "image": "/img/combo-builder/2852790bde72d473b07df03c0d13d32c70098f5c10f37451d851d25bf495f912.jpg"
+      "requires": [
+        "mr-l-ats-base",
+        "trailers-traffic-pack-by-trafficmaniac-v7-6-3"
+      ],
+      "dlcs": []
     },
     {
       "id": "skins-genadii",
@@ -1912,33 +1965,63 @@
     },
     {
       "id": "trucks-trailers-wheels",
-      "type": "mod",
       "title": "Trucks&Trailers Wheels",
+      "type": "fix",
+      "link": "https://byjonruda.ru/com/",
+      "image": "/img/combo-builder/9e5cb0e75bca0f3f6522279a6b30a3fec8498a0d087149d20b91ddc8cf6b9e46.jpg",
+      "version": "11.2",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Trucks&Trailers Wheels"
       ],
       "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "11.2",
-      "link": "https://byjonruda.ru/com/",
-      "image": "/img/combo-builder/9e5cb0e75bca0f3f6522279a6b30a3fec8498a0d087149d20b91ddc8cf6b9e46.jpg"
+      "requiresAny": [
+        "kw-w900-highway-killer",
+        "pete-579",
+        "pete-389-glider",
+        "pete-362-cabover",
+        "freightshaker-coronado-sd",
+        "freightshaker-cascadia-125-ats",
+        "freightshaker-classic-xl-ats",
+        "trailer-pack-livestock",
+        "trailer-pack-lowboy",
+        "trailer-pack-tanker",
+        "trailer-pack-refrigerators",
+        "trailer-pack-hopper-bottom",
+        "trailer-pack-flatbed"
+      ],
+      "dlcs": []
     },
     {
       "id": "trucks-trailers-flares",
-      "type": "mod",
       "title": "Trucks&Trailers Flarepack",
+      "type": "fix",
+      "link": "https://byjonruda.ru/com/",
+      "image": "/img/combo-builder/654eb383b1d248631ce9a01e39e5cfbf4c9f025d987126f5826ed6a2dcfcae5b.jpg",
+      "version": "43.5",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Trucks&Trailers Flares"
       ],
       "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "43.5",
-      "link": "https://byjonruda.ru/com/",
-      "image": "/img/combo-builder/654eb383b1d248631ce9a01e39e5cfbf4c9f025d987126f5826ed6a2dcfcae5b.jpg"
+      "requiresAny": [
+        "kw-w900-highway-killer",
+        "pete-579",
+        "pete-389-glider",
+        "pete-362-cabover",
+        "freightshaker-coronado-sd",
+        "freightshaker-cascadia-125-ats",
+        "freightshaker-classic-xl-ats",
+        "trailer-pack-livestock",
+        "trailer-pack-lowboy",
+        "trailer-pack-tanker",
+        "trailer-pack-refrigerators",
+        "trailer-pack-hopper-bottom",
+        "trailer-pack-flatbed"
+      ],
+      "dlcs": []
     },
     {
       "id": "snow-chains",
@@ -2158,18 +2241,20 @@
     },
     {
       "id": "freightshaker-classic-xl-personal-key",
-      "type": "mod",
       "title": "Classic XL Personal KEY",
+      "type": "fix",
+      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
+      "image": "/img/combo-builder/042cae8f6cd72cd24e3ec4132b9a3b22dabff62e9e8d4ef763ddefb756064d83.jpg",
+      "version": "10.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Classic XL Personal KEY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "10.0",
-      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
-      "image": "/img/combo-builder/042cae8f6cd72cd24e3ec4132b9a3b22dabff62e9e8d4ef763ddefb756064d83.jpg"
+      "requires": [
+        "freightshaker-classic-xl-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-classic-xl-ats",
@@ -2188,18 +2273,20 @@
     },
     {
       "id": "freightshaker-cascadia-125-personal-key",
-      "type": "mod",
       "title": "Cascadia 125 Personal KEY",
+      "type": "fix",
+      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
+      "image": "/img/combo-builder/e97b1bbce03a3bd0a58f2531b8875a206e2f79a72e75b55eada423b64337b295.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Cascadia 125 Personal KEY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
-      "image": "/img/combo-builder/e97b1bbce03a3bd0a58f2531b8875a206e2f79a72e75b55eada423b64337b295.jpg"
+      "requires": [
+        "freightshaker-cascadia-125-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-cascadia-125-ats",
@@ -2218,18 +2305,20 @@
     },
     {
       "id": "freightshaker-coronado-sd-personal-key",
-      "type": "mod",
       "title": "Freightshaker Coronado SD Personal KEY",
+      "type": "fix",
+      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
+      "image": "/img/combo-builder/f9c4f5f08855d0026509a30aee56e07e8cd94fb471ec5fa0bd8e33e2a3b98d82.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Coronado SD Personal KEY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
-      "image": "/img/combo-builder/f9c4f5f08855d0026509a30aee56e07e8cd94fb471ec5fa0bd8e33e2a3b98d82.jpg"
+      "requires": [
+        "freightshaker-coronado-sd"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-coronado-sd",
@@ -2248,18 +2337,20 @@
     },
     {
       "id": "pete-362-cabover-personal-key",
-      "type": "mod",
       "title": "Pete 362 Cabover Personal KEY",
+      "type": "fix",
+      "link": "https://byjonruda.ru/pete.html",
+      "image": "/img/combo-builder/f9021def8d42953433744a12a7a33dbde616af69507f84b68642908b33a6c554.jpg",
+      "version": "5.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 362 Cabover Personal KEY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "5.0",
-      "link": "https://byjonruda.ru/pete.html",
-      "image": "/img/combo-builder/f9021def8d42953433744a12a7a33dbde616af69507f84b68642908b33a6c554.jpg"
+      "requires": [
+        "pete-362-cabover"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-362-cabover",
@@ -2278,18 +2369,20 @@
     },
     {
       "id": "pete-389-glider-personal-key",
-      "type": "mod",
       "title": "Pete 389 Glider Personal KEY",
+      "type": "fix",
+      "link": "https://byjonruda.ru/pete-389-glider.html",
+      "image": "/img/combo-builder/12bafb125b5eb0a3818fb7119fd07744360f377903eb0b4ed0e9c3441ad8ec26.jpg",
+      "version": "7.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 389 Glider Personal KEY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "7.0",
-      "link": "https://byjonruda.ru/pete-389-glider.html",
-      "image": "/img/combo-builder/12bafb125b5eb0a3818fb7119fd07744360f377903eb0b4ed0e9c3441ad8ec26.jpg"
+      "requires": [
+        "pete-389-glider"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-389-glider",
@@ -2308,18 +2401,20 @@
     },
     {
       "id": "pete-579-personal-key",
-      "type": "mod",
       "title": "Pete 579 NG Personal KEY",
+      "type": "fix",
+      "link": "https://byjonruda.ru/pete-579.html",
+      "image": "/img/combo-builder/e587f19bbd0ae898929d3c29ac64cdd64a3f8166ff37aa36da09f8e93869bc96.jpg",
+      "version": "2.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 579 Personal KEY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "2.0",
-      "link": "https://byjonruda.ru/pete-579.html",
-      "image": "/img/combo-builder/e587f19bbd0ae898929d3c29ac64cdd64a3f8166ff37aa36da09f8e93869bc96.jpg"
+      "requires": [
+        "pete-579"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-579",
@@ -2395,78 +2490,88 @@
     },
     {
       "id": "freightshaker-classic-xl-realistic-headlights",
-      "type": "mod",
       "title": "Classic XL Realistic Headlights",
+      "type": "fix",
+      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
+      "image": "/img/combo-builder/ed184c229b93d225b620f7296d74c992f36a44fca16a0c2a370cdcb89bbb3740.jpg",
+      "version": "10.5.1",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Classic XL Realistic Headlights"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "10.5.1",
-      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
-      "image": "/img/combo-builder/ed184c229b93d225b620f7296d74c992f36a44fca16a0c2a370cdcb89bbb3740.jpg"
+      "requires": [
+        "freightshaker-classic-xl-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-cascadia-125-realistic-headlights",
-      "type": "mod",
       "title": "Cascadia 125 Realistic Headlights",
+      "type": "fix",
+      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
+      "image": "/img/combo-builder/103cb2d9e44eada1d222950d02a3bac71a50fb6d6d233cb484568eb70cb2b1ef.jpg",
+      "version": "3.6.1",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Cascadia 125 Realistic Headlights"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.6.1",
-      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
-      "image": "/img/combo-builder/103cb2d9e44eada1d222950d02a3bac71a50fb6d6d233cb484568eb70cb2b1ef.jpg"
+      "requires": [
+        "freightshaker-cascadia-125-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-362-cabover-realistic-headlights",
-      "type": "mod",
       "title": "Pete 362 Cabover Realistic Headlights",
+      "type": "fix",
+      "link": "https://byjonruda.ru/pete.html",
+      "image": "/img/combo-builder/69b2d388507b462deede87f495256088be46c45325c88a324f15046263591113.jpg",
+      "version": "5.7.1",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 362 Cabover Realistic Headlights"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "5.7.1",
-      "link": "https://byjonruda.ru/pete.html",
-      "image": "/img/combo-builder/69b2d388507b462deede87f495256088be46c45325c88a324f15046263591113.jpg"
+      "requires": [
+        "pete-362-cabover"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-389-glider-realistic-headlights",
-      "type": "mod",
       "title": "Pete 389 Glider Realistic Headlights",
+      "type": "fix",
+      "link": "https://byjonruda.ru/pete-389-glider.html",
+      "image": "/img/combo-builder/492c4ba168ae4f6ee4c92346bc85e9cd9e5424c9d387c4677842832d5aa8a753.jpg",
+      "version": "7.7.1",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 389 Glider Realistic Headlights"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "7.7.1",
-      "link": "https://byjonruda.ru/pete-389-glider.html",
-      "image": "/img/combo-builder/492c4ba168ae4f6ee4c92346bc85e9cd9e5424c9d387c4677842832d5aa8a753.jpg"
+      "requires": [
+        "pete-389-glider"
+      ],
+      "dlcs": []
     },
     {
       "id": "kw-w900-highway-killer-realistic-headlights",
-      "type": "mod",
       "title": "KW W900L H-WAY KILLER Realistic Headlights",
+      "type": "fix",
+      "link": "https://byjonruda.ru/kw-w-900.html",
+      "image": "/img/combo-builder/54564961bc5d8627acd0c03f422328c3ff5cdb0d587deae0a902fc6362cde2d3.jpg",
+      "version": "9.4",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "KW W900 Highway Killer Realistic Headlights"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "9.4",
-      "link": "https://byjonruda.ru/kw-w-900.html",
-      "image": "/img/combo-builder/54564961bc5d8627acd0c03f422328c3ff5cdb0d587deae0a902fc6362cde2d3.jpg"
+      "requires": [
+        "kw-w900-highway-killer"
+      ],
+      "dlcs": []
     },
     {
       "id": "international-9900i-add-ons",
@@ -2763,78 +2868,90 @@
     },
     {
       "id": "freightshaker-classic-xl-sisl-pack-compatibility",
-      "type": "mod",
       "title": "Classic XL SISL Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
+      "image": "/img/combo-builder/fbd343d45b9d09d913d2d32cb8476a72a72dd0804f3faa8244cda8ec23599df9.jpg",
+      "version": "10.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Classic XL SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "10.0",
-      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
-      "image": "/img/combo-builder/fbd343d45b9d09d913d2d32cb8476a72a72dd0804f3faa8244cda8ec23599df9.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "freightshaker-classic-xl-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-classic-xl-dlc-toys-compatibility",
-      "type": "mod",
       "title": "Classic XL DLC Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
+      "image": "/img/combo-builder/46c7da28ad89db039f7341353ea116829eeacdd7a1d5c67606c079c07e959a51.jpg",
+      "version": "10.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Classic XL DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "10.0",
-      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
-      "image": "/img/combo-builder/46c7da28ad89db039f7341353ea116829eeacdd7a1d5c67606c079c07e959a51.jpg"
+      "requires": [
+        "freightshaker-classic-xl-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-classic-xl-dlc-steering-wheels-compatibility",
-      "type": "mod",
       "title": "Classic XL DLC Steering Wheels Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
+      "image": "/img/combo-builder/fb9fbe97b69e06e1d342610597d044dbd66a13f3007d26c9a1440258f46135b8.jpg",
+      "version": "10.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Classic XL DLC Steering Wheels Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "10.0",
-      "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
-      "image": "/img/combo-builder/fb9fbe97b69e06e1d342610597d044dbd66a13f3007d26c9a1440258f46135b8.jpg"
+      "requires": [
+        "freightshaker-classic-xl-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-cascadia-125-sisl-pack-compatibility",
-      "type": "mod",
       "title": "Cascadia 125 SISL Pack Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
+      "image": "/img/combo-builder/6cfe03fb32a6e2f6fddf01470de0a7e3715f8cc14789a79bbd2948e48434bc55.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Cascadia 125 SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
-      "image": "/img/combo-builder/6cfe03fb32a6e2f6fddf01470de0a7e3715f8cc14789a79bbd2948e48434bc55.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "freightshaker-cascadia-125-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-cascadia-125-dlc-toys-compatibility",
-      "type": "mod",
       "title": "Cascadia 125 DLC Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
+      "image": "/img/combo-builder/e13ca87c4fead5df5f609790ed69da45fa281c3b695c181ed0122066301e9498.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Cascadia 125 DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
-      "image": "/img/combo-builder/e13ca87c4fead5df5f609790ed69da45fa281c3b695c181ed0122066301e9498.jpg"
+      "requires": [
+        "freightshaker-cascadia-125-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-cascadia-125-dlc-steering-wheels-compatibility",
@@ -2853,228 +2970,263 @@
     },
     {
       "id": "freightshaker-coronado-sd-sisl-pack-compatibility",
-      "type": "mod",
       "title": "Freightshaker Coronado SD SISL Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
+      "image": "/img/combo-builder/8373dbd7b997df4b4f61b11f166c7c75d1ee0837e939fe3635147db3864e9eae.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Coronado SD SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
-      "image": "/img/combo-builder/8373dbd7b997df4b4f61b11f166c7c75d1ee0837e939fe3635147db3864e9eae.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "freightshaker-coronado-sd"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-coronado-sd-dlc-toys-compatibility",
-      "type": "mod",
       "title": "Freightshaker Coronado SD DLC Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
+      "image": "/img/combo-builder/cea5e235a25d18a64e03d2793ee1f9d378223817fddb0a3e75355a826221729f.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Coronado SD DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
-      "image": "/img/combo-builder/cea5e235a25d18a64e03d2793ee1f9d378223817fddb0a3e75355a826221729f.jpg"
+      "requires": [
+        "freightshaker-coronado-sd"
+      ],
+      "dlcs": []
     },
     {
       "id": "freightshaker-coronado-sd-dlc-steering-wheels-compatibility",
-      "type": "mod",
       "title": "Freightshaker Coronado SD DLC Steering Wheels Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
+      "image": "/img/combo-builder/87fc7c5d4b8ce2ded62b7e9be30f493cd4a363633fdb4d923f97d3b5dc87fff5.jpg",
+      "version": "3.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Freightshaker Coronado SD DLC Steering Wheels Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "3.0",
-      "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
-      "image": "/img/combo-builder/87fc7c5d4b8ce2ded62b7e9be30f493cd4a363633fdb4d923f97d3b5dc87fff5.jpg"
+      "requires": [
+        "freightshaker-coronado-sd"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-362-cabover-sisl-pack-compatibility",
-      "type": "mod",
       "title": "Pete 362 Cabover SISL Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete.html",
+      "image": "/img/combo-builder/2cf17e35d5d5089478414167582f35e1ced60e0d097ed4b4355845c317ee751a.jpg",
+      "version": "5.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 362 Cabover SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "5.0",
-      "link": "https://byjonruda.ru/pete.html",
-      "image": "/img/combo-builder/2cf17e35d5d5089478414167582f35e1ced60e0d097ed4b4355845c317ee751a.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "pete-362-cabover"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-362-cabover-dlc-toys-compatibility",
-      "type": "mod",
       "title": "Pete 362 Cabover DLC Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete.html",
+      "image": "/img/combo-builder/71e13714a4e3e7ef527df7a9883c03ad61cf1bc9e2bcf6c28cea09a8cc01bbc8.jpg",
+      "version": "5.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 362 Cabover DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "5.0",
-      "link": "https://byjonruda.ru/pete.html",
-      "image": "/img/combo-builder/71e13714a4e3e7ef527df7a9883c03ad61cf1bc9e2bcf6c28cea09a8cc01bbc8.jpg"
+      "requires": [
+        "pete-362-cabover"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-362-cabover-dlc-steering-wheels-compatibility",
-      "type": "mod",
       "title": "Pete 362 Cabover DLC Steering Wheels Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete.html",
+      "image": "/img/combo-builder/38bd77a02310515211d696082d69e05d2be68fb17425f7691920fbab2a6f1679.jpg",
+      "version": "5.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 362 Cabover DLC Steering Wheels Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "5.0",
-      "link": "https://byjonruda.ru/pete.html",
-      "image": "/img/combo-builder/38bd77a02310515211d696082d69e05d2be68fb17425f7691920fbab2a6f1679.jpg"
+      "requires": [
+        "pete-362-cabover"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-389-glider-sisl-pack-compatibility",
-      "type": "mod",
       "title": "Pete 389 Glider SISL's Pack Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete-389-glider.html",
+      "image": "/img/combo-builder/e2489bc1e6f1f6c6741bc14a7f32f2214618258e140037fd19ebd49cb76d3af8.jpg",
+      "version": "7.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 389 Glider SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "7.0",
-      "link": "https://byjonruda.ru/pete-389-glider.html",
-      "image": "/img/combo-builder/e2489bc1e6f1f6c6741bc14a7f32f2214618258e140037fd19ebd49cb76d3af8.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "pete-389-glider"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-389-glider-dlc-toys-compatibility",
-      "type": "mod",
       "title": "Pete 389 Glider DLC Cabin Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete-389-glider.html",
+      "image": "/img/combo-builder/da2baa7645f7ae0f619a53357b03d2e6d792060dc4775675ff75ac9d51f4cfd3.jpg",
+      "version": "7.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 389 Glider DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "7.0",
-      "link": "https://byjonruda.ru/pete-389-glider.html",
-      "image": "/img/combo-builder/da2baa7645f7ae0f619a53357b03d2e6d792060dc4775675ff75ac9d51f4cfd3.jpg"
+      "requires": [
+        "pete-389-glider"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-389-glider-dlc-steering-wheels-compatibility",
-      "type": "mod",
       "title": "Pete 389 Glider DLC Steering Wheels Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete-389-glider.html",
+      "image": "/img/combo-builder/68622b43876de55c09b97746695c0be2553c3b006a77bae83643a02e5d77b687.jpg",
+      "version": "7.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 389 Glider DLC Steering Wheels Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "7.0",
-      "link": "https://byjonruda.ru/pete-389-glider.html",
-      "image": "/img/combo-builder/68622b43876de55c09b97746695c0be2553c3b006a77bae83643a02e5d77b687.jpg"
+      "requires": [
+        "pete-389-glider"
+      ],
+      "dlcs": []
     },
     {
       "id": "kw-w900-highway-killer-sisl-pack-compatibility",
-      "type": "mod",
       "title": "KW W900 H-WAY KILLER SISL Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/kw-w-900.html",
+      "image": "/img/combo-builder/56bd27cd8e55f2225ba4e91017fcbe15d7db9679328e2d0b982e18cfd7cc22f1.jpg",
+      "version": "9.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "KW W900 Highway Killer SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "9.0",
-      "link": "https://byjonruda.ru/kw-w-900.html",
-      "image": "/img/combo-builder/56bd27cd8e55f2225ba4e91017fcbe15d7db9679328e2d0b982e18cfd7cc22f1.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "kw-w900-highway-killer"
+      ],
+      "dlcs": []
     },
     {
       "id": "kw-w900-highway-killer-dlc-toys-compatibility",
-      "type": "mod",
       "title": "KW W900 H-WAY KILLER DLC Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/kw-w-900.html",
+      "image": "/img/combo-builder/05e5d3752378d3378378011eaac5b7e66bf29c135a0bdf2f6d76807d51fc7e92.jpg",
+      "version": "9.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "KW W900 Highway Killer DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "9.0",
-      "link": "https://byjonruda.ru/kw-w-900.html",
-      "image": "/img/combo-builder/05e5d3752378d3378378011eaac5b7e66bf29c135a0bdf2f6d76807d51fc7e92.jpg"
+      "requires": [
+        "kw-w900-highway-killer"
+      ],
+      "dlcs": []
     },
     {
       "id": "kw-w900-highway-killer-dlc-steering-wheels-compatibility",
-      "type": "mod",
       "title": "KW W900L H-WAY KILLER DLC Steering Wheels Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/kw-w-900.html",
+      "image": "/img/combo-builder/bedd8008ce5202eaae9ce9a463c9f49ec662aca4f54cebb12401527757e2c1fb.jpg",
+      "version": "9.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "KW W900 Highway Killer DLC Steering Wheels Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "9.0",
-      "link": "https://byjonruda.ru/kw-w-900.html",
-      "image": "/img/combo-builder/bedd8008ce5202eaae9ce9a463c9f49ec662aca4f54cebb12401527757e2c1fb.jpg"
+      "requires": [
+        "kw-w900-highway-killer"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-579-sisl-pack-compatibility",
-      "type": "mod",
       "title": "Pete 579 NG SISL Pack Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete-579.html",
+      "image": "/img/combo-builder/8e071974dc5266a46a45bb121e66ab093de8ac81db50e5f0fc2c4118faec0e90.jpg",
+      "version": "2.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 579 SISL Pack Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "2.0",
-      "link": "https://byjonruda.ru/pete-579.html",
-      "image": "/img/combo-builder/8e071974dc5266a46a45bb121e66ab093de8ac81db50e5f0fc2c4118faec0e90.jpg"
+      "requires": [
+        "sisl-s-mega-pack",
+        "pete-579"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-579-dlc-toys-compatibility",
-      "type": "mod",
       "title": "Pete 579 NG DLC Accessories Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete-579.html",
+      "image": "/img/combo-builder/d3bd276341a646cebf60f360626f0790f320ec3e25e243891259f038c05bd6c0.jpg",
+      "version": "2.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 579 DLC Toys Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "2.0",
-      "link": "https://byjonruda.ru/pete-579.html",
-      "image": "/img/combo-builder/d3bd276341a646cebf60f360626f0790f320ec3e25e243891259f038c05bd6c0.jpg"
+      "requires": [
+        "pete-579"
+      ],
+      "dlcs": []
     },
     {
       "id": "pete-579-dlc-steering-wheels-compatibility",
-      "type": "mod",
       "title": "Pete 579 NG DLC Steering Wheels Compatibility",
+      "type": "mod",
+      "link": "https://byjonruda.ru/pete-579.html",
+      "image": "/img/combo-builder/1bbb116d0b50ad316570a4cce25e9b1e125594286af115fbf5dd82f730a6ed31.jpg",
+      "version": "2.0",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Pete 579 DLC Steering Wheels Compatibility"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "2.0",
-      "link": "https://byjonruda.ru/pete-579.html",
-      "image": "/img/combo-builder/1bbb116d0b50ad316570a4cce25e9b1e125594286af115fbf5dd82f730a6ed31.jpg"
+      "requires": [
+        "pete-579"
+      ],
+      "dlcs": []
     },
     {
       "id": "just-clutter-revisited",
@@ -3668,78 +3820,98 @@
     },
     {
       "id": "png-pe-weather-classic",
-      "type": "mod",
       "title": "PNG: PE-WEATHER",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ats",
+      "image": "/img/combo-builder/a95490f2b1e3891c0ef7a6b99dcb01d3e78d51d352edca6eed1f1be8717d25a2.jpg",
+      "version": "1.4",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "PNG_PE_WEATHER_CLASSIC"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "1.4",
-      "link": "https://store.n-artworks.workers.dev/ats",
-      "image": "/img/combo-builder/a95490f2b1e3891c0ef7a6b99dcb01d3e78d51d352edca6eed1f1be8717d25a2.jpg"
+      "requires": [
+        "png-pe-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "png-pe-weather-classic-foggy",
-      "type": "mod",
       "title": "PNG: PE-FOGGY WEATHER",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ats",
+      "image": "/img/combo-builder/a19a20b36f0ee0cfef8009b863c057986781e3fbebb4ae5828e573407f376981.jpg",
+      "version": "1.4",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "PNG_PE_WEATHER_CLASSIC_FOGGY"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "1.4",
-      "link": "https://store.n-artworks.workers.dev/ats",
-      "image": "/img/combo-builder/a19a20b36f0ee0cfef8009b863c057986781e3fbebb4ae5828e573407f376981.jpg"
+      "requires": [
+        "png-pe-weather-classic",
+        "png-pe-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "zpng-pe-autumn",
-      "type": "mod",
       "title": "PNG: PE-AUTUMN",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ats",
+      "image": "/img/combo-builder/70d4292b5826c90b1dda2ad67fa972266a4c05d7d1c3562914bc994b7282db04.jpg",
+      "version": "1.4",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "zPNG_PE_AUTUMN"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "1.4",
-      "link": "https://store.n-artworks.workers.dev/ats",
-      "image": "/img/combo-builder/70d4292b5826c90b1dda2ad67fa972266a4c05d7d1c3562914bc994b7282db04.jpg"
+      "requires": [
+        "png-pe-weather-classic",
+        "png-pe-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "zzpng-pe-rain",
-      "type": "mod",
       "title": "PNG: PE-RAIN",
+      "type": "mod",
+      "link": "https://store.n-artworks.workers.dev/ats",
+      "image": "/img/combo-builder/5eed23239c9a7cf85313c0dcf3ec91f222af0a780dfe3e30645a630ce6231907.jpg",
+      "version": "1.4",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "zzPNG_PE_RAIN"
       ],
-      "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "1.4",
-      "link": "https://store.n-artworks.workers.dev/ats",
-      "image": "/img/combo-builder/5eed23239c9a7cf85313c0dcf3ec91f222af0a780dfe3e30645a630ce6231907.jpg"
+      "requires": [
+        "png-pe-weather-classic",
+        "png-pe-base"
+      ],
+      "dlcs": []
     },
     {
       "id": "engine-sounds",
-      "type": "mod",
       "title": "Engine Sounds",
+      "type": "fix",
+      "link": "https://byjonruda.ru/com/",
+      "image": "/img/combo-builder/0ffb030a36662f6cb3f2c229b349008f1810b23ebbd0876ee490bbd66c8a2f75.jpg",
+      "version": "5.0.1",
+      "addedAt": "2026-11-17",
+      "paid": true,
       "files": [
         "Engine Sounds"
       ],
       "requires": [],
-      "dlcs": [],
-      "addedAt": "2026-11-17",
-      "paid": true,
-      "version": "5.0.1",
-      "link": "https://byjonruda.ru/com/",
-      "image": "/img/combo-builder/0ffb030a36662f6cb3f2c229b349008f1810b23ebbd0876ee490bbd66c8a2f75.jpg"
+      "requiresAny": [
+        "kw-w900-highway-killer",
+        "pete-579",
+        "pete-389-glider",
+        "pete-362-cabover",
+        "freightshaker-coronado-sd",
+        "freightshaker-cascadia-125-ats",
+        "freightshaker-classic-xl-ats"
+      ],
+      "dlcs": []
     },
     {
       "id": "ford-mustang-engine-and-transmission-pack",
