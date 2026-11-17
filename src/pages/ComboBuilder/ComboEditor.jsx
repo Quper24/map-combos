@@ -113,6 +113,7 @@ export default function ComboEditor() {
   const [busy, setBusy] = useState(false);
   const [entryRequest, setEntryRequest] = useState({ id: '', files: [], key: 0 });
   const unassigned = unassignedFiles(catalog);
+  const pendingReviews = catalog.entries.filter((entry) => entry.versionReview);
   function editImportedFiles(id, files) {
     setEntryRequest(({ key }) => ({ id, files, key: key + 1 }));
     requestAnimationFrame(() => document.getElementById('combo-entry-editor')?.focus());
@@ -205,7 +206,12 @@ export default function ComboEditor() {
       ? catalog.entries.map((entry) => {
           const version = versionUpdates.get(entry.id);
           return version
-            ? { ...entry, version, updatedAt: entry.version ? catalogDate() : entry.updatedAt }
+            ? {
+                ...entry,
+                version,
+                updatedAt: entry.version ? catalogDate() : entry.updatedAt,
+                versionReview: { from: entry.version },
+              }
             : entry;
         })
       : catalog.entries;
@@ -217,7 +223,13 @@ export default function ComboEditor() {
   }
   function exportCatalog(publish) {
     try {
-      const data = publish ? { ...catalog, presets: [] } : catalog;
+      const data = publish
+        ? {
+            ...catalog,
+            entries: catalog.entries.map((entry) => ({ ...entry, versionReview: undefined })),
+            presets: [],
+          }
+        : catalog;
       validateCatalog(data, !publish);
       downloadJson(data, `${catalogKey(catalog)}${publish ? '' : '-draft'}.json`);
     } catch (error) {
@@ -470,7 +482,43 @@ export default function ComboEditor() {
           )}
         </section>
         {unassigned.length > 0 && (
-          <ImportedFiles files={unassigned} entries={catalog.entries} onEdit={editImportedFiles} />
+          <ImportedFiles
+            files={unassigned}
+            entries={catalog.entries}
+            onEdit={editImportedFiles}
+            busy={busy}
+            onRemoveAll={() => {
+              const keys = new Set(unassigned.map(({ key }) => key));
+              const order = catalog.order.filter(({ key }) => !keys.has(key));
+              if (
+                commit({ ...catalog, order }) &&
+                entryRequest.files.some((key) => keys.has(key))
+              ) {
+                setEntryRequest(({ id, key }) => ({ id, files: [], key: key + 1 }));
+              }
+            }}
+          />
+        )}
+        {pendingReviews.length > 0 && (
+          <section className={s.panel}>
+            <h2>
+              {t('Проверить после обновления')} · {pendingReviews.length}
+            </h2>
+            <ul className={s.importList}>
+              {pendingReviews.map((entry) => (
+                <li key={entry.id}>
+                  <button
+                    type="button"
+                    className="chip"
+                    onClick={() => editImportedFiles(entry.id, [])}
+                  >
+                    {t(entry.title)} · {entry.versionReview.from || t('Версия неизвестна')} →{' '}
+                    {entry.version || t('Версия неизвестна')}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
         <EntryEditor
           key={entryRequest.key}
@@ -519,7 +567,7 @@ function unassignedFiles(catalog) {
   return catalog.order.filter(({ key }) => !assigned.has(key)).reverse();
 }
 
-function ImportedFiles({ files, entries, onEdit }) {
+function ImportedFiles({ files, entries, onEdit, busy, onRemoveAll }) {
   const { t } = useTranslation();
   const [id, setId] = useState('');
   const [missing, setMissing] = useState(false);
@@ -545,6 +593,16 @@ function ImportedFiles({ files, entries, onEdit }) {
           <EntityPicker items={entries} id={id} setId={setId} />
           <button className="button">
             {t(id ? 'Привязать к записи' : 'Заполнить новую запись')}
+          </button>
+          <button
+            type="button"
+            className="button button-secondary"
+            disabled={busy}
+            onClick={() => {
+              if (window.confirm(t('Удалить все файлы без привязки из черновика?'))) onRemoveAll();
+            }}
+          >
+            {t('Удалить все файлы без привязки')}
           </button>
         </div>
         {missing && (
@@ -926,7 +984,14 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const filePositions = new Map(catalog.order.map(({ key }, index) => [key, index]));
   const byKey = new Map(catalog.order.map((file) => [file.key, file]));
   const search = query.trim().toLowerCase();
-  const editorEntries = catalog.entries
+  const orderedEntries = catalog.entries
+    .map((item) => ({
+      item,
+      priority: Math.max(-1, ...item.files.map((key) => filePositions.get(key) ?? -1)),
+    }))
+    .sort((a, b) => b.priority - a.priority)
+    .map(({ item }) => item);
+  const editorEntries = orderedEntries
     .map((item) => {
       const missingImage = item.files.length
         ? item.files.some((key) => !fileImage({ ...byKey.get(key), entry: item }))
@@ -943,13 +1008,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           [item.title, t(item.title), item.id, ...item.files].some((value) =>
             value.toLowerCase().includes(search),
           )),
-    )
-    .map((item) => ({
-      item,
-      priority: Math.max(-1, ...item.files.map((key) => filePositions.get(key) ?? -1)),
-    }))
-    .sort((a, b) => b.priority - a.priority)
-    .map(({ item }) => item);
+    );
   const suggested = catalog.order.find(({ key }) => key === seedFiles[0]);
   const suggestedId = suggested?.key
     .toLowerCase()
@@ -990,7 +1049,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
       />
       <form
         className={s.form}
-        key={`${id}:${formRevision}`}
+        key={`${id}:${entry?.version ?? ''}:${formRevision}`}
         onSubmit={(event) => {
           const form = getForm(event);
           const replacements = new Map();
@@ -1014,6 +1073,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
           }
           const addedAt = valueOf(form, 'addedAt') || (!entry ? catalogDate() : undefined);
           const modVersion = valueOf(form, 'modVersion');
+          const reviewed = event.nativeEvent.submitter?.value === 'reviewed';
           const type = form.get('type');
           const alternatives = form.getAll('requiresAny');
           const replacementsForFix = form.getAll('replaces');
@@ -1032,6 +1092,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             image: valueOf(form, 'image'),
             description: valueOf(form, 'description'),
             version: modVersion,
+            versionReview: reviewed ? undefined : entry?.versionReview,
             addedAt,
             updatedAt: markUpdate ? catalogDate() : valueOf(form, 'updatedAt'),
             paid: form.has('paid'),
@@ -1071,7 +1132,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
         />
         <EntryActivationFields
           entry={entry}
-          dependencies={catalog.entries.filter((item) => item.id !== id)}
+          dependencies={orderedEntries.filter((item) => item.id !== id)}
         />
         <Field
           label="Общая ссылка на скачивание"
@@ -1143,6 +1204,25 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
         )}
         <div className={s.actions}>
           <button className="button">{t('Сохранить позицию')}</button>
+          {entry?.versionReview && (
+            <>
+              <button
+                type="button"
+                className="button button-secondary"
+                onClick={() =>
+                  commit({
+                    ...catalog,
+                    entries: replace(catalog.entries, 'id', { ...entry, versionReview: undefined }),
+                  })
+                }
+              >
+                {t('Данные актуальны')}
+              </button>
+              <button type="submit" className="button button-secondary" value="reviewed">
+                {t('Сохранить и отметить проверенным')}
+              </button>
+            </>
+          )}
           {entry && (
             <button className="button button-secondary" value="update">
               {t('Сохранить как обновление')}

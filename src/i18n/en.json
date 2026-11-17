@@ -1,4 +1,7 @@
 {
+  "Проверить после обновления": "Review after update",
+  "Данные актуальны": "Details are up to date",
+  "Сохранить и отметить проверенным": "Save and mark as reviewed",
   "Нет картинки": "Missing image",
   "Нет общей ссылки на скачивание": "Missing shared download link",
   "Только записи без картинки или ссылки": "Only entries missing an image or link",
@@ -216,6 +219,8 @@
   "Удалить пресет": "Delete preset",
   "Для каждого заменяемого файла выбери отдельный новый файл.": "Choose a different new file for each file you replace.",
   "Файлы без привязки": "Unassigned files",
+  "Удалить все файлы без привязки": "Remove all unassigned files",
+  "Удалить все файлы без привязки из черновика?": "Remove all unassigned files from the draft?",
   "Отметь все части одной карты или мода, затем открой их как одну запись.": "Select all parts of one map or mod, then open them as a single entry.",
   "Файлы из общего порядка": "Files in the shared load order",
   "Привязать к записи": "Assign to entry",
