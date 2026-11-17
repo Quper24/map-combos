@@ -2,10 +2,11 @@ import { readFile, readdir, access } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
-import { validateCatalog } from '../src/lib/comboBuilder.js';
+import { resolveCombo, validateCatalog } from '../src/lib/comboBuilder.js';
 import {
   attachPresetFiles,
   catalogKey,
+  combinedPresetPairs,
   presetCombo,
   presetFileName,
 } from '../src/lib/presetCombos.js';
@@ -52,6 +53,7 @@ for (const name of (await readdir('content/combos')).filter((name) => name.endsW
 }
 const builderVersions = new Set();
 const presetCombos = [];
+const combinedPresetCombos = [];
 const sharedCatalogs = [];
 const presetFiles = [];
 for (const name of (await readdir('content/combo-builder')).filter((name) =>
@@ -88,6 +90,11 @@ try {
         await image(item.image, `${catalogKey(catalog)}: ${item.id || item.key}`);
       }
       presetCombos.push(...catalog.presets.map((preset) => presetCombo(catalog, preset)));
+      combinedPresetCombos.push(
+        ...combinedPresetPairs(catalog)
+          .filter(({ preset }) => !resolveCombo(catalog, preset.selection).conflicts.length)
+          .map(({ preset }) => presetCombo(catalog, preset)),
+      );
     } catch (error) {
       errors.push(`${catalogKey(catalog)}: ${error.message}`);
     }
@@ -95,7 +102,7 @@ try {
 } catch (error) {
   errors.push(error.message);
 }
-const allCombos = [...combos, ...presetCombos];
+const allCombos = [...combos, ...presetCombos, ...combinedPresetCombos];
 const mods = [];
 for (const name of (await readdir('content/mods')).filter((name) => name.endsWith('.json')))
   mods.push(await read(`content/mods/${name}`));
@@ -113,6 +120,12 @@ function ids(records, kind) {
   return seen;
 }
 const comboIds = ids(allCombos, 'combo');
+const comboSlugs = new Set();
+for (const combo of allCombos) {
+  if (!combo.slug) continue;
+  check(!comboSlugs.has(combo.slug), `${combo.id}: duplicate combo URL ${combo.slug}`);
+  comboSlugs.add(combo.slug);
+}
 const modIds = ids(mods, 'mod');
 const videoIds = ids(videos, 'video');
 const serverIds = new Set();

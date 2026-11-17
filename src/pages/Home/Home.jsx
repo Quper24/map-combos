@@ -14,7 +14,7 @@ const directions = [
     to: '/combos',
     number: '01',
     icon: 'map',
-    title: 'Сборки карт',
+    title: 'Сборки ETS2 и ATS',
     subtitle: 'Больше дорог в ETS2 и ATS',
     text: 'Порядок карт, ссылки и готовые профили для твоего следующего путешествия.',
     label: 'Выбрать сборку',
@@ -51,7 +51,7 @@ export default function Home() {
     <div className="container">
       <section className={s.hero}>
         <div className={s.heroCopy}>
-          <span className="eyebrow">{t('Сборки карт / ETS2 & ATS')}</span>
+          <span className="eyebrow">{t('Сборки ETS2 и ATS')}</span>
           <h1>
             {t('Весь мир')}
             <br />
@@ -60,7 +60,7 @@ export default function Home() {
           </h1>
           <p>
             {t(
-              'Сборки карт для ETS2 и ATS: новые маршруты, порядок модов и всё необходимое для установки.',
+              'Сборки карт и модов для ETS2 и ATS: готовые сочетания, порядок загрузки и всё необходимое для установки.',
             )}
           </p>
           <div className="actions">
@@ -98,7 +98,7 @@ export default function Home() {
             <div className={s.featuredBottom}>
               <div>
                 <span className={s.smallLabel}>
-                  {t('Сборка карт')} · {featured.tags.includes('ats') ? 'ATS' : 'ETS2'}{' '}
+                  {t('Сборка')} · {featured.tags.includes('ats') ? 'ATS' : 'ETS2'}{' '}
                   {featured.version_game}
                 </span>
                 <h2>{t(featured.title)}</h2>
@@ -136,7 +136,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">{t('Выбирай свой маршрут')}</span>
-            <h2>{t('Актуальные сборки карт')}</h2>
+            <h2>{t('Актуальные сборки')}</h2>
             <p>{t('Порядок карт, ссылки и инструкции — в одном месте.')}</p>
           </div>
           <Link to="/combos" className="text-link">

@@ -1,7 +1,11 @@
 import { useTranslation } from '../../i18n/Language';
 import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
 import { getAllCombos } from '../../data';
-import { currentComboVersion, editorDraftCombos } from '../../data/builderCatalogs';
+import {
+  currentComboVersion,
+  editorDraftCombos,
+  findPublishedCombo,
+} from '../../data/builderCatalogs';
 import ComboContent from '../../components/ComboContent/ComboContent';
 import { ImageBlock } from '../../components/ImageBlock/ImageBlock';
 import { tagUtils } from '../../utils/tags';
@@ -14,6 +18,7 @@ export default function Combo({ root = false }) {
   const { search, hash } = useLocation();
   const combo =
     getAllCombos().find((item) => item.slug === slug || item.id === slug) ||
+    findPublishedCombo(slug) ||
     editorDraftCombos().find((item) => item.id === slug);
   const legacyPath = `/combos/${encodeURIComponent(slug)}`;
   const requestedPath = root ? `/${slug}` : legacyPath;

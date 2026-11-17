@@ -3,15 +3,15 @@ import { useTranslation } from '../../i18n/Language';
 import { comboSharePath } from '../../lib/comboShare';
 import s from './ComboBuilder.module.css';
 
-export default function ShareCombo({ catalog, selection }) {
+export default function ShareCombo({ catalog, selection, shortPath }) {
   const { t } = useTranslation();
   const [shared, setShared] = useState(null);
-  const path = comboSharePath(catalog, selection);
+  const path = shortPath || comboSharePath(catalog, selection);
   const current = shared?.path === path ? shared : null;
 
   async function share() {
     const url = new URL(path, window.location.origin);
-    const local = ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
+    const local = !shortPath && ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
     const snapshot = { path, url: url.href, local, copied: false };
     setShared(snapshot);
     try {

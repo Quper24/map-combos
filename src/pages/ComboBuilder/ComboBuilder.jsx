@@ -32,7 +32,7 @@ export default function ComboBuilder() {
   const releaseParam = new URLSearchParams(search).get('release');
   const requestedRelease = builderCatalogs.find((catalog) => catalogKey(catalog) === releaseParam);
   const release = requestedRelease || builderCatalogs[0];
-  const shared = readSharedSelection(hash);
+  const shared = readSharedSelection(hash, requestedRelease);
   const initial =
     shared && requestedRelease
       ? restoreSharedSelection(requestedRelease, shared)
@@ -382,6 +382,8 @@ export function OrderList({
   onRemove,
 }) {
   const { t } = useTranslation();
+  const descriptionGroup = useId();
+  const [openDescription, setOpenDescription] = useState(null);
   const topFile = new Map(files.map((file) => [file.entry.id, file.key]));
   return (
     <ol className={s.order}>
@@ -389,6 +391,7 @@ export function OrderList({
         const because = !manual.has(file.entry.id) && reasons.get(file.entry.id);
         const image = fileImage(file);
         const link = file.link || file.entry.link;
+        const linkVisible = typeof showLinks === 'function' ? showLinks(file.entry) : showLinks;
         const removal =
           topFile.get(file.entry.id) === file.key ? removals?.get(file.entry.id) : undefined;
         return (
@@ -400,7 +403,23 @@ export function OrderList({
                 </div>
               )}
               <div className={s.orderTitle}>
-                <strong>{file.name}</strong>
+                <div className={s.orderNameRow}>
+                  <strong>{file.name}</strong>
+                  {file.entry.description && topFile.get(file.entry.id) === file.key && (
+                    <button
+                      type="button"
+                      className={s.orderInfoButton}
+                      aria-label={`${t('Информация о моде')}: ${t(file.entry.title)}`}
+                      aria-expanded={openDescription === file.key}
+                      aria-controls={`${descriptionGroup}-${file.key}`}
+                      onClick={() =>
+                        setOpenDescription((current) => (current === file.key ? null : file.key))
+                      }
+                    >
+                      i
+                    </button>
+                  )}
+                </div>
                 <div className={s.orderBadges}>
                   <ModVersion entry={file.entry} />
                   <EntryBadge entry={file.entry} />
@@ -423,14 +442,19 @@ export function OrderList({
                     )}
                   </>
                 )}
+                {file.entry.description && topFile.get(file.entry.id) === file.key && (
+                  <p
+                    id={`${descriptionGroup}-${file.key}`}
+                    className={s.orderDescription}
+                    hidden={openDescription !== file.key}
+                  >
+                    {t(file.entry.description)}
+                  </p>
+                )}
               </div>
-              {(removal || (showLinks && link)) && (
+              {(removal || (linkVisible && link)) && (
                 <div className={s.orderActions}>
-                  {showLinks && link && (
-                    <ExternalLink className="button" href={link}>
-                      {t('Скачать')}
-                    </ExternalLink>
-                  )}
+                  {linkVisible && link && <DownloadModLink href={link} />}
                   {removal && (
                     <RemoveEntryButton
                       entry={file.entry}
@@ -446,6 +470,21 @@ export function OrderList({
         );
       })}
     </ol>
+  );
+}
+
+function DownloadModLink({ href }) {
+  const { t } = useTranslation();
+  const [downloaded, setDownloaded] = useState(false);
+  return (
+    <ExternalLink
+      className={`button ${downloaded ? s.downloadedButton : ''}`}
+      href={href}
+      aria-label={t(downloaded ? 'Скачивание уже запускалось' : 'Скачать')}
+      onClick={() => setDownloaded(true)}
+    >
+      {t(downloaded ? 'Скачано' : 'Скачать')}
+    </ExternalLink>
   );
 }
 

@@ -318,6 +318,53 @@
   padding: 10px;
 }
 
+.orderNameRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.orderNameRow strong {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.orderInfoButton {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 26px;
+  inline-size: 26px;
+  block-size: 26px;
+  padding: 0;
+  border: 1px solid var(--green-line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--green-bright);
+  font: inherit;
+  font-size: var(--type-small);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.orderInfoButton:hover,
+.orderInfoButton[aria-expanded='true'] {
+  border-color: var(--green);
+  background: var(--green-dim);
+}
+
+.orderInfoButton:focus-visible {
+  outline: 2px solid var(--green-bright);
+  outline-offset: 2px;
+}
+
+.orderDescription {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: var(--type-small);
+  white-space: pre-line;
+}
+
 .orderActions {
   grid-area: actions;
   display: flex;
@@ -336,6 +383,18 @@
   font-size: var(--type-small);
   line-height: 1.15;
   text-align: center;
+}
+
+.orderActions :global(.button).downloadedButton {
+  border-color: var(--green-line);
+  background: var(--surface);
+  color: var(--green-bright);
+}
+
+.orderActions :global(.button).downloadedButton:hover {
+  border-color: var(--green);
+  background: var(--green-dim);
+  color: var(--green-bright);
 }
 
 .orderActions :is(svg, .removeWarning) {
@@ -523,6 +582,40 @@
   gap: 12px;
 }
 
+.compositionAction {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.officialPairLink {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 12px;
+}
+
+.serverSelectionList {
+  display: grid;
+  gap: 6px;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.serverSelectionRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  padding-block: 5px;
+  border-bottom: 1px solid var(--line);
+}
+
+.serverSelectionRow label {
+  white-space: nowrap;
+}
+
 .choices {
   min-width: 0;
   border: 1px solid var(--line);
@@ -570,6 +663,12 @@
 @media (max-width: 760px) {
   .presetSelectionColumns {
     grid-template-columns: 1fr;
+  }
+  .serverSelectionRow {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .serverSelectionRow strong {
+    grid-column: 1 / -1;
   }
   .columns,
   .form,

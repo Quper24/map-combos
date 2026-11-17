@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { builderCatalogs } from '../../data/builderCatalogs';
+import site from '../../../content/site.json';
 import { useTranslation } from '../../i18n/Language';
 import {
   canAutoWithMaps,
@@ -8,6 +9,7 @@ import {
   compareSharedOrder,
   entryTypeLabels,
   entriesByLoadOrder,
+  ensureShareIndexes,
   isFixOrConnector,
   isSelectable,
   mergeModOrders,
@@ -25,7 +27,13 @@ import { MAX_PROFILE_SIZE } from '../../lib/profileMods';
 import { Builder } from './ComboBuilder';
 import PresetContent from './PresetContent';
 import { builderDraftKey, readBuilderDrafts, restoreProjectPresets } from '../../lib/builderDraft';
-import { attachPresetFiles, catalogKey, presetFileName, presetTags } from '../../lib/presetCombos';
+import {
+  attachPresetFiles,
+  catalogKey,
+  combinedPresetPairs,
+  presetFileName,
+  presetTags,
+} from '../../lib/presetCombos';
 import { preparePresetRelease } from '../../lib/presetReleases';
 import { tagUtils } from '../../utils/tags';
 import EditorImageField from './EditorImageField';
@@ -121,6 +129,7 @@ export default function ComboEditor() {
     requestAnimationFrame(() => document.getElementById('combo-entry-editor')?.focus());
   }
   function commit(next, successNotice = 'Черновик сохранён в этом браузере.') {
+    next = ensureShareIndexes(next);
     try {
       validateCatalog(next, true);
     } catch (error) {
@@ -189,7 +198,7 @@ export default function ComboEditor() {
     const records = await Promise.all(files.map(async (file) => JSON.parse(await file.text())));
     const shared = records.filter((record) => !Object.hasOwn(record ?? {}, 'preset'));
     if (shared.length > 1) throw new Error('Выбери один общий каталог и файлы его сборок.');
-    const base = validateCatalog(shared.length ? shared[0] : catalog, true);
+    const base = validateCatalog(ensureShareIndexes(shared.length ? shared[0] : catalog), true);
     const presetFiles = records.filter((record) => Object.hasOwn(record ?? {}, 'preset'));
     const importedIds = new Set(presetFiles.map((file) => file.preset?.id));
     const [next] = attachPresetFiles(
@@ -1358,7 +1367,9 @@ function RulesEditor({ catalog, commit }) {
 function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, busy, drafts }) {
   const { t } = useTranslation();
   const [id, setId] = useState(initialId);
+  const [creatingServer, setCreatingServer] = useState(false);
   const preset = catalog.presets.find((item) => item.id === id);
+  const server = creatingServer || preset?.tags?.includes('server');
   const release = builderCatalogs.find((item) => catalogKey(item) === catalogKey(catalog));
   const projectPresets = release
     ? release.presets
@@ -1371,6 +1382,9 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
         }))
     : [];
   const project = projectPresets.find((item) => item.id === id);
+  const officialPairs = combinedPresetPairs(catalog).filter(
+    ({ preset: pair }) => !resolveCombo(catalog, pair.selection).conflicts.length,
+  );
   return (
     <section className={s.panel}>
       <h2>{t('Готовые сборки')}</h2>
@@ -1382,7 +1396,30 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
       <Link className="text-link" to={`/combos?version=${catalog.version}`}>
         {t('Открыть готовые сборки')}
       </Link>
-      <EntityPicker items={[...catalog.presets, ...projectPresets]} id={id} setId={setId} />
+      <div className={s.toolbar}>
+        <EntityPicker
+          items={[...catalog.presets, ...projectPresets]}
+          id={id}
+          setId={(next) => {
+            setId(next);
+            setCreatingServer(false);
+          }}
+        />
+        <button
+          type="button"
+          className="button button-secondary"
+          onClick={() => {
+            const root = `server-${catalog.game}-${catalog.version.replace('.', '-')}`;
+            let next = root;
+            let suffix = 2;
+            while (catalog.presets.some((item) => item.id === next)) next = `${root}-${suffix++}`;
+            setId(next);
+            setCreatingServer(true);
+          }}
+        >
+          {t('Добавить серверную сборку')}
+        </button>
+      </div>
       {project ? (
         <button
           type="button"
@@ -1403,6 +1440,12 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
           onSubmit={(event) => {
             const exporting = event.nativeEvent.submitter?.value === 'export';
             const form = getForm(event);
+            const tags = form.getAll('tags');
+            const optionalSelection = form.getAll('optionalSelection');
+            if (tags.includes('server') && form.get('serverProfilesResolved') === 'no') {
+              setNotice('Сначала сопоставь все файлы профилей с общим каталогом.');
+              return;
+            }
             const next = {
               id: preset?.id || valueOf(form, 'id'),
               title: valueOf(form, 'title'),
@@ -1410,11 +1453,14 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
               version: valueOf(form, 'version'),
               boosty: valueOf(form, 'boosty'),
               profile: valueOf(form, 'profile'),
+              cloud: valueOf(form, 'cloud'),
+              company: valueOf(form, 'company'),
               video: valueOf(form, 'video'),
               image: valueOf(form, 'image'),
-              tags: form.getAll('tags'),
+              tags,
               updatedAt: catalogDate(),
-              selection: form.getAll('selection'),
+              selection: [...new Set([...form.getAll('selection'), ...optionalSelection])],
+              optionalSelection: tags.includes('server') ? optionalSelection : undefined,
               releases: preset?.releases,
             };
             if (exporting) {
@@ -1430,7 +1476,7 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
           <Field
             label="Идентификатор (a-z, 0-9, дефис)"
             name="id"
-            defaultValue={preset?.id}
+            defaultValue={preset?.id || (creatingServer ? id : undefined)}
             readOnly={Boolean(preset)}
             required
           />
@@ -1462,6 +1508,22 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
             type="url"
             defaultValue={preset?.profile}
           />
+          {server && (
+            <>
+              <Field
+                label="Ссылка на облако с комплектом"
+                name="cloud"
+                type="url"
+                defaultValue={preset?.cloud}
+              />
+              <Field
+                label="Ссылка на комплект ВТК компании"
+                name="company"
+                type="url"
+                defaultValue={preset?.company}
+              />
+            </>
+          )}
           <Field
             label="Ссылка на видеообзор"
             name="video"
@@ -1478,14 +1540,19 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
                     type="checkbox"
                     name="tags"
                     value={tag}
-                    defaultChecked={preset?.tags?.includes(tag)}
+                    defaultChecked={tag === 'server' ? server : preset?.tags?.includes(tag)}
                   />{' '}
                   {t(tagUtils.getLabel(tag))}
                 </label>
               ))}
             </div>
           </fieldset>
-          <PresetSelection catalog={catalog} initialSelection={preset?.selection} />
+          <PresetSelection
+            catalog={catalog}
+            initialSelection={preset?.selection}
+            initialOptionalSelection={preset?.optionalSelection}
+            server={server}
+          />
           <div className={s.actions}>
             <button className="button">{t('Сохранить сборку')}</button>
             {preset && (
@@ -1518,6 +1585,33 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
           {t('Файл сборки')} · <code>{presetFileName(catalog, preset)}</code>
         </p>
       )}
+      {officialPairs.length > 0 && (
+        <details>
+          <summary>{t('Короткие ссылки на официальные сборки карт и модов')}</summary>
+          {officialPairs.map(({ mapPreset, modPreset, preset: pair }) => {
+            const url = new URL(`/${pair.slug}`, `${site.domain}/`).href;
+            return (
+              <div className={s.officialPairLink} key={pair.id}>
+                <Field label={`${mapPreset.title} + ${modPreset.title}`} value={url} readOnly />
+                <button
+                  type="button"
+                  className="button button-secondary"
+                  onClick={(event) => {
+                    const input = event.currentTarget.parentElement?.querySelector('input');
+                    input?.select();
+                    navigator.clipboard?.writeText(url).then(
+                      () => setNotice('Короткая ссылка скопирована.'),
+                      () => {},
+                    );
+                  }}
+                >
+                  {t('Скопировать ссылку')}
+                </button>
+              </div>
+            );
+          })}
+        </details>
+      )}
       {preset && (
         <details>
           <summary>{t('Предпросмотр страницы сборки')}</summary>
@@ -1528,7 +1622,24 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
   );
 }
 
-function PresetSelection({ catalog, initialSelection = [] }) {
+function PresetSelection({
+  catalog,
+  initialSelection = [],
+  initialOptionalSelection = [],
+  server,
+}) {
+  return server ? (
+    <ServerPresetSelection
+      catalog={catalog}
+      initialSelection={initialSelection}
+      initialOptionalSelection={initialOptionalSelection}
+    />
+  ) : (
+    <StandardPresetSelection catalog={catalog} initialSelection={initialSelection} />
+  );
+}
+
+function StandardPresetSelection({ catalog, initialSelection = [] }) {
   const { t } = useTranslation();
   const [selection, setSelection] = useState(initialSelection);
   const [query, setQuery] = useState('');
@@ -1672,6 +1783,188 @@ function PresetSelection({ catalog, initialSelection = [] }) {
           </fieldset>
         ))}
       </div>
+    </fieldset>
+  );
+}
+
+function ServerPresetSelection({ catalog, initialSelection = [], initialOptionalSelection = [] }) {
+  const { t } = useTranslation();
+  const selectable = entriesByLoadOrder(catalog).filter((entry) => entry.type === 'mod');
+  const [required, setRequired] = useState(
+    initialSelection.filter((id) => !initialOptionalSelection.includes(id)),
+  );
+  const [optional, setOptional] = useState(initialOptionalSelection);
+  const [coreKeys, setCoreKeys] = useState(null);
+  const [coreUnmatched, setCoreUnmatched] = useState([]);
+  const [fullReport, setFullReport] = useState(null);
+  const [query, setQuery] = useState('');
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+  const byFile = new Map(
+    catalog.entries.flatMap((entry) => entry.files.map((key) => [key, entry])),
+  );
+  const coreIssues = fullReport?.missingRequired || [];
+  const unresolved = [
+    ...coreUnmatched,
+    ...(fullReport?.unmatched || []),
+    ...(coreIssues || []),
+  ].filter((value, index, values) => values.indexOf(value) === index);
+
+  async function readModSet(file) {
+    const isProfile = file.name.toLowerCase().endsWith('.sii');
+    if (isProfile && (!file.size || file.size > MAX_PROFILE_SIZE))
+      throw new Error('Выбери непустой profile.sii размером до 300 КБ.');
+    if (!isProfile && !file.name.toLowerCase().endsWith('.txt'))
+      throw new Error('Выбери profile.sii или TXT со списком active_mods.');
+    const source = isProfile ? await processProfile(await file.arrayBuffer()) : await file.text();
+    const files = parseModOrder(source);
+    if (!files.length) throw new Error('В файле не найден список active_mods.');
+    const keys = new Set(files.map(({ key }) => key));
+    const ids = selectable
+      .filter((entry) => entry.files.some((key) => keys.has(key)))
+      .map(({ id }) => id);
+    return {
+      files,
+      keys,
+      ids,
+      unmatched: files.filter(({ key }) => !byFile.has(key)),
+    };
+  }
+
+  async function loadCore(event) {
+    const file = event.currentTarget.files[0];
+    event.currentTarget.value = '';
+    if (!file) return;
+    setBusy(true);
+    setError('');
+    try {
+      const imported = await readModSet(file);
+      setCoreKeys(imported.keys);
+      setCoreUnmatched(imported.unmatched);
+      setRequired(imported.ids);
+      setOptional([]);
+      setFullReport({ unmatched: imported.unmatched, missingRequired: [] });
+    } catch (cause) {
+      setError(cause.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function loadFull(event) {
+    const file = event.currentTarget.files[0];
+    event.currentTarget.value = '';
+    if (!file) return;
+    setBusy(true);
+    setError('');
+    try {
+      if (!coreKeys) throw new Error('Сначала загрузи список обязательных модов.');
+      const imported = await readModSet(file);
+      const missingRequired = [...coreKeys].filter((key) => !imported.keys.has(key));
+      setOptional(imported.ids.filter((id) => !required.includes(id)));
+      setFullReport({ unmatched: imported.unmatched, missingRequired });
+    } catch (cause) {
+      setError(cause.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function setEntryKind(id, kind, enabled) {
+    const target = kind === 'required' ? setRequired : setOptional;
+    const other = kind === 'required' ? setOptional : setRequired;
+    target((ids) => (enabled ? [...new Set([...ids, id])] : ids.filter((item) => item !== id)));
+    if (enabled) other((ids) => ids.filter((item) => item !== id));
+  }
+
+  const visible = selectable.filter((entry) =>
+    `${entry.title} ${entry.id}`.toLowerCase().includes(query.trim().toLowerCase()),
+  );
+
+  return (
+    <fieldset className={s.choices}>
+      <legend>{t('Состав серверной сборки')}</legend>
+      <p>
+        {t(
+          'Сначала загрузи профиль с обязательными модами, затем полный профиль сервера. Опциональными станут моды из полного профиля сверх обязательных.',
+        )}
+      </p>
+      <div className={s.toolbar}>
+        <Field
+          label="Загрузить обязательный состав"
+          type="file"
+          accept=".sii,.txt"
+          disabled={busy}
+          onChange={loadCore}
+        />
+        <Field
+          label="Загрузить полный состав сервера"
+          type="file"
+          accept=".sii,.txt"
+          disabled={busy || !coreKeys}
+          onChange={loadFull}
+        />
+      </div>
+      {error && <p role="alert">{t(error)}</p>}
+      {coreKeys && (
+        <p role="status">
+          {t('Обязательных файлов в профиле — ')} {coreKeys.size}
+          {fullReport && ` · ${t('Опциональных модов — ')} ${optional.length}`}
+        </p>
+      )}
+      {unresolved.length > 0 && (
+        <div role="alert">
+          {fullReport?.missingRequired?.length > 0 && (
+            <p>{t('В полном профиле отсутствуют обязательные файлы:')}</p>
+          )}
+          {(coreUnmatched.length > 0 || fullReport?.unmatched?.length > 0) && (
+            <p>{t('Сначала добавь эти файлы в общий каталог, затем повторно загрузи профили:')}</p>
+          )}
+          <ul className={s.importList}>
+            {unresolved.map((file, index) => (
+              <li key={`${file.key || file}-${index}`}>
+                {file.name ? `${file.name} · ${file.key}` : file}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <Field
+        label="Фильтр списка"
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+      />
+      <div className={s.serverSelectionList}>
+        {visible.map((entry) => (
+          <div className={s.serverSelectionRow} key={entry.id}>
+            <strong>{t(entry.title)}</strong>
+            <label>
+              <input
+                type="checkbox"
+                checked={required.includes(entry.id)}
+                onChange={(event) => setEntryKind(entry.id, 'required', event.target.checked)}
+              />{' '}
+              {t('Обязательный')}
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                checked={optional.includes(entry.id)}
+                onChange={(event) => setEntryKind(entry.id, 'optional', event.target.checked)}
+              />{' '}
+              {t('Опциональный')}
+            </label>
+          </div>
+        ))}
+      </div>
+      {required.map((id) => (
+        <input key={`required-${id}`} type="hidden" name="selection" value={id} />
+      ))}
+      {optional.map((id) => (
+        <input key={`optional-${id}`} type="hidden" name="optionalSelection" value={id} />
+      ))}
+      <input type="hidden" name="serverProfilesResolved" value={unresolved.length ? 'no' : 'yes'} />
     </fieldset>
   );
 }

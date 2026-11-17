@@ -1,4 +1,4 @@
-import { presetFileName, presetTags } from './presetCombos.js';
+import { combinedPresetPairs, presetFileName, presetTags } from './presetCombos.js';
 
 export const entryTypeLabels = {
   map: 'Карта',
@@ -12,6 +12,23 @@ export const canAutoWithMaps = (type) => type === 'mod' || type === 'fix';
 export const isFixOrConnector = (type) => type === 'fix' || type === 'connector';
 export const isSelectable = (entry) =>
   !entry.autoWithMaps && (entry.type === 'map' || entry.type === 'mod');
+
+export function ensureShareIndexes(catalog) {
+  const entries = catalog?.entries;
+  if (!Array.isArray(entries)) return catalog;
+  const used = new Set(entries.map(({ shareIndex }) => shareIndex).filter(Number.isSafeInteger));
+  let next = Math.max(-1, ...used) + 1;
+  return {
+    ...catalog,
+    entries: entries.map((entry) => {
+      if (Number.isSafeInteger(entry.shareIndex) && entry.shareIndex >= 0) return entry;
+      while (used.has(next)) next++;
+      const indexed = { ...entry, shareIndex: next };
+      used.add(next++);
+      return indexed;
+    }),
+  };
+}
 
 export function entriesByLoadOrder(catalog) {
   const positions = new Map(catalog.order.map(({ key }, index) => [key, index]));
@@ -449,8 +466,32 @@ export function validateCatalog(catalog, draft = false) {
     ),
     'Invalid or duplicate entry ID',
   );
+  check(
+    uniqueList(
+      entries.map((entry) => entry?.shareIndex),
+      (index) => Number.isSafeInteger(index) && index >= 0,
+    ),
+    'Invalid or duplicate share index',
+  );
   const keys = new Set(order.map(({ key }) => key));
   const byId = new Map(entries.map((entry) => [entry.id, entry]));
+  const orderByKey = new Map(order.map((file) => [file.key, file]));
+  const serverRequiredIds = new Set();
+  const independentlyLinkedIds = new Set();
+  for (const preset of presets) {
+    if (!Array.isArray(preset?.selection)) continue;
+    const optional = new Set(
+      Array.isArray(preset.optionalSelection) ? preset.optionalSelection : [],
+    );
+    const target = preset.tags?.includes('server') ? serverRequiredIds : independentlyLinkedIds;
+    for (const id of preset.selection) {
+      if (!optional.has(id) || !preset.tags?.includes('server')) target.add(id);
+      if (preset.tags?.includes('server') && optional.has(id)) independentlyLinkedIds.add(id);
+    }
+  }
+  const requiredOnlyServerIds = new Set(
+    [...serverRequiredIds].filter((id) => !independentlyLinkedIds.has(id)),
+  );
   const owners = new Set();
   const familyVariants = new Set();
   for (const file of order) {
@@ -486,7 +527,8 @@ export function validateCatalog(catalog, draft = false) {
     } = entry;
     check(text(title) && Object.hasOwn(entryTypeLabels, type), `Invalid entry: ${id}`);
     check(
-      ((draft && link === undefined) || isDownloadLink(link)) && validImage(image),
+      ((draft && link === undefined) || isDownloadLink(link) || requiredOnlyServerIds.has(id)) &&
+        validImage(image),
       `Invalid entry link or image: ${id}`,
     );
     check(paid === undefined || typeof paid === 'boolean', `Invalid paid label: ${id}`);
@@ -601,6 +643,8 @@ export function validateCatalog(catalog, draft = false) {
   );
   const presetFileNames = new Set();
   for (const preset of presets) {
+    const isServer = preset.tags?.includes('server');
+    const optionalSelection = preset.optionalSelection || [];
     check(
       text(preset.title) &&
         uniqueList(preset.selection, (id) => known(id, byId) && isSelectable(byId.get(id))) &&
@@ -608,14 +652,40 @@ export function validateCatalog(catalog, draft = false) {
       `Invalid preset: ${preset.id}`,
     );
     check(
+      uniqueList(optionalSelection, (id) => known(id, byId) && byId.get(id).type === 'mod') &&
+        optionalSelection.every((id) => preset.selection.includes(id)) &&
+        (isServer || optionalSelection.length === 0) &&
+        (!isServer || draft || preset.selection.some((id) => !optionalSelection.includes(id))),
+      `Invalid optional server mods: ${preset.id}`,
+    );
+    const optionalWithoutLinks = optionalSelection.filter((id) => {
+      const entry = byId.get(id);
+      if (isDownloadLink(entry?.link)) return false;
+      return (
+        !entry?.files?.length ||
+        !entry.files.every((key) => isDownloadLink(orderByKey.get(key)?.link))
+      );
+    });
+    check(
+      draft || !optionalWithoutLinks.length,
+      `Укажи отдельные ссылки для опциональных модов — ${preset.id}: ${optionalWithoutLinks.join(', ')}`,
+    );
+    check(
       (draft && preset.boosty === undefined) ||
         (isDownloadLink(preset.boosty) && new URL(preset.boosty).hostname === 'boosty.to'),
       `Invalid Boosty link: ${preset.id}`,
     );
     check(
-      (draft && preset.profile === undefined) || isDownloadLink(preset.profile),
+      isServer
+        ? draft || Boolean(preset.profile || preset.boosty || preset.cloud || preset.company)
+        : (draft && preset.profile === undefined) || isDownloadLink(preset.profile),
       `Укажи HTTPS-ссылку на готовый профиль. Сборка — ${preset.id}`,
     );
+    for (const field of ['cloud', 'company'])
+      check(
+        preset[field] === undefined || isDownloadLink(preset[field]),
+        `Invalid ${field} link: ${preset.id}`,
+      );
     check(
       preset.video === undefined || isDownloadLink(preset.video),
       `Укажи HTTPS-ссылку на видеообзор. Сборка — ${preset.id}`,
@@ -670,6 +740,18 @@ export function validateCatalog(catalog, draft = false) {
       draft || !resolveCombo(catalog, preset.selection).conflicts.length,
       `Conflicting preset: ${preset.id}`,
     );
+  }
+  const publishedSlugs = new Set(
+    presets.map((preset) => `${game}-${preset.fileSlug || preset.id}-${version.replace('.', '')}`),
+  );
+  const combinedSlugs = new Set();
+  for (const { preset } of combinedPresetPairs(catalog)) {
+    if (resolveCombo(catalog, preset.selection).conflicts.length) continue;
+    check(
+      !publishedSlugs.has(preset.slug) && !combinedSlugs.has(preset.slug),
+      `Короткая ссылка сборки карт и модов уже используется — ${preset.slug}`,
+    );
+    combinedSlugs.add(preset.slug);
   }
   return catalog;
 }

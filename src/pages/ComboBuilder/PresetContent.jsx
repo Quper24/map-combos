@@ -1,4 +1,5 @@
 import { useId, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import {
   BeforeLaunchDetails,
@@ -15,6 +16,7 @@ import {
   resolveCombo,
 } from '../../lib/comboBuilder';
 import { youtubeVideoId } from '../../lib/content';
+import { comboPath, combinedPresetPairs, presetCombo } from '../../lib/presetCombos';
 import { diffPresetEntries } from '../../lib/presetReleases';
 import {
   EntryBadge,
@@ -32,17 +34,38 @@ export default function PresetContent({ catalog, preset, share = true }) {
   const { t } = useTranslation();
   const heading = useId();
   const accordion = `combo-info-${heading}`;
-  const [selection, setSelection] = useState(preset.selection);
+  const server = preset.tags?.includes('server');
+  const optionalIds = new Set(server ? preset.optionalSelection || [] : []);
+  const requiredSelection = preset.selection.filter((id) => !optionalIds.has(id));
+  const defaultSelection = server ? requiredSelection : preset.selection;
+  const [selection, setSelection] = useState(defaultSelection);
   const result = useMemo(() => resolveCombo(catalog, selection), [catalog, selection]);
   const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
-  const server = preset.tags?.includes('server');
   const original =
-    selection.length === preset.selection.length &&
-    preset.selection.every((id) => selection.includes(id));
-  const canUseOrder = !server && result.files.length > 0 && !result.conflicts.length;
-  const orderTitle = original ? preset.title : 'Своя сборка';
+    selection.length === defaultSelection.length &&
+    defaultSelection.every((id) => selection.includes(id));
+  const pairs = combinedPresetPairs(catalog).filter(
+    ({ preset: pair }) => !resolveCombo(catalog, pair.selection).conflicts.length,
+  );
+  const selectedPair = pairs.find(({ preset: pair }) => sameSelection(selection, pair.selection));
+  const activePair = selectedPair
+    ? presetCombo(catalog, selectedPair.preset)
+    : preset.composition
+      ? presetCombo(catalog, preset)
+      : null;
+  const relatedPairs = preset.composition
+    ? []
+    : pairs.filter(
+        ({ mapPreset, modPreset }) => mapPreset.id === preset.id || modPreset.id === preset.id,
+      );
+  const canUseOrder = result.files.length > 0 && !result.conflicts.length;
+  const orderTitle = activePair?.title || (original ? preset.title : 'Своя сборка');
   const removals = server
-    ? undefined
+    ? new Map(
+        preset.selection
+          .filter((id) => optionalIds.has(id) && result.active.has(id))
+          .map((id) => [id, removeFromCombo(catalog, selection, id, result.active)]),
+      )
     : new Map(
         catalog.entries
           .filter((entry) => isSelectable(entry) && result.active.has(entry.id))
@@ -54,12 +77,24 @@ export default function PresetContent({ catalog, preset, share = true }) {
       <aside aria-label={t('Информация о сборке')}>
         <h2>{t('Информация о сборке')}</h2>
         <div className={s.toolbar}>
-          {original && preset.profile && (
+          {(original || server) && preset.profile && (
             <ExternalLink href={preset.profile}>{t('Готовый профиль')}</ExternalLink>
           )}
           {preset.boosty && (
             <ExternalLink className="button button-boosty" href={preset.boosty}>
-              {t(original ? 'Сборка на Boosty' : 'Исходная сборка на Boosty')}
+              {t(
+                server || activePair || original ? 'Сборка на Boosty' : 'Исходная сборка на Boosty',
+              )}
+            </ExternalLink>
+          )}
+          {server && preset.cloud && (
+            <ExternalLink className="button button-secondary" href={preset.cloud}>
+              {t('Скачать комплект из облака')}
+            </ExternalLink>
+          )}
+          {server && preset.company && (
+            <ExternalLink className="button button-secondary" href={preset.company}>
+              {t('Скачать комплект из ВТК компании')}
             </ExternalLink>
           )}
           {!server && (
@@ -74,10 +109,20 @@ export default function PresetContent({ catalog, preset, share = true }) {
             <button
               type="button"
               className="button button-secondary"
-              onClick={() => setSelection(preset.selection)}
+              onClick={() => setSelection(defaultSelection)}
             >
               {t('Вернуть исходную сборку')}
             </button>
+          )}
+          {!server && !activePair && relatedPairs.length > 0 && (
+            <ComboCompositionAction
+              t={t}
+              catalog={catalog}
+              pairs={relatedPairs}
+              preset={preset}
+              selection={selection}
+              onSelect={setSelection}
+            />
           )}
         </div>
         {canUseOrder && (
@@ -111,6 +156,18 @@ export default function PresetContent({ catalog, preset, share = true }) {
             />
           </ComboDisclosure>
         )}
+        {server && (
+          <ComboDisclosure name={accordion} title="Опциональные моды">
+            <p>{t('Обязательные моды уже включены. Дополнительные моды по желанию.')}</p>
+            <OptionalServerMods
+              catalog={catalog}
+              preset={preset}
+              selection={selection}
+              active={result.active}
+              onChange={setSelection}
+            />
+          </ComboDisclosure>
+        )}
         {preset.releases?.length > 0 && (
           <ComboDisclosure name={accordion} title="История обновлений">
             <ReleaseHistory releases={preset.releases} />
@@ -121,18 +178,42 @@ export default function PresetContent({ catalog, preset, share = true }) {
         <span className="eyebrow">{t('Менеджер модификаций')}</span>
         <h2 id={heading}>{t('Порядок карт и модов')}</h2>
         <p role="status">
-          {t(original ? 'Готовая сборка' : 'Своя сборка')} · {t('Файлов — ')}
+          {t(
+            activePair
+              ? 'Официальная сборка карт и модов'
+              : original
+                ? 'Готовая сборка'
+                : 'Своя сборка',
+          )}{' '}
+          · {t('Файлов — ')}
           {result.files.length}
         </p>
+        {activePair && !preset.composition && (
+          <p>
+            <Link className="text-link" to={comboPath(activePair)}>
+              {t('Короткая ссылка на сборку карт и модов')}
+            </Link>
+          </p>
+        )}
         {share && selection.length > 0 && canUseOrder && (
-          <ShareCombo catalog={catalog} selection={selection} />
+          <ShareCombo
+            catalog={catalog}
+            selection={selection}
+            shortPath={
+              activePair
+                ? comboPath(activePair)
+                : original
+                  ? comboPath(presetCombo(catalog, preset))
+                  : undefined
+            }
+          />
         )}
         <ConflictList rules={result.conflicts} byId={byId} announce />
         {result.files.length ? (
           <OrderList
             result={result}
             byId={byId}
-            showLinks={!server}
+            showLinks={server ? (entry) => optionalIds.has(entry.id) : true}
             compact
             removals={removals}
             onRemove={setSelection}
@@ -145,6 +226,116 @@ export default function PresetContent({ catalog, preset, share = true }) {
         )}
       </section>
     </div>
+  );
+}
+
+const sameSelection = (left = [], right = []) =>
+  left.length === right.length && left.every((id) => right.includes(id));
+
+function ComboCompositionAction({ t, catalog, pairs, preset, selection, onSelect }) {
+  const isMapPreset = pairs[0].mapPreset.id === preset.id;
+  const mapPresets = [
+    ...new Map(pairs.map((pair) => [pair.mapPreset.id, pair.mapPreset])).values(),
+  ];
+  const modPresets = [
+    ...new Map(pairs.map((pair) => [pair.modPreset.id, pair.modPreset])).values(),
+  ];
+  const [chosenMap, setChosenMap] = useState(mapPresets[0]?.id || '');
+  const [chosenMods, setChosenMods] = useState(modPresets[0]?.id || '');
+  const pair = pairs.find(({ mapPreset, modPreset }) =>
+    isMapPreset
+      ? mapPreset.id === preset.id && modPreset.id === chosenMods
+      : modPreset.id === preset.id && mapPreset.id === chosenMap,
+  );
+  const additions = pair ? (isMapPreset ? pair.modPreset.selection : pair.mapPreset.selection) : [];
+  const composition = additions.reduce(
+    (current, id) => {
+      const next = addToCombo(catalog, current.selection, id);
+      return {
+        selection: next.selection,
+        conflicts: [...current.conflicts, ...next.conflicts],
+      };
+    },
+    { selection, conflicts: [] },
+  );
+  const combinedSelection = composition.selection;
+  const targetOptions = isMapPreset ? modPresets : mapPresets;
+  const targetValue = isMapPreset ? chosenMods : chosenMap;
+  const setTargetValue = isMapPreset ? setChosenMods : setChosenMap;
+  const label = isMapPreset ? 'Сборка модов' : 'Сборка карт';
+  const action = isMapPreset ? 'Добавить сборку модов' : 'Добавить сборку карт';
+  const result = pair ? resolveCombo(catalog, combinedSelection) : null;
+  const conflicts = composition.conflicts.length > 0 || result?.conflicts?.length > 0;
+
+  return (
+    <div className={s.compositionAction}>
+      {targetOptions.length > 1 && (
+        <label className={s.field}>
+          {t(label)}
+          <select value={targetValue} onChange={(event) => setTargetValue(event.target.value)}>
+            {targetOptions.map((item) => (
+              <option key={item.id} value={item.id}>
+                {t(item.title)}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+      <button
+        type="button"
+        className="button button-secondary"
+        disabled={!pair || conflicts}
+        onClick={() => onSelect(combinedSelection)}
+      >
+        {t(action)}
+      </button>
+      {conflicts && <p role="alert">{t('В этой комбинации есть конфликтующие позиции.')}</p>}
+    </div>
+  );
+}
+
+function OptionalServerMods({ catalog, preset, selection, active, onChange }) {
+  const { t } = useTranslation();
+  const entries = entriesByLoadOrder(catalog).filter((entry) =>
+    (preset.optionalSelection || []).includes(entry.id),
+  );
+  const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
+  return entries.length ? (
+    <ul className={s.inactiveMods}>
+      {entries.map((entry) => {
+        const enabled = active.has(entry.id);
+        const candidate = enabled
+          ? { selection: removeFromCombo(catalog, selection, entry.id, active).selection }
+          : addToCombo(catalog, selection, entry.id);
+        const blocked = candidate.conflicts?.length > 0;
+        return (
+          <li key={entry.id}>
+            <div className={s.inactiveRow}>
+              {entry.image && <img className={s.thumb} src={entry.image} alt="" loading="lazy" />}
+              <label>
+                <input
+                  type="checkbox"
+                  checked={enabled}
+                  disabled={blocked}
+                  onChange={() => onChange(candidate.selection)}
+                />{' '}
+                <strong>{t(entry.title)}</strong>
+                <EntryBadge entry={entry} /> <ModVersion entry={entry} />
+              </label>
+              {entry.link && (
+                <ExternalLink className="button button-secondary" href={entry.link}>
+                  {t('Скачать опциональный мод')}
+                </ExternalLink>
+              )}
+            </div>
+            {entry.description && <p className={s.description}>{t(entry.description)}</p>}
+            {blocked && <ConflictList rules={candidate.conflicts} byId={byId} />}
+          </li>
+        );
+      })}
+    </ul>
+  ) : (
+    <p>{t('Опциональных модов нет.')}</p>
   );
 }
 

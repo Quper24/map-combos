@@ -12,6 +12,40 @@ export function comboPath(combo) {
   return combo.slug && !combo.draft ? `/${combo.slug}` : `/combos/${combo.id}`;
 }
 
+export function combinedPresetPairs(catalog) {
+  const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
+  const eligible = catalog.presets.filter((preset) => !preset.tags?.includes('server'));
+  const maps = eligible.filter((preset) =>
+    preset.selection.some((id) => byId.get(id)?.type === 'map'),
+  );
+  const mods = eligible.filter(
+    (preset) =>
+      !preset.selection.some((id) => byId.get(id)?.type === 'map') &&
+      preset.selection.some((id) => byId.get(id)?.type === 'mod'),
+  );
+  return maps.flatMap((mapPreset) =>
+    mods.map((modPreset) => {
+      const fileSlug = `${mapPreset.fileSlug || mapPreset.id}-mods`;
+      const preset = {
+        id: `${mapPreset.id}-with-${modPreset.id}`,
+        title: `${mapPreset.title} + ${modPreset.title}`,
+        fileSlug,
+        slug: `${catalog.game}-${fileSlug}-${catalog.version.replace('.', '')}`,
+        version: mapPreset.version || modPreset.version,
+        boosty: modPreset.boosty || mapPreset.boosty,
+        image: mapPreset.image,
+        tags: [...new Set([...(mapPreset.tags || []), ...(modPreset.tags || [])])].filter(
+          (tag) => tag !== 'server',
+        ),
+        updatedAt: [mapPreset.updatedAt, modPreset.updatedAt].filter(Boolean).sort().at(-1),
+        selection: [...new Set([...mapPreset.selection, ...modPreset.selection])],
+        composition: { mapPresetId: mapPreset.id, modPresetId: modPreset.id },
+      };
+      return { mapPreset, modPreset, preset };
+    }),
+  );
+}
+
 export function attachPresetFiles(catalogs, files) {
   const releases = new Map();
   for (const catalog of catalogs) {
@@ -38,7 +72,7 @@ export function presetCombo(catalog, preset) {
   )?.image;
   return {
     id: `${catalog.game}-${catalog.version.replace('.', '-')}-${preset.id}`,
-    slug: `${presetName(catalog, preset)}-${catalog.version.replace('.', '')}`,
+    slug: preset.slug || `${presetName(catalog, preset)}-${catalog.version.replace('.', '')}`,
     title: preset.title,
     version_game: catalog.version,
     version: preset.version,
@@ -47,6 +81,8 @@ export function presetCombo(catalog, preset) {
     date: preset.updatedAt?.split('-').reverse().join('.'),
     boosty: preset.boosty,
     profile: preset.profile,
+    cloud: preset.cloud,
+    company: preset.company,
     builder: { catalog, preset },
   };
 }

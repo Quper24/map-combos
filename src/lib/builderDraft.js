@@ -1,4 +1,4 @@
-import { isSelectable, validateCatalog } from './comboBuilder.js';
+import { ensureShareIndexes, isSelectable, validateCatalog } from './comboBuilder.js';
 import { catalogKey, presetFileName } from './presetCombos.js';
 
 export const builderDraftKey = 'quperSimulator_comboDraft';
@@ -8,7 +8,9 @@ export function readBuilderDrafts() {
     const raw = localStorage.getItem(builderDraftKey);
     if (raw) {
       const saved = JSON.parse(raw);
-      const catalogs = (saved.catalogs ?? [saved]).map((catalog) => validateCatalog(catalog, true));
+      const catalogs = (saved.catalogs ?? [saved]).map((catalog) =>
+        validateCatalog(ensureShareIndexes(catalog), true),
+      );
       return { active: saved.active ?? (catalogs[0] ? catalogKey(catalogs[0]) : null), catalogs };
     }
   } catch {

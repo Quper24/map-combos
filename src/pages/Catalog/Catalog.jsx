@@ -100,10 +100,10 @@ export default function Catalog() {
     <div className="container page">
       <div className="page-heading">
         <span className="eyebrow">{t('Маршруты без границ')}</span>
-        <h1>{t('Сборки карт')}</h1>
+        <h1>{t('Сборки ETS2 и ATS')}</h1>
         <p>
           {t(
-            'Выбери свой мир. Ссылки, готовые профили и порядок карт для ETS2 и ATS — всё собрано здесь.',
+            'Выбери сборку карт, модов или серверный комплект. Ссылки, профили и порядок для ETS2 и ATS — всё собрано здесь.',
           )}
         </p>
         {(builderCatalogs.length > 0 ||

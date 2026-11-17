@@ -7,7 +7,7 @@ import ExternalLink from '../components/ui/ExternalLink';
 import s from './Layout.module.css';
 const navigation = [
   ['/', 'Главная'],
-  ['/combos', 'Сборки карт'],
+  ['/combos', 'Сборки ETS2 и ATS'],
   ['/vtc', 'VTC'],
   ['/mods', 'Моды и плагины'],
   ['/videos', 'Видео'],
