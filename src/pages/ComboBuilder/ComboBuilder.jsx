@@ -8,6 +8,7 @@ import {
   addToCombo,
   entryBadge,
   entryTypeLabels,
+  entriesByLoadOrder,
   isSelectable,
   removeFromCombo,
   removePaidEntries,
@@ -124,7 +125,7 @@ export function Builder({ catalog, initialSelection = [], share = false }) {
   const result = useMemo(() => resolveCombo(catalog, selection), [catalog, selection]);
   const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
   const groups = new Map();
-  for (const entry of catalog.entries.filter(isSelectable)) {
+  for (const entry of entriesByLoadOrder(catalog).filter(isSelectable)) {
     if (filter === 'enabled' && !result.active.has(entry.id)) continue;
     if ((filter === 'map' || filter === 'mod') && entry.type !== filter) continue;
     const name = `${entry.title} ${t(entry.title)} ${entry.family || ''} ${entry.variant || ''} ${entry.id}`;

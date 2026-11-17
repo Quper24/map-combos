@@ -13,6 +13,17 @@ export const isFixOrConnector = (type) => type === 'fix' || type === 'connector'
 export const isSelectable = (entry) =>
   !entry.autoWithMaps && (entry.type === 'map' || entry.type === 'mod');
 
+export function entriesByLoadOrder(catalog) {
+  const positions = new Map(catalog.order.map(({ key }, index) => [key, index]));
+  return catalog.entries
+    .map((entry) => ({
+      entry,
+      priority: Math.max(-1, ...entry.files.map((key) => positions.get(key) ?? -1)),
+    }))
+    .sort((a, b) => b.priority - a.priority)
+    .map(({ entry }) => entry);
+}
+
 export function reconcilePresetSelections(presets, entry) {
   if (isSelectable(entry)) return presets;
   return presets.map((preset) =>

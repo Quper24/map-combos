@@ -7,6 +7,7 @@ import {
   catalogDate,
   compareSharedOrder,
   entryTypeLabels,
+  entriesByLoadOrder,
   isFixOrConnector,
   isSelectable,
   mergeModOrders,
@@ -999,16 +1000,9 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const [query, setQuery] = useState('');
   const [incompleteOnly, setIncompleteOnly] = useState(false);
   const entry = catalog.entries.find((item) => item.id === id);
-  const filePositions = new Map(catalog.order.map(({ key }, index) => [key, index]));
   const byKey = new Map(catalog.order.map((file) => [file.key, file]));
   const search = query.trim().toLowerCase();
-  const orderedEntries = catalog.entries
-    .map((item) => ({
-      item,
-      priority: Math.max(-1, ...item.files.map((key) => filePositions.get(key) ?? -1)),
-    }))
-    .sort((a, b) => b.priority - a.priority)
-    .map(({ item }) => item);
+  const orderedEntries = entriesByLoadOrder(catalog);
   const editorEntries = orderedEntries
     .map((item) => {
       const missingImage = item.files.length
@@ -1541,7 +1535,7 @@ function PresetSelection({ catalog, initialSelection = [] }) {
   const [profile, setProfile] = useState(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
-  const selectable = catalog.entries.filter(isSelectable);
+  const selectable = entriesByLoadOrder(catalog).filter(isSelectable);
   const selected = new Set(selection);
   const filter = query.trim().toLowerCase();
   const matches = selectable.filter(({ id, title }) =>

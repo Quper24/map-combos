@@ -7,7 +7,13 @@ import {
 } from '../../components/ComboContent/ComboGuides';
 import ExternalLink from '../../components/ui/ExternalLink';
 import Video from '../../components/Video/Video';
-import { addToCombo, isSelectable, removeFromCombo, resolveCombo } from '../../lib/comboBuilder';
+import {
+  addToCombo,
+  entriesByLoadOrder,
+  isSelectable,
+  removeFromCombo,
+  resolveCombo,
+} from '../../lib/comboBuilder';
 import { youtubeVideoId } from '../../lib/content';
 import { diffPresetEntries } from '../../lib/presetReleases';
 import {
@@ -247,7 +253,9 @@ function ConflictList({ rules, byId, announce }) {
 function InactiveMods({ catalog, selection, active, byId, onChange }) {
   const { t } = useTranslation();
   const [query, setQuery] = useState('');
-  const inactive = catalog.entries.filter((entry) => isSelectable(entry) && !active.has(entry.id));
+  const inactive = entriesByLoadOrder(catalog).filter(
+    (entry) => isSelectable(entry) && !active.has(entry.id),
+  );
   const matches = inactive.filter((entry) =>
     `${entry.title} ${t(entry.title)} ${entry.family || ''} ${entry.variant || ''}`
       .toLowerCase()
