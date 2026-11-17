@@ -10,7 +10,7 @@ import {
   isSelectable,
   mergeModOrders,
   moveMod,
-  parseGameLogVersions,
+  readGameLogVersions,
   parseModOrder,
   reconcilePresetSelections,
   replaceEntryFiles,
@@ -27,7 +27,7 @@ import { attachPresetFiles, catalogKey, presetFileName, presetTags } from '../..
 import { preparePresetRelease } from '../../lib/presetReleases';
 import { tagUtils } from '../../utils/tags';
 import EditorImageField from './EditorImageField';
-import { download } from './downloads';
+import { download, fileImage } from './downloads';
 import s from './ComboBuilder.module.css';
 
 const blank = { game: 'ats', version: '1.62', entries: [], order: [], conflicts: [], presets: [] };
@@ -162,19 +162,19 @@ export default function ComboEditor() {
   async function loadGameLog(file) {
     setLogVersions(null);
     setUpdateVersions(false);
-    const versions = parseGameLogVersions(await file.text());
+    const versions = await readGameLogVersions(file);
     if (![...versions.values()].some(Boolean))
       throw new Error('В журнале не найдены версии загруженных модов.');
     setLogVersions(versions);
     setNotice('');
   }
-  async function readInput(event, handler) {
+  async function readInput(event, handler, maxSize = 5 * 1024 * 1024) {
     const files = Array.from(event.currentTarget.files);
     event.currentTarget.value = '';
     if (!files.length) return;
     setBusy(true);
     try {
-      if (files.some((file) => file.size > 5 * 1024 * 1024)) throw new Error('File exceeds 5 MB');
+      if (files.some((file) => file.size > maxSize)) throw new Error('File exceeds 5 MB');
       await handler(files);
     } catch (error) {
       setNotice(error.message);
@@ -365,7 +365,7 @@ export default function ComboEditor() {
               type="file"
               accept=".txt,.log"
               disabled={busy}
-              onChange={(event) => readInput(event, ([file]) => loadGameLog(file))}
+              onChange={(event) => readInput(event, ([file]) => loadGameLog(file), Infinity)}
             />
           </div>
           {(pending || logVersions) && (
@@ -921,16 +921,28 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const [seedFiles, setSeedFiles] = useState(request.files);
   const [formRevision, setFormRevision] = useState(0);
   const [query, setQuery] = useState('');
+  const [incompleteOnly, setIncompleteOnly] = useState(false);
   const entry = catalog.entries.find((item) => item.id === id);
   const filePositions = new Map(catalog.order.map(({ key }, index) => [key, index]));
+  const byKey = new Map(catalog.order.map((file) => [file.key, file]));
   const search = query.trim().toLowerCase();
   const editorEntries = catalog.entries
+    .map((item) => {
+      const missingImage = item.files.length
+        ? item.files.some((key) => !fileImage({ ...byKey.get(key), entry: item }))
+        : !item.image;
+      const notes = [];
+      if (missingImage) notes.push(t('Нет картинки'));
+      if (!item.link) notes.push(t('Нет общей ссылки на скачивание'));
+      return { ...item, notes };
+    })
     .filter(
       (item) =>
         item.id === id ||
-        [item.title, t(item.title), item.id, ...item.files].some((value) =>
-          value.toLowerCase().includes(search),
-        ),
+        ((!incompleteOnly || item.notes.length > 0) &&
+          [item.title, t(item.title), item.id, ...item.files].some((value) =>
+            value.toLowerCase().includes(search),
+          )),
     )
     .map((item) => ({
       item,
@@ -943,7 +955,6 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
-  const byKey = new Map(catalog.order.map((file) => [file.key, file]));
   const suggestedVersion = suggestModVersion(
     [...(entry?.files || []), ...seedFiles].map((key) => byKey.get(key)).filter(Boolean),
   );
@@ -961,6 +972,14 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
+      <label>
+        <input
+          type="checkbox"
+          checked={incompleteOnly}
+          onChange={(event) => setIncompleteOnly(event.target.checked)}
+        />{' '}
+        {t('Только записи без картинки или ссылки')}
+      </label>
       <EntityPicker
         items={editorEntries}
         id={id}
@@ -1159,6 +1178,7 @@ function EntityPicker({ items, id, setId }) {
         {items.map((item) => (
           <option key={item.id} value={item.id}>
             {item.title} · {item.id}
+            {item.notes?.length > 0 && ` · ${item.notes.join(' · ')}`}
           </option>
         ))}
       </select>

@@ -228,8 +228,7 @@ export function parseModOrder(source) {
   });
 }
 
-export function parseGameLogVersions(source) {
-  const versions = new Map();
+export function parseGameLogVersions(source, versions = new Map()) {
   for (const [, key, version] of source.matchAll(
     /\[mod_package_manager\] Mod "[^\r\n]*" has been mount(?:ed)?\. \(package_name: (.+?), version: ([^\r\n]*?), source: [^\r\n]+\)\s*$/gm,
   )) {
@@ -239,6 +238,18 @@ export function parseGameLogVersions(source) {
     versions.set(key.trim(), previous === undefined || previous === value ? value : null);
   }
   return versions;
+}
+
+export async function readGameLogVersions(file) {
+  const versions = new Map();
+  let remainder = '';
+  for await (const chunk of file.stream().pipeThrough(new TextDecoderStream())) {
+    const text = remainder + chunk;
+    const endOfLine = text.lastIndexOf('\n') + 1;
+    parseGameLogVersions(text.slice(0, endOfLine), versions);
+    remainder = text.slice(endOfLine);
+  }
+  return parseGameLogVersions(remainder, versions);
 }
 
 export function suggestModVersion(files) {

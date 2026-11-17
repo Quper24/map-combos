@@ -1,4 +1,7 @@
 {
+  "Нет картинки": "Missing image",
+  "Нет общей ссылки на скачивание": "Missing shared download link",
+  "Только записи без картинки или ссылки": "Only entries missing an image or link",
   "Отключать при подключении любой из этих карт": "Disable when any of these maps is active",
   "Проверь список карт, отключающих позицию. Запись —": "Check the list of maps that disable this entry. Entry —",
   "Заменяет фиксы": "Replaces fixes",
