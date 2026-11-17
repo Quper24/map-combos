@@ -278,6 +278,39 @@ export function suggestModVersion(files) {
   return versions.size === 1 ? versions.values().next().value : undefined;
 }
 
+export function compareSharedOrder(saved, imported) {
+  const savedKeys = new Set(saved.map(({ key }) => key));
+  const importedPositions = new Map(
+    imported
+      .filter(({ key }) => savedKeys.has(key))
+      .reverse()
+      .map(({ key }, index) => [key, index + 1]),
+  );
+  const shared = saved
+    .filter(({ key }) => importedPositions.has(key))
+    .reverse()
+    .map(({ key, name }, index) => ({
+      key,
+      name,
+      catalogPosition: index + 1,
+      profilePosition: importedPositions.get(key),
+    }));
+
+  // Include every participant in an inversion, even if its displayed rank stayed the same.
+  const changed = new Set();
+  let highest = 0;
+  for (const row of shared) {
+    if (row.profilePosition < highest) changed.add(row.key);
+    highest = Math.max(highest, row.profilePosition);
+  }
+  let lowest = Infinity;
+  for (const row of [...shared].reverse()) {
+    if (row.profilePosition > lowest) changed.add(row.key);
+    lowest = Math.min(lowest, row.profilePosition);
+  }
+  return shared.filter(({ key }) => changed.has(key));
+}
+
 export function mergeModOrders(saved, imported, preferImported = false) {
   const primary = preferImported ? imported : saved;
   const secondary = preferImported ? saved : imported;

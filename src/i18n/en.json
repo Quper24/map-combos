@@ -1,4 +1,8 @@
 {
+  "Файлы с изменившимся порядком": "Files in a different order",
+  "Позиции считаются сверху вниз только среди общих файлов.": "Positions are counted from top to bottom among shared files only.",
+  "В каталоге": "In the catalog",
+  "В профиле": "In the profile",
   "Проверить после обновления": "Review after update",
   "Данные актуальны": "Details are up to date",
   "Сохранить и отметить проверенным": "Save and mark as reviewed",

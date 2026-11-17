@@ -5,6 +5,7 @@ import { useTranslation } from '../../i18n/Language';
 import {
   canAutoWithMaps,
   catalogDate,
+  compareSharedOrder,
   entryTypeLabels,
   isFixOrConnector,
   isSelectable,
@@ -276,6 +277,7 @@ export default function ComboEditor() {
   const incomingOrder = imported?.orderConflict
     ? mergeModOrders(catalog.order, pending, true).order.slice().reverse()
     : [];
+  const orderChanges = imported?.orderConflict ? compareSharedOrder(catalog.order, pending) : [];
   return (
     <div className="container page">
       <div className="page-heading">
@@ -424,9 +426,25 @@ export default function ComboEditor() {
                 </p>
               )}
               {imported?.orderConflict && (
-                <p className={s.reason}>
-                  {t('Общие файлы идут в разном порядке. Выбери, какой порядок сохранить.')}
-                </p>
+                <>
+                  <p className={s.reason}>
+                    {t('Общие файлы идут в разном порядке. Выбери, какой порядок сохранить.')}
+                  </p>
+                  <details>
+                    <summary>
+                      {t('Файлы с изменившимся порядком')} · {orderChanges.length}
+                    </summary>
+                    <p>{t('Позиции считаются сверху вниз только среди общих файлов.')}</p>
+                    <ul className={s.importList}>
+                      {orderChanges.map(({ key, name, catalogPosition, profilePosition }) => (
+                        <li key={key}>
+                          {name} · <code>{key}</code> · {t('В каталоге')} {catalogPosition} →{' '}
+                          {t('В профиле')} {profilePosition}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </>
               )}
               {pending && (
                 <ol className={s.importList}>

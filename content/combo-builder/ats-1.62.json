@@ -368,7 +368,7 @@
         "QS_ATS_PBA_Reforma_Service_Fix"
       ],
       "requires": [
-        "project-better-arizona-0-5-4-1-62"
+        "project-better-arizona-reforma-connection-1-17-1-62"
       ],
       "dlcs": []
     },
@@ -386,9 +386,11 @@
         "QS_ATS_Project_Better_Arizona_Fix"
       ],
       "requires": [
-        "project-better-arizona-reforma-connection-1-17-1-62"
+        "project-better-arizona-0-5-4-1-62"
       ],
-      "dlcs": []
+      "dlcs": [
+        "Arizona"
+      ]
     },
     {
       "id": "alaska-north-to-the-future",
@@ -421,7 +423,7 @@
       ],
       "requires": [
         "promods-ats",
-        "reforma"
+        "reforma-megaresources"
       ],
       "dlcs": []
     },
@@ -459,7 +461,9 @@
       "requires": [
         "alaska-north-to-the-future"
       ],
-      "dlcs": []
+      "dlcs": [
+        "Lode King & Prestige Trailers"
+      ]
     },
     {
       "id": "alaska-nttf-to-promods-rc-v0-6-7-2",
@@ -769,7 +773,7 @@
         "DNA_ATS_Exp_GA_Connections_v1.4.0.1"
       ],
       "requires": [
-        "discover-oregon-revived-v1-0-1",
+        "dna-v1-8-2",
         "great-america-v6-2",
         "ats-expansion",
         "coast-to-coast-v2-24-62-0"
@@ -1172,6 +1176,11 @@
       "logVersion": "0.2.1"
     },
     {
+      "key": "Reforma_OtherMaps_Patch_42_162",
+      "name": "Reforma OtherMaps Compatibility Patch 42.162",
+      "logVersion": "42.162"
+    },
+    {
       "key": "QS_ATS_Expansion_Garage_Fix",
       "name": "QS ATS Expansion Garage Fix",
       "logVersion": "0.1.0"
@@ -1185,11 +1194,6 @@
       "key": "QS_ATS_Alaska_Expansion_Garage_Fix",
       "name": "QS ATS Alaska + Expansion Garage Fix",
       "logVersion": "0.1.0"
-    },
-    {
-      "key": "Reforma_OtherMaps_Patch_42_162",
-      "name": "Reforma OtherMaps Compatibility Patch 42.162",
-      "logVersion": "42.162"
     },
     {
       "key": "QS_ATS_Map_Final_Fix",
