@@ -389,7 +389,7 @@ export const catalogDate = (now = new Date()) => moscowDay.format(now);
 export function entryBadge({ addedAt, updatedAt }, today = catalogDate()) {
   const isRecent = (value) => {
     const age = (Date.parse(today) - Date.parse(value)) / 86400000;
-    return age >= 0 && age < 5;
+    return age >= 0 && age < 3;
   };
   if ((!addedAt || updatedAt > addedAt) && isRecent(updatedAt)) return 'UPDATE';
   if (isRecent(addedAt)) return 'NEW';

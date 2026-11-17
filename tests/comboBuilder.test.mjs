@@ -116,20 +116,20 @@ test('a new file takes the old slot and inherits the image and link, while the s
   );
 });
 
-test('badges last five Moscow calendar days; only updates after the added date take precedence', () => {
+test('badges last three Moscow calendar days; only updates after the added date take precedence', () => {
   const entry = { addedAt: '2026-11-08', updatedAt: '2026-11-10' };
   assert.equal(catalogDate(new Date('2026-11-08T21:00:00Z')), '2026-11-09');
   assert.equal(entryBadge(entry, '2026-11-07'), '');
   assert.equal(entryBadge(entry, '2026-11-09'), 'NEW');
   assert.equal(entryBadge(entry, '2026-11-10'), 'UPDATE');
-  assert.equal(entryBadge(entry, '2026-11-14'), 'UPDATE');
-  assert.equal(entryBadge(entry, '2026-11-15'), '');
-  assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-12'), 'NEW');
-  assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-13'), '');
+  assert.equal(entryBadge(entry, '2026-11-12'), 'UPDATE');
+  assert.equal(entryBadge(entry, '2026-11-13'), '');
+  assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-10'), 'NEW');
+  assert.equal(entryBadge({ addedAt: entry.addedAt }, '2026-11-11'), '');
   const sameDay = { addedAt: entry.addedAt, updatedAt: entry.addedAt };
   assert.equal(entryBadge(sameDay, '2026-11-08'), 'NEW');
-  assert.equal(entryBadge(sameDay, '2026-11-12'), 'NEW');
-  assert.equal(entryBadge(sameDay, '2026-11-13'), '');
+  assert.equal(entryBadge(sameDay, '2026-11-10'), 'NEW');
+  assert.equal(entryBadge(sameDay, '2026-11-11'), '');
   assert.equal(entryBadge({ updatedAt: entry.updatedAt }, '2026-11-10'), 'UPDATE');
   assert.equal(entryBadge({}, '2026-11-08'), '');
   for (const dates of [

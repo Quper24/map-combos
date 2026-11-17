@@ -240,7 +240,8 @@
         "mod-ets2-162-014"
       ],
       "dlcs": [],
-      "link": "https://www.modland.net/euro-truck-simulator-2/other/classic-cars-traffic-pack-by-trafficmaniac-7.html"
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/classic-cars-traffic-pack-by-trafficmaniac-7.html",
+      "description": "Модификация «Classic Cars Traffic Pack by TrafficManiac v11.6.15» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в Euro Truck Simulator 2."
     },
     {
       "id": "mod-ets2-162-020",
@@ -257,7 +258,8 @@
         "mod-ets2-162-014"
       ],
       "dlcs": [],
-      "link": "https://www.modland.net/euro-truck-simulator-2/other/sport-cars-traffic-pack-by-trafficmaniac-8.html"
+      "link": "https://www.modland.net/euro-truck-simulator-2/other/sport-cars-traffic-pack-by-trafficmaniac-8.html",
+      "description": "Модификация «Sport Cars Traffic Pack by TrafficManiac v12.7.16» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в Euro Truck Simulator 2."
     },
     {
       "id": "mod-ets2-162-022",
@@ -360,7 +362,8 @@
       "dlcs": [],
       "version": "1.5.1",
       "image": "/img/combo-builder/ets2-1.62/mod-ets2-162-028.jpg",
-      "link": "https://forum.scssoft.com/viewtopic.php?t=338441"
+      "link": "https://forum.scssoft.com/viewtopic.php?t=338441",
+      "description": "Модификация «AI Taxicabs pack by Egon 1.5.1» добавляет или изменяет игровой контент в Euro Truck Simulator 2. Подробности зависят от версии и страницы загрузки мода."
     },
     {
       "id": "mod-ets2-162-029",
@@ -738,7 +741,8 @@
         "russian_traffic_pack_by_Jazzycat_v4.3.6_base"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "description": "Модификация «Russian Traffic by Jazzycat v4.3.6base» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в Euro Truck Simulator 2."
     },
     {
       "id": "mod-ets2-162-055",
@@ -1426,7 +1430,8 @@
         "Torpedo NextGen"
       ],
       "requires": [],
-      "dlcs": []
+      "dlcs": [],
+      "description": "Модификация «Torpedo NextGen» добавляет или изменяет игровой контент в Euro Truck Simulator 2. Подробности зависят от версии и страницы загрузки мода."
     },
     {
       "id": "mod-ets2-162-102",
@@ -3019,7 +3024,8 @@
       "requires": [
         "mod-ets2-162-001"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "description": "Модификация «PNG: PE-FOGGY WEATHER» изменяет звуки, атмосферу или звуковые эффекты в Euro Truck Simulator 2, делая соответствующую часть игры разнообразнее."
     },
     {
       "id": "mod-ets2-162-217",
@@ -3035,7 +3041,8 @@
       "requires": [
         "mod-ets2-162-001"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "description": "Модификация «PNG: NorthExperience» добавляет или изменяет игровой контент в Euro Truck Simulator 2. Подробности зависят от версии и страницы загрузки мода."
     },
     {
       "id": "mod-ets2-162-218",
@@ -3051,7 +3058,8 @@
       "requires": [
         "mod-ets2-162-001"
       ],
-      "dlcs": []
+      "dlcs": [],
+      "description": "Модификация «PNG: PE-RAIN» добавляет или изменяет игровой контент в Euro Truck Simulator 2. Подробности зависят от версии и страницы загрузки мода."
     },
     {
       "id": "mod-ets2-162-219",
