@@ -251,6 +251,9 @@
       "requires": [
         "coast-to-coast-v2-24-62-0"
       ],
+      "disabledByMaps": [
+        "dna-v1-8-2"
+      ],
       "dlcs": [],
       "updatedAt": "2026-11-15"
     },
