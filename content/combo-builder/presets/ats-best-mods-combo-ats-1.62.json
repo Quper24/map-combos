@@ -5,19 +5,17 @@
     "id": "best-mods-combo-ats-1-62",
     "title": "Best Mods Combo ATS",
     "fileSlug": "best-mods-combo-ats",
-    "version": "1.0",
+    "version": "1.1",
     "boosty": "https://boosty.to/qupersimulator/posts/8abdabc0-0a37-470a-8ffc-1fcc1ee92072",
     "profile": "https://sharemods.com/30qrp9ewsocg/1.62_ATS_BEST_MODS_COMBO_1.0.zip.html",
     "image": "/img/combo-builder/0e9d7235bfcf7793dd8eb45724ec4b3bb941a5c8174768f4061251124d5d341b.webp",
     "tags": [],
-    "updatedAt": "2026-11-17",
+    "updatedAt": "2026-11-18",
     "selection": [
       "real-logos-for-jon-ruda-mods",
       "immersive-external-cam-infinite-zoom-v1-1",
-      "flowing-fleets-and-freight",
-      "realistic-drivers",
+      "ats-realistic-road-speed-limit",
       "extended-traffic-light-timing",
-      "increased-road-speed-limit",
       "project-ultimate-weather-2-5",
       "zeemods-common-v1-3-3",
       "zeemods-master-reverb-v3-0",
@@ -1289,6 +1287,1091 @@
             "id": "real-logos-for-jon-ruda-mods",
             "title": "Real Logos for jon-ruda mods",
             "version": "26.0"
+          }
+        ]
+      },
+      {
+        "version": "1.1",
+        "date": "2026-11-18",
+        "entries": [
+          {
+            "id": "atsrealisticeconomy",
+            "title": "Realistic Economy ATS by Quper",
+            "version": "1.62.4"
+          },
+          {
+            "id": "qs-ats-map-final-fix",
+            "title": "QS ATS Map Final Fix",
+            "version": "0.3.4"
+          },
+          {
+            "id": "ats-quper-background-map",
+            "title": "ATS Quper Background Map (Optional)",
+            "version": "2026.10.27 - 1.3"
+          },
+          {
+            "id": "national-beef-cargo-pack",
+            "title": "National Beef Cargo Pack",
+            "version": "v10.3"
+          },
+          {
+            "id": "pickup-load-pack",
+            "title": "Pickup Load Pack",
+            "version": "1.3"
+          },
+          {
+            "id": "umbrella-courier-jobs-for-road-trip",
+            "title": "Umbrella Courier Jobs for Road Trip",
+            "version": "0.1.2"
+          },
+          {
+            "id": "medical-courier-jobs-for-road-trip",
+            "title": "Medical Courier Jobs for Road Trip",
+            "version": "0.2.4"
+          },
+          {
+            "id": "food-courier-jobs-for-road-trip",
+            "title": "Food Courier Jobs for Road Trip",
+            "version": "0.9.4"
+          },
+          {
+            "id": "rideshare-jobs-for-road-trip",
+            "title": "Rideshare Jobs for Road Trip",
+            "version": "0.9.1"
+          },
+          {
+            "id": "arnook-s-container-pack-for-ats",
+            "title": "Arnook's Container Pack",
+            "version": "13"
+          },
+          {
+            "id": "arnooks-container-pack-train-addon-apr06-2026-ats",
+            "title": "Arnook's Container Pack - Train AddOn",
+            "version": "12"
+          },
+          {
+            "id": "sound-fixes-pack-ats",
+            "title": "Sound Fixes Pack 26.64",
+            "version": "26.78"
+          },
+          {
+            "id": "lithuanian-gps-navigation-ats",
+            "title": "Lithuanian GPS Navigation ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "ats-santa-voice",
+            "title": "ATS Santa Voice",
+            "version": "2026.01.15"
+          },
+          {
+            "id": "shaquille-o-neal-gps-voice-ats",
+            "title": "Shaquille O'neal GPS Voice ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "apple-siri-voice-navigation-for-ats",
+            "title": "Apple Siri Voice Navigation for ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "cookie-monster-gps-ats",
+            "title": "Cookie Monster GPS ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "crypt-keeper-voice-navigation-ats",
+            "title": "Crypt Keeper Voice Navigation ATS",
+            "version": "1.1"
+          },
+          {
+            "id": "jay-leno-gps-voice-ats",
+            "title": "Jay Leno GPS Voice ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "billie-eilish-sat-nav-voice-ats",
+            "title": "Billie Eilish Sat Nav Voice ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "donald-trump-gps-voice-ats",
+            "title": "ATS Donald Trump GPS",
+            "version": "Version 1.0"
+          },
+          {
+            "id": "morgan-freeman-gps-voice-for-ats",
+            "title": "Morgan Freeman GPS Voice for ATS",
+            "version": "08.11.25"
+          },
+          {
+            "id": "aurora-borealis-ats-russian-voice-navigation",
+            "title": "Russian Voice Navigation",
+            "version": "1.1.5"
+          },
+          {
+            "id": "yandex-navigator",
+            "title": "Yandex.Navigator - All voices",
+            "version": "25.04.21"
+          },
+          {
+            "id": "ats-reefer-sound-addon",
+            "title": "Reefer trailer sound addon for ATS",
+            "version": "2026NOV01"
+          },
+          {
+            "id": "enhanced-trains",
+            "title": "Enhanced Trains",
+            "version": "1.0"
+          },
+          {
+            "id": "bf-base-v4-9-1",
+            "title": "Better Flares - Base",
+            "version": "4.9.1"
+          },
+          {
+            "id": "bf-ta-ats-v4-9-1",
+            "title": "Better Flares - Traffic Addon ATS",
+            "version": "4.9.1"
+          },
+          {
+            "id": "bf-city-lights-v4-9",
+            "title": "Better Flares - City Lights Addon",
+            "version": "4.9"
+          },
+          {
+            "id": "bf-h1-proj-dot2-v4-9-1",
+            "title": "Better Flares - Headlights.1 Projector DOT 2",
+            "version": "4.9.1"
+          },
+          {
+            "id": "bf-h2-5500k-led-v4-9-1",
+            "title": "Better Flares - Headlights.2 5500K LED",
+            "version": "4.9.1"
+          },
+          {
+            "id": "ai-traffic-pack-by-jazzycat-v16-6-9-ats",
+            "title": "AI Traffic Pack by Jazzycat",
+            "version": "16.6.9"
+          },
+          {
+            "id": "egons-ai-traffic-pack-1-1-ats",
+            "title": "Egon's AI traffic pack ATS",
+            "version": "1.1"
+          },
+          {
+            "id": "classic-ai-traffic-pack-by-jazzycat-v9-0-14",
+            "title": "Classic AI Traffic Pack by Jazzycat",
+            "version": "9.0.14"
+          },
+          {
+            "id": "sport-cars-traffic-pack-by-trafficmaniac-v12-7-13-ats-def",
+            "title": "Sport Cars Traffic Pack by TrafficManiac",
+            "version": "12.7.13"
+          },
+          {
+            "id": "sport-cars-traffic-pack-by-trafficmaniac-v12-7-13-ats-jaz",
+            "title": "Sport Cars Traffic Pack by TrafficManiac",
+            "version": "12.7.13"
+          },
+          {
+            "id": "dodge-daytona-traffic-by-alexp",
+            "title": "AlexP & Jazzycat's Dodge Daytona udgrade",
+            "version": "1.0"
+          },
+          {
+            "id": "nfs-traffic-pack",
+            "title": "NFS TRAFFIC PACK",
+            "version": "1.0.2.1"
+          },
+          {
+            "id": "big-traffic-pack",
+            "title": "Big Traffic Pack",
+            "version": "1.0"
+          },
+          {
+            "id": "ai-traffic-police-and-emergency-vehicles",
+            "title": "AI traffic police and emergency vehicles"
+          },
+          {
+            "id": "extra-city-police-vehicles",
+            "title": "Extra City Police Vehicles",
+            "version": "1.5"
+          },
+          {
+            "id": "local-police-traffic",
+            "title": "Local Police Traffic",
+            "version": "2.1"
+          },
+          {
+            "id": "motorcycle-traffic-pack-by-jazzycat-v6-5-15-ats",
+            "title": "Motorcycle Traffic Pack by Jazzycat",
+            "version": "6.5.15"
+          },
+          {
+            "id": "motorcycle-traffic-pack-by-jazzycat-v6-5-15-ats-jaz",
+            "title": "Motorcycle Traffic Pack by Jazzycat",
+            "version": "6.5.15"
+          },
+          {
+            "id": "motorcycle-traffic-jazzycat-1980s-patch",
+            "title": "Motorcycle Traffic Jazzycat 80s Patch",
+            "version": "1.0"
+          },
+          {
+            "id": "bus-traffic-pack-by-jazzycat-v1-4-26-ats",
+            "title": "Bus Traffic Pack by Jazzycat",
+            "version": "1.4.26"
+          },
+          {
+            "id": "ai-traffic-buses",
+            "title": "AI traffic buses"
+          },
+          {
+            "id": "coach-skin-pack-for-ai-traffic",
+            "title": "Coach skin pack for AI traffic",
+            "version": "v1.5"
+          },
+          {
+            "id": "truck-traffic-pack-by-jazzycat-v3-5-14-ats",
+            "title": "Truck Traffic Pack by Jazzycat",
+            "version": "3.5.14"
+          },
+          {
+            "id": "painted-truck-traffic-pack-by-jazzycat-v6-1-17-ats",
+            "title": "Painted Truck Traffic Pack by Jazzycat",
+            "version": "6.1.17"
+          },
+          {
+            "id": "trailers-traffic-pack-by-trafficmaniac-v7-6-3",
+            "title": "Trailers Traffic Pack by TrafficManiac",
+            "version": "7.6.3"
+          },
+          {
+            "id": "ats-traffic-trailer-mega-pack",
+            "title": "ATS Traffic Trailer Mega Pack"
+          },
+          {
+            "id": "traffic-trailers-mixed-tape-vol-1",
+            "title": "Traffic Trailers Mixed Tape Vol.1"
+          },
+          {
+            "id": "traffic-trailers-mixed-tape-vol-2",
+            "title": "Traffic Trailers Mixed Tape Vol.2"
+          },
+          {
+            "id": "traffic-trailers-mixed-tape-vol-3",
+            "title": "Traffic Trailers Mixed Tape Vol.3"
+          },
+          {
+            "id": "traffic-trailers-mixed-tape-vol-4",
+            "title": "Traffic Trailers Mixed Tape Vol.4"
+          },
+          {
+            "id": "traffic-trailers-mixed-tape-vol-5",
+            "title": "Traffic Trailers Mixed Tape Vol.5"
+          },
+          {
+            "id": "ats-ownable-trailerpack-us-vol-1",
+            "title": "ATS Ownable Trailerpack US Vol.1"
+          },
+          {
+            "id": "ats-ownable-trailerpack-us-vol-2",
+            "title": "ATS Ownable Trailerpack US Vol.2"
+          },
+          {
+            "id": "traffic-mx-beta-4-5-162",
+            "title": "Mexican Traffic Pack",
+            "version": "4.5.162"
+          },
+          {
+            "id": "mr-l-ats-base",
+            "title": "Mr L's ATS Pack - Base",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-custom-mudflaps",
+            "title": "Mr L's ATS Pack - Custom Mudflaps",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-double-and-triple-trailer-traffic",
+            "title": "Mr L's ATS Pack - Double And Triple Trailer Traffic",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-single-trailer-traffic",
+            "title": "Mr L's ATS Pack - Single Trailer Traffic",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-oversize-dlc-traffic",
+            "title": "Mr L's ATS Pack - Oversize DLC Traffic",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-dlc-cargo-traffic-lodeking",
+            "title": "Mr L's ATS Pack - DLC Cargo Traffic: Lode King",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-extra-boxes",
+            "title": "Mr L's ATS Pack - Extra Boxes",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-arnook-container-addon",
+            "title": "Mr L's ATS Pack - Arnook Container Addon",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-jazzycat-unpainted-addon",
+            "title": "Mr L's ATS Pack - Jazzycat Unpainted Addon",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-jazzycat-painted-addon",
+            "title": "Mr L's ATS Pack - Jazzycat Painted Addon",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-cargo-trailers",
+            "title": "Mr L's ATS Pack - Cargo Trailers",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-atstig",
+            "title": "Mr L's ATS Pack - The Stig",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-sound-fixes-fix",
+            "title": "Mr L's ATS Pack - Sound Fixes Fix",
+            "version": "1.62.0"
+          },
+          {
+            "id": "mr-l-ats-trafficmaniac-classic-addon",
+            "title": "Mr L's ATS Pack - TrafficManiac Classic Addon",
+            "version": "1.62.0"
+          },
+          {
+            "id": "skins-genadii",
+            "title": "Skins Trucks ATS by Genadii",
+            "version": "1.1"
+          },
+          {
+            "id": "trucks-trailers-wheels",
+            "title": "Trucks&Trailers Wheels",
+            "version": "11.2"
+          },
+          {
+            "id": "trucks-trailers-flares",
+            "title": "Trucks&Trailers Flarepack",
+            "version": "43.5"
+          },
+          {
+            "id": "snow-chains",
+            "title": "snow chains",
+            "version": "1"
+          },
+          {
+            "id": "dirt-tires-and-rims-pack-1-04-2in1-for-1-58",
+            "title": "Dirt tires and rims pack",
+            "version": "1.04"
+          },
+          {
+            "id": "michelin-tires-pack",
+            "title": "Michelin Tires Pack",
+            "version": "1.62.x"
+          },
+          {
+            "id": "scr-wheel-pack",
+            "title": "[SCR] Smarty's Wheel Pack",
+            "version": "1.10.4"
+          },
+          {
+            "id": "real-tires-mod-31",
+            "title": "Real Tires Mod",
+            "version": "3.1"
+          },
+          {
+            "id": "real-trailer-tyres-mod-14",
+            "title": "Real Trailer Tyres Mod",
+            "version": "1.4"
+          },
+          {
+            "id": "trailer-pack-flatbed",
+            "title": "Trailer Pack Flatbed",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-hopper-bottom",
+            "title": "Trailer Pack Hopper Bottom",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-refrigerators",
+            "title": "Trailer Pack Refrigerators",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-tanker",
+            "title": "Trailer Pack Tanker",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-lowboy",
+            "title": "Trailer Pack LowBoy",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-livestock",
+            "title": "Trailer Pack Livestock",
+            "version": "9.5"
+          },
+          {
+            "id": "volkswagen-parati-1994",
+            "title": "Volkswagen Parati 1994",
+            "version": "6.0"
+          },
+          {
+            "id": "dodge-l700",
+            "title": "Dodge L700",
+            "version": "1.3"
+          },
+          {
+            "id": "harley-lonestar-1-60",
+            "title": "Harley-Davidson International LoneStar",
+            "version": "13.1"
+          },
+          {
+            "id": "freightshaker-classic-xl-personal-key",
+            "title": "Classic XL Personal KEY",
+            "version": "10.0"
+          },
+          {
+            "id": "freightshaker-classic-xl-ats",
+            "title": "Classic XL",
+            "version": "10.11"
+          },
+          {
+            "id": "freightshaker-cascadia-125-personal-key",
+            "title": "Cascadia 125 Personal KEY",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-cascadia-125-ats",
+            "title": "Cascadia 125",
+            "version": "3.13"
+          },
+          {
+            "id": "freightshaker-coronado-sd-personal-key",
+            "title": "Freightshaker Coronado SD Personal KEY",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-coronado-sd",
+            "title": "Freightshaker Coronado SD",
+            "version": "3.5"
+          },
+          {
+            "id": "pete-362-cabover-personal-key",
+            "title": "Pete 362 Cabover Personal KEY",
+            "version": "5.0"
+          },
+          {
+            "id": "pete-362-cabover",
+            "title": "Pete 362 Cabover",
+            "version": "5.11"
+          },
+          {
+            "id": "pete-389-glider-personal-key",
+            "title": "Pete 389 Glider Personal KEY",
+            "version": "7.0"
+          },
+          {
+            "id": "pete-389-glider",
+            "title": "Pete 389 Glider",
+            "version": "7.11"
+          },
+          {
+            "id": "pete-579-personal-key",
+            "title": "Pete 579 NG Personal KEY",
+            "version": "2.0"
+          },
+          {
+            "id": "pete-579",
+            "title": "Pete 579 NG",
+            "version": "2.10"
+          },
+          {
+            "id": "kw-w900-highway-killer",
+            "title": "KW W900L H-WAY KILLER",
+            "version": "9.17"
+          },
+          {
+            "id": "ford-tuning-playground",
+            "title": "Ford Tuning Playground",
+            "version": "2.1"
+          },
+          {
+            "id": "scs-mustang-tuningpack",
+            "title": "SCS Mustang TuningPack",
+            "version": "v2.0"
+          },
+          {
+            "id": "f150-accessories",
+            "title": "F150 Accessories",
+            "version": "1.81"
+          },
+          {
+            "id": "freightshaker-classic-xl-realistic-headlights",
+            "title": "Classic XL Realistic Headlights",
+            "version": "10.5.1"
+          },
+          {
+            "id": "freightshaker-cascadia-125-realistic-headlights",
+            "title": "Cascadia 125 Realistic Headlights",
+            "version": "3.6.1"
+          },
+          {
+            "id": "pete-362-cabover-realistic-headlights",
+            "title": "Pete 362 Cabover Realistic Headlights",
+            "version": "5.7.1"
+          },
+          {
+            "id": "pete-389-glider-realistic-headlights",
+            "title": "Pete 389 Glider Realistic Headlights",
+            "version": "7.7.1"
+          },
+          {
+            "id": "kw-w900-highway-killer-realistic-headlights",
+            "title": "KW W900L H-WAY KILLER Realistic Headlights",
+            "version": "9.4"
+          },
+          {
+            "id": "international-9900i-add-ons",
+            "title": "International 9900i Add-ons",
+            "version": "2.6"
+          },
+          {
+            "id": "western-star-49x-add-ons",
+            "title": "Western Star 49X Add-ons",
+            "version": "1.2.1"
+          },
+          {
+            "id": "western-star-57x-add-ons",
+            "title": "Western Star 57X Rework",
+            "version": "2.3.1"
+          },
+          {
+            "id": "western-star-5700xe-rework",
+            "title": "Western Star 5700XE Rework",
+            "version": "1.7"
+          },
+          {
+            "id": "freightliner-cascadia-2024-add-ons",
+            "title": "Freightliner Cascadia 2024 Add-ons",
+            "version": "1.5"
+          },
+          {
+            "id": "kenworth-w900l-add-ons",
+            "title": "Kenworth W900L_LE Add-ons",
+            "version": "2.1"
+          },
+          {
+            "id": "kenworth-t680-add-ons",
+            "title": "Kenworth T680 Add-ons",
+            "version": "1.4.1"
+          },
+          {
+            "id": "peterbilt-389-rework",
+            "title": "Peterbilt 389 Rework",
+            "version": "2.3"
+          },
+          {
+            "id": "volvo-vnl-2025-add-ons",
+            "title": "Volvo VNL 2025 Add-ons",
+            "version": "1.2"
+          },
+          {
+            "id": "u-s-states-flags-window-flags-and-front-flags",
+            "title": "U.S. States flags window flags and front flags",
+            "version": "1.0"
+          },
+          {
+            "id": "road-trip-ford-underglow-lights",
+            "title": "Road Trip Ford Underglow Lights",
+            "version": "1.5.1"
+          },
+          {
+            "id": "road-trip-ford-cabin-lights",
+            "title": "Road Trip Ford Cabin Lights",
+            "version": "2.0.2"
+          },
+          {
+            "id": "truck-underglow-ats-v1-4",
+            "title": "Truck Underglow",
+            "version": "v1.4"
+          },
+          {
+            "id": "hella-rallye-3000-v17-obelihnio",
+            "title": "Hella Rallye 3000",
+            "version": "1.7"
+          },
+          {
+            "id": "obel-bore-led-v19",
+            "title": "Boreman LED Marker Lights Pack",
+            "version": "1.9"
+          },
+          {
+            "id": "ali-arc-bull-bars-and-bumpers",
+            "title": "Ali Arc bull bars and bumpers"
+          },
+          {
+            "id": "pearl-crayon-paint-jobs-120-different-brilliant-colors",
+            "title": "Crayon Pearl Paint Job Mod",
+            "version": "1.2"
+          },
+          {
+            "id": "metallic-crayon-paint-jobs-120-different-brilliant-colors",
+            "title": "Crayon Metallic Paint Job Mod",
+            "version": "1.1"
+          },
+          {
+            "id": "gel-crayon-paint-jobs-120-different-brilliant-colors",
+            "title": "Crayon Gel Paint Job Mod",
+            "version": "1.2"
+          },
+          {
+            "id": "realistic-custom-metallic-paint-mod",
+            "title": "Realistic Custom Metallic Paint Mod",
+            "version": "1.7"
+          },
+          {
+            "id": "sisl-s-mega-pack",
+            "title": "SiSL's Mega Pack",
+            "version": "3.3"
+          },
+          {
+            "id": "freightshaker-classic-xl-sisl-pack-compatibility",
+            "title": "Classic XL SISL Compatibility",
+            "version": "10.0"
+          },
+          {
+            "id": "freightshaker-classic-xl-dlc-toys-compatibility",
+            "title": "Classic XL DLC Accessories Compatibility",
+            "version": "10.0"
+          },
+          {
+            "id": "freightshaker-classic-xl-dlc-steering-wheels-compatibility",
+            "title": "Classic XL DLC Steering Wheels Compatibility",
+            "version": "10.0"
+          },
+          {
+            "id": "freightshaker-cascadia-125-sisl-pack-compatibility",
+            "title": "Cascadia 125 SISL Pack Compatibility",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-cascadia-125-dlc-toys-compatibility",
+            "title": "Cascadia 125 DLC Accessories Compatibility",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-cascadia-125-dlc-steering-wheels-compatibility",
+            "title": "Cascadia 125 DLC Steering Wheels Compatibility",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-coronado-sd-sisl-pack-compatibility",
+            "title": "Freightshaker Coronado SD SISL Compatibility",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-coronado-sd-dlc-toys-compatibility",
+            "title": "Freightshaker Coronado SD DLC Accessories Compatibility",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-coronado-sd-dlc-steering-wheels-compatibility",
+            "title": "Freightshaker Coronado SD DLC Steering Wheels Compatibility",
+            "version": "3.0"
+          },
+          {
+            "id": "pete-362-cabover-sisl-pack-compatibility",
+            "title": "Pete 362 Cabover SISL Compatibility",
+            "version": "5.0"
+          },
+          {
+            "id": "pete-362-cabover-dlc-toys-compatibility",
+            "title": "Pete 362 Cabover DLC Accessories Compatibility",
+            "version": "5.0"
+          },
+          {
+            "id": "pete-362-cabover-dlc-steering-wheels-compatibility",
+            "title": "Pete 362 Cabover DLC Steering Wheels Compatibility",
+            "version": "5.0"
+          },
+          {
+            "id": "pete-389-glider-sisl-pack-compatibility",
+            "title": "Pete 389 Glider SISL's Pack Compatibility",
+            "version": "7.0"
+          },
+          {
+            "id": "pete-389-glider-dlc-toys-compatibility",
+            "title": "Pete 389 Glider DLC Cabin Accessories Compatibility",
+            "version": "7.0"
+          },
+          {
+            "id": "pete-389-glider-dlc-steering-wheels-compatibility",
+            "title": "Pete 389 Glider DLC Steering Wheels Compatibility",
+            "version": "7.0"
+          },
+          {
+            "id": "kw-w900-highway-killer-sisl-pack-compatibility",
+            "title": "KW W900 H-WAY KILLER SISL Compatibility",
+            "version": "9.0"
+          },
+          {
+            "id": "kw-w900-highway-killer-dlc-toys-compatibility",
+            "title": "KW W900 H-WAY KILLER DLC Accessories Compatibility",
+            "version": "9.0"
+          },
+          {
+            "id": "kw-w900-highway-killer-dlc-steering-wheels-compatibility",
+            "title": "KW W900L H-WAY KILLER DLC Steering Wheels Compatibility",
+            "version": "9.0"
+          },
+          {
+            "id": "pete-579-sisl-pack-compatibility",
+            "title": "Pete 579 NG SISL Pack Compatibility",
+            "version": "2.0"
+          },
+          {
+            "id": "pete-579-dlc-toys-compatibility",
+            "title": "Pete 579 NG DLC Accessories Compatibility",
+            "version": "2.0"
+          },
+          {
+            "id": "pete-579-dlc-steering-wheels-compatibility",
+            "title": "Pete 579 NG DLC Steering Wheels Compatibility",
+            "version": "2.0"
+          },
+          {
+            "id": "just-clutter-revisited",
+            "title": "just_clutter_revisited",
+            "version": "1"
+          },
+          {
+            "id": "portable-humidifier-for-ats",
+            "title": "Portable Humidifier",
+            "version": "0.3.2"
+          },
+          {
+            "id": "knight-kitty-interior-toy",
+            "title": "Knight Kitty Interior Toy",
+            "version": "1.0"
+          },
+          {
+            "id": "raudulfur-s-cabin-accessories",
+            "title": "RaudUlfur's Cabin Accessories",
+            "version": "1.25"
+          },
+          {
+            "id": "peterbilt-new-steering-wheel",
+            "title": "Peterbilt New Steering Wheel",
+            "version": "1.1"
+          },
+          {
+            "id": "custom-steering-wheel",
+            "title": "Custom Steering Wheel",
+            "version": "1.49.1-build-1703885077"
+          },
+          {
+            "id": "ats-smart-20in-steering-wheels",
+            "title": "ATS Smart 20IN Steering Wheels (Optional)",
+            "version": "2026.03.22 - 1901"
+          },
+          {
+            "id": "interior-cabin-lights-ats",
+            "title": "Interior Cabin Lights (ATS)",
+            "version": "2324"
+          },
+          {
+            "id": "mack-pinnacle-improved-dashboard",
+            "title": "Mack Pinnacle Improved Dashboard",
+            "version": "1.0"
+          },
+          {
+            "id": "mack-anthem-improved-dashboard",
+            "title": "Mack Anthem Improved Dashboard",
+            "version": "1.6"
+          },
+          {
+            "id": "western-star-5700xe-improved-dashboard",
+            "title": "Western Star 5700XE Improved Dashboard",
+            "version": "1.2"
+          },
+          {
+            "id": "peterbilt-389-improved-dashboard",
+            "title": "Peterbilt 389 Improved Dashboard",
+            "version": "1.3"
+          },
+          {
+            "id": "kenworth-w900-improved-dashboard",
+            "title": "Kenworth W900 Improved Dashboard",
+            "version": "1.3"
+          },
+          {
+            "id": "volvo-vnl-2018-improved-dashboard",
+            "title": "Volvo VNL 2018 Improved Dashboard",
+            "version": "1.1"
+          },
+          {
+            "id": "western-star-49x-improved-dashboard",
+            "title": "Western Star 49X Improved Dashboard",
+            "version": "1.5"
+          },
+          {
+            "id": "kenworth-t680-improved-dashboard",
+            "title": "Kenworth T680 Improved Dashboard",
+            "version": "1.1"
+          },
+          {
+            "id": "kenworth-w990-improved-dashboard",
+            "title": "Kenworth W990 Improved Dashboard",
+            "version": "1.5"
+          },
+          {
+            "id": "freightliner-cascadia-2019-improved-dashboard",
+            "title": "Freightliner Cascadia 2019 Improved Dashboard",
+            "version": "3.7"
+          },
+          {
+            "id": "kenworth-t680-next-gen-improved-dashboard",
+            "title": "Kenworth T680 Next Gen Improved Dashboard",
+            "version": "1.8"
+          },
+          {
+            "id": "western-star-57x-improved-dashboard",
+            "title": "Western Star 57X Improved Dashboard",
+            "version": "1.5"
+          },
+          {
+            "id": "international-9900i-improved-dashboard",
+            "title": "International 9900i Improved Dashboard",
+            "version": "1.5"
+          },
+          {
+            "id": "freightliner-cascadia-2024-improved-dashboard",
+            "title": "Freightliner Cascadia 2024 Improved Dashboard",
+            "version": "1.3"
+          },
+          {
+            "id": "international-lt-improved-dashboard",
+            "title": "International LT Improved Dashboard",
+            "version": "1.0"
+          },
+          {
+            "id": "peterbilt-389-dashboard-add-on",
+            "title": "Peterbilt 389 Dashboard Add-on",
+            "version": "1.00"
+          },
+          {
+            "id": "western-star-57x-dashboard-add-on",
+            "title": "Western Star 57X Dashboard Add-on",
+            "version": "1.01"
+          },
+          {
+            "id": "kenworth-w900-t680-dashboard-add-on",
+            "title": "Kenworth W900 + T680 Dashboard Add-on",
+            "version": "1.1"
+          },
+          {
+            "id": "volvo-vnl-2025-dashboard-add-on",
+            "title": "Volvo VNL 2025 Dashboard Add-on",
+            "version": "1.01"
+          },
+          {
+            "id": "freightliner-cascadia-dashboard-add-on",
+            "title": "Freightliner Cascadia Dashboard Add-on",
+            "version": "1.01"
+          },
+          {
+            "id": "road-trip-visible-speed-limit",
+            "title": "Road Trip Visible Speed Limit",
+            "version": "1.7"
+          },
+          {
+            "id": "eta-and-rest-on-gps-scs-vehicles",
+            "title": "ETA and rest on GPS - SCS Vehicles",
+            "version": "1.4"
+          },
+          {
+            "id": "dash-gps-displays-semi-trucks",
+            "title": "Dash GPS Displays - Semi Trucks",
+            "version": "1.4.1"
+          },
+          {
+            "id": "dash-gps-displays-1967-mustang",
+            "title": "Dash GPS Displays - 1967 Mustang",
+            "version": "1.7.1"
+          },
+          {
+            "id": "ythq-gps",
+            "title": "YTHQ GPS",
+            "version": "1.0"
+          },
+          {
+            "id": "tjs-ats-hd-gps",
+            "title": "Tjs ATS HD GPS",
+            "version": "1.62.0"
+          },
+          {
+            "id": "ps-gps-ats",
+            "title": "GPS/PC",
+            "version": "1.16"
+          },
+          {
+            "id": "animated-co-driver-pack",
+            "title": "ATS Animated Co-Driver Pack Optional",
+            "version": "16.11"
+          },
+          {
+            "id": "fictional-billboards",
+            "title": "Fictional Billboards",
+            "version": "3.2"
+          },
+          {
+            "id": "real-world-billboards",
+            "title": "Real World Billboards",
+            "version": "2026.10.05"
+          },
+          {
+            "id": "real-world-signs-logos",
+            "title": "Real World Signs & Logos",
+            "version": "1.7"
+          },
+          {
+            "id": "real-world-plates",
+            "title": "Real World Plates",
+            "version": "2026.10.16"
+          },
+          {
+            "id": "improved-road-reflections",
+            "title": "Improved Road Reflections",
+            "version": "1.6.2a"
+          },
+          {
+            "id": "png-pe-base",
+            "title": "PNG: PE-BASE",
+            "version": "1.4"
+          },
+          {
+            "id": "png-pe-weather-classic",
+            "title": "PNG: PE-WEATHER",
+            "version": "1.4"
+          },
+          {
+            "id": "png-pe-weather-classic-foggy",
+            "title": "PNG: PE-FOGGY WEATHER",
+            "version": "1.4"
+          },
+          {
+            "id": "zpng-pe-autumn",
+            "title": "PNG: PE-AUTUMN",
+            "version": "1.4"
+          },
+          {
+            "id": "zzpng-pe-rain",
+            "title": "PNG: PE-RAIN",
+            "version": "1.4"
+          },
+          {
+            "id": "engine-sounds",
+            "title": "Engine Sounds",
+            "version": "5.0.1"
+          },
+          {
+            "id": "ford-mustang-engine-and-transmission-pack",
+            "title": "Ford Mustang Engine and transmission pack",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-ats-sound-addon",
+            "title": "QS Sound pack optional 28.05",
+            "version": "02.09"
+          },
+          {
+            "id": "zeemods-volvo-ie-v1-0-1",
+            "title": "Volvo Interior & Effects Pack",
+            "version": "1.0.1-G5"
+          },
+          {
+            "id": "zeemods-kenworth-effects-g5-v1-2-2",
+            "title": "Kenworth Interior & Effect Sound Pack",
+            "version": "1.2.2-G5"
+          },
+          {
+            "id": "zeemods-peterbilt-effects-g5-v1-4-2",
+            "title": "Peterbilt Interior & Effect Sound Pack",
+            "version": "1.4.2-G5"
+          },
+          {
+            "id": "zeemods-freightliner-effects-g5-v1-0-1",
+            "title": "Freightliner I&E Sound Pack",
+            "version": "1.0.1-G5+"
+          },
+          {
+            "id": "zeemods-ws-effects-g5p-v1-0-1",
+            "title": "Western Star I&E Sound Pack",
+            "version": "1.0.1-G5+"
+          },
+          {
+            "id": "zeemods-wind-tire-trailer-effects-g5-v1-4-6",
+            "title": "Wind, Tire & Trailer Effects Pack",
+            "version": "1.4.6-G5+"
+          },
+          {
+            "id": "zeemods-weather-effect-g5-v1-4-1",
+            "title": "Weather Sound & Effect Mod",
+            "version": "1.4.1-G5"
+          },
+          {
+            "id": "zeemods-master-reverb-v3-0",
+            "title": "Master Reverb Mod",
+            "version": "2.0.1-G5"
+          },
+          {
+            "id": "zeemods-common-v1-3-3",
+            "title": "ZM Common Dependencies",
+            "version": "1.3.3"
+          },
+          {
+            "id": "project-ultimate-weather-2-5",
+            "title": "Project Ultimate Weather 2.5",
+            "version": "2.5"
+          },
+          {
+            "id": "extended-traffic-light-timing",
+            "title": "Extended Traffic Light Timing",
+            "version": "1.62.261102"
+          },
+          {
+            "id": "immersive-external-cam-infinite-zoom-v1-1",
+            "title": "Immersive External Cam + Infinite Zoom v1.1",
+            "version": "v1.1"
+          },
+          {
+            "id": "real-logos-for-jon-ruda-mods",
+            "title": "Real Logos for jon-ruda mods",
+            "version": "26.0"
+          },
+          {
+            "id": "ats-realistic-road-speed-limit",
+            "title": "ATS Realistic Road Speed Limit",
+            "version": "1.1.0"
           }
         ]
       }

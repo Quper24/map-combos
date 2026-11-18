@@ -5,14 +5,14 @@
     "id": "ats-quper-map-combo-1-62",
     "title": "ATS Quper Map Combo",
     "fileSlug": "quper-map",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "boosty": "https://boosty.to/qupersimulator/posts/3816eaba-fa6e-40fb-ab42-328854834fa1",
     "profile": "https://sharemods.com/0x313g3k18sm/1.62_ATS_QUPER_MAP_COMBO_1.6.1.zip.html",
     "image": "/img/combo-builder/8defeee299dd965a80548aa9ea9514eeeb4b70b5e27aa2c12ca32671621cd7b5.webp",
     "tags": [
       "convoy"
     ],
-    "updatedAt": "2026-11-17",
+    "updatedAt": "2026-11-18",
     "selection": [
       "aleutian-islands-revived-v1-0-1",
       "petersburg-alaska-revived-v1-0-1",
@@ -1789,6 +1789,262 @@
             "id": "more-american-cities-v1-1b",
             "title": "More American Cities",
             "version": "1.1b"
+          },
+          {
+            "id": "dna-ats-exp-ga-connections-v1-4-0-1",
+            "title": "DNA + ATS Expansion And Great America Connections",
+            "version": "1.4.0.1"
+          },
+          {
+            "id": "qs-ats-baja-ensenada-port-fix",
+            "title": "QS ATS Baja Ensenada Port Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "qs-ats-baja-pba-yuma-garage-fix",
+            "title": "QS ATS Baja + PBA Yuma Garage Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "qs-ats-dna-promods-signal-fix",
+            "title": "QS ATS DNA + ProMods Signal Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "qs-ats-great-america-sector-fix",
+            "title": "QS ATS Great America Sector Fix",
+            "version": "0.5.2"
+          },
+          {
+            "id": "qs-ats-more-cities-sierra-connection-fix",
+            "title": "QS ATS More Cities + Sierra Nevada Connection Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "qs-ats-more-cities-trinity-connection-fix",
+            "title": "QS ATS More Cities + Trinity County Connection Fix",
+            "version": "0.1.1"
+          },
+          {
+            "id": "ats-quper-background-map",
+            "title": "ATS Quper Background Map (Optional)",
+            "version": "2026.10.27 - 1.3"
+          },
+          {
+            "id": "trucksmap-usa-1-7-1-62",
+            "title": "Trucksmap USA 1.7.1.62",
+            "version": "1.7.1.62"
+          },
+          {
+            "id": "easternexpansion162",
+            "title": "Eastern Expansion",
+            "version": "0.1.162"
+          },
+          {
+            "id": "qs-ats-trucksmap-gps-fix",
+            "title": "QS ATS Trucksmap GPS Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "qs-ats-more-cities-road-connection-fix",
+            "title": "QS ATS More Cities Road Connection Fix",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      {
+        "version": "1.6.2",
+        "date": "2026-11-18",
+        "entries": [
+          {
+            "id": "coast-to-coast-v2-24-62-0",
+            "title": "Coast to Coast",
+            "version": "2.24.62.1"
+          },
+          {
+            "id": "promods-ats",
+            "title": "ProMods Canada",
+            "version": "1.7.1"
+          },
+          {
+            "id": "qs-ats-c2c-promods-fix",
+            "title": "QS ATS Coast to Coast + ProMods Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "atsrealisticeconomy",
+            "title": "Realistic Economy ATS by Quper",
+            "version": "1.62.4"
+          },
+          {
+            "id": "qs-ats-map-final-fix",
+            "title": "QS ATS Map Final Fix",
+            "version": "0.3.4"
+          },
+          {
+            "id": "nascar-map-combo-pack",
+            "title": "ATS NASCAR Map Combo Pack v1.0.1",
+            "version": "1.0.1"
+          },
+          {
+            "id": "reforma",
+            "title": "Reforma",
+            "version": "3.0.4.162"
+          },
+          {
+            "id": "reforma-megaresources",
+            "title": "Mega Resources",
+            "version": "3.0.4.162"
+          },
+          {
+            "id": "reforma-sierra-nevada-remake",
+            "title": "Reforma Sierra Nevada",
+            "version": "1.21.162"
+          },
+          {
+            "id": "reforma-othermaps-patch",
+            "title": "Reforma OtherMaps Compatibility Patch",
+            "version": "42.162"
+          },
+          {
+            "id": "discover-oregon-revived-v1-0-1",
+            "title": "Discover Oregon Revived",
+            "version": "1.0.1"
+          },
+          {
+            "id": "trinity-county-revived-v1-0-1",
+            "title": "Trinity County Revived",
+            "version": "1.0.1"
+          },
+          {
+            "id": "aleutian-islands-revived-v1-0-1",
+            "title": "Aleutian Islands Revived",
+            "version": "1.0.1"
+          },
+          {
+            "id": "petersburg-alaska-revived-v1-0-1",
+            "title": "Petersburg Alaska Revived",
+            "version": "1.0.1"
+          },
+          {
+            "id": "washington-extended-revived-v1-0-1",
+            "title": "Washington Extended Revived",
+            "version": "1.0.1"
+          },
+          {
+            "id": "mexssimap-0-82-162-public",
+            "title": "Mexssimap 0.82.162 Public",
+            "version": "0.82.162"
+          },
+          {
+            "id": "project-better-arizona-0-5-4-1-62",
+            "title": "Project Better Arizona 0.5.4",
+            "version": "0.5.4"
+          },
+          {
+            "id": "project-better-arizona-reforma-connection-1-17-1-62",
+            "title": "Project Better Arizona Reforma Connection 1.17",
+            "version": "1.17"
+          },
+          {
+            "id": "qs-ats-pba-reforma-service-fix",
+            "title": "QS ATS PBA Reforma Service Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "qs-ats-project-better-arizona-fix",
+            "title": "QS ATS Project Better Arizona Fix",
+            "version": "0.2.0"
+          },
+          {
+            "id": "alaska-north-to-the-future",
+            "title": "Alaska - North to the future",
+            "version": "v0.8.9 Beta"
+          },
+          {
+            "id": "qs-ats-reforma-promods-model-fix",
+            "title": "QS ATS Reforma + ProMods Model Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "washington-extended-revived-promods-connection-v1-0-1",
+            "title": "Washington Extended Revived - Promods Canada Connection v1.0.1",
+            "version": "1.0.1"
+          },
+          {
+            "id": "qs-ats-alaska-nttf-traffic-fix",
+            "title": "QS ATS Alaska NTTF Traffic Fix",
+            "version": "0.2.2"
+          },
+          {
+            "id": "alaska-nttf-to-promods-rc-v0-6-7-2",
+            "title": "Alaska NTTF to Promods Canada RC",
+            "version": "0.6.7.2"
+          },
+          {
+            "id": "qs-ats-alaska-promods-sign-fix",
+            "title": "QS ATS Alaska + ProMods Sign Fix",
+            "version": "0.2.1"
+          },
+          {
+            "id": "alaska-nttf-midnight-sun-optional-addon",
+            "title": "Alaska NTTF - Midnight Sun Addon",
+            "version": "v0.8.9 Beta"
+          },
+          {
+            "id": "beyond-by-tm-for-ats-1",
+            "title": "Beyond by TerraMaps",
+            "version": "V12"
+          },
+          {
+            "id": "c2c-beyond-connections-v1-1-3",
+            "title": "Coast to Coast + Beyond Connections v1.1.3",
+            "version": "1.1.3"
+          },
+          {
+            "id": "qs-ats-expansion-fix",
+            "title": "QS ATS Expansion Fix",
+            "version": "0.1.4"
+          },
+          {
+            "id": "qs-ats-expansion-sierra-connection-fix",
+            "title": "QS ATS Expansion + Sierra Connection Fix",
+            "version": "0.1.1"
+          },
+          {
+            "id": "qs-ats-alaska-expansion-garage-fix",
+            "title": "QS ATS Alaska + Expansion Garage Fix",
+            "version": "0.1.0"
+          },
+          {
+            "id": "ats-expansion",
+            "title": "ATS Expansion",
+            "version": "24.0"
+          },
+          {
+            "id": "great-america-v6-2",
+            "title": "GREAT AMERICA",
+            "version": "6.2"
+          },
+          {
+            "id": "dna-v1-8-2",
+            "title": "Discover North America",
+            "version": "1.8.2"
+          },
+          {
+            "id": "reforma-baja-beta-5-6-162",
+            "title": "Reforma Baja Beta",
+            "version": "5.6.162"
+          },
+          {
+            "id": "reforma-sonora-beta-1-5-162",
+            "title": "Reforma Sonora Beta",
+            "version": "1.5.162"
+          },
+          {
+            "id": "more-american-cities-v1-1b",
+            "title": "More American Cities",
+            "version": "1.1c"
           },
           {
             "id": "dna-ats-exp-ga-connections-v1-4-0-1",

@@ -78,7 +78,6 @@
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-16",
-      "description": "Модификация «Realistic Economy ATS by Quper» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 3
     },
     {
@@ -115,7 +114,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «ATS NASCAR Map Combo Pack v1.0.1» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 5
     },
     {
@@ -192,7 +190,6 @@
         "reforma"
       ],
       "dlcs": [],
-      "description": "Карта «Reforma OtherMaps Compatibility Patch» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 9
     },
     {
@@ -233,7 +230,6 @@
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15",
-      "description": "Карта «Discover Oregon Revived» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 11
     },
     {
@@ -251,7 +247,6 @@
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15",
-      "description": "Карта «Trinity County Revived» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 12
     },
     {
@@ -262,6 +257,7 @@
       "image": "/img/combo-builder/54b6216e2d3ce379830ffac32e2d4e12bc294f2561746d571811d4c097e360c3.webp",
       "version": "1.0.1",
       "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-15",
       "paid": false,
       "files": [
         "Vermont_Map_Revived_v1.0.1"
@@ -273,8 +269,6 @@
         "dna-v1-8-2"
       ],
       "dlcs": [],
-      "updatedAt": "2026-11-15",
-      "description": "Карта «Vermont Map Revived» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 13
     },
     {
@@ -292,7 +286,6 @@
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15",
-      "description": "Карта «Aleutian Islands Revived» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 14
     },
     {
@@ -310,7 +303,6 @@
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15",
-      "description": "Карта «Petersburg Alaska Revived» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 15
     },
     {
@@ -328,7 +320,6 @@
       "requires": [],
       "dlcs": [],
       "updatedAt": "2026-11-15",
-      "description": "Карта «Washington Extended Revived» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 16
     },
     {
@@ -347,7 +338,6 @@
         "reforma"
       ],
       "dlcs": [],
-      "description": "Карта «Mexssimap 0.82.162 Public» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 17
     },
     {
@@ -366,7 +356,6 @@
         "reforma-megaresources"
       ],
       "dlcs": [],
-      "description": "Карта «Project Better Arizona 0.5.4» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 18
     },
     {
@@ -386,7 +375,6 @@
         "project-better-arizona-0-5-4-1-62"
       ],
       "dlcs": [],
-      "description": "Карта «Project Better Arizona Reforma Connection 1.17» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 19
     },
     {
@@ -406,7 +394,6 @@
         "project-better-arizona-reforma-connection-1-17-1-62"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS PBA Reforma Service Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 20
     },
     {
@@ -428,7 +415,6 @@
       "dlcs": [
         "Arizona"
       ],
-      "description": "Модификация «QS ATS Project Better Arizona Fix» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 21
     },
     {
@@ -466,7 +452,6 @@
         "reforma-megaresources"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Reforma + ProMods Model Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 23
     },
     {
@@ -486,7 +471,6 @@
         "washington-extended-revived-v1-0-1"
       ],
       "dlcs": [],
-      "description": "Карта «Washington Extended Revived - Promods Canada Connection v1.0.1» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 24
     },
     {
@@ -508,7 +492,6 @@
       "dlcs": [
         "Lode King & Prestige Trailers"
       ],
-      "description": "Карта «QS ATS Alaska NTTF Traffic Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 25
     },
     {
@@ -528,7 +511,6 @@
         "alaska-north-to-the-future"
       ],
       "dlcs": [],
-      "description": "Карта «Alaska NTTF to Promods Canada RC» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 26
     },
     {
@@ -548,7 +530,6 @@
         "alaska-nttf-to-promods-rc-v0-6-7-2"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Alaska + ProMods Sign Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 27
     },
     {
@@ -568,7 +549,6 @@
       ],
       "dlcs": [],
       "updatedAt": "2026-11-15",
-      "description": "Карта «Alaska NTTF - Midnight Sun Addon» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 28
     },
     {
@@ -588,7 +568,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «Beyond by TerraMaps» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 29
     },
     {
@@ -608,7 +587,6 @@
         "beyond-by-tm-for-ats-1"
       ],
       "dlcs": [],
-      "description": "Карта «Coast to Coast + Beyond Connections v1.1.3» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 30
     },
     {
@@ -628,7 +606,6 @@
         "ats-expansion"
       ],
       "dlcs": [],
-      "description": "Карта «Coast to Coast + ATS Expansion Connections v1.1.2» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 31
     },
     {
@@ -648,7 +625,6 @@
         "ats-expansion"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Expansion Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 32
     },
     {
@@ -669,7 +645,6 @@
         "ats-expansion"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Expansion + Sierra Connection Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 33
     },
     {
@@ -688,7 +663,6 @@
         "alaska-north-to-the-future"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Alaska Garage Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 34
     },
     {
@@ -707,7 +681,6 @@
         "ats-expansion"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Expansion Garage Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 35
     },
     {
@@ -731,7 +704,6 @@
         "qs-ats-expansion-garage-fix"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Alaska + Expansion Garage Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 36
     },
     {
@@ -748,7 +720,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «ATS Expansion» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 37
     },
     {
@@ -765,7 +736,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «GREAT AMERICA» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 38
     },
     {
@@ -784,7 +754,6 @@
         "coast-to-coast-v2-24-62-0"
       ],
       "dlcs": [],
-      "description": "Карта «Discover North America» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 39
     },
     {
@@ -803,7 +772,6 @@
         "reforma"
       ],
       "dlcs": [],
-      "description": "Карта «Reforma Baja Beta» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 40
     },
     {
@@ -820,7 +788,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «Reforma Sonora Beta» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 41
     },
     {
@@ -829,16 +796,16 @@
       "type": "map",
       "link": "https://truckymods.io/american-truck-simulator/maps/more-american-cities-601138",
       "image": "/img/combo-builder/77b336555e1d33425028a544989f953523c2f646f5960253ceaa7be56e187a10.webp",
-      "version": "1.1b",
+      "version": "1.1c",
       "addedAt": "2026-11-16",
+      "updatedAt": "2026-11-18",
       "paid": false,
       "files": [
-        "More American Cities (v1.1b)"
+        "More American Cities (v1.1c)"
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «More American Cities» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
-      "shareIndex": 42
+      "shareIndex": 272
     },
     {
       "id": "dna-ats-exp-ga-connections-v1-4-0-1",
@@ -862,7 +829,6 @@
         "c2c-ats-exp-connections-v1-1-2"
       ],
       "dlcs": [],
-      "description": "Карта «DNA + ATS Expansion And Great America Connections» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 43
     },
     {
@@ -881,7 +847,6 @@
         "reforma-baja-beta-5-6-162"
       ],
       "dlcs": [],
-      "description": "Модификация «QS ATS Baja Ensenada Port Fix» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 44
     },
     {
@@ -901,7 +866,6 @@
         "reforma-baja-beta-5-6-162"
       ],
       "dlcs": [],
-      "description": "Модификация «QS ATS Baja + PBA Yuma Garage Fix» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 45
     },
     {
@@ -921,7 +885,6 @@
         "dna-v1-8-2"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS DNA + ProMods Signal Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 46
     },
     {
@@ -941,7 +904,6 @@
         "dna-ats-exp-ga-connections-v1-4-0-1"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Great America Sector Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 47
     },
     {
@@ -961,7 +923,6 @@
         "more-american-cities-v1-1b"
       ],
       "dlcs": [],
-      "description": "Модификация «QS ATS More Cities + Sierra Nevada Connection Fix» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 48
     },
     {
@@ -981,7 +942,6 @@
         "more-american-cities-v1-1b"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS More Cities + Trinity County Connection Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 49
     },
     {
@@ -1000,7 +960,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «ATS Quper Background Map (Optional)» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 50
     },
     {
@@ -1016,7 +975,6 @@
       "version": "v10.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3475906795",
       "image": "/img/combo-builder/0d3e9626096017c4a2071b08ba495b7e7a4470ae08b9d9ffa9f4ba0733c2ba9b.jpg",
-      "description": "Модификация «National Beef Cargo Pack» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 51
     },
     {
@@ -1032,7 +990,6 @@
       "version": "1.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3811097362",
       "image": "/img/combo-builder/f3616626e0358b56a3efbaf020fecaa4b7634544a8fa658be96af1e9116c3abb.jpg",
-      "description": "Модификация «Pickup Load Pack» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 52
     },
     {
@@ -1048,7 +1005,6 @@
       "version": "0.1.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3815115910",
       "image": "/img/combo-builder/05cf7e0cdc05cf9093da09f2bb57956b56e3a2349875dc4bdca6fe6685005a40.jpg",
-      "description": "Модификация «Umbrella Courier Jobs for Road Trip» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 53
     },
     {
@@ -1064,7 +1020,6 @@
       "version": "0.2.4",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3812885729",
       "image": "/img/combo-builder/b569192ee1f831b088ca27864faec59f163687a1f7a9979c5204366be1df71da.jpg",
-      "description": "Модификация «Medical Courier Jobs for Road Trip» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 54
     },
     {
@@ -1080,7 +1035,6 @@
       "version": "0.9.4",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3811536074",
       "image": "/img/combo-builder/a8a7950d31fdee364155dd8cd38d9bc5e1487d8817436c7e3520369ef45a3181.jpg",
-      "description": "Модификация «Food Courier Jobs for Road Trip» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 55
     },
     {
@@ -1096,7 +1050,6 @@
       "version": "0.9.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3813173177",
       "image": "/img/combo-builder/797fccd917d24681b1e303d6ed1be310b3c0289f4438c7c517b606f2c88ceb28.jpg",
-      "description": "Модификация «Rideshare Jobs for Road Trip» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 56
     },
     {
@@ -1112,24 +1065,25 @@
       "version": "13",
       "link": "https://forum.scssoft.com/viewtopic.php?t=303954",
       "image": "/img/combo-builder/6928a447b6945f38d29156a7b89b3d9d8dd49fea36faac1e89f37371324f99b3.jpg",
-      "description": "Модификация «Arnook's Container Pack» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 57
     },
     {
       "id": "arnooks-container-pack-train-addon-apr06-2026-ats",
-      "type": "mod",
       "title": "Arnook's Container Pack - Train AddOn",
+      "type": "mod",
+      "link": "https://www.mediafire.com/file/hak2mlhjnbr1n5z/Arnooks_Container_Pack_Train_AddOn_Apr06-2026_-_ATS.zip/file",
+      "image": "/img/combo-builder/6852b7ad3cd6514c797832c6d868574985755003bd786571f6a455bff54177af.jpg",
+      "version": "12",
+      "addedAt": "2026-11-17",
+      "paid": false,
       "files": [
         "Arnooks Container Pack Train AddOn Apr06-2026 - ATS"
       ],
-      "requires": [],
+      "requires": [
+        "arnook-s-container-pack-for-ats"
+      ],
       "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "12",
-      "link": "https://www.mediafire.com/file/hak2mlhjnbr1n5z/Arnooks_Container_Pack_Train_AddOn_Apr06-2026_-_ATS.zip/file",
-      "image": "/img/combo-builder/6852b7ad3cd6514c797832c6d868574985755003bd786571f6a455bff54177af.jpg",
-      "description": "Модификация «Arnook's Container Pack - Train AddOn» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
-      "shareIndex": 58
+      "shareIndex": 274
     },
     {
       "id": "sound-fixes-pack-ats",
@@ -1144,7 +1098,6 @@
       "version": "26.78",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=830663438",
       "image": "/img/combo-builder/8794795ae01c677fd30b2cfb5318139ea51d33fdb98732fc876ed94451bc3649.jpg",
-      "description": "Модификация «Sound Fixes Pack 26.64» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 59
     },
     {
@@ -1160,7 +1113,6 @@
       "version": "08.11.25",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1770576872",
       "image": "/img/combo-builder/234cdc106cfe070b0c9b356c685f369686b36ae5c2a95451e57e808581fc2f80.jpg",
-      "description": "Модификация «Lithuanian GPS Navigation ATS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 60
     },
     {
@@ -1177,7 +1129,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «ATS Santa Voice» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 61
     },
     {
@@ -1193,7 +1144,6 @@
       "version": "08.11.25",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2110098510",
       "image": "/img/combo-builder/85c1f89bca07fb18de41cae8e30549d637faf8a39b24c8107cb95b66e66df291.jpg",
-      "description": "Модификация «Shaquille O'neal GPS Voice ATS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 62
     },
     {
@@ -1209,7 +1159,6 @@
       "version": "08.11.25",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=schinese&id=3404022298",
       "image": "/img/combo-builder/44340d388e9a12c957266f24203e7d621774556ea2393d1108f72518fddfefe0.jpg",
-      "description": "Модификация «Apple Siri Voice Navigation for ATS» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 63
     },
     {
@@ -1226,7 +1175,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Cookie Monster GPS ATS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 64
     },
     {
@@ -1243,7 +1191,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Crypt Keeper Voice Navigation ATS» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 65
     },
     {
@@ -1260,7 +1207,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Jay Leno GPS Voice ATS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 66
     },
     {
@@ -1276,7 +1222,6 @@
       "version": "08.11.25",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3594438913",
       "image": "/img/combo-builder/ec614172c0f233a068d3fb0a2f47757c1eb6273ae12124cf540a036d7d1f349e.jpg",
-      "description": "Модификация «Billie Eilish Sat Nav Voice ATS» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 67
     },
     {
@@ -1293,7 +1238,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «ATS Donald Trump GPS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 68
     },
     {
@@ -1309,7 +1253,6 @@
       "version": "08.11.25",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2320182586",
       "image": "/img/combo-builder/0611dfc588e1351f98f367d020916093a618cb9aac3ce8671bf01deb08447665.jpg",
-      "description": "Модификация «Morgan Freeman GPS Voice for ATS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 69
     },
     {
@@ -1325,7 +1268,6 @@
       "version": "1.1.5",
       "link": "https://truckymods.io/euro-truck-simulator-2/sounds/russian-voice-navigation",
       "image": "/img/combo-builder/2b6fec24e349d649578cff1dbd93fb115d8a463ac4f5f6bb82ea7ad7f00bff28.jpg",
-      "description": "Модификация «Russian Voice Navigation» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 70
     },
     {
@@ -1341,7 +1283,6 @@
       "version": "25.04.21",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1937473215",
       "image": "/img/combo-builder/bd95d6264cea5ce3ff48b7fa6078d8f5762fc3e868d5182c5781f1f3b0454847.jpg",
-      "description": "Модификация «Yandex.Navigator - All voices» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 71
     },
     {
@@ -1357,7 +1298,6 @@
       "version": "2026NOV01",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2655269057",
       "image": "/img/combo-builder/5c60219630c70335e99096fd689707e1a56612968c5b0d678b1d75d489591c5d.jpg",
-      "description": "Модификация «Reefer trailer sound addon for ATS» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 72
     },
     {
@@ -1373,7 +1313,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3141395603",
       "image": "/img/combo-builder/31663aa5c8958934a032f06e4f3450995c2a03d897d91aae0dde4a0bc139fd91.jpg",
-      "description": "Модификация «Enhanced Trains» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 73
     },
     {
@@ -1389,7 +1328,6 @@
       "version": "4.9.1",
       "link": "https://modsfire.com/31QyAgOdHa36eTw",
       "image": "/img/combo-builder/bafa5c8ff368c291166df4d14df77a2401af232f65eb518702f3420aad88a7ee.jpg",
-      "description": "Модификация «Better Flares - Base» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 74
     },
     {
@@ -1405,7 +1343,6 @@
       "version": "4.9.1",
       "link": "https://modsfire.com/6AE271I90278xIH",
       "image": "/img/combo-builder/6507091ce60a7a0aaaeda083046a6bb80325fb6c5d3f52dc6f81e498d7340083.jpg",
-      "description": "Модификация «Better Flares - Traffic Addon ATS» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 75
     },
     {
@@ -1421,7 +1358,6 @@
       "version": "4.9",
       "link": "https://modsfire.com/31QyAgOdHa36eTw",
       "image": "/img/combo-builder/d835bed92245fa5b31bae89005dbb1610d42a884e1088a1cbe92b17105abf428.jpg",
-      "description": "Модификация «Better Flares - City Lights Addon» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 76
     },
     {
@@ -1437,7 +1373,6 @@
       "version": "4.9.1",
       "link": "https://modsfire.com/31QyAgOdHa36eTw",
       "image": "/img/combo-builder/f7ce894cdb842fa31b3bc836b5a192fefe4a782ff37681d62b4c6809f43f65c9.jpg",
-      "description": "Модификация «Better Flares - Headlights.1 Projector DOT 2» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 77
     },
     {
@@ -1453,7 +1388,6 @@
       "version": "4.9.1",
       "link": "https://modsfire.com/31QyAgOdHa36eTw",
       "image": "/img/combo-builder/ce34a890da156f7ba35b3fe1dcc01d104151863de765851d823b03e11489e860.jpg",
-      "description": "Модификация «Better Flares - Headlights.2 5500K LED» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 78
     },
     {
@@ -1469,7 +1403,6 @@
       "version": "16.6.9",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/ai-traffic-pack-by-jazzycat-19.html",
       "image": "/img/combo-builder/7b62a2e602b20a38e7a9c977450aa36ef7dd3f48fee8b60534814b7492cfd1c6.jpg",
-      "description": "Модификация «AI Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 79
     },
     {
@@ -1485,7 +1418,6 @@
       "version": "1.1",
       "link": "https://sharemods.com/21hjrefscdvh/Egons_ai_traffic_pack_1.1_ATS.scs.html",
       "image": "/img/combo-builder/ecec8645c2af3b66974ba2ea4564840fefe566979e046d0ce813d29b05cfc2ae.jpg",
-      "description": "Модификация «Egon's AI traffic pack ATS» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 80
     },
     {
@@ -1501,7 +1433,6 @@
       "version": "9.0.14",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/classic-cars-ai-traffic-pack-by-jazzycat-4.html",
       "image": "/img/combo-builder/459c376dfd1b5d68854b25d795af27f34da19493820511bb3aea8cabe55983fd.jpg",
-      "description": "Модификация «Classic AI Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 81
     },
     {
@@ -1517,7 +1448,6 @@
       "version": "12.7.13",
       "link": "https://www.modland.net/euro-truck-simulator-2/other/sport-cars-traffic-pack-by-trafficmaniac-8.html",
       "image": "/img/combo-builder/314420ec337e7fe80a6fd11854334a8d37f9c97960edbc4448e6fc24d61740f9.jpg",
-      "description": "Модификация «Sport Cars Traffic Pack by TrafficManiac» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 82
     },
     {
@@ -1537,7 +1467,6 @@
         "ai-traffic-pack-by-jazzycat-v16-6-9-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Sport Cars Traffic Pack by TrafficManiac» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 83
     },
     {
@@ -1553,7 +1482,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3288033769",
       "image": "/img/combo-builder/8ba50d95276e20f57b926b9c7d416c5c150d0a59a374423d7070f7ce21925c2a.jpg",
-      "description": "Модификация «AlexP & Jazzycat's Dodge Daytona udgrade» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 84
     },
     {
@@ -1569,7 +1497,6 @@
       "version": "1.0.2.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2323307289&l=bulgarian",
       "image": "/img/combo-builder/5d968cdeedf13f7c1ca1505a05f6af6fac617d7d0f0c96fc5c5ab40f2f7127f4.jpg",
-      "description": "Модификация «NFS TRAFFIC PACK» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 85
     },
     {
@@ -1585,7 +1512,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3486766978",
       "image": "/img/combo-builder/c4a1c9c42c4b07277040a3172b01525f3e003f31a1171d81870d92590ab46dad.jpg",
-      "description": "Модификация «Big Traffic Pack» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 86
     },
     {
@@ -1600,7 +1526,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3665061006",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «AI traffic police and emergency vehicles» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 87
     },
     {
@@ -1616,7 +1541,6 @@
       "version": "1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3734798162",
       "image": "/img/combo-builder/28d5166de0b000355173ec48ed9e66882b0719afdcbf4fc067161b3f4aefce6c.jpg",
-      "description": "Модификация «Extra City Police Vehicles» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 88
     },
     {
@@ -1632,7 +1556,6 @@
       "version": "2.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3755853004",
       "image": "/img/combo-builder/825c80c04e9576e38800cf72e8665194cf378160a5a84dce88386488263ee258.jpg",
-      "description": "Модификация «Local Police Traffic» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 89
     },
     {
@@ -1648,7 +1571,6 @@
       "version": "6.5.15",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/motorcycle-traffic-packats-by-jazzycat-3.html",
       "image": "/img/combo-builder/cd08ebc76ba9a064ac1eb6c98a3b3981be8aafd545cd4546af8170f8d99f7518.jpg",
-      "description": "Модификация «Motorcycle Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 90
     },
     {
@@ -1668,7 +1590,6 @@
         "ai-traffic-pack-by-jazzycat-v16-6-9-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Motorcycle Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 91
     },
     {
@@ -1684,7 +1605,6 @@
       "version": "1.0",
       "link": "https://forum.scssoft.com/viewtopic.php?t=352944",
       "image": "/img/combo-builder/3173964faec0b24d74e209fd6759d722d3ccf5b524723a5fb0d86bb3d531c3a1.jpg",
-      "description": "Модификация «Motorcycle Traffic Jazzycat 80s Patch» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 92
     },
     {
@@ -1700,7 +1620,6 @@
       "version": "1.4.26",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/bus-traffic-pack-by-jazzycat.html",
       "image": "/img/combo-builder/be713c472c25735455a6d61ac7ce3c23065b3c954690ee0b90c815c9cf84f8e6.jpg",
-      "description": "Модификация «Bus Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 93
     },
     {
@@ -1715,7 +1634,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3665019375",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «AI traffic buses» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 94
     },
     {
@@ -1731,7 +1649,6 @@
       "version": "v1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3475987720",
       "image": "/img/combo-builder/7fb9ffd6dcd7564ff784dc0c0e2b2935f30d4416060347f4cf3e0bbbf83d167a.jpg",
-      "description": "Модификация «Coach skin pack for AI traffic» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 95
     },
     {
@@ -1747,7 +1664,6 @@
       "version": "3.5.14",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/truck-traffic-pack-by-jazzycat-3.html",
       "image": "/img/combo-builder/02ebd9225afe86b7029c5f61656d8c02a8dc895f1ea0859efd9bb60a23e00cea.jpg",
-      "description": "Модификация «Truck Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 96
     },
     {
@@ -1763,7 +1679,6 @@
       "version": "6.1.17",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/painted-truck-traffic-pack-by-jazzycat-4.html",
       "image": "/img/combo-builder/77e1c21dc2cee71960890d16ce5c12a8766a42e5a2f8072efce8d608c003f56c.jpg",
-      "description": "Модификация «Painted Truck Traffic Pack by Jazzycat» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 97
     },
     {
@@ -1779,7 +1694,6 @@
       "version": "7.6.3",
       "link": "https://www.modland.net/american-truck-simulator-mods/other/trailers-traffic-pack-by-trafficmaniac-5.html",
       "image": "/img/combo-builder/cf2bc81ef504b298044e3de1e071d09ea336db2185f7d7602196d58483b1b9ea.jpg",
-      "description": "Модификация «Trailers Traffic Pack by TrafficManiac» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 98
     },
     {
@@ -1794,7 +1708,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/workshop/filedetails/?id=3689655770",
       "image": "/img/combo-builder/2778f945ad77ab8174f45379a9ce38a3b5a8d281daf9dcc07e2f932adabdff7b.jpg",
-      "description": "Модификация «ATS Traffic Trailer Mega Pack» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 99
     },
     {
@@ -1809,7 +1722,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3714679729",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «Traffic Trailers Mixed Tape Vol.1» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 100
     },
     {
@@ -1824,7 +1736,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3719047884",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «Traffic Trailers Mixed Tape Vol.2» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 101
     },
     {
@@ -1839,7 +1750,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3732524937",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «Traffic Trailers Mixed Tape Vol.3» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 102
     },
     {
@@ -1854,7 +1764,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3751408859",
       "image": "/img/combo-builder/67ff8bb21240f47b8e4baf2e7c85bc4c4a1cc37c5a87c8f509949b83430bd676.jpg",
-      "description": "Модификация «Traffic Trailers Mixed Tape Vol.4» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 103
     },
     {
@@ -1869,7 +1778,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3760943046",
       "image": "/img/combo-builder/8482becf7b2baca00f305b323f3aaaebb2b1ee73dba2038c2aac29ca15e2dfaf.jpg",
-      "description": "Модификация «Traffic Trailers Mixed Tape Vol.5» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 104
     },
     {
@@ -1884,7 +1792,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3670742049",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «ATS Ownable Trailerpack US Vol.1» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 105
     },
     {
@@ -1899,7 +1806,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3672520251",
       "image": "/img/combo-builder/5acdc4d18d28700693fdfed5ee96d53b4e2376f42b230fe81fd97d123788bbf6.jpg",
-      "description": "Модификация «ATS Ownable Trailerpack US Vol.2» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 106
     },
     {
@@ -1915,7 +1821,6 @@
       "version": "4.5.162",
       "link": "https://truckymods.io/american-truck-simulator/ai-traffic/traffic-mx-for-reforma-map-154668",
       "image": "/img/combo-builder/53860c527518105d278d27700b011a047f0b5d76cf0e79aca46855385d93447c.jpg",
-      "description": "Модификация «Mexican Traffic Pack» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 107
     },
     {
@@ -1931,7 +1836,6 @@
       "version": "1.62.0",
       "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
       "image": "/img/combo-builder/db6786cbba60c740423d1bc0ba1eba3ceb3ce04f1e5d163340739515bf5305d1.jpg",
-      "description": "Модификация «Mr L's ATS Pack - Base» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 108
     },
     {
@@ -1947,7 +1851,6 @@
       "version": "1.62.0",
       "link": "https://forum.scssoft.com/viewtopic.php?t=265392",
       "image": "/img/combo-builder/557b2d922c884b64a2ab01cb6e6855b1fea8c02765f98da42348ba9218d8be02.jpg",
-      "description": "Модификация «Mr L's ATS Pack - Custom Mudflaps» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 109
     },
     {
@@ -1966,7 +1869,6 @@
         "mr-l-ats-base"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Double And Triple Trailer Traffic» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 110
     },
     {
@@ -1985,7 +1887,6 @@
         "mr-l-ats-base"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Single Trailer Traffic» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 111
     },
     {
@@ -2006,7 +1907,6 @@
       "dlcs": [
         "Special Transport"
       ],
-      "description": "Модификация «Mr L's ATS Pack - Oversize DLC Traffic» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 112
     },
     {
@@ -2027,7 +1927,6 @@
       "dlcs": [
         "Lode King"
       ],
-      "description": "Модификация «Mr L's ATS Pack - DLC Cargo Traffic: Lode King» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 113
     },
     {
@@ -2046,7 +1945,6 @@
         "mr-l-ats-base"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Extra Boxes» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 114
     },
     {
@@ -2066,7 +1964,6 @@
         "arnook-s-container-pack-for-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Arnook Container Addon» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 115
     },
     {
@@ -2086,7 +1983,6 @@
         "truck-traffic-pack-by-jazzycat-v3-5-14-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Jazzycat Unpainted Addon» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 116
     },
     {
@@ -2106,7 +2002,6 @@
         "painted-truck-traffic-pack-by-jazzycat-v6-1-17-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Jazzycat Painted Addon» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 117
     },
     {
@@ -2125,7 +2020,6 @@
         "mr-l-ats-base"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Cargo Trailers» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 118
     },
     {
@@ -2144,7 +2038,6 @@
         "mr-l-ats-base"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - The Stig» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 119
     },
     {
@@ -2164,7 +2057,6 @@
         "sound-fixes-pack-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - Sound Fixes Fix» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 120
     },
     {
@@ -2184,7 +2076,6 @@
         "trailers-traffic-pack-by-trafficmaniac-v7-6-3"
       ],
       "dlcs": [],
-      "description": "Модификация «Mr L's ATS Pack - TrafficManiac Classic Addon» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 121
     },
     {
@@ -2200,7 +2091,6 @@
       "version": "1.1",
       "link": "https://sharemods.com/3fjhe3j8lepe/skins_genadii.scs.html",
       "image": "/img/combo-builder/905e98fd8c4dfb9005b46c2a71608f8febdba9fe96bad2095cbb86ea7e0e5220.jpg",
-      "description": "Модификация «Skins Trucks ATS by Genadii» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 122
     },
     {
@@ -2232,7 +2122,6 @@
         "trailer-pack-flatbed"
       ],
       "dlcs": [],
-      "description": "Модификация «Trucks&Trailers Wheels» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 123
     },
     {
@@ -2264,7 +2153,6 @@
         "trailer-pack-flatbed"
       ],
       "dlcs": [],
-      "description": "Модификация «Trucks&Trailers Flarepack» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 124
     },
     {
@@ -2280,7 +2168,6 @@
       "version": "1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3677744118",
       "image": "/img/combo-builder/584abc40ed10db02fd23ecd25ee12f696c4481a28f41d5cf28f6641fdbe28128.jpg",
-      "description": "Модификация «snow chains» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 125
     },
     {
@@ -2296,7 +2183,6 @@
       "version": "1.04",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2646423554",
       "image": "/img/combo-builder/a9f0b94b010d18a39af308d7b6699c8c5914f6d5982344b3edb5b93e0d1dbd7a.jpg",
-      "description": "Модификация «Dirt tires and rims pack» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 126
     },
     {
@@ -2312,7 +2198,6 @@
       "version": "1.62.x",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3094474495",
       "image": "/img/combo-builder/7b6884346ea89ff0e5ac27ad6d0ee3cc479a509495ce9344e3c02707ad93b60c.jpg",
-      "description": "Модификация «Michelin Tires Pack» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 127
     },
     {
@@ -2328,7 +2213,6 @@
       "version": "1.10.4",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=651067966",
       "image": "/img/combo-builder/91ad51c7ef51a3b330bde3521d83a104bedbca550166c1108001104775918eb3.jpg",
-      "description": "Модификация «[SCR] Smarty's Wheel Pack» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 128
     },
     {
@@ -2344,7 +2228,6 @@
       "version": "3.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=646589577",
       "image": "/img/combo-builder/0d9a41a19477235409092fdb3064e9dec0540a295ed0790f17b864d8a31cf94d.jpg",
-      "description": "Модификация «Real Tires Mod» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 129
     },
     {
@@ -2360,7 +2243,6 @@
       "version": "1.4",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1503396840",
       "image": "/img/combo-builder/01d83588c42fb91e848b5be3b04496898faa42b335fce83136634a5ec4c59b63.jpg",
-      "description": "Модификация «Real Trailer Tyres Mod» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 130
     },
     {
@@ -2377,7 +2259,6 @@
       "version": "9.5",
       "link": "https://byjonruda.ru/usa-trailer-pack.html",
       "image": "/img/combo-builder/44312e71126a8310b81b13c43e8bd9f7633a8ddbd31cbba586d2a7abb8606e8f.jpg",
-      "description": "Модификация «Trailer Pack Flatbed» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 131
     },
     {
@@ -2394,7 +2275,6 @@
       "version": "9.5",
       "link": "https://byjonruda.ru/usa-trailer-pack.html",
       "image": "/img/combo-builder/62ae44c1172904a0a6bcc1e1eec1b65a4bf51c1e4b216619fbc17300296e4ce9.jpg",
-      "description": "Модификация «Trailer Pack Hopper Bottom» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 132
     },
     {
@@ -2411,7 +2291,6 @@
       "version": "9.5",
       "link": "https://byjonruda.ru/usa-trailer-pack.html",
       "image": "/img/combo-builder/53fc1cf7e798c418f24dd3df25a92ee956eee2f49619698a4cdb40a6675cd7f7.jpg",
-      "description": "Модификация «Trailer Pack Refrigerators» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 133
     },
     {
@@ -2428,7 +2307,6 @@
       "version": "9.5",
       "link": "https://byjonruda.ru/usa-trailer-pack.html",
       "image": "/img/combo-builder/0aea7d4ae484148d44a300d06c0b93139b6f35a02ae3a9a81846eb663f6aee0d.jpg",
-      "description": "Модификация «Trailer Pack Tanker» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 134
     },
     {
@@ -2445,7 +2323,6 @@
       "version": "9.5",
       "link": "https://byjonruda.ru/usa-trailer-pack.html",
       "image": "/img/combo-builder/87015dedaa2b820b6f78410a8fa68db071ff48c9d6ff6e7abad1f1c39437774c.jpg",
-      "description": "Модификация «Trailer Pack LowBoy» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 135
     },
     {
@@ -2462,7 +2339,6 @@
       "version": "9.5",
       "link": "https://byjonruda.ru/usa-trailer-pack.html",
       "image": "/img/combo-builder/a8180eb237fb3f6c8036cc344c87d392ec6e0815fb09762422b7c7f71ba7c21b.jpg",
-      "description": "Модификация «Trailer Pack Livestock» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 136
     },
     {
@@ -2478,7 +2354,6 @@
       "version": "6.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3811154605",
       "image": "/img/combo-builder/f8ebd579f623e8c54b30222f58185debead32727d9fcff83d961285e3572a86e.jpg",
-      "description": "Модификация «Volkswagen Parati 1994» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 137
     },
     {
@@ -2494,7 +2369,6 @@
       "version": "1.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3718803229",
       "image": "/img/combo-builder/4aba783115c910bd6b92d05b9d745dddfe2396dcc0434b9caf181143e21d094b.jpg",
-      "description": "Модификация «Dodge L700» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 138
     },
     {
@@ -2510,7 +2384,6 @@
       "version": "13.1",
       "link": "https://truckymods.io/american-truck-simulator/trucks/2022-harley-davidson-international-lonestar",
       "image": "/img/combo-builder/a87f707f82569bad3578d7c3b70364b753ca657ccd54f9720696b9ba893b465a.jpg",
-      "description": "Модификация «Harley-Davidson International LoneStar» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 139
     },
     {
@@ -2529,7 +2402,6 @@
         "freightshaker-classic-xl-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Classic XL Personal KEY» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 140
     },
     {
@@ -2546,7 +2418,6 @@
       "version": "10.11",
       "link": "https://byjonruda.ru/freightshaker-classic-xl.html",
       "image": "/img/combo-builder/cd28eacf46fc7b58d5e58f60205a748d27549f426f7d9f0984bf303dd6859c82.jpg",
-      "description": "Модификация «Classic XL» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 141
     },
     {
@@ -2565,7 +2436,6 @@
         "freightshaker-cascadia-125-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Cascadia 125 Personal KEY» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 142
     },
     {
@@ -2582,7 +2452,6 @@
       "version": "3.13",
       "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
       "image": "/img/combo-builder/aacc78d10a0d6986414bf2188a348dc27a95d3eda840c0bb65025f7664149bfd.jpg",
-      "description": "Модификация «Cascadia 125» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 143
     },
     {
@@ -2601,7 +2470,6 @@
         "freightshaker-coronado-sd"
       ],
       "dlcs": [],
-      "description": "Модификация «Freightshaker Coronado SD Personal KEY» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 144
     },
     {
@@ -2618,7 +2486,6 @@
       "version": "3.5",
       "link": "https://byjonruda.ru/freightshaker-coronado-sd.html",
       "image": "/img/combo-builder/8a8910f0a94dd3ce8be6fc0966e61ea81b1759dfeb4d19bd898b673e148f5bb0.jpg",
-      "description": "Модификация «Freightshaker Coronado SD» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 145
     },
     {
@@ -2637,7 +2504,6 @@
         "pete-362-cabover"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 362 Cabover Personal KEY» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 146
     },
     {
@@ -2654,7 +2520,6 @@
       "version": "5.11",
       "link": "https://byjonruda.ru/pete.html",
       "image": "/img/combo-builder/dd195fb61bd89bdca713f243b0e0363c834895de77bbe83ad411c6df59805470.jpg",
-      "description": "Модификация «Pete 362 Cabover» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 147
     },
     {
@@ -2673,7 +2538,6 @@
         "pete-389-glider"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 389 Glider Personal KEY» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 148
     },
     {
@@ -2690,7 +2554,6 @@
       "version": "7.11",
       "link": "https://byjonruda.ru/pete-389-glider.html",
       "image": "/img/combo-builder/1b269739be22515882f50e0dc9ebd0df089392e99cbb086cdd16e73442317e7a.jpg",
-      "description": "Модификация «Pete 389 Glider» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 149
     },
     {
@@ -2709,7 +2572,6 @@
         "pete-579"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 579 NG Personal KEY» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 150
     },
     {
@@ -2726,7 +2588,6 @@
       "version": "2.10",
       "link": "https://byjonruda.ru/pete-579.html",
       "image": "/img/combo-builder/ef528c081340cfc764eae88ab6bbe33e6fc9a4df6c2dd7c999f9320780ba0f0e.jpg",
-      "description": "Модификация «Pete 579 NG» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 151
     },
     {
@@ -2743,7 +2604,6 @@
       "version": "9.17",
       "link": "https://byjonruda.ru/kw-w-900.html",
       "image": "/img/combo-builder/ef24d8f501c99f28b268ad5c6274bfc03bc3d4f31cd211d439a4bc9bac008259.jpg",
-      "description": "Модификация «KW W900L H-WAY KILLER» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 152
     },
     {
@@ -2759,7 +2619,6 @@
       "version": "2.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3811897153",
       "image": "/img/combo-builder/aae746859b143d8044962779b5db9103132b64d56be587e40133ee855675ea3c.jpg",
-      "description": "Модификация «Ford Tuning Playground» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 153
     },
     {
@@ -2775,7 +2634,6 @@
       "version": "v2.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810706966",
       "image": "/img/combo-builder/a1126db5b69bb247f8317fe5095c95dd338483b6930d7e86256caef374d3b0c0.jpg",
-      "description": "Модификация «SCS Mustang TuningPack» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 154
     },
     {
@@ -2791,7 +2649,6 @@
       "version": "1.81",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3813130655",
       "image": "/img/combo-builder/63a4555a2391559440f3bc4286009e92d850143f5d34eb70d5ddb922fa6284da.jpg",
-      "description": "Модификация «F150 Accessories» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 155
     },
     {
@@ -2810,7 +2667,6 @@
         "freightshaker-classic-xl-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Classic XL Realistic Headlights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 156
     },
     {
@@ -2829,7 +2685,6 @@
         "freightshaker-cascadia-125-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Cascadia 125 Realistic Headlights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 157
     },
     {
@@ -2848,7 +2703,6 @@
         "pete-362-cabover"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 362 Cabover Realistic Headlights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 158
     },
     {
@@ -2867,7 +2721,6 @@
         "pete-389-glider"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 389 Glider Realistic Headlights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 159
     },
     {
@@ -2886,7 +2739,6 @@
         "kw-w900-highway-killer"
       ],
       "dlcs": [],
-      "description": "Модификация «KW W900L H-WAY KILLER Realistic Headlights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 160
     },
     {
@@ -2902,7 +2754,6 @@
       "version": "2.6",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2785630706",
       "image": "/img/combo-builder/62c06334c7c607208d0b4b42a3b54d79a718dd907826e52d906037b4e3171644.jpg",
-      "description": "Модификация «International 9900i Add-ons» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 161
     },
     {
@@ -2918,7 +2769,6 @@
       "version": "1.2.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2992696180",
       "image": "/img/combo-builder/03145418c1f32299e6e0367b3b60222aa22133cda25cabedc876bbffc336658e.jpg",
-      "description": "Модификация «Western Star 49X Add-ons» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 162
     },
     {
@@ -2934,7 +2784,6 @@
       "version": "2.3.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2848969429",
       "image": "/img/combo-builder/a32ece92dbe65cb31de792bb6527308baea63e89509a0cbcbf61f932e455dfd6.jpg",
-      "description": "Модификация «Western Star 57X Rework» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 163
     },
     {
@@ -2950,7 +2799,6 @@
       "version": "1.7",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2927899286",
       "image": "/img/combo-builder/8029591b80125912fc864ec483423feb3e3a61c179f0778aed887a3babe9850b.jpg",
-      "description": "Модификация «Western Star 5700XE Rework» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 164
     },
     {
@@ -2966,7 +2814,6 @@
       "version": "1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3349451331",
       "image": "/img/combo-builder/2679ffc8f36fb06d4f8f0409b6edacb3e710bfa8dbc0f0b94fc2c29b5d87c5da.jpg",
-      "description": "Модификация «Freightliner Cascadia 2024 Add-ons» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 165
     },
     {
@@ -2982,7 +2829,6 @@
       "version": "2.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2942319431",
       "image": "/img/combo-builder/fd5786b385112373b3f1d0c34066d67659a103ecad1780bbc8faa96f14394d16.jpg",
-      "description": "Модификация «Kenworth W900L_LE Add-ons» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 166
     },
     {
@@ -2998,7 +2844,6 @@
       "version": "1.4.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3121862946",
       "image": "/img/combo-builder/1c6297e70e6bc1bcb9539a6fbe71a5858ee6877ce41f347432a32a169d800302.jpg",
-      "description": "Модификация «Kenworth T680 Add-ons» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 167
     },
     {
@@ -3014,7 +2859,6 @@
       "version": "2.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2643227032",
       "image": "/img/combo-builder/e7d4b6f1bf34669d81d63aa8f10fb5e805f9ed3e5cb88853281107d3e3ae66d6.jpg",
-      "description": "Модификация «Peterbilt 389 Rework» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 168
     },
     {
@@ -3030,7 +2874,6 @@
       "version": "1.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3727676287",
       "image": "/img/combo-builder/92ed840d86bd0683569379c67280208e1a16fb3f290f185a5693c90dafb90cc1.jpg",
-      "description": "Модификация «Volvo VNL 2025 Add-ons» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 169
     },
     {
@@ -3046,7 +2889,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3252682276",
       "image": "/img/combo-builder/57ac76d229aa72cfba2d2f34acdf3607d81449e91d9aa51663d26206c330cf0f.jpg",
-      "description": "Модификация «U.S. States flags window flags and front flags» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 170
     },
     {
@@ -3062,7 +2904,6 @@
       "version": "1.5.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3812205878",
       "image": "/img/combo-builder/7a5211fd10f904615561066546908176b8103f8c70c88616fef2de5965b0f79f.jpg",
-      "description": "Модификация «Road Trip Ford Underglow Lights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 171
     },
     {
@@ -3078,7 +2919,6 @@
       "version": "2.0.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3813634238",
       "image": "/img/combo-builder/1f55c392a0814e25a51020c0111220fe79a1a631837c1d4df6840701e8d6c61c.jpg",
-      "description": "Модификация «Road Trip Ford Cabin Lights» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 172
     },
     {
@@ -3094,7 +2934,6 @@
       "version": "v1.4",
       "link": "https://truckymods.io/american-truck-simulator/exterior-accessories/ats-truck-underglow-826835",
       "image": "/img/combo-builder/9885200ac2a1a154addf5f7d2246a1a67179a5f6841b89caa1ac02bbf7023224.jpg",
-      "description": "Модификация «Truck Underglow» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 173
     },
     {
@@ -3110,7 +2949,6 @@
       "version": "1.7",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1561439719",
       "image": "/img/combo-builder/f5a4f15780b268a1775b719429d9f4bc03e0879c06ed59be8bbb400b51d5a0c3.jpg",
-      "description": "Модификация «Hella Rallye 3000» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 174
     },
     {
@@ -3126,7 +2964,6 @@
       "version": "1.9",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1317972379",
       "image": "/img/combo-builder/a9c8031bf352d13340378fd8ad08ca7a3acb7e50f6d3e0b0f4b10efb15a9a9d9.jpg",
-      "description": "Модификация «Boreman LED Marker Lights Pack» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 175
     },
     {
@@ -3141,7 +2978,6 @@
       "addedAt": "2026-11-17",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2689138403",
       "image": "/img/combo-builder/202ef13968579749bfc2b80ac23ed6bf0034333773657ef80993b24317bdcb97.jpg",
-      "description": "Модификация «Ali Arc bull bars and bumpers» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 176
     },
     {
@@ -3157,7 +2993,6 @@
       "version": "1.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3062558580",
       "image": "/img/combo-builder/e66184a022ac3f0e255e1b88f1977634755588442788e8bbf108627767df5ae3.jpg",
-      "description": "Модификация «Crayon Pearl Paint Job Mod» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 177
     },
     {
@@ -3173,7 +3008,6 @@
       "version": "1.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3046049511",
       "image": "/img/combo-builder/6b729d5233fde5fa8f06913b32dbe96f536a02faeade6fafa9cae64e3a9208d9.jpg",
-      "description": "Модификация «Crayon Metallic Paint Job Mod» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 178
     },
     {
@@ -3189,7 +3023,6 @@
       "version": "1.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3062566662",
       "image": "/img/combo-builder/aa47fe911d2abf7172b3090712061b981cbc642a8d8f09f55ec3e81c1d4f5d3e.jpg",
-      "description": "Модификация «Crayon Gel Paint Job Mod» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 179
     },
     {
@@ -3205,7 +3038,6 @@
       "version": "1.7",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3636229199",
       "image": "/img/combo-builder/389243a7940cf5975d707569496ca426851f69c8030663499ef31c4084a87158.jpg",
-      "description": "Модификация «Realistic Custom Metallic Paint Mod» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 180
     },
     {
@@ -3221,7 +3053,6 @@
       "version": "3.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=652225351",
       "image": "/img/combo-builder/aa2ab3bb0189608442a2db142da8c694570f4f9ce981c54e13bf9e8e25551669.jpg",
-      "description": "Модификация «SiSL's Mega Pack» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 181
     },
     {
@@ -3241,7 +3072,6 @@
         "freightshaker-classic-xl-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Classic XL SISL Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 182
     },
     {
@@ -3260,7 +3090,6 @@
         "freightshaker-classic-xl-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Classic XL DLC Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 183
     },
     {
@@ -3279,7 +3108,6 @@
         "freightshaker-classic-xl-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Classic XL DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 184
     },
     {
@@ -3299,7 +3127,6 @@
         "freightshaker-cascadia-125-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Cascadia 125 SISL Pack Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 185
     },
     {
@@ -3318,7 +3145,6 @@
         "freightshaker-cascadia-125-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Cascadia 125 DLC Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 186
     },
     {
@@ -3335,7 +3161,6 @@
       "version": "3.0",
       "link": "https://byjonruda.ru/freightshaker-cascadia-125.html",
       "image": "/img/combo-builder/a07ddf84654b3041f062d347d6920c76429c8e658275c3717b154a3f6934da63.jpg",
-      "description": "Модификация «Cascadia 125 DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 187
     },
     {
@@ -3355,7 +3180,6 @@
         "freightshaker-coronado-sd"
       ],
       "dlcs": [],
-      "description": "Модификация «Freightshaker Coronado SD SISL Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 188
     },
     {
@@ -3374,7 +3198,6 @@
         "freightshaker-coronado-sd"
       ],
       "dlcs": [],
-      "description": "Модификация «Freightshaker Coronado SD DLC Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 189
     },
     {
@@ -3393,7 +3216,6 @@
         "freightshaker-coronado-sd"
       ],
       "dlcs": [],
-      "description": "Модификация «Freightshaker Coronado SD DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 190
     },
     {
@@ -3413,7 +3235,6 @@
         "pete-362-cabover"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 362 Cabover SISL Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 191
     },
     {
@@ -3432,7 +3253,6 @@
         "pete-362-cabover"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 362 Cabover DLC Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 192
     },
     {
@@ -3451,7 +3271,6 @@
         "pete-362-cabover"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 362 Cabover DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 193
     },
     {
@@ -3471,7 +3290,6 @@
         "pete-389-glider"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 389 Glider SISL's Pack Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 194
     },
     {
@@ -3490,7 +3308,6 @@
         "pete-389-glider"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 389 Glider DLC Cabin Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 195
     },
     {
@@ -3509,7 +3326,6 @@
         "pete-389-glider"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 389 Glider DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 196
     },
     {
@@ -3529,7 +3345,6 @@
         "kw-w900-highway-killer"
       ],
       "dlcs": [],
-      "description": "Модификация «KW W900 H-WAY KILLER SISL Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 197
     },
     {
@@ -3548,7 +3363,6 @@
         "kw-w900-highway-killer"
       ],
       "dlcs": [],
-      "description": "Модификация «KW W900 H-WAY KILLER DLC Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 198
     },
     {
@@ -3567,7 +3381,6 @@
         "kw-w900-highway-killer"
       ],
       "dlcs": [],
-      "description": "Модификация «KW W900L H-WAY KILLER DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 199
     },
     {
@@ -3587,7 +3400,6 @@
         "pete-579"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 579 NG SISL Pack Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 200
     },
     {
@@ -3606,7 +3418,6 @@
         "pete-579"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 579 NG DLC Accessories Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 201
     },
     {
@@ -3625,7 +3436,6 @@
         "pete-579"
       ],
       "dlcs": [],
-      "description": "Модификация «Pete 579 NG DLC Steering Wheels Compatibility» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 202
     },
     {
@@ -3641,7 +3451,6 @@
       "version": "1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3635119121",
       "image": "/img/combo-builder/61a511d8fb20902df3103300f956ce46e18a94f14053bd3b89ae1ef4a7213b64.jpg",
-      "description": "Модификация «just_clutter_revisited» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 203
     },
     {
@@ -3658,7 +3467,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Portable Humidifier» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 204
     },
     {
@@ -3674,7 +3482,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?l=russian&id=3832671143",
       "image": "/img/combo-builder/87b6acf84d0e26bb2fb552401181fa81c2fffbbea3c0135892d03c7233452166.jpg",
-      "description": "Модификация «Knight Kitty Interior Toy» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 205
     },
     {
@@ -3690,7 +3497,6 @@
       "version": "1.25",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3493702177",
       "image": "/img/combo-builder/e8c2739d5828df11085d13829d76dea0ebe260e21af4b98a174cd68bc907e7ba.jpg",
-      "description": "Модификация «RaudUlfur's Cabin Accessories» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 206
     },
     {
@@ -3706,7 +3512,6 @@
       "version": "1.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3652820188",
       "image": "/img/combo-builder/33127417295cea66f08bbca0a9b2f0454a672f18513f6d004662e2b0de325850.jpg",
-      "description": "Модификация «Peterbilt New Steering Wheel» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 207
     },
     {
@@ -3722,7 +3527,6 @@
       "version": "1.49.1-build-1703885077",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2864330749",
       "image": "/img/combo-builder/9d9d593bf4609045d29f97245e855a2165c58c89e418adab2d1fbe3afec1651c.jpg",
-      "description": "Модификация «Custom Steering Wheel» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 208
     },
     {
@@ -3738,7 +3542,6 @@
       "version": "2026.03.22 - 1901",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2659093914",
       "image": "/img/combo-builder/b9ef08330f5e2106902b9fdcc96b9c488aded437900f7ecb77e5d791d45b0b4d.jpg",
-      "description": "Модификация «ATS Smart 20IN Steering Wheels (Optional)» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 209
     },
     {
@@ -3754,7 +3557,6 @@
       "version": "2324",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2566384806",
       "image": "/img/combo-builder/87409030b8b769e71fe05c3b9d6e03149986c45af9983a6a4f88b4153e5df165.jpg",
-      "description": "Модификация «Interior Cabin Lights (ATS)» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 210
     },
     {
@@ -3770,7 +3572,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3340573010",
       "image": "/img/combo-builder/1e2b39f6a627275dd6a7f2cf04e61d6bc3f1d602314a6e80edb40d1ad7815a4a.jpg",
-      "description": "Модификация «Mack Pinnacle Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 211
     },
     {
@@ -3786,7 +3587,6 @@
       "version": "1.6",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2800103618",
       "image": "/img/combo-builder/1e2b39f6a627275dd6a7f2cf04e61d6bc3f1d602314a6e80edb40d1ad7815a4a.jpg",
-      "description": "Модификация «Mack Anthem Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 212
     },
     {
@@ -3802,7 +3602,6 @@
       "version": "1.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2934367828",
       "image": "/img/combo-builder/7c6fd88bb39afed673df70d840598ddcb10437e213848536aab17cc356f7215d.jpg",
-      "description": "Модификация «Western Star 5700XE Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 213
     },
     {
@@ -3818,7 +3617,6 @@
       "version": "1.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3127200805",
       "image": "/img/combo-builder/286a40cfb719d2e717d98f37c3c295369711e43dfce8c6ef816d294a5e2163cd.jpg",
-      "description": "Модификация «Peterbilt 389 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 214
     },
     {
@@ -3834,7 +3632,6 @@
       "version": "1.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2943831386",
       "image": "/img/combo-builder/cd4c244fed6609bd14eb01041b27830a2724b680f6d2c59c0baff0770d320d02.jpg",
-      "description": "Модификация «Kenworth W900 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 215
     },
     {
@@ -3850,7 +3647,6 @@
       "version": "1.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2982889692",
       "image": "/img/combo-builder/abfbea89eb048d8ff4459c68563aacbd0cc2c29b1b99c10caba52535a6f3431d.jpg",
-      "description": "Модификация «Volvo VNL 2018 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 216
     },
     {
@@ -3866,7 +3662,6 @@
       "version": "1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2801915483",
       "image": "/img/combo-builder/f054ddd988a61b335ee5788797d21bf65dab6064e4d5cc0e4cd985c1fc17c19e.jpg",
-      "description": "Модификация «Western Star 49X Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 217
     },
     {
@@ -3882,7 +3677,6 @@
       "version": "1.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2852534982",
       "image": "/img/combo-builder/d3da6a15e3d3b4bb568792b05f4ad8512b30be43b61be61aaf9ac41cff4e3a62.jpg",
-      "description": "Модификация «Kenworth T680 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 218
     },
     {
@@ -3898,7 +3692,6 @@
       "version": "1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2852646840",
       "image": "/img/combo-builder/4780447abef6ab3555464e9f6fe7ab916031bcea6c37cabd5d50d5d983494c07.jpg",
-      "description": "Модификация «Kenworth W990 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 219
     },
     {
@@ -3914,7 +3707,6 @@
       "version": "3.7",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2800373758",
       "image": "/img/combo-builder/c0aa3fd6bf592cb84798ecfc73a451c98ec5911abcaf0f07eb2b6b59d8e2548b.jpg",
-      "description": "Модификация «Freightliner Cascadia 2019 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 220
     },
     {
@@ -3930,7 +3722,6 @@
       "version": "1.8",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3368806734",
       "image": "/img/combo-builder/828ccaa12d4bb4dbd04a41c468d498b41128e1b395385e9a8cee50e20332b5bf.jpg",
-      "description": "Модификация «Kenworth T680 Next Gen Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 221
     },
     {
@@ -3946,7 +3737,6 @@
       "version": "1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2845875966",
       "image": "/img/combo-builder/ffeb19fded037f3ab6ff3da6485c49fc7b601aba3a65e6b5a3dd56e74868411a.jpg",
-      "description": "Модификация «Western Star 57X Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 222
     },
     {
@@ -3962,7 +3752,6 @@
       "version": "1.5",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2800180030",
       "image": "/img/combo-builder/ffeb19fded037f3ab6ff3da6485c49fc7b601aba3a65e6b5a3dd56e74868411a.jpg",
-      "description": "Модификация «International 9900i Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 223
     },
     {
@@ -3978,7 +3767,6 @@
       "version": "1.3",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3355811573",
       "image": "/img/combo-builder/af74bfd249c43c7d866f0af146687aea53ff6b30c5a7f2bb0e92cd4568a95fc6.jpg",
-      "description": "Модификация «Freightliner Cascadia 2024 Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 224
     },
     {
@@ -3994,7 +3782,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3474701860",
       "image": "/img/combo-builder/29f332c3da2532bcf0008e073a93f093fe37645ab7249b8e26a789d0d614e511.jpg",
-      "description": "Модификация «International LT Improved Dashboard» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 225
     },
     {
@@ -4010,7 +3797,6 @@
       "version": "1.00",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3824402818",
       "image": "/img/combo-builder/f72889353f4d7c9bc8ef027e2076a431d14ebd14ea11729637474863006c546c.jpg",
-      "description": "Модификация «Peterbilt 389 Dashboard Add-on» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 226
     },
     {
@@ -4026,7 +3812,6 @@
       "version": "1.01",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3821613572",
       "image": "/img/combo-builder/d43a77c64104db0e9c441820730922a135d475729018ee72619027c4280327ad.jpg",
-      "description": "Модификация «Western Star 57X Dashboard Add-on» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 227
     },
     {
@@ -4042,7 +3827,6 @@
       "version": "1.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3823740413",
       "image": "/img/combo-builder/cdbc77ad928adb3d0e6864d960401753092341575e3879b12fb2b4f3152e00f0.jpg",
-      "description": "Модификация «Kenworth W900 + T680 Dashboard Add-on» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 228
     },
     {
@@ -4058,7 +3842,6 @@
       "version": "1.01",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3821605155",
       "image": "/img/combo-builder/bd3b70c4a3b10e1dc409d20893563d4ea26a82ec9ba5d72d224f88bd5f1af318.jpg",
-      "description": "Модификация «Volvo VNL 2025 Dashboard Add-on» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 229
     },
     {
@@ -4074,7 +3857,6 @@
       "version": "1.01",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3821616108",
       "image": "/img/combo-builder/ff1826f5aff500df29e692b01c65a8ef02218573b2fc1bde958c5c898d13d04a.jpg",
-      "description": "Модификация «Freightliner Cascadia Dashboard Add-on» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 230
     },
     {
@@ -4090,7 +3872,6 @@
       "version": "1.7",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810875899",
       "image": "/img/combo-builder/7ecd522cce0b1dd1320e2598e623525577f6d51d55a0645588a3b9d9373b08ad.jpg",
-      "description": "Модификация «Road Trip Visible Speed Limit» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 231
     },
     {
@@ -4106,7 +3887,6 @@
       "version": "1.4",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3228994099",
       "image": "/img/combo-builder/f3d2b7e8b352ee77b7a88f98df08e859b52b20317a056043d6e1ee895ca62a0a.jpg",
-      "description": "Модификация «ETA and rest on GPS - SCS Vehicles» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 232
     },
     {
@@ -4122,7 +3902,6 @@
       "version": "1.4.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3816117145",
       "image": "/img/combo-builder/f8fa1a31b1a58ce5f5e69f55be709126a5ba21fa92e3d322af97cc8dac39a332.jpg",
-      "description": "Модификация «Dash GPS Displays - Semi Trucks» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 233
     },
     {
@@ -4138,7 +3917,6 @@
       "version": "1.7.1",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3812249871",
       "image": "/img/combo-builder/48b659667cfb8aec2112c3eccc85cf58b75d9c0f80bbd0c10352470379434d68.jpg",
-      "description": "Модификация «Dash GPS Displays - 1967 Mustang» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 234
     },
     {
@@ -4154,7 +3932,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3546153733",
       "image": "/img/combo-builder/7194899cdfd4be731327b97f87a28076be94e4855452a8c6142b2156b15d28ff.jpg",
-      "description": "Модификация «YTHQ GPS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 235
     },
     {
@@ -4170,7 +3947,6 @@
       "version": "1.62.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3134138996",
       "image": "/img/combo-builder/f86a920962ce57f7a0a02983e501a10003416b4e9f0ea0a2c6c49b9a084b95f1.jpg",
-      "description": "Модификация «Tjs ATS HD GPS» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 236
     },
     {
@@ -4186,7 +3962,6 @@
       "version": "1.16",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3384905355",
       "image": "/img/combo-builder/ae18a403d3a8c9be896552ebbff3b3c0c2e9e58b3992484e5af7df4c67087df8.jpg",
-      "description": "Модификация «GPS/PC» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 237
     },
     {
@@ -4202,7 +3977,6 @@
       "version": "16.11",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3841073484",
       "image": "/img/combo-builder/872d17f3f20229c3e0e663f2cd338c0efa55a7042714b9db5c6396022d3e277b.jpg",
-      "description": "Модификация «ATS Animated Co-Driver Pack Optional» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 238
     },
     {
@@ -4218,7 +3992,6 @@
       "version": "3.2",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2862412918",
       "image": "/img/combo-builder/a5a6174ee1cccf8c0c2f64083add9abd75e6887e7479166bd0153bc53b5b658e.jpg",
-      "description": "Модификация «Fictional Billboards» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 239
     },
     {
@@ -4234,7 +4007,6 @@
       "version": "2026.10.05",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2814106555",
       "image": "/img/combo-builder/98724d207aa9b1ac634cc6bcf62c44ffe376f48a81a86a2c83d7b7d9d3a473e3.jpg",
-      "description": "Модификация «Real World Billboards» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 240
     },
     {
@@ -4250,7 +4022,6 @@
       "version": "1.7",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2780427783",
       "image": "/img/combo-builder/a5c1498f39d253f87d05d2ad5833798ca9fee57f65515dd789dc0ca111dd1023.jpg",
-      "description": "Модификация «Real World Signs & Logos» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 241
     },
     {
@@ -4266,7 +4037,6 @@
       "version": "2026.10.16",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789649695",
       "image": "/img/combo-builder/e3d2550cd6070717b2cebded58231838f19cdccc95fe821a3482f6bc6fc9e1d5.jpg",
-      "description": "Модификация «Real World Plates» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 242
     },
     {
@@ -4282,7 +4052,6 @@
       "version": "1.6.2a",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3469386766",
       "image": "/img/combo-builder/f9ff3767b13993d3dc800d34f7f940f09d11bc3f1c1b68962bb67c10ffddc6df.jpg",
-      "description": "Модификация «Improved Road Reflections» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 243
     },
     {
@@ -4299,7 +4068,6 @@
       "version": "1.4",
       "link": "https://store.n-artworks.workers.dev/ats",
       "image": "/img/combo-builder/dd9ed3dd0debd366afd9d5830aa158985caf8a316149ab4e25d934d8a39d0825.jpg",
-      "description": "Модификация «PNG: PE-BASE» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 244
     },
     {
@@ -4318,7 +4086,6 @@
         "png-pe-base"
       ],
       "dlcs": [],
-      "description": "Модификация «PNG: PE-WEATHER» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 245
     },
     {
@@ -4338,7 +4105,6 @@
         "png-pe-base"
       ],
       "dlcs": [],
-      "description": "Модификация «PNG: PE-FOGGY WEATHER» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 246
     },
     {
@@ -4358,7 +4124,6 @@
         "png-pe-base"
       ],
       "dlcs": [],
-      "description": "Модификация «PNG: PE-AUTUMN» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 247
     },
     {
@@ -4378,7 +4143,6 @@
         "png-pe-base"
       ],
       "dlcs": [],
-      "description": "Модификация «PNG: PE-RAIN» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 248
     },
     {
@@ -4404,7 +4168,6 @@
         "freightshaker-classic-xl-ats"
       ],
       "dlcs": [],
-      "description": "Модификация «Engine Sounds» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 249
     },
     {
@@ -4420,7 +4183,6 @@
       "version": "1.0",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810526341",
       "image": "/img/combo-builder/3994a55306967d84946b3ffc053ead36f185cab132bbcea3310ba28ad64fb807.jpg",
-      "description": "Модификация «Ford Mustang Engine and transmission pack» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 250
     },
     {
@@ -4437,7 +4199,6 @@
       "version": "02.09",
       "link": "https://boosty.to/qupersimulator/posts/b24e3053-e1da-42af-8c20-8ad8e1ca0a4c",
       "image": "/img/combo-builder/522f6fca79faa90d596a4be4320dc368703e564750f2f2f8f098a2d3d7691644.jpg",
-      "description": "Модификация «QS Sound pack optional 28.05» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 251
     },
     {
@@ -4454,7 +4215,6 @@
       "version": "1.0.1-G5",
       "link": "https://www.zeemods.com/p/volvo-vnl-interior-and-effects-pack/",
       "image": "/img/combo-builder/8da13d6b527b533085059aaa4ee2b30e4849df00389481fd59bfa76183b49c59.jpg",
-      "description": "Модификация «Volvo Interior & Effects Pack» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 252
     },
     {
@@ -4471,7 +4231,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Kenworth Interior & Effect Sound Pack» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 253
     },
     {
@@ -4488,7 +4247,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Peterbilt Interior & Effect Sound Pack» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 254
     },
     {
@@ -4505,7 +4263,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Freightliner I&E Sound Pack» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 255
     },
     {
@@ -4522,7 +4279,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Western Star I&E Sound Pack» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 256
     },
     {
@@ -4539,7 +4295,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Wind, Tire & Trailer Effects Pack» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 257
     },
     {
@@ -4556,7 +4311,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Weather Sound & Effect Mod» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 258
     },
     {
@@ -4573,7 +4327,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Master Reverb Mod» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 259
     },
     {
@@ -4590,7 +4343,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «ZM Common Dependencies» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 260
     },
     {
@@ -4607,7 +4359,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Project Ultimate Weather 2.5» изменяет звуки, атмосферу или звуковые эффекты в American Truck Simulator, делая соответствующую часть игры разнообразнее.",
       "shareIndex": 261
     },
     {
@@ -4624,7 +4375,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Increased Road Speed Limit» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 262
     },
     {
@@ -4641,7 +4391,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Extended Traffic Light Timing» добавляет или изменяет транспорт, автомобили, грузовики, прицепы или дорожный трафик в American Truck Simulator.",
       "shareIndex": 263
     },
     {
@@ -4658,7 +4407,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Realistic Drivers» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 264
     },
     {
@@ -4675,7 +4423,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Flowing Fleets and Freight» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 265
     },
     {
@@ -4692,7 +4439,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Immersive External Cam + Infinite Zoom v1.1» добавляет или изменяет игровой контент в American Truck Simulator. Подробности зависят от версии и страницы загрузки мода.",
       "shareIndex": 266
     },
     {
@@ -4709,7 +4455,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Модификация «Real Logos for jon-ruda mods» добавляет или улучшает визуальные элементы, аксессуары, приборы, освещение или оформление в American Truck Simulator.",
       "shareIndex": 267
     },
     {
@@ -4726,7 +4471,6 @@
       ],
       "requires": [],
       "dlcs": [],
-      "description": "Карта «Trucksmap USA 1.7.1.62» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 268
     },
     {
@@ -4747,7 +4491,6 @@
         "reforma-megaresources"
       ],
       "dlcs": [],
-      "description": "Карта «Eastern Expansion» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 269
     },
     {
@@ -4766,7 +4509,6 @@
         "trucksmap-usa-1-7-1-62"
       ],
       "dlcs": [],
-      "description": "Карта «QS ATS Trucksmap GPS Fix» расширяет игровой мир American Truck Simulator и добавляет новые территории, дороги или города. Точный состав зависит от версии мода и указанных зависимостей.",
       "shareIndex": 270
     },
     {
@@ -4785,8 +4527,23 @@
         "more-american-cities-v1-1b"
       ],
       "dlcs": [],
-      "description": "Модификация «QS ATS More Cities Road Connection Fix» исправляет совместимость или отдельные ошибки в American Truck Simulator. Используйте её вместе с указанными в каталоге картами и соблюдайте порядок загрузки.",
       "shareIndex": 271
+    },
+    {
+      "id": "ats-realistic-road-speed-limit",
+      "title": "ATS Realistic Road Speed Limit",
+      "type": "map",
+      "link": "https://sharemods.com/ljo3k173sfv7/ATS_Realistic_Road_Speed_Limit.scs.html",
+      "description": "Настройте скоростные режимы ИИ-трафика в American Truck Simulator с учётом региональных правил. Мод обновляет профили ограничений скорости для штатов США, провинций и территорий Канады, а также регионов Мексики. Особенности - Региональные скоростные профили для ИИ-трафика. - Разные ограничения для городских, разделённых и скоростных дорог. - Учёт отдельных ограничений для грузовиков там, где это предусмотрено данными мода. - Дополнительные настройки поведения и вариативности скорости ИИ. Мод меняет скорость только ИИ-трафика. Дорожные знаки на карте и отображаемое ограничение скорости игрока не изменяются. Данные отражают общие региональные правила: фактический лимит на конкретном участке может отличаться из-за местных знаков и условий дороги.  Параметры вариативности скорости зависят от поведения игры и могут работать по-разному в разных версиях ATS.",
+      "version": "1.1.0",
+      "addedAt": "2026-11-18",
+      "paid": false,
+      "files": [
+        "ATS_Realistic_Road_Speed_Limit"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 273
     }
   ],
   "order": [
@@ -4808,9 +4565,9 @@
       "image": "/img/combo-builder/98ceb6a144c5f26201f718dec69c850f56545f57173c725dbd59806117396410.jpg"
     },
     {
-      "key": "More American Cities (v1.1b)",
+      "key": "More American Cities (v1.1c)",
       "name": "More American Cities",
-      "logVersion": "1.1b"
+      "logVersion": "1.1c"
     },
     {
       "key": "QS_ATS_More_Cities_Road_Connection_Fix",
@@ -5082,11 +4839,6 @@
       "logVersion": "0.2.1"
     },
     {
-      "key": "Reforma_OtherMaps_Patch_42_162",
-      "name": "Reforma OtherMaps Compatibility Patch 42.162",
-      "logVersion": "42.162"
-    },
-    {
       "key": "QS_ATS_Expansion_Garage_Fix",
       "name": "QS ATS Expansion Garage Fix",
       "logVersion": "0.1.0"
@@ -5102,9 +4854,14 @@
       "logVersion": "0.1.0"
     },
     {
+      "key": "Reforma_OtherMaps_Patch_42_162",
+      "name": "Reforma OtherMaps Compatibility Patch 42.162",
+      "logVersion": "42.162"
+    },
+    {
       "key": "QS_ATS_Map_Final_Fix",
       "name": "QS ATS Map Final Fix",
-      "logVersion": "0.3.4"
+      "logVersion": "0.3.5"
     },
     {
       "key": "National Beef Cargo Pack",
@@ -5149,7 +4906,7 @@
     {
       "key": "Sound Fixes Pack - ATS",
       "name": "Sound Fixes Pack 26.64",
-      "logVersion": "26.78"
+      "logVersion": "26.79"
     },
     {
       "key": "Lithuanian GPS Navigation ATS",
@@ -6159,6 +5916,11 @@
       "key": "Extended Traffic Light Timing",
       "name": "Extended Traffic Light Timing",
       "logVersion": "1.62.261102"
+    },
+    {
+      "key": "ATS_Realistic_Road_Speed_Limit",
+      "name": "ATS Realistic Road Speed Limit",
+      "logVersion": "1.1.0"
     },
     {
       "key": "Realistic Drivers",
