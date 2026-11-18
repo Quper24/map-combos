@@ -51,6 +51,11 @@
       "platform": "sharemods",
       "label": "ShareMods",
       "url": "https://sharemods.com/9wpgfkksanza/Quper_TruckKit.rar.html"
+    },
+    {
+      "platform": "github",
+      "label": "GitHub Releases",
+      "url": "https://github.com/Quper24/Quper-TruckKit/releases/tag/v0.3.1"
     }
   ],
   "videoIds": [],
