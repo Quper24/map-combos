@@ -174,6 +174,8 @@
   "Не удалось создать картинку порядка.": "Could not create the load order image.",
   "Авторасстановка полностью заменит список активных модов в скачанном профиле.": "Applying the order replaces the entire active mod list in the downloaded profile.",
   "Фильтр списка": "Filter list",
+  "Фильтр по типу": "Filter by type",
+  "Все типы": "All types",
   "Черновик сохранён в этом браузере.": "Draft saved in this browser.",
   "Хранилище браузера недоступно. Скачай черновик JSON.": "Browser storage is unavailable. Download the JSON draft.",
   "Сначала выбери игру и версию, затем импортируй профиль. Черновики каталогов сохраняются отдельно.": "Choose the game and version before importing a profile. Catalog drafts are saved separately.",

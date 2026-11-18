@@ -1007,6 +1007,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
   const [seedFiles, setSeedFiles] = useState(request.files);
   const [formRevision, setFormRevision] = useState(0);
   const [query, setQuery] = useState('');
+  const [typeFilter, setTypeFilter] = useState('');
   const [incompleteOnly, setIncompleteOnly] = useState(false);
   const entry = catalog.entries.find((item) => item.id === id);
   const byKey = new Map(catalog.order.map((file) => [file.key, file]));
@@ -1025,7 +1026,8 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
     .filter(
       (item) =>
         item.id === id ||
-        ((!incompleteOnly || item.notes.length > 0) &&
+        ((!typeFilter || item.type === typeFilter) &&
+          (!incompleteOnly || item.notes.length > 0) &&
           [item.title, t(item.title), item.id, ...item.files].some((value) =>
             value.toLowerCase().includes(search),
           )),
@@ -1046,12 +1048,25 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
       <h2 id="combo-entry-editor" tabIndex={-1}>
         {t('Карты, моды, фиксы и коннекторы')}
       </h2>
-      <Field
-        label="Фильтр списка"
-        type="search"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-      />
+      <div className={s.entryFilters}>
+        <Field
+          label="Фильтр списка"
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+        <label className={s.field}>
+          {t('Фильтр по типу')}
+          <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value)}>
+            <option value="">{t('Все типы')}</option>
+            {Object.entries(entryTypeLabels).map(([type, label]) => (
+              <option key={type} value={type}>
+                {t(label)}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
       <label>
         <input
           type="checkbox"
