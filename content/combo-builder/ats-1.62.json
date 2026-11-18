@@ -88,16 +88,16 @@
       "link": "https://sharemods.com/zmz36q4aqcwi/QS_ATS_Map_Final_Fix.scs.html",
       "image": "/img/combo-builder/aa7d23f9c73c9a8817448bf4904c4d5dcdd3becf3d860b7e8e80fe680217d45e.webp",
       "description": "Общие фиксы для сборки карт",
-      "version": "0.3.4",
+      "version": "0.3.5",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-16",
+      "updatedAt": "2026-11-18",
       "paid": false,
       "files": [
         "QS_ATS_Map_Final_Fix"
       ],
       "requires": [],
       "dlcs": [],
-      "shareIndex": 4
+      "shareIndex": 278
     },
     {
       "id": "nascar-map-combo-pack",
@@ -612,11 +612,11 @@
       "id": "qs-ats-expansion-fix",
       "title": "QS ATS Expansion Fix",
       "type": "fix",
-      "link": "https://sharemods.com/dkveaqulyact/QS_ATS_Expansion_Fix.scs.html",
+      "link": "https://sharemods.com/t56rf2m3gwle/QS_ATS_Expansion_Fix.scs.html",
       "image": "/img/combo-builder/bd8d2a4b93deeed4b95c3a3feb2d0c870c4f160ed9c935f075c83e38d5d361ed.webp",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "addedAt": "2026-11-15",
-      "updatedAt": "2026-11-16",
+      "updatedAt": "2026-11-18",
       "paid": false,
       "files": [
         "QS_ATS_Expansion_Fix"
@@ -625,7 +625,7 @@
         "ats-expansion"
       ],
       "dlcs": [],
-      "shareIndex": 32
+      "shareIndex": 279
     },
     {
       "id": "qs-ats-expansion-sierra-connection-fix",
@@ -786,9 +786,11 @@
       "files": [
         "Reforma_Sonora_Beta_1_5_162"
       ],
-      "requires": [],
+      "requires": [
+        "reforma"
+      ],
       "dlcs": [],
-      "shareIndex": 41
+      "shareIndex": 276
     },
     {
       "id": "more-american-cities-v1-1b",
@@ -910,10 +912,11 @@
       "id": "qs-ats-more-cities-sierra-connection-fix",
       "title": "QS ATS More Cities + Sierra Nevada Connection Fix",
       "type": "fix",
-      "link": "https://sharemods.com/r06qox94dnzc/QS_ATS_More_Cities_Sierra_Connection_Fix.scs.html",
+      "link": "https://sharemods.com/ctulry8zfh56/QS_ATS_More_Cities_Sierra_Connection_Fix.scs.html",
       "image": "/img/combo-builder/8e2bc6768c3361425815338178ba8f93fb9348f7578b9549d6c428804707c6bb.webp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "addedAt": "2026-11-16",
+      "updatedAt": "2026-11-18",
       "paid": false,
       "files": [
         "QS_ATS_More_Cities_Sierra_Connection_Fix"
@@ -923,7 +926,7 @@
         "more-american-cities-v1-1b"
       ],
       "dlcs": [],
-      "shareIndex": 48
+      "shareIndex": 280
     },
     {
       "id": "qs-ats-more-cities-trinity-connection-fix",
@@ -1087,18 +1090,20 @@
     },
     {
       "id": "sound-fixes-pack-ats",
-      "type": "mod",
       "title": "Sound Fixes Pack 26.64",
+      "type": "mod",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=830663438",
+      "image": "/img/combo-builder/4e40cc3fd84905218d82d1cbbcf749e412183b1b8f1412345ce7e411f9420e67.webp",
+      "version": "26.79",
+      "addedAt": "2026-11-17",
+      "updatedAt": "2026-11-18",
+      "paid": false,
       "files": [
         "Sound Fixes Pack - ATS"
       ],
       "requires": [],
       "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "26.78",
-      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=830663438",
-      "image": "/img/combo-builder/8794795ae01c677fd30b2cfb5318139ea51d33fdb98732fc876ed94451bc3649.jpg",
-      "shareIndex": 59
+      "shareIndex": 277
     },
     {
       "id": "lithuanian-gps-navigation-ats",
@@ -4614,7 +4619,7 @@
     {
       "key": "QS_ATS_More_Cities_Sierra_Connection_Fix",
       "name": "QS ATS More Cities + Sierra Nevada Connection Fix",
-      "logVersion": "0.1.0"
+      "logVersion": "0.1.1"
     },
     {
       "key": "Project_Better_Arizona_0.5.4_1.62",
@@ -4685,6 +4690,21 @@
       "logVersion": "0.82.162"
     },
     {
+      "key": "ATS_Expansion_v24.0_1.62",
+      "name": "ATS Expansion v24.0",
+      "logVersion": "24.0"
+    },
+    {
+      "key": "QS_ATS_Expansion_Fix",
+      "name": "QS ATS Expansion Fix",
+      "logVersion": "0.1.5"
+    },
+    {
+      "key": "QS_ATS_Expansion_Sierra_Connection_Fix",
+      "name": "QS ATS Expansion + Sierra Connection Fix",
+      "logVersion": "0.1.1"
+    },
+    {
       "key": "DNA_v1.8.2",
       "name": "Discover North America v1.8.2",
       "logVersion": "1.8.2"
@@ -4694,21 +4714,6 @@
       "name": "Eastern Expansion",
       "logVersion": "0.1.162",
       "image": "/img/combo-builder/7d17094fd106eaa1c22516420c2267d08f0f0ea2790102fad1035acab8652d04.jpg"
-    },
-    {
-      "key": "ATS_Expansion_v24.0_1.62",
-      "name": "ATS Expansion v24.0",
-      "logVersion": "24.0"
-    },
-    {
-      "key": "QS_ATS_Expansion_Fix",
-      "name": "QS ATS Expansion Fix",
-      "logVersion": "0.1.4"
-    },
-    {
-      "key": "QS_ATS_Expansion_Sierra_Connection_Fix",
-      "name": "QS ATS Expansion + Sierra Connection Fix",
-      "logVersion": "0.1.1"
     },
     {
       "key": "C2C_ATS_Exp_Connections_v1.1.2",
