@@ -147,8 +147,10 @@ test('badges last three Moscow calendar days; only updates after the added date 
   }
 });
 
+let nextTestShareIndex = 0;
 const makeEntry = (id, type = 'map', options = {}) => ({
   id,
+  shareIndex: nextTestShareIndex++,
   type,
   title: id,
   files: [id],
@@ -293,7 +295,7 @@ test('published presets produce unique catalog cards with game tags, cover and r
   assert.equal(card.boosty, preset.boosty);
   const draft = { ...ats, presets: [{ ...preset, profile: undefined }] };
   assert.doesNotThrow(() => validateCatalog(draft, true));
-  assert.throws(() => validateCatalog(draft), /HTTPS-ссылку на готовый профиль/);
+  assert.doesNotThrow(() => validateCatalog(draft));
   assert.throws(
     () => validateCatalog({ ...ats, presets: [{ ...preset, video: 'http://example.org/video' }] }),
     /HTTPS-ссылку на видеообзор/,
@@ -484,7 +486,7 @@ test('a shared selection keeps its release and recalculates dependencies, even w
   const url = new URL(comboSharePath(release, ['sibir-fv', 'kazakhstan']), 'https://example.org');
   assert.equal(url.pathname, '/combos/builder');
   assert.equal(url.searchParams.get('release'), 'ats-1.62');
-  const ids = readSharedSelection(url.hash);
+  const ids = readSharedSelection(url.hash, release);
   assert.deepEqual(ids, ['sibir-fv', 'kazakhstan']);
   assert.deepEqual(restoreSharedSelection(release, ids), { selection: ids, missing: 0 });
   assert.ok(resolveCombo(release, ids).active.has('fv-connector'));

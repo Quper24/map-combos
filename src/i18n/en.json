@@ -77,8 +77,10 @@
   "Сначала загрузи профиль с обязательными модами, затем полный профиль сервера. Опциональными станут моды из полного профиля сверх обязательных.": "First load a profile with required mods, then the full server profile. Mods in the full profile beyond the required set become optional.",
   "Загрузить обязательный состав": "Load required mods",
   "Загрузить полный состав сервера": "Load the full server set",
-  "Обязательных файлов в профиле — ": "Required files in profile — ",
-  "Опциональных модов — ": "Optional mods — ",
+  "Обязательных файлов в профиле —": "Required files in profile —",
+  "Опциональных модов —": "Optional mods —",
+  "Укажи отдельные ссылки для опциональных модов —": "Provide separate links for optional mods —",
+  "Короткая ссылка сборки карт и модов уже используется —": "This short combo URL is already in use —",
   "В полном профиле отсутствуют обязательные файлы:": "The full profile is missing required files:",
   "Сначала добавь эти файлы в общий каталог, затем повторно загрузи профили:": "Add these files to the shared catalog, then load the profiles again:",
   "Обязательный": "Required",
@@ -1474,5 +1476,8 @@
   "Модификация «PNG: PE-RAIN» добавляет или изменяет игровой контент в Euro Truck Simulator 2. Подробности зависят от версии и страницы загрузки мода.": "The “PNG: PE-RAIN” mod adds or changes game content in Euro Truck Simulator 2. The details depend on the mod version and its download page.",
   "Большой набор дополнительного светового тюнинга для грузовиков и прицепов. Включает:\n- Светодиодные габаритные огни разных цветов, в пластиковом и алюминиевом исполнении.\n- Габаритные огни со стробоскопическим эффектом.\n- Дополнительные фары на крышу и переднюю решётку.\n- Различные цвета корпусов фар: хромированные и окрашенные.\n- Фары с буквами A–Z, цифрами 0–9 и символами.": "A large set of additional lighting accessories for trucks and trailers, including:\n- LED marker lights in different colors, with plastic and aluminum housings.\n- Marker lights with a strobe effect.\n- Additional roof and grille lights.\n- Chrome and painted light housings.\n- Lights with letters A–Z, numbers 0–9, and symbols.",
   "Новый салон для Mercedes Actros 2019, фикс багов мода Actros 2019.\nДобавляет аксесуары, GPS, Бортовой компьютер и Электронные зеркала": "A new interior for the 2019 Mercedes Actros that also fixes bugs in the Actros 2019 mod. Adds accessories, GPS, an onboard computer, and digital mirrors.",
-  "Realistic Economy & Ferry by Quper - Оптимизирует паромные соединенеия, снижает их стоимость и меняет экономику игры на более реалистичную\nМОД не обязательный, ставить по желанию": "Realistic Economy & Ferry by Quper optimizes ferry connections, lowers their cost, and makes the game economy more realistic. This mod is optional."
+  "Realistic Economy & Ferry by Quper - Оптимизирует паромные соединенеия, снижает их стоимость и меняет экономику игры на более реалистичную\nМОД не обязательный, ставить по желанию": "Realistic Economy & Ferry by Quper optimizes ferry connections, lowers their cost, and makes the game economy more realistic. This mod is optional.",
+  "Менеджер модов и настройки конфига": "Mod manager and config settings",
+  "В менеджере модов слева видны только установленные неактивные моды. Зелёная линия показывает место вставки при перетаскивании. Двойной щелчок отключает мод, а кнопка «Подтвердить» сохраняет изменения.": "The mod manager lists only installed inactive mods on the left. A green line shows where a dragged mod will land. Double-click to deactivate a mod and use Confirm to save changes.",
+  "Новый раздел «Настройки конфига» для ETS2 и ATS позволяет выставить буфер 30, настроить конвой и включить консоль. Настройки действуют на все профили выбранной игры. Перед записью TruckKit делает резервную копию config.cfg.": "The new Config Settings section for ETS2 and ATS lets you set the buffer to 30, configure Convoy, and enable the console. The settings apply to all profiles for the selected game. TruckKit backs up config.cfg before writing changes."
 }
