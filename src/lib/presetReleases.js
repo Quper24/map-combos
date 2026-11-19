@@ -1,7 +1,7 @@
 import { catalogDate, resolveCombo } from './comboBuilder.js';
 
-export function snapshotPresetEntries(catalog, selection) {
-  const { active } = resolveCombo(catalog, selection);
+export function snapshotPresetEntries(catalog, selection, server = false) {
+  const { active } = resolveCombo(catalog, selection, { server });
   return catalog.entries
     .filter(({ id }) => active.has(id))
     .map(({ id, title, version }) => ({ id, title, ...(version && { version }) }));
@@ -22,7 +22,7 @@ export function preparePresetRelease(catalog, preset, date = catalogDate()) {
   const releases = preset.releases ?? [];
   if (!preset.version) return { preset, needsVersion: false };
 
-  const entries = snapshotPresetEntries(catalog, preset.selection);
+  const entries = snapshotPresetEntries(catalog, preset.selection, preset.tags?.includes('server'));
   const latest = releases.at(-1);
   if (latest?.version === preset.version) {
     const { added, removed, versionChanges } = diffPresetEntries(latest.entries, entries);

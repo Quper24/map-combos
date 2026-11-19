@@ -1168,7 +1168,7 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
         />
         <EntryActivationFields
           entry={entry}
-          dependencies={orderedEntries.filter((item) => item.id !== id)}
+          dependencies={orderedEntries.filter((item) => item.id !== id && item.type !== 'server')}
         />
         <Field
           label="Общая ссылка на скачивание"
@@ -1804,13 +1804,21 @@ function StandardPresetSelection({ catalog, initialSelection = [] }) {
 
 function ServerPresetSelection({ catalog, initialSelection = [], initialOptionalSelection = [] }) {
   const { t } = useTranslation();
-  const selectable = entriesByLoadOrder(catalog).filter((entry) => entry.type === 'mod');
-  const [required, setRequired] = useState(
-    initialSelection.filter((id) => !initialOptionalSelection.includes(id)),
+  const selectable = entriesByLoadOrder(catalog).filter((entry) =>
+    ['mod', 'server'].includes(entry.type),
   );
-  const [optional, setOptional] = useState(initialOptionalSelection);
+  const selectableIds = new Set(selectable.map(({ id }) => id));
+  const [required, setRequired] = useState(
+    initialSelection.filter(
+      (id) => selectableIds.has(id) && !initialOptionalSelection.includes(id),
+    ),
+  );
+  const [optional, setOptional] = useState(
+    initialOptionalSelection.filter((id) => selectableIds.has(id)),
+  );
   const [coreKeys, setCoreKeys] = useState(null);
   const [coreUnmatched, setCoreUnmatched] = useState([]);
+  const [coreUnsupported, setCoreUnsupported] = useState([]);
   const [fullReport, setFullReport] = useState(null);
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
@@ -1821,7 +1829,9 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
   const coreIssues = fullReport?.missingRequired || [];
   const unresolved = [
     ...coreUnmatched,
+    ...coreUnsupported,
     ...(fullReport?.unmatched || []),
+    ...(fullReport?.unsupported || []),
     ...(coreIssues || []),
   ].filter((value, index, values) => values.indexOf(value) === index);
 
@@ -1838,11 +1848,16 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
     const ids = selectable
       .filter((entry) => entry.files.some((key) => keys.has(key)))
       .map(({ id }) => id);
+    const unsupported = files.filter(({ key }) => {
+      const entry = byFile.get(key);
+      return entry && !['mod', 'server'].includes(entry.type);
+    });
     return {
       files,
       keys,
       ids,
       unmatched: files.filter(({ key }) => !byFile.has(key)),
+      unsupported,
     };
   }
 
@@ -1856,9 +1871,14 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
       const imported = await readModSet(file);
       setCoreKeys(imported.keys);
       setCoreUnmatched(imported.unmatched);
+      setCoreUnsupported(imported.unsupported);
       setRequired(imported.ids);
       setOptional([]);
-      setFullReport({ unmatched: imported.unmatched, missingRequired: [] });
+      setFullReport({
+        unmatched: imported.unmatched,
+        unsupported: imported.unsupported,
+        missingRequired: [],
+      });
     } catch (cause) {
       setError(cause.message);
     } finally {
@@ -1877,7 +1897,11 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
       const imported = await readModSet(file);
       const missingRequired = [...coreKeys].filter((key) => !imported.keys.has(key));
       setOptional(imported.ids.filter((id) => !required.includes(id)));
-      setFullReport({ unmatched: imported.unmatched, missingRequired });
+      setFullReport({
+        unmatched: imported.unmatched,
+        unsupported: imported.unsupported,
+        missingRequired,
+      });
     } catch (cause) {
       setError(cause.message);
     } finally {
@@ -1902,6 +1926,11 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
       <p>
         {t(
           'Сначала загрузи профиль с обязательными модами, затем полный профиль сервера. Опциональными станут моды из полного профиля сверх обязательных.',
+        )}
+      </p>
+      <p>
+        {t(
+          'Серверные составы изолированы от обычных сборок: карты и автоматические зависимости не добавляются. Совпадающие моды берут данные из общего каталога, уникальные можно завести типом «Серверный мод».',
         )}
       </p>
       <div className={s.toolbar}>
@@ -1933,7 +1962,18 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
             <p>{t('В полном профиле отсутствуют обязательные файлы:')}</p>
           )}
           {(coreUnmatched.length > 0 || fullReport?.unmatched?.length > 0) && (
-            <p>{t('Сначала добавь эти файлы в общий каталог, затем повторно загрузи профили:')}</p>
+            <p>
+              {t(
+                'Добавь неизвестные файлы в каталог как серверные моды или привяжи их к существующим модам, затем загрузи профили снова:',
+              )}
+            </p>
+          )}
+          {(coreUnsupported.length > 0 || fullReport?.unsupported?.length > 0) && (
+            <p>
+              {t(
+                'В серверную сборку можно добавлять только моды. Карты, фиксы и другие типы нужно заменить на серверные моды.',
+              )}
+            </p>
           )}
           <ul className={s.importList}>
             {unresolved.map((file, index) => (

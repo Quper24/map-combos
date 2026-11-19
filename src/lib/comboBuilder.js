@@ -6,6 +6,7 @@ export const entryTypeLabels = {
   fix: 'Фикс',
   connector: 'Коннектор',
   resource: 'Пакет ресурсов',
+  server: 'Серверный мод (только серверные сборки)',
 };
 
 export const canAutoWithMaps = (type) => type === 'mod' || type === 'fix';
@@ -44,13 +45,14 @@ export function entriesByLoadOrder(catalog) {
 export function reconcilePresetSelections(presets, entry) {
   if (isSelectable(entry)) return presets;
   return presets.map((preset) =>
-    preset.selection.includes(entry.id)
+    preset.selection.includes(entry.id) &&
+    !(entry.type === 'server' && preset.tags?.includes('server'))
       ? { ...preset, selection: preset.selection.filter((id) => id !== entry.id) }
       : preset,
   );
 }
 
-export function resolveCombo(catalog, selection) {
+export function resolveCombo(catalog, selection, { server = false } = {}) {
   const entries = new Map(catalog.entries.map((entry) => [entry.id, entry]));
   const active = new Set();
   const reasons = new Map();
@@ -60,15 +62,19 @@ export function resolveCombo(catalog, selection) {
     if (!entry || active.has(id)) return;
     active.add(id);
     reasons.set(id, because);
-    for (const dependency of entry.requires || []) include(dependency, [id]);
+    if (!server) {
+      for (const dependency of entry.requires || []) include(dependency, [id]);
+    }
   }
   for (const id of selection || []) {
     const entry = entries.get(id);
-    if (!entry || !isSelectable(entry)) continue;
+    const canSelect =
+      Boolean(entry) && (server ? ['mod', 'server'].includes(entry.type) : isSelectable(entry));
+    if (!canSelect) continue;
     manual.add(id);
     include(id);
   }
-  if ([...active].some((id) => entries.get(id).type === 'map')) {
+  if (!server && [...active].some((id) => entries.get(id).type === 'map')) {
     for (const entry of entries.values()) {
       if (entry.autoWithMaps) include(entry.id);
     }
@@ -76,6 +82,7 @@ export function resolveCombo(catalog, selection) {
   let previousSize;
   do {
     previousSize = active.size;
+    if (server) break;
     for (const entry of entries.values()) {
       if (!isFixOrConnector(entry.type)) continue;
       const required = entry.requires || [];
@@ -87,9 +94,13 @@ export function resolveCombo(catalog, selection) {
     }
   } while (active.size !== previousSize);
 
-  const disabled = new Set([...active].flatMap((id) => entries.get(id).replaces || []));
-  for (const id of active) {
-    if (entries.get(id).disabledByMaps?.some((map) => active.has(map))) disabled.add(id);
+  const disabled = new Set(
+    server ? [] : [...active].flatMap((id) => entries.get(id).replaces || []),
+  );
+  if (!server) {
+    for (const id of active) {
+      if (entries.get(id).disabledByMaps?.some((map) => active.has(map))) disabled.add(id);
+    }
   }
   if (disabled.size) {
     for (const id of disabled) active.delete(id);
@@ -111,15 +122,15 @@ export function resolveCombo(catalog, selection) {
     }
   }
 
-  const conflicts = catalog.conflicts.filter(({ entries: pair }) =>
-    pair.every((id) => active.has(id)),
-  );
+  const conflicts = server
+    ? []
+    : catalog.conflicts.filter(({ entries: pair }) => pair.every((id) => active.has(id)));
   const families = new Map();
   const owners = new Map();
   const dlcs = new Set();
   for (const id of active) {
     const entry = entries.get(id);
-    if (entry.family) {
+    if (!server && entry.family) {
       const other = families.get(entry.family);
       if (
         other &&
@@ -143,7 +154,8 @@ export function resolveCombo(catalog, selection) {
 
 export function addToCombo(catalog, selection, id) {
   const entry = catalog.entries.find((item) => item.id === id);
-  if (!entry || !isSelectable(entry)) return { selection, conflicts: [] };
+  if (!entry || (!isSelectable(entry) && entry.type !== 'server'))
+    return { selection, conflicts: [] };
   const alternatives = new Set(
     entry.family
       ? catalog.entries.filter((item) => item.family === entry.family).map((item) => item.id)
@@ -647,12 +659,23 @@ export function validateCatalog(catalog, draft = false) {
     const optionalSelection = preset.optionalSelection || [];
     check(
       text(preset.title) &&
-        uniqueList(preset.selection, (id) => known(id, byId) && isSelectable(byId.get(id))) &&
+        uniqueList(
+          preset.selection,
+          (id) =>
+            known(id, byId) &&
+            (isServer
+              ? byId.get(id).type === 'mod' || byId.get(id).type === 'server'
+              : isSelectable(byId.get(id))),
+        ) &&
+        (!isServer || preset.selection.every((id) => byId.get(id).type !== 'map')) &&
         (draft || preset.selection.length),
       `Invalid preset: ${preset.id}`,
     );
     check(
-      uniqueList(optionalSelection, (id) => known(id, byId) && byId.get(id).type === 'mod') &&
+      uniqueList(
+        optionalSelection,
+        (id) => known(id, byId) && ['mod', 'server'].includes(byId.get(id).type),
+      ) &&
         optionalSelection.every((id) => preset.selection.includes(id)) &&
         (isServer || optionalSelection.length === 0) &&
         (!isServer || draft || preset.selection.some((id) => !optionalSelection.includes(id))),
@@ -737,7 +760,7 @@ export function validateCatalog(catalog, draft = false) {
     check(!presetFileNames.has(fileName), `Имя файла сборки уже используется — ${fileName}`);
     presetFileNames.add(fileName);
     check(
-      draft || !resolveCombo(catalog, preset.selection).conflicts.length,
+      draft || !resolveCombo(catalog, preset.selection, { server: isServer }).conflicts.length,
       `Conflicting preset: ${preset.id}`,
     );
   }

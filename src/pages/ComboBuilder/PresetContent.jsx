@@ -39,7 +39,10 @@ export default function PresetContent({ catalog, preset, share = true }) {
   const requiredSelection = preset.selection.filter((id) => !optionalIds.has(id));
   const defaultSelection = server ? requiredSelection : preset.selection;
   const [selection, setSelection] = useState(defaultSelection);
-  const result = useMemo(() => resolveCombo(catalog, selection), [catalog, selection]);
+  const result = useMemo(
+    () => resolveCombo(catalog, selection, { server }),
+    [catalog, selection, server],
+  );
   const byId = new Map(catalog.entries.map((entry) => [entry.id, entry]));
   const original =
     selection.length === defaultSelection.length &&
@@ -64,7 +67,7 @@ export default function PresetContent({ catalog, preset, share = true }) {
     ? new Map(
         preset.selection
           .filter((id) => optionalIds.has(id) && result.active.has(id))
-          .map((id) => [id, removeFromCombo(catalog, selection, id, result.active)]),
+          .map((id) => [id, { selection: selection.filter((selected) => selected !== id) }]),
       )
     : new Map(
         catalog.entries
@@ -304,10 +307,11 @@ function OptionalServerMods({ catalog, preset, selection, active, onChange }) {
     <ul className={s.inactiveMods}>
       {entries.map((entry) => {
         const enabled = active.has(entry.id);
-        const candidate = enabled
-          ? { selection: removeFromCombo(catalog, selection, entry.id, active).selection }
-          : addToCombo(catalog, selection, entry.id);
-        const blocked = candidate.conflicts?.length > 0;
+        const candidate = {
+          selection: enabled ? selection.filter((id) => id !== entry.id) : [...selection, entry.id],
+          conflicts: [],
+        };
+        const blocked = false;
         return (
           <li key={entry.id}>
             <div className={s.inactiveRow}>
