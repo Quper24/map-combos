@@ -663,11 +663,8 @@ export function validateCatalog(catalog, draft = false) {
           preset.selection,
           (id) =>
             known(id, byId) &&
-            (isServer
-              ? byId.get(id).type === 'mod' || byId.get(id).type === 'server'
-              : isSelectable(byId.get(id))),
+            isSelectable(byId.get(id)),
         ) &&
-        (!isServer || preset.selection.every((id) => byId.get(id).type !== 'map')) &&
         (draft || preset.selection.length),
       `Invalid preset: ${preset.id}`,
     );
