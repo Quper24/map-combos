@@ -241,7 +241,7 @@ export default function ComboEditor() {
             presets: [],
           }
         : catalog;
-      validateCatalog(data, !publish);
+      validateCatalog(data, !publish, { linkPresets: publish ? catalog.presets : data.presets });
       downloadJson(data, `${catalogKey(catalog)}${publish ? '' : '-draft'}.json`);
     } catch (error) {
       setNotice(error.message);
@@ -1804,9 +1804,7 @@ function StandardPresetSelection({ catalog, initialSelection = [] }) {
 
 function ServerPresetSelection({ catalog, initialSelection = [], initialOptionalSelection = [] }) {
   const { t } = useTranslation();
-  const selectable = entriesByLoadOrder(catalog).filter((entry) =>
-    ['mod', 'server'].includes(entry.type),
-  );
+  const selectable = entriesByLoadOrder(catalog);
   const selectableIds = new Set(selectable.map(({ id }) => id));
   const [required, setRequired] = useState(
     initialSelection.filter(
@@ -1818,7 +1816,6 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
   );
   const [coreKeys, setCoreKeys] = useState(null);
   const [coreUnmatched, setCoreUnmatched] = useState([]);
-  const [coreUnsupported, setCoreUnsupported] = useState([]);
   const [fullReport, setFullReport] = useState(null);
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
@@ -1827,13 +1824,9 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
     catalog.entries.flatMap((entry) => entry.files.map((key) => [key, entry])),
   );
   const coreIssues = fullReport?.missingRequired || [];
-  const unresolved = [
-    ...coreUnmatched,
-    ...coreUnsupported,
-    ...(fullReport?.unmatched || []),
-    ...(fullReport?.unsupported || []),
-    ...(coreIssues || []),
-  ].filter((value, index, values) => values.indexOf(value) === index);
+  const unresolved = [...coreUnmatched, ...(fullReport?.unmatched || []), ...coreIssues].filter(
+    (value, index, values) => values.indexOf(value) === index,
+  );
 
   async function readModSet(file) {
     const isProfile = file.name.toLowerCase().endsWith('.sii');
@@ -1848,16 +1841,11 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
     const ids = selectable
       .filter((entry) => entry.files.some((key) => keys.has(key)))
       .map(({ id }) => id);
-    const unsupported = files.filter(({ key }) => {
-      const entry = byFile.get(key);
-      return entry && !['mod', 'server'].includes(entry.type);
-    });
     return {
       files,
       keys,
       ids,
       unmatched: files.filter(({ key }) => !byFile.has(key)),
-      unsupported,
     };
   }
 
@@ -1871,12 +1859,10 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
       const imported = await readModSet(file);
       setCoreKeys(imported.keys);
       setCoreUnmatched(imported.unmatched);
-      setCoreUnsupported(imported.unsupported);
       setRequired(imported.ids);
       setOptional([]);
       setFullReport({
         unmatched: imported.unmatched,
-        unsupported: imported.unsupported,
         missingRequired: [],
       });
     } catch (cause) {
@@ -1899,7 +1885,6 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
       setOptional(imported.ids.filter((id) => !required.includes(id)));
       setFullReport({
         unmatched: imported.unmatched,
-        unsupported: imported.unsupported,
         missingRequired,
       });
     } catch (cause) {
@@ -1930,7 +1915,7 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
       </p>
       <p>
         {t(
-          'Серверные составы изолированы от обычных сборок: карты и автоматические зависимости не добавляются. Совпадающие моды берут данные из общего каталога, уникальные можно завести типом «Серверный мод».',
+          'В серверную сборку можно включать записи любого типа из общего каталога. Тип «Серверный мод» предназначен только для серверных сборок; совпадающие записи используют общие данные каталога.',
         )}
       </p>
       <div className={s.toolbar}>
@@ -1968,13 +1953,6 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
               )}
             </p>
           )}
-          {(coreUnsupported.length > 0 || fullReport?.unsupported?.length > 0) && (
-            <p>
-              {t(
-                'В серверную сборку можно добавлять только моды. Карты, фиксы и другие типы нужно заменить на серверные моды.',
-              )}
-            </p>
-          )}
           <ul className={s.importList}>
             {unresolved.map((file, index) => (
               <li key={`${file.key || file}-${index}`}>
@@ -2000,7 +1978,7 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
                 checked={required.includes(entry.id)}
                 onChange={(event) => setEntryKind(entry.id, 'required', event.target.checked)}
               />{' '}
-              {t('Обязательный')}
+              {t('Обязательная позиция')}
             </label>
             <label>
               <input
@@ -2008,7 +1986,7 @@ function ServerPresetSelection({ catalog, initialSelection = [], initialOptional
                 checked={optional.includes(entry.id)}
                 onChange={(event) => setEntryKind(entry.id, 'optional', event.target.checked)}
               />{' '}
-              {t('Опциональный')}
+              {t('Опциональная позиция')}
             </label>
           </div>
         ))}

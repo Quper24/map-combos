@@ -1,0 +1,403 @@
+{
+  "game": "ats",
+  "version": "1.62",
+  "preset": {
+    "id": "server-ats-1-62",
+    "title": "ATS CONVOY COMBO",
+    "fileSlug": "server-ats-1-62",
+    "version": "20.11",
+    "boosty": "https://boosty.to/qupersimulator/posts/d51aa953-935b-40b0-81d7-87721fd264a4",
+    "profile": "https://sharemods.com/e1pp876tygwm/1.62_ATS_CONVOY.zip.html",
+    "company": "https://qupersimulator.ru/vtc",
+    "image": "/img/combo-builder/136e4ec38f8af9c7df4e9d63acfe8f7df335bdcfe51ab0bab59b715af450c580.webp",
+    "tags": [
+      "boosty",
+      "server",
+      "convoy"
+    ],
+    "updatedAt": "2026-11-22",
+    "selection": [
+      "qs-final-fix",
+      "engine-sounds",
+      "qs-environment-pack",
+      "qs-interior-pack",
+      "sisl-s-mega-pack",
+      "qs-tuning-pack",
+      "qs-exterior-pack",
+      "kw-w900-highway-killer",
+      "pete-579",
+      "pete-579-personal-key",
+      "pete-389-glider",
+      "pete-389-glider-personal-key",
+      "pete-362-cabover",
+      "pete-362-cabover-personal-key",
+      "freightshaker-coronado-sd",
+      "freightshaker-coronado-sd-personal-key",
+      "freightshaker-cascadia-125-ats",
+      "freightshaker-cascadia-125-personal-key",
+      "freightshaker-classic-xl-ats",
+      "freightshaker-classic-xl-personal-key",
+      "harley-lonestar-1-60",
+      "dodge-l700",
+      "volkswagen-parati-1994",
+      "trailer-pack-livestock",
+      "trailer-pack-lowboy",
+      "trailer-pack-tanker",
+      "trailer-pack-refrigerators",
+      "trailer-pack-hopper-bottom",
+      "trailer-pack-flatbed",
+      "qs-wheel-pack",
+      "trucks-trailers-flares",
+      "trucks-trailers-wheels",
+      "qs-combo-traffic",
+      "qs-sound-fixes-pack-server-ats",
+      "qs-alaska-rc",
+      "alaska-north-to-the-future",
+      "qs-promods",
+      "qs-eastern-us",
+      "beyond-by-tm-for-ats-1",
+      "qs-mexico-aio",
+      "reforma-megaresources",
+      "qs-more-american",
+      "immersive-external-cam-infinite-zoom-v1-1",
+      "atsrealisticeconomy",
+      "zeemods-common-v1-3-3",
+      "zeemods-master-reverb-v3-0",
+      "zeemods-weather-effect-g5-v1-4-1",
+      "zeemods-wind-tire-trailer-effects-g5-v1-4-6",
+      "zeemods-freightliner-effects-g5-v1-0-1",
+      "zeemods-peterbilt-effects-g5-v1-4-2",
+      "zeemods-kenworth-effects-g5-v1-2-2",
+      "zeemods-volvo-ie-v1-0-1",
+      "qs-ats-sound-addon",
+      "zzpng-pe-rain",
+      "zpng-pe-autumn",
+      "png-pe-weather-classic-foggy",
+      "png-pe-weather-classic",
+      "png-pe-base",
+      "animated-co-driver-pack"
+    ],
+    "optionalSelection": [
+      "immersive-external-cam-infinite-zoom-v1-1",
+      "atsrealisticeconomy",
+      "zeemods-common-v1-3-3",
+      "zeemods-master-reverb-v3-0",
+      "zeemods-weather-effect-g5-v1-4-1",
+      "zeemods-wind-tire-trailer-effects-g5-v1-4-6",
+      "zeemods-freightliner-effects-g5-v1-0-1",
+      "zeemods-peterbilt-effects-g5-v1-4-2",
+      "zeemods-kenworth-effects-g5-v1-2-2",
+      "zeemods-volvo-ie-v1-0-1",
+      "qs-ats-sound-addon",
+      "zzpng-pe-rain",
+      "zpng-pe-autumn",
+      "png-pe-weather-classic-foggy",
+      "png-pe-weather-classic",
+      "png-pe-base",
+      "animated-co-driver-pack"
+    ],
+    "releases": [
+      {
+        "version": "20.11",
+        "date": "2026-11-22",
+        "entries": [
+          {
+            "id": "atsrealisticeconomy",
+            "title": "Realistic Economy ATS by Quper",
+            "version": "1.62.4"
+          },
+          {
+            "id": "reforma-megaresources",
+            "title": "Mega Resources",
+            "version": "3.0.4.162"
+          },
+          {
+            "id": "alaska-north-to-the-future",
+            "title": "Alaska - North to the future",
+            "version": "v0.8.9 Beta"
+          },
+          {
+            "id": "beyond-by-tm-for-ats-1",
+            "title": "Beyond by TerraMaps",
+            "version": "V12"
+          },
+          {
+            "id": "trucks-trailers-wheels",
+            "title": "Trucks&Trailers Wheels",
+            "version": "11.2"
+          },
+          {
+            "id": "trucks-trailers-flares",
+            "title": "Trucks&Trailers Flarepack",
+            "version": "43.5"
+          },
+          {
+            "id": "trailer-pack-flatbed",
+            "title": "Trailer Pack Flatbed",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-hopper-bottom",
+            "title": "Trailer Pack Hopper Bottom",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-refrigerators",
+            "title": "Trailer Pack Refrigerators",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-tanker",
+            "title": "Trailer Pack Tanker",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-lowboy",
+            "title": "Trailer Pack LowBoy",
+            "version": "9.5"
+          },
+          {
+            "id": "trailer-pack-livestock",
+            "title": "Trailer Pack Livestock",
+            "version": "9.5"
+          },
+          {
+            "id": "volkswagen-parati-1994",
+            "title": "Volkswagen Parati 1994",
+            "version": "6.0"
+          },
+          {
+            "id": "dodge-l700",
+            "title": "Dodge L700",
+            "version": "1.3"
+          },
+          {
+            "id": "harley-lonestar-1-60",
+            "title": "Harley-Davidson International LoneStar",
+            "version": "13.1"
+          },
+          {
+            "id": "freightshaker-classic-xl-personal-key",
+            "title": "Classic XL Personal KEY",
+            "version": "10.0"
+          },
+          {
+            "id": "freightshaker-classic-xl-ats",
+            "title": "Classic XL",
+            "version": "10.11"
+          },
+          {
+            "id": "freightshaker-cascadia-125-personal-key",
+            "title": "Cascadia 125 Personal KEY",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-cascadia-125-ats",
+            "title": "Cascadia 125",
+            "version": "3.13"
+          },
+          {
+            "id": "freightshaker-coronado-sd-personal-key",
+            "title": "Freightshaker Coronado SD Personal KEY",
+            "version": "3.0"
+          },
+          {
+            "id": "freightshaker-coronado-sd",
+            "title": "Freightshaker Coronado SD",
+            "version": "3.5"
+          },
+          {
+            "id": "pete-362-cabover-personal-key",
+            "title": "Pete 362 Cabover Personal KEY",
+            "version": "5.0"
+          },
+          {
+            "id": "pete-362-cabover",
+            "title": "Pete 362 Cabover",
+            "version": "5.11"
+          },
+          {
+            "id": "pete-389-glider-personal-key",
+            "title": "Pete 389 Glider Personal KEY",
+            "version": "7.0"
+          },
+          {
+            "id": "pete-389-glider",
+            "title": "Pete 389 Glider",
+            "version": "7.11"
+          },
+          {
+            "id": "pete-579-personal-key",
+            "title": "Pete 579 NG Personal KEY",
+            "version": "2.0"
+          },
+          {
+            "id": "pete-579",
+            "title": "Pete 579 NG",
+            "version": "2.10"
+          },
+          {
+            "id": "kw-w900-highway-killer",
+            "title": "KW W900L H-WAY KILLER",
+            "version": "9.17"
+          },
+          {
+            "id": "sisl-s-mega-pack",
+            "title": "SiSL's Mega Pack",
+            "version": "3.3"
+          },
+          {
+            "id": "animated-co-driver-pack",
+            "title": "ATS Animated Co-Driver Pack Optional",
+            "version": "16.11"
+          },
+          {
+            "id": "png-pe-base",
+            "title": "PNG: PE-BASE",
+            "version": "1.4"
+          },
+          {
+            "id": "png-pe-weather-classic",
+            "title": "PNG: PE-WEATHER",
+            "version": "1.4"
+          },
+          {
+            "id": "png-pe-weather-classic-foggy",
+            "title": "PNG: PE-FOGGY WEATHER",
+            "version": "1.4"
+          },
+          {
+            "id": "zpng-pe-autumn",
+            "title": "PNG: PE-AUTUMN",
+            "version": "1.4"
+          },
+          {
+            "id": "zzpng-pe-rain",
+            "title": "PNG: PE-RAIN",
+            "version": "1.4"
+          },
+          {
+            "id": "engine-sounds",
+            "title": "Engine Sounds",
+            "version": "5.0.1"
+          },
+          {
+            "id": "qs-ats-sound-addon",
+            "title": "QS Sound pack optional 28.05",
+            "version": "02.09"
+          },
+          {
+            "id": "zeemods-volvo-ie-v1-0-1",
+            "title": "Volvo Interior & Effects Pack",
+            "version": "1.0.1-G5"
+          },
+          {
+            "id": "zeemods-kenworth-effects-g5-v1-2-2",
+            "title": "Kenworth Interior & Effect Sound Pack",
+            "version": "1.2.2-G5"
+          },
+          {
+            "id": "zeemods-peterbilt-effects-g5-v1-4-2",
+            "title": "Peterbilt Interior & Effect Sound Pack",
+            "version": "1.4.2-G5"
+          },
+          {
+            "id": "zeemods-freightliner-effects-g5-v1-0-1",
+            "title": "Freightliner I&E Sound Pack",
+            "version": "1.0.1-G5+"
+          },
+          {
+            "id": "zeemods-wind-tire-trailer-effects-g5-v1-4-6",
+            "title": "Wind, Tire & Trailer Effects Pack",
+            "version": "1.4.6-G5+"
+          },
+          {
+            "id": "zeemods-weather-effect-g5-v1-4-1",
+            "title": "Weather Sound & Effect Mod",
+            "version": "1.4.1-G5"
+          },
+          {
+            "id": "zeemods-master-reverb-v3-0",
+            "title": "Master Reverb Mod",
+            "version": "2.0.1-G5"
+          },
+          {
+            "id": "zeemods-common-v1-3-3",
+            "title": "ZM Common Dependencies",
+            "version": "1.3.3"
+          },
+          {
+            "id": "immersive-external-cam-infinite-zoom-v1-1",
+            "title": "Immersive External Cam + Infinite Zoom v1.1",
+            "version": "v1.1"
+          },
+          {
+            "id": "qs-final-fix",
+            "title": "QS Final Fix 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-wheel-pack",
+            "title": "QS Wheel pack 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-exterior-pack",
+            "title": "QS Exterior pack 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-tuning-pack",
+            "title": "QS Tuning pack 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-interior-pack",
+            "title": "QS Interior pack 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-environment-pack",
+            "title": "QS Environment Pack 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-combo-traffic",
+            "title": "QS Traffic Pack 19.11",
+            "version": "19.11"
+          },
+          {
+            "id": "qs-sound-fixes-pack-server-ats",
+            "title": "Sound Fixes Pack Server 19.11",
+            "version": "19.10"
+          },
+          {
+            "id": "qs-alaska-rc",
+            "title": "QS Alaska RC 18.10",
+            "version": "18.10"
+          },
+          {
+            "id": "qs-promods",
+            "title": "QS ProMods 18.11",
+            "version": "18.11"
+          },
+          {
+            "id": "qs-eastern-us",
+            "title": "Eastern US 18.11",
+            "version": "18.11"
+          },
+          {
+            "id": "qs-mexico-aio",
+            "title": "Mexica AIO 18.11",
+            "version": "18.11"
+          },
+          {
+            "id": "qs-more-american",
+            "title": "More American 18.11",
+            "version": "18.11"
+          }
+        ]
+      }
+    ]
+  }
+}

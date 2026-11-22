@@ -4349,22 +4349,6 @@
       "shareIndex": 261
     },
     {
-      "id": "increased-road-speed-limit",
-      "title": "Increased Road Speed Limit",
-      "type": "mod",
-      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2380055462",
-      "image": "/img/combo-builder/123da5fc0f6e6a20498796dd0af1ae8b42d5d77ef9a275a58ae79d63a78ca3e9.webp",
-      "version": "1.62.261102",
-      "addedAt": "2026-11-17",
-      "paid": false,
-      "files": [
-        "Increased Road Speed Limit"
-      ],
-      "requires": [],
-      "dlcs": [],
-      "shareIndex": 262
-    },
-    {
       "id": "extended-traffic-light-timing",
       "title": "Extended Traffic Light Timing",
       "type": "mod",
@@ -4379,38 +4363,6 @@
       "requires": [],
       "dlcs": [],
       "shareIndex": 263
-    },
-    {
-      "id": "realistic-drivers",
-      "title": "Realistic Drivers",
-      "type": "mod",
-      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3364175181",
-      "image": "/img/combo-builder/68519f18ac458826bd3296145131fa4bddfd0a9c54d6000efec3e2a5067aac47.webp",
-      "version": "2.3",
-      "addedAt": "2026-11-17",
-      "paid": false,
-      "files": [
-        "Realistic Drivers"
-      ],
-      "requires": [],
-      "dlcs": [],
-      "shareIndex": 264
-    },
-    {
-      "id": "flowing-fleets-and-freight",
-      "title": "Flowing Fleets and Freight",
-      "type": "mod",
-      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3800112846",
-      "image": "/img/combo-builder/fcc0b19e774b310de07f7fa4d5439b39b054fe24d0d1013a39e81acb1d397add.webp",
-      "version": "v1.5",
-      "addedAt": "2026-11-17",
-      "paid": false,
-      "files": [
-        "Flowing Fleets and Freight"
-      ],
-      "requires": [],
-      "dlcs": [],
-      "shareIndex": 265
     },
     {
       "id": "immersive-external-cam-infinite-zoom-v1-1",
@@ -4650,6 +4602,201 @@
       "requires": [],
       "dlcs": [],
       "shareIndex": 289
+    },
+    {
+      "id": "qs-final-fix",
+      "title": "QS Final Fix 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/00e3bb13f4a63b492d75d92f0c4b777d8407d4905e47fe2a8668465d2ce96f7e.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Final_Fix"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 290
+    },
+    {
+      "id": "qs-wheel-pack",
+      "title": "QS Wheel pack 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/2a7ac87a1c5358c5d4439c4cfb47d9dc0e081d19c9c3ff36e3fb2b89cc6ee01c.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Wheel_pack"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 291
+    },
+    {
+      "id": "qs-exterior-pack",
+      "title": "QS Exterior pack 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/aabccccbed86be6caa304e8b87ce31d1a38cbe533cdf441edbf423bc7bc21254.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Exterior_pack"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 292
+    },
+    {
+      "id": "qs-tuning-pack",
+      "title": "QS Tuning pack 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/a5aa3a0f49449733fb2d4c4fc01c0b72403d4135e787e66553fae4355f6f96ac.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Tuning_pack"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 293
+    },
+    {
+      "id": "qs-interior-pack",
+      "title": "QS Interior pack 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/5d06d251537277ee9fb19b8a556f55c6ecbf5b4202856a92a13c929af4bb8ecd.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Interior_pack"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 294
+    },
+    {
+      "id": "qs-environment-pack",
+      "title": "QS Environment Pack 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/1dfbd8577b0b3dea6af92417dc22a2517ff9c2a0215761137d1ec9eff2ebe377.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Environment_pack"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 295
+    },
+    {
+      "id": "qs-combo-traffic",
+      "title": "QS Traffic Pack 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/16dc2963353068b7e00e6f1e9f2b8f7241a2c18a24b9e4619c242a3841e41127.webp",
+      "version": "19.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Combo_Traffic"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 296
+    },
+    {
+      "id": "qs-sound-fixes-pack-server-ats",
+      "title": "Sound Fixes Pack Server 19.11",
+      "type": "server",
+      "image": "/img/combo-builder/2bc7191b03678156686fed403d131c52869f0b84d3652c070acc7835e0c98228.webp",
+      "version": "19.10",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Sound_Fixes_Pack_Server_ATS"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 297
+    },
+    {
+      "id": "qs-alaska-rc",
+      "title": "QS Alaska RC 18.10",
+      "type": "server",
+      "image": "/img/combo-builder/39e17503a80564ebc5ae5a5664d6d0c0345522675b05180ed23fb2ca72e5156d.webp",
+      "version": "18.10",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Alaska_RC"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 298
+    },
+    {
+      "id": "qs-promods",
+      "title": "QS ProMods 18.11",
+      "type": "server",
+      "image": "/img/combo-builder/ed562c49eaa3a629f42d803692213f4661d92ecb373e4e13cb081822320de3a6.webp",
+      "version": "18.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_ProMods"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 299
+    },
+    {
+      "id": "qs-eastern-us",
+      "title": "Eastern US 18.11",
+      "type": "server",
+      "image": "/img/combo-builder/dde906ebcb80a24622dc8cd2ca62f127bffcef52eb7bd15b4d3442dd818cbf7c.webp",
+      "version": "18.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Eastern_US"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 300
+    },
+    {
+      "id": "qs-mexico-aio",
+      "title": "Mexica AIO 18.11",
+      "type": "server",
+      "image": "/img/combo-builder/1b3da94bb4f8b6468b6dae2c457d80a9da076d544f1ea01faf94095631e3977a.webp",
+      "version": "18.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_Mexico_AIO"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 301
+    },
+    {
+      "id": "qs-more-american",
+      "title": "More American 18.11",
+      "type": "server",
+      "image": "/img/combo-builder/bcbf213f6ffa43b5aca9d61b540a67045b7b9f59da105a99d6a080da95b26db6.webp",
+      "version": "18.11",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_More_American"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 302
     }
   ],
   "order": [
@@ -4680,6 +4827,11 @@
       "name": "QS ATS More Cities Road Connection Fix",
       "logVersion": "0.1.0",
       "image": "/img/combo-builder/d150ea97333c2093345b40dcd9e8a32f7e56535956f0d10a5adda8030a4573c4.jpg"
+    },
+    {
+      "key": "QS_More_American",
+      "name": "More American 18.11",
+      "logVersion": "18.11"
     },
     {
       "key": "Reforma_MegaResources_v3_0_4_162",
@@ -4750,6 +4902,11 @@
       "key": "Coast_to_Coast_v2.24.62.1",
       "name": "Coast to Coast v2.24.62.1",
       "logVersion": "2.24.62.1"
+    },
+    {
+      "key": "QS_Mexico_AIO",
+      "name": "Mexica AIO 18.11",
+      "logVersion": "18.11"
     },
     {
       "key": "Beyond_by_TM_for_ATS_4",
@@ -4938,6 +5095,16 @@
       "key": "Washington_Extended_Revived_Promods_Connection_v1.0.1",
       "name": "Washington Extended Revived - Promods Canada Connection v1.0.1",
       "logVersion": "1.0.1"
+    },
+    {
+      "key": "QS_Eastern_US",
+      "name": "Eastern US 18.11",
+      "logVersion": "18.11"
+    },
+    {
+      "key": "QS_ProMods",
+      "name": "QS ProMods 18.11",
+      "logVersion": "18.11"
     },
     {
       "key": "Alaska_North_to_the_Future",
@@ -5350,6 +5517,21 @@
       "logVersion": "1.1"
     },
     {
+      "key": "QS_Alaska_RC",
+      "name": "QS Alaska RC 18.10",
+      "logVersion": "18.10"
+    },
+    {
+      "key": "QS_Sound_Fixes_Pack_Server_ATS",
+      "name": "Sound Fixes Pack Server 19.11",
+      "logVersion": "19.10"
+    },
+    {
+      "key": "QS_Combo_Traffic",
+      "name": "QS Traffic Pack 19.11",
+      "logVersion": "19.11"
+    },
+    {
       "key": "Trucks&Trailers Wheels",
       "name": "Trucks&Trailers Wheels",
       "logVersion": "11.2"
@@ -5388,6 +5570,11 @@
       "key": "real_trailer_tyres_mod_14",
       "name": "Real Trailer Tyres Mod",
       "logVersion": "1.4"
+    },
+    {
+      "key": "QS_Wheel_pack",
+      "name": "QS Wheel pack 19.11",
+      "logVersion": "19.11"
     },
     {
       "key": "Trailer Pack Flatbed",
@@ -5639,9 +5826,24 @@
       "logVersion": "1.7"
     },
     {
+      "key": "QS_Exterior_pack",
+      "name": "QS Exterior pack 19.11",
+      "logVersion": "19.11"
+    },
+    {
+      "key": "QS_Tuning_pack",
+      "name": "QS Tuning pack 19.11",
+      "logVersion": "19.11"
+    },
+    {
       "key": "SiSL's Mega Pack",
       "name": "SiSL's Mega Pack",
       "logVersion": "3.3"
+    },
+    {
+      "key": "QS_Interior_pack",
+      "name": "QS Interior pack 19.11",
+      "logVersion": "19.11"
     },
     {
       "key": "Freightshaker Classic XL SISL Pack Compatibility",
@@ -5929,6 +6131,11 @@
       "logVersion": "16.11"
     },
     {
+      "key": "QS_Environment_pack",
+      "name": "QS Environment Pack 19.11",
+      "logVersion": "19.11"
+    },
+    {
       "key": "Fictional Billboards",
       "name": "Fictional Billboards",
       "logVersion": "3.2"
@@ -6039,14 +6246,19 @@
       "logVersion": "1.3.3"
     },
     {
+      "key": "Real Logos for jon-ruda mods",
+      "name": "Real Logos for jon-ruda mods",
+      "logVersion": "26.0"
+    },
+    {
+      "key": "ATSRealisticEconomy",
+      "name": "Realistic Economy ATS by Quper",
+      "logVersion": "1.62.4"
+    },
+    {
       "key": "Project_Ultimate_Weather_2.5",
       "name": "Project Ultimate Weather 2.5",
       "logVersion": "2.5"
-    },
-    {
-      "key": "Increased Road Speed Limit",
-      "name": "Increased Road Speed Limit",
-      "logVersion": "1.62.261102"
     },
     {
       "key": "Extended Traffic Light Timing",
@@ -6059,34 +6271,19 @@
       "logVersion": "1.1.0"
     },
     {
-      "key": "Realistic Drivers",
-      "name": "Realistic Drivers",
-      "logVersion": "2.3"
-    },
-    {
-      "key": "Flowing Fleets and Freight",
-      "name": "Flowing Fleets and Freight",
-      "logVersion": "v1.5"
-    },
-    {
       "key": "Immersive_External_Cam__Infinite_Zoom_v1.1",
       "name": "Immersive External Cam + Infinite Zoom v1.1",
       "logVersion": "v1.1"
     },
     {
-      "key": "Real Logos for jon-ruda mods",
-      "name": "Real Logos for jon-ruda mods",
-      "logVersion": "26.0"
-    },
-    {
-      "key": "ATSRealisticEconomy",
-      "name": "Realistic Economy ATS by Quper",
-      "logVersion": "1.62.4"
-    },
-    {
       "key": "ATS_Quper_Background_Map",
       "name": "ATS Quper Background Map (Optional)",
       "logVersion": "2026.10.27 - 1.3"
+    },
+    {
+      "key": "QS_Final_Fix",
+      "name": "QS Final Fix 19.11",
+      "logVersion": "19.11"
     }
   ],
   "conflicts": [],

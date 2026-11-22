@@ -46,7 +46,7 @@ export function reconcilePresetSelections(presets, entry) {
   if (isSelectable(entry)) return presets;
   return presets.map((preset) =>
     preset.selection.includes(entry.id) &&
-    !(entry.type === 'server' && preset.tags?.includes('server'))
+    !preset.tags?.includes('server')
       ? { ...preset, selection: preset.selection.filter((id) => id !== entry.id) }
       : preset,
   );
@@ -68,8 +68,7 @@ export function resolveCombo(catalog, selection, { server = false } = {}) {
   }
   for (const id of selection || []) {
     const entry = entries.get(id);
-    const canSelect =
-      Boolean(entry) && (server ? ['mod', 'server'].includes(entry.type) : isSelectable(entry));
+    const canSelect = Boolean(entry) && (server || isSelectable(entry));
     if (!canSelect) continue;
     manual.add(id);
     include(id);
@@ -453,7 +452,7 @@ const validImage = (value) =>
     !value.split('/').includes('..'));
 
 // Drafts may have unassigned imports and incomplete metadata. Publication runs the strict check below.
-export function validateCatalog(catalog, draft = false) {
+export function validateCatalog(catalog, draft = false, { linkPresets = catalog?.presets } = {}) {
   const check = (condition, message) => {
     if (!condition) throw new Error(message);
   };
@@ -490,7 +489,7 @@ export function validateCatalog(catalog, draft = false) {
   const orderByKey = new Map(order.map((file) => [file.key, file]));
   const serverRequiredIds = new Set();
   const independentlyLinkedIds = new Set();
-  for (const preset of presets) {
+  for (const preset of linkPresets || []) {
     if (!Array.isArray(preset?.selection)) continue;
     const optional = new Set(
       Array.isArray(preset.optionalSelection) ? preset.optionalSelection : [],
@@ -661,9 +660,7 @@ export function validateCatalog(catalog, draft = false) {
       text(preset.title) &&
         uniqueList(
           preset.selection,
-          (id) =>
-            known(id, byId) &&
-            isSelectable(byId.get(id)),
+          (id) => known(id, byId) && (isServer || isSelectable(byId.get(id))),
         ) &&
         (draft || preset.selection.length),
       `Invalid preset: ${preset.id}`,
@@ -671,7 +668,7 @@ export function validateCatalog(catalog, draft = false) {
     check(
       uniqueList(
         optionalSelection,
-        (id) => known(id, byId) && ['mod', 'server'].includes(byId.get(id).type),
+        (id) => known(id, byId) && (isServer || ['mod', 'server'].includes(byId.get(id).type)),
       ) &&
         optionalSelection.every((id) => preset.selection.includes(id)) &&
         (isServer || optionalSelection.length === 0) &&
