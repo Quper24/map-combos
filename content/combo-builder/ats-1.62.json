@@ -815,15 +815,16 @@
       "type": "fix",
       "link": "https://truckymods.io/american-truck-simulator/map-patches/dna-and-ats-expansion-great-america-connections-256850",
       "image": "/img/combo-builder/1ddb3bf9ab21a39f31dda9040401416fa97d8853221de5a0718bb232bededc13.webp",
-      "version": "1.4.0.1",
+      "version": "1.4.2",
       "addedAt": "2026-11-16",
+      "updatedAt": "2026-11-22",
       "paid": false,
       "files": [
-        "DNA_ATS_Exp_GA_Connections_v1.4.0.1"
+        "DNA_ATS_Exp_GA_Connections_v1.4.2"
       ],
       "requires": [
-        "dna-v1-8-2",
         "great-america-v6-2",
+        "dna-v1-8-2",
         "ats-expansion",
         "coast-to-coast-v2-24-62-0"
       ],
@@ -831,7 +832,7 @@
         "c2c-ats-exp-connections-v1-1-2"
       ],
       "dlcs": [],
-      "shareIndex": 43
+      "shareIndex": 281
     },
     {
       "id": "qs-ats-baja-ensenada-port-fix",
@@ -888,25 +889,6 @@
       ],
       "dlcs": [],
       "shareIndex": 46
-    },
-    {
-      "id": "qs-ats-great-america-sector-fix",
-      "title": "QS ATS Great America Sector Fix",
-      "type": "fix",
-      "link": "https://sharemods.com/dbbb4ds2apxv/QS_ATS_Great_America_Sector_Fix.scs.html",
-      "image": "/img/combo-builder/fa3605dc975d4fbb6a142080465ebf9bd40bf5bd02df21df17a1cad83b1cbd9c.webp",
-      "version": "0.5.2",
-      "addedAt": "2026-11-16",
-      "updatedAt": "2026-11-17",
-      "paid": false,
-      "files": [
-        "QS_ATS_Great_America_Sector_Fix"
-      ],
-      "requires": [
-        "dna-ats-exp-ga-connections-v1-4-0-1"
-      ],
-      "dlcs": [],
-      "shareIndex": 47
     },
     {
       "id": "qs-ats-more-cities-sierra-connection-fix",
@@ -4550,6 +4532,124 @@
       "requires": [],
       "dlcs": [],
       "shareIndex": 275
+    },
+    {
+      "id": "qs-ats-great-america-compatibility-fix",
+      "title": "QS ATS Great America Compatibility Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/be1uj0yzjp15/QS_ATS_Great_America_Compatibility_Fix.scs.html",
+      "image": "/img/combo-builder/d91ed72507ab59edfb58ddd771e03904d642da844a10a5b13e6b8f8cef61a2a6.webp",
+      "version": "0.6.1",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "QS_ATS_Great_America_Compatibility_Fix"
+      ],
+      "requires": [
+        "dna-ats-exp-ga-connections-v1-4-0-1",
+        "great-america-v6-2",
+        "dna-v1-8-2",
+        "ats-expansion",
+        "coast-to-coast-v2-24-62-0"
+      ],
+      "dlcs": [],
+      "shareIndex": 282
+    },
+    {
+      "id": "american-open-spaces-v2-3",
+      "title": "American Open Spaces V2.3",
+      "type": "map",
+      "link": "https://truckymods.io/american-truck-simulator/maps/american-open-spaces-140195",
+      "image": "/img/combo-builder/6a4fd0edfdc2a6d7d7185d11282958614ee750777a9649e30ded1c530e2a7dfb.webp",
+      "version": "2.3",
+      "addedAt": "2026-11-22",
+      "paid": false,
+      "files": [
+        "American Open Spaces V2.3"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 283
+    },
+    {
+      "id": "washington-expansion-2-2",
+      "title": "Washington Expansion v2.2",
+      "type": "map",
+      "link": "https://www.patreon.com/c/voith/home",
+      "image": "/img/combo-builder/48dff49a37c2c7e30dface903fabd2faa3fee594cf7a67f4b3cb7b69a342301c.webp",
+      "version": "2.2",
+      "addedAt": "2026-11-22",
+      "paid": true,
+      "files": [
+        "Washington Expansion_2.2"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 284
+    },
+    {
+      "id": "idaho-expansion-v1-5",
+      "title": "Idaho Expansion v1.5",
+      "type": "map",
+      "link": "https://www.patreon.com/c/voith/home",
+      "image": "/img/combo-builder/a78d1a9e8252a34d0bc60fe9aa3dc4ca82f943e62bde2c1ee27458ffedd484a3.webp",
+      "version": "1.5",
+      "addedAt": "2026-11-22",
+      "paid": true,
+      "files": [
+        "Idaho Expansion v1.5"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 287
+    },
+    {
+      "id": "colorado-expansion-1-8",
+      "title": "Colorado Expansion v1.8",
+      "type": "map",
+      "link": "https://www.patreon.com/c/voith/home",
+      "image": "/img/combo-builder/40083293bc5792b622abee814fe1bc59149e66bf17a792c32c2f22492c177291.webp",
+      "version": "1.8",
+      "addedAt": "2026-11-22",
+      "paid": true,
+      "files": [
+        "Colorado Expansion 1.8"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 286
+    },
+    {
+      "id": "utah-expansion-2-7",
+      "title": "Utah Expansion v2.7",
+      "type": "map",
+      "link": "https://www.patreon.com/c/voith/home",
+      "image": "/img/combo-builder/bbbd11338d5573c049883711b29f2ce9143ec9a191b927d32f5c155a67d7d053.webp",
+      "version": "2.6",
+      "addedAt": "2026-11-22",
+      "paid": true,
+      "files": [
+        "Utah Expansion_2.7"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 288
+    },
+    {
+      "id": "oregon-expansion-2-5",
+      "title": "Oregon Expansion v2.5",
+      "type": "map",
+      "link": "https://www.patreon.com/c/voith/home",
+      "image": "/img/combo-builder/c7d43e5ae1f69b13d28fd872ec8a7b280468805de6c47895b86c50453b116f2e.webp",
+      "version": "2.5",
+      "addedAt": "2026-11-22",
+      "paid": true,
+      "files": [
+        "Oregon Expansion_2.5"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 289
     }
   ],
   "order": [
@@ -4697,7 +4797,7 @@
     {
       "key": "QS_ATS_Expansion_Fix",
       "name": "QS ATS Expansion Fix",
-      "logVersion": "0.1.5"
+      "logVersion": "0.1.6"
     },
     {
       "key": "QS_ATS_Expansion_Sierra_Connection_Fix",
@@ -4726,14 +4826,14 @@
       "logVersion": "6.2"
     },
     {
-      "key": "DNA_ATS_Exp_GA_Connections_v1.4.0.1",
-      "name": "DNA + ATS Expansion And Great America Connections v1.4.0.1",
-      "logVersion": "1.4.0.1"
+      "key": "DNA_ATS_Exp_GA_Connections_v1.4.2",
+      "name": "DNA + ATS Expansion And Great America Connections v1.4.2",
+      "logVersion": "1.4.2"
     },
     {
-      "key": "QS_ATS_Great_America_Sector_Fix",
-      "name": "QS ATS Great America Sector Fix",
-      "logVersion": "0.5.2"
+      "key": "QS_ATS_Great_America_Compatibility_Fix",
+      "name": "QS ATS Great America Compatibility Fix",
+      "logVersion": "0.6.1"
     },
     {
       "key": "Discover_Oregon_Revived_v1.0.1",
@@ -4759,6 +4859,36 @@
       "key": "Washington_Extended_Revived_v1.0.1",
       "name": "Washington Extended Revived v1.0.1",
       "logVersion": "1.0.1"
+    },
+    {
+      "key": "Oregon Expansion_2.5",
+      "name": "Oregon Expansion v2.5",
+      "logVersion": "2.5"
+    },
+    {
+      "key": "Utah Expansion_2.7",
+      "name": "Utah Expansion v2.7",
+      "logVersion": "2.6"
+    },
+    {
+      "key": "American Open Spaces V2.3",
+      "name": "American Open Spaces V2.3",
+      "logVersion": "2.3"
+    },
+    {
+      "key": "Colorado Expansion 1.8",
+      "name": "Colorado Expansion v1.8",
+      "logVersion": "1.8"
+    },
+    {
+      "key": "Idaho Expansion v1.5",
+      "name": "Idaho Expansion v1.5",
+      "logVersion": "1.5"
+    },
+    {
+      "key": "Washington Expansion_2.2",
+      "name": "Washington Expansion v2.2",
+      "logVersion": "2.2"
     },
     {
       "key": "promods-ats-models-v171",
@@ -4822,7 +4952,7 @@
     {
       "key": "QS_ATS_Alaska_NTTF_Traffic_Fix",
       "name": "QS ATS Alaska NTTF Traffic Fix",
-      "logVersion": "0.2.2"
+      "logVersion": "0.2.3"
     },
     {
       "key": "Petersburg_Alaska_Revived_v1.0.1",
