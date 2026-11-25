@@ -1,11 +1,10 @@
 import { useTranslation } from '../../i18n/Language';
-import { Link } from 'react-router-dom';
 import AutoProfileInstall from '../AutoProfileInstall/AutoProfileInstall';
 import Video from '../Video/Video';
 import ExternalLink from '../ui/ExternalLink';
 import { VERSIONS } from '../../data/versions';
 import { comboVideos, youtubeVideoId } from '../../lib/content';
-import { BeforeLaunchDetails, LauncherDetails } from './ComboGuides';
+import { BeforeLaunchDetails, LauncherDetails, ServerGuideCallout } from './ComboGuides';
 import s from './ComboContent.module.css';
 export default function ComboContent({ combo }) {
   const { t } = useTranslation();
@@ -71,16 +70,7 @@ export default function ComboContent({ combo }) {
             {t(combo.profile && 'В готовом профиле моды уже расставлены.')}
           </p>
         )}
-        {combo.tags.includes('server') && (
-          <aside className={s.serverGuide}>
-            <span className={s.guideLabel}>{t('Планируешь играть на наших серверах?')}</span>
-            <strong>{t('Подготовься к первому рейсу')}</strong>
-            <p>{t('Параметры сессий, подготовка модов и порядок подключения — в одном гайде.')}</p>
-            <Link className="button" to="/server-guide">
-              {t('Как подключиться к серверу →')}
-            </Link>
-          </aside>
-        )}
+        {combo.tags.includes('server') && <ServerGuideCallout />}
       </section>
       {(related.length > 0 || combo.video) && (
         <section>

@@ -5,6 +5,7 @@ import {
   BeforeLaunchDetails,
   ComboDisclosure,
   LauncherDetails,
+  ServerGuideCallout,
 } from '../../components/ComboContent/ComboGuides';
 import ExternalLink from '../../components/ui/ExternalLink';
 import Video from '../../components/Video/Video';
@@ -128,6 +129,7 @@ export default function PresetContent({ catalog, preset, share = true }) {
             />
           )}
         </div>
+        {server && <ServerGuideCallout />}
         {canUseOrder && (
           <ComboDisclosure name={accordion} title="Автоматическая расстановка модов">
             <OrderProfileInstall catalog={catalog} files={result.files} title={orderTitle} />

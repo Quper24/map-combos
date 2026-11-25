@@ -56,11 +56,11 @@
         "QS_ATS_C2C_ProMods_Fix"
       ],
       "requires": [
-        "coast-to-coast-v2-24-62-0",
-        "promods-ats"
+        "promods-ats",
+        "coast-to-coast-v2-24-62-0"
       ],
       "dlcs": [],
-      "shareIndex": 2
+      "shareIndex": 317
     },
     {
       "id": "atsrealisticeconomy",
@@ -85,19 +85,19 @@
       "title": "QS ATS Map Final Fix",
       "type": "fix",
       "autoWithMaps": true,
-      "link": "https://sharemods.com/zmz36q4aqcwi/QS_ATS_Map_Final_Fix.scs.html",
+      "link": "https://sharemods.com/5aogbdiqfudj/QS_ATS_Map_Final_Fix.scs.html",
       "image": "/img/combo-builder/aa7d23f9c73c9a8817448bf4904c4d5dcdd3becf3d860b7e8e80fe680217d45e.webp",
       "description": "Общие фиксы для сборки карт",
-      "version": "0.3.5",
+      "version": "0.3.6",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-18",
+      "updatedAt": "2026-11-25",
       "paid": false,
       "files": [
         "QS_ATS_Map_Final_Fix"
       ],
       "requires": [],
       "dlcs": [],
-      "shareIndex": 278
+      "shareIndex": 310
     },
     {
       "id": "nascar-map-combo-pack",
@@ -477,11 +477,11 @@
       "id": "qs-ats-alaska-nttf-traffic-fix",
       "title": "QS ATS Alaska NTTF Traffic Fix",
       "type": "fix",
-      "link": "https://sharemods.com/w31a1whog7i6/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
+      "link": "https://sharemods.com/h096qlexopfe/QS_ATS_Alaska_NTTF_Traffic_Fix.scs.html",
       "image": "/img/combo-builder/ce57c9a00c3466fe07819d9a3684a38bc54207a8f5f04fd3ecf2f82c5530a54d.webp",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "addedAt": "2026-11-10",
-      "updatedAt": "2026-11-13",
+      "updatedAt": "2026-11-25",
       "paid": false,
       "files": [
         "QS_ATS_Alaska_NTTF_Traffic_Fix"
@@ -492,7 +492,7 @@
       "dlcs": [
         "Lode King & Prestige Trailers"
       ],
-      "shareIndex": 25
+      "shareIndex": 311
     },
     {
       "id": "alaska-nttf-to-promods-rc-v0-6-7-2",
@@ -612,11 +612,11 @@
       "id": "qs-ats-expansion-fix",
       "title": "QS ATS Expansion Fix",
       "type": "fix",
-      "link": "https://sharemods.com/t56rf2m3gwle/QS_ATS_Expansion_Fix.scs.html",
+      "link": "https://sharemods.com/30wpgagpjzl1/QS_ATS_Expansion_Fix.scs.html",
       "image": "/img/combo-builder/bd8d2a4b93deeed4b95c3a3feb2d0c870c4f160ed9c935f075c83e38d5d361ed.webp",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "addedAt": "2026-11-15",
-      "updatedAt": "2026-11-18",
+      "updatedAt": "2026-11-25",
       "paid": false,
       "files": [
         "QS_ATS_Expansion_Fix"
@@ -625,7 +625,7 @@
         "ats-expansion"
       ],
       "dlcs": [],
-      "shareIndex": 279
+      "shareIndex": 312
     },
     {
       "id": "qs-ats-expansion-sierra-connection-fix",
@@ -728,15 +728,16 @@
       "type": "map",
       "link": "https://www.patreon.com/c/voith/home",
       "image": "/img/combo-builder/76be39275cc4c7da38836a1143767b9d959fa71afbd92b017f32a0d57ec507df.webp",
-      "version": "6.2",
+      "version": "6.3",
       "addedAt": "2026-11-16",
+      "updatedAt": "2026-11-25",
       "paid": true,
       "files": [
-        "great_america_v6.2"
+        "great_america_v6.3"
       ],
       "requires": [],
       "dlcs": [],
-      "shareIndex": 38
+      "shareIndex": 306
     },
     {
       "id": "dna-v1-8-2",
@@ -815,12 +816,12 @@
       "type": "fix",
       "link": "https://truckymods.io/american-truck-simulator/map-patches/dna-and-ats-expansion-great-america-connections-256850",
       "image": "/img/combo-builder/1ddb3bf9ab21a39f31dda9040401416fa97d8853221de5a0718bb232bededc13.webp",
-      "version": "1.4.2",
+      "version": "1.4.2.1",
       "addedAt": "2026-11-16",
-      "updatedAt": "2026-11-22",
+      "updatedAt": "2026-11-25",
       "paid": false,
       "files": [
-        "DNA_ATS_Exp_GA_Connections_v1.4.2"
+        "DNA_ATS_Exp_GA_Connections_v1.4.2.1"
       ],
       "requires": [
         "great-america-v6-2",
@@ -832,7 +833,7 @@
         "c2c-ats-exp-connections-v1-1-2"
       ],
       "dlcs": [],
-      "shareIndex": 281
+      "shareIndex": 307
     },
     {
       "id": "qs-ats-baja-ensenada-port-fix",
@@ -1076,16 +1077,16 @@
       "type": "mod",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=830663438",
       "image": "/img/combo-builder/4e40cc3fd84905218d82d1cbbcf749e412183b1b8f1412345ce7e411f9420e67.webp",
-      "version": "26.79",
+      "version": "26.80",
       "addedAt": "2026-11-17",
-      "updatedAt": "2026-11-18",
+      "updatedAt": "2026-11-25",
       "paid": false,
       "files": [
         "Sound Fixes Pack - ATS"
       ],
       "requires": [],
       "dlcs": [],
-      "shareIndex": 277
+      "shareIndex": 314
     },
     {
       "id": "lithuanian-gps-navigation-ats",
@@ -3983,18 +3984,20 @@
     },
     {
       "id": "real-world-billboards",
-      "type": "mod",
       "title": "Real World Billboards",
+      "type": "mod",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2814106555",
+      "image": "/img/combo-builder/98724d207aa9b1ac634cc6bcf62c44ffe376f48a81a86a2c83d7b7d9d3a473e3.jpg",
+      "version": "2026.11.19",
+      "addedAt": "2026-11-17",
+      "updatedAt": "2026-11-25",
+      "paid": false,
       "files": [
         "Real World Billboards"
       ],
       "requires": [],
       "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "2026.10.05",
-      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2814106555",
-      "image": "/img/combo-builder/98724d207aa9b1ac634cc6bcf62c44ffe376f48a81a86a2c83d7b7d9d3a473e3.jpg",
-      "shareIndex": 240
+      "shareIndex": 315
     },
     {
       "id": "real-world-signs-logos",
@@ -4013,18 +4016,20 @@
     },
     {
       "id": "real-world-plates",
-      "type": "mod",
       "title": "Real World Plates",
+      "type": "mod",
+      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789649695",
+      "image": "/img/combo-builder/e3d2550cd6070717b2cebded58231838f19cdccc95fe821a3482f6bc6fc9e1d5.jpg",
+      "version": "2026.11.19",
+      "addedAt": "2026-11-17",
+      "updatedAt": "2026-11-25",
+      "paid": false,
       "files": [
         "Real World Plates"
       ],
       "requires": [],
       "dlcs": [],
-      "addedAt": "2026-11-17",
-      "version": "2026.10.16",
-      "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789649695",
-      "image": "/img/combo-builder/e3d2550cd6070717b2cebded58231838f19cdccc95fe821a3482f6bc6fc9e1d5.jpg",
-      "shareIndex": 242
+      "shareIndex": 316
     },
     {
       "id": "improved-road-reflections",
@@ -4226,15 +4231,16 @@
       "type": "mod",
       "link": "https://www.zeemods.com/p/peterbilt-interior-effect-sound-pack/",
       "image": "/img/combo-builder/33b432f0f156b8c0198f3a0b54d8f0c55826640b10146b6c955e5e012a3abe3f.webp",
-      "version": "1.4.2-G5",
+      "version": "1.4.3",
       "addedAt": "2026-11-17",
+      "updatedAt": "2026-11-25",
       "paid": true,
       "files": [
-        "zeemods.peterbilt.effects_g5_v1.4.2"
+        "zeemods.peterbilt.effects_g5_v1.4.3"
       ],
       "requires": [],
       "dlcs": [],
-      "shareIndex": 254
+      "shareIndex": 308
     },
     {
       "id": "zeemods-freightliner-effects-g5-v1-0-1",
@@ -4258,15 +4264,16 @@
       "type": "mod",
       "link": "https://www.zeemods.com/p/western-star-ie-pack/",
       "image": "/img/combo-builder/6efbf2181dee93aadbddd82859ac76a8f3e685bfbce8bd8596409500da580cac.webp",
-      "version": "1.0.1-G5+",
+      "version": "1.0.2",
       "addedAt": "2026-11-17",
+      "updatedAt": "2026-11-25",
       "paid": true,
       "files": [
-        "zeemods.ws.effects_g5p_v1.0.1"
+        "zeemods.ws.effects_g5p_v1.0.2"
       ],
       "requires": [],
       "dlcs": [],
-      "shareIndex": 256
+      "shareIndex": 305
     },
     {
       "id": "zeemods-wind-tire-trailer-effects-g5-v1-4-6",
@@ -4489,10 +4496,11 @@
       "id": "qs-ats-great-america-compatibility-fix",
       "title": "QS ATS Great America Compatibility Fix",
       "type": "fix",
-      "link": "https://sharemods.com/be1uj0yzjp15/QS_ATS_Great_America_Compatibility_Fix.scs.html",
+      "link": "https://sharemods.com/p1hqa4snzmmg/QS_ATS_Great_America_Compatibility_Fix.scs.html",
       "image": "/img/combo-builder/d91ed72507ab59edfb58ddd771e03904d642da844a10a5b13e6b8f8cef61a2a6.webp",
-      "version": "0.6.1",
+      "version": "0.6.2",
       "addedAt": "2026-11-22",
+      "updatedAt": "2026-11-25",
       "paid": false,
       "files": [
         "QS_ATS_Great_America_Compatibility_Fix"
@@ -4505,7 +4513,7 @@
         "coast-to-coast-v2-24-62-0"
       ],
       "dlcs": [],
-      "shareIndex": 282
+      "shareIndex": 313
     },
     {
       "id": "american-open-spaces-v2-3",
@@ -4797,6 +4805,25 @@
       "requires": [],
       "dlcs": [],
       "shareIndex": 302
+    },
+    {
+      "id": "qs-ats-expansion-idaho-connection-fix",
+      "title": "QS ATS Expansion + Idaho Connection Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/zdv04elqbfox/QS_ATS_Expansion_Idaho_Connection_Fix.scs.html",
+      "image": "/img/combo-builder/673cdefbe762eb60f407202d9282dc3994555621533e4286a92c667409acc912.webp",
+      "version": "0.1.0",
+      "addedAt": "2026-11-25",
+      "paid": false,
+      "files": [
+        "QS_ATS_Expansion_Idaho_Connection_Fix"
+      ],
+      "requires": [
+        "idaho-expansion-v1-5",
+        "ats-expansion"
+      ],
+      "dlcs": [],
+      "shareIndex": 309
     }
   ],
   "order": [
@@ -4978,19 +5005,19 @@
       "logVersion": "1.1.2"
     },
     {
-      "key": "great_america_v6.2",
-      "name": "GREAT AMERICA v6.2",
-      "logVersion": "6.2"
+      "key": "great_america_v6.3",
+      "name": "GREAT AMERICA v6.3",
+      "logVersion": "6.3"
     },
     {
-      "key": "DNA_ATS_Exp_GA_Connections_v1.4.2",
-      "name": "DNA + ATS Expansion And Great America Connections v1.4.2",
-      "logVersion": "1.4.2"
+      "key": "DNA_ATS_Exp_GA_Connections_v1.4.2.1",
+      "name": "DNA_ATS_Exp_GA_Connections_v1.4.2.1",
+      "logVersion": "1.4.2.1"
     },
     {
       "key": "QS_ATS_Great_America_Compatibility_Fix",
       "name": "QS ATS Great America Compatibility Fix",
-      "logVersion": "0.6.1"
+      "logVersion": "0.6.2"
     },
     {
       "key": "Discover_Oregon_Revived_v1.0.1",
@@ -5043,6 +5070,11 @@
       "logVersion": "1.5"
     },
     {
+      "key": "QS_ATS_Expansion_Idaho_Connection_Fix",
+      "name": "QS ATS Expansion + Idaho Connection Fix",
+      "logVersion": "0.1.0"
+    },
+    {
       "key": "Washington Expansion_2.2",
       "name": "Washington Expansion v2.2",
       "logVersion": "2.2"
@@ -5083,7 +5115,7 @@
     {
       "key": "QS_ATS_C2C_ProMods_Fix",
       "name": "QS ATS Coast to Coast + ProMods Fix",
-      "image": "/img/combo-builder/7f9f53e42f67166dad1af100dd49bfc649374514f37b2f9e3c68ab7b6362eafa.webp",
+      "image": "/img/combo-builder/07a1a21e89e2b4cd19f63fd6f999f620a22779bd9009cfe9c9d9a6cfce0acedf.webp",
       "logVersion": "0.1.0"
     },
     {
@@ -5164,7 +5196,7 @@
     {
       "key": "QS_ATS_Map_Final_Fix",
       "name": "QS ATS Map Final Fix",
-      "logVersion": "0.3.5"
+      "logVersion": "0.3.6"
     },
     {
       "key": "National Beef Cargo Pack",
@@ -5209,7 +5241,7 @@
     {
       "key": "Sound Fixes Pack - ATS",
       "name": "Sound Fixes Pack 26.64",
-      "logVersion": "26.79"
+      "logVersion": "26.80"
     },
     {
       "key": "Lithuanian GPS Navigation ATS",
@@ -6143,7 +6175,7 @@
     {
       "key": "Real World Billboards",
       "name": "Real World Billboards",
-      "logVersion": "2026.10.05"
+      "logVersion": "2026.11.19"
     },
     {
       "key": "Real World Signs & Logos",
@@ -6153,7 +6185,7 @@
     {
       "key": "Real World Plates",
       "name": "Real World Plates",
-      "logVersion": "2026.10.16"
+      "logVersion": "2026.11.19"
     },
     {
       "key": "Improved Road Reflections",
@@ -6211,9 +6243,9 @@
       "logVersion": "1.2.2-G5"
     },
     {
-      "key": "zeemods.peterbilt.effects_g5_v1.4.2",
+      "key": "zeemods.peterbilt.effects_g5_v1.4.3",
       "name": "Peterbilt Interior & Effect Sound Pack",
-      "logVersion": "1.4.2-G5"
+      "logVersion": "1.4.3-G5"
     },
     {
       "key": "zeemods.freightliner.effects_g5_v1.0.1",
@@ -6221,9 +6253,9 @@
       "logVersion": "1.0.1-G5+"
     },
     {
-      "key": "zeemods.ws.effects_g5p_v1.0.1",
+      "key": "zeemods.ws.effects_g5p_v1.0.2",
       "name": "Western Star I&E Sound Pack",
-      "logVersion": "1.0.1-G5+"
+      "logVersion": "1.0.2-G5+"
     },
     {
       "key": "zeemods.wind.tire.trailer_effects_g5_v1.4.6",
@@ -6246,16 +6278,6 @@
       "logVersion": "1.3.3"
     },
     {
-      "key": "Real Logos for jon-ruda mods",
-      "name": "Real Logos for jon-ruda mods",
-      "logVersion": "26.0"
-    },
-    {
-      "key": "ATSRealisticEconomy",
-      "name": "Realistic Economy ATS by Quper",
-      "logVersion": "1.62.4"
-    },
-    {
       "key": "Project_Ultimate_Weather_2.5",
       "name": "Project Ultimate Weather 2.5",
       "logVersion": "2.5"
@@ -6274,6 +6296,16 @@
       "key": "Immersive_External_Cam__Infinite_Zoom_v1.1",
       "name": "Immersive External Cam + Infinite Zoom v1.1",
       "logVersion": "v1.1"
+    },
+    {
+      "key": "Real Logos for jon-ruda mods",
+      "name": "Real Logos for jon-ruda mods",
+      "logVersion": "26.0"
+    },
+    {
+      "key": "ATSRealisticEconomy",
+      "name": "Realistic Economy ATS by Quper",
+      "logVersion": "1.62.4"
     },
     {
       "key": "ATS_Quper_Background_Map",

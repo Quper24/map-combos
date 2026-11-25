@@ -1,8 +1,23 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/Language';
 import Video from '../Video/Video';
 import ExternalLink from '../ui/ExternalLink';
 import { videos, youtubeVideoId } from '../../lib/content';
 import s from './ComboContent.module.css';
+
+export function ServerGuideCallout() {
+  const { t } = useTranslation();
+  return (
+    <aside className={s.serverGuide}>
+      <span className={s.guideLabel}>{t('Планируешь играть на наших серверах?')}</span>
+      <strong>{t('Подготовься к первому рейсу')}</strong>
+      <p>{t('Параметры сессий, подготовка модов и порядок подключения — в одном гайде.')}</p>
+      <Link className="button" to="/server-guide">
+        {t('Как подключиться к серверу →')}
+      </Link>
+    </aside>
+  );
+}
 
 export function ComboDisclosure({ title, name, children }) {
   const { t } = useTranslation();

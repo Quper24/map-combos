@@ -538,10 +538,11 @@ export function validateCatalog(catalog, draft = false, { linkPresets = catalog?
     } = entry;
     check(text(title) && Object.hasOwn(entryTypeLabels, type), `Invalid entry: ${id}`);
     check(
-      ((draft && link === undefined) || isDownloadLink(link) || requiredOnlyServerIds.has(id)) &&
-        validImage(image),
-      `Invalid entry link or image: ${id}`,
+      isDownloadLink(link) ||
+        (link === undefined && (draft || type === 'server' || requiredOnlyServerIds.has(id))),
+      `Invalid entry link: ${id}`,
     );
+    check(validImage(image), `Invalid entry image: ${id}`);
     check(paid === undefined || typeof paid === 'boolean', `Invalid paid label: ${id}`);
     check(
       (autoWithMaps === undefined || typeof autoWithMaps === 'boolean') &&

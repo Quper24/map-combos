@@ -250,8 +250,9 @@ export default function ComboEditor() {
   function exportPreset(draft) {
     try {
       const { preset, needsVersion } = preparePresetRelease(catalog, draft, draft.updatedAt);
-      validateCatalog({ ...catalog, presets: [preset] });
-      const next = { ...catalog, presets: replace(catalog.presets, 'id', preset) };
+      const presets = replace(catalog.presets, 'id', preset);
+      validateCatalog({ ...catalog, presets: [preset] }, false, { linkPresets: presets });
+      const next = { ...catalog, presets };
       if (
         !commit(
           next,
