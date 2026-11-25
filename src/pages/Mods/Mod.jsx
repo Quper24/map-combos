@@ -57,11 +57,6 @@ export default function Mod() {
                 {t(version)}
               </span>
             ))}
-            {overview && (
-              <a className="button button-secondary" href="#overview">
-                {t('Смотреть обзор')}
-              </a>
-            )}
           </div>
           <div className="actions">
             {mod.links.map((link, index) => (
@@ -75,25 +70,26 @@ export default function Mod() {
             ))}
           </div>
         </div>
-        <img
-          className={s.detailCover}
-          src={mod.cover}
-          alt={t(mod.coverAlt || mod.title)}
-          width="640"
-          height="360"
-        />
-      </div>
-      {overview && (
-        <section id="overview" className={`section ${s.overview}`}>
-          <h2>{t(overview.title)}</h2>
-          <Video
-            videoId={youtubeVideoId(overview.platforms.youtube)}
-            title={overview.title}
-            thumbnail={overview.thumbnail}
-            platforms={overview.platforms}
+        {overview ? (
+          <section id="overview" className={s.overview} aria-labelledby="overview-title">
+            <h2 id="overview-title">{t('Смотреть обзор')}</h2>
+            <Video
+              videoId={youtubeVideoId(overview.platforms.youtube)}
+              title={overview.title}
+              thumbnail={mod.cover}
+              platforms={overview.platforms}
+            />
+          </section>
+        ) : (
+          <img
+            className={s.detailCover}
+            src={mod.cover}
+            alt={t(mod.coverAlt || mod.title)}
+            width="640"
+            height="360"
           />
-        </section>
-      )}
+        )}
+      </div>
       {mod.notice && <aside className={s.notice}>{t(mod.notice)}</aside>}
       <section className={`section prose ${s.description}`}>
         <h2>{t({ mod: 'О модификации', plugin: 'О плагине', app: 'О программе' }[mod.type])}</h2>

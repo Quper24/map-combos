@@ -96,8 +96,22 @@
   border-radius: 8px;
 }
 .overview {
-  max-width: 800px;
+  min-width: 0;
+  padding: clamp(12px, 2vw, 20px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
   scroll-margin-top: 110px;
+}
+.overview h2 {
+  margin: 0;
+  font-size: var(--type-ui);
+}
+.overview > div {
+  margin-bottom: 0;
+}
+.overview > div > div:last-child {
+  padding-bottom: 0;
 }
 .notice {
   max-width: 900px;
