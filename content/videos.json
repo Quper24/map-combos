@@ -42,20 +42,6 @@
     "publishedAt": "2026-11-11T17:00:00.000Z"
   },
   {
-    "id": "cargo-control",
-    "title": "ФРИЗЫ с собственным прицепом в ETS2? Решение есть! | Cargo Control",
-    "game": "ets2",
-    "category": "mods",
-    "thumbnail": "/img/videos/cargo-control.jpg",
-    "platforms": {
-      "youtube": "https://youtu.be/-bIOj-NlPD8",
-      "rutube": "https://rutube.ru/video/private/3e95a6984b82135ecde61582c4823353/?p=XlYoJF4RIjZ5Nf3x-gNUbQ"
-    },
-    "relatedComboIds": [],
-    "relatedModIds": ["cargo-control"],
-    "publishedAt": "2026-11-01T16:13:12.000Z"
-  },
-  {
     "id": "ets2-s11e16",
     "game": "ets2",
     "category": "drives",

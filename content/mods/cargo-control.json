@@ -51,7 +51,8 @@
       "url": "https://github.com/Quper24/cargo-fix-plugin-ets2/releases/tag/v1.3.4"
     }
   ],
-  "videoIds": ["cargo-control"],
+  "videoIds": ["cargo-control-ets2-ats-review"],
+  "overviewVideoId": "cargo-control-ets2-ats-review",
   "changelog": [
     {
       "version": "1.3.4",
