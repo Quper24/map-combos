@@ -31,12 +31,32 @@
   "coverAlt": "Cargo Control — ETS2 + ATS 1.61 / 1.62",
   "images": [
     {
-      "src": "/img/mods/cargo-control-menu-061.png",
-      "alt": "Предпросмотр меню Cargo Control ETS2 0.6.1"
+      "src": "/img/mods/cargo-control-134-markets.png",
+      "alt": "Рынки и настройки Cargo Control"
     },
     {
-      "src": "/img/mods/cargo-control-notification-061.png",
-      "alt": "Предпросмотр уведомления Cargo Control ETS2 0.6.1"
+      "src": "/img/mods/cargo-control-134-create-order.png",
+      "alt": "Создание грузового заказа"
+    },
+    {
+      "src": "/img/mods/cargo-control-134-coaches.png",
+      "alt": "Создание автобусного маршрута Coaches"
+    },
+    {
+      "src": "/img/mods/cargo-control-134-coaches-progress.png",
+      "alt": "Ход обновления автобусных рейсов"
+    },
+    {
+      "src": "/img/mods/cargo-control-134-coaches-result.png",
+      "alt": "Уведомление об обновлении автобусных рейсов"
+    },
+    {
+      "src": "/img/mods/cargo-control-134-session-progress.png",
+      "alt": "Ход чтения игровой сессии"
+    },
+    {
+      "src": "/img/mods/cargo-control-134-market-progress.png",
+      "alt": "Ход обновления рынка заказов"
     }
   ],
   "links": [
