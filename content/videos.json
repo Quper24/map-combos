@@ -6,7 +6,10 @@
     "games": ["ets2", "ats"],
     "category": "mods",
     "thumbnail": "/img/videos/quper-truckkit-review.jpg",
-    "platforms": { "youtube": "https://youtu.be/kXroyqOOlEk" },
+    "platforms": {
+      "youtube": "https://youtu.be/kXroyqOOlEk",
+      "rutube": "https://rutube.ru/video/ffb2c2706d849b805e28d74b7f7bd736/"
+    },
     "relatedComboIds": [],
     "relatedModIds": ["quper-truckkit"]
   },
