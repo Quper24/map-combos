@@ -1,7 +1,8 @@
 import { useTranslation } from '../../i18n/Language';
 import { Link, useParams } from 'react-router-dom';
 import { mods } from '../../lib/mods';
-import { GAME_NAMES, videos } from '../../lib/content';
+import { GAME_NAMES, videos, youtubeVideoId } from '../../lib/content';
+import Video from '../../components/Video/Video';
 import VideoCard from '../../components/VideoCard/VideoCard';
 import ExternalLink from '../../components/ui/ExternalLink';
 import s from './Mods.module.css';
@@ -19,8 +20,11 @@ export default function Mod() {
       </div>
     );
   const related = videos.filter(
-    (video) => mod.videoIds.includes(video.id) || video.relatedModIds.includes(mod.id),
+    (video) =>
+      video.id !== mod.overviewVideoId &&
+      (mod.videoIds.includes(video.id) || video.relatedModIds.includes(mod.id)),
   );
+  const overview = videos.find((video) => video.id === mod.overviewVideoId);
   return (
     <div className="container page">
       <nav className="breadcrumb" aria-label={t('Хлебные крошки')}>
@@ -53,6 +57,11 @@ export default function Mod() {
                 {t(version)}
               </span>
             ))}
+            {overview && (
+              <a className="button button-secondary" href="#overview">
+                {t('Смотреть обзор')}
+              </a>
+            )}
           </div>
           <div className="actions">
             {mod.links.map((link, index) => (
@@ -74,6 +83,17 @@ export default function Mod() {
           height="360"
         />
       </div>
+      {overview && (
+        <section id="overview" className={`section ${s.overview}`}>
+          <h2>{t(overview.title)}</h2>
+          <Video
+            videoId={youtubeVideoId(overview.platforms.youtube)}
+            title={overview.title}
+            thumbnail={overview.thumbnail}
+            platforms={overview.platforms}
+          />
+        </section>
+      )}
       {mod.notice && <aside className={s.notice}>{t(mod.notice)}</aside>}
       <section className={`section prose ${s.description}`}>
         <h2>{t({ mod: 'О модификации', plugin: 'О плагине', app: 'О программе' }[mod.type])}</h2>

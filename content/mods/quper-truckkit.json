@@ -59,6 +59,7 @@
     }
   ],
   "videoIds": ["quper-truckkit-review"],
+  "overviewVideoId": "quper-truckkit-review",
   "version": "0.3.1",
   "changelog": [
     {
