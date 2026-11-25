@@ -138,6 +138,9 @@
   cursor: pointer;
   font-weight: 700;
 }
+.changelog[open] > summary {
+  margin-block-end: 16px;
+}
 @media (max-width: 850px) {
   .filters {
     flex-wrap: wrap;
