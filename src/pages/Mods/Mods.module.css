@@ -141,6 +141,29 @@
 .changelog[open] > summary {
   margin-block-end: 16px;
 }
+.screenshots {
+  columns: 280px 3;
+  column-gap: 20px;
+}
+.screenshots > a {
+  display: inline-block;
+  width: 100%;
+  margin-block-end: 20px;
+  vertical-align: top;
+  break-inside: avoid;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.screenshots > a:hover,
+.screenshots > a:focus-visible {
+  border-color: var(--green);
+}
+.screenshots img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 @media (max-width: 850px) {
   .filters {
     flex-wrap: wrap;

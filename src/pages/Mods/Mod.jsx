@@ -160,7 +160,7 @@ export default function Mod() {
       {mod.images.length > 0 && (
         <section className="section">
           <h2>{t('Скриншоты')}</h2>
-          <div className="card-grid">
+          <div className={mod.id === 'cargo-control' ? s.screenshots : 'card-grid'}>
             {mod.images.map((image, index) => (
               <a href={image.src || image} key={index} target="_blank" rel="noopener noreferrer">
                 <img
