@@ -1,5 +1,17 @@
 [
   {
+    "id": "cargo-control-ets2-ats-review",
+    "title": "Фризы с собственным прицепом в ETS2 и ATS? | Cargo Control",
+    "game": "ets2",
+    "games": ["ets2", "ats"],
+    "category": "mods",
+    "thumbnail": "/img/videos/cargo-control-ets2-ats-review.jpg",
+    "platforms": { "youtube": "https://youtu.be/-gpou6wuIlA" },
+    "relatedComboIds": [],
+    "relatedModIds": ["cargo-control"],
+    "publishedAt": "2026-11-25T16:07:59.000Z"
+  },
+  {
     "id": "quper-truckkit-review",
     "title": "Обзор программы Quper TruckKit",
     "game": "ets2",
