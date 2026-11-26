@@ -2,6 +2,7 @@ import { useTranslation, LanguageContext } from '../i18n/Language';
 import { Component, Suspense, lazy } from 'react';
 import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Layout from './Layout';
+import PageMetadata from './PageMetadata';
 const Home = lazy(() => import('../pages/Home/Home'));
 const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
 const Combo = lazy(() => import('../pages/Combo/Combo'));
@@ -59,6 +60,7 @@ export default function App() {
   const location = useLocation();
   return (
     <ErrorBoundary key={location.pathname}>
+      <PageMetadata />
       <Suspense
         fallback={
           <div className="container page" role="status">

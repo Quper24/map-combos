@@ -37,14 +37,6 @@ export function LanguageProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = value.t('Quper Simulator — Весь мир у наших колёс');
-    const description = document.querySelector('meta[name="description"]');
-    description?.setAttribute(
-      'content',
-      value.t(
-        'Quper Simulator: сборки карт ETS2 и ATS, собственные моды и плагины, видео и виртуальная транспортная компания. Весь мир у наших колёс!',
-      ),
-    );
   }, [language, value]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

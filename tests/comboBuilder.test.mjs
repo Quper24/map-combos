@@ -23,6 +23,7 @@ import {
   comboPath,
   presetCombo,
   presetFileName,
+  isCatalogCombo,
 } from '../src/lib/presetCombos.js';
 import { diffPresetEntries, preparePresetRelease } from '../src/lib/presetReleases.js';
 import {
@@ -302,6 +303,25 @@ test('published presets produce unique catalog cards with game tags, cover and r
   );
   assert.throws(
     () => validateCatalog({ ...ats, presets: [{ ...preset, tags: ['ats'] }] }),
+    /metadata/,
+  );
+});
+
+test('catalog visibility survives JSON export and keeps hidden presets available to the builder', () => {
+  const hidden = { ...catalog.presets[0], hiddenFromCatalog: true };
+  const exported = JSON.parse(JSON.stringify({ ...catalog, presets: [hidden] }));
+  validateCatalog(exported);
+  validateCatalog(exported, true);
+  const record = presetCombo(exported, exported.presets[0]);
+  assert.equal(record.hiddenFromCatalog, true);
+  assert.deepEqual([record].filter(isCatalogCombo), []);
+  assert.equal(record.builder.preset.id, hidden.id);
+  assert.ok(resolveCombo(exported, hidden.selection).files.length);
+  assert.equal(comboPath(record), `/${record.slug}`);
+  assert.equal(isCatalogCombo(presetCombo(catalog, catalog.presets[0])), true);
+  assert.equal(isCatalogCombo(presetCombo(catalog, { ...hidden, hiddenFromCatalog: false })), true);
+  assert.throws(
+    () => validateCatalog({ ...catalog, presets: [{ ...hidden, hiddenFromCatalog: 'true' }] }),
     /metadata/,
   );
 });

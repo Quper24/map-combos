@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { currentComboVersion, presetCombosByVersion } from '../data/builderCatalogs';
+import { isCatalogCombo } from './presetCombos';
 const files = import.meta.glob('../../content/combos/*.json', { import: 'default' });
 const publishedPresets = presetCombosByVersion[currentComboVersion];
 const loadArchive = files[`../../content/combos/v${currentComboVersion}.json`];
@@ -22,5 +23,5 @@ export default function useCurrentCombos() {
   }, []);
   if (error) throw error;
   if (!publishedPresets && !loadArchive) throw new Error('Current combo data not found');
-  return records;
+  return records.filter(isCatalogCombo);
 }

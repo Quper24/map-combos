@@ -45,8 +45,7 @@ export function entriesByLoadOrder(catalog) {
 export function reconcilePresetSelections(presets, entry) {
   if (isSelectable(entry)) return presets;
   return presets.map((preset) =>
-    preset.selection.includes(entry.id) &&
-    !preset.tags?.includes('server')
+    preset.selection.includes(entry.id) && !preset.tags?.includes('server')
       ? { ...preset, selection: preset.selection.filter((id) => id !== entry.id) }
       : preset,
   );
@@ -557,8 +556,12 @@ export function validateCatalog(catalog, draft = false, { linkPresets = catalog?
     if (freeReplacement !== undefined) {
       const replacement = byId.get(freeReplacement);
       check(
-        paid && type === 'map' && family && replacement?.type === 'map' &&
-          !replacement.paid && replacement.family === family,
+        paid &&
+          type === 'map' &&
+          family &&
+          replacement?.type === 'map' &&
+          !replacement.paid &&
+          replacement.family === family,
         `Invalid free replacement: ${id}`,
       );
     }
@@ -727,7 +730,10 @@ export function validateCatalog(catalog, draft = false, { linkPresets = catalog?
       `Укажи HTTPS-ссылку на видеообзор. Сборка — ${preset.id}`,
     );
     check(
-      uniqueList(preset.tags === undefined ? [] : preset.tags, (tag) => presetTags.includes(tag)) &&
+      (preset.hiddenFromCatalog === undefined || typeof preset.hiddenFromCatalog === 'boolean') &&
+        uniqueList(preset.tags === undefined ? [] : preset.tags, (tag) =>
+          presetTags.includes(tag),
+        ) &&
         validImage(preset.image) &&
         (preset.updatedAt === undefined || validDate(preset.updatedAt)),
       `Invalid preset metadata: ${preset.id}`,

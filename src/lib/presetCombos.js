@@ -2,6 +2,8 @@ export const presetTags = ['boosty', 'server', 'convoy'];
 
 export const catalogKey = ({ game, version }) => `${game}-${version}`;
 
+export const isCatalogCombo = (combo) => combo.hiddenFromCatalog !== true;
+
 const presetName = (catalog, preset) => `${catalog.game}-${preset.fileSlug || preset.id}`;
 
 export function presetFileName(catalog, preset) {
@@ -34,6 +36,7 @@ export function combinedPresetPairs(catalog) {
         version: mapPreset.version || modPreset.version,
         boosty: modPreset.boosty || mapPreset.boosty,
         image: mapPreset.image,
+        hiddenFromCatalog: mapPreset.hiddenFromCatalog || modPreset.hiddenFromCatalog || undefined,
         tags: [...new Set([...(mapPreset.tags || []), ...(modPreset.tags || [])])].filter(
           (tag) => tag !== 'server',
         ),
@@ -74,6 +77,7 @@ export function presetCombo(catalog, preset) {
     id: `${catalog.game}-${catalog.version.replace('.', '-')}-${preset.id}`,
     slug: preset.slug || `${presetName(catalog, preset)}-${catalog.version.replace('.', '')}`,
     title: preset.title,
+    hiddenFromCatalog: preset.hiddenFromCatalog,
     version_game: catalog.version,
     version: preset.version,
     tags: [catalog.game, ...(preset.tags || [])],

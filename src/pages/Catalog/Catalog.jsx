@@ -12,6 +12,7 @@ import useFavorites from '../../components/hooks/useFavorites';
 import Icon from '../../components/ui/Icon';
 import { tagUtils } from '../../utils/tags';
 import { dateValue } from '../../lib/content';
+import { isCatalogCombo } from '../../lib/presetCombos';
 import s from './Catalog.module.css';
 const compareVersions = (a, b) => b.localeCompare(a, undefined, { numeric: true });
 const publishedVersions = [
@@ -42,7 +43,7 @@ export default function Catalog() {
     ...(COMBOS_BY_VERSION[version] || []).filter(
       (combo) => !draftCards.some((draft) => draft.id === combo.id),
     ),
-  ];
+  ].filter(isCatalogCombo);
   const allTags = tagUtils.extractUniqueTags(combos);
   function update(key, value) {
     setParams(

@@ -102,7 +102,9 @@ function Choices({
                 if (event.target.checked) setQuery('');
               }}
             />
-            <span>{t('Только отмеченные')} · {selectedCount}</span>
+            <span>
+              {t('Только отмеченные')} · {selectedCount}
+            </span>
           </label>
         )}
       </div>
@@ -1172,9 +1174,8 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             paid: form.has('paid'),
             family: type === 'map' ? valueOf(form, 'family') : undefined,
             variant: type === 'map' ? valueOf(form, 'variant') : undefined,
-            freeReplacement: type === 'map' && form.has('paid')
-              ? valueOf(form, 'freeReplacement')
-              : undefined,
+            freeReplacement:
+              type === 'map' && form.has('paid') ? valueOf(form, 'freeReplacement') : undefined,
             files: fileChanges.files,
             requires: form.getAll('requires'),
             requiresAny: alternatives.length ? alternatives : undefined,
@@ -1258,9 +1259,18 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             <select name="freeReplacement" defaultValue={entry.freeReplacement || ''}>
               <option value="">{t('Без замены')}</option>
               {catalog.entries
-                .filter((item) => item.id !== entry.id && item.type === 'map' &&
-                  item.family === entry.family && !item.paid)
-                .map((item) => <option key={item.id} value={item.id}>{t(item.title)}</option>)}
+                .filter(
+                  (item) =>
+                    item.id !== entry.id &&
+                    item.type === 'map' &&
+                    item.family === entry.family &&
+                    !item.paid,
+                )
+                .map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {t(item.title)}
+                  </option>
+                ))}
             </select>
           </label>
         )}
@@ -1525,6 +1535,7 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
               company: valueOf(form, 'company'),
               video: valueOf(form, 'video'),
               image: valueOf(form, 'image'),
+              hiddenFromCatalog: form.get('hiddenFromCatalog') === 'on' || undefined,
               tags,
               updatedAt: catalogDate(),
               selection: [...new Set([...form.getAll('selection'), ...optionalSelection])],
@@ -1599,6 +1610,22 @@ function PresetEditor({ catalog, commit, onExport, initialId, onOpenProject, bus
             defaultValue={preset?.video}
           />
           <EditorImageField initialPath={preset?.image} label="Загрузить обложку для карточки" />
+          <fieldset className={s.choices}>
+            <legend>{t('Видимость сборки')}</legend>
+            <label>
+              <input
+                type="checkbox"
+                name="hiddenFromCatalog"
+                defaultChecked={preset?.hiddenFromCatalog === true}
+              />{' '}
+              {t('Скрыть из каталога')}
+            </label>
+            <p>
+              {t(
+                'Не показывать в каталоге и на главной. Сборка останется в конструкторе, TruckKit и по прямой ссылке.',
+              )}
+            </p>
+          </fieldset>
           <fieldset className={s.choices}>
             <legend>{t('Теги сборки')}</legend>
             <div className={s.choiceList}>
