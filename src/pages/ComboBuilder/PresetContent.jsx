@@ -17,7 +17,7 @@ import {
   resolveCombo,
 } from '../../lib/comboBuilder';
 import { youtubeVideoId } from '../../lib/content';
-import { comboPath, combinedPresetPairs, presetCombo } from '../../lib/presetCombos';
+import { comboPath, combinedPresetPairs, isCatalogCombo, presetCombo } from '../../lib/presetCombos';
 import { diffPresetEntries } from '../../lib/presetReleases';
 import {
   EntryBadge,
@@ -60,7 +60,8 @@ export default function PresetContent({ catalog, preset, share = true }) {
   const relatedPairs = preset.composition
     ? []
     : pairs.filter(
-        ({ mapPreset, modPreset }) => mapPreset.id === preset.id || modPreset.id === preset.id,
+        ({ mapPreset, modPreset, preset: combined }) =>
+          isCatalogCombo(combined) && (mapPreset.id === preset.id || modPreset.id === preset.id),
       );
   const canUseOrder = result.files.length > 0 && !result.conflicts.length;
   const orderTitle = activePair?.title || (original ? preset.title : 'Своя сборка');
@@ -242,17 +243,11 @@ function ComboCompositionAction({ t, catalog, pairs, preset, selection, onSelect
   const mapPresets = [
     ...new Map(pairs.map((pair) => [pair.mapPreset.id, pair.mapPreset])).values(),
   ];
-  const modPresets = [
-    ...new Map(pairs.map((pair) => [pair.modPreset.id, pair.modPreset])).values(),
-  ];
-  const [chosenMap, setChosenMap] = useState(mapPresets[0]?.id || '');
-  const [chosenMods, setChosenMods] = useState(modPresets[0]?.id || '');
-  const pair = pairs.find(({ mapPreset, modPreset }) =>
-    isMapPreset
-      ? mapPreset.id === preset.id && modPreset.id === chosenMods
-      : modPreset.id === preset.id && mapPreset.id === chosenMap,
-  );
-  const additions = pair ? (isMapPreset ? pair.modPreset.selection : pair.mapPreset.selection) : [];
+  const [chosenMap, setChosenMap] = useState(mapPresets[0].id);
+  const pair = isMapPreset
+    ? pairs[0]
+    : pairs.find(({ mapPreset }) => mapPreset.id === chosenMap) || pairs[0];
+  const additions = isMapPreset ? pair.modPreset.selection : pair.mapPreset.selection;
   const composition = additions.reduce(
     (current, id) => {
       const next = addToCombo(catalog, current.selection, id);
@@ -264,21 +259,17 @@ function ComboCompositionAction({ t, catalog, pairs, preset, selection, onSelect
     { selection, conflicts: [] },
   );
   const combinedSelection = composition.selection;
-  const targetOptions = isMapPreset ? modPresets : mapPresets;
-  const targetValue = isMapPreset ? chosenMods : chosenMap;
-  const setTargetValue = isMapPreset ? setChosenMods : setChosenMap;
-  const label = isMapPreset ? 'Сборка модов' : 'Сборка карт';
   const action = isMapPreset ? 'Добавить сборку модов' : 'Добавить сборку карт';
-  const result = pair ? resolveCombo(catalog, combinedSelection) : null;
-  const conflicts = composition.conflicts.length > 0 || result?.conflicts?.length > 0;
+  const result = resolveCombo(catalog, combinedSelection);
+  const conflicts = composition.conflicts.length > 0 || result.conflicts.length > 0;
 
   return (
     <div className={s.compositionAction}>
-      {targetOptions.length > 1 && (
+      {!isMapPreset && mapPresets.length > 1 && (
         <label className={s.field}>
-          {t(label)}
-          <select value={targetValue} onChange={(event) => setTargetValue(event.target.value)}>
-            {targetOptions.map((item) => (
+          {t('Сборка карт')}
+          <select value={pair.mapPreset.id} onChange={(event) => setChosenMap(event.target.value)}>
+            {mapPresets.map((item) => (
               <option key={item.id} value={item.id}>
                 {t(item.title)}
               </option>
@@ -289,7 +280,7 @@ function ComboCompositionAction({ t, catalog, pairs, preset, selection, onSelect
       <button
         type="button"
         className="button button-secondary"
-        disabled={!pair || conflicts}
+        disabled={conflicts}
         onClick={() => onSelect(combinedSelection)}
       >
         {t(action)}
