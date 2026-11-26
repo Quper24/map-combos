@@ -64,6 +64,7 @@ export default function PresetContent({ catalog, preset, share = true }) {
       );
   const canUseOrder = result.files.length > 0 && !result.conflicts.length;
   const orderTitle = activePair?.title || (original ? preset.title : 'Своя сборка');
+  const variantFamilies = new Set(defaultSelection.map((id) => byId.get(id)?.family).filter(Boolean));
   const removals = server
     ? new Map(
         preset.selection
@@ -129,6 +130,26 @@ export default function PresetContent({ catalog, preset, share = true }) {
             />
           )}
         </div>
+        {!server && [...variantFamilies].map((family) => {
+          const variants = catalog.entries.filter((entry) => entry.family === family);
+          if (variants.length < 2) return null;
+          const selected = variants.find(({ id }) => selection.includes(id));
+          return (
+            <label key={family} className={s.variantPicker}>
+              <span>{t('Вариант карты')} · {family.toUpperCase()}</span>
+              <select value={selected?.id || ''} onChange={(event) => {
+                setSelection(addToCombo(catalog, selection, event.target.value).selection);
+              }}>
+                {!selected && <option value="" disabled>{t('Выбрать вариант')}</option>}
+                {variants.map(({ id, title }) => (
+                  <option key={id} value={id} disabled={addToCombo(catalog, selection, id).conflicts.length > 0}>
+                    {t(title)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          );
+        })}
         {server && <ServerGuideCallout />}
         {canUseOrder && (
           <ComboDisclosure name={accordion} title="Автоматическая расстановка модов">

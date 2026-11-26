@@ -702,3 +702,9 @@
     margin-inline-start: 0;
   }
 }
+.variantPicker {
+  display: grid;
+  gap: 6px;
+  margin-block: 12px;
+}
+
