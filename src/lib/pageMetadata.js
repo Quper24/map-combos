@@ -3,8 +3,8 @@ import { comboPath } from './presetCombos.js';
 export const defaultMetadata = {
   title: 'Quper Simulator — Весь мир у наших колёс',
   description:
-    'Quper Simulator: сборки карт ETS2 и ATS, собственные моды и плагины, видео и виртуальная транспортная компания. Весь мир у наших колёс!',
-  image: '/img/logo.jpg',
+    'Сборки карт для ETS2 и ATS, моды, плагины и инструменты Quper Simulator.',
+  image: '/img/quper-social-cover-v2.png',
   path: '/',
 };
 

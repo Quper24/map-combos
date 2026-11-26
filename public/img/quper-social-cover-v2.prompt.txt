@@ -1,0 +1,7 @@
+Tool: built-in image_gen
+Reference: quper-simulator-logo-clean 1.png supplied by the user
+Use case: compositing.
+Asset: final wide social link preview banner for Quper Simulator website, landscape 1200:630 aspect ratio.
+Input image: supporting brand logo to preserve, the provided clean Quper Simulator mark with European truck, central bus and American truck above QUPER / SIMULATOR lettering. Preserve its identity, three vehicles and lettering faithfully.
+Create a polished restrained dark charcoal and muted mint green brand banner. Place the complete supplied logo in the left 43% with generous safe margins; it must read crisply, no square tile, no bars at edges. Background spans entire wide frame, subtle deep green gradient and very faint flowing road/map contour lines, low contrast.
+On right 50% set beautiful, large highly legible Russian sans serif type with exact words in three lines: "Весь мир" / "у наших" / "колёс". First two lines off-white, last mint green. Below in small clean type "Сборки карт и моды для ETS2 и ATS". Small "qupersimulator.ru" near bottom right. No additional text, no VTC label, no photographs or new vehicle illustrations. Balanced professional website identity graphic, clear at Telegram thumbnail scale. Output opaque with full background.
