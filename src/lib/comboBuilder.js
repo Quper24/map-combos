@@ -169,10 +169,19 @@ export function addToCombo(catalog, selection, id) {
 }
 
 export function removePaidEntries(catalog, selection, active) {
-  const ids = catalog.entries
-    .filter((entry) => entry.paid && active.has(entry.id))
-    .map(({ id }) => id);
-  return ids.length ? removeFromCombo(catalog, selection, ids, active).selection : selection;
+  const paid = catalog.entries.filter((entry) => entry.paid && active.has(entry.id));
+  if (!paid.length) return selection;
+
+  const ids = paid.map(({ id }) => id);
+  let next = removeFromCombo(catalog, selection, ids, active).selection;
+  for (const { freeReplacement } of paid) {
+    if (!freeReplacement) continue;
+    const candidate = addToCombo(catalog, next, freeReplacement);
+    if (candidate.conflicts.length) continue;
+    const resolved = resolveCombo(catalog, candidate.selection);
+    if (!resolved.files.some(({ entry }) => entry.paid)) next = candidate.selection;
+  }
+  return next;
 }
 
 export function removeFromCombo(
@@ -528,6 +537,7 @@ export function validateCatalog(catalog, draft = false, { linkPresets = catalog?
       family,
       variant,
       paid,
+      freeReplacement,
       autoWithMaps,
       link,
       image,
@@ -544,6 +554,14 @@ export function validateCatalog(catalog, draft = false, { linkPresets = catalog?
     );
     check(validImage(image), `Invalid entry image: ${id}`);
     check(paid === undefined || typeof paid === 'boolean', `Invalid paid label: ${id}`);
+    if (freeReplacement !== undefined) {
+      const replacement = byId.get(freeReplacement);
+      check(
+        paid && type === 'map' && family && replacement?.type === 'map' &&
+          !replacement.paid && replacement.family === family,
+        `Invalid free replacement: ${id}`,
+      );
+    }
     check(
       (autoWithMaps === undefined || typeof autoWithMaps === 'boolean') &&
         (!autoWithMaps || canAutoWithMaps(type)),

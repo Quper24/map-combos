@@ -5619,7 +5619,8 @@
       "dlcs": [],
       "shareIndex": 395,
       "family": "roex",
-      "variant": "premium"
+      "variant": "premium",
+      "freeReplacement": "roex-54-free"
     },
     {
       "id": "qs-trans-siberian-altai-coaches-fix",

@@ -630,6 +630,22 @@
   border-radius: 6px;
 }
 
+.choiceFilters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px 16px;
+}
+.choiceFilters > .field {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+.choiceFilterToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+}
 .choiceList {
   max-height: 220px;
   overflow: auto;
@@ -702,9 +718,3 @@
     margin-inline-start: 0;
   }
 }
-.variantPicker {
-  display: grid;
-  gap: 6px;
-  margin-block: 12px;
-}
-

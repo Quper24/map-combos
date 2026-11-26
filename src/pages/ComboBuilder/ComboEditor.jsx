@@ -67,30 +67,65 @@ function Field({ label, ...props }) {
   );
 }
 
-function Choices({ label, name, items, selected = [], onChecked, disabled = false }) {
+function Choices({
+  label,
+  name,
+  items,
+  selected = [],
+  onChecked,
+  disabled = false,
+  showSelectedFilter = false,
+}) {
   const { t } = useTranslation();
   const [query, setQuery] = useState('');
+  const [onlySelected, setOnlySelected] = useState(false);
+  const [changes, setChanges] = useState({});
+  const isSelected = (id) => changes[id] ?? selected.includes(id);
+  const selectedCount = showSelectedFilter ? items.filter(({ id }) => isSelected(id)).length : 0;
   return (
     <fieldset className={s.choices} disabled={disabled}>
       <legend>{t(label)}</legend>
-      <Field
-        label="Фильтр списка"
-        type="search"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-      />
+      <div className={s.choiceFilters}>
+        <Field
+          label="Фильтр списка"
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+        {showSelectedFilter && (
+          <label className={s.choiceFilterToggle}>
+            <input
+              type="checkbox"
+              checked={onlySelected}
+              onChange={(event) => {
+                setOnlySelected(event.target.checked);
+                if (event.target.checked) setQuery('');
+              }}
+            />
+            <span>{t('Только отмеченные')} · {selectedCount}</span>
+          </label>
+        )}
+      </div>
+      {onlySelected && !selectedCount && <p>{t('Нет отмеченных зависимостей.')}</p>}
       <div className={s.choiceList}>
         {items.map(({ id, title }) => (
           <label
             key={id}
-            hidden={!`${title} ${id}`.toLowerCase().includes(query.trim().toLowerCase())}
+            hidden={
+              (onlySelected && !isSelected(id)) ||
+              !`${title} ${id}`.toLowerCase().includes(query.trim().toLowerCase())
+            }
           >
             <input
               type="checkbox"
               name={name}
               value={id}
               defaultChecked={selected.includes(id)}
-              onChange={onChecked ? (event) => onChecked(id, event.target.checked) : undefined}
+              onChange={(event) => {
+                const { checked } = event.target;
+                if (showSelectedFilter) setChanges((current) => ({ ...current, [id]: checked }));
+                onChecked?.(id, checked);
+              }}
             />{' '}
             {t(title)}
           </label>
@@ -971,6 +1006,7 @@ function EntryActivationFields({ entry, dependencies }) {
             : 'Обязательные зависимости (все перечисленные)'
         }
         name="requires"
+        showSelectedFilter
         selected={entry?.requires}
         items={dependencies}
         disabled={autoEnabled}
@@ -979,6 +1015,7 @@ function EntryActivationFields({ entry, dependencies }) {
         <Choices
           label="Альтернативные зависимости (достаточно одной)"
           name="requiresAny"
+          showSelectedFilter
           selected={entry?.requiresAny}
           items={dependencies}
           disabled={autoEnabled}
@@ -1135,6 +1172,9 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
             paid: form.has('paid'),
             family: type === 'map' ? valueOf(form, 'family') : undefined,
             variant: type === 'map' ? valueOf(form, 'variant') : undefined,
+            freeReplacement: type === 'map' && form.has('paid')
+              ? valueOf(form, 'freeReplacement')
+              : undefined,
             files: fileChanges.files,
             requires: form.getAll('requires'),
             requiresAny: alternatives.length ? alternatives : undefined,
@@ -1212,6 +1252,18 @@ function EntryEditor({ catalog, commit, request, unassigned, onError }) {
         <label>
           <input type="checkbox" name="paid" defaultChecked={entry?.paid} /> {t('Платная')}
         </label>
+        {entry?.type === 'map' && entry.family && (
+          <label className={s.field}>
+            {t('Бесплатная замена')}
+            <select name="freeReplacement" defaultValue={entry.freeReplacement || ''}>
+              <option value="">{t('Без замены')}</option>
+              {catalog.entries
+                .filter((item) => item.id !== entry.id && item.type === 'map' &&
+                  item.family === entry.family && !item.paid)
+                .map((item) => <option key={item.id} value={item.id}>{t(item.title)}</option>)}
+            </select>
+          </label>
+        )}
         <EntryFiles
           selected={[...(entry?.files || []), ...seedFiles]}
           order={[...catalog.order].reverse().filter(({ key }) => !owned.has(key))}

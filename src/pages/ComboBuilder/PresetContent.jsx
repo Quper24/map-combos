@@ -64,7 +64,6 @@ export default function PresetContent({ catalog, preset, share = true }) {
       );
   const canUseOrder = result.files.length > 0 && !result.conflicts.length;
   const orderTitle = activePair?.title || (original ? preset.title : 'Своя сборка');
-  const variantFamilies = new Set(defaultSelection.map((id) => byId.get(id)?.family).filter(Boolean));
   const removals = server
     ? new Map(
         preset.selection
@@ -130,26 +129,6 @@ export default function PresetContent({ catalog, preset, share = true }) {
             />
           )}
         </div>
-        {!server && [...variantFamilies].map((family) => {
-          const variants = catalog.entries.filter((entry) => entry.family === family);
-          if (variants.length < 2) return null;
-          const selected = variants.find(({ id }) => selection.includes(id));
-          return (
-            <label key={family} className={s.variantPicker}>
-              <span>{t('Вариант карты')} · {family.toUpperCase()}</span>
-              <select value={selected?.id || ''} onChange={(event) => {
-                setSelection(addToCombo(catalog, selection, event.target.value).selection);
-              }}>
-                {!selected && <option value="" disabled>{t('Выбрать вариант')}</option>}
-                {variants.map(({ id, title }) => (
-                  <option key={id} value={id} disabled={addToCombo(catalog, selection, id).conflicts.length > 0}>
-                    {t(title)}
-                  </option>
-                ))}
-              </select>
-            </label>
-          );
-        })}
         {server && <ServerGuideCallout />}
         {canUseOrder && (
           <ComboDisclosure name={accordion} title="Автоматическая расстановка модов">
@@ -471,10 +450,12 @@ function ConflictList({ rules, byId, announce }) {
 function InactiveMods({ catalog, selection, active, byId, onChange }) {
   const { t } = useTranslation();
   const [query, setQuery] = useState('');
+  const [type, setType] = useState('all');
   const inactive = entriesByLoadOrder(catalog).filter(
     (entry) => isSelectable(entry) && !active.has(entry.id),
   );
   const matches = inactive.filter((entry) =>
+    (type === 'all' || entry.type === type) &&
     `${entry.title} ${t(entry.title)} ${entry.family || ''} ${entry.variant || ''}`
       .toLowerCase()
       .includes(query.trim().toLowerCase()),
@@ -484,6 +465,14 @@ function InactiveMods({ catalog, selection, active, byId, onChange }) {
       <label className={s.field}>
         {t('Поиск карт и модов')}
         <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} />
+      </label>
+      <label className={s.field}>
+        {t('Фильтр по типу')}
+        <select value={type} onChange={(event) => setType(event.target.value)}>
+          <option value="all">{t('Все типы')}</option>
+          <option value="map">{t('Карты')}</option>
+          <option value="mod">{t('Моды')}</option>
+        </select>
       </label>
       {matches.length ? (
         <ul className={s.inactiveMods}>
