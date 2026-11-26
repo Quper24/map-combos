@@ -24,6 +24,7 @@ import {
   presetCombo,
   presetFileName,
   isCatalogCombo,
+  combinedPresetPairs,
 } from '../src/lib/presetCombos.js';
 import { diffPresetEntries, preparePresetRelease } from '../src/lib/presetReleases.js';
 import {
@@ -382,6 +383,44 @@ test('named map and mod combo files use the same release catalog and preserve th
     () => validateCatalog({ ...combined, presets: [{ ...mapPreset, version: 1.2 }] }),
     /Invalid combo version/,
   );
+});
+
+test('additional hidden mod packs get distinct combined URLs without changing the main pack URL', () => {
+  const entries = [makeEntry('map'), makeEntry('graphics', 'mod')];
+  const map = { id: 'map', fileSlug: 'quper-map', title: 'Map', selection: ['map'] };
+  const mods = { id: 'mods', title: 'Mods', selection: ['graphics'] };
+  const hidden = { ...mods, id: 'extra-mods', hiddenFromCatalog: true };
+  const base = {
+    game: 'ets2',
+    version: '1.62',
+    entries,
+    order: entries.map(({ id }) => ({ key: id, name: id })),
+    conflicts: [],
+  };
+  for (const presets of [
+    [map, mods, hidden],
+    [hidden, map, mods],
+  ]) {
+    const release = {
+      ...base,
+      presets: presets.map((preset) => ({
+        ...preset,
+        boosty: 'https://boosty.to/qupersimulator',
+        profile: 'https://example.org/profile.zip',
+      })),
+    };
+    validateCatalog(release);
+    const pairs = combinedPresetPairs(release);
+    assert.equal(new Set(pairs.map(({ preset }) => preset.slug)).size, 2);
+    assert.equal(
+      pairs.find(({ modPreset }) => modPreset.id === mods.id).preset.slug,
+      'ets2-quper-map-mods-162',
+    );
+    assert.equal(
+      pairs.find(({ modPreset }) => modPreset.id === hidden.id).preset.slug,
+      'ets2-quper-map-mods-extra-mods-162',
+    );
+  }
 });
 
 test('an older editor draft recovers its published filename and releases without losing local edits', () => {

@@ -25,9 +25,13 @@ export function combinedPresetPairs(catalog) {
       !preset.selection.some((id) => byId.get(id)?.type === 'map') &&
       preset.selection.some((id) => byId.get(id)?.type === 'mod'),
   );
+  // Keep the established URL for the main mod pack; additional packs need distinct URLs.
+  const primaryMods = mods.find(isCatalogCombo) || mods[0];
   return maps.flatMap((mapPreset) =>
     mods.map((modPreset) => {
-      const fileSlug = `${mapPreset.fileSlug || mapPreset.id}-mods`;
+      const fileSlug = `${mapPreset.fileSlug || mapPreset.id}-mods${
+        modPreset === primaryMods ? '' : `-${modPreset.fileSlug || modPreset.id}`
+      }`;
       const preset = {
         id: `${mapPreset.id}-with-${modPreset.id}`,
         title: `${mapPreset.title} + ${modPreset.title}`,
