@@ -3751,7 +3751,7 @@
     {
       "id": "coaches-engine-fixes-pack",
       "title": "Coaches Engine Fixes Pack",
-      "type": "map",
+      "type": "mod",
       "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3838865599",
       "image": "/img/combo-builder/5cf6e3a246808225595992d1b5247f55fb0926e553cbb7ebd672cfd32409a66f.webp",
       "version": "2.5",
@@ -3764,7 +3764,7 @@
         "mod-ets2-162-224"
       ],
       "dlcs": [],
-      "shareIndex": 249
+      "shareIndex": 397
     },
     {
       "id": "qs-coaches-timetable",
@@ -4246,21 +4246,30 @@
       "id": "qs-donbass-projectrussia-chernozemye-rc",
       "title": "QS Donbass RC Extension – Project Russia & Chernozemye",
       "type": "connector",
-      "description": "Соединяет Донбасс с Project Russia и Project Chernozemye. Возвращает Коломну и остановки в Рязани и Воронеже, исправляет конфликты компаний, растительности, моделей АЗС и трафика.",
-      "version": "1.19",
       "link": "https://sharemods.com/14xwimnvvp30/QS_Donbass_ProjectRussia_Chernozemye_RC.scs.html",
       "image": "/img/combo-builder/c97f3626fce2cf9dc6d114c8cccdea4936131da444c147b26f02abf5a13883d2.jpg",
+      "description": "Соединяет Донбасс с Project Russia и Project Chernozemye. Возвращает Коломну и остановки в Рязани и Воронеже, исправляет конфликты компаний, растительности, моделей АЗС и трафика.",
+      "version": "1.19",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "QS_Donbass_ProjectRussia_Chernozemye_RC"
       ],
       "requires": [
-        "donbassmap-159",
+        "project-chernozemye-project-russia-official-rc",
         "projectrussia",
-        "project-chernozemye-2-1-3"
+        "project-chernozemye-donbassmap-unofficial-rc2",
+        "project-chernozemye-2-1-3",
+        "qs-pm-rusmap-roex-donbass-rc",
+        "cnx-pm-eu-v284-rm-v259-roex-v53",
+        "rusmap-def-v2-55-unofficial",
+        "promods-eu-def-v285",
+        "db-srfix-159u",
+        "roex54sr131",
+        "qs-donbass-roex-rc"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 279
+      "shareIndex": 399
     },
     {
       "id": "project-chernozemye-project-russia-official-rc",
@@ -4712,22 +4721,25 @@
       "id": "qs-pm-rusmap-roex-donbass-rc",
       "title": "QS ProMods–RusMap–ROEX RC Extension – Donbass",
       "type": "connector",
-      "description": "Подключает Donbass Map и SRMap к коннектору ProMods–RusMap–ROEX. Возвращает автобусные и туристические остановки, исправляет привязки гаражей и сервисов и устраняет дубли дорожных объектов.",
-      "version": "1.24",
       "link": "https://sharemods.com/ibfs71rd48ku/QS_PM_RusMap_ROEX_Donbass_RC.scs.html",
       "image": "/img/combo-builder/8cdab0be8e7c0243822357b33290e64a6cfe1b8dbba9f844fd9685fa04a328cc.jpg",
+      "description": "Подключает Donbass Map и SRMap к коннектору ProMods–RusMap–ROEX. Возвращает автобусные и туристические остановки, исправляет привязки гаражей и сервисов и устраняет дубли дорожных объектов.",
+      "version": "1.24",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "QS_PM_RusMap_ROEX_Donbass_RC"
       ],
       "requires": [
         "cnx-pm-eu-v284-rm-v259-roex-v53",
+        "rusmap-def-v2-55-unofficial",
+        "promods-eu-def-v285",
         "db-srfix-159u",
         "roex54sr131",
         "qs-donbass-roex-rc"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 304
+      "shareIndex": 398
     },
     {
       "id": "cnx-pm-eu-v284-rm-v259-roex-v53",
