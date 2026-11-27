@@ -4865,17 +4865,21 @@
       "id": "egyptian-libyan-gateway-v1-6",
       "title": "Egyptian-Libyan Gateway",
       "type": "map",
-      "description": "Расширяет дорожную сеть Северной Африки, добавляя города и пункты доставки в Египте и Ливии.",
-      "version": "1.6",
       "link": "https://soramods.pl/mods.html?mod=Egyptian-Libyan+Gateway",
       "image": "/img/combo-builder/c8eaaef9f5fdc8118fb3d0b418c32c690c81ffd1b1ac2edcc67f859ff949fed6.jpg",
+      "description": "Расширяет дорожную сеть Северной Африки, добавляя города и пункты доставки в Египте и Ливии.",
+      "version": "1.6",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "Egyptian-Libyan_Gateway_v1.6"
       ],
-      "requires": [],
+      "requires": [
+        "promods-eu-def-v285",
+        "beyond-by-terramaps-1"
+      ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 311
+      "shareIndex": 405
     },
     {
       "id": "qs-maghreb-bxptunisia-rc",
@@ -5197,17 +5201,20 @@
       "id": "abkh-map-v-2-0",
       "title": "Abkhazia Map v.2.0",
       "type": "map",
-      "description": "Добавляет Абхазию и поддерживает автобусные рейсы Coaches.",
-      "version": "2.0",
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/abkhazia-map-675817",
       "image": "/img/combo-builder/003cb77fb0e44534143f8de0ebc86459c75758c98e69b4876b1242ce6c04bbc1.jpg",
+      "description": "Добавляет Абхазию и поддерживает автобусные рейсы Coaches.",
+      "version": "2.0",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "Abkh Map v.2.0"
       ],
-      "requires": [],
+      "requires": [
+        "promods-eu-def-v285"
+      ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 329
+      "shareIndex": 404
     },
     {
       "id": "qs-rtc-promods-tbilisi-travel-fix",
@@ -5912,10 +5919,12 @@
       "id": "volgabusstops",
       "title": "VolgaBusStops",
       "type": "mod",
+      "link": "https://truckymods.io/euro-truck-simulator-2/map-patches/volgamapbus-754327",
+      "image": "/img/combo-builder/b7052fd6c5ab51215eef393f170e6ee955c09b00537c59eb2014555960383c94.jpg",
       "description": "Добавляет остановки Coaches на VolgaMap, включая Самару, Тольятти, Сызрань и Вольск.",
       "version": "1.62",
-      "link": "https://modsfire.com/edxp9nUnfpPFo4W",
-      "image": "/img/combo-builder/b7052fd6c5ab51215eef393f170e6ee955c09b00537c59eb2014555960383c94.jpg",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "VolgaBusStops"
       ],
@@ -5925,8 +5934,7 @@
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 366
+      "shareIndex": 403
     },
     {
       "id": "volgamap-1-5-3",
