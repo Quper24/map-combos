@@ -4423,17 +4423,18 @@
       "id": "rfex",
       "title": "Russian Federation Extended [RFEX]",
       "type": "map",
-      "description": "Расширяет карту России, добавляя дороги и города российских регионов.",
-      "version": "5.1.5",
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/m5-ural-highway",
       "image": "/img/combo-builder/bbd5237d64ba7be7eb90c7a964c5673fcdde372812398ac57bb5579d105256c7.jpg",
+      "description": "Расширяет карту России, добавляя дороги и города российских регионов.",
+      "version": "5.1.5",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "rfex"
       ],
       "requires": [],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 288
+      "shareIndex": 402
     },
     {
       "id": "qs-m12-nnmap-coaches-fix",
@@ -5539,10 +5540,12 @@
       "id": "db-srfix-159u",
       "title": "db_SRfix_159(UNOFFICIAL)",
       "type": "connector",
+      "link": "https://wdfiles.ru/1v7hv",
+      "image": "/img/combo-builder/ea679bf92d9551dd93edc5565a4a5ce466186f31638c124f2d42e4a6a0a36cca.jpg",
       "description": "Неофициальный коннектор Donbass Map и Southern Region Map.",
       "version": "1.59",
-      "link": "https://truckymods.io/euro-truck-simulator-2/map-patches/donbass-map-southern-region-fix-260276",
-      "image": "/img/combo-builder/ea679bf92d9551dd93edc5565a4a5ce466186f31638c124f2d42e4a6a0a36cca.jpg",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "db_SRfix_159U"
       ],
@@ -5551,8 +5554,7 @@
         "srmod-v13-1"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 347
+      "shareIndex": 401
     },
     {
       "id": "roex54sr131",
@@ -5646,10 +5648,12 @@
       "id": "trans-siberia-altai-map-rc",
       "title": "Trans-Siberia Altai Map RC",
       "type": "connector",
+      "link": "https://www.leobmods.net/mod?id=trans-siberian-truckway-altai-map-rc",
+      "image": "/img/combo-builder/91517d34b741e6a95fa728f46a9f20d0c767f7fb15ef5747782bc11ea317a6b0.jpg",
       "description": "Добавляет дорожное соединение Trans-Siberian Truckway и Altai Map.",
       "version": "3.3",
-      "link": "https://www.leobmods.net/mod?id=trans-siberian-truckway-project-russia-rc",
-      "image": "/img/combo-builder/91517d34b741e6a95fa728f46a9f20d0c767f7fb15ef5747782bc11ea317a6b0.jpg",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "Trans-Siberia_Altai_Map_RC"
       ],
@@ -5658,8 +5662,7 @@
         "altai-map-1-7-3"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 352
+      "shareIndex": 400
     },
     {
       "id": "qs-trans-siberian-amur-coaches-fix",
