@@ -3830,7 +3830,7 @@
       "id": "qs-promods-fld-combo-fix",
       "title": "QS ProMods FLD Combo Fix",
       "type": "fix",
-      "link": "https://sharemods.com/7js8uual73ev/QS_ProMods_FLD_Combo_Fix.scs.html",
+      "link": "https://sharemods.com/xx4iwehw6g08/QS_ProMods_FLD_Combo_Fix.scs.html",
       "image": "/img/combo-builder/0df2b48357bf91c901f4beb7d96baf4847574074e9119da9b28c7ffe213d4c0b.jpg",
       "description": "Убирает повторную регистрацию префабов и моделей FLD, растительности, дорожных определений, ограждений, зданий, светофоров и шаблона знаков в проверенной сборке. Сохраняет уникальные записи в затронутых файлах. Восстанавливает мостовое ограждение FLD, бордюры и парковочную разметку Александрии, а также регистрацию полицейской машины в Ираке.",
       "version": "1.7",
@@ -3844,7 +3844,7 @@
         "promods-eu-def-v285"
       ],
       "dlcs": [],
-      "shareIndex": 437
+      "shareIndex": 445
     },
     {
       "id": "hmaofix",
@@ -5466,10 +5466,12 @@
       "id": "qs-rtc-tgs-traffic-fix",
       "title": "QS RTC TGS Traffic Fix",
       "type": "fix",
+      "link": "https://sharemods.com/clh1908uxfam/QS_RTC_TGS_Traffic_Fix.scs.html",
+      "image": "/img/combo-builder/009ef72e4e19d722063c92c3351fbcb530af9772c929dca35903f99073d197d7.jpg",
       "description": "Согласует трафик Road to Caucasus и The Great Steppe в Казахстане. Устраняет повторную регистрацию грузовиков и прицепов КАМАЗ.",
       "version": "1.2",
-      "link": "https://sharemods.com/vkjdm8fxhvv8/QS_RTC_TGS_Traffic_Fix.scs.html",
-      "image": "/img/combo-builder/009ef72e4e19d722063c92c3351fbcb530af9772c929dca35903f99073d197d7.jpg",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "QS_RTC_TGS_Traffic_Fix"
       ],
@@ -5477,8 +5479,7 @@
         "rtc-tgs-rc-v-2-3"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 343
+      "shareIndex": 446
     },
     {
       "id": "rtc-tgs-rc-v-2-3",
@@ -5950,10 +5951,12 @@
       "id": "qs-sibirmap-fix",
       "title": "QS SibirMap Fix",
       "type": "fix",
+      "link": "https://sharemods.com/oibqwyas69t6/QS_SibirMap_Fix.scs.html",
+      "image": "/img/combo-builder/f229f6c1d5171b89d622446e766d7979887b40e0465ffd79569c1d08f996ff6f.jpg",
       "description": "Исправляет загрузку растительности и шаблонов номеров SibirMap. Восстанавливает регистрацию грузов Lada Granta и питьевой воды и их привязки к предприятиям. Возвращает определение префаба АЗС «Лукойл».",
       "version": "1.2",
-      "link": "https://sharemods.com/8y1rr5fm8mo2/QS_SibirMap_Fix.scs.html",
-      "image": "/img/combo-builder/f229f6c1d5171b89d622446e766d7979887b40e0465ffd79569c1d08f996ff6f.jpg",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "QS_SibirMap_Fix"
       ],
@@ -5961,8 +5964,7 @@
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 368
+      "shareIndex": 444
     },
     {
       "id": "sibirmap2132fv-for162",
@@ -6161,10 +6163,12 @@
       "id": "qs-fix-republic-of-kazakhstan-fix",
       "title": "QS Republic of Kazakhstan FIX",
       "type": "fix",
+      "link": "https://sharemods.com/foq3dwrjpnhg/QS_Fix_Republic_of_Kazakhstan_FIX.scs.html",
+      "image": "/img/combo-builder/d29358204f7667a56e2ed3355219ede9e168120732b4752c912762bedbf76677.jpg",
       "description": "Исправляет семь предприятий, АЗС, местный трафик и уровни детализации моделей в Republic of Kazakhstan. Устраняет дубли префабов FLD.",
       "version": "1.7",
-      "link": "https://sharemods.com/1zlliv243k3a/QS_Fix_Republic_of_Kazakhstan_FIX.scs.html",
-      "image": "/img/combo-builder/d29358204f7667a56e2ed3355219ede9e168120732b4752c912762bedbf76677.jpg",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "QS_Fix_Republic_of_Kazakhstan_FIX"
       ],
@@ -6172,8 +6176,7 @@
         "republic-of-kazakhstan-fix"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 380
+      "shareIndex": 447
     },
     {
       "id": "republic-of-kazakhstan-fix",
@@ -6343,7 +6346,7 @@
       "id": "qs-bxp-tunisia-libya-rc-fix",
       "title": "QS BXP Tunisia + Libya RC Fix",
       "type": "fix",
-      "link": "https://sharemods.com/59dwfd2ogl1j/QS_BXP_Tunisia_Libya_RC_Fix.scs.html",
+      "link": "https://sharemods.com/8cw3p9sumvj5/QS_BXP_Tunisia_Libya_RC_Fix.scs.html",
       "image": "/img/combo-builder/93104db5b169674f66ca6bc033c095edf1f45920d9a4924baba58e2344ad7998.webp",
       "version": "1.0",
       "addedAt": "2026-11-28",
@@ -6355,13 +6358,13 @@
         "bxprctunlyb156"
       ],
       "dlcs": [],
-      "shareIndex": 435
+      "shareIndex": 439
     },
     {
       "id": "qs-chernozemye-fix",
       "title": "QS Chernozemye Fix",
       "type": "fix",
-      "link": "https://sharemods.com/k68ibmcszt9g/QS_Chernozemye_Fix.scs.html",
+      "link": "https://sharemods.com/1scfr1ke0acq/QS_Chernozemye_Fix.scs.html",
       "image": "/img/combo-builder/43bdf0a03421aafb1050bc7d46f1b33948dc3560cd180880e88ceb8c6a502850.webp",
       "version": "1.0",
       "addedAt": "2026-11-28",
@@ -6373,7 +6376,7 @@
         "project-chernozemye-2-1-3"
       ],
       "dlcs": [],
-      "shareIndex": 434
+      "shareIndex": 442
     },
     {
       "id": "qs-egyptian-libyan-gateway-service-fix",
@@ -6397,7 +6400,7 @@
       "id": "qs-m12-saratov-signs-fix",
       "title": "QS M12 + Saratov Signs Fix",
       "type": "fix",
-      "link": "https://sharemods.com/s4hnvlbmctyq/QS_M12_Saratov_Signs_Fix.scs.html",
+      "link": "https://sharemods.com/ptj55o5likeo/QS_M12_Saratov_Signs_Fix.scs.html",
       "image": "/img/combo-builder/c31f6f27bc19e8dc159c52fc496268504ea3ec6b03991b17dc5368c8d443d411.webp",
       "version": "1.0",
       "addedAt": "2026-11-28",
@@ -6410,7 +6413,7 @@
         "m12-vostok-v-3-0"
       ],
       "dlcs": [],
-      "shareIndex": 432
+      "shareIndex": 440
     },
     {
       "id": "qs-red-sea-beyond-pmme-company-fix",
@@ -6470,7 +6473,7 @@
       "id": "qs-ural-rfex-rc-fix",
       "title": "QS Ural + RFEX RC Fix",
       "type": "fix",
-      "link": "https://sharemods.com/8xmav84l340d/QS_Ural_RFEX_RC_Fix.scs.html",
+      "link": "https://sharemods.com/9nke393wwo4x/QS_Ural_RFEX_RC_Fix.scs.html",
       "image": "/img/combo-builder/cf844053f2685f9ed85af6d26c1132c36454cb97f99e6e057646067b4b686d7c.webp",
       "version": "1.1",
       "addedAt": "2026-11-28",
@@ -6482,7 +6485,7 @@
         "rxx-ural-mrm-rc"
       ],
       "dlcs": [],
-      "shareIndex": 431
+      "shareIndex": 441
     }
   ],
   "order": [
