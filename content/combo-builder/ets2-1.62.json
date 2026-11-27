@@ -3805,63 +3805,58 @@
       "id": "qs-beyond-combo-fix",
       "title": "QS Beyond Combo Fix",
       "type": "fix",
-      "description": "Устраняет конфликты регистрации городов и стран в сборке с Beyond, включая конфликт, из-за которого пропадала Одесса. Исправляет дублирование российского флага в ProMods и TGS.",
-      "version": "1.4",
-      "link": "https://sharemods.com/ewmovd3svoto/QS_Beyond_Combo_Fix.scs.html",
+      "link": "https://sharemods.com/8zmvb17h1fux/QS_Beyond_Combo_Fix.scs.html",
       "image": "/img/combo-builder/0ef11ea703649840f739680d47289f16103dddef92f389c8d6bce473340adcfa.jpg",
+      "description": "Устраняет конфликты регистрации городов и стран в сборке с Beyond, включая конфликт, из-за которого пропадала Одесса. Исправляет дублирование российского флага в ProMods и TGS.",
+      "version": "1.5",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Beyond_Combo_Fix"
       ],
       "requires": [
-        "kazakhstantgsrc",
+        "promods-eu-def-v285",
         "gmc-pm-tgs-beyond-rc-unof",
         "beyond-by-terramaps-1",
-        "promods-eu-def-v285",
         "amurmap102b",
+        "kazakhstantgsrc",
         "promods-tgs-defmap-v171"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 257
+      "shareIndex": 409
     },
     {
       "id": "qs-promods-fld-combo-fix",
       "title": "QS ProMods FLD Combo Fix",
       "type": "fix",
-      "description": "Убирает повторную регистрацию префабов и моделей FLD, растительности, дорожных определений, ограждений, зданий, светофоров и шаблона знаков в проверенной сборке. Сохраняет уникальные записи в затронутых файлах. Восстанавливает мостовое ограждение FLD, бордюры и парковочную разметку Александрии, а также регистрацию полицейской машины в Ираке.",
-      "version": "1.3",
-      "link": "https://sharemods.com/7fd1ytd9q16x/QS_ProMods_FLD_Combo_Fix.scs.html",
+      "link": "https://sharemods.com/7js8uual73ev/QS_ProMods_FLD_Combo_Fix.scs.html",
       "image": "/img/combo-builder/0df2b48357bf91c901f4beb7d96baf4847574074e9119da9b28c7ffe213d4c0b.jpg",
+      "description": "Убирает повторную регистрацию префабов и моделей FLD, растительности, дорожных определений, ограждений, зданий, светофоров и шаблона знаков в проверенной сборке. Сохраняет уникальные записи в затронутых файлах. Восстанавливает мостовое ограждение FLD, бордюры и парковочную разметку Александрии, а также регистрацию полицейской машины в Ираке.",
+      "version": "1.7",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_ProMods_FLD_Combo_Fix"
       ],
       "requires": [
-        "promods-eu-def-v285",
-        "beyond-by-terramaps-1",
-        "qs-fix-republic-of-kazakhstan-fix",
-        "qs-donbass-srmap-compatibility-fix",
-        "promods-me-defmap-v285",
-        "rusmap-def-v2-55-unofficial",
-        "project-chernozemye-2-1-3",
-        "projectrussia",
-        "project-chernozemye-project-russia-official-rc",
-        "projectsaratov113",
-        "egyptian-libyan-gateway-v1-6",
-        "cnx-pm-eu-v284-rm-v259-roex-v53",
-        "qs-pm-rusmap-roex-donbass-rc"
+        "promods-eu-def-v285"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 258
+      "shareIndex": 437
     },
     {
       "id": "hmaofix",
       "title": "XmaoMap FIX",
       "type": "fix",
-      "description": "Убирает невидимые стены на дорогах XmaoMap.",
-      "version": "1.1",
-      "link": "https://sharemods.com/tvapdmoc4egx/hmaofix.scs.html",
+      "link": "https://sharemods.com/t0wtyn4tklnm/hmaofix.scs.html",
       "image": "/img/combo-builder/46d699a5a8a253b451398055a8a35799e27991f17e7294fbe5e8a63aa6c7f43a.jpg",
+      "description": "Убирает невидимые стены на дорогах XmaoMap.",
+      "version": "1.2",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "hmaofix"
       ],
@@ -3871,8 +3866,7 @@
         "northern-open-spaces-fixed-v13"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 259
+      "shareIndex": 406
     },
     {
       "id": "qs-projectrussia-nos-rc-fix",
@@ -3898,24 +3892,26 @@
       "id": "qs-kirovmap-nos-coaches-fix",
       "title": "QS KirovMap + Northern Open Spaces Coaches Fix",
       "type": "fix",
-      "description": "Возвращает автобусную остановку в Сыктывкаре. Восстанавливает привязки сервиса, топливной точки и гаража к префабам коннектора.",
-      "version": "1.2",
-      "link": "https://sharemods.com/5cyi5wqt9lvk/QS_KirovMap_NOS_Coaches_Fix.scs.html",
+      "link": "https://sharemods.com/wac2ny93iq6b/QS_KirovMap_NOS_Coaches_Fix.scs.html",
       "image": "/img/combo-builder/0b1a9eb0d028d9d2a3c475aa514098b5301e9907613f122154c7b2d8852c8463.jpg",
+      "description": "Возвращает автобусную остановку в Сыктывкаре. Восстанавливает привязки сервиса, топливной точки и гаража к префабам коннектора.",
+      "version": "1.3",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_KirovMap_NOS_Coaches_Fix"
       ],
       "requires": [
         "4-in-1-northern-open-spaces-connector",
+        "northern-open-spaces-fixed-v13",
         "kirovbus",
-        "kirovmap-17-free",
-        "northern-open-spaces-fixed-v13"
+        "kirovmap-17-free"
       ],
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 261
+      "shareIndex": 413
     },
     {
       "id": "4-in-1-northern-open-spaces-connector",
@@ -4130,10 +4126,13 @@
       "id": "qs-kirovmap-ruscentry-coaches-fix",
       "title": "QS KirovMap + RusCentry Coaches Fix",
       "type": "fix",
-      "description": "Возвращает автобусные остановки в Шахунье, Яранске, Йошкар-Оле, Пижанке, Советске, Уржуме и Нолинске. Восстанавливает привязки двух топливных точек и двух гаражей к префабам коннектора.",
-      "version": "1.3",
-      "link": "https://sharemods.com/p8953ouzsz6y/QS_KirovMap_RusCentry_Coaches_Fix.scs.html",
+      "link": "https://sharemods.com/5n0x3m2j7zb0/QS_KirovMap_RusCentry_Coaches_Fix.scs.html",
       "image": "/img/combo-builder/54d34ed243baa89b9afc7b3f20edd0ab70a735f2d268026c8e99dd354614dea3.jpg",
+      "description": "Возвращает автобусные остановки в Шахунье, Яранске, Йошкар-Оле, Пижанке, Советске, Уржуме и Нолинске. Восстанавливает привязки двух топливных точек и двух гаражей к префабам коннектора.",
+      "version": "1.4",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_KirovMap_RusCentry_Coaches_Fix"
       ],
@@ -4144,8 +4143,7 @@
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 273
+      "shareIndex": 414
     },
     {
       "id": "ruscentrymap-kirov-map-sibirmap-rc",
@@ -4246,11 +4244,12 @@
       "id": "qs-donbass-projectrussia-chernozemye-rc",
       "title": "QS Donbass RC Extension – Project Russia & Chernozemye",
       "type": "connector",
-      "link": "https://sharemods.com/14xwimnvvp30/QS_Donbass_ProjectRussia_Chernozemye_RC.scs.html",
+      "link": "https://sharemods.com/xganux9c0w9u/QS_Donbass_ProjectRussia_Chernozemye_RC.scs.html",
       "image": "/img/combo-builder/c97f3626fce2cf9dc6d114c8cccdea4936131da444c147b26f02abf5a13883d2.jpg",
       "description": "Соединяет Донбасс с Project Russia и Project Chernozemye. Возвращает Коломну и остановки в Рязани и Воронеже, исправляет конфликты компаний, растительности, моделей АЗС и трафика.",
-      "version": "1.19",
+      "version": "1.23",
       "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
       "paid": false,
       "files": [
         "QS_Donbass_ProjectRussia_Chernozemye_RC"
@@ -4269,7 +4268,7 @@
         "qs-donbass-roex-rc"
       ],
       "dlcs": [],
-      "shareIndex": 399
+      "shareIndex": 411
     },
     {
       "id": "project-chernozemye-project-russia-official-rc",
@@ -4679,10 +4678,13 @@
       "id": "qs-ukraine-expansion-promods-roex-coaches-fix",
       "title": "QS Ukraine Expansion + ProMods + ROEX Coaches Fix",
       "type": "fix",
-      "description": "Возвращает посадку в Луцке. В Сарнах переносит зону посадки на полосу у рынка и располагает пассажиров у тротуара. Восстанавливает привязки двух топливных точек и двух гаражей к префабам коннектора.",
-      "version": "1.5",
-      "link": "https://sharemods.com/cv6k6bg6zibw/QS_Ukraine_Expansion_ProMods_ROEX_Coaches_Fix.scs.html",
+      "link": "https://sharemods.com/jyqwpn4ksaoa/QS_Ukraine_Expansion_ProMods_ROEX_Coaches_Fix.scs.html",
       "image": "/img/combo-builder/c644dbf67098623ada1e041bab9894ea73e525d964f6563e86066179dd1dabc6.jpg",
+      "description": "Возвращает посадку в Луцке. В Сарнах переносит зону посадки на полосу у рынка и располагает пассажиров у тротуара. Восстанавливает привязки двух топливных точек и двух гаражей к префабам коннектора.",
+      "version": "1.6",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Ukraine_Expansion_ProMods_ROEX_Coaches_Fix"
       ],
@@ -4693,8 +4695,7 @@
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 302
+      "shareIndex": 419
     },
     {
       "id": "ukrexp-roex-rc",
@@ -4722,11 +4723,12 @@
       "id": "qs-pm-rusmap-roex-donbass-rc",
       "title": "QS ProMods–RusMap–ROEX RC Extension – Donbass",
       "type": "connector",
-      "link": "https://sharemods.com/ibfs71rd48ku/QS_PM_RusMap_ROEX_Donbass_RC.scs.html",
+      "link": "https://sharemods.com/u63a5uvim0t0/QS_PM_RusMap_ROEX_Donbass_RC.scs.html",
       "image": "/img/combo-builder/8cdab0be8e7c0243822357b33290e64a6cfe1b8dbba9f844fd9685fa04a328cc.jpg",
       "description": "Подключает Donbass Map и SRMap к коннектору ProMods–RusMap–ROEX. Возвращает автобусные и туристические остановки, исправляет привязки гаражей и сервисов и устраняет дубли дорожных объектов.",
-      "version": "1.24",
+      "version": "1.27",
       "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
       "paid": false,
       "files": [
         "QS_PM_RusMap_ROEX_Donbass_RC"
@@ -4740,7 +4742,7 @@
         "qs-donbass-roex-rc"
       ],
       "dlcs": [],
-      "shareIndex": 398
+      "shareIndex": 415
     },
     {
       "id": "cnx-pm-eu-v284-rm-v259-roex-v53",
@@ -4842,24 +4844,6 @@
       "dlcs": [],
       "addedAt": "2026-11-26",
       "shareIndex": 309
-    },
-    {
-      "id": "gmc-egyptian-libyan-gateway-fix-unof",
-      "title": "Egyptian - Libyan Gateway Fix Unof",
-      "type": "fix",
-      "description": "Убирает невидимый барьер на открытой дороге в сторону Порт-Саида.",
-      "version": "1.61-1.2.0",
-      "link": "https://drive.google.com/file/d/122hqQzyMQgBcSHLrG4d4hFz-EDCBhSnj/view?usp=drive_link",
-      "image": "/img/combo-builder/57bc10f2e1c5e5a4a70378ba6a5b4413cd2ee8947b17da999b68c068ad8ac6cf.jpg",
-      "files": [
-        "gmc.egyptian_libyan_gateway.fix.unof"
-      ],
-      "requires": [
-        "egyptian-libyan-gateway-v1-6"
-      ],
-      "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 310
     },
     {
       "id": "egyptian-libyan-gateway-v1-6",
@@ -5088,10 +5072,13 @@
       "id": "qs-barcelona-exp-coaches-fix",
       "title": "QS Barcelona EXP Coaches Fix",
       "type": "fix",
-      "description": "Возвращает вторую остановку ProMods в Барселоне и сохраняет остановку Barcelona EXP.",
-      "version": "1.0",
-      "link": "https://sharemods.com/h29pph66yvrm/QS_Barcelona_EXP_Coaches_Fix.scs.html",
+      "link": "https://sharemods.com/5yij7tob9ypw/QS_Barcelona_EXP_Coaches_Fix.scs.html",
       "image": "/img/combo-builder/462ba6c3898ed06a0ffcaf0508621bad17412526c474a77996d6241a4f89d38f.jpg",
+      "description": "Возвращает вторую остановку ProMods в Барселоне и сохраняет остановку Barcelona EXP.",
+      "version": "1.1",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Barcelona_EXP_Coaches_Fix"
       ],
@@ -5101,8 +5088,7 @@
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 323
+      "shareIndex": 408
     },
     {
       "id": "pmbarcelonaexp",
@@ -5365,10 +5351,13 @@
       "id": "qs-fix-sevenriversmap-beyond-kazakhstan-rc",
       "title": "QS FIX Seven Rivers Beyond Kazakhstan RC",
       "type": "fix",
-      "description": "Исправляет построение маршрута при совместном использовании Seven Rivers Map, Beyond и карты Казахстана.",
-      "version": "1.0",
-      "link": "https://sharemods.com/wo5r9tayptl9/QS_FIX_SevenRiversMap_Beyond_Kazakhstan_RC.scs.html",
+      "link": "https://sharemods.com/sugiq9j21255/QS_FIX_SevenRiversMap_Beyond_Kazakhstan_RC.scs.html",
       "image": "/img/combo-builder/9074a7f825909b80f665a23b06229282c505b22710bb159747af249ae8a6870b.jpg",
+      "description": "Исправляет построение маршрута при совместном использовании Seven Rivers Map, Beyond и карты Казахстана.",
+      "version": "1.1",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_FIX_SevenRiversMap_Beyond_Kazakhstan_RC"
       ],
@@ -5376,8 +5365,7 @@
         "seven-rivers-map-beyond-kazakhstan-rc"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 337
+      "shareIndex": 412
     },
     {
       "id": "seven-rivers-map-beyond-kazakhstan-rc",
@@ -5438,10 +5426,13 @@
       "id": "qs-beyond-company-fix",
       "title": "QS Beyond Company & Logs Fix",
       "type": "fix",
-      "description": "Возвращает штатные настройки SCS для брёвен, больших и железных труб. Исправляет назначение западной базы Habib Construction Services в Дера-Исмаил-Хане.",
-      "version": "1.2",
-      "link": "https://sharemods.com/0to6auhf9dub/QS_Beyond_Company_Fix.scs.html",
+      "link": "https://sharemods.com/faou4iaczj0i/QS_Beyond_Company_Fix.scs.html",
       "image": "/img/combo-builder/e6ba81241d85b69c191757d31db5798628b495aecbb56d30ce483ee42024acd2.jpg",
+      "description": "Возвращает штатные настройки SCS для брёвен, больших и железных труб. Исправляет назначение западной базы Habib Construction Services в Дера-Исмаил-Хане.",
+      "version": "1.4",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Beyond_Company_Fix"
       ],
@@ -5449,8 +5440,7 @@
         "beyond-by-terramaps-1"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 341
+      "shareIndex": 410
     },
     {
       "id": "beyond-by-terramaps-1",
@@ -5635,10 +5625,13 @@
       "id": "qs-trans-siberian-altai-coaches-fix",
       "title": "QS Trans-Siberian Truckway + Altai Coaches Fix",
       "type": "fix",
-      "description": "Возвращает остановку и сцену посадки в Юрге. Восстанавливает регистрацию Опарино.",
-      "version": "1.0",
-      "link": "https://sharemods.com/l6s8hgmmhlsp/QS_Trans_Siberian_Altai_Coaches_Fix.scs.html",
+      "link": "https://sharemods.com/ozmcsbfsm7lg/QS_Trans_Siberian_Altai_Coaches_Fix.scs.html",
       "image": "/img/combo-builder/ce71b74f4625a3fc895a073624f0ba5325e3402aa34e3e1e8942348797b8e09e.jpg",
+      "description": "Возвращает остановку и сцену посадки в Юрге. Восстанавливает регистрацию Опарино.",
+      "version": "1.1",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Trans_Siberian_Altai_Coaches_Fix"
       ],
@@ -5648,8 +5641,7 @@
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 351
+      "shareIndex": 417
     },
     {
       "id": "trans-siberia-altai-map-rc",
@@ -5769,10 +5761,13 @@
       "id": "qs-trans-siberian-truckway-fix",
       "title": "QS Trans-Siberian Truckway Fix",
       "type": "fix",
-      "description": "Исправляет ссылку на порт Владивостока в паромном рейсе до Вакканая и устаревшие ссылки в настройках трафика Японии.",
-      "version": "1.0",
-      "link": "https://sharemods.com/gr8e1f5eu3v5/QS_Trans_Siberian_Truckway_Fix.scs.html",
+      "link": "https://sharemods.com/x5fqeghtrv3c/QS_Trans_Siberian_Truckway_Fix.scs.html",
       "image": "/img/combo-builder/c831d70b1459d35c36c3792b3002f8f38d38d1baeeea92148dbf7c1e8528a0ec.jpg",
+      "description": "Исправляет ссылку на порт Владивостока в паромном рейсе до Вакканая и устаревшие ссылки в настройках трафика Японии.",
+      "version": "1.1",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Trans_Siberian_Truckway_Fix"
       ],
@@ -5780,8 +5775,7 @@
         "trans-siberian-truckway"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 358
+      "shareIndex": 418
     },
     {
       "id": "trans-siberian-truckway",
@@ -6131,10 +6125,13 @@
       "id": "qs-altai-fix",
       "title": "QS Altai Fix",
       "type": "fix",
-      "description": "Исправляет трафик Алтая, принадлежность Семея к стране и конфликты моделей ЛЭП. Убирает паромный рейс к отсутствующему терминалу в Уржуме.",
-      "version": "1.1",
-      "link": "https://sharemods.com/i10a9t6xue9c/QS_Altai_Fix.scs.html",
+      "link": "https://sharemods.com/5hr9o4fj4oa5/QS_Altai_Fix.scs.html",
       "image": "/img/combo-builder/2c134672040dad8354abb864aa0677fc885da509c66dc86f01f511f30f03a37d.jpg",
+      "description": "Исправляет трафик Алтая, принадлежность Семея к стране и конфликты моделей ЛЭП. Убирает паромный рейс к отсутствующему терминалу в Уржуме.",
+      "version": "1.2",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
+      "paid": false,
       "files": [
         "QS_Altai_Fix"
       ],
@@ -6142,8 +6139,7 @@
         "altai-map-1-7-3"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 378
+      "shareIndex": 407
     },
     {
       "id": "altai-map-1-7-3",
@@ -6286,6 +6282,207 @@
       "requires": [],
       "dlcs": [],
       "shareIndex": 396
+    },
+    {
+      "id": "trans-siberia-project-russia-rc",
+      "title": "Trans-Siberia Project Russia RC",
+      "type": "connector",
+      "link": "https://www.leobmods.net/mod?id=trans-siberian-truckway-project-russia-rc",
+      "image": "/img/combo-builder/37de2dd28dce530fa5c4bd9436ecb136433f95d5873417f4866be0138ea48ba6.webp",
+      "version": "3.6",
+      "addedAt": "2026-11-27",
+      "paid": false,
+      "files": [
+        "Trans-Siberia Project Russia RC"
+      ],
+      "requires": [
+        "projectrussia",
+        "trans-siberian-truckway"
+      ],
+      "dlcs": [],
+      "shareIndex": 422
+    },
+    {
+      "id": "ivalo-garage-1-62",
+      "title": "Ivalo_Scania_Garage_1.62",
+      "type": "map",
+      "link": "https://truckymods.io/euro-truck-simulator-2/maps/scania-garage-in-ivalo-463300",
+      "image": "/img/combo-builder/efd4d713f60da766d1492218932117dc04a8b6eb7b1907962c4047fc4f73f52c.webp",
+      "version": "1.62",
+      "addedAt": "2026-11-27",
+      "paid": false,
+      "files": [
+        "Ivalo Garage 1.62"
+      ],
+      "requires": [
+        "promods-eu-def-v285"
+      ],
+      "dlcs": [],
+      "shareIndex": 421
+    },
+    {
+      "id": "gmc-red-sea-map-beyond-pmme-rc-beyond-pm-rc-fix",
+      "title": "Red Sea Map + Beyond - PMME RC + Beyond - PM RC & Fix Unof",
+      "type": "map",
+      "link": "https://drive.google.com/file/d/1Hm1K2aaGwr6AWWl1y0L30CiqhQgQ8v9T/view?usp=drive_link",
+      "image": "/img/combo-builder/89a6802ce7897b6bb06998d655f0ba875daac69b309355328fbab7e26628ba07.webp",
+      "version": "1.62-Unof",
+      "addedAt": "2026-11-27",
+      "paid": false,
+      "files": [
+        "gmc.red_sea_map.beyond_pmme_rc.beyond_pm_rc_fix"
+      ],
+      "requires": [
+        "promods-me-defmap-v285",
+        "beyond-by-terramaps-1"
+      ],
+      "dlcs": [],
+      "shareIndex": 423
+    },
+    {
+      "id": "qs-bxp-tunisia-libya-rc-fix",
+      "title": "QS BXP Tunisia + Libya RC Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/59dwfd2ogl1j/QS_BXP_Tunisia_Libya_RC_Fix.scs.html",
+      "image": "/img/combo-builder/93104db5b169674f66ca6bc033c095edf1f45920d9a4924baba58e2344ad7998.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_BXP_Tunisia_Libya_RC_Fix"
+      ],
+      "requires": [
+        "bxprctunlyb156"
+      ],
+      "dlcs": [],
+      "shareIndex": 435
+    },
+    {
+      "id": "qs-chernozemye-fix",
+      "title": "QS Chernozemye Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/k68ibmcszt9g/QS_Chernozemye_Fix.scs.html",
+      "image": "/img/combo-builder/43bdf0a03421aafb1050bc7d46f1b33948dc3560cd180880e88ceb8c6a502850.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Chernozemye_Fix"
+      ],
+      "requires": [
+        "project-chernozemye-2-1-3"
+      ],
+      "dlcs": [],
+      "shareIndex": 434
+    },
+    {
+      "id": "qs-egyptian-libyan-gateway-service-fix",
+      "title": "QS Egyptian-Libyan Gateway Service Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/d25musbgdutv/QS_Egyptian_Libyan_Gateway_Service_Fix.scs.html",
+      "image": "/img/combo-builder/dc1d3eafe0d4119f9242c727b426aff391a0addd9f5187458c68525103fadb7a.webp",
+      "version": "1.1",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Egyptian_Libyan_Gateway_Service_Fix"
+      ],
+      "requires": [
+        "egyptian-libyan-gateway-v1-6"
+      ],
+      "dlcs": [],
+      "shareIndex": 433
+    },
+    {
+      "id": "qs-m12-saratov-signs-fix",
+      "title": "QS M12 + Saratov Signs Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/s4hnvlbmctyq/QS_M12_Saratov_Signs_Fix.scs.html",
+      "image": "/img/combo-builder/c31f6f27bc19e8dc159c52fc496268504ea3ec6b03991b17dc5368c8d443d411.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_M12_Saratov_Signs_Fix"
+      ],
+      "requires": [
+        "projectsaratov113",
+        "m12-vostok-v-3-0"
+      ],
+      "dlcs": [],
+      "shareIndex": 432
+    },
+    {
+      "id": "qs-red-sea-beyond-pmme-company-fix",
+      "title": "QS Red Sea + Beyond + PMME Company Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/ladwbkoweb7v/QS_Red_Sea_Beyond_PMME_Company_Fix.scs.html",
+      "image": "/img/combo-builder/483306316a99b504f558c1ee41096573c02f5735da2c696795074f2ceec74049.webp",
+      "version": "1.1",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Red_Sea_Beyond_PMME_Company_Fix"
+      ],
+      "requires": [
+        "gmc-red-sea-map-beyond-pmme-rc-beyond-pm-rc-fix"
+      ],
+      "dlcs": [],
+      "shareIndex": 428
+    },
+    {
+      "id": "qs-ural-map-fix",
+      "title": "QS Ural Map Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/199m00j9mz9s/QS_Ural_Map_Fix.scs.html",
+      "image": "/img/combo-builder/caa983980239f9a90f24fe73feb0570e20ecd4af2e36d7fdb8d68c83e7d7bcb6.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Ural_Map_Fix"
+      ],
+      "requires": [
+        "uralmap-18"
+      ],
+      "dlcs": [],
+      "shareIndex": 429
+    },
+    {
+      "id": "qs-trans-siberian-projectrussia-rc-fix",
+      "title": "QS Trans-Siberia Project Russia RC Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/gwabss8isxds/QS_Trans_Siberian_ProjectRussia_RC_Fix.scs.html",
+      "image": "/img/combo-builder/b386f1059f6333365b5c6ce673cb0d212435bd43229ea8672a6a1b5e4bec8756.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Trans_Siberian_ProjectRussia_RC_Fix"
+      ],
+      "requires": [
+        "trans-siberia-project-russia-rc"
+      ],
+      "dlcs": [],
+      "shareIndex": 436
+    },
+    {
+      "id": "qs-ural-rfex-rc-fix",
+      "title": "QS Ural + RFEX RC Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/8xmav84l340d/QS_Ural_RFEX_RC_Fix.scs.html",
+      "image": "/img/combo-builder/cf844053f2685f9ed85af6d26c1132c36454cb97f99e6e057646067b4b686d7c.webp",
+      "version": "1.1",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Ural_RFEX_RC_Fix"
+      ],
+      "requires": [
+        "rxx-ural-mrm-rc"
+      ],
+      "dlcs": [],
+      "shareIndex": 431
     }
   ],
   "order": [
@@ -6335,7 +6532,7 @@
     {
       "key": "QS_Altai_Fix",
       "name": "QS Altai Fix",
-      "logVersion": "1.1",
+      "logVersion": "1.2",
       "image": "/img/combo-builder/2c134672040dad8354abb864aa0677fc885da509c66dc86f01f511f30f03a37d.jpg",
       "link": "https://sharemods.com/i10a9t6xue9c/QS_Altai_Fix.scs.html"
     },
@@ -6487,7 +6684,7 @@
     {
       "key": "QS_Trans_Siberian_Truckway_Fix",
       "name": "QS Trans-Siberian Truckway Fix",
-      "logVersion": "1.0",
+      "logVersion": "1.1",
       "image": "/img/combo-builder/c831d70b1459d35c36c3792b3002f8f38d38d1baeeea92148dbf7c1e8528a0ec.jpg",
       "link": "https://sharemods.com/gr8e1f5eu3v5/QS_Trans_Siberian_Truckway_Fix.scs.html"
     },
@@ -6536,7 +6733,7 @@
     {
       "key": "QS_Trans_Siberian_Altai_Coaches_Fix",
       "name": "QS Trans-Siberian Truckway + Altai Coaches Fix",
-      "logVersion": "1.0",
+      "logVersion": "1.1",
       "image": "/img/combo-builder/ce71b74f4625a3fc895a073624f0ba5325e3402aa34e3e1e8942348797b8e09e.jpg",
       "link": "https://sharemods.com/l6s8hgmmhlsp/QS_Trans_Siberian_Altai_Coaches_Fix.scs.html"
     },
@@ -6678,7 +6875,7 @@
     {
       "key": "QS_Beyond_Company_Fix",
       "name": "QS Beyond Company & Logs Fix",
-      "logVersion": "1.2",
+      "logVersion": "1.4",
       "image": "/img/combo-builder/e6ba81241d85b69c191757d31db5798628b495aecbb56d30ce483ee42024acd2.jpg",
       "link": "https://sharemods.com/0to6auhf9dub/QS_Beyond_Company_Fix.scs.html"
     },
@@ -6706,7 +6903,7 @@
     {
       "key": "QS_FIX_SevenRiversMap_Beyond_Kazakhstan_RC",
       "name": "QS FIX Seven Rivers Beyond Kazakhstan RC",
-      "logVersion": "1.0",
+      "logVersion": "1.1",
       "image": "/img/combo-builder/9074a7f825909b80f665a23b06229282c505b22710bb159747af249ae8a6870b.jpg",
       "link": "https://sharemods.com/wo5r9tayptl9/QS_FIX_SevenRiversMap_Beyond_Kazakhstan_RC.scs.html"
     },
@@ -6788,6 +6985,29 @@
       "link": "https://promods.net/setup.php?game=ets"
     },
     {
+      "key": "promods-me-assets-v285",
+      "name": "ProMods Middle-East Add-on (Assets Package)",
+      "logVersion": "2.85",
+      "image": "/img/combo-builder/49431a18acdf3e4816b99d3ffd54f02fce0a55927f3610d656546adaac69a1f5.jpg"
+    },
+    {
+      "key": "promods-me-defmap-v285",
+      "name": "ProMods Middle-East Add-on (Def & Map Package)",
+      "logVersion": "2.85",
+      "image": "/img/combo-builder/71de51e66898de1b5be046a5f7e69f31684b144ce0d0cf0ad851551cdf511ea4.jpg",
+      "link": "https://promods.net/setup.php?game=me"
+    },
+    {
+      "key": "gmc.red_sea_map.beyond_pmme_rc.beyond_pm_rc_fix",
+      "name": "Red Sea Map + Beyond - PMME RC + Beyond - PM RC & Fix Unof",
+      "logVersion": "1.62-Unof"
+    },
+    {
+      "key": "QS_Red_Sea_Beyond_PMME_Company_Fix",
+      "name": "QS Red Sea + Beyond + PMME Company Fix",
+      "logVersion": "1.1"
+    },
+    {
       "key": "RTC PRMDS RC v.2.2",
       "name": "Road to Caucasus - Promods RC 2.2",
       "logVersion": "2.2",
@@ -6816,17 +7036,9 @@
       "link": "https://sharemods.com/j1lgp1pdnl8g/QS_Abkhazia_Fix.scs.html"
     },
     {
-      "key": "promods-me-assets-v285",
-      "name": "ProMods Middle-East Add-on (Assets Package)",
-      "logVersion": "2.85",
-      "image": "/img/combo-builder/49431a18acdf3e4816b99d3ffd54f02fce0a55927f3610d656546adaac69a1f5.jpg"
-    },
-    {
-      "key": "promods-me-defmap-v285",
-      "name": "ProMods Middle-East Add-on (Def & Map Package)",
-      "logVersion": "2.85",
-      "image": "/img/combo-builder/71de51e66898de1b5be046a5f7e69f31684b144ce0d0cf0ad851551cdf511ea4.jpg",
-      "link": "https://promods.net/setup.php?game=me"
+      "key": "Ivalo Garage 1.62",
+      "name": "Ivalo_Scania_Garage_1.62",
+      "logVersion": "1.62"
     },
     {
       "key": "promods_eu_285_ib_rw_162_v141",
@@ -6852,7 +7064,7 @@
     {
       "key": "QS_Barcelona_EXP_Coaches_Fix",
       "name": "QS Barcelona EXP Coaches Fix",
-      "logVersion": "1.0",
+      "logVersion": "1.1",
       "image": "/img/combo-builder/462ba6c3898ed06a0ffcaf0508621bad17412526c474a77996d6241a4f89d38f.jpg",
       "link": "https://sharemods.com/h29pph66yvrm/QS_Barcelona_EXP_Coaches_Fix.scs.html"
     },
@@ -6890,6 +7102,11 @@
       "logVersion": "156",
       "image": "/img/combo-builder/1bccc618a905c0a7aff2485c7b3240dab004d8576523c87e6a6366242f77d230.jpg",
       "link": "https://mods.to/BF6g69061ab046fba"
+    },
+    {
+      "key": "QS_BXP_Tunisia_Libya_RC_Fix",
+      "name": "QS BXP Tunisia + Libya RC Fix",
+      "logVersion": "1.0"
     },
     {
       "key": "Maghreb",
@@ -6941,11 +7158,9 @@
       "link": "https://soramods.pl/mods.html?mod=Egyptian-Libyan+Gateway"
     },
     {
-      "key": "gmc.egyptian_libyan_gateway.fix.unof",
-      "name": "Egyptian - Libyan Gateway Fix Unof",
-      "logVersion": "1.61-1.2.0",
-      "image": "/img/combo-builder/57bc10f2e1c5e5a4a70378ba6a5b4413cd2ee8947b17da999b68c068ad8ac6cf.jpg",
-      "link": "https://drive.google.com/file/d/122hqQzyMQgBcSHLrG4d4hFz-EDCBhSnj/view?usp=drive_link"
+      "key": "QS_Egyptian_Libyan_Gateway_Service_Fix",
+      "name": "QS Egyptian-Libyan Gateway Service Fix",
+      "logVersion": "1.1"
     },
     {
       "key": "QS_Fix-RC_Egyptian-Libyan-Tunisa",
@@ -6997,7 +7212,7 @@
     {
       "key": "QS_PM_RusMap_ROEX_Donbass_RC",
       "name": "QS ProMods–RusMap–ROEX RC Extension – Donbass",
-      "logVersion": "1.24",
+      "logVersion": "1.27",
       "image": "/img/combo-builder/8cdab0be8e7c0243822357b33290e64a6cfe1b8dbba9f844fd9685fa04a328cc.jpg",
       "link": "https://sharemods.com/ibfs71rd48ku/QS_PM_RusMap_ROEX_Donbass_RC.scs.html"
     },
@@ -7011,7 +7226,7 @@
     {
       "key": "QS_Ukraine_Expansion_ProMods_ROEX_Coaches_Fix",
       "name": "QS Ukraine Expansion + ProMods + ROEX Coaches Fix",
-      "logVersion": "1.5",
+      "logVersion": "1.6",
       "image": "/img/combo-builder/c644dbf67098623ada1e041bab9894ea73e525d964f6563e86066179dd1dabc6.jpg",
       "link": "https://sharemods.com/cv6k6bg6zibw/QS_Ukraine_Expansion_ProMods_ROEX_Coaches_Fix.scs.html"
     },
@@ -7049,6 +7264,11 @@
       "logVersion": "2.1.3",
       "image": "/img/combo-builder/466301ddbeb6001673938ad54dcae2bcdf548806000ad1ac9c9fbe69cf8f73d2.jpg",
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/tambovmap"
+    },
+    {
+      "key": "QS_Chernozemye_Fix",
+      "name": "QS Chernozemye Fix",
+      "logVersion": "1.0"
     },
     {
       "key": "nnmap130",
@@ -7156,11 +7376,26 @@
       "link": "https://wdfiles.ru/2aI06"
     },
     {
+      "key": "QS_M12_Saratov_Signs_Fix",
+      "name": "QS M12 + Saratov Signs Fix",
+      "logVersion": "1.0"
+    },
+    {
       "key": "ProjectRussia",
       "name": "Project Russia",
       "logVersion": "5.7.2",
       "image": "/img/combo-builder/087a3322e20df3faae3bc834e7f3537df82b54d502ed0af79df1ae104f11dded.jpg",
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/project-russia"
+    },
+    {
+      "key": "Trans-Siberia Project Russia RC",
+      "name": "Trans-Siberia Project Russia RC",
+      "logVersion": "3.6"
+    },
+    {
+      "key": "QS_Trans_Siberian_ProjectRussia_RC_Fix",
+      "name": "QS Trans-Siberia Project Russia RC Fix",
+      "logVersion": "1.0"
     },
     {
       "key": "Project Chernozemye - Project Russia Official RC",
@@ -7172,7 +7407,7 @@
     {
       "key": "QS_Donbass_ProjectRussia_Chernozemye_RC",
       "name": "QS Donbass RC Extension – Project Russia & Chernozemye",
-      "logVersion": "1.19",
+      "logVersion": "1.23",
       "image": "/img/combo-builder/c97f3626fce2cf9dc6d114c8cccdea4936131da444c147b26f02abf5a13883d2.jpg",
       "link": "https://sharemods.com/14xwimnvvp30/QS_Donbass_ProjectRussia_Chernozemye_RC.scs.html"
     },
@@ -7214,7 +7449,7 @@
     {
       "key": "QS_KirovMap_RusCentry_Coaches_Fix",
       "name": "QS KirovMap + RusCentry Coaches Fix",
-      "logVersion": "1.3",
+      "logVersion": "1.4",
       "image": "/img/combo-builder/54d34ed243baa89b9afc7b3f20edd0ab70a735f2d268026c8e99dd354614dea3.jpg",
       "link": "https://sharemods.com/p8953ouzsz6y/QS_KirovMap_RusCentry_Coaches_Fix.scs.html"
     },
@@ -7247,11 +7482,21 @@
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/ural-map"
     },
     {
+      "key": "QS_Ural_Map_Fix",
+      "name": "QS Ural Map Fix",
+      "logVersion": "1.0"
+    },
+    {
       "key": "rxx.ural_mrm_rc",
       "name": "Ural Map - Russian Federation Extended RC",
       "logVersion": "1.55-1.1",
       "image": "/img/combo-builder/86dc0e96f7f8c727162979d6b1ff274f1bc3b27094a995578756a84dc43441ff.jpg",
       "link": "https://truckymods.io/euro-truck-simulator-2/map-patches/ural-map-russian-federation-extended-rc-193806"
+    },
+    {
+      "key": "QS_Ural_RFEX_RC_Fix",
+      "name": "QS Ural + RFEX RC Fix",
+      "logVersion": "1.1"
     },
     {
       "key": "Ural - Sibir map rc",
@@ -7298,7 +7543,7 @@
     {
       "key": "QS_KirovMap_NOS_Coaches_Fix",
       "name": "QS KirovMap + Northern Open Spaces Coaches Fix",
-      "logVersion": "1.2",
+      "logVersion": "1.3",
       "image": "/img/combo-builder/0b1a9eb0d028d9d2a3c475aa514098b5301e9907613f122154c7b2d8852c8463.jpg",
       "link": "https://sharemods.com/5cyi5wqt9lvk/QS_KirovMap_NOS_Coaches_Fix.scs.html"
     },
@@ -7312,21 +7557,21 @@
     {
       "key": "hmaofix",
       "name": "XmaoMap FIX",
-      "logVersion": "1.1",
+      "logVersion": "1.2",
       "image": "/img/combo-builder/46d699a5a8a253b451398055a8a35799e27991f17e7294fbe5e8a63aa6c7f43a.jpg",
       "link": "https://sharemods.com/tvapdmoc4egx/hmaofix.scs.html"
     },
     {
       "key": "QS_ProMods_FLD_Combo_Fix",
       "name": "QS ProMods FLD Combo Fix",
-      "logVersion": "1.3",
+      "logVersion": "1.7",
       "image": "/img/combo-builder/0df2b48357bf91c901f4beb7d96baf4847574074e9119da9b28c7ffe213d4c0b.jpg",
       "link": "https://sharemods.com/7fd1ytd9q16x/QS_ProMods_FLD_Combo_Fix.scs.html"
     },
     {
       "key": "QS_Beyond_Combo_Fix",
       "name": "QS Beyond Combo Fix",
-      "logVersion": "1.4",
+      "logVersion": "1.5",
       "image": "/img/combo-builder/0ef11ea703649840f739680d47289f16103dddef92f389c8d6bce473340adcfa.jpg",
       "link": "https://sharemods.com/ewmovd3svoto/QS_Beyond_Combo_Fix.scs.html"
     },
