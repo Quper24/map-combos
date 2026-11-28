@@ -4480,10 +4480,13 @@
       "id": "qs-m12-sibirmap-coaches-fix",
       "title": "QS M12 + SibirMap Coaches Fix",
       "type": "fix",
-      "description": "Возвращает автобусную остановку SibirMap на стыке с М12 Восток.",
-      "version": "1.0",
-      "link": "https://sharemods.com/fvwgtjos0bs9/QS_M12_SibirMap_Coaches_Fix.scs.html",
+      "link": "https://sharemods.com/2957cpcms7ib/QS_M12_SibirMap_Coaches_Fix.scs.html",
       "image": "/img/combo-builder/40774808ec980e0d803eb9cb1fa2ca3f2f7de06a53905fe20273dae9169e0c3c.jpg",
+      "description": "Возвращает автобусную остановку SibirMap на стыке с М12 Восток.",
+      "version": "1.1",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
+      "paid": false,
       "files": [
         "QS_M12_SibirMap_Coaches_Fix"
       ],
@@ -4493,8 +4496,7 @@
       "dlcs": [
         "Coaches"
       ],
-      "addedAt": "2026-11-26",
-      "shareIndex": 291
+      "shareIndex": 451
     },
     {
       "id": "m12-sibirmap-rc",
@@ -5466,11 +5468,12 @@
       "id": "qs-rtc-tgs-traffic-fix",
       "title": "QS RTC TGS Traffic Fix",
       "type": "fix",
-      "link": "https://sharemods.com/clh1908uxfam/QS_RTC_TGS_Traffic_Fix.scs.html",
+      "link": "https://sharemods.com/wdswdnid2br8/QS_RTC_TGS_Traffic_Fix.scs.html",
       "image": "/img/combo-builder/009ef72e4e19d722063c92c3351fbcb530af9772c929dca35903f99073d197d7.jpg",
       "description": "Согласует трафик Road to Caucasus и The Great Steppe в Казахстане. Устраняет повторную регистрацию грузовиков и прицепов КАМАЗ.",
-      "version": "1.2",
+      "version": "1.3",
       "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
       "paid": false,
       "files": [
         "QS_RTC_TGS_Traffic_Fix"
@@ -5479,7 +5482,7 @@
         "rtc-tgs-rc-v-2-3"
       ],
       "dlcs": [],
-      "shareIndex": 446
+      "shareIndex": 452
     },
     {
       "id": "rtc-tgs-rc-v-2-3",
@@ -5951,11 +5954,12 @@
       "id": "qs-sibirmap-fix",
       "title": "QS SibirMap Fix",
       "type": "fix",
-      "link": "https://sharemods.com/oibqwyas69t6/QS_SibirMap_Fix.scs.html",
+      "link": "https://sharemods.com/zdb4by0sdc28/QS_SibirMap_Fix.scs.html",
       "image": "/img/combo-builder/f229f6c1d5171b89d622446e766d7979887b40e0465ffd79569c1d08f996ff6f.jpg",
       "description": "Исправляет загрузку растительности и шаблонов номеров SibirMap. Восстанавливает регистрацию грузов Lada Granta и питьевой воды и их привязки к предприятиям. Возвращает определение префаба АЗС «Лукойл».",
-      "version": "1.2",
+      "version": "1.4",
       "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
       "paid": false,
       "files": [
         "QS_SibirMap_Fix"
@@ -5964,7 +5968,7 @@
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "shareIndex": 444
+      "shareIndex": 453
     },
     {
       "id": "sibirmap2132fv-for162",
@@ -5986,10 +5990,13 @@
       "id": "qs-the-great-steppe-fix",
       "title": "QS The Great Steppe Fix",
       "type": "fix",
-      "description": "Исправляет ссылки на машины и локомотивы в настройках трафика The Great Steppe.",
-      "version": "1.1",
-      "link": "https://sharemods.com/1zr1km33bhq1/QS_The_Great_Steppe_Fix.scs.html",
+      "link": "https://sharemods.com/gtuwgieet2gz/QS_The_Great_Steppe_Fix.scs.html",
       "image": "/img/combo-builder/bec0808fa41af112ac3590ba863fba276cd5d65a8ae3bf8bd53f8ff5c9f01b3a.jpg",
+      "description": "Исправляет ссылки на машины и локомотивы в настройках трафика The Great Steppe.",
+      "version": "1.2",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
+      "paid": false,
       "files": [
         "QS_The_Great_Steppe_Fix"
       ],
@@ -5997,8 +6004,7 @@
         "promods-tgs-defmap-v171"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 370
+      "shareIndex": 455
     },
     {
       "id": "promods-tgs-defmap-v171",
@@ -6021,10 +6027,13 @@
       "id": "qs-donbass-fix",
       "title": "QS Donbass Fix",
       "type": "fix",
-      "description": "Исправляет трафик, растительность, префабы FLD, знаки и текстуры Донбасса. Восстанавливает две сервисные точки АЗС и убирает устаревшие определения погоды и отсутствующей сцены.",
-      "version": "1.3",
-      "link": "https://sharemods.com/d1lyi3l0ulpt/QS_Donbass_Fix.scs.html",
+      "link": "https://sharemods.com/wcd5rbn6zpbq/QS_Donbass_Fix.scs.html",
       "image": "/img/combo-builder/06c4aac8f4760c9c5061b67c6df530611acd5cf3bb47bd5bdbe19238bd561ab9.jpg",
+      "description": "Исправляет трафик, растительность, префабы FLD, знаки и текстуры Донбасса. Восстанавливает две сервисные точки АЗС и убирает устаревшие определения погоды и отсутствующей сцены.",
+      "version": "1.4",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
+      "paid": false,
       "files": [
         "QS_Donbass_Fix"
       ],
@@ -6032,8 +6041,7 @@
         "donbassmap-159"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 372
+      "shareIndex": 449
     },
     {
       "id": "donbassmap-159",
@@ -6056,10 +6064,13 @@
       "id": "qs-srmap-fix",
       "title": "QS SRMap Fix",
       "type": "fix",
-      "description": "Исправляет растительность, дорожные варианты, правила движения и совместимость автобуса ПАЗ. Восстанавливает пять автостанций. В Туапсе посадка у платформы 2, а припаркованные автобусы стоят у платформ 1, 3 и 4. В Карачаевске посадка у павильона, автостанция подключена к дороге.",
-      "version": "1.8",
-      "link": "https://sharemods.com/wzfmc7tuuph8/QS_SRMap_Fix.scs.html",
+      "link": "https://sharemods.com/9rp0v2ifhsph/QS_SRMap_Fix.scs.html",
       "image": "/img/combo-builder/c29feb729a524382600f9d02432dfe90ac61c37ef91c4d70e63202b661eaa953.jpg",
+      "description": "Исправляет растительность, дорожные варианты, правила движения и совместимость автобуса ПАЗ. Восстанавливает пять автостанций. В Туапсе посадка у платформы 2, а припаркованные автобусы стоят у платформ 1, 3 и 4. В Карачаевске посадка у павильона, автостанция подключена к дороге.",
+      "version": "1.9",
+      "addedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
+      "paid": false,
       "files": [
         "QS_SRMap_Fix"
       ],
@@ -6067,8 +6078,7 @@
         "srmod-v13-1"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 374
+      "shareIndex": 454
     },
     {
       "id": "srmod-v13-1",
@@ -6364,10 +6374,11 @@
       "id": "qs-chernozemye-fix",
       "title": "QS Chernozemye Fix",
       "type": "fix",
-      "link": "https://sharemods.com/1scfr1ke0acq/QS_Chernozemye_Fix.scs.html",
+      "link": "https://sharemods.com/s80bc7m17wd3/QS_Chernozemye_Fix.scs.html",
       "image": "/img/combo-builder/43bdf0a03421aafb1050bc7d46f1b33948dc3560cd180880e88ceb8c6a502850.webp",
-      "version": "1.0",
+      "version": "1.1",
       "addedAt": "2026-11-28",
+      "updatedAt": "2026-11-28",
       "paid": false,
       "files": [
         "QS_Chernozemye_Fix"
@@ -6376,7 +6387,7 @@
         "project-chernozemye-2-1-3"
       ],
       "dlcs": [],
-      "shareIndex": 442
+      "shareIndex": 448
     },
     {
       "id": "qs-egyptian-libyan-gateway-service-fix",
@@ -6400,10 +6411,11 @@
       "id": "qs-m12-saratov-signs-fix",
       "title": "QS M12 + Saratov Signs Fix",
       "type": "fix",
-      "link": "https://sharemods.com/ptj55o5likeo/QS_M12_Saratov_Signs_Fix.scs.html",
+      "link": "https://sharemods.com/natq4vfmb6th/QS_M12_Saratov_Signs_Fix.scs.html",
       "image": "/img/combo-builder/c31f6f27bc19e8dc159c52fc496268504ea3ec6b03991b17dc5368c8d443d411.webp",
-      "version": "1.0",
+      "version": "1.1",
       "addedAt": "2026-11-28",
+      "updatedAt": "2026-11-28",
       "paid": false,
       "files": [
         "QS_M12_Saratov_Signs_Fix"
@@ -6413,7 +6425,7 @@
         "m12-vostok-v-3-0"
       ],
       "dlcs": [],
-      "shareIndex": 440
+      "shareIndex": 450
     },
     {
       "id": "qs-red-sea-beyond-pmme-company-fix",
@@ -6486,6 +6498,119 @@
       ],
       "dlcs": [],
       "shareIndex": 441
+    },
+    {
+      "id": "project-chernozemye-donbassmap-official-rc",
+      "title": "Project Chernozemye - DonbassMap RC",
+      "type": "connector",
+      "link": "https://truckymods.io/euro-truck-simulator-2/maps/tambovmap",
+      "image": "/img/combo-builder/526a6316709cf8b166bf014fbec2212821c996beb66b518f6e32749ba03cc7b2.webp",
+      "version": "1.2",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "Project Chernozemye - DonbassMap Official RC"
+      ],
+      "requires": [
+        "project-chernozemye-2-1-3",
+        "donbassmap-159"
+      ],
+      "disabledByMaps": [
+        "roex-54-free",
+        "roex54core"
+      ],
+      "dlcs": [],
+      "shareIndex": 458
+    },
+    {
+      "id": "sibir2-13-altaimap1-7-2-rc-1-60u",
+      "title": "SibirMap FV/SV - AltaiMap RC(UNOFFICIAL)",
+      "type": "connector",
+      "link": "https://wdfiles.ru/Pjnh",
+      "image": "/img/combo-builder/1b34aeb8bd0c1bd23f46bfad3375d2112b540ea63afc8b060364d580a2d52b3a.webp",
+      "version": "1.0.1U(1.60)",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "Sibir2.13_AltaiMap1.7.2_RC_1.60U"
+      ],
+      "requires": [
+        "sibirmap2132fv-for162",
+        "altai-map-1-7-3"
+      ],
+      "disabledByMaps": [
+        "trans-siberian-truckway"
+      ],
+      "dlcs": [],
+      "shareIndex": 465
+    },
+    {
+      "id": "nhscs-rmvk-rc-1-61",
+      "title": "SCS Nordic Horizons - RusmapVK_2.59 RC",
+      "type": "connector",
+      "link": "https://wdfiles.ru/1voiv",
+      "image": "/img/combo-builder/45707553ed0aefee04ceee29313231410a8827a47fc7348df0cb9da053d88b27.webp",
+      "version": "1.2(1.61)",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "nhSCS-rmVK-rc-1.61"
+      ],
+      "requires": [
+        "rusmap-def-v2-55-unofficial"
+      ],
+      "disabledByMaps": [
+        "promods-eu-def-v285"
+      ],
+      "dlcs": [],
+      "shareIndex": 463
+    },
+    {
+      "id": "qs-chernozemye-projectrussia-rc-fix",
+      "title": "QS Chernozemye + Project Russia RC Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/07g8pvd73emy/QS_Chernozemye_ProjectRussia_RC_Fix.scs.html",
+      "image": "/img/combo-builder/0fda15748f2c4c3982982e674383f2f20d96aa378f178baef84c6a61e8093252.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Chernozemye_ProjectRussia_RC_Fix"
+      ],
+      "requires": [
+        "project-chernozemye-project-russia-official-rc",
+        "projectrussia",
+        "project-chernozemye-2-1-3"
+      ],
+      "disabledByMaps": [
+        "roex-54-free",
+        "roex54core"
+      ],
+      "dlcs": [],
+      "shareIndex": 467
+    },
+    {
+      "id": "qs-gold-russia-combo-fix",
+      "title": "QS Gold Russia Combo Fix",
+      "type": "fix",
+      "autoWithMaps": true,
+      "link": "https://sharemods.com/sfly2x7rhq1k/QS_Gold_Russia_Combo_Fix.scs.html",
+      "image": "/img/combo-builder/8230a8768d8006f44a98027c4866cbc7ddf5e922962ef709fce1ef423eaeca43.webp",
+      "version": "1.2",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Gold_Russia_Combo_Fix"
+      ],
+      "requires": [],
+      "disabledByMaps": [
+        "promods-eu-def-v285",
+        "beyond-by-terramaps-1",
+        "roex-54-free",
+        "roex54core"
+      ],
+      "dlcs": [],
+      "shareIndex": 466
     }
   ],
   "order": [
@@ -6563,7 +6688,7 @@
     {
       "key": "QS_SRMap_Fix",
       "name": "QS SRMap Fix",
-      "logVersion": "1.8",
+      "logVersion": "1.9",
       "image": "/img/combo-builder/c29feb729a524382600f9d02432dfe90ac61c37ef91c4d70e63202b661eaa953.jpg",
       "link": "https://sharemods.com/wzfmc7tuuph8/QS_SRMap_Fix.scs.html"
     },
@@ -6583,7 +6708,7 @@
     {
       "key": "QS_Donbass_Fix",
       "name": "QS Donbass Fix",
-      "logVersion": "1.3",
+      "logVersion": "1.4",
       "image": "/img/combo-builder/06c4aac8f4760c9c5061b67c6df530611acd5cf3bb47bd5bdbe19238bd561ab9.jpg",
       "link": "https://sharemods.com/d1lyi3l0ulpt/QS_Donbass_Fix.scs.html"
     },
@@ -6603,7 +6728,7 @@
     {
       "key": "QS_The_Great_Steppe_Fix",
       "name": "QS The Great Steppe Fix",
-      "logVersion": "1.1",
+      "logVersion": "1.2",
       "image": "/img/combo-builder/bec0808fa41af112ac3590ba863fba276cd5d65a8ae3bf8bd53f8ff5c9f01b3a.jpg",
       "link": "https://sharemods.com/1zr1km33bhq1/QS_The_Great_Steppe_Fix.scs.html"
     },
@@ -6615,18 +6740,23 @@
       "link": "https://modsfire.com/PUl1L2MPAt9TC7h"
     },
     {
-      "key": "QS_SibirMap_Fix",
-      "name": "QS SibirMap Fix",
-      "logVersion": "1.2",
-      "image": "/img/combo-builder/f229f6c1d5171b89d622446e766d7979887b40e0465ffd79569c1d08f996ff6f.jpg",
-      "link": "https://sharemods.com/8y1rr5fm8mo2/QS_SibirMap_Fix.scs.html"
-    },
-    {
       "key": "VolgaMap_1_5_3",
       "name": "VolgaMap 1.5.3",
       "logVersion": "1.5.3",
       "image": "/img/combo-builder/ef85363366d4adc16e87b44c92fb9bca5e24a59aec4a579c4bf458f622e95248.jpg",
       "link": "https://sharemods.com/t6apnjzlg9fb/VolgaMap_1_5_3.scs.html"
+    },
+    {
+      "key": "QS_SibirMap_Fix",
+      "name": "QS SibirMap Fix",
+      "logVersion": "1.4",
+      "image": "/img/combo-builder/f229f6c1d5171b89d622446e766d7979887b40e0465ffd79569c1d08f996ff6f.jpg",
+      "link": "https://sharemods.com/8y1rr5fm8mo2/QS_SibirMap_Fix.scs.html"
+    },
+    {
+      "key": "Sibir2.13_AltaiMap1.7.2_RC_1.60U",
+      "name": "SibirMap FV/SV - AltaiMap RC(UNOFFICIAL)",
+      "logVersion": "1.0.1U(1.60)"
     },
     {
       "key": "VolgaBusStops",
@@ -6840,7 +6970,7 @@
     {
       "key": "QS_RTC_TGS_Traffic_Fix",
       "name": "QS RTC TGS Traffic Fix",
-      "logVersion": "1.2",
+      "logVersion": "1.3",
       "image": "/img/combo-builder/009ef72e4e19d722063c92c3351fbcb530af9772c929dca35903f99073d197d7.jpg",
       "link": "https://sharemods.com/vkjdm8fxhvv8/QS_RTC_TGS_Traffic_Fix.scs.html"
     },
@@ -7234,6 +7364,11 @@
       "link": "https://sharemods.com/cv6k6bg6zibw/QS_Ukraine_Expansion_ProMods_ROEX_Coaches_Fix.scs.html"
     },
     {
+      "key": "nhSCS-rmVK-rc-1.61",
+      "name": "SCS Nordic Horizons - RusmapVK_2.59 RC",
+      "logVersion": "1.2(1.61)"
+    },
+    {
       "key": "RTC RusMap RC v.2.2 unof",
       "name": "Road to Caucasus - RusMap RC 2.2 unof",
       "logVersion": "2.2",
@@ -7271,7 +7406,7 @@
     {
       "key": "QS_Chernozemye_Fix",
       "name": "QS Chernozemye Fix",
-      "logVersion": "1.0"
+      "logVersion": "1.1"
     },
     {
       "key": "nnmap130",
@@ -7311,7 +7446,7 @@
     {
       "key": "QS_M12_SibirMap_Coaches_Fix",
       "name": "QS M12 + SibirMap Coaches Fix",
-      "logVersion": "1.0",
+      "logVersion": "1.1",
       "image": "/img/combo-builder/40774808ec980e0d803eb9cb1fa2ca3f2f7de06a53905fe20273dae9169e0c3c.jpg",
       "link": "https://sharemods.com/fvwgtjos0bs9/QS_M12_SibirMap_Coaches_Fix.scs.html"
     },
@@ -7365,6 +7500,11 @@
       "link": "https://sharemods.com/pd07i5j8eyff/QS_RFEX_SibirMap_Coaches_Fix.scs.html"
     },
     {
+      "key": "Project Chernozemye - DonbassMap Official RC",
+      "name": "Project Chernozemye - DonbassMap RC",
+      "logVersion": "1.2"
+    },
+    {
       "key": "Project Chernozemye - DonbassMap Unofficial RC2",
       "name": "Project Chernozemye - DonbassMap Unofficial RC2",
       "logVersion": "158.0",
@@ -7381,7 +7521,7 @@
     {
       "key": "QS_M12_Saratov_Signs_Fix",
       "name": "QS M12 + Saratov Signs Fix",
-      "logVersion": "1.0"
+      "logVersion": "1.1"
     },
     {
       "key": "ProjectRussia",
@@ -7413,6 +7553,11 @@
       "logVersion": "1.23",
       "image": "/img/combo-builder/c97f3626fce2cf9dc6d114c8cccdea4936131da444c147b26f02abf5a13883d2.jpg",
       "link": "https://sharemods.com/14xwimnvvp30/QS_Donbass_ProjectRussia_Chernozemye_RC.scs.html"
+    },
+    {
+      "key": "QS_Chernozemye_ProjectRussia_RC_Fix",
+      "name": "QS Chernozemye + Project Russia RC Fix",
+      "logVersion": "1.0"
     },
     {
       "key": "ProjectRussia_Kirovmap_RC_1.58",
@@ -7577,6 +7722,11 @@
       "logVersion": "1.5",
       "image": "/img/combo-builder/0ef11ea703649840f739680d47289f16103dddef92f389c8d6bce473340adcfa.jpg",
       "link": "https://sharemods.com/ewmovd3svoto/QS_Beyond_Combo_Fix.scs.html"
+    },
+    {
+      "key": "QS_Gold_Russia_Combo_Fix",
+      "name": "QS Gold Russia Combo Fix",
+      "logVersion": "1.2"
     },
     {
       "key": "QS_Map_Final_Fix",

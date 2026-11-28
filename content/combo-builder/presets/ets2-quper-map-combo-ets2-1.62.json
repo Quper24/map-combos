@@ -5,10 +5,10 @@
     "id": "quper-map-combo-ets2",
     "title": "Quper Map Combo ETS2",
     "fileSlug": "quper-map-combo-ets2",
-    "version": "0.4",
+    "version": "0.4.1",
     "boosty": "https://boosty.to/qupersimulator/posts/cbf33df5-e5b2-4726-a401-fb3b4081f1e0?isFromShowcasePreview=true",
     "profile": "https://sharemods.com/shm2l2hdgxl9/1.62_ETS2_Quper_map_combo_0.4.zip.html",
-    "image": "/img/combo-builder/ets2-quper-map-combo-162.png",
+    "image": "/img/combo-builder/b83cd9c44ecc7bf0a308411d6ec322b75af06642e73abd6ff53e68823863d857.webp",
     "tags": [],
     "updatedAt": "2026-11-28",
     "selection": [
@@ -1386,6 +1386,706 @@
             "id": "qs-m12-saratov-signs-fix",
             "title": "QS M12 + Saratov Signs Fix",
             "version": "1.0"
+          },
+          {
+            "id": "qs-red-sea-beyond-pmme-company-fix",
+            "title": "QS Red Sea + Beyond + PMME Company Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "qs-ural-map-fix",
+            "title": "QS Ural Map Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-trans-siberian-projectrussia-rc-fix",
+            "title": "QS Trans-Siberia Project Russia RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-ural-rfex-rc-fix",
+            "title": "QS Ural + RFEX RC Fix",
+            "version": "1.1"
+          }
+        ]
+      },
+      {
+        "version": "0.4.1",
+        "date": "2026-11-28",
+        "entries": [
+          {
+            "id": "ets2-global-background-map-country-colours",
+            "title": "ETS2 Global Background Map - Country Colours",
+            "version": "2.9.1"
+          },
+          {
+            "id": "qs-coaches-timetable",
+            "title": "QS Coaches Timetable",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-map-final-fix",
+            "title": "QS Map Final Fix",
+            "version": "7.3.1"
+          },
+          {
+            "id": "qs-beyond-combo-fix",
+            "title": "QS Beyond Combo Fix",
+            "version": "1.5"
+          },
+          {
+            "id": "qs-promods-fld-combo-fix",
+            "title": "QS ProMods FLD Combo Fix",
+            "version": "1.7"
+          },
+          {
+            "id": "hmaofix",
+            "title": "XmaoMap FIX",
+            "version": "1.2"
+          },
+          {
+            "id": "qs-projectrussia-nos-rc-fix",
+            "title": "QS Project Russia + Northern Open Spaces RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-kirovmap-nos-coaches-fix",
+            "title": "QS KirovMap + Northern Open Spaces Coaches Fix",
+            "version": "1.3"
+          },
+          {
+            "id": "4-in-1-northern-open-spaces-connector",
+            "title": "4 in 1 Northern Open Spaces Connector",
+            "version": "1.6"
+          },
+          {
+            "id": "hmaomap1-0",
+            "title": "XmaoMap 1.0",
+            "version": "1.0"
+          },
+          {
+            "id": "off-the-grid-russia-northern-open-spaces-connector",
+            "title": "Off the grid Russia - Northern Open Spaces Connector",
+            "version": "1.8"
+          },
+          {
+            "id": "northern-open-spaces-fixed-v13",
+            "title": "Northern open spaces FIXED Cargo and Trailers",
+            "version": "13"
+          },
+          {
+            "id": "qs-ural-sibirmap-rc-fix",
+            "title": "QS Ural – SibirMap RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "ural-sibir-map-rc",
+            "title": "Ural - Sibir map rc",
+            "version": "1.5"
+          },
+          {
+            "id": "rxx-ural-mrm-rc",
+            "title": "Ural Map - Russian Federation Extended RC",
+            "version": "1.55-1.1"
+          },
+          {
+            "id": "uralmap-18",
+            "title": "Ural Map 1.8",
+            "version": "1.8"
+          },
+          {
+            "id": "qs-volgamap-ulyanovsk-coaches-fix",
+            "title": "QS VolgaMap + Ulyanovsk Coaches Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-nnmap-ulyanovsk-coaches-fix",
+            "title": "QS NNmap + Ulyanovsk Coaches Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "ulmap10",
+            "title": "Ulyanovsk Map 1.0",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-kirovmap-ruscentry-coaches-fix",
+            "title": "QS KirovMap + RusCentry Coaches Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "ruscentrymap-kirov-map-sibirmap-rc",
+            "title": "RusCentryMap - Kirov Map - SibirMap RC",
+            "version": "2.0"
+          },
+          {
+            "id": "ruscentrymap-1-8-1",
+            "title": "RusCentryMap",
+            "version": "1.8.1"
+          },
+          {
+            "id": "segezha-rusmap-vk-severodvinsk-projectrussia-rc-1-58",
+            "title": "Segezha(RusMapVK)-Severodvinsk(ProjectRussia)",
+            "version": "1.58.1"
+          },
+          {
+            "id": "qs-kirovmap-projectrussia-coaches-fix",
+            "title": "QS KirovMap + Project Russia Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "projectrussia-kirovmap-rc-1-58",
+            "title": "ProjectRussia_Kirovmap_RC",
+            "version": "1.58"
+          },
+          {
+            "id": "qs-donbass-projectrussia-chernozemye-rc",
+            "title": "QS Donbass RC Extension – Project Russia & Chernozemye",
+            "version": "1.23"
+          },
+          {
+            "id": "project-chernozemye-project-russia-official-rc",
+            "title": "Chernozemye - Project Russia RC",
+            "version": "1.3"
+          },
+          {
+            "id": "projectrussia",
+            "title": "Project Russia",
+            "version": "5.7.2"
+          },
+          {
+            "id": "projectsaratov113",
+            "title": "Project Saratov 1.1",
+            "version": "1.1.3"
+          },
+          {
+            "id": "project-chernozemye-donbassmap-unofficial-rc2",
+            "title": "Project Chernozemye - DonbassMap Unofficial RC2",
+            "version": "158.0"
+          },
+          {
+            "id": "qs-rfex-sibirmap-coaches-fix",
+            "title": "QS RFEX + SibirMap Coaches Fix",
+            "version": "1.3"
+          },
+          {
+            "id": "rfex-connector-sibirmap",
+            "title": "Russian Federation Extended x SibirMap RC [RFEX]",
+            "version": "1.1"
+          },
+          {
+            "id": "nnrfex",
+            "title": "NNrfex",
+            "version": "1.62"
+          },
+          {
+            "id": "rfex-connector-nnmap",
+            "title": "Russian Federation Extended x NNMap RC [RFEX]",
+            "version": "1.5"
+          },
+          {
+            "id": "rfex",
+            "title": "Russian Federation Extended [RFEX]",
+            "version": "5.1.5"
+          },
+          {
+            "id": "qs-m12-nnmap-coaches-fix",
+            "title": "QS M12 + NNmap Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "m12-nnmap-rc",
+            "title": "M12 NNmap 1.3.0 RC",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-m12-sibirmap-coaches-fix",
+            "title": "QS M12 + SibirMap Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "m12-sibirmap-rc",
+            "title": "M12 Sibirmap 2.10.2 RC",
+            "version": "1.0"
+          },
+          {
+            "id": "busm12",
+            "title": "BusStopsM12",
+            "version": "1.62"
+          },
+          {
+            "id": "m12-vostok-v-3-0",
+            "title": "M12_vostok_V.3.0",
+            "version": "3.0"
+          },
+          {
+            "id": "nnbus",
+            "title": "NNbus",
+            "version": "1.62"
+          },
+          {
+            "id": "nnmap130",
+            "title": "NNmap 1.3.0",
+            "version": "1.3.0"
+          },
+          {
+            "id": "project-chernozemye-2-1-3",
+            "title": "Project Chernozemye 2.1.3",
+            "version": "2.1.3"
+          },
+          {
+            "id": "northern-region-map-1-0-0u",
+            "title": "Northern Region Map 1.0.0U",
+            "version": "1.0.0U"
+          },
+          {
+            "id": "kirovbus",
+            "title": "KirovBus",
+            "version": "1.62"
+          },
+          {
+            "id": "kirovmap-17-free",
+            "title": "KirovMap 1.7 FREE",
+            "version": "1.58"
+          },
+          {
+            "id": "rtc-rusmap-rc-v-2-2-unof",
+            "title": "Road to Caucasus - RusMap RC 2.2 unof",
+            "version": "2.2"
+          },
+          {
+            "id": "qs-ukraine-expansion-promods-roex-coaches-fix",
+            "title": "QS Ukraine Expansion + ProMods + ROEX Coaches Fix",
+            "version": "1.6"
+          },
+          {
+            "id": "ukrexp-roex-rc",
+            "title": "Ukraine Expension - Roextended RC 1.60",
+            "version": "1.4"
+          },
+          {
+            "id": "qs-pm-rusmap-roex-donbass-rc",
+            "title": "QS ProMods–RusMap–ROEX RC Extension – Donbass",
+            "version": "1.27"
+          },
+          {
+            "id": "cnx-pm-eu-v284-rm-v259-roex-v53",
+            "title": "ProMods RusMap Roextended Connector (ProMods priority version)",
+            "version": "1.61.1"
+          },
+          {
+            "id": "qs-promods-rusmap-coaches-tourist-fix",
+            "title": "QS ProMods + RusMap Coaches Tourist Fix",
+            "version": "1.2"
+          },
+          {
+            "id": "qs-beyond-rusmap-compatibility-fix",
+            "title": "QS Beyond + RusMap Compatibility Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "rusmap-def-v2-55-unofficial",
+            "title": "RusMap 2.55 (UNOFFICIAL)",
+            "version": "2.55"
+          },
+          {
+            "id": "qs-fix-rc-egyptian-libyan-tunisa",
+            "title": "QS Tunisia - Egyptian-Libyan Gateway RC Fix",
+            "version": "1.6"
+          },
+          {
+            "id": "egyptian-libyan-gateway-v1-6",
+            "title": "Egyptian-Libyan Gateway",
+            "version": "1.6"
+          },
+          {
+            "id": "qs-maghreb-bxptunisia-rc",
+            "title": "QS Maghreb - BXP Tunisia RC Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "eurafrica-bxp-tunisia-rc",
+            "title": "Eurafrica - BXP Tunisia RC",
+            "version": "4.0-159"
+          },
+          {
+            "id": "qs-north-africa-combo-fix",
+            "title": "QS North Africa Combo Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "eurafrica-rc-beyond",
+            "title": "Eurafrica RC Beyond",
+            "version": "4.0"
+          },
+          {
+            "id": "qs-maghreb-gate-fix",
+            "title": "QS Maghreb Gate Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "maghreb",
+            "title": "Maghreb",
+            "version": "1.1"
+          },
+          {
+            "id": "bxprctunlyb156",
+            "title": "BXP Tunisia & Libya RC 156.0",
+            "version": "156"
+          },
+          {
+            "id": "bxpscstunisia162",
+            "title": "BXP SCS Tunisia 162.0",
+            "version": "BXP"
+          },
+          {
+            "id": "qs-ukraine-expansion-promods-coaches-fix",
+            "title": "QS Ukraine Expansion + ProMods Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "ukraine-expansion-fix",
+            "title": "Ukraine Expansion FIX",
+            "version": "1.7"
+          },
+          {
+            "id": "ukraine-expansion-v0-13",
+            "title": "Ukraine Expansion",
+            "version": "0.13"
+          },
+          {
+            "id": "qs-barcelona-exp-coaches-fix",
+            "title": "QS Barcelona EXP Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "pmbarcelonaexp",
+            "title": "Promods Barcelona EXP",
+            "version": "2.3"
+          },
+          {
+            "id": "qs-iberia-rw-fix",
+            "title": "QS Iberia RW Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "promods-eu-285-ib-rw-162-v141",
+            "title": "Iberia Promods Map RW v1.41",
+            "version": "1.41"
+          },
+          {
+            "id": "promods-me-defmap-v285",
+            "title": "ProMods Middle-East Add-on",
+            "version": "2.85"
+          },
+          {
+            "id": "qs-abkhazia-fix",
+            "title": "QS Abkhazia Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "abkh-map-v-2-0",
+            "title": "Abkhazia Map v.2.0",
+            "version": "2.0"
+          },
+          {
+            "id": "qs-rtc-promods-tbilisi-travel-fix",
+            "title": "QS RTC + ProMods Tbilisi Travel Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "rtc-prmds-rc-v-2-2",
+            "title": "Road to Caucasus - Promods RC 2.2",
+            "version": "2.2"
+          },
+          {
+            "id": "promods-eu-def-v285",
+            "title": "ProMods Europe",
+            "version": "2.85"
+          },
+          {
+            "id": "qs-tgs-beyond-rc-fix",
+            "title": "QS TGS Beyond RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "gmc-pm-tgs-beyond-rc-unof",
+            "title": "ProMods The Great Steppe - Beyond Road Connection unof",
+            "version": "1.61-1.0.0 unof"
+          },
+          {
+            "id": "qs-trans-siberian-beyond-rc-fix",
+            "title": "QS Trans-Siberian Truckway + Beyond RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "trans-siberia-beyond-rc",
+            "title": "Trans-Siberia Beyond RC",
+            "version": "3.3"
+          },
+          {
+            "id": "qs-fix-sevenriversmap-beyond-kazakhstan-rc",
+            "title": "QS FIX Seven Rivers Beyond Kazakhstan RC",
+            "version": "1.1"
+          },
+          {
+            "id": "seven-rivers-map-beyond-kazakhstan-rc",
+            "title": "Seven Rivers Map - Beyond - Kazakhstan RC",
+            "version": "1.0.1-1.0"
+          },
+          {
+            "id": "kazakhstan-beyondrc",
+            "title": "Kazakhstan - Beyond RC (fix 1.60)",
+            "version": "1.5"
+          },
+          {
+            "id": "ntrl71-seven-rivers-map",
+            "title": "Seven Rivers Map",
+            "version": "1.0.3"
+          },
+          {
+            "id": "qs-beyond-company-fix",
+            "title": "QS Beyond Company & Logs Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "beyond-by-terramaps-1",
+            "title": "Beyond by TerraMaps",
+            "version": "V12"
+          },
+          {
+            "id": "qs-rtc-tgs-traffic-fix",
+            "title": "QS RTC TGS Traffic Fix",
+            "version": "1.3"
+          },
+          {
+            "id": "rtc-tgs-rc-v-2-3",
+            "title": "Road to Caucasus - Promods The Great Steppe RC 2.3",
+            "version": "2.3"
+          },
+          {
+            "id": "rtc-v-3-1",
+            "title": "Road to Caucasus Version 3.1",
+            "version": "3.1"
+          },
+          {
+            "id": "qs-donbass-srmap-compatibility-fix",
+            "title": "QS Donbass SRMap Compatibility Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "db-srfix-159u",
+            "title": "db_SRfix_159(UNOFFICIAL)",
+            "version": "1.59"
+          },
+          {
+            "id": "roex54sr131",
+            "title": "ROEX54SR131 RC",
+            "version": "1.62"
+          },
+          {
+            "id": "qs-donbass-roex-rc",
+            "title": "QS Donbass – ROEX RC",
+            "version": "1.14"
+          },
+          {
+            "id": "roex54core",
+            "title": "ROEX Premium",
+            "version": "5.4"
+          },
+          {
+            "id": "qs-trans-siberian-altai-coaches-fix",
+            "title": "QS Trans-Siberian Truckway + Altai Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "trans-siberia-altai-map-rc",
+            "title": "Trans-Siberia Altai Map RC",
+            "version": "3.3"
+          },
+          {
+            "id": "qs-trans-siberian-amur-coaches-fix",
+            "title": "QS Trans-Siberian Truckway + Amur Map Coaches Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "trans-siberia-amur-map-rc",
+            "title": "Trans-Siberia - Amur Map RC",
+            "version": "3.4"
+          },
+          {
+            "id": "amurmap102b",
+            "title": "AmurMap1.0.2.b",
+            "version": "1.0.2.b"
+          },
+          {
+            "id": "qs-trans-siberian-sibirmap-coaches-fix",
+            "title": "QS Trans-Siberian Truckway + SibirMap Coaches Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "trans-siberia-sibirmap-rc",
+            "title": "Trans-Siberia Sibirmap RC",
+            "version": "3.5"
+          },
+          {
+            "id": "qs-trans-siberian-truckway-fix",
+            "title": "QS Trans-Siberian Truckway Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "trans-siberian-truckway",
+            "title": "Trans-Siberian Truckway",
+            "version": "3.5"
+          },
+          {
+            "id": "qs-volgamap-tgs-coaches-fix",
+            "title": "QS VolgaMap + TGS Coaches Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "volgamap-pmtgs-rc",
+            "title": "Volga Map - Promods T.G.S RC",
+            "version": "1.6"
+          },
+          {
+            "id": "qs-kazakhstan-tgs-rc-fix",
+            "title": "QS Kazakhstan TGS RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "kazakhstantgsrc",
+            "title": "PM TGS - Kazakhstan RC + Pm TGS Fix",
+            "version": "0.8"
+          },
+          {
+            "id": "qs-kazakhstan-sibirmap-rc-fix",
+            "title": "QS Kazakhstan – SibirMap RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "kazakhstan-sibirrc",
+            "title": "Kazakhstan - SibirMapFV RC",
+            "version": "1.6"
+          },
+          {
+            "id": "volgabusstops",
+            "title": "VolgaBusStops",
+            "version": "1.62"
+          },
+          {
+            "id": "volgamap-1-5-3",
+            "title": "VolgaMap 1.5.3",
+            "version": "1.5.3"
+          },
+          {
+            "id": "qs-sibirmap-fix",
+            "title": "QS SibirMap Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "sibirmap2132fv-for162",
+            "title": "SibirMap 2.13.2 FREE Version for 1.62",
+            "version": "2.13.2 FV"
+          },
+          {
+            "id": "qs-the-great-steppe-fix",
+            "title": "QS The Great Steppe Fix",
+            "version": "1.2"
+          },
+          {
+            "id": "promods-tgs-defmap-v171",
+            "title": "ProMods The Great Steppe",
+            "version": "1.7.1"
+          },
+          {
+            "id": "qs-donbass-fix",
+            "title": "QS Donbass Fix",
+            "version": "1.4"
+          },
+          {
+            "id": "donbassmap-159",
+            "title": "Donbass Map",
+            "version": "1.59"
+          },
+          {
+            "id": "qs-srmap-fix",
+            "title": "QS SRMap Fix",
+            "version": "1.9"
+          },
+          {
+            "id": "srmod-v13-1",
+            "title": "SRmap v.13.1",
+            "version": "13.1"
+          },
+          {
+            "id": "qs-kazakhstan-altai-rc-fix",
+            "title": "QS Kazakhstan Altai RC Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "kazakhstanaltairc",
+            "title": "Kazakhstan - Altai RC",
+            "version": "1.1"
+          },
+          {
+            "id": "qs-altai-fix",
+            "title": "QS Altai Fix",
+            "version": "1.2"
+          },
+          {
+            "id": "altai-map-1-7-3",
+            "title": "Altai Map",
+            "version": "1.7.3"
+          },
+          {
+            "id": "qs-fix-republic-of-kazakhstan-fix",
+            "title": "QS Republic of Kazakhstan FIX",
+            "version": "1.7"
+          },
+          {
+            "id": "republic-of-kazakhstan-fix",
+            "title": "Republic of Kazakhstan FIX",
+            "version": "1.9"
+          },
+          {
+            "id": "kaz-def",
+            "title": "Republic of Kazakhstan"
+          },
+          {
+            "id": "trans-siberia-project-russia-rc",
+            "title": "Trans-Siberia Project Russia RC",
+            "version": "3.6"
+          },
+          {
+            "id": "ivalo-garage-1-62",
+            "title": "Ivalo_Scania_Garage_1.62",
+            "version": "1.62"
+          },
+          {
+            "id": "gmc-red-sea-map-beyond-pmme-rc-beyond-pm-rc-fix",
+            "title": "Red Sea Map + Beyond - PMME RC + Beyond - PM RC & Fix Unof",
+            "version": "1.62-Unof"
+          },
+          {
+            "id": "qs-bxp-tunisia-libya-rc-fix",
+            "title": "QS BXP Tunisia + Libya RC Fix",
+            "version": "1.0"
+          },
+          {
+            "id": "qs-chernozemye-fix",
+            "title": "QS Chernozemye Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "qs-egyptian-libyan-gateway-service-fix",
+            "title": "QS Egyptian-Libyan Gateway Service Fix",
+            "version": "1.1"
+          },
+          {
+            "id": "qs-m12-saratov-signs-fix",
+            "title": "QS M12 + Saratov Signs Fix",
+            "version": "1.1"
           },
           {
             "id": "qs-red-sea-beyond-pmme-company-fix",
