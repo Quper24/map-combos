@@ -1690,6 +1690,7 @@
   "Заменяет вымышленные компании и АЗС ETS2 реальными брендами.": "Replaces fictional ETS2 companies and fuel stations with real-world brands.",
   "Бесплатная редакция RoExtended 5.4 для ETS2 1.62. Установи все четыре файла в указанном порядке.": "Free edition of RoExtended 5.4 for ETS2 1.62. Install all four files in the listed order.",
   "Выбери одну редакцию RoExtended: Premium или Free.": "Choose one edition of RoExtended, Premium or Free.",
+  "Выберите одну редакцию карты SibirMap": "Choose one edition of SibirMap",
   "Карты": "Maps",
   "Бесплатная замена": "Free replacement",
   "Без замены": "No replacement",
@@ -1714,5 +1715,17 @@
   "Сборки карт для ETS2 и ATS, моды, плагины и инструменты Quper Simulator.": "Map combos for ETS2 and ATS, mods, plugins and tools by Quper Simulator.",
   "Видимость сборки": "Combo visibility",
   "Скрыть из каталога": "Hide from catalog",
-  "Не показывать в каталоге и на главной. Сборка останется в конструкторе, TruckKit и по прямой ссылке.": "Hide from the catalog and home page. The combo will remain available in the builder, TruckKit and via its direct link."
+  "Не показывать в каталоге и на главной. Сборка останется в конструкторе, TruckKit и по прямой ссылке.": "Hide from the catalog and home page. The combo will remain available in the builder, TruckKit and via its direct link.",
+  "Интерфейс доступен на 18 языках: русском, английском, польском, чешском, немецком, испанском, итальянском, литовском, эстонском, белорусском, украинском, латышском, казахском, кыргызском, узбекском, азербайджанском, румынском и португальском.": "The interface supports 18 languages: Russian, English, Polish, Czech, German, Spanish, Italian, Lithuanian, Estonian, Belarusian, Ukrainian, Latvian, Kazakh, Kyrgyz, Uzbek, Azerbaijani, Romanian and Portuguese.",
+  "Язык, масштаб 75–300%, тема и горячие клавиши собраны во вкладке «Настройки». Доступны тёмная и светлая темы.": "Language, 75–300% scaling, theme and hotkeys are now in Settings. Dark and light themes are available.",
+  "В грузовых заказах можно отдельно фильтровать отправление и назначение по стране в ETS2 и по штату или провинции в ATS. Кнопки с кубиком выбирают город, базу или груз с учётом фильтров.": "Freight jobs can filter origin and destination separately by country in ETS2 or by state or province in ATS. Dice buttons select a city, depot or cargo using the active filters.",
+  "Обновлён логотип, надписи на кнопках подстраиваются под ширину, а поисковые списки закрываются по клику снаружи, повторному нажатию стрелки или Esc. В русском меню вкладка Coaches теперь называется «Автобусы».": "The logo was updated, button labels adapt to the available width, and search lists can be dismissed by clicking outside, clicking the arrow again or pressing Esc. The Coaches tab was renamed in the Russian interface.",
+  "Во вкладке «Рынки» обновление заказов находится слева, обновление грузов для собственного прицепа — справа. Для обновления грузов и выбора собственного прицепа он должен быть прицеплен.": "On the Markets tab, job refresh is on the left and owned-trailer cargo refresh is on the right. An attached trailer is required to refresh its cargo or select owned-trailer mode.",
+  "Если для прямого грузового заказа нет данных о расстоянии, плагин пытается создать его с приблизительным значением и показывает предупреждение. При подстановке паромы не учитываются. Перед принятием проверь маршрут, оплату и срок доставки.": "When distance data is missing for a direct freight job, the plugin attempts to create it with an estimate and displays a warning. The estimate excludes ferries. Check the route, pay and delivery deadline before accepting.",
+  "Открыть меню Cargo Control: Ctrl+Alt+F9. Сочетание можно переназначить во вкладке «Настройки». Для Road Trip и Coaches нужны соответствующие DLC.": "Open the Cargo Control menu with Ctrl+Alt+F9. You can reassign the shortcut in Settings. Road Trip and Coaches require their respective DLC.",
+  "При закрытой игре замени CargoControl.dll в папке bin/win_x64/plugins. Сохрани файлы CargoControl.ini и CargoControl.delivery-time.txt. В папке должна остаться одна DLL Cargo Control.": "Close the game and replace CargoControl.dll in bin/win_x64/plugins. Keep CargoControl.ini and CargoControl.delivery-time.txt. Leave a single Cargo Control DLL in the folder.",
+  "Если сохранение ETS2 было повреждено при работе с Coaches в версии до 1.3.5, сделай копию профиля и загрузи сохранение, сделанное до сбоя.": "If an ETS2 save was damaged while using Coaches before version 1.3.5, back up the profile and load a save made before the issue.",
+  "Темы, фильтры регионов и 18 языков": "Themes, region filters and 18 languages",
+  "Скачать 1.4.0 · ShareMods": "Download 1.4.0 · ShareMods",
+  "В версии 1.4.0 появились светлая тема, отдельная вкладка «Настройки» и поддержка 18 языков. При создании грузового заказа можно отфильтровать регионы отправления и назначения и случайно выбрать город, базу или груз.": "Version 1.4.0 adds a light theme, a dedicated Settings tab and support for 18 languages. When creating a freight job, you can filter origin and destination regions and randomly select a city, depot or cargo."
 }

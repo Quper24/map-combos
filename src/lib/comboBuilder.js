@@ -154,15 +154,15 @@ export function addToCombo(catalog, selection, id) {
   const entry = catalog.entries.find((item) => item.id === id);
   if (!entry || (!isSelectable(entry) && entry.type !== 'server'))
     return { selection, conflicts: [] };
-  const alternatives = new Set(
-    entry.family
-      ? catalog.entries.filter((item) => item.family === entry.family).map((item) => item.id)
-      : [],
-  );
-  const next = [
-    ...selection.filter((selected) => selected !== id && !alternatives.has(selected)),
-    id,
-  ];
+  const alternatives = entry.family
+    ? catalog.entries
+        .filter((item) => item.family === entry.family && item.id !== id)
+        .map((item) => item.id)
+    : [];
+  const remaining = alternatives.length
+    ? removeFromCombo(catalog, selection, alternatives).selection
+    : selection;
+  const next = [...remaining.filter((selected) => selected !== id), id];
   const { conflicts } = resolveCombo(catalog, next);
   return { selection: conflicts.length ? selection : next, conflicts };
 }

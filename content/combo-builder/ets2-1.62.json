@@ -3937,19 +3937,22 @@
       "id": "hmaomap1-0",
       "title": "XmaoMap 1.0",
       "type": "map",
-      "description": "Расширяет SibirMap, добавляя Ханты-Мансийский автономный округ и окрестности в масштабе 1:19.",
-      "version": "1.0",
       "link": "https://mods.to/4M2L6a14b1fd4426e",
       "image": "/img/combo-builder/7443f0401d26652bc5e1e13566832306511b180769dee7e0b60797a32a5ce9cd.jpg",
+      "description": "Расширяет SibirMap, добавляя Ханты-Мансийский автономный округ и окрестности в масштабе 1:19.",
+      "version": "1.0",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "hmaomap1.0"
       ],
-      "requires": [
+      "requires": [],
+      "disabledByMaps": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 263
+      "shareIndex": 483
     },
     {
       "id": "off-the-grid-russia-northern-open-spaces-connector",
@@ -4012,20 +4015,24 @@
       "id": "ural-sibir-map-rc",
       "title": "Ural - Sibir map rc",
       "type": "connector",
-      "description": "Соединяет Асбест на Ural Map с Алапаевском на SibirMap.",
-      "version": "1.5",
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/ural-sibir-map-rc-400655",
       "image": "/img/combo-builder/d45b16aaa7f8225e4c538b14f2a5563f4ec7da766cafb8089e4fc8ae996294d3.jpg",
+      "description": "Соединяет Асбест на Ural Map с Алапаевском на SibirMap.",
+      "version": "1.5",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "Ural - Sibir map rc"
       ],
       "requires": [
-        "uralmap-18",
+        "uralmap-18"
+      ],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 267
+      "shareIndex": 469
     },
     {
       "id": "rxx-ural-mrm-rc",
@@ -4149,21 +4156,25 @@
       "id": "ruscentrymap-kirov-map-sibirmap-rc",
       "title": "RusCentryMap - Kirov Map - SibirMap RC",
       "type": "connector",
-      "description": "Связывает RusCentryMap, Kirov Map и SibirMap.",
-      "version": "2.0",
       "link": "https://kieqw.github.io/kieqwmods.github.io/ruscentrymap-kirov-rc.html",
       "image": "/img/combo-builder/826022faaf5847cd4dd1242c11057b579b035c16810e345353db5c11038a2abf.jpg",
+      "description": "Связывает RusCentryMap, Kirov Map и SibirMap.",
+      "version": "2.0",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "RusCentryMap - Kirov Map - SibirMap RC"
       ],
       "requires": [
         "ruscentrymap-1-8-1",
-        "kirovmap-17-free",
+        "kirovmap-17-free"
+      ],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 274
+      "shareIndex": 470
     },
     {
       "id": "ruscentrymap-1-8-1",
@@ -4364,20 +4375,24 @@
       "id": "rfex-connector-sibirmap",
       "title": "Russian Federation Extended x SibirMap RC [RFEX]",
       "type": "connector",
-      "description": "Соединяет Russian Federation Extended с SibirMap.",
-      "version": "1.1",
       "link": "https://truckymods.io/euro-truck-simulator-2/maps/m5-ural-highway",
       "image": "/img/combo-builder/3d8e8669babd009efc8e5149f09761c20ae6c6286cb6b087eeca9be4df0c6ce9.jpg",
+      "description": "Соединяет Russian Federation Extended с SibirMap.",
+      "version": "1.1",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "rfex_connector_sibirmap"
       ],
       "requires": [
-        "rfex",
+        "rfex"
+      ],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 285
+      "shareIndex": 471
     },
     {
       "id": "nnrfex",
@@ -4502,20 +4517,24 @@
       "id": "m12-sibirmap-rc",
       "title": "M12 Sibirmap 2.10.2 RC",
       "type": "connector",
-      "description": "Соединяет М12 Восток с SibirMap.",
-      "version": "1.0",
       "link": "https://drive.google.com/file/d/1iliM4WX_on6qthHeodCM7q3KebmQ989m/view?usp=drive_link",
       "image": "/img/combo-builder/e1319730aa413f54d4acdf012d1815d4f5219f1b7249b02420bfa085b442e9a0.jpg",
+      "description": "Соединяет М12 Восток с SibirMap.",
+      "version": "1.0",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "M12_Sibirmap_rc"
       ],
       "requires": [
-        "m12-vostok-v-3-0",
+        "m12-vostok-v-3-0"
+      ],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 292
+      "shareIndex": 472
     },
     {
       "id": "busm12",
@@ -5746,20 +5765,24 @@
       "id": "trans-siberia-sibirmap-rc",
       "title": "Trans-Siberia Sibirmap RC",
       "type": "connector",
-      "description": "Соединяет Trans-Siberian Truckway с бесплатной и платной версиями SibirMap.",
-      "version": "3.5",
       "link": "https://www.leobmods.net/mod?id=trans-siberian-truckway-sibirmap-rc",
       "image": "/img/combo-builder/91517d34b741e6a95fa728f46a9f20d0c767f7fb15ef5747782bc11ea317a6b0.jpg",
+      "description": "Соединяет Trans-Siberian Truckway с бесплатной и платной версиями SibirMap.",
+      "version": "3.5",
+      "addedAt": "2026-11-26",
+      "paid": false,
       "files": [
         "Trans-Siberia SibirMap RC"
       ],
       "requires": [
-        "trans-siberian-truckway",
+        "trans-siberian-truckway"
+      ],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "addedAt": "2026-11-26",
-      "shareIndex": 357
+      "shareIndex": 473
     },
     {
       "id": "qs-trans-siberian-truckway-fix",
@@ -5964,11 +5987,13 @@
       "files": [
         "QS_SibirMap_Fix"
       ],
-      "requires": [
+      "requires": [],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
         "sibirmap2132fv-for162"
       ],
       "dlcs": [],
-      "shareIndex": 453
+      "shareIndex": 475
     },
     {
       "id": "sibirmap2132fv-for162",
@@ -6535,14 +6560,17 @@
         "Sibir2.13_AltaiMap1.7.2_RC_1.60U"
       ],
       "requires": [
-        "sibirmap2132fv-for162",
         "altai-map-1-7-3"
+      ],
+      "requiresAny": [
+        "sibirmap2132sv-for162",
+        "sibirmap2132fv-for162"
       ],
       "disabledByMaps": [
         "trans-siberian-truckway"
       ],
       "dlcs": [],
-      "shareIndex": 465
+      "shareIndex": 474
     },
     {
       "id": "nhscs-rmvk-rc-1-61",
@@ -6611,6 +6639,96 @@
       ],
       "dlcs": [],
       "shareIndex": 466
+    },
+    {
+      "id": "sibirmap2132sv-for162",
+      "title": "SibirMap 2.13.2 Support Version for 1.62",
+      "type": "map",
+      "link": "https://boosty.to/sibirmap/posts/5c92e1d8-147c-43ef-9fd1-38a41bfb2536",
+      "image": "/img/combo-builder/29606f30b48ed5104bad123104fe2137f8469ee37b658f89fbf707e4945f4702.webp",
+      "version": "2.13.2 SV",
+      "addedAt": "2026-11-28",
+      "paid": true,
+      "files": [
+        "sibirmap2132sv_for162"
+      ],
+      "requires": [],
+      "dlcs": [],
+      "shareIndex": 482
+    },
+    {
+      "id": "kazakhstan-sibirrc-sv",
+      "title": "Kazakhstan - Sibir RC for SV",
+      "type": "connector",
+      "link": "https://modsfire.com/FQJPA1u7G0OwJ3c",
+      "image": "/img/combo-builder/e4c1f1ae84908440bf3b83a115bac44ef9244acec88bbf37da4d487282c8ed26.webp",
+      "version": "1.2",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "Kazakhstan-SibirRC-SV"
+      ],
+      "requires": [
+        "sibirmap2132sv-for162",
+        "kaz-def"
+      ],
+      "dlcs": [],
+      "shareIndex": 476
+    },
+    {
+      "id": "volgamap-sibirmap-sv-rc",
+      "title": "Volga Map - SibirMap SV RC",
+      "type": "connector",
+      "link": "https://modsfire.com/6fKn9iEV0t7RmTq",
+      "image": "/img/combo-builder/9fa47f7c12234b008642e8957123d48431f3488bebb3f0284d8ab8335b7cc22e.webp",
+      "version": "1.2",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "VolgaMap-SibirMap-SV-RC"
+      ],
+      "requires": [
+        "volgamap-1-5-3",
+        "sibirmap2132sv-for162"
+      ],
+      "dlcs": [],
+      "shareIndex": 481
+    },
+    {
+      "id": "qs-volgamap-sibirmap-sv-coaches-fix",
+      "title": "QS VolgaMap + SibirMap SV Coaches Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/sb0i4oxbcm29/QS_VolgaMap_SibirMap_SV_Coaches_Fix.scs.html",
+      "image": "/img/combo-builder/5111ab0769ebfa2bde52b1ffb46958c34f199b60fc5266043316238d34b6494d.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_VolgaMap_SibirMap_SV_Coaches_Fix"
+      ],
+      "requires": [
+        "volgamap-sibirmap-sv-rc"
+      ],
+      "dlcs": [],
+      "shareIndex": 480
+    },
+    {
+      "id": "qs-kazakhstan-sibirmap-sv-coaches-fix",
+      "title": "QS Kazakhstan + SibirMap SV Coaches Fix",
+      "type": "fix",
+      "link": "https://sharemods.com/zf2gcag3c2du/QS_Kazakhstan_SibirMap_SV_Coaches_Fix.scs.html",
+      "image": "/img/combo-builder/be84dcf6e9159b9f4280adb5ec26a694337c21fa0b974d8dba8b3a1ce5712aaf.webp",
+      "version": "1.0",
+      "addedAt": "2026-11-28",
+      "paid": false,
+      "files": [
+        "QS_Kazakhstan_SibirMap_SV_Coaches_Fix"
+      ],
+      "requires": [
+        "kazakhstan-sibirrc-sv"
+      ],
+      "dlcs": [],
+      "shareIndex": 479
     }
   ],
   "order": [
@@ -6740,6 +6858,11 @@
       "link": "https://modsfire.com/PUl1L2MPAt9TC7h"
     },
     {
+      "key": "sibirmap2132sv_for162",
+      "name": "SibirMap 2.13.2 Support Version for 1.62",
+      "logVersion": "2.13.2 SV"
+    },
+    {
       "key": "VolgaMap_1_5_3",
       "name": "VolgaMap 1.5.3",
       "logVersion": "1.5.3",
@@ -6780,6 +6903,16 @@
       "link": "https://sharemods.com/8n5zcq7hq3aj/QS_Kazakhstan_SibirMap_RC_Fix.scs.html"
     },
     {
+      "key": "Kazakhstan-SibirRC-SV",
+      "name": "Kazakhstan - Sibir RC for SV",
+      "logVersion": "1.2"
+    },
+    {
+      "key": "QS_Kazakhstan_SibirMap_SV_Coaches_Fix",
+      "name": "QS Kazakhstan + SibirMap SV Coaches Fix",
+      "logVersion": "1.0"
+    },
+    {
       "key": "KazakhstanTgsRC",
       "name": "PM TGS - Kazakhstan RC + Pm TGS Fix",
       "logVersion": "0.8",
@@ -6806,6 +6939,16 @@
       "logVersion": "1.1",
       "image": "/img/combo-builder/dc20e7a0d174b0ec340b433231f7b0d8e63af5a270ca7457375581282a33d11a.jpg",
       "link": "https://sharemods.com/kx4zooy9xuja/QS_VolgaMap_TGS_Coaches_Fix.scs.html"
+    },
+    {
+      "key": "VolgaMap-SibirMap-SV-RC",
+      "name": "Volga Map - SibirMap SV RC",
+      "logVersion": "1.2"
+    },
+    {
+      "key": "QS_VolgaMap_SibirMap_SV_Coaches_Fix",
+      "name": "QS VolgaMap + SibirMap SV Coaches Fix",
+      "logVersion": "1.0"
     },
     {
       "key": "Trans-Siberian Truckway",
@@ -9213,6 +9356,13 @@
         "roex-54-free"
       ],
       "reason": "Выбери одну редакцию RoExtended: Premium или Free."
+    },
+    {
+      "entries": [
+        "sibirmap2132sv-for162",
+        "sibirmap2132fv-for162"
+      ],
+      "reason": "Выберите одну редакцию карты SibirMap"
     }
   ],
   "presets": []
